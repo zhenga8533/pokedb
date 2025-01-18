@@ -2,15 +2,23 @@ from dotenv import load_dotenv
 from util.data import request_data
 from util.file import load, save
 from util.logger import Logger
-import glob
 import logging
 import json
 import os
 
 
-def parse_species(num: int, logger: Logger) -> dict:
+def parse_species(num: int, logger: Logger, timeout: int) -> dict:
+    """
+    Parse the data of a species from the PokeAPI.
+
+    :param num: The number of the species.
+    :param logger: The logger to log messages.
+    :param timeout: The timeout of the request.
+    :return: The data of the species.
+    """
+
     url = f"https://pokeapi.co/api/v2/pokemon-species/{num}"
-    data = request_data(url)
+    data = request_data(url, timeout)
     if data is None:
         return data
 
@@ -71,15 +79,22 @@ def parse_species(num: int, logger: Logger) -> dict:
 
 
 def main():
+    """
+    Parse the data of species from the PokeAPI.
+
+    :return: None
+    """
+
     load_dotenv()
     LOG = os.getenv("LOG") == "True"
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
+    TIMEOUT = int(os.getenv("TIMEOUT"))
 
     logger = Logger("main", "logs/species_parser.log", LOG)
     for i in range(STARTING_INDEX, ENDING_INDEX + 1):
         logger.log(logging.INFO, f"Searching for Species #{i}...")
-        species = parse_species(i, logger)
+        species = parse_species(i, logger, TIMEOUT)
         if species is None:
             logger.log(logging.ERROR, f"Species #{i} was not found.")
             break

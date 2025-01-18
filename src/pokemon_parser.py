@@ -7,16 +7,17 @@ import json
 import os
 
 
-def parse_pokemon(num: int) -> dict:
+def parse_pokemon(num: int, timeout: int) -> dict:
     """
     Parse the data of a pokemon from the PokeAPI.
 
     :param num: The number of the pokemon.
+    :param timeout: The timeout of the request.
     :return: The data of the pokemon.
     """
 
     url = f"https://pokeapi.co/api/v2/pokemon/{num}"
-    data = request_data(url)
+    data = request_data(url, timeout)
     if data is None:
         return data
     pokemon = {}
@@ -83,15 +84,22 @@ def parse_pokemon(num: int) -> dict:
 
 
 def main():
+    """
+    Parse the data of the pokemon from the PokeAPI.
+
+    :return: None
+    """
+
     load_dotenv()
     LOG = os.getenv("LOG") == "True"
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
+    TIMEOUT = int(os.getenv("TIMEOUT"))
 
     logger = Logger("main", "logs/pokemon_parser.log", LOG)
     for i in range(STARTING_INDEX, ENDING_INDEX + 1):
         logger.log(logging.INFO, f"Searching for Pokemon #{i}...")
-        pokemon = parse_pokemon(i)
+        pokemon = parse_pokemon(i, TIMEOUT)
         if pokemon is None:
             logger.log(logging.ERROR, f"Pokemon #{i} was not found.")
             break

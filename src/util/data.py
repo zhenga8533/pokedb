@@ -1,7 +1,7 @@
 import requests
 
 
-def request_data(url: str) -> dict:
+def request_data(url: str, timeout: int = 10) -> dict:
     """
     Request data from the PokeAPI.
 
@@ -11,7 +11,7 @@ def request_data(url: str) -> dict:
 
     while True:
         try:
-            response = requests.get(url, timeout=10)
+            response = requests.get(url, timeout=timeout)
         except requests.exceptions.Timeout:
             continue  # Restart the loop on timeout
         except requests.exceptions.RequestException:
