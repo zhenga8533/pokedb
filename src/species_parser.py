@@ -27,9 +27,11 @@ def parse_species(num: int, logger: Logger, timeout: int) -> dict:
     color = data["color"]["name"]
     egg_groups = [group["name"] for group in data["egg_groups"]]
     shape = data["shape"]["name"]
-    flavor_text_entries = [
-        entry["flavor_text"] for entry in data["flavor_text_entries"] if entry["language"]["name"] == "en"
-    ]
+    flavor_text_entries = {
+        entry["version"]["name"]: entry["flavor_text"]
+        for entry in data["flavor_text_entries"]
+        if entry["language"]["name"] == "en"
+    }
     form_descriptions = [
         description["description"]
         for description in data["form_descriptions"]
