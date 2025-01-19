@@ -22,34 +22,37 @@ def parse_evolution(num: int, logger: Logger, timeout: int) -> dict:
     data = request_data(url, timeout)
     if data is None:
         return data
-    data = [data["chain"]]
 
-    while len(data) > 0:
-        data_copy = data.copy()
-        for evo in data_copy:
-            # Get species and evolutions
-            species = evo["species"]["name"]
-            evolutions = [
-                {
-                    "species": detail["species"]["name"],
-                    "details": detail["evolution_details"],
-                }
-                for detail in evo["evolves_to"]
-            ]
+    pokemon = []
 
-            # Find all files matching the pattern
-            file_pattern = f"data/pokemon/{species}*.json"
-            files = glob.glob(file_pattern)
+    def parse_evolution_line(chain: dict) -> dict:
+        """
+        Use recursion to parse the evolution chain.
 
-            # Process each file
-            for file_path in files:
-                pokemon = json.loads(load(file_path, logger))
-                pokemon["evolutions"] = evolutions
-                save(file_path, json.dumps(pokemon, indent=4), logger)
+        :param chain: The evolution chain.
+        :return: The parsed evolution chain.
+        """
 
-            # Update data
-            data.pop(0)
-            data.extend(evo["evolves_to"])
+        name = chain["species"]["name"]
+        pokemon.append(name)
+        evolutions = []
+
+        for evolution in chain["evolves_to"]:
+            evolutions.append(parse_evolution_line(evolution))
+
+        return {"name": name, "evolution_details": chain["evolution_details"], "evolutions": evolutions}
+
+    evolutions = [parse_evolution_line(data["chain"])]
+    for species in pokemon:
+        # Find all files matching the pattern
+        file_pattern = f"data/pokemon/{species}*.json"
+        files = glob.glob(file_pattern)
+
+        # Process each file
+        for file_path in files:
+            pokemon = json.loads(load(file_path, logger))
+            pokemon["evolutions"] = evolutions
+            save(file_path, json.dumps(pokemon, indent=4), logger)
 
     return data
 
@@ -72,7 +75,7 @@ def main():
         logger.log(logging.INFO, f"Searching for Evolution #{i}...")
         if parse_evolution(i, logger, TIMEOUT) is None:
             logger.log(logging.ERROR, f"Evolution #{i} was not found.")
-            break
+            # break
         logger.log(logging.INFO, f"Evolution #{i} was parsed successfully.")
 
 
