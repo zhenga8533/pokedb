@@ -77,6 +77,9 @@ def parse_pokemon(num: int, timeout: int, logger: Logger) -> dict:
     pokemon["cry_legacy"] = data["cries"]["legacy"]
     pokemon["sprites"] = data["sprites"]
 
+    # Get forms
+    pokemon["forms"] = [form["name"] for form in data["forms"][1:]]
+
     return pokemon
 
 
@@ -88,12 +91,30 @@ def parse_and_save_pokemon(i: int, timeout: int, logger: Logger):
     :param timeout: The timeout of the request.
     :param logger: Logger instance for logging.
     """
+
     logger.log(logging.INFO, f"Searching for Pokemon #{i}...")
     pokemon = parse_pokemon(i, timeout, logger)
-    if pokemon is not None:
-        logger.log(logging.INFO, f"{pokemon['name']} was parsed successfully.")
-        save(f"data/pokemon/{pokemon['name']}.json", json.dumps(pokemon, indent=4), logger)
-        logger.log(logging.INFO, f"{pokemon['name']} was saved successfully.")
+    if pokemon is None:
+        return False
+
+    logger.log(logging.INFO, f"{pokemon['name']} was parsed successfully.")
+    save(f"data/pokemon/{pokemon['name']}.json", json.dumps(pokemon, indent=4), logger)
+    logger.log(logging.INFO, f"{pokemon['name']} was saved successfully.")
+    return True
+
+
+def parse_pokemon_range(start_index: int, end_index: int, timeout: int, logger: Logger):
+    """
+    Parse and save pokemon data for a range of numbers.
+
+    :param start_index: The starting pokemon number.
+    :param end_index: The ending pokemon number.
+    :param timeout: The timeout of the request.
+    :param logger: Logger instance for logging.
+    """
+    for i in range(start_index, end_index + 1):
+        if not parse_and_save_pokemon(i, timeout, logger):
+            break
 
 
 def main():
@@ -111,22 +132,31 @@ def main():
     THREADS = int(os.getenv("THREADS"))
 
     logger = Logger("main", "logs/pokemon_parser.log", LOG)
-    threads = []
 
-    for i in range(STARTING_INDEX, ENDING_INDEX + 1):
-        # Start each thread to handle each pokemon number
-        thread = threading.Thread(target=parse_and_save_pokemon, args=(i, TIMEOUT, logger))
+    # Calculate the range each thread will handle
+    total_pokemon = ENDING_INDEX - STARTING_INDEX + 1
+    chunk_size = total_pokemon // THREADS
+    remainder = total_pokemon % THREADS
+
+    threads = []
+    start_index = STARTING_INDEX
+
+    for t in range(THREADS):
+        # Calculate the end index for each thread's range
+        end_index = start_index + chunk_size - 1
+        if remainder > 0:
+            end_index += 1
+            remainder -= 1
+
+        # Start each thread to handle a specific range of pokemon numbers
+        thread = threading.Thread(target=parse_pokemon_range, args=(start_index, end_index, TIMEOUT, logger))
         threads.append(thread)
         thread.start()
 
-        # Limit the number of concurrent threads based on THREADS value
-        if len(threads) >= THREADS:
-            # Wait for all threads to finish
-            for t in threads:
-                t.join()
-            threads = []  # Reset thread list for next batch
+        # Update the start_index for the next thread
+        start_index = end_index + 1
 
-    # Ensure any remaining threads are completed
+    # Ensure all threads are completed
     for t in threads:
         t.join()
 
