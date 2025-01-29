@@ -50,6 +50,7 @@ def parse_species(num: int, logger: Logger, timeout: int) -> dict:
     is_legendary = data["is_legendary"]
     is_mythical = data["is_mythical"]
     pokedex_numbers = {entry["pokedex"]["name"]: entry["entry_number"] for entry in data["pokedex_numbers"]}
+    species = data["name"]
     forms = [form["pokemon"]["name"] for form in data["varieties"]]
 
     for pokemon in data["varieties"]:
@@ -75,6 +76,7 @@ def parse_species(num: int, logger: Logger, timeout: int) -> dict:
         pokemon["is_legendary"] = is_legendary
         pokemon["is_mythical"] = is_mythical
         pokemon["pokedex_numbers"] = pokedex_numbers
+        pokemon["species"] = species
         for form in forms:
             if form not in pokemon["forms"]:
                 pokemon["forms"].append(form)
