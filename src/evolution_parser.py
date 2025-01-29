@@ -75,7 +75,7 @@ def main():
         logger.log(logging.INFO, f"Searching for Evolution #{i}...")
         if parse_evolution(i, logger, TIMEOUT) is None:
             logger.log(logging.ERROR, f"Evolution #{i} was not found.")
-            # break
+            break
         logger.log(logging.INFO, f"Evolution #{i} was parsed successfully.")
 
 

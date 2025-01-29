@@ -5,21 +5,24 @@ from util.logger import Logger
 import logging
 import json
 import os
+import threading
 
 
-def parse_pokemon(num: int, timeout: int) -> dict:
+def parse_pokemon(num: int, timeout: int, logger: Logger) -> dict:
     """
     Parse the data of a pokemon from the PokeAPI.
 
     :param num: The number of the pokemon.
     :param timeout: The timeout of the request.
+    :param logger: Logger instance for logging.
     :return: The data of the pokemon.
     """
 
     url = f"https://pokeapi.co/api/v2/pokemon/{num}"
     data = request_data(url, timeout)
     if data is None:
-        return data
+        logger.log(logging.ERROR, f"Pokemon #{num} was not found.")
+        return None
     pokemon = {}
 
     # Species data
@@ -64,13 +67,7 @@ def parse_pokemon(num: int, timeout: int) -> dict:
     pokemon["held_items"] = [
         {
             "name": held_item["item"]["name"],
-            "rarity": [
-                {
-                    "version": rarity["version"]["name"],
-                    "rarity": rarity["rarity"],
-                }
-                for rarity in held_item["version_details"]
-            ],
+            "rarity": {rarity["version"]["name"]: rarity["rarity"] for rarity in held_item["version_details"]},
         }
         for held_item in data["held_items"]
     ]
@@ -81,6 +78,22 @@ def parse_pokemon(num: int, timeout: int) -> dict:
     pokemon["sprites"] = data["sprites"]
 
     return pokemon
+
+
+def parse_and_save_pokemon(i: int, timeout: int, logger: Logger):
+    """
+    Parses and saves the data for a given pokemon number.
+
+    :param i: The pokemon number.
+    :param timeout: The timeout of the request.
+    :param logger: Logger instance for logging.
+    """
+    logger.log(logging.INFO, f"Searching for Pokemon #{i}...")
+    pokemon = parse_pokemon(i, timeout, logger)
+    if pokemon is not None:
+        logger.log(logging.INFO, f"{pokemon['name']} was parsed successfully.")
+        save(f"data/pokemon/{pokemon['name']}.json", json.dumps(pokemon, indent=4), logger)
+        logger.log(logging.INFO, f"{pokemon['name']} was saved successfully.")
 
 
 def main():
@@ -95,18 +108,27 @@ def main():
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
+    THREADS = int(os.getenv("THREADS"))
 
     logger = Logger("main", "logs/pokemon_parser.log", LOG)
-    for i in range(STARTING_INDEX, ENDING_INDEX + 1):
-        logger.log(logging.INFO, f"Searching for Pokemon #{i}...")
-        pokemon = parse_pokemon(i, TIMEOUT)
-        if pokemon is None:
-            logger.log(logging.ERROR, f"Pokemon #{i} was not found.")
-            break
+    threads = []
 
-        logger.log(logging.INFO, f"{pokemon["name"]} was parsed successfully.")
-        save(f"data/pokemon/{pokemon["name"]}.json", json.dumps(pokemon, indent=4), logger)
-        logger.log(logging.INFO, f"{pokemon["name"]} was saved successfully.")
+    for i in range(STARTING_INDEX, ENDING_INDEX + 1):
+        # Start each thread to handle each pokemon number
+        thread = threading.Thread(target=parse_and_save_pokemon, args=(i, TIMEOUT, logger))
+        threads.append(thread)
+        thread.start()
+
+        # Limit the number of concurrent threads based on THREADS value
+        if len(threads) >= THREADS:
+            # Wait for all threads to finish
+            for t in threads:
+                t.join()
+            threads = []  # Reset thread list for next batch
+
+    # Ensure any remaining threads are completed
+    for t in threads:
+        t.join()
 
 
 if __name__ == "__main__":
