@@ -75,7 +75,6 @@ def parse_species(num: int, logger: Logger, timeout: int) -> dict:
         pokemon["is_legendary"] = is_legendary
         pokemon["is_mythical"] = is_mythical
         pokemon["pokedex_numbers"] = pokedex_numbers
-        pokemon["forms"] = forms
         save(file_path, json.dumps(pokemon, indent=4), logger)
 
     return data
