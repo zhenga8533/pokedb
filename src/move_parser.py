@@ -5,9 +5,17 @@ from util.logger import Logger
 import logging
 import json
 import os
+import threading
 
 
 def parse_move(num: int, timeout: int) -> dict:
+    """
+    Parse the data of a move from the PokeAPI.
+
+    :param num: The number of the move.
+    :param timeout: The timeout of the request.
+    :return: The data of the move.
+    """
     url = f"https://pokeapi.co/api/v2/move/{num}"
     data = request_data(url, timeout)
     if data is None:
@@ -57,30 +65,68 @@ def parse_move(num: int, timeout: int) -> dict:
     return move
 
 
+def parse_move_range(start_index: int, end_index: int, timeout: int, logger: Logger):
+    """
+    Parse moves for a range of move numbers.
+
+    :param start_index: The starting move number.
+    :param end_index: The ending move number.
+    :param timeout: The timeout for requests.
+    :param logger: Logger instance for logging.
+    """
+    for i in range(start_index, end_index + 1):
+        logger.log(logging.INFO, f"Searching for Move #{i}...")
+        move = parse_move(i, timeout)
+        if move is None:
+            logger.log(logging.ERROR, f"Move #{i} was not found.")
+            break
+
+        logger.log(logging.INFO, f"{move['name']} was parsed successfully.")
+        save(f"data/moves/{move['name']}.json", json.dumps(move, indent=4), logger)
+        logger.log(logging.INFO, f"{move['name']} was saved successfully.")
+
+
 def main():
     """
     Parse the data of moves from the PokeAPI.
 
     :return: None
     """
-
     load_dotenv()
     LOG = os.getenv("LOG") == "True"
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
+    THREADS = int(os.getenv("THREADS"))
 
     logger = Logger("main", "logs/move_parser.log", LOG)
-    for i in range(STARTING_INDEX, ENDING_INDEX + 1):
-        logger.log(logging.INFO, f"Searching for Move #{i}...")
-        move = parse_move(i, TIMEOUT)
-        if move is None:
-            logger.log(logging.ERROR, f"Move #{i} was not found.")
-            break
 
-        logger.log(logging.INFO, f"{move["name"]} was parsed successfully.")
-        save(f"data/moves/{move["name"]}.json", json.dumps(move, indent=4), logger)
-        logger.log(logging.INFO, f"{move["name"]} was saved successfully.")
+    # Calculate the range each thread will handle
+    total_moves = ENDING_INDEX - STARTING_INDEX + 1
+    chunk_size = total_moves // THREADS
+    remainder = total_moves % THREADS
+
+    threads = []
+    start_index = STARTING_INDEX
+
+    for t in range(THREADS):
+        # Calculate the end index for each thread's range
+        end_index = start_index + chunk_size - 1
+        if remainder > 0:
+            end_index += 1
+            remainder -= 1
+
+        # Start each thread to handle a specific range of move numbers
+        thread = threading.Thread(target=parse_move_range, args=(start_index, end_index, TIMEOUT, logger))
+        threads.append(thread)
+        thread.start()
+
+        # Update the start_index for the next thread
+        start_index = end_index + 1
+
+    # Ensure all threads are completed
+    for t in threads:
+        t.join()
 
 
 if __name__ == "__main__":

@@ -5,6 +5,7 @@ from util.logger import Logger
 import logging
 import json
 import os
+import threading
 
 
 def parse_species(num: int, logger: Logger, timeout: int) -> dict:
@@ -80,6 +81,25 @@ def parse_species(num: int, logger: Logger, timeout: int) -> dict:
     return data
 
 
+def parse_species_range(start_index: int, end_index: int, timeout: int, logger: Logger):
+    """
+    Parse species data for a range of species numbers.
+
+    :param start_index: The starting species number.
+    :param end_index: The ending species number.
+    :param timeout: The timeout for requests.
+    :param logger: Logger instance for logging.
+    """
+
+    for i in range(start_index, end_index + 1):
+        logger.log(logging.INFO, f"Searching for Species #{i}...")
+        species = parse_species(i, logger, timeout)
+        if species is None:
+            logger.log(logging.ERROR, f"Species #{i} was not found.")
+            break
+        logger.log(logging.INFO, f"Species '{species['name']}' was parsed successfully.")
+
+
 def main():
     """
     Parse the data of species from the PokeAPI.
@@ -92,15 +112,36 @@ def main():
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
+    THREADS = int(os.getenv("THREADS"))
 
     logger = Logger("main", "logs/species_parser.log", LOG)
-    for i in range(STARTING_INDEX, ENDING_INDEX + 1):
-        logger.log(logging.INFO, f"Searching for Species #{i}...")
-        species = parse_species(i, logger, TIMEOUT)
-        if species is None:
-            logger.log(logging.ERROR, f"Species #{i} was not found.")
-            break
-        logger.log(logging.INFO, f"Species '{species["name"]}' was parsed successfully.")
+
+    # Calculate the range each thread will handle
+    total_species = ENDING_INDEX - STARTING_INDEX + 1
+    chunk_size = total_species // THREADS
+    remainder = total_species % THREADS
+
+    threads = []
+    start_index = STARTING_INDEX
+
+    for t in range(THREADS):
+        # Calculate the end index for each thread's range
+        end_index = start_index + chunk_size - 1
+        if remainder > 0:
+            end_index += 1
+            remainder -= 1
+
+        # Start each thread to handle a specific range of species numbers
+        thread = threading.Thread(target=parse_species_range, args=(start_index, end_index, TIMEOUT, logger))
+        threads.append(thread)
+        thread.start()
+
+        # Update the start_index for the next thread
+        start_index = end_index + 1
+
+    # Ensure all threads are completed
+    for t in threads:
+        t.join()
 
 
 if __name__ == "__main__":
