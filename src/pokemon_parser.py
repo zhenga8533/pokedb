@@ -6,29 +6,107 @@ from util.logger import Logger
 import json
 import logging
 import os
-import signal
-import sys
 import threading
 import time
 
 
-def parse_pokemon(num: int, timeout: int, logger: Logger) -> dict:
-    """
-    Parse the data of a Pokémon from the PokeAPI.
+# Global dictionary to store the number of threads processing each result.
+thread_counts = {}
+counter_lock = threading.Lock()
 
-    :param num: The Pokémon number.
+
+def parse_species(url: str, pokemon: dict, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
+    """
+    Parse the data of a pokemon species from the PokeAPI and update the pokemon dictionary in place.
+
+    :param url: The URL of the result.
+    :param pokemon: The dictionary to store the parsed data.
     :param timeout: The timeout for the request.
-    :param logger: Logger instance for logging.
-    :return: A dictionary with the Pokémon data, or None if not found.
+    :param stop_event: The event to signal when the worker should stop.
+    :param logger: The logger to log messages.
     """
 
-    url = f"https://pokeapi.co/api/v2/pokemon/{num}"
-    data = request_data(url, timeout)
+    data = request_data(url, timeout, stop_event, logger)
     if data is None:
-        logger.log(logging.ERROR, f"Pokemon #{num} was not found.")
-        return None
+        return data
+
+    base_happiness = data["base_happiness"]
+    capture_rate = data["capture_rate"]
+    color = data["color"]["name"]
+    egg_groups = [group["name"] for group in data["egg_groups"]]
+    shape = data["shape"]["name"]
+    flavor_text_entries = {
+        entry["version"]["name"]: entry["flavor_text"]
+        for entry in data["flavor_text_entries"]
+        if entry["language"]["name"] == "en"
+    }
+    form_descriptions = [
+        description["description"]
+        for description in data["form_descriptions"]
+        if description["language"]["name"] == "en"
+    ]
+    form_switchable = data["forms_switchable"]
+    female_rate = data["gender_rate"]
+    genus = next(entry["genus"] for entry in data["genera"] if entry["language"]["name"] == "en")
+    generation = data["generation"]["name"]
+    growth_rate = data["growth_rate"]["name"]
+    habitat = data["habitat"]["name"] if data["habitat"] is not None else None
+    has_gender_differences = data["has_gender_differences"]
+    hatch_counter = data["hatch_counter"]
+    is_baby = data["is_baby"]
+    is_legendary = data["is_legendary"]
+    is_mythical = data["is_mythical"]
+    pokedex_numbers = {entry["pokedex"]["name"]: entry["entry_number"] for entry in data["pokedex_numbers"]}
+    species = data["name"]
+    forms = [form["pokemon"]["name"] for form in data["varieties"]]
+
+    # Update the pokemon dictionary with the species data.
+    pokemon["base_happiness"] = base_happiness
+    pokemon["capture_rate"] = capture_rate
+    pokemon["color"] = color
+    pokemon["egg_groups"] = egg_groups
+    pokemon["shape"] = shape
+    pokemon["flavor_text_entries"] = flavor_text_entries
+    pokemon["form_descriptions"] = form_descriptions
+    pokemon["form_switchable"] = form_switchable
+    pokemon["female_rate"] = female_rate
+    pokemon["genus"] = genus
+    pokemon["generation"] = generation
+    pokemon["growth_rate"] = growth_rate
+    pokemon["habitat"] = habitat
+    pokemon["has_gender_differences"] = has_gender_differences
+    pokemon["hatch_counter"] = hatch_counter
+    pokemon["is_baby"] = is_baby
+    pokemon["is_legendary"] = is_legendary
+    pokemon["is_mythical"] = is_mythical
+    pokemon["pokedex_numbers"] = pokedex_numbers
+    pokemon["species"] = species
+
+    # Append any missing forms.
+    if "forms" not in pokemon:
+        pokemon["forms"] = []
+    for form in forms:
+        if form not in pokemon["forms"]:
+            pokemon["forms"].append(form)
+
+
+def parse_pokemon(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
+    """
+    Parse the data of a result from the PokeAPI.
+
+    :param url: The URL of the result.
+    :param timeout: The timeout for the request.
+    :param stop_event: The event to signal when the worker should stop.
+    :param logger: The logger to log messages.
+    :return: A dictionary with the result data.
+    """
+
+    data = request_data(url, timeout, stop_event, logger)
+    if data is None:
+        return data
 
     pokemon = {}
+
     # Species data
     pokemon["name"] = data["name"]
     pokemon["id"] = data["id"]
@@ -83,118 +161,119 @@ def parse_pokemon(num: int, timeout: int, logger: Logger) -> dict:
     # Get forms (skip the first element as in the original code)
     pokemon["forms"] = [form["name"] for form in data["forms"][1:]]
 
+    # Get species data
+    species_url = data["species"]["url"]
+    parse_species(species_url, pokemon, timeout, stop_event, logger)
+
     return pokemon
 
 
-def parse_and_save_pokemon(i: int, timeout: int, logger: Logger) -> bool:
+def worker(q: Queue, thread_id: int, timeout: int, stop_event: threading.Event, logger: Logger):
     """
-    Parses and saves the data for a given Pokémon number.
+    Worker function that continually processes results from the queue.
 
-    :param i: The Pokémon number.
+    :param q: The queue to retrieve results from.
+    :param thread_id: The ID of the thread.
     :param timeout: The timeout for the request.
-    :param logger: Logger instance for logging.
-    :return: True if the Pokémon was parsed and saved successfully, otherwise False.
+    :param stop_event: The event to signal when the worker should stop.
+    :param logger: The logger to log messages.
+    :return: None
     """
 
-    logger.log(logging.INFO, f"Searching for Pokemon #{i}...")
-    pokemon = parse_pokemon(i, timeout, logger)
-    if pokemon is None:
-        return False
-
-    logger.log(logging.INFO, f"{pokemon['name']} was parsed successfully.")
-    save(f"data/pokemon/{pokemon['name']}.json", json.dumps(pokemon, indent=4), logger)
-    logger.log(logging.INFO, f"{pokemon['name']} was saved successfully.")
-    return True
-
-
-def worker(q: Queue, timeout: int, logger: Logger, stop_event: threading.Event) -> None:
-    """
-    Worker thread function: continuously retrieves a Pokémon number from the queue,
-    parses its data, and saves it. If a failure occurs, this worker stops processing.
-
-    :param q: A thread-safe queue containing Pokémon numbers.
-    :param timeout: The timeout for each request.
-    :param logger: Logger instance for logging.
-    :param stop_event: An event signaling when to stop processing.
-    """
+    process_count = 0
 
     while not stop_event.is_set():
+        # Attempt to retrieve a result from the queue.
         try:
-            # Use a timeout so the worker wakes periodically to check stop_event.
-            num = q.get(timeout=1)
+            result = q.get(timeout=0.5)
+            name = result["name"]
+            url = result["url"]
         except Empty:
-            continue
-
-        if stop_event.is_set():
-            q.task_done()
+            # No more results in the queue: exit the loop.
             break
 
-        try:
-            # If parsing/saving fails, this worker stops processing further numbers.
-            if not parse_and_save_pokemon(num, timeout, logger):
-                q.task_done()
-                break
-        except KeyboardInterrupt:
-            q.task_done()
-            raise
+        # Process and save the result data.
+        logger.log(logging.INFO, f'Thread {thread_id} processing "{name}" from "{url}".')
+        data = parse_pokemon(url, timeout, stop_event, logger)
+        if data is None:
+            logger.log(logging.ERROR, f'Failed to parse result "{name}" from "{url}".')
+        else:
+            logger.log(logging.INFO, f'Succesfully parsed result "{name}" from "{url}".')
+            save(f"data/pokemon/{name}.json", json.dumps(data, indent=4), logger)
 
+        # Indicate that the retrieved result has been processed.
+        process_count += 1
         q.task_done()
+
+    # Log the thread's exit and update the thread count.
+    logger.log(logging.INFO, f"Thread {thread_id} exiting. Processed {process_count} results.")
+    with counter_lock:
+        thread_counts[thread_id] = process_count
 
 
 def main():
     """
-    Parse the data of Pokémon from the PokeAPI using a fixed pool of worker threads.
+    Main function to parse results from the PokeAPI using multiple threads.
 
     :return: None
     """
 
+    # Load environment variables and create logger instance.
     load_dotenv()
-    LOG = os.getenv("LOG") == "True"
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
     THREADS = int(os.getenv("THREADS"))
 
-    logger = Logger("main", "logs/pokemon_parser.log", LOG)
+    LOG = os.getenv("LOG") == "True"
+    logger = Logger("Pokemon Parser", "logs/pokemon_parser.log", LOG)
+    logger.log(logging.INFO, "Successfully loaded environment variables.")
 
-    # Populate the queue with Pokémon numbers.
-    q = Queue()
-    for i in range(STARTING_INDEX, ENDING_INDEX + 1):
-        q.put(i)
-
-    # Create an event to signal workers to stop.
+    # Build the API URL and fetch results.
     stop_event = threading.Event()
+    offset = STARTING_INDEX - 1
+    limit = ENDING_INDEX - STARTING_INDEX + 1
+    api_url = f"https://pokeapi.co/api/v2/pokemon/?offset={offset}&limit={limit}"
+    response = request_data(api_url, TIMEOUT, stop_event, logger)
+    if response is None or "results" not in response:
+        logger.log(logging.ERROR, "Failed to fetch results data from the API.")
+        return
 
-    # Start a fixed number of worker threads.
+    results = response["results"]
+    logger.log(logging.INFO, "Successfully fetched results data from the API.")
+
+    # Create a thread-safe queue and populate it with the results.
+    q = Queue()
+    for result in results:
+        q.put(result)
+
+    # Initialize worker threads
     threads = []
-    for _ in range(THREADS):
-        t = threading.Thread(target=worker, args=(q, TIMEOUT, logger, stop_event))
-        t.daemon = True
+    for i in range(THREADS):
+        t = threading.Thread(target=worker, args=(q, i + 1, TIMEOUT, stop_event, logger))
         t.start()
         threads.append(t)
 
-    # Install a signal handler for SIGINT (Ctrl+C).
-    def signal_handler(sig, frame):
-        logger.log(logging.INFO, "Received SIGINT, shutting down...")
-        stop_event.set()
-        sys.exit(0)
-
-    signal.signal(signal.SIGINT, signal_handler)
-
-    # Instead of blocking indefinitely on q.join(), poll the threads so Ctrl+C is handled promptly.
+    # Use a polling loop to wait until all threads have completed.
     try:
         while any(t.is_alive() for t in threads):
             time.sleep(0.5)
     except KeyboardInterrupt:
-        logger.log(logging.INFO, "KeyboardInterrupt caught in main loop, shutting down...")
+        # If an interrupt (Ctrl+C) occurs, signal all threads to stop.
+        logger.log(logging.WARNING, "Received keyboard interrupt. Stopping all threads.")
         stop_event.set()
-        time.sleep(1)
+    finally:
+        # Ensure that every thread has finished execution.
+        for t in threads:
+            t.join()
+        logger.log(logging.INFO, "All threads have exited successfully.")
 
-    # Ensure all threads have completed.
-    for t in threads:
-        t.join()
-
-    logger.log(logging.INFO, "Shutdown complete.")
+        # Log the work summary.
+        logger.log(logging.INFO, "\nWork Summary:")
+        for i in range(THREADS):
+            tid = i + 1
+            count = thread_counts.get(tid, 0)
+            logger.log(logging.INFO, f"Thread {tid} processed {count} results.")
 
 
 if __name__ == "__main__":

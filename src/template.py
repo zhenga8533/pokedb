@@ -15,51 +15,21 @@ thread_counts = {}
 counter_lock = threading.Lock()
 
 
-def parse_item(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
+def parse_data(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
     """
-    Parse the data of an item from the PokeAPI.
+    Parse the data of a result from the PokeAPI.
 
-    :param url: The URL of the item.
-    :param timeout: The timeout of the request.
+    :param url: The URL of the result.
+    :param timeout: The timeout for the request.
     :param stop_event: The event to signal when the worker should stop.
     :param logger: The logger to log messages.
-    :return: The data of the item.
+    :return: A dictionary with the result data.
     """
 
-    data = request_data(url, timeout, stop_event, logger)
-    if data is None:
-        return data
-
-    item = {}
-    item["name"] = data["name"]
-    item["cost"] = data["cost"]
-    item["category"] = data["category"]["name"]
-    item["sprite"] = data["sprites"]["default"]
-    item["games"] = [game["generation"]["name"] for game in data["game_indices"]]
-    item["held_by"] = {
-        pokemon.get("name", "?"): {
-            version["version"]["name"]: version["rarity"] for version in pokemon["version_details"]
-        }
-        for pokemon in data["held_by_pokemon"]
-    }
-    effect_entry = next((entry for entry in data["effect_entries"] if entry["language"]["name"] == "en"), None)
-    item["effect"] = "" if effect_entry is None else effect_entry["effect"]
-    item["short_effect"] = "" if effect_entry is None else effect_entry["short_effect"]
-    item["flavor_text_entries"] = {
-        entry["version_group"]["name"]: entry["text"]
-        for entry in data["flavor_text_entries"]
-        if entry["language"]["name"] == "en"
-    }
-    item["fling_power"] = data["fling_power"]
-    fling_effect = data["fling_effect"]
-    if fling_effect is not None:
-        fling_effect = request_data(fling_effect["url"], timeout, stop_event, logger)
-        if fling_effect is not None:
-            effect_entries = fling_effect["effect_entries"]
-            fling_effect = next((entry for entry in effect_entries if entry["language"]["name"] == "en"), None)
-    item["fling_effect"] = "" if fling_effect is None else fling_effect["effect"]
-    item["attributes"] = [attribute["name"] for attribute in data["attributes"]]
-    return item
+    logger.log(logging.INFO, f'Parsing data from "{url}".')
+    logger.log(logging.INFO, f"Timeout: {timeout} seconds.")
+    logger.log(logging.INFO, f"Stop event: {stop_event}.")
+    time.sleep(0.5)
 
 
 def worker(q: Queue, thread_id: int, timeout: int, stop_event: threading.Event, logger: Logger):
@@ -88,12 +58,12 @@ def worker(q: Queue, thread_id: int, timeout: int, stop_event: threading.Event, 
 
         # Process and save the result data.
         logger.log(logging.INFO, f'Thread {thread_id} processing "{name}" from "{url}".')
-        data = parse_item(url, timeout, stop_event, logger)
+        data = parse_data(url, timeout, stop_event, logger)
         if data is None:
             logger.log(logging.ERROR, f'Failed to parse result "{name}" from "{url}".')
         else:
             logger.log(logging.INFO, f'Succesfully parsed result "{name}" from "{url}".')
-            save(f"data/items/{name}.json", json.dumps(data, indent=4), logger)
+            save(f"data/template/{name}.json", json.dumps(data, indent=4), logger)
 
         # Indicate that the retrieved result has been processed.
         process_count += 1
@@ -120,14 +90,14 @@ def main():
     THREADS = int(os.getenv("THREADS"))
 
     LOG = os.getenv("LOG") == "True"
-    logger = Logger("Item Parser", "logs/item_parser.log", LOG)
+    logger = Logger("Template", "logs/template.log", LOG)
     logger.log(logging.INFO, "Successfully loaded environment variables.")
 
     # Build the API URL and fetch results.
     stop_event = threading.Event()
     offset = STARTING_INDEX - 1
     limit = ENDING_INDEX - STARTING_INDEX + 1
-    api_url = f"https://pokeapi.co/api/v2/item/?offset={offset}&limit={limit}"
+    api_url = f"https://pokeapi.co/api/v2/pokemon/?offset={offset}&limit={limit}"
     response = request_data(api_url, TIMEOUT, stop_event, logger)
     if response is None or "results" not in response:
         logger.log(logging.ERROR, "Failed to fetch results data from the API.")

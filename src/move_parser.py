@@ -6,23 +6,27 @@ from util.logger import Logger
 import json
 import logging
 import os
-import signal
-import sys
 import threading
 import time
 
 
-def parse_move(num: int, timeout: int) -> dict:
-    """
-    Parse the data of a move from the PokeAPI.
+# Global dictionary to store the number of threads processing each result.
+thread_counts = {}
+counter_lock = threading.Lock()
 
-    :param num: The number of the move.
+
+def parse_move(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
+    """
+    Parse the data of a result from the PokeAPI.
+
+    :param url: The URL of the result.
     :param timeout: The timeout for the request.
-    :return: A dictionary with the move data.
+    :param stop_event: The event to signal when the worker should stop.
+    :param logger: The logger to log messages.
+    :return: A dictionary with the result data.
     """
 
-    url = f"https://pokeapi.co/api/v2/move/{num}"
-    data = request_data(url, timeout)
+    data = request_data(url, timeout, stop_event, logger)
     if data is None:
         return data
 
@@ -63,108 +67,121 @@ def parse_move(num: int, timeout: int) -> dict:
     move["machines"] = {}
     machines = [machine["machine"]["url"] for machine in data["machines"]]
     for machine in machines:
-        machine_data = request_data(machine, timeout)
-        machine_name = machine_data["item"]["name"]
-        machine_version = machine_data["version_group"]["name"]
-        move["machines"][machine_version] = machine_name
+        machine_data = request_data(machine, timeout, stop_event, logger)
+        if machine_data:
+            machine_name = machine_data["item"]["name"]
+            machine_version = machine_data["version_group"]["name"]
+            move["machines"][machine_version] = machine_name
 
     return move
 
 
-def worker(q: Queue, timeout: int, logger: Logger, stop_event: threading.Event) -> None:
+def worker(q: Queue, thread_id: int, timeout: int, stop_event: threading.Event, logger: Logger):
     """
-    Worker thread function: repeatedly pulls a move number from the queue,
-    parses the move data, and saves it.
+    Worker function that continually processes results from the queue.
 
-    :param q: A thread-safe queue containing move numbers.
-    :param timeout: The timeout for API requests.
-    :param logger: Logger instance for logging messages.
-    :param stop_event: Event to signal when to stop processing.
+    :param q: The queue to retrieve results from.
+    :param thread_id: The ID of the thread.
+    :param timeout: The timeout for the request.
+    :param stop_event: The event to signal when the worker should stop.
+    :param logger: The logger to log messages.
+    :return: None
     """
+
+    process_count = 0
 
     while not stop_event.is_set():
+        # Attempt to retrieve a result from the queue.
         try:
-            # Use a timeout so the thread periodically wakes up to check stop_event.
-            move_num = q.get(timeout=1)
+            result = q.get(timeout=0.5)
+            name = result["name"]
+            url = result["url"]
         except Empty:
-            continue
-
-        # Check again in case a shutdown was requested.
-        if stop_event.is_set():
-            q.task_done()
+            # No more results in the queue: exit the loop.
             break
 
-        logger.log(logging.INFO, f"Searching for Move #{move_num}...")
-        try:
-            move = parse_move(move_num, timeout)
-        except KeyboardInterrupt:
-            # Allow Ctrl+C to interrupt immediately.
-            q.task_done()
-            raise
-
-        if move is None:
-            logger.log(logging.ERROR, f"Move #{move_num} was not found.")
+        # Process and save the result data.
+        logger.log(logging.INFO, f'Thread {thread_id} processing "{name}" from "{url}".')
+        data = parse_move(url, timeout, stop_event, logger)
+        if data is None:
+            logger.log(logging.ERROR, f'Failed to parse result "{name}" from "{url}".')
         else:
-            logger.log(logging.INFO, f"{move['name']} was parsed successfully.")
-            save(f"data/moves/{move['name']}.json", json.dumps(move, indent=4), logger)
-            logger.log(logging.INFO, f"{move['name']} was saved successfully.")
+            logger.log(logging.INFO, f'Succesfully parsed result "{name}" from "{url}".')
+            save(f"data/moves/{name}.json", json.dumps(data, indent=4), logger)
+
+        # Indicate that the retrieved result has been processed.
+        process_count += 1
         q.task_done()
+
+    # Log the thread's exit and update the thread count.
+    logger.log(logging.INFO, f"Thread {thread_id} exiting. Processed {process_count} results.")
+    with counter_lock:
+        thread_counts[thread_id] = process_count
 
 
 def main():
     """
-    Parse the data of moves from the PokeAPI using a pool of worker threads.
+    Main function to parse results from the PokeAPI using multiple threads.
 
     :return: None
     """
 
+    # Load environment variables and create logger instance.
     load_dotenv()
-    LOG = os.getenv("LOG") == "True"
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
     THREADS = int(os.getenv("THREADS"))
 
-    logger = Logger("main", "logs/move_parser.log", LOG)
+    LOG = os.getenv("LOG") == "True"
+    logger = Logger("Move Parser", "logs/move_parser.log", LOG)
+    logger.log(logging.INFO, "Successfully loaded environment variables.")
 
-    # Populate the queue with move numbers.
-    q = Queue()
-    for num in range(STARTING_INDEX, ENDING_INDEX + 1):
-        q.put(num)
-
-    # Create an event to signal worker threads to stop.
+    # Build the API URL and fetch results.
     stop_event = threading.Event()
+    offset = STARTING_INDEX - 1
+    limit = ENDING_INDEX - STARTING_INDEX + 1
+    api_url = f"https://pokeapi.co/api/v2/move/?offset={offset}&limit={limit}"
+    response = request_data(api_url, TIMEOUT, stop_event, logger)
+    if response is None or "results" not in response:
+        logger.log(logging.ERROR, "Failed to fetch results data from the API.")
+        return
 
-    # Start a fixed number of worker threads.
+    results = response["results"]
+    logger.log(logging.INFO, "Successfully fetched results data from the API.")
+
+    # Create a thread-safe queue and populate it with the results.
+    q = Queue()
+    for result in results:
+        q.put(result)
+
+    # Initialize worker threads
     threads = []
-    for _ in range(THREADS):
-        t = threading.Thread(target=worker, args=(q, TIMEOUT, logger, stop_event))
-        t.daemon = True
+    for i in range(THREADS):
+        t = threading.Thread(target=worker, args=(q, i + 1, TIMEOUT, stop_event, logger))
         t.start()
         threads.append(t)
 
-    # Install a signal handler for SIGINT (Ctrl+C).
-    def signal_handler(sig, frame):
-        logger.log(logging.INFO, "Received SIGINT, shutting down...")
-        stop_event.set()
-        sys.exit(0)
-
-    signal.signal(signal.SIGINT, signal_handler)
-
-    # Instead of blocking on q.join(), use a polling loop to allow quick shutdown.
+    # Use a polling loop to wait until all threads have completed.
     try:
         while any(t.is_alive() for t in threads):
             time.sleep(0.5)
     except KeyboardInterrupt:
-        logger.log(logging.INFO, "KeyboardInterrupt caught in main loop, shutting down...")
+        # If an interrupt (Ctrl+C) occurs, signal all threads to stop.
+        logger.log(logging.WARNING, "Received keyboard interrupt. Stopping all threads.")
         stop_event.set()
-        time.sleep(1)
+    finally:
+        # Ensure that every thread has finished execution.
+        for t in threads:
+            t.join()
+        logger.log(logging.INFO, "All threads have exited successfully.")
 
-    # Ensure all threads have finished.
-    for t in threads:
-        t.join()
-
-    logger.log(logging.INFO, "Shutdown complete.")
+        # Log the work summary.
+        logger.log(logging.INFO, "\nWork Summary:")
+        for i in range(THREADS):
+            tid = i + 1
+            count = thread_counts.get(tid, 0)
+            logger.log(logging.INFO, f"Thread {tid} processed {count} results.")
 
 
 if __name__ == "__main__":

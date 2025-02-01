@@ -3,28 +3,30 @@ from queue import Queue, Empty
 from util.data import request_data
 from util.file import load, save
 from util.logger import Logger
-import json
 import glob
+import json
 import logging
 import os
-import signal
-import sys
 import threading
 import time
 
 
-def parse_evolution(num: int, logger: Logger, timeout: int) -> dict:
-    """
-    Parse the data of an evolution chain from the PokeAPI.
+# Global dictionary to store the number of threads processing each result.
+thread_counts = {}
+counter_lock = threading.Lock()
 
-    :param num: The number of the evolution chain.
+
+def parse_evolution(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
+    """
+    Parse the data of a pokemon species from the PokeAPI and update the pokemon dictionary in place.
+
+    :param url: The URL of the result.
+    :param timeout: The timeout for the request.
+    :param stop_event: The event to signal when the worker should stop.
     :param logger: The logger to log messages.
-    :param timeout: The timeout of the request.
-    :return: The data of the evolution chain.
     """
 
-    url = f"https://pokeapi.co/api/v2/evolution-chain/{num}"
-    data = request_data(url, timeout)
+    data = request_data(url, timeout, stop_event, logger)
     if data is None:
         return data
 
@@ -34,6 +36,7 @@ def parse_evolution(num: int, logger: Logger, timeout: int) -> dict:
         """
         Recursively parse an evolution chain.
         """
+        nonlocal pokemon
 
         name = chain["species"]["name"]
         pokemon.append(name)
@@ -60,100 +63,110 @@ def parse_evolution(num: int, logger: Logger, timeout: int) -> dict:
     return data
 
 
-def worker(q: Queue, logger: Logger, timeout: int, stop_event: threading.Event) -> None:
+def worker(q: Queue, thread_id: int, timeout: int, stop_event: threading.Event, logger: Logger):
     """
-    Worker thread function: repeatedly retrieves an evolution chain number from the queue,
-    parses the evolution chain, and logs the result.
+    Worker function that continually processes results from the queue.
 
-    :param q: The queue of evolution chain numbers.
+    :param q: The queue to retrieve results from.
+    :param thread_id: The ID of the thread.
+    :param timeout: The timeout for the request.
+    :param stop_event: The event to signal when the worker should stop.
     :param logger: The logger to log messages.
-    :param timeout: The timeout of the request.
-    :param stop_event: The event to signal the worker to stop.
     :return: None
     """
 
-    while not stop_event.is_set():
-        try:
-            # Use a timeout so the worker wakes up periodically.
-            chain_number = q.get(timeout=1)
-        except Empty:
-            continue
+    process_count = 0
 
-        # Check one more time after retrieving the task.
-        if stop_event.is_set():
-            q.task_done()
+    while not stop_event.is_set():
+        # Attempt to retrieve a result from the queue.
+        try:
+            result = q.get(timeout=0.5)
+            url = result["url"]
+        except Empty:
+            # No more results in the queue: exit the loop.
             break
 
-        logger.log(logging.INFO, f"Searching for Evolution #{chain_number}...")
-        try:
-            result = parse_evolution(chain_number, logger, timeout)
-        except KeyboardInterrupt:
-            # Allow Ctrl+C to interrupt the worker immediately.
-            q.task_done()
-            raise
-
-        if result is None:
-            logger.log(logging.ERROR, f"Evolution #{chain_number} was not found.")
+        # Process and save the result data.
+        logger.log(logging.INFO, f'Thread {thread_id} processing "{url}".')
+        data = parse_evolution(url, timeout, stop_event, logger)
+        if data is None:
+            logger.log(logging.ERROR, f'Failed to parse result "{url}".')
         else:
-            logger.log(logging.INFO, f"Evolution #{chain_number} was parsed successfully.")
+            logger.log(logging.INFO, f'Succesfully parsed result "{url}".')
+
+        # Indicate that the retrieved result has been processed.
+        process_count += 1
         q.task_done()
+
+    # Log the thread's exit and update the thread count.
+    logger.log(logging.INFO, f"Thread {thread_id} exiting. Processed {process_count} results.")
+    with counter_lock:
+        thread_counts[thread_id] = process_count
 
 
 def main():
     """
-    Main function to load configuration, populate the task queue with evolution chain numbers,
-    and start worker threads.
+    Main function to parse results from the PokeAPI using multiple threads.
 
     :return: None
     """
 
+    # Load environment variables and create logger instance.
     load_dotenv()
-    LOG = os.getenv("LOG") == "True"
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
     THREADS = int(os.getenv("THREADS"))
 
-    logger = Logger("main", "logs/evolution_parser.log", LOG)
+    LOG = os.getenv("LOG") == "True"
+    logger = Logger("Evolution Parser", "logs/evolution_parser.log", LOG)
+    logger.log(logging.INFO, "Successfully loaded environment variables.")
 
-    # Create a queue and populate it with evolution chain numbers.
-    q = Queue()
-    for num in range(STARTING_INDEX, ENDING_INDEX + 1):
-        q.put(num)
-
-    # Create an event to signal workers to stop.
+    # Build the API URL and fetch results.
     stop_event = threading.Event()
+    offset = STARTING_INDEX - 1
+    limit = ENDING_INDEX - STARTING_INDEX + 1
+    api_url = f"https://pokeapi.co/api/v2/evolution-chain/?offset={offset}&limit={limit}"
+    response = request_data(api_url, TIMEOUT, stop_event, logger)
+    if response is None or "results" not in response:
+        logger.log(logging.ERROR, "Failed to fetch results data from the API.")
+        return
 
-    # Start a fixed pool of worker threads.
+    results = response["results"]
+    logger.log(logging.INFO, "Successfully fetched results data from the API.")
+
+    # Create a thread-safe queue and populate it with the results.
+    q = Queue()
+    for result in results:
+        q.put(result)
+
+    # Initialize worker threads
     threads = []
-    for _ in range(THREADS):
-        t = threading.Thread(target=worker, args=(q, logger, TIMEOUT, stop_event))
-        t.daemon = True
+    for i in range(THREADS):
+        t = threading.Thread(target=worker, args=(q, i + 1, TIMEOUT, stop_event, logger))
         t.start()
         threads.append(t)
 
-    # Install a signal handler for SIGINT (Ctrl+C).
-    def signal_handler(sig, frame):
-        logger.log(logging.INFO, "Received SIGINT, shutting down...")
-        stop_event.set()
-        sys.exit(0)
-
-    signal.signal(signal.SIGINT, signal_handler)
-
-    # Instead of blocking on q.join(), use a polling loop so Ctrl+C is handled promptly.
+    # Use a polling loop to wait until all threads have completed.
     try:
         while any(t.is_alive() for t in threads):
             time.sleep(0.5)
     except KeyboardInterrupt:
-        logger.log(logging.INFO, "KeyboardInterrupt caught in main loop, shutting down...")
+        # If an interrupt (Ctrl+C) occurs, signal all threads to stop.
+        logger.log(logging.WARNING, "Received keyboard interrupt. Stopping all threads.")
         stop_event.set()
-        time.sleep(1)
+    finally:
+        # Ensure that every thread has finished execution.
+        for t in threads:
+            t.join()
+        logger.log(logging.INFO, "All threads have exited successfully.")
 
-    # Ensure all threads have finished execution.
-    for t in threads:
-        t.join()
-
-    logger.log(logging.INFO, "Shutdown complete.")
+        # Log the work summary.
+        logger.log(logging.INFO, "\nWork Summary:")
+        for i in range(THREADS):
+            tid = i + 1
+            count = thread_counts.get(tid, 0)
+            logger.log(logging.INFO, f"Thread {tid} processed {count} results.")
 
 
 if __name__ == "__main__":
