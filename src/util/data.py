@@ -9,7 +9,13 @@ def request_data(url: str, timeout: int = 10) -> dict:
     :return: The data from the URL.
     """
 
+    attempts = 0
+
     while True:
+        attempts += 1
+        if attempts > 5:
+            return None
+
         try:
             response = requests.get(url, timeout=timeout)
         except requests.exceptions.Timeout:
