@@ -1,12 +1,16 @@
 from dotenv import load_dotenv
+from queue import Queue, Empty
 from util.data import request_data
 from util.file import load, save
 from util.logger import Logger
+import json
 import glob
 import logging
-import json
 import os
+import signal
+import sys
 import threading
+import time
 
 
 def parse_evolution(num: int, logger: Logger, timeout: int) -> dict:
@@ -28,55 +32,77 @@ def parse_evolution(num: int, logger: Logger, timeout: int) -> dict:
 
     def parse_evolution_line(chain: dict) -> dict:
         """
-        Use recursion to parse the evolution chain.
-
-        :param chain: The evolution chain.
-        :return: The parsed evolution chain.
+        Recursively parse an evolution chain.
         """
 
         name = chain["species"]["name"]
         pokemon.append(name)
         evolutions = []
-
         for evolution in chain["evolves_to"]:
             evolutions.append(parse_evolution_line(evolution))
-
-        return {"name": name, "evolution_details": chain["evolution_details"], "evolutions": evolutions}
+        return {
+            "name": name,
+            "evolution_details": chain["evolution_details"],
+            "evolutions": evolutions,
+        }
 
     evolutions = [parse_evolution_line(data["chain"])]
+
+    # For every species found in the chain, update all matching Pokémon files.
     for species in pokemon:
-        # Find all files matching the pattern
         file_pattern = f"data/pokemon/{species}*.json"
         files = glob.glob(file_pattern)
-
-        # Process each file
         for file_path in files:
-            pokemon = json.loads(load(file_path, logger))
-            pokemon["evolutions"] = evolutions
-            save(file_path, json.dumps(pokemon, indent=4), logger)
+            pokemon_data = json.loads(load(file_path, logger))
+            pokemon_data["evolutions"] = evolutions
+            save(file_path, json.dumps(pokemon_data, indent=4), logger)
 
     return data
 
 
-def parse_evolution_range(start_index: int, end_index: int, logger: Logger, timeout: int):
+def worker(q: Queue, logger: Logger, timeout: int, stop_event: threading.Event) -> None:
     """
-    Parse evolution chains for a range of numbers.
+    Worker thread function: repeatedly retrieves an evolution chain number from the queue,
+    parses the evolution chain, and logs the result.
 
-    :param start_index: The starting evolution chain number.
-    :param end_index: The ending evolution chain number.
-    :param logger: Logger instance for logging.
-    :param timeout: The timeout for requests.
+    :param q: The queue of evolution chain numbers.
+    :param logger: The logger to log messages.
+    :param timeout: The timeout of the request.
+    :param stop_event: The event to signal the worker to stop.
+    :return: None
     """
-    for i in range(start_index, end_index + 1):
-        logger.log(logging.INFO, f"Searching for Evolution #{i}...")
-        if parse_evolution(i, logger, timeout) is None:
-            logger.log(logging.ERROR, f"Evolution #{i} was not found.")
-        logger.log(logging.INFO, f"Evolution #{i} was parsed successfully.")
+
+    while not stop_event.is_set():
+        try:
+            # Use a timeout so the worker wakes up periodically.
+            chain_number = q.get(timeout=1)
+        except Empty:
+            continue
+
+        # Check one more time after retrieving the task.
+        if stop_event.is_set():
+            q.task_done()
+            break
+
+        logger.log(logging.INFO, f"Searching for Evolution #{chain_number}...")
+        try:
+            result = parse_evolution(chain_number, logger, timeout)
+        except KeyboardInterrupt:
+            # Allow Ctrl+C to interrupt the worker immediately.
+            q.task_done()
+            raise
+
+        if result is None:
+            logger.log(logging.ERROR, f"Evolution #{chain_number} was not found.")
+        else:
+            logger.log(logging.INFO, f"Evolution #{chain_number} was parsed successfully.")
+        q.task_done()
 
 
 def main():
     """
-    Parse the data of evolution chains from the PokeAPI.
+    Main function to load configuration, populate the task queue with evolution chain numbers,
+    and start worker threads.
 
     :return: None
     """
@@ -90,32 +116,44 @@ def main():
 
     logger = Logger("main", "logs/evolution_parser.log", LOG)
 
-    # Calculate the range each thread will handle
-    total_evolution_chains = ENDING_INDEX - STARTING_INDEX + 1
-    chunk_size = total_evolution_chains // THREADS
-    remainder = total_evolution_chains % THREADS
+    # Create a queue and populate it with evolution chain numbers.
+    q = Queue()
+    for num in range(STARTING_INDEX, ENDING_INDEX + 1):
+        q.put(num)
 
+    # Create an event to signal workers to stop.
+    stop_event = threading.Event()
+
+    # Start a fixed pool of worker threads.
     threads = []
-    start_index = STARTING_INDEX
+    for _ in range(THREADS):
+        t = threading.Thread(target=worker, args=(q, logger, TIMEOUT, stop_event))
+        t.daemon = True
+        t.start()
+        threads.append(t)
 
-    for t in range(THREADS):
-        # Calculate the end index for each thread's range
-        end_index = start_index + chunk_size - 1
-        if remainder > 0:
-            end_index += 1
-            remainder -= 1
+    # Install a signal handler for SIGINT (Ctrl+C).
+    def signal_handler(sig, frame):
+        logger.log(logging.INFO, "Received SIGINT, shutting down...")
+        stop_event.set()
+        sys.exit(0)
 
-        # Start each thread to handle a specific range of evolution chain numbers
-        thread = threading.Thread(target=parse_evolution_range, args=(start_index, end_index, logger, TIMEOUT))
-        threads.append(thread)
-        thread.start()
+    signal.signal(signal.SIGINT, signal_handler)
 
-        # Update the start_index for the next thread
-        start_index = end_index + 1
+    # Instead of blocking on q.join(), use a polling loop so Ctrl+C is handled promptly.
+    try:
+        while any(t.is_alive() for t in threads):
+            time.sleep(0.5)
+    except KeyboardInterrupt:
+        logger.log(logging.INFO, "KeyboardInterrupt caught in main loop, shutting down...")
+        stop_event.set()
+        time.sleep(1)
 
-    # Ensure all threads are completed
+    # Ensure all threads have finished execution.
     for t in threads:
         t.join()
+
+    logger.log(logging.INFO, "Shutdown complete.")
 
 
 if __name__ == "__main__":

@@ -1,11 +1,15 @@
 from dotenv import load_dotenv
+from queue import Queue, Empty
 from util.data import request_data
 from util.file import load, save
 from util.logger import Logger
-import logging
 import json
+import logging
 import os
+import signal
+import sys
 import threading
+import time
 
 
 def parse_species(num: int, logger: Logger, timeout: int) -> dict:
@@ -14,8 +18,8 @@ def parse_species(num: int, logger: Logger, timeout: int) -> dict:
 
     :param num: The number of the species.
     :param logger: The logger to log messages.
-    :param timeout: The timeout of the request.
-    :return: The data of the species.
+    :param timeout: The timeout for the request.
+    :return: The data of the species, or None if not found.
     """
 
     url = f"https://pokeapi.co/api/v2/pokemon-species/{num}"
@@ -53,8 +57,10 @@ def parse_species(num: int, logger: Logger, timeout: int) -> dict:
     species = data["name"]
     forms = [form["pokemon"]["name"] for form in data["varieties"]]
 
-    for pokemon in data["varieties"]:
-        name = pokemon["pokemon"]["name"]
+    # For every variety (i.e. every Pokémon belonging to this species),
+    # load its file and update its species-related data.
+    for pokemon_entry in data["varieties"]:
+        name = pokemon_entry["pokemon"]["name"]
         file_path = f"data/pokemon/{name}.json"
         pokemon = json.loads(load(file_path, logger))
         pokemon["base_happiness"] = base_happiness
@@ -77,36 +83,64 @@ def parse_species(num: int, logger: Logger, timeout: int) -> dict:
         pokemon["is_mythical"] = is_mythical
         pokemon["pokedex_numbers"] = pokedex_numbers
         pokemon["species"] = species
+
+        # Append any missing forms.
+        if "forms" not in pokemon:
+            pokemon["forms"] = []
         for form in forms:
             if form not in pokemon["forms"]:
                 pokemon["forms"].append(form)
+
         save(file_path, json.dumps(pokemon, indent=4), logger)
 
     return data
 
 
-def parse_species_range(start_index: int, end_index: int, timeout: int, logger: Logger):
+def worker(q: Queue, timeout: int, logger: Logger, stop_event: threading.Event) -> None:
     """
-    Parse species data for a range of species numbers.
+    Worker thread function: continuously retrieves a species number from the queue,
+    parses its data, and logs the result.
 
-    :param start_index: The starting species number.
-    :param end_index: The ending species number.
-    :param timeout: The timeout for requests.
-    :param logger: Logger instance for logging.
+    If parsing a species fails (i.e. returns None), the worker logs the error and
+    stops processing further species numbers.
+
+    :param q: A thread-safe queue containing species numbers.
+    :param timeout: The timeout for each API request.
+    :param logger: Logger instance for logging messages.
+    :param stop_event: Event to signal when to stop processing.
     """
 
-    for i in range(start_index, end_index + 1):
-        logger.log(logging.INFO, f"Searching for Species #{i}...")
-        species = parse_species(i, logger, timeout)
-        if species is None:
-            logger.log(logging.ERROR, f"Species #{i} was not found.")
+    while not stop_event.is_set():
+        try:
+            # Use a timeout so the worker wakes periodically to check for shutdown.
+            species_num = q.get(timeout=1)
+        except Empty:
+            continue
+
+        if stop_event.is_set():
+            q.task_done()
             break
-        logger.log(logging.INFO, f"Species '{species['name']}' was parsed successfully.")
+
+        logger.log(logging.INFO, f"Searching for Species #{species_num}...")
+        try:
+            species_data = parse_species(species_num, logger, timeout)
+        except KeyboardInterrupt:
+            q.task_done()
+            raise
+
+        if species_data is None:
+            logger.log(logging.ERROR, f"Species #{species_num} was not found.")
+            q.task_done()
+            # Stop processing further if a species is not found.
+            break
+        else:
+            logger.log(logging.INFO, f"Species '{species_data['name']}' was parsed successfully.")
+        q.task_done()
 
 
 def main():
     """
-    Parse the data of species from the PokeAPI.
+    Parse the data of species from the PokeAPI using a fixed pool of worker threads.
 
     :return: None
     """
@@ -120,32 +154,44 @@ def main():
 
     logger = Logger("main", "logs/species_parser.log", LOG)
 
-    # Calculate the range each thread will handle
-    total_species = ENDING_INDEX - STARTING_INDEX + 1
-    chunk_size = total_species // THREADS
-    remainder = total_species % THREADS
+    # Populate the queue with species numbers.
+    q = Queue()
+    for num in range(STARTING_INDEX, ENDING_INDEX + 1):
+        q.put(num)
 
+    # Create an event to signal workers to stop.
+    stop_event = threading.Event()
+
+    # Start a fixed number of worker threads.
     threads = []
-    start_index = STARTING_INDEX
-
-    for t in range(THREADS):
-        # Calculate the end index for each thread's range
-        end_index = start_index + chunk_size - 1
-        if remainder > 0:
-            end_index += 1
-            remainder -= 1
-
-        # Start each thread to handle a specific range of species numbers
-        thread = threading.Thread(target=parse_species_range, args=(start_index, end_index, TIMEOUT, logger))
-        threads.append(thread)
+    for _ in range(THREADS):
+        thread = threading.Thread(target=worker, args=(q, TIMEOUT, logger, stop_event))
+        thread.daemon = True
         thread.start()
+        threads.append(thread)
 
-        # Update the start_index for the next thread
-        start_index = end_index + 1
+    # Install a signal handler for SIGINT (Ctrl+C).
+    def signal_handler(sig, frame):
+        logger.log(logging.INFO, "Received SIGINT, shutting down...")
+        stop_event.set()
+        sys.exit(0)
 
-    # Ensure all threads are completed
-    for t in threads:
-        t.join()
+    signal.signal(signal.SIGINT, signal_handler)
+
+    # Instead of blocking indefinitely on q.join(), poll the worker threads so Ctrl+C is handled promptly.
+    try:
+        while any(t.is_alive() for t in threads):
+            time.sleep(0.5)
+    except KeyboardInterrupt:
+        logger.log(logging.INFO, "KeyboardInterrupt caught in main loop, shutting down...")
+        stop_event.set()
+        time.sleep(1)
+
+    # Ensure all threads have completed.
+    for thread in threads:
+        thread.join()
+
+    logger.log(logging.INFO, "Shutdown complete.")
 
 
 if __name__ == "__main__":

@@ -1,27 +1,30 @@
 from dotenv import load_dotenv
+from queue import Queue, Empty
 from util.data import request_data
 from util.file import save
 from util.logger import Logger
-import logging
 import json
+import logging
 import os
+import signal
 import threading
+import time
 
 
 def parse_item(url: str, timeout: int) -> dict:
     """
     Parse the data of an item from the PokeAPI.
 
-    :param url: The url of the item.
+    :param url: The URL of the item.
     :param timeout: The timeout of the request.
     :return: The data of the item.
     """
+
     data = request_data(url, timeout)
     if data is None:
         return data
-    item = {}
 
-    # Item data
+    item = {}
     item["name"] = data["name"]
     item["cost"] = data["cost"]
     item["category"] = data["category"]["name"]
@@ -33,8 +36,6 @@ def parse_item(url: str, timeout: int) -> dict:
         }
         for pokemon in data["held_by_pokemon"]
     }
-
-    # Item effects
     effect_entry = next((entry for entry in data["effect_entries"] if entry["language"]["name"] == "en"), None)
     item["effect"] = "" if effect_entry is None else effect_entry["effect"]
     item["short_effect"] = "" if effect_entry is None else effect_entry["short_effect"]
@@ -43,8 +44,6 @@ def parse_item(url: str, timeout: int) -> dict:
         for entry in data["flavor_text_entries"]
         if entry["language"]["name"] == "en"
     }
-
-    # Item attributes
     item["fling_power"] = data["fling_power"]
     fling_effect = data["fling_effect"]
     if fling_effect is not None:
@@ -54,25 +53,48 @@ def parse_item(url: str, timeout: int) -> dict:
             fling_effect = next((entry for entry in effect_entries if entry["language"]["name"] == "en"), None)
     item["fling_effect"] = "" if fling_effect is None else fling_effect["effect"]
     item["attributes"] = [attribute["name"] for attribute in data["attributes"]]
-
     return item
 
 
-def parse_item_range(items: list, timeout: int, logger: Logger) -> None:
-    for item in items:
-        name = item["name"]
-        data = parse_item(item["url"], timeout)
-        if data is None:
-            logger.log(logging.ERROR, f"Failed to parse item {name}")
+def worker(q: Queue, timeout: int, logger: Logger, stop_event: threading.Event) -> None:
+    """
+    Worker function to parse items from the queue.
+
+    :param q: The queue of items to parse.
+    :param timeout: The timeout of the request.
+    :param logger: The logger to log messages.
+    :param stop_event: The event to signal the workers to stop.
+    :return: None
+    """
+
+    while not stop_event.is_set():
+        try:
+            # Use a timeout so the worker can check the stop_event periodically.
+            item = q.get(timeout=1)
+        except Empty:
+            continue
+
+        if stop_event.is_set():
+            q.task_done()
             break
+
+        name = item["name"]
+        logger.log(logging.INFO, f"Parsing item {name}...")
+        data = parse_item(item["url"], timeout)
+
+        if data is None:
+            logger.log(logging.ERROR, f"Failed to parse item {name} from {item['url']}")
+            q.task_done()
+            continue
 
         logger.log(logging.INFO, f"Parsed item {name}")
         save(f"data/items/{name}.json", json.dumps(data, indent=4), logger)
+        q.task_done()
 
 
 def main():
     """
-    Parse the data of items from the PokeAPI.
+    Main function to parse items from the PokeAPI.
 
     :return: None
     """
@@ -86,37 +108,49 @@ def main():
 
     logger = Logger("main", "logs/item_parser.log", LOG)
 
-    # Load all item names
+    # Build the API URL and fetch items.
     offset = STARTING_INDEX - 1
     limit = ENDING_INDEX - STARTING_INDEX + 1
-    items = request_data(f"https://pokeapi.co/api/v2/item/?offset={offset}&limit={limit}", TIMEOUT)["results"]
+    api_url = f"https://pokeapi.co/api/v2/item/?offset={offset}&limit={limit}"
+    response = request_data(api_url, TIMEOUT)
+    if response is None or "results" not in response:
+        logger.log(logging.ERROR, "Failed to fetch items from the API.")
+        return
 
-    # Calculate the range each thread will handle
-    total_items = len(items)
-    chunk_size = total_items // THREADS
-    remainder = total_items % THREADS
+    items = response["results"]
 
+    # Populate the queue.
+    q = Queue()
+    for item in items:
+        q.put(item)
+
+    # Create an event to signal the workers to stop.
+    stop_event = threading.Event()
+
+    # Start worker threads as daemon threads.
     threads = []
-    start_index = STARTING_INDEX
-
-    for t in range(THREADS):
-        # Calculate the end index for each thread's range
-        end_index = start_index + chunk_size - 1
-        if remainder > 0:
-            end_index += 1
-            remainder -= 1
-
-        # Start each thread to handle a specific range of items
-        thread = threading.Thread(target=parse_item_range, args=(items[start_index:end_index], TIMEOUT, logger))
-        threads.append(thread)
+    for _ in range(THREADS):
+        thread = threading.Thread(target=worker, args=(q, TIMEOUT, logger, stop_event))
+        thread.daemon = True
         thread.start()
+        threads.append(thread)
 
-        # Update the start_index for the next thread
-        start_index = end_index + 1
+    # Force an immediate shutdown when Ctrl+C is pressed.
+    def signal_handler(sig, frame):
+        logger.log(logging.INFO, "Received SIGINT, forcing immediate shutdown with os._exit(0)")
+        os._exit(0)
 
-    # Ensure all threads are completed
-    for t in threads:
-        t.join()
+    signal.signal(signal.SIGINT, signal_handler)
+
+    # Poll the worker threads rather than waiting on q.join().
+    try:
+        while any(thread.is_alive() for thread in threads):
+            time.sleep(0.5)
+    except KeyboardInterrupt:
+        logger.log(logging.INFO, "KeyboardInterrupt caught in main loop, forcing shutdown with os._exit(0)")
+        os._exit(0)
+
+    logger.log(logging.INFO, "Shutdown complete.")
 
 
 if __name__ == "__main__":
