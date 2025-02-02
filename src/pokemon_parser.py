@@ -17,77 +17,61 @@ counter_lock = threading.Lock()
 
 def parse_species(url: str, pokemon: dict, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
     """
-    Parse the data of a pokemon species from the PokeAPI and update the pokemon dictionary in place.
+    Parse the species data of a result from the PokeAPI.
 
     :param url: The URL of the result.
-    :param pokemon: The dictionary to store the parsed data.
+    :param pokemon: The dictionary to update with the species data.
     :param timeout: The timeout for the request.
     :param stop_event: The event to signal when the worker should stop.
     :param logger: The logger to log messages.
+    :return: A dictionary with the result data.
     """
 
+    # Fetch the data from the API.
     data = request_data(url, timeout, stop_event, logger)
     if data is None:
         return data
 
-    base_happiness = data["base_happiness"]
-    capture_rate = data["capture_rate"]
-    color = data["color"]["name"]
-    egg_groups = [group["name"] for group in data["egg_groups"]]
-    shape = data["shape"]["name"]
-    flavor_text_entries = {
-        entry["version"]["name"]: entry["flavor_text"]
-        for entry in data["flavor_text_entries"]
-        if entry["language"]["name"] == "en"
-    }
-    form_descriptions = [
-        description["description"]
-        for description in data["form_descriptions"]
-        if description["language"]["name"] == "en"
-    ]
-    form_switchable = data["forms_switchable"]
-    female_rate = data["gender_rate"]
-    genus = next(entry["genus"] for entry in data["genera"] if entry["language"]["name"] == "en")
-    generation = data["generation"]["name"]
-    growth_rate = data["growth_rate"]["name"]
-    habitat = data["habitat"]["name"] if data["habitat"] is not None else None
-    has_gender_differences = data["has_gender_differences"]
-    hatch_counter = data["hatch_counter"]
-    is_baby = data["is_baby"]
-    is_legendary = data["is_legendary"]
-    is_mythical = data["is_mythical"]
-    pokedex_numbers = {entry["pokedex"]["name"]: entry["entry_number"] for entry in data["pokedex_numbers"]}
-    species = data["name"]
-    forms = [form["pokemon"]["name"] for form in data["varieties"]]
-
-    # Update the pokemon dictionary with the species data.
-    pokemon["base_happiness"] = base_happiness
-    pokemon["capture_rate"] = capture_rate
-    pokemon["color"] = color
-    pokemon["egg_groups"] = egg_groups
-    pokemon["shape"] = shape
-    pokemon["flavor_text_entries"] = flavor_text_entries
-    pokemon["form_descriptions"] = form_descriptions
-    pokemon["form_switchable"] = form_switchable
-    pokemon["female_rate"] = female_rate
-    pokemon["genus"] = genus
-    pokemon["generation"] = generation
-    pokemon["growth_rate"] = growth_rate
-    pokemon["habitat"] = habitat
-    pokemon["has_gender_differences"] = has_gender_differences
-    pokemon["hatch_counter"] = hatch_counter
-    pokemon["is_baby"] = is_baby
-    pokemon["is_legendary"] = is_legendary
-    pokemon["is_mythical"] = is_mythical
-    pokemon["pokedex_numbers"] = pokedex_numbers
-    pokemon["species"] = species
+    # Update the pokemon data with the parsed species data.
+    pokemon.update(
+        {
+            "base_happiness": data["base_happiness"],
+            "capture_rate": data["capture_rate"],
+            "color": data["color"]["name"],
+            "egg_groups": [group["name"] for group in data["egg_groups"]],
+            "shape": data["shape"]["name"],
+            "flavor_text_entries": {
+                entry["version"]["name"]: entry["flavor_text"]
+                for entry in data["flavor_text_entries"]
+                if entry["language"]["name"] == "en"
+            },
+            "form_descriptions": [
+                desc["description"] for desc in data["form_descriptions"] if desc["language"]["name"] == "en"
+            ],
+            "form_switchable": data["forms_switchable"],
+            "female_rate": data["gender_rate"],
+            "genus": next(entry["genus"] for entry in data["genera"] if entry["language"]["name"] == "en"),
+            "generation": data["generation"]["name"],
+            "growth_rate": data["growth_rate"]["name"],
+            "habitat": data["habitat"]["name"] if data["habitat"] is not None else None,
+            "has_gender_differences": data["has_gender_differences"],
+            "hatch_counter": data["hatch_counter"],
+            "is_baby": data["is_baby"],
+            "is_legendary": data["is_legendary"],
+            "is_mythical": data["is_mythical"],
+            "pokedex_numbers": {entry["pokedex"]["name"]: entry["entry_number"] for entry in data["pokedex_numbers"]},
+            "species": data["name"],
+        }
+    )
 
     # Append any missing forms.
-    if "forms" not in pokemon:
-        pokemon["forms"] = []
+    forms = [form["pokemon"]["name"] for form in data["varieties"]]
+    pokemon.setdefault("forms", [])
     for form in forms:
         if form not in pokemon["forms"]:
             pokemon["forms"].append(form)
+
+    return pokemon
 
 
 def parse_pokemon(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
@@ -101,6 +85,7 @@ def parse_pokemon(url: str, timeout: int, stop_event: threading.Event, logger: L
     :return: A dictionary with the result data.
     """
 
+    # Fetch the data from the API.
     data = request_data(url, timeout, stop_event, logger)
     if data is None:
         return data
@@ -158,10 +143,8 @@ def parse_pokemon(url: str, timeout: int, stop_event: threading.Event, logger: L
     pokemon["cry_legacy"] = data["cries"]["legacy"]
     pokemon["sprites"] = data["sprites"]
 
-    # Get forms (skip the first element as in the original code)
+    # Get forms and species data
     pokemon["forms"] = [form["name"] for form in data["forms"][1:]]
-
-    # Get species data
     species_url = data["species"]["url"]
     parse_species(species_url, pokemon, timeout, stop_event, logger)
 
@@ -269,11 +252,13 @@ def main():
         logger.log(logging.INFO, "All threads have exited successfully.")
 
         # Log the work summary.
-        logger.log(logging.INFO, "\nWork Summary:")
+        logger.log(logging.INFO, "Work Summary:")
         for i in range(THREADS):
             tid = i + 1
             count = thread_counts.get(tid, 0)
             logger.log(logging.INFO, f"Thread {tid} processed {count} results.")
+        total = sum(thread_counts.values())
+        logger.log(logging.INFO, f"Total results processed: {total}.")
 
 
 if __name__ == "__main__":

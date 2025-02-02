@@ -133,7 +133,7 @@ def main():
         logger.log(logging.INFO, "All threads have exited successfully.")
 
         # Log the work summary.
-        logger.log(logging.INFO, "\nWork Summary:")
+        logger.log(logging.INFO, "Work Summary:")
         for i in range(THREADS):
             tid = i + 1
             count = thread_counts.get(tid, 0)

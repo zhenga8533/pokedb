@@ -2,6 +2,7 @@ from util.logger import Logger
 import logging
 import requests
 import threading
+import time
 
 
 def request_data(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
@@ -29,10 +30,12 @@ def request_data(url: str, timeout: int, stop_event: threading.Event, logger: Lo
         except requests.exceptions.Timeout:
             # Log the timeout and retry the request.
             logger.log(logging.ERROR, f'Request to "{url}" timed out.')
+            time.sleep(1)
             continue
         except requests.exceptions.RequestException:
             # Log the exception and retry.
             logger.log(logging.ERROR, f'Request to "{url}" failed.')
+            time.sleep(1)
             continue
 
         # Check the status code of the response.

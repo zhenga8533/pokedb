@@ -16,45 +16,53 @@ thread_counts = {}
 counter_lock = threading.Lock()
 
 
+def parse_evolution_line(chain: dict, pokemon: list) -> dict:
+    """
+    Recursively parse an evolution chain.
+
+    :param chain: The chain to parse.
+    :param pokemon: The list of pokemon to update.
+    :return: A dictionary with the parsed evolution data.
+    """
+
+    name = chain["species"]["name"]
+    pokemon.append(name)
+    evolutions = []
+    for evolution in chain["evolves_to"]:
+        evolutions.append(parse_evolution_line(evolution, pokemon))
+    return {
+        "name": name,
+        "evolution_details": chain["evolution_details"],
+        "evolutions": evolutions,
+    }
+
+
 def parse_evolution(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
     """
-    Parse the data of a pokemon species from the PokeAPI and update the pokemon dictionary in place.
+    Parse the data of an evolution line from the PokeAPI.
 
     :param url: The URL of the result.
     :param timeout: The timeout for the request.
     :param stop_event: The event to signal when the worker should stop.
     :param logger: The logger to log messages.
+    :return: A dictionary with the result data.
     """
 
+    # Fetch the data from the API.
     data = request_data(url, timeout, stop_event, logger)
     if data is None:
         return data
 
+    # Set up the data structures to store the parsed evolution data.
     pokemon = []
+    evolutions = [parse_evolution_line(data["chain"], pokemon)]
 
-    def parse_evolution_line(chain: dict) -> dict:
-        """
-        Recursively parse an evolution chain.
-        """
-        nonlocal pokemon
-
-        name = chain["species"]["name"]
-        pokemon.append(name)
-        evolutions = []
-        for evolution in chain["evolves_to"]:
-            evolutions.append(parse_evolution_line(evolution))
-        return {
-            "name": name,
-            "evolution_details": chain["evolution_details"],
-            "evolutions": evolutions,
-        }
-
-    evolutions = [parse_evolution_line(data["chain"])]
-
-    # For every species found in the chain, update all matching Pokémon files.
+    # Update the pokemon data with the parsed evolution data.
     for species in pokemon:
         file_pattern = f"data/pokemon/{species}*.json"
         files = glob.glob(file_pattern)
+
+        # Loop through all files of the pokemon species
         for file_path in files:
             pokemon_data = json.loads(load(file_path, logger))
             pokemon_data["evolutions"] = evolutions
@@ -162,11 +170,13 @@ def main():
         logger.log(logging.INFO, "All threads have exited successfully.")
 
         # Log the work summary.
-        logger.log(logging.INFO, "\nWork Summary:")
+        logger.log(logging.INFO, "Work Summary:")
         for i in range(THREADS):
             tid = i + 1
             count = thread_counts.get(tid, 0)
             logger.log(logging.INFO, f"Thread {tid} processed {count} results.")
+        total = sum(thread_counts.values())
+        logger.log(logging.INFO, f"Total results processed: {total}.")
 
 
 if __name__ == "__main__":

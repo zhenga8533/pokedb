@@ -17,7 +17,7 @@ counter_lock = threading.Lock()
 
 def parse_move(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
     """
-    Parse the data of a result from the PokeAPI.
+    Parse the data of a move from the PokeAPI.
 
     :param url: The URL of the result.
     :param timeout: The timeout for the request.
@@ -26,13 +26,14 @@ def parse_move(url: str, timeout: int, stop_event: threading.Event, logger: Logg
     :return: A dictionary with the result data.
     """
 
+    # Fetch the data from the API.
     data = request_data(url, timeout, stop_event, logger)
     if data is None:
         return data
 
     move = {}
 
-    # Move data
+    # General move information
     move["name"] = data["name"]
     move["accuracy"] = data["accuracy"]
     move["damage_class"] = data["damage_class"]["name"]
@@ -62,8 +63,6 @@ def parse_move(url: str, timeout: int, stop_event: threading.Event, logger: Logg
     # Move learn data
     move["generation"] = data["generation"]["name"]
     move["learned_by"] = [pokemon["name"] for pokemon in data["learned_by_pokemon"]]
-
-    # Move machine data
     move["machines"] = {}
     machines = [machine["machine"]["url"] for machine in data["machines"]]
     for machine in machines:
@@ -177,11 +176,13 @@ def main():
         logger.log(logging.INFO, "All threads have exited successfully.")
 
         # Log the work summary.
-        logger.log(logging.INFO, "\nWork Summary:")
+        logger.log(logging.INFO, "Work Summary:")
         for i in range(THREADS):
             tid = i + 1
             count = thread_counts.get(tid, 0)
             logger.log(logging.INFO, f"Thread {tid} processed {count} results.")
+        total = sum(thread_counts.values())
+        logger.log(logging.INFO, f"Total results processed: {total}.")
 
 
 if __name__ == "__main__":

@@ -26,14 +26,20 @@ def parse_item(url: str, timeout: int, stop_event: threading.Event, logger: Logg
     :return: The data of the item.
     """
 
+    # Fetch the data from the API.
     data = request_data(url, timeout, stop_event, logger)
     if data is None:
         return data
 
     item = {}
+
+    # General item information.
     item["name"] = data["name"]
     item["cost"] = data["cost"]
     item["category"] = data["category"]["name"]
+    item["attributes"] = [attribute["name"] for attribute in data["attributes"]]
+
+    # Item game data.
     item["sprite"] = data["sprites"]["default"]
     item["games"] = [game["generation"]["name"] for game in data["game_indices"]]
     item["held_by"] = {
@@ -42,6 +48,8 @@ def parse_item(url: str, timeout: int, stop_event: threading.Event, logger: Logg
         }
         for pokemon in data["held_by_pokemon"]
     }
+
+    # Item effect and flavor text entries.
     effect_entry = next((entry for entry in data["effect_entries"] if entry["language"]["name"] == "en"), None)
     item["effect"] = "" if effect_entry is None else effect_entry["effect"]
     item["short_effect"] = "" if effect_entry is None else effect_entry["short_effect"]
@@ -58,7 +66,7 @@ def parse_item(url: str, timeout: int, stop_event: threading.Event, logger: Logg
             effect_entries = fling_effect["effect_entries"]
             fling_effect = next((entry for entry in effect_entries if entry["language"]["name"] == "en"), None)
     item["fling_effect"] = "" if fling_effect is None else fling_effect["effect"]
-    item["attributes"] = [attribute["name"] for attribute in data["attributes"]]
+
     return item
 
 
@@ -163,11 +171,13 @@ def main():
         logger.log(logging.INFO, "All threads have exited successfully.")
 
         # Log the work summary.
-        logger.log(logging.INFO, "\nWork Summary:")
+        logger.log(logging.INFO, "Work Summary:")
         for i in range(THREADS):
             tid = i + 1
             count = thread_counts.get(tid, 0)
             logger.log(logging.INFO, f"Thread {tid} processed {count} results.")
+        total = sum(thread_counts.values())
+        logger.log(logging.INFO, f"Total results processed: {total}.")
 
 
 if __name__ == "__main__":
