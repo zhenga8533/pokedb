@@ -130,13 +130,12 @@ def parse_pokemon(url: str, timeout: int, stop_event: threading.Event, logger: L
 
     # Wild data
     pokemon["base_experience"] = data["base_experience"]
-    pokemon["held_items"] = [
-        {
-            "name": held_item["item"]["name"],
-            "rarity": {rarity["version"]["name"]: rarity["rarity"] for rarity in held_item["version_details"]},
+    pokemon["held_items"] = {
+        held_item["item"]["name"]: {
+            rarity["version"]["name"]: rarity["rarity"] for rarity in held_item["version_details"]
         }
         for held_item in data["held_items"]
-    ]
+    }
 
     # Game data
     pokemon["cry_latest"] = data["cries"]["latest"]

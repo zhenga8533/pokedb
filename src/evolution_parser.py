@@ -66,7 +66,9 @@ def parse_evolution(url: str, timeout: int, stop_event: threading.Event, logger:
         for file_path in files:
             pokemon_data = json.loads(load(file_path, logger))
             pokemon_data["evolutions"] = evolutions
-            save(file_path, json.dumps(pokemon_data, indent=4), logger)
+            json_dump = json.dumps(pokemon_data, indent=4)
+            save(file_path, json_dump, logger)
+            save(file_path.replace("data/", "data-bk/"), json_dump, logger)
 
     return data
 
