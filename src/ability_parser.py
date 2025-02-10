@@ -2,10 +2,12 @@ from dotenv import load_dotenv
 from queue import Queue, Empty
 from util.data import request_data
 from util.file import save
+from util.format import roman_to_int
 from util.logger import Logger
 import json
 import logging
 import os
+import shutil
 import threading
 import time
 
@@ -15,11 +17,12 @@ thread_counts = {}
 counter_lock = threading.Lock()
 
 
-def parse_ability(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
+def parse_ability(url: str, max_generation: int, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
     """
     Parse the data of an ability from the PokeAPI.
 
     :param url: The URL of the result.
+    :param max_generation: The maximum generation to parse.
     :param timeout: The timeout for the request.
     :param stop_event: The event to signal when the worker should stop.
     :param logger: The logger to log messages.
@@ -30,6 +33,11 @@ def parse_ability(url: str, timeout: int, stop_event: threading.Event, logger: L
     data = request_data(url, timeout, stop_event, logger)
     if data is None:
         return data
+
+    # Check generation
+    generation = roman_to_int(data["generation"]["name"].split("-")[1])
+    if generation > max_generation:
+        return None
 
     ability = {}
 
@@ -63,12 +71,13 @@ def parse_ability(url: str, timeout: int, stop_event: threading.Event, logger: L
     return ability
 
 
-def worker(q: Queue, thread_id: int, timeout: int, stop_event: threading.Event, logger: Logger):
+def worker(q: Queue, thread_id: int, max_generation: int, timeout: int, stop_event: threading.Event, logger: Logger):
     """
     Worker function that continually processes results from the queue.
 
     :param q: The queue to retrieve results from.
     :param thread_id: The ID of the thread.
+    :param max_generation: The maximum generation to parse.
     :param timeout: The timeout for the request.
     :param stop_event: The event to signal when the worker should stop.
     :param logger: The logger to log messages.
@@ -89,15 +98,16 @@ def worker(q: Queue, thread_id: int, timeout: int, stop_event: threading.Event, 
 
         # Process and save the result data.
         logger.log(logging.INFO, f'Thread {thread_id} processing "{name}" from "{url}".')
-        data = parse_ability(url, timeout, stop_event, logger)
+        data = parse_ability(url, max_generation, timeout, stop_event, logger)
         if data is None:
             logger.log(logging.ERROR, f'Failed to parse result "{name}" from "{url}".')
+            break
         else:
             logger.log(logging.INFO, f'Succesfully parsed result "{name}" from "{url}".')
-            save(f"data/abilities/{name}.json", json.dumps(data, indent=4), logger)
-
-        # Indicate that the retrieved result has been processed.
-        process_count += 1
+            json_dump = json.dumps(data, indent=4)
+            save(f"data/abilities/{name}.json", json_dump, logger)
+            save(f"data-bk/abilities/{name}.json", json_dump, logger)
+            process_count += 1
         q.task_done()
 
     # Log the thread's exit and update the thread count.
@@ -117,12 +127,20 @@ def main():
     load_dotenv()
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
+    MAX_GENERATION = int(os.getenv("MAX_GENERATION"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
     THREADS = int(os.getenv("THREADS"))
 
     LOG = os.getenv("LOG") == "True"
     logger = Logger("Ability Parser", "logs/ability_parser.log", LOG)
     logger.log(logging.INFO, "Successfully loaded environment variables.")
+
+    # Delete the existing data directory
+    logger.log(logging.INFO, "Deleting existing data directory.")
+    if os.path.exists("data/abilities"):
+        shutil.rmtree("data/abilities")
+    logger.log(logging.INFO, "Creating new data directory.")
+    os.makedirs("data/abilities")
 
     # Build the API URL and fetch results.
     stop_event = threading.Event()
@@ -145,7 +163,7 @@ def main():
     # Initialize worker threads
     threads = []
     for i in range(THREADS):
-        t = threading.Thread(target=worker, args=(q, i + 1, TIMEOUT, stop_event, logger))
+        t = threading.Thread(target=worker, args=(q, i + 1, MAX_GENERATION, TIMEOUT, stop_event, logger))
         t.start()
         threads.append(t)
 

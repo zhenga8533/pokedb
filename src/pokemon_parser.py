@@ -182,7 +182,9 @@ def worker(q: Queue, thread_id: int, timeout: int, stop_event: threading.Event, 
             logger.log(logging.ERROR, f'Failed to parse result "{name}" from "{url}".')
         else:
             logger.log(logging.INFO, f'Succesfully parsed result "{name}" from "{url}".')
-            save(f"data/pokemon/{name}.json", json.dumps(data, indent=4), logger)
+            json_dump = json.dumps(data, indent=4)
+            save(f"data/pokemon/{name}.json", json_dump, logger)
+            save(f"data-bk/pokemon/{name}.json", json_dump, logger)
 
         # Indicate that the retrieved result has been processed.
         process_count += 1

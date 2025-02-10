@@ -30,12 +30,12 @@ def request_data(url: str, timeout: int, stop_event: threading.Event, logger: Lo
         except requests.exceptions.Timeout:
             # Log the timeout and retry the request.
             logger.log(logging.ERROR, f'Request to "{url}" timed out.')
-            time.sleep(1)
+            time.sleep(timeout)
             continue
         except requests.exceptions.RequestException:
             # Log the exception and retry.
             logger.log(logging.ERROR, f'Request to "{url}" failed.')
-            time.sleep(1)
+            time.sleep(timeout)
             continue
 
         # Check the status code of the response.
