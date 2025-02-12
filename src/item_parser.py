@@ -1,47 +1,50 @@
-from dotenv import load_dotenv
-from queue import Queue, Empty
-from util.data import request_data
-from util.file import save
-from util.format import roman_to_int
-from util.logger import Logger
 import json
 import logging
 import os
 import shutil
-import threading
-import time
+
+from dotenv import load_dotenv
+from requests import Session
+
+from util.file import save
+from util.format import roman_to_int
+from util.logger import Logger
+from util.threading import ThreadingManager
 
 
-# Global dictionary to store the number of threads processing each result.
-thread_counts = {}
-counter_lock = threading.Lock()
-
-
-def parse_item(url: str, max_generation: int, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
+def parse_item(url: str, session: Session, timeout: int, logger: Logger, max_generation: int) -> dict:
     """
     Parse the data of an item from the PokeAPI.
 
     :param url: The URL of the item.
-    :param max_generation: The maximum generation to parse.
-    :param timeout: The timeout of the request.
-    :param stop_event: The event to signal when the worker should stop.
+    :param session: The shared requests session.
+    :param timeout: The timeout for the request.
     :param logger: The logger to log messages.
-    :return: The data of the item.
+    :param max_generation: The maximum generation to parse.
+    :return: The data of the item as a dictionary, or None if unsuccessful.
     """
 
-    # Fetch the data from the API.
-    data = request_data(url, timeout, stop_event, logger)
-    if data is None:
-        return data
+    try:
+        response = session.get(url, timeout=timeout)
+    except Exception as e:
+        logger.log(logging.ERROR, f"Request failed for {url}: {e}", exc_info=True)
+        return None
 
-    item = {}
+    if response.status_code != 200:
+        logger.log(logging.ERROR, f"Failed to request {url}: {response.status_code}")
+        return None
 
-    # Check generation
+    data = response.json()
+
+    # Check generation (assumes each game index contains a generation name like "generation-i")
     game_indices = [roman_to_int(game["generation"]["name"].split("-")[-1]) for game in data["game_indices"]]
+    if not game_indices:
+        return None
     lowest_generation = min(game_indices)
     if lowest_generation > max_generation:
         return None
 
+    item = {}
     # General item information.
     item["name"] = data["name"]
     item["cost"] = data["cost"]
@@ -68,82 +71,72 @@ def parse_item(url: str, max_generation: int, timeout: int, stop_event: threadin
         if entry["language"]["name"] == "en"
     }
     item["fling_power"] = data["fling_power"]
+
     fling_effect = data["fling_effect"]
     if fling_effect is not None:
-        fling_effect = request_data(fling_effect["url"], timeout, stop_event, logger)
-        if fling_effect is not None:
-            effect_entries = fling_effect["effect_entries"]
-            fling_effect = next((entry for entry in effect_entries if entry["language"]["name"] == "en"), None)
+        try:
+            response2 = session.get(fling_effect["url"], timeout=timeout)
+        except Exception as e:
+            logger.log(logging.ERROR, f"Request failed for fling effect URL {fling_effect['url']}: {e}", exc_info=True)
+            fling_effect = None
+        else:
+            if response2.status_code != 200:
+                logger.log(
+                    logging.ERROR, f"Failed to request fling effect URL {fling_effect['url']}: {response2.status_code}"
+                )
+                fling_effect = None
+            else:
+                fling_effect_data = response2.json()
+                effect_entries = fling_effect_data["effect_entries"]
+                fling_effect = next((entry for entry in effect_entries if entry["language"]["name"] == "en"), None)
     item["fling_effect"] = "" if fling_effect is None else fling_effect["effect"]
 
     return item
 
 
-def worker(q: Queue, thread_id: int, max_generation: int, timeout: int, stop_event: threading.Event, logger: Logger):
+def process_item_result(result: dict, session: Session, timeout: int, logger: Logger, max_generation: int):
     """
-    Worker function that continually processes results from the queue.
+    Process an item result by parsing its data from the API and saving it.
 
-    :param q: The queue to retrieve results from.
-    :param thread_id: The ID of the thread.
+    :param result: A dictionary containing at least 'name' and 'url' keys.
+    :param session: The shared requests session.
+    :param timeout: The timeout for each API request.
+    :param logger: The logger instance.
     :param max_generation: The maximum generation to parse.
-    :param timeout: The timeout for the request.
-    :param stop_event: The event to signal when the worker should stop.
-    :param logger: The logger to log messages.
-    :return: None
     """
 
-    process_count = 0
-
-    while not stop_event.is_set():
-        # Attempt to retrieve a result from the queue.
-        try:
-            result = q.get(timeout=0.5)
-            name = result["name"]
-            url = result["url"]
-        except Empty:
-            # No more results in the queue: exit the loop.
-            break
-
-        # Process and save the result data.
-        logger.log(logging.INFO, f'Thread {thread_id} processing "{name}" from "{url}".')
-        data = parse_item(url, max_generation, timeout, stop_event, logger)
-        if data is None:
-            logger.log(logging.ERROR, f'Failed to parse result "{name}" from "{url}".')
-            break
-        else:
-            logger.log(logging.INFO, f'Succesfully parsed result "{name}" from "{url}".')
-            json_dump = json.dumps(data, indent=4)
-            save(f"data/items/{name}.json", json_dump, logger)
-            save(f"data-bk/items/{name}.min.json", json_dump, logger)
-            process_count += 1
-        q.task_done()
-
-    # Log the thread's exit and update the thread count.
-    logger.log(logging.INFO, f"Thread {thread_id} exiting. Processed {process_count} results.")
-    with counter_lock:
-        thread_counts[thread_id] = process_count
+    name = result["name"]
+    url = result["url"]
+    logger.log(logging.INFO, f'Processing item "{name}" from "{url}".')
+    data = parse_item(url, session, timeout, logger, max_generation)
+    if data is None:
+        logger.log(logging.ERROR, f'Failed to parse item "{name}" from "{url}".')
+    else:
+        logger.log(logging.INFO, f'Successfully parsed item "{name}" from "{url}".')
+        json_dump = json.dumps(data, indent=4)
+        save(f"data/items/{name}.json", json_dump, logger)
+        save(f"data-bk/items/{name}.min.json", json_dump, logger)
 
 
 def main():
     """
-    Main function to parse results from the PokeAPI using multiple threads.
+    Main entry point for the item parser script.
 
     :return: None
     """
 
-    # Load environment variables and create logger instance.
     load_dotenv()
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
     MAX_GENERATION = int(os.getenv("MAX_GENERATION"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
     THREADS = int(os.getenv("THREADS"))
-
     LOG = os.getenv("LOG") == "True"
+
     logger = Logger("Item Parser", "logs/item_parser.log", LOG)
     logger.log(logging.INFO, "Successfully loaded environment variables.")
 
-    # Delete the existing data directory
+    # Clean and create directories as needed.
     logger.log(logging.INFO, "Deleting existing data directory.")
     if os.path.exists("data/items"):
         shutil.rmtree("data/items")
@@ -151,52 +144,38 @@ def main():
     os.makedirs("data/items")
 
     # Build the API URL and fetch results.
-    stop_event = threading.Event()
     offset = STARTING_INDEX - 1
     limit = ENDING_INDEX - STARTING_INDEX + 1
     api_url = f"https://pokeapi.co/api/v2/item/?offset={offset}&limit={limit}"
-    response = request_data(api_url, TIMEOUT, stop_event, logger)
-    if response is None or "results" not in response:
-        logger.log(logging.ERROR, "Failed to fetch results data from the API.")
+
+    # Create a ThreadingManager instance (which creates its own session with retry support).
+    tm = ThreadingManager(threads=THREADS, timeout=TIMEOUT, logger=logger)
+
+    try:
+        logger.log(logging.INFO, f"Requesting item index data from '{api_url}'.")
+        response = tm.session.get(api_url, timeout=TIMEOUT)
+    except Exception as e:
+        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}", exc_info=True)
         return
 
-    results = response["results"]
+    if response.status_code != 200:
+        logger.log(logging.ERROR, f"Failed to fetch results from '{api_url}': {response.status_code}")
+        return
+
+    data = response.json()
+    results = data.get("results")
+    if not results:
+        logger.log(logging.ERROR, "No results found in the API response.")
+        return
+
     logger.log(logging.INFO, "Successfully fetched results data from the API.")
 
-    # Create a thread-safe queue and populate it with the results.
-    q = Queue()
-    for result in results:
-        q.put(result)
-
-    # Initialize worker threads
-    threads = []
-    for i in range(THREADS):
-        t = threading.Thread(target=worker, args=(q, i + 1, MAX_GENERATION, TIMEOUT, stop_event, logger))
-        t.start()
-        threads.append(t)
-
-    # Use a polling loop to wait until all threads have completed.
-    try:
-        while any(t.is_alive() for t in threads):
-            time.sleep(0.5)
-    except KeyboardInterrupt:
-        # If an interrupt (Ctrl+C) occurs, signal all threads to stop.
-        logger.log(logging.WARNING, "Received keyboard interrupt. Stopping all threads.")
-        stop_event.set()
-    finally:
-        # Ensure that every thread has finished execution.
-        for t in threads:
-            t.join()
-        logger.log(logging.INFO, "All threads have exited successfully.")
-
-        # Log the work summary.
-        logger.log(logging.INFO, "Work Summary:")
-        for i in range(THREADS):
-            tid = i + 1
-            count = thread_counts.get(tid, 0)
-            logger.log(logging.INFO, f"Thread {tid} processed {count} results.")
-        total = sum(thread_counts.values())
-        logger.log(logging.INFO, f"Total results processed: {total}.")
+    # Populate the shared queue with the results.
+    tm.add_to_queue(results)
+    # Run worker threads. We pass a lambda so that max_generation is included in the callback.
+    tm.run_workers(
+        lambda result, session, timeout, logger: process_item_result(result, session, timeout, logger, MAX_GENERATION)
+    )
 
 
 if __name__ == "__main__":

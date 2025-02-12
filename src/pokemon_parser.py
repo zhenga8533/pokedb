@@ -1,38 +1,40 @@
-from dotenv import load_dotenv
-from queue import Queue, Empty
-from util.data import request_data
-from util.file import save
-from util.logger import Logger
 import json
 import logging
 import os
-import threading
-import time
+
+from dotenv import load_dotenv
+from requests import Session
+
+from util.file import save
+from util.logger import Logger
+from util.threading import ThreadingManager
 
 
-# Global dictionary to store the number of threads processing each result.
-thread_counts = {}
-counter_lock = threading.Lock()
-
-
-def parse_species(url: str, pokemon: dict, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
+def parse_species(url: str, pokemon: dict, session: Session, timeout: int, logger: Logger) -> dict:
     """
-    Parse the species data of a result from the PokeAPI.
+    Parse the species data of a Pokémon from the PokeAPI and update the provided dictionary.
 
-    :param url: The URL of the result.
-    :param pokemon: The dictionary to update with the species data.
+    :param url: The URL of the species.
+    :param pokemon: The dictionary to update with species data.
+    :param session: The shared requests session.
     :param timeout: The timeout for the request.
-    :param stop_event: The event to signal when the worker should stop.
-    :param logger: The logger to log messages.
-    :return: A dictionary with the result data.
+    :param logger: The logger instance.
+    :return: The updated Pokémon dictionary.
     """
 
-    # Fetch the data from the API.
-    data = request_data(url, timeout, stop_event, logger)
-    if data is None:
-        return data
+    try:
+        response = session.get(url, timeout=timeout)
+    except Exception as e:
+        logger.log(logging.ERROR, f"Request failed for species URL {url}: {e}", exc_info=True)
+        return pokemon
 
-    # Update the pokemon data with the parsed species data.
+    if response.status_code != 200:
+        logger.log(logging.ERROR, f"Failed to request species URL {url}: {response.status_code}")
+        return pokemon
+
+    data = response.json()
+
+    # Update the Pokémon dictionary with species data.
     pokemon.update(
         {
             "base_happiness": data["base_happiness"],
@@ -50,7 +52,7 @@ def parse_species(url: str, pokemon: dict, timeout: int, stop_event: threading.E
             ],
             "form_switchable": data["forms_switchable"],
             "female_rate": data["gender_rate"],
-            "genus": next(entry["genus"] for entry in data["genera"] if entry["language"]["name"] == "en"),
+            "genus": next((entry["genus"] for entry in data["genera"] if entry["language"]["name"] == "en"), ""),
             "generation": data["generation"]["name"],
             "growth_rate": data["growth_rate"]["name"],
             "habitat": data["habitat"]["name"] if data["habitat"] is not None else None,
@@ -74,31 +76,37 @@ def parse_species(url: str, pokemon: dict, timeout: int, stop_event: threading.E
     return pokemon
 
 
-def parse_pokemon(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
+def parse_pokemon(url: str, session: Session, timeout: int, logger: Logger) -> dict:
     """
-    Parse the data of a result from the PokeAPI.
+    Parse the data of a Pokémon from the PokeAPI using the shared session.
 
-    :param url: The URL of the result.
+    :param url: The URL of the Pokémon.
+    :param session: The shared requests session.
     :param timeout: The timeout for the request.
-    :param stop_event: The event to signal when the worker should stop.
-    :param logger: The logger to log messages.
-    :return: A dictionary with the result data.
+    :param logger: The logger instance.
+    :return: A dictionary with the parsed Pokémon data.
     """
 
-    # Fetch the data from the API.
-    data = request_data(url, timeout, stop_event, logger)
-    if data is None:
-        return data
+    try:
+        response = session.get(url, timeout=timeout)
+    except Exception as e:
+        logger.log(logging.ERROR, f"Request failed for Pokémon URL {url}: {e}", exc_info=True)
+        return None
+
+    if response.status_code != 200:
+        logger.log(logging.ERROR, f"Failed to request Pokémon URL {url}: {response.status_code}")
+        return None
+
+    data = response.json()
 
     pokemon = {}
-
-    # Species data
+    # Basic data.
     pokemon["name"] = data["name"]
     pokemon["id"] = data["id"]
     pokemon["height"] = data["height"] / 10
     pokemon["weight"] = data["weight"] / 10
 
-    # Battle data
+    # Battle data.
     pokemon["abilities"] = [
         {
             "name": ability["ability"]["name"],
@@ -128,7 +136,7 @@ def parse_pokemon(url: str, timeout: int, stop_event: threading.Event, logger: L
     pokemon["ev_yield"] = {stat["stat"]["name"]: stat["effort"] for stat in data["stats"]}
     pokemon["types"] = [type_info["type"]["name"] for type_info in data["types"]]
 
-    # Wild data
+    # Wild data.
     pokemon["base_experience"] = data["base_experience"]
     pokemon["held_items"] = {
         held_item["item"]["name"]: {
@@ -137,129 +145,91 @@ def parse_pokemon(url: str, timeout: int, stop_event: threading.Event, logger: L
         for held_item in data["held_items"]
     }
 
-    # Game data
-    pokemon["cry_latest"] = data["cries"]["latest"]
-    pokemon["cry_legacy"] = data["cries"]["legacy"]
+    # Game data.
+    pokemon["cry_latest"] = data.get("cries", {}).get("latest")
+    pokemon["cry_legacy"] = data.get("cries", {}).get("legacy")
     pokemon["sprites"] = data["sprites"]
 
-    # Get forms and species data
+    # Forms and species data.
     pokemon["forms"] = [form["name"] for form in data["forms"][1:]]
     species_url = data["species"]["url"]
-    parse_species(species_url, pokemon, timeout, stop_event, logger)
+    parse_species(species_url, pokemon, session, timeout, logger)
 
     return pokemon
 
 
-def worker(q: Queue, thread_id: int, timeout: int, stop_event: threading.Event, logger: Logger):
+def process_pokemon_result(result: dict, session: Session, timeout: int, logger: Logger):
     """
-    Worker function that continually processes results from the queue.
+    Process a Pokémon result by fetching its data from the API and saving it.
 
-    :param q: The queue to retrieve results from.
-    :param thread_id: The ID of the thread.
-    :param timeout: The timeout for the request.
-    :param stop_event: The event to signal when the worker should stop.
-    :param logger: The logger to log messages.
-    :return: None
+    :param result: A dictionary containing at least the 'name' and 'url' of the Pokémon.
+    :param session: The shared requests session.
+    :param timeout: The timeout for each API request.
+    :param logger: The logger instance.
     """
 
-    process_count = 0
-
-    while not stop_event.is_set():
-        # Attempt to retrieve a result from the queue.
-        try:
-            result = q.get(timeout=0.5)
-            name = result["name"]
-            url = result["url"]
-        except Empty:
-            # No more results in the queue: exit the loop.
-            break
-
-        # Process and save the result data.
-        logger.log(logging.INFO, f'Thread {thread_id} processing "{name}" from "{url}".')
-        data = parse_pokemon(url, timeout, stop_event, logger)
-        if data is None:
-            logger.log(logging.ERROR, f'Failed to parse result "{name}" from "{url}".')
-        else:
-            logger.log(logging.INFO, f'Succesfully parsed result "{name}" from "{url}".')
-            json_dump = json.dumps(data, indent=4)
-            save(f"data/pokemon/{name}.json", json_dump, logger)
-            save(f"data-bk/pokemon/{name}.json", json_dump, logger)
-
-        # Indicate that the retrieved result has been processed.
-        process_count += 1
-        q.task_done()
-
-    # Log the thread's exit and update the thread count.
-    logger.log(logging.INFO, f"Thread {thread_id} exiting. Processed {process_count} results.")
-    with counter_lock:
-        thread_counts[thread_id] = process_count
+    name = result["name"]
+    url = result["url"]
+    logger.log(logging.INFO, f'Processing Pokémon "{name}" from "{url}".')
+    data = parse_pokemon(url, session, timeout, logger)
+    if data is None:
+        logger.log(logging.ERROR, f'Failed to parse Pokémon "{name}" from "{url}".')
+    else:
+        logger.log(logging.INFO, f'Successfully parsed Pokémon "{name}" from "{url}".')
+        json_dump = json.dumps(data, indent=4)
+        save(f"data/pokemon/{name}.json", json_dump, logger)
+        save(f"data-bk/pokemon/{name}.json", json_dump, logger)
 
 
 def main():
     """
-    Main function to parse results from the PokeAPI using multiple threads.
+    Main entry point for the Pokémon parser script.
 
     :return: None
     """
 
-    # Load environment variables and create logger instance.
+    # Load environment variables and setup logger.
     load_dotenv()
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
     THREADS = int(os.getenv("THREADS"))
-
     LOG = os.getenv("LOG") == "True"
+
     logger = Logger("Pokemon Parser", "logs/pokemon_parser.log", LOG)
     logger.log(logging.INFO, "Successfully loaded environment variables.")
 
-    # Build the API URL and fetch results.
-    stop_event = threading.Event()
+    # Build the API URL and fetch Pokémon index data.
     offset = STARTING_INDEX - 1
     limit = ENDING_INDEX - STARTING_INDEX + 1
     api_url = f"https://pokeapi.co/api/v2/pokemon/?offset={offset}&limit={limit}"
-    response = request_data(api_url, TIMEOUT, stop_event, logger)
-    if response is None or "results" not in response:
-        logger.log(logging.ERROR, "Failed to fetch results data from the API.")
+
+    # Create a ThreadingManager instance (which creates its own session with retry support).
+    tm = ThreadingManager(threads=THREADS, timeout=TIMEOUT, logger=logger)
+
+    try:
+        logger.log(logging.INFO, f"Requesting Pokémon index data from '{api_url}'.")
+        response = tm.session.get(api_url, timeout=TIMEOUT)
+    except Exception as e:
+        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}", exc_info=True)
         return
 
-    results = response["results"]
-    logger.log(logging.INFO, "Successfully fetched results data from the API.")
+    if response.status_code != 200:
+        logger.log(logging.ERROR, f"Failed to fetch results from '{api_url}': {response.status_code}")
+        return
 
-    # Create a thread-safe queue and populate it with the results.
-    q = Queue()
-    for result in results:
-        q.put(result)
+    data = response.json()
+    results = data.get("results")
+    if not results:
+        logger.log(logging.ERROR, "No results found in the API response.")
+        return
 
-    # Initialize worker threads
-    threads = []
-    for i in range(THREADS):
-        t = threading.Thread(target=worker, args=(q, i + 1, TIMEOUT, stop_event, logger))
-        t.start()
-        threads.append(t)
+    logger.log(logging.INFO, "Successfully fetched Pokémon index data from the API.")
 
-    # Use a polling loop to wait until all threads have completed.
-    try:
-        while any(t.is_alive() for t in threads):
-            time.sleep(0.5)
-    except KeyboardInterrupt:
-        # If an interrupt (Ctrl+C) occurs, signal all threads to stop.
-        logger.log(logging.WARNING, "Received keyboard interrupt. Stopping all threads.")
-        stop_event.set()
-    finally:
-        # Ensure that every thread has finished execution.
-        for t in threads:
-            t.join()
-        logger.log(logging.INFO, "All threads have exited successfully.")
-
-        # Log the work summary.
-        logger.log(logging.INFO, "Work Summary:")
-        for i in range(THREADS):
-            tid = i + 1
-            count = thread_counts.get(tid, 0)
-            logger.log(logging.INFO, f"Thread {tid} processed {count} results.")
-        total = sum(thread_counts.values())
-        logger.log(logging.INFO, f"Total results processed: {total}.")
+    # Populate the shared queue with the results.
+    tm.add_to_queue(results)
+    # Run worker threads using the ThreadingManager.
+    tm.run_workers(process_pokemon_result)
 
 
 if __name__ == "__main__":

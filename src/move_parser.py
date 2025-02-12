@@ -1,47 +1,48 @@
-from dotenv import load_dotenv
-from queue import Queue, Empty
-from util.data import request_data
-from util.file import save
-from util.format import roman_to_int
-from util.logger import Logger
 import json
 import logging
 import os
 import shutil
-import threading
-import time
+
+from dotenv import load_dotenv
+from requests import Session
+
+from util.file import save
+from util.format import roman_to_int
+from util.logger import Logger
+from util.threading import ThreadingManager
 
 
-# Global dictionary to store the number of threads processing each result.
-thread_counts = {}
-counter_lock = threading.Lock()
-
-
-def parse_move(url: str, max_generation: int, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
+def parse_move(url: str, session: Session, timeout: int, logger: Logger, max_generation: int) -> dict:
     """
-    Parse the data of a move from the PokeAPI.
+    Parse the data of a move from the PokeAPI using the shared session.
 
-    :param url: The URL of the result.
-    :param max_generation: The maximum generation to parse.
+    :param url: The URL of the move.
+    :param session: The shared requests session.
     :param timeout: The timeout for the request.
-    :param stop_event: The event to signal when the worker should stop.
     :param logger: The logger to log messages.
-    :return: A dictionary with the result data.
+    :param max_generation: The maximum generation to parse.
+    :return: A dictionary with the move data, or None if unsuccessful.
     """
 
-    # Fetch the data from the API.
-    data = request_data(url, timeout, stop_event, logger)
-    if data is None:
-        return data
+    try:
+        response = session.get(url, timeout=timeout)
+    except Exception as e:
+        logger.log(logging.ERROR, f"Request failed for {url}: {e}", exc_info=True)
+        return None
 
-    # Check generation
+    if response.status_code != 200:
+        logger.log(logging.ERROR, f"Failed to request {url}: {response.status_code}")
+        return None
+
+    data = response.json()
+
+    # Check generation (assumes generation name is like "generation-i")
     generation = roman_to_int(data["generation"]["name"].split("-")[1])
     if generation > max_generation:
         return None
 
     move = {}
-
-    # General move information
+    # General move information.
     move["name"] = data["name"]
     move["accuracy"] = data["accuracy"]
     move["damage_class"] = data["damage_class"]["name"]
@@ -51,7 +52,7 @@ def parse_move(url: str, max_generation: int, timeout: int, stop_event: threadin
     move["target"] = data["target"]["name"]
     move["type"] = data["type"]["name"]
 
-    # Move effects
+    # Move effects.
     move["effect_chance"] = data["effect_chance"]
     move["effect_changes"] = data["effect_changes"]
     effect_entries = data["effect_entries"]
@@ -68,141 +69,113 @@ def parse_move(url: str, max_generation: int, timeout: int, stop_event: threadin
     move["meta"] = data["meta"]
     move["stat_changes"] = data["stat_changes"]
 
-    # Move learn data
+    # Move learn data.
     move["generation"] = data["generation"]["name"]
     move["learned_by"] = [pokemon["name"] for pokemon in data["learned_by_pokemon"]]
     move["machines"] = {}
     machines = [machine["machine"]["url"] for machine in data["machines"]]
-    for machine in machines:
-        machine_data = request_data(machine, timeout, stop_event, logger)
-        if machine_data is None:
+    for machine_url in machines:
+        try:
+            machine_response = session.get(machine_url, timeout=timeout)
+        except Exception as e:
+            logger.log(logging.ERROR, f"Request failed for machine URL {machine_url}: {e}", exc_info=True)
             return None
-        else:
-            machine_name = machine_data["item"]["name"]
-            machine_version = machine_data["version_group"]["name"]
-            move["machines"][machine_version] = machine_name
+        if machine_response.status_code != 200:
+            logger.log(logging.ERROR, f"Failed to request machine URL {machine_url}: {machine_response.status_code}")
+            return None
+        machine_data = machine_response.json()
+        machine_name = machine_data["item"]["name"]
+        machine_version = machine_data["version_group"]["name"]
+        move["machines"][machine_version] = machine_name
 
     return move
 
 
-def worker(q: Queue, thread_id: int, max_generation: int, timeout: int, stop_event: threading.Event, logger: Logger):
+def process_move_result(result: dict, session: Session, timeout: int, logger: Logger, max_generation: int) -> None:
     """
-    Worker function that continually processes results from the queue.
+    Process a move result by fetching its data from the API and saving the parsed move data.
 
-    :param q: The queue to retrieve results from.
-    :param thread_id: The ID of the thread.
+    :param result: A dictionary containing at least the 'name' and 'url' of the move.
+    :param session: The shared requests session.
+    :param timeout: The timeout for each API request.
+    :param logger: The logger instance.
     :param max_generation: The maximum generation to parse.
-    :param timeout: The timeout for the request.
-    :param stop_event: The event to signal when the worker should stop.
-    :param logger: The logger to log messages.
     :return: None
     """
 
-    process_count = 0
-
-    while not stop_event.is_set():
-        # Attempt to retrieve a result from the queue.
-        try:
-            result = q.get(timeout=0.5)
-            name = result["name"]
-            url = result["url"]
-        except Empty:
-            # No more results in the queue: exit the loop.
-            break
-
-        # Process and save the result data.
-        logger.log(logging.INFO, f'Thread {thread_id} processing "{name}" from "{url}".')
-        data = parse_move(url, max_generation, timeout, stop_event, logger)
-        if data is None:
-            logger.log(logging.ERROR, f'Failed to parse result "{name}" from "{url}".')
-            break
-        else:
-            logger.log(logging.INFO, f'Succesfully parsed result "{name}" from "{url}".')
-            json_dump = json.dumps(data, indent=4)
-            save(f"data/moves/{name}.json", json_dump, logger)
-            save(f"data-bk/moves/{name}.json", json_dump, logger)
-            process_count += 1
-        q.task_done()
-
-    # Log the thread's exit and update the thread count.
-    logger.log(logging.INFO, f"Thread {thread_id} exiting. Processed {process_count} results.")
-    with counter_lock:
-        thread_counts[thread_id] = process_count
+    name = result["name"]
+    url = result["url"]
+    logger.log(logging.INFO, f'Processing move "{name}" from "{url}".')
+    data = parse_move(url, session, timeout, logger, max_generation)
+    if data is None:
+        logger.log(logging.ERROR, f'Failed to parse move "{name}" from "{url}".')
+    else:
+        logger.log(logging.INFO, f'Successfully parsed move "{name}" from "{url}".')
+        json_dump = json.dumps(data, indent=4)
+        save(f"data/moves/{name}.json", json_dump, logger)
+        save(f"data-bk/moves/{name}.json", json_dump, logger)
 
 
 def main():
     """
-    Main function to parse results from the PokeAPI using multiple threads.
+    Main entry point for the move parser script.
 
     :return: None
     """
 
-    # Load environment variables and create logger instance.
+    # Load environment variables and setup logger.
     load_dotenv()
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
     MAX_GENERATION = int(os.getenv("MAX_GENERATION"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
     THREADS = int(os.getenv("THREADS"))
-
     LOG = os.getenv("LOG") == "True"
+
     logger = Logger("Move Parser", "logs/move_parser.log", LOG)
     logger.log(logging.INFO, "Successfully loaded environment variables.")
 
-    # Delete the existing data directory
+    # Delete the existing data directory.
     logger.log(logging.INFO, "Deleting existing data directory.")
     if os.path.exists("data/moves"):
         shutil.rmtree("data/moves")
     logger.log(logging.INFO, "Creating new data directory.")
     os.makedirs("data/moves")
 
-    # Build the API URL and fetch results.
-    stop_event = threading.Event()
+    # Build the API URL and fetch the move index results.
     offset = STARTING_INDEX - 1
     limit = ENDING_INDEX - STARTING_INDEX + 1
     api_url = f"https://pokeapi.co/api/v2/move/?offset={offset}&limit={limit}"
-    response = request_data(api_url, TIMEOUT, stop_event, logger)
-    if response is None or "results" not in response:
-        logger.log(logging.ERROR, "Failed to fetch results data from the API.")
+
+    # Create a ThreadingManager instance (which creates its own session with retry support).
+    tm = ThreadingManager(threads=THREADS, timeout=TIMEOUT, logger=logger)
+
+    try:
+        logger.log(logging.INFO, f"Requesting move index data from '{api_url}'.")
+        response = tm.session.get(api_url, timeout=TIMEOUT)
+    except Exception as e:
+        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}", exc_info=True)
         return
 
-    results = response["results"]
+    if response.status_code != 200:
+        logger.log(logging.ERROR, f"Failed to fetch results from '{api_url}': {response.status_code}")
+        return
+
+    data = response.json()
+    results = data.get("results")
+    if not results:
+        logger.log(logging.ERROR, "No results found in the API response.")
+        return
+
     logger.log(logging.INFO, "Successfully fetched results data from the API.")
 
-    # Create a thread-safe queue and populate it with the results.
-    q = Queue()
-    for result in results:
-        q.put(result)
-
-    # Initialize worker threads
-    threads = []
-    for i in range(THREADS):
-        t = threading.Thread(target=worker, args=(q, i + 1, MAX_GENERATION, TIMEOUT, stop_event, logger))
-        t.start()
-        threads.append(t)
-
-    # Use a polling loop to wait until all threads have completed.
-    try:
-        while any(t.is_alive() for t in threads):
-            time.sleep(0.5)
-    except KeyboardInterrupt:
-        # If an interrupt (Ctrl+C) occurs, signal all threads to stop.
-        logger.log(logging.WARNING, "Received keyboard interrupt. Stopping all threads.")
-        stop_event.set()
-    finally:
-        # Ensure that every thread has finished execution.
-        for t in threads:
-            t.join()
-        logger.log(logging.INFO, "All threads have exited successfully.")
-
-        # Log the work summary.
-        logger.log(logging.INFO, "Work Summary:")
-        for i in range(THREADS):
-            tid = i + 1
-            count = thread_counts.get(tid, 0)
-            logger.log(logging.INFO, f"Thread {tid} processed {count} results.")
-        total = sum(thread_counts.values())
-        logger.log(logging.INFO, f"Total results processed: {total}.")
+    # Populate the shared queue with the results.
+    tm.add_to_queue(results)
+    # Run worker threads using the ThreadingManager.
+    # A lambda is used here to pass MAX_GENERATION into the callback.
+    tm.run_workers(
+        lambda result, session, timeout, logger: process_move_result(result, session, timeout, logger, MAX_GENERATION)
+    )
 
 
 if __name__ == "__main__":

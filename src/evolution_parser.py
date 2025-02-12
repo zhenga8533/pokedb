@@ -1,19 +1,14 @@
-from dotenv import load_dotenv
-from queue import Queue, Empty
-from util.data import request_data
-from util.file import load, save
-from util.logger import Logger
 import glob
 import json
 import logging
 import os
-import threading
-import time
 
+from dotenv import load_dotenv
+from requests import Session
 
-# Global dictionary to store the number of threads processing each result.
-thread_counts = {}
-counter_lock = threading.Lock()
+from util.file import load, save
+from util.logger import Logger
+from util.threading import ThreadingManager
 
 
 def parse_evolution_line(chain: dict, pokemon: list) -> dict:
@@ -21,15 +16,13 @@ def parse_evolution_line(chain: dict, pokemon: list) -> dict:
     Recursively parse an evolution chain.
 
     :param chain: The chain to parse.
-    :param pokemon: The list of pokemon to update.
+    :param pokemon: The list of Pokémon names to update.
     :return: A dictionary with the parsed evolution data.
     """
 
     name = chain["species"]["name"]
     pokemon.append(name)
-    evolutions = []
-    for evolution in chain["evolves_to"]:
-        evolutions.append(parse_evolution_line(evolution, pokemon))
+    evolutions = [parse_evolution_line(evolution, pokemon) for evolution in chain.get("evolves_to", [])]
     return {
         "name": name,
         "evolution_details": chain["evolution_details"],
@@ -37,148 +30,120 @@ def parse_evolution_line(chain: dict, pokemon: list) -> dict:
     }
 
 
-def parse_evolution(url: str, timeout: int, stop_event: threading.Event, logger: Logger) -> dict:
+def parse_evolution(url: str, session: Session, timeout: int, logger: Logger) -> dict:
     """
-    Parse the data of an evolution line from the PokeAPI.
+    Parse the evolution data from the API using the shared session.
 
-    :param url: The URL of the result.
+    :param url: The URL of the evolution chain.
+    :param session: The requests.Session object.
     :param timeout: The timeout for the request.
-    :param stop_event: The event to signal when the worker should stop.
-    :param logger: The logger to log messages.
-    :return: A dictionary with the result data.
+    :param logger: The logger instance.
+    :return: A dictionary with the parsed evolution data, or None if unsuccessful.
     """
 
-    # Fetch the data from the API.
-    data = request_data(url, timeout, stop_event, logger)
-    if data is None:
-        return data
+    try:
+        logger.log(logging.INFO, f"Requesting data from '{url}'.")
+        response = session.get(url, timeout=timeout)
+    except Exception as e:
+        logger.log(logging.ERROR, f"Request to '{url}' failed: {e}", exc_info=True)
+        return None
 
-    # Set up the data structures to store the parsed evolution data.
+    if response.status_code != 200:
+        logger.log(logging.ERROR, f"Failed to request data from '{url}': {response.status_code}")
+        return None
+
+    data = response.json()
+
+    # Build the evolution chain and collect Pokémon species names.
     pokemon = []
     evolutions = [parse_evolution_line(data["chain"], pokemon)]
 
-    # Update the pokemon data with the parsed evolution data.
+    # Update each Pokémon's data file with its evolution information.
     for species in pokemon:
         file_pattern = f"data/pokemon/{species}*.json"
         files = glob.glob(file_pattern)
-
-        # Loop through all files of the pokemon species
         for file_path in files:
             pokemon_data = json.loads(load(file_path, logger))
             pokemon_data["evolutions"] = evolutions
             json_dump = json.dumps(pokemon_data, indent=4)
             save(file_path, json_dump, logger)
+            # Also save a backup.
             save(file_path.replace("data/", "data-bk/"), json_dump, logger)
 
     return data
 
 
-def worker(q: Queue, thread_id: int, timeout: int, stop_event: threading.Event, logger: Logger):
+def process_evolution_result(result: dict, session: Session, timeout: int, logger: Logger) -> None:
     """
-    Worker function that continually processes results from the queue.
+    Processes an evolution chain result by fetching its data from the API,
+    parsing the evolution chain, and updating the corresponding Pokémon files.
 
-    :param q: The queue to retrieve results from.
-    :param thread_id: The ID of the thread.
-    :param timeout: The timeout for the request.
-    :param stop_event: The event to signal when the worker should stop.
-    :param logger: The logger to log messages.
+    :param result: The evolution chain result from the API.
+    :param session: The shared session to use for requests.
+    :param timeout: The timeout for requests.
+    :param logger: The logger to use.
     :return: None
     """
 
-    process_count = 0
-
-    while not stop_event.is_set():
-        # Attempt to retrieve a result from the queue.
-        try:
-            result = q.get(timeout=0.5)
-            url = result["url"]
-        except Empty:
-            # No more results in the queue: exit the loop.
-            break
-
-        # Process and save the result data.
-        logger.log(logging.INFO, f'Thread {thread_id} processing "{url}".')
-        data = parse_evolution(url, timeout, stop_event, logger)
-        if data is None:
-            logger.log(logging.ERROR, f'Failed to parse result "{url}".')
-        else:
-            logger.log(logging.INFO, f'Succesfully parsed result "{url}".')
-
-        # Indicate that the retrieved result has been processed.
-        process_count += 1
-        q.task_done()
-
-    # Log the thread's exit and update the thread count.
-    logger.log(logging.INFO, f"Thread {thread_id} exiting. Processed {process_count} results.")
-    with counter_lock:
-        thread_counts[thread_id] = process_count
+    url = result["url"]
+    logger.log(logging.INFO, f'Processing evolution chain from "{url}".')
+    data = parse_evolution(url, session, timeout, logger)
+    if data is None:
+        logger.log(logging.ERROR, f'Failed to parse result "{url}".')
+    else:
+        logger.log(logging.INFO, f'Successfully parsed result "{url}".')
 
 
 def main():
     """
-    Main function to parse results from the PokeAPI using multiple threads.
+    Main entry point for the evolution parser script.
 
     :return: None
     """
 
-    # Load environment variables and create logger instance.
+    # Load environment variables and setup logger.
     load_dotenv()
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
     THREADS = int(os.getenv("THREADS"))
-
     LOG = os.getenv("LOG") == "True"
+
     logger = Logger("Evolution Parser", "logs/evolution_parser.log", LOG)
     logger.log(logging.INFO, "Successfully loaded environment variables.")
 
-    # Build the API URL and fetch results.
-    stop_event = threading.Event()
+    # Build the API URL for evolution chains.
     offset = STARTING_INDEX - 1
     limit = ENDING_INDEX - STARTING_INDEX + 1
     api_url = f"https://pokeapi.co/api/v2/evolution-chain/?offset={offset}&limit={limit}"
-    response = request_data(api_url, TIMEOUT, stop_event, logger)
-    if response is None or "results" not in response:
-        logger.log(logging.ERROR, "Failed to fetch results data from the API.")
+
+    # Create a ThreadingManager instance (which creates its own session with retry support).
+    tm = ThreadingManager(threads=THREADS, timeout=TIMEOUT, logger=logger)
+
+    # Fetch the list of evolution chain results using the shared session.
+    try:
+        logger.log(logging.INFO, f"Requesting evolution chain index data from '{api_url}'.")
+        response = tm.session.get(api_url, timeout=TIMEOUT)
+    except Exception as e:
+        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}", exc_info=True)
         return
 
-    results = response["results"]
+    if response.status_code != 200:
+        logger.log(logging.ERROR, f"Failed to fetch results from '{api_url}': {response.status_code}")
+        return
+
+    data = response.json()
+    results = data.get("results")
+    if not results:
+        logger.log(logging.ERROR, "No results found in the API response.")
+        return
+
     logger.log(logging.INFO, "Successfully fetched results data from the API.")
 
-    # Create a thread-safe queue and populate it with the results.
-    q = Queue()
-    for result in results:
-        q.put(result)
-
-    # Initialize worker threads
-    threads = []
-    for i in range(THREADS):
-        t = threading.Thread(target=worker, args=(q, i + 1, TIMEOUT, stop_event, logger))
-        t.start()
-        threads.append(t)
-
-    # Use a polling loop to wait until all threads have completed.
-    try:
-        while any(t.is_alive() for t in threads):
-            time.sleep(0.5)
-    except KeyboardInterrupt:
-        # If an interrupt (Ctrl+C) occurs, signal all threads to stop.
-        logger.log(logging.WARNING, "Received keyboard interrupt. Stopping all threads.")
-        stop_event.set()
-    finally:
-        # Ensure that every thread has finished execution.
-        for t in threads:
-            t.join()
-        logger.log(logging.INFO, "All threads have exited successfully.")
-
-        # Log the work summary.
-        logger.log(logging.INFO, "Work Summary:")
-        for i in range(THREADS):
-            tid = i + 1
-            count = thread_counts.get(tid, 0)
-            logger.log(logging.INFO, f"Thread {tid} processed {count} results.")
-        total = sum(thread_counts.values())
-        logger.log(logging.INFO, f"Total results processed: {total}.")
+    # Populate the shared queue with the results.
+    tm.add_to_queue(results)
+    # Run the worker threads, passing in the evolution processing callback.
+    tm.run_workers(process_evolution_result)
 
 
 if __name__ == "__main__":
