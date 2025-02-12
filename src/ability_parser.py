@@ -6,6 +6,7 @@ import shutil
 from dotenv import load_dotenv
 from requests import Session
 
+from util.data import session_request
 from util.file import save
 from util.format import roman_to_int
 from util.logger import Logger
@@ -30,23 +31,16 @@ def process_ability_result(result: dict, session: Session, timeout: int, logger:
     logger.log(logging.INFO, f"Processing ability: {name} from {url}")
 
     # Fetch data using the shared session.
-    try:
-        response = session.get(url, timeout=timeout)
-    except Exception as e:
-        logger.log(logging.ERROR, f"Request failed for {url}: {e}")
-        return
-
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to request {url}: {response.status_code}")
-        return
-
+    response = session_request(session, url, timeout, logger)
+    if response is None:
+        return None
     data = response.json()
 
     # Check the generation (assumes the name is like "generation-i")
     generation = roman_to_int(data["generation"]["name"].split("-")[1])
     if generation > max_generation:
         logger.log(logging.INFO, f"Skipping ability {name} due to generation {generation}.")
-        return
+        return None
 
     # Process and save the data.
     ability = {
@@ -70,7 +64,7 @@ def process_ability_result(result: dict, session: Session, timeout: int, logger:
         ability["effect"] = effect_entry["effect"]
         ability["short_effect"] = effect_entry["short_effect"]
 
-    for change in data.get("effect_changes", []):
+    for change in data["effect_changes"]:
         effect = next(
             (entry for entry in change["effect_entries"] if entry["language"]["name"] == "en"), {"effect": ""}
         )["effect"]
@@ -78,7 +72,7 @@ def process_ability_result(result: dict, session: Session, timeout: int, logger:
 
     ability["flavor_text_entries"] = {
         entry["version_group"]["name"]: entry["flavor_text"]
-        for entry in data.get("flavor_text_entries", [])
+        for entry in data["flavor_text_entries"]
         if entry["language"]["name"] == "en"
     }
 
@@ -117,14 +111,14 @@ def main():
     limit = ENDING_INDEX - STARTING_INDEX + 1
     api_url = f"https://pokeapi.co/api/v2/ability/?offset={offset}&limit={limit}"
 
-    # For initial API call you could use the session from a temporary manager or directly requests.
+    # Create a threading manager and fetch the results.
     tm = ThreadingManager(threads=THREADS, timeout=TIMEOUT, logger=logger)
-    response = tm.session.get(api_url, timeout=TIMEOUT)
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to fetch results: {response.status_code}")
-        return
-    results = response.json().get("results", [])
-    logger.log(logging.INFO, "Successfully fetched results data from the API.")
+
+    # Fetch the list of ability results using the shared session.
+    response = session_request(tm.session, api_url, TIMEOUT, logger)
+    if response is None:
+        return None
+    results = response.json()["results"]
 
     # Add the results to the queue and run workers.
     tm.add_to_queue(results)

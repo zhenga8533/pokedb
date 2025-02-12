@@ -6,6 +6,7 @@ import shutil
 from dotenv import load_dotenv
 from requests import Session
 
+from util.data import session_request
 from util.file import save
 from util.format import roman_to_int
 from util.logger import Logger
@@ -24,16 +25,9 @@ def parse_item(url: str, session: Session, timeout: int, logger: Logger, max_gen
     :return: The data of the item as a dictionary, or None if unsuccessful.
     """
 
-    try:
-        response = session.get(url, timeout=timeout)
-    except Exception as e:
-        logger.log(logging.ERROR, f"Request failed for {url}: {e}")
+    response = session_request(session, url, timeout, logger)
+    if response is None:
         return None
-
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to request {url}: {response.status_code}")
-        return None
-
     data = response.json()
 
     # Check generation (assumes each game index contains a generation name like "generation-i")
@@ -55,9 +49,7 @@ def parse_item(url: str, session: Session, timeout: int, logger: Logger, max_gen
     item["sprite"] = data["sprites"]["default"]
     item["games"] = [game["generation"]["name"] for game in data["game_indices"]]
     item["held_by"] = {
-        pokemon.get("name", "?"): {
-            version["version"]["name"]: version["rarity"] for version in pokemon["version_details"]
-        }
+        pokemon["name"]: {version["version"]["name"]: version["rarity"] for version in pokemon["version_details"]}
         for pokemon in data["held_by_pokemon"]
     }
 
@@ -74,22 +66,14 @@ def parse_item(url: str, session: Session, timeout: int, logger: Logger, max_gen
 
     fling_effect = data["fling_effect"]
     if fling_effect is not None:
-        try:
-            response2 = session.get(fling_effect["url"], timeout=timeout)
-        except Exception as e:
-            logger.log(logging.ERROR, f"Request failed for fling effect URL {fling_effect['url']}: {e}")
-            fling_effect = None
+        response2 = session_request(session, fling_effect["url"], timeout, logger)
+        if response2 is None:
+            fling_effect = {"effect": ""}
         else:
-            if response2.status_code != 200:
-                logger.log(
-                    logging.ERROR, f"Failed to request fling effect URL {fling_effect['url']}: {response2.status_code}"
-                )
-                fling_effect = None
-            else:
-                fling_effect_data = response2.json()
-                effect_entries = fling_effect_data["effect_entries"]
-                fling_effect = next((entry for entry in effect_entries if entry["language"]["name"] == "en"), None)
-    item["fling_effect"] = "" if fling_effect is None else fling_effect["effect"]
+            fling_effect_data = response2.json()
+            effect_entries = fling_effect_data["effect_entries"]
+            fling_effect = next((entry for entry in effect_entries if entry["language"]["name"] == "en"), None)
+    item["fling_effect"] = fling_effect["effect"]
 
     return item
 
@@ -151,24 +135,11 @@ def main():
     # Create a ThreadingManager instance (which creates its own session with retry support).
     tm = ThreadingManager(threads=THREADS, timeout=TIMEOUT, logger=logger)
 
-    try:
-        logger.log(logging.INFO, f"Requesting item index data from '{api_url}'.")
-        response = tm.session.get(api_url, timeout=TIMEOUT)
-    except Exception as e:
-        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}")
-        return
-
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to fetch results from '{api_url}': {response.status_code}")
-        return
-
-    data = response.json()
-    results = data.get("results")
-    if not results:
-        logger.log(logging.ERROR, "No results found in the API response.")
-        return
-
-    logger.log(logging.INFO, "Successfully fetched results data from the API.")
+    # Fetch the list of item results using the shared session.
+    response = session_request(tm.session, api_url, TIMEOUT, logger)
+    if response is None:
+        return None
+    results = response.json()["results"]
 
     # Populate the shared queue with the results.
     tm.add_to_queue(results)

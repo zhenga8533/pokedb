@@ -6,6 +6,7 @@ import os
 from dotenv import load_dotenv
 from requests import Session
 
+from util.data import session_request
 from util.file import load, save
 from util.logger import Logger
 from util.threading import ThreadingManager
@@ -22,7 +23,7 @@ def parse_evolution_line(chain: dict, pokemon: list) -> dict:
 
     name = chain["species"]["name"]
     pokemon.append(name)
-    evolutions = [parse_evolution_line(evolution, pokemon) for evolution in chain.get("evolves_to", [])]
+    evolutions = [parse_evolution_line(evolution, pokemon) for evolution in chain["evolves_to"]]
     return {
         "name": name,
         "evolution_details": chain["evolution_details"],
@@ -42,17 +43,9 @@ def parse_evolution(url: str, session: Session, timeout: int, logger: Logger, ma
     :return: A dictionary with the parsed evolution data, or None if unsuccessful.
     """
 
-    try:
-        logger.log(logging.INFO, f"Requesting data from '{url}'.")
-        response = session.get(url, timeout=timeout)
-    except Exception as e:
-        logger.log(logging.ERROR, f"Request to '{url}' failed: {e}")
+    response = session_request(session, url, timeout, logger)
+    if response is None:
         return None
-
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to request data from '{url}': {response.status_code}")
-        return None
-
     data = response.json()
 
     # Build the evolution chain and collect Pokémon species names.
@@ -61,14 +54,16 @@ def parse_evolution(url: str, session: Session, timeout: int, logger: Logger, ma
 
     # Update each Pokémon's data file with its evolution information.
     for species in pokemon:
-        file_pattern = f"data/pokemon/{species}*.json"
+        gen = "gen-" + str(max_generation)
+        file_pattern = f"generations/{gen}/pokemon/{species}*.json"
         files = glob.glob(file_pattern)
         for file_path in files:
+            file_path = file_path.replace("\\", "/")
             pokemon_data = json.loads(load(file_path, logger))
             pokemon_data["evolutions"] = evolutions
             json_dump = json.dumps(pokemon_data, indent=4)
+            save(file_path.replace(gen, "data"), json_dump, logger)
             save(file_path, json_dump, logger)
-            save(file_path.replace("data", "generations/gen-" + str(max_generation)), json_dump, logger)
 
     return data
 
@@ -125,24 +120,10 @@ def main():
     tm = ThreadingManager(threads=THREADS, timeout=TIMEOUT, logger=logger)
 
     # Fetch the list of evolution chain results using the shared session.
-    try:
-        logger.log(logging.INFO, f"Requesting evolution chain index data from '{api_url}'.")
-        response = tm.session.get(api_url, timeout=TIMEOUT)
-    except Exception as e:
-        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}")
-        return
-
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to fetch results from '{api_url}': {response.status_code}")
-        return
-
-    data = response.json()
-    results = data.get("results")
-    if not results:
-        logger.log(logging.ERROR, "No results found in the API response.")
-        return
-
-    logger.log(logging.INFO, "Successfully fetched results data from the API.")
+    response = session_request(tm.session, api_url, TIMEOUT, logger)
+    if response is None:
+        return None
+    results = response.json()["results"]
 
     # Populate the shared queue with the results.
     tm.add_to_queue(results)

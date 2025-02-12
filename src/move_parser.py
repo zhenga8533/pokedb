@@ -6,6 +6,7 @@ import shutil
 from dotenv import load_dotenv
 from requests import Session
 
+from util.data import session_request
 from util.file import save
 from util.format import roman_to_int
 from util.logger import Logger
@@ -24,16 +25,9 @@ def parse_move(url: str, session: Session, timeout: int, logger: Logger, max_gen
     :return: A dictionary with the move data, or None if unsuccessful.
     """
 
-    try:
-        response = session.get(url, timeout=timeout)
-    except Exception as e:
-        logger.log(logging.ERROR, f"Request failed for {url}: {e}")
+    response = session_request(session, url, timeout, logger)
+    if response is None:
         return None
-
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to request {url}: {response.status_code}")
-        return None
-
     data = response.json()
 
     # Check generation (assumes generation name is like "generation-i")
@@ -75,13 +69,8 @@ def parse_move(url: str, session: Session, timeout: int, logger: Logger, max_gen
     move["machines"] = {}
     machines = [machine["machine"]["url"] for machine in data["machines"]]
     for machine_url in machines:
-        try:
-            machine_response = session.get(machine_url, timeout=timeout)
-        except Exception as e:
-            logger.log(logging.ERROR, f"Request failed for machine URL {machine_url}: {e}")
-            return None
-        if machine_response.status_code != 200:
-            logger.log(logging.ERROR, f"Failed to request machine URL {machine_url}: {machine_response.status_code}")
+        machine_response = session_request(session, machine_url, timeout, logger)
+        if machine_response is None:
             return None
         machine_data = machine_response.json()
         machine_name = machine_data["item"]["name"]
@@ -150,24 +139,11 @@ def main():
     # Create a ThreadingManager instance (which creates its own session with retry support).
     tm = ThreadingManager(threads=THREADS, timeout=TIMEOUT, logger=logger)
 
-    try:
-        logger.log(logging.INFO, f"Requesting move index data from '{api_url}'.")
-        response = tm.session.get(api_url, timeout=TIMEOUT)
-    except Exception as e:
-        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}")
-        return
-
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to fetch results from '{api_url}': {response.status_code}")
-        return
-
-    data = response.json()
-    results = data.get("results")
-    if not results:
-        logger.log(logging.ERROR, "No results found in the API response.")
-        return
-
-    logger.log(logging.INFO, "Successfully fetched results data from the API.")
+    # Fetch the list of move results using the shared session.
+    response = session_request(tm.session, api_url, TIMEOUT, logger)
+    if response is None:
+        return None
+    results = response.json()["results"]
 
     # Populate the shared queue with the results.
     tm.add_to_queue(results)

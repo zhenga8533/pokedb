@@ -14,6 +14,7 @@ class ThreadingManager:
         Initializes the threading manager with a shared queue, thread counts,
         and a requests session that supports retries.
         """
+
         self.threads = threads
         self.timeout = timeout
         self.logger = logger
@@ -26,6 +27,7 @@ class ThreadingManager:
         """
         Create a persistent requests session with retry support.
         """
+
         session = requests.Session()
         retry = Retry(
             total=retries,
@@ -45,6 +47,7 @@ class ThreadingManager:
         Adds a list of items (each typically a dict with a URL and other metadata)
         to the shared queue.
         """
+
         for item in items:
             self.queue.put(item)
 
@@ -53,6 +56,7 @@ class ThreadingManager:
         The generic worker method. It pulls items off the queue and hands them off to
         the given process_result_func for processing. Exceptions are caught and logged.
         """
+
         process_count = 0
         while True:
             try:
@@ -79,6 +83,7 @@ class ThreadingManager:
         Runs the worker threads via a ThreadPoolExecutor. The process_result_func parameter
         is a callback that defines how to process an individual result.
         """
+
         with ThreadPoolExecutor(max_workers=self.threads) as executor:
             futures = [executor.submit(self.worker, i + 1, process_result_func) for i in range(self.threads)]
             for future in as_completed(futures):

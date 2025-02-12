@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 from requests import Session
 
+from util.data import session_request
 from util.file import save
 from util.format import roman_to_int
 from util.logger import Logger
@@ -12,12 +13,9 @@ from util.threading import ThreadingManager
 
 
 def parse_game_versions(session: Session, timeout: int, logger: Logger) -> dict:
-    logger.log(logging.INFO, "Requesting game versions from the API.")
-    response = session.get("https://pokeapi.co/api/v2/version?offset=0&limit=9999", timeout=timeout)
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to request game versions: {response.status_code}")
-        return {}
-
+    response = session_request(session, "https://pokeapi.co/api/v2/version?offset=0&limit=9999", timeout, logger)
+    if response is None:
+        return None
     data = response.json()
     generations = {}
 
@@ -26,20 +24,15 @@ def parse_game_versions(session: Session, timeout: int, logger: Logger) -> dict:
         logger.log(logging.INFO, f"Processing game version {version_name}.")
 
         # Fetch the version group data.
-        response2 = session.get(version["url"], timeout=timeout)
-        if response2.status_code != 200:
-            logger.log(logging.ERROR, f"Failed to request game version {version_name}: {response2.status_code}")
-            continue
-
-        group_data = response2.json()
-        version_group = group_data["version_group"]
-        group_name = version_group["name"]
+        response2 = session_request(session, version["url"], timeout, logger)
+        if response2 is None:
+            return None
+        version_group = response2.json()["version_group"]
 
         # Fetch the generation data.
-        reponse3 = session.get(version_group["url"], timeout=timeout)
-        if reponse3.status_code != 200:
-            logger.log(logging.ERROR, f"Failed to request version group for {group_name}: {reponse3.status_code}")
-            continue
+        reponse3 = session_request(session, version_group["url"], timeout, logger)
+        if reponse3 is None:
+            return None
 
         # Store generation data.
         generation = reponse3.json()["generation"]["name"]
@@ -48,7 +41,7 @@ def parse_game_versions(session: Session, timeout: int, logger: Logger) -> dict:
     return generations
 
 
-def parse_species(url: str, pokemon: dict, session: Session, timeout: int, logger: Logger) -> dict:
+def parse_species(url: str, pokemon: dict, session: Session, timeout: int, logger: Logger) -> None:
     """
     Parse the species data of a Pokémon from the PokeAPI and update the provided dictionary.
 
@@ -57,19 +50,12 @@ def parse_species(url: str, pokemon: dict, session: Session, timeout: int, logge
     :param session: The shared requests session.
     :param timeout: The timeout for the request.
     :param logger: The logger instance.
-    :return: The updated Pokémon dictionary.
+    :return: None
     """
 
-    try:
-        response = session.get(url, timeout=timeout)
-    except Exception as e:
-        logger.log(logging.ERROR, f"Request failed for species URL {url}: {e}")
-        return pokemon
-
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to request species URL {url}: {response.status_code}")
-        return pokemon
-
+    response = session_request(session, url, timeout, logger)
+    if response is None:
+        return None
     data = response.json()
 
     # Update the Pokémon dictionary with species data.
@@ -111,8 +97,6 @@ def parse_species(url: str, pokemon: dict, session: Session, timeout: int, logge
         if form not in pokemon["forms"]:
             pokemon["forms"].append(form)
 
-    return pokemon
-
 
 def parse_pokemon(
     url: str, session: Session, timeout: int, logger: Logger, generations: dict, max_generation: int
@@ -129,16 +113,9 @@ def parse_pokemon(
     :return: A dictionary with the parsed Pokémon data.
     """
 
-    try:
-        response = session.get(url, timeout=timeout)
-    except Exception as e:
-        logger.log(logging.ERROR, f"Request failed for Pokémon URL {url}: {e}")
+    response = session_request(session, url, timeout, logger)
+    if response is None:
         return None
-
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to request Pokémon URL {url}: {response.status_code}")
-        return None
-
     data = response.json()
     pokemon = {}
 
@@ -164,6 +141,11 @@ def parse_pokemon(
         }
         for ability in data["abilities"]
     ]
+    pokemon["stats"] = {stat["stat"]["name"]: stat["base_stat"] for stat in data["stats"]}
+    pokemon["ev_yield"] = {stat["stat"]["name"]: stat["effort"] for stat in data["stats"]}
+    pokemon["types"] = [type_info["type"]["name"] for type_info in data["types"]]
+
+    # Moves
     pokemon["moves"] = {
         version_name: [
             {
@@ -181,9 +163,11 @@ def parse_pokemon(
             for version_group_detail in move["version_group_details"]
         }
     }
-    pokemon["stats"] = {stat["stat"]["name"]: stat["base_stat"] for stat in data["stats"]}
-    pokemon["ev_yield"] = {stat["stat"]["name"]: stat["effort"] for stat in data["stats"]}
-    pokemon["types"] = [type_info["type"]["name"] for type_info in data["types"]]
+    # Sort moves by level learned, then by learn method, and finally by name.
+    for version in pokemon["moves"]:
+        pokemon["moves"][version] = sorted(
+            pokemon["moves"][version], key=lambda x: (x["level_learned_at"], x["learn_method"], x["name"])
+        )
 
     # Wild data.
     pokemon["base_experience"] = data["base_experience"]
@@ -195,8 +179,9 @@ def parse_pokemon(
     }
 
     # Game data.
-    pokemon["cry_latest"] = data.get("cries", {}).get("latest")
-    pokemon["cry_legacy"] = data.get("cries", {}).get("legacy")
+    cries = data["cries"]
+    pokemon["cry_latest"] = cries["latest"]
+    pokemon["cry_legacy"] = cries["legacy"]
     pokemon["sprites"] = data["sprites"]
 
     # Forms and species data.
@@ -264,24 +249,11 @@ def main():
     # Get generation data.
     generations = parse_game_versions(tm.session, TIMEOUT, logger)
 
-    try:
-        logger.log(logging.INFO, f"Requesting Pokémon index data from '{api_url}'.")
-        response = tm.session.get(api_url, timeout=TIMEOUT)
-    except Exception as e:
-        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}")
-        return
-
-    if response.status_code != 200:
-        logger.log(logging.ERROR, f"Failed to fetch results from '{api_url}': {response.status_code}")
-        return
-
-    data = response.json()
-    results = data.get("results")
-    if not results:
-        logger.log(logging.ERROR, "No results found in the API response.")
-        return
-
-    logger.log(logging.INFO, "Successfully fetched Pokémon index data from the API.")
+    # Fetch the Pokémon index data.
+    response = session_request(tm.session, api_url, TIMEOUT, logger)
+    if response is None:
+        return None
+    results = response.json()["results"]
 
     # Populate the shared queue with the results.
     tm.add_to_queue(results)
