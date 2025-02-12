@@ -1,0 +1,62 @@
+{
+    "name": "dragon-ascent",
+    "accuracy": 100,
+    "damage_class": "physical",
+    "power": 120,
+    "pp": 5,
+    "priority": 0,
+    "target": "selected-pokemon",
+    "type": "flying",
+    "effect_chance": 100,
+    "effect_changes": [],
+    "effect": "Inflicts regular damage, then lowers the user's Defense and Special Defense by one stage each.",
+    "flavor_text_entries": {
+        "omega-ruby-alpha-sapphire": "After soaring upward, the user attacks its target by\ndropping out of the sky at high speeds, although it\nlowers its own Defense and Sp. Def in the process.",
+        "sun-moon": "After soaring upward, the user attacks its target by\ndropping out of the sky at high speeds. But it lowers\nits own Defense and Sp. Def stats in the process.",
+        "ultra-sun-ultra-moon": "After soaring upward, the user attacks its target by\ndropping out of the sky at high speeds. But it lowers\nits own Defense and Sp. Def stats in the process.",
+        "lets-go-pikachu-lets-go-eevee": "After soaring upward, the user attacks its target by\ndropping out of the sky at high speeds. But it lowers\nits own Defense and Sp. Def stats in the process.",
+        "sword-shield": "After soaring upward, the user attacks its target by\ndropping out of the sky at high speeds. But it lowers\nits own Defense and Sp. Def stats in the process."
+    },
+    "meta": {
+        "ailment": {
+            "name": "none",
+            "url": "https://pokeapi.co/api/v2/move-ailment/0/"
+        },
+        "ailment_chance": 0,
+        "category": {
+            "name": "damage+raise",
+            "url": "https://pokeapi.co/api/v2/move-category/7/"
+        },
+        "crit_rate": 0,
+        "drain": 0,
+        "flinch_chance": 0,
+        "healing": 0,
+        "max_hits": null,
+        "max_turns": null,
+        "min_hits": null,
+        "min_turns": null,
+        "stat_chance": 100
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+            }
+        },
+        {
+            "change": -1,
+            "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+            }
+        }
+    ],
+    "generation": "generation-vi",
+    "learned_by": [
+        "rayquaza",
+        "rayquaza-mega"
+    ],
+    "machines": {}
+}

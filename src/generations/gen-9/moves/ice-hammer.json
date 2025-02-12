@@ -1,0 +1,54 @@
+{
+    "name": "ice-hammer",
+    "accuracy": 90,
+    "damage_class": "physical",
+    "power": 100,
+    "pp": 10,
+    "priority": 0,
+    "target": "selected-pokemon",
+    "type": "ice",
+    "effect_chance": 100,
+    "effect_changes": [],
+    "effect": "Inflicts regular damage, then lowers the user's Speed by one stage.",
+    "flavor_text_entries": {
+        "sun-moon": "The user swings and hits with its strong, heavy fist.\nIt lowers the user\u2019s Speed, however.",
+        "ultra-sun-ultra-moon": "The user swings and hits with its strong, heavy fist.\nIt lowers the user\u2019s Speed, however.",
+        "lets-go-pikachu-lets-go-eevee": "The user swings and hits with its strong, heavy fist.\nIt lowers the user\u2019s Speed, however.",
+        "sword-shield": "The user swings and hits with its strong, heavy fist.\nIt lowers the user\u2019s Speed, however."
+    },
+    "meta": {
+        "ailment": {
+            "name": "none",
+            "url": "https://pokeapi.co/api/v2/move-ailment/0/"
+        },
+        "ailment_chance": 0,
+        "category": {
+            "name": "damage+raise",
+            "url": "https://pokeapi.co/api/v2/move-category/7/"
+        },
+        "crit_rate": 0,
+        "drain": 0,
+        "flinch_chance": 0,
+        "healing": 0,
+        "max_hits": null,
+        "max_turns": null,
+        "min_hits": null,
+        "min_turns": null,
+        "stat_chance": 100
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+            }
+        }
+    ],
+    "generation": "generation-vii",
+    "learned_by": [
+        "crabominable",
+        "tinkatink"
+    ],
+    "machines": {}
+}

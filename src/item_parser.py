@@ -27,7 +27,7 @@ def parse_item(url: str, session: Session, timeout: int, logger: Logger, max_gen
     try:
         response = session.get(url, timeout=timeout)
     except Exception as e:
-        logger.log(logging.ERROR, f"Request failed for {url}: {e}", exc_info=True)
+        logger.log(logging.ERROR, f"Request failed for {url}: {e}")
         return None
 
     if response.status_code != 200:
@@ -77,7 +77,7 @@ def parse_item(url: str, session: Session, timeout: int, logger: Logger, max_gen
         try:
             response2 = session.get(fling_effect["url"], timeout=timeout)
         except Exception as e:
-            logger.log(logging.ERROR, f"Request failed for fling effect URL {fling_effect['url']}: {e}", exc_info=True)
+            logger.log(logging.ERROR, f"Request failed for fling effect URL {fling_effect['url']}: {e}")
             fling_effect = None
         else:
             if response2.status_code != 200:
@@ -115,7 +115,7 @@ def process_item_result(result: dict, session: Session, timeout: int, logger: Lo
         logger.log(logging.INFO, f'Successfully parsed item "{name}" from "{url}".')
         json_dump = json.dumps(data, indent=4)
         save(f"data/items/{name}.json", json_dump, logger)
-        save(f"data-bk/items/{name}.min.json", json_dump, logger)
+        save(f"generations/gen-{max_generation}/items/{name}.json", json_dump, logger)
 
 
 def main():
@@ -155,7 +155,7 @@ def main():
         logger.log(logging.INFO, f"Requesting item index data from '{api_url}'.")
         response = tm.session.get(api_url, timeout=TIMEOUT)
     except Exception as e:
-        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}", exc_info=True)
+        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}")
         return
 
     if response.status_code != 200:

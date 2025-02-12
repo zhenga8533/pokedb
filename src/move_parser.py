@@ -27,7 +27,7 @@ def parse_move(url: str, session: Session, timeout: int, logger: Logger, max_gen
     try:
         response = session.get(url, timeout=timeout)
     except Exception as e:
-        logger.log(logging.ERROR, f"Request failed for {url}: {e}", exc_info=True)
+        logger.log(logging.ERROR, f"Request failed for {url}: {e}")
         return None
 
     if response.status_code != 200:
@@ -78,7 +78,7 @@ def parse_move(url: str, session: Session, timeout: int, logger: Logger, max_gen
         try:
             machine_response = session.get(machine_url, timeout=timeout)
         except Exception as e:
-            logger.log(logging.ERROR, f"Request failed for machine URL {machine_url}: {e}", exc_info=True)
+            logger.log(logging.ERROR, f"Request failed for machine URL {machine_url}: {e}")
             return None
         if machine_response.status_code != 200:
             logger.log(logging.ERROR, f"Failed to request machine URL {machine_url}: {machine_response.status_code}")
@@ -113,7 +113,7 @@ def process_move_result(result: dict, session: Session, timeout: int, logger: Lo
         logger.log(logging.INFO, f'Successfully parsed move "{name}" from "{url}".')
         json_dump = json.dumps(data, indent=4)
         save(f"data/moves/{name}.json", json_dump, logger)
-        save(f"data-bk/moves/{name}.json", json_dump, logger)
+        save(f"generations/gen-{max_generation}/moves/{name}.json", json_dump, logger)
 
 
 def main():
@@ -154,7 +154,7 @@ def main():
         logger.log(logging.INFO, f"Requesting move index data from '{api_url}'.")
         response = tm.session.get(api_url, timeout=TIMEOUT)
     except Exception as e:
-        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}", exc_info=True)
+        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}")
         return
 
     if response.status_code != 200:

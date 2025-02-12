@@ -6,8 +6,46 @@ from dotenv import load_dotenv
 from requests import Session
 
 from util.file import save
+from util.format import roman_to_int
 from util.logger import Logger
 from util.threading import ThreadingManager
+
+
+def parse_game_versions(session: Session, timeout: int, logger: Logger) -> dict:
+    logger.log(logging.INFO, "Requesting game versions from the API.")
+    response = session.get("https://pokeapi.co/api/v2/version?offset=0&limit=9999", timeout=timeout)
+    if response.status_code != 200:
+        logger.log(logging.ERROR, f"Failed to request game versions: {response.status_code}")
+        return {}
+
+    data = response.json()
+    generations = {}
+
+    for version in data["results"]:
+        version_name = version["name"]
+        logger.log(logging.INFO, f"Processing game version {version_name}.")
+
+        # Fetch the version group data.
+        response2 = session.get(version["url"], timeout=timeout)
+        if response2.status_code != 200:
+            logger.log(logging.ERROR, f"Failed to request game version {version_name}: {response2.status_code}")
+            continue
+
+        group_data = response2.json()
+        version_group = group_data["version_group"]
+        group_name = version_group["name"]
+
+        # Fetch the generation data.
+        reponse3 = session.get(version_group["url"], timeout=timeout)
+        if reponse3.status_code != 200:
+            logger.log(logging.ERROR, f"Failed to request version group for {group_name}: {reponse3.status_code}")
+            continue
+
+        # Store generation data.
+        generation = reponse3.json()["generation"]["name"]
+        generations[version_name] = roman_to_int(generation.rsplit("-", 1)[1])
+
+    return generations
 
 
 def parse_species(url: str, pokemon: dict, session: Session, timeout: int, logger: Logger) -> dict:
@@ -25,7 +63,7 @@ def parse_species(url: str, pokemon: dict, session: Session, timeout: int, logge
     try:
         response = session.get(url, timeout=timeout)
     except Exception as e:
-        logger.log(logging.ERROR, f"Request failed for species URL {url}: {e}", exc_info=True)
+        logger.log(logging.ERROR, f"Request failed for species URL {url}: {e}")
         return pokemon
 
     if response.status_code != 200:
@@ -76,7 +114,9 @@ def parse_species(url: str, pokemon: dict, session: Session, timeout: int, logge
     return pokemon
 
 
-def parse_pokemon(url: str, session: Session, timeout: int, logger: Logger) -> dict:
+def parse_pokemon(
+    url: str, session: Session, timeout: int, logger: Logger, generations: dict, max_generation: int
+) -> dict:
     """
     Parse the data of a Pokémon from the PokeAPI using the shared session.
 
@@ -84,13 +124,15 @@ def parse_pokemon(url: str, session: Session, timeout: int, logger: Logger) -> d
     :param session: The shared requests session.
     :param timeout: The timeout for the request.
     :param logger: The logger instance.
+    :param generations: A dictionary of game versions to generations.
+    :param max_generation: The maximum generation to parse.
     :return: A dictionary with the parsed Pokémon data.
     """
 
     try:
         response = session.get(url, timeout=timeout)
     except Exception as e:
-        logger.log(logging.ERROR, f"Request failed for Pokémon URL {url}: {e}", exc_info=True)
+        logger.log(logging.ERROR, f"Request failed for Pokémon URL {url}: {e}")
         return None
 
     if response.status_code != 200:
@@ -98,8 +140,15 @@ def parse_pokemon(url: str, session: Session, timeout: int, logger: Logger) -> d
         return None
 
     data = response.json()
-
     pokemon = {}
+
+    # Check the generation of the Pokémon.
+    game_indices = data["game_indices"]
+    generation = min(generations[game_index["version"]["name"]] for game_index in game_indices)
+    if generation > max_generation:
+        logger.log(logging.INFO, f"Skipping Pokémon {data['name']} due to generation {generation}.")
+        return None
+
     # Basic data.
     pokemon["name"] = data["name"]
     pokemon["id"] = data["id"]
@@ -158,7 +207,9 @@ def parse_pokemon(url: str, session: Session, timeout: int, logger: Logger) -> d
     return pokemon
 
 
-def process_pokemon_result(result: dict, session: Session, timeout: int, logger: Logger):
+def process_pokemon_result(
+    result: dict, session: Session, timeout: int, logger: Logger, generations: dict, max_generation: int
+) -> None:
     """
     Process a Pokémon result by fetching its data from the API and saving it.
 
@@ -166,19 +217,21 @@ def process_pokemon_result(result: dict, session: Session, timeout: int, logger:
     :param session: The shared requests session.
     :param timeout: The timeout for each API request.
     :param logger: The logger instance.
+    :param generations: A dictionary of game versions to generations.
+    :param max_generation: The maximum generation to parse.
+    :return: None
     """
 
     name = result["name"]
     url = result["url"]
     logger.log(logging.INFO, f'Processing Pokémon "{name}" from "{url}".')
-    data = parse_pokemon(url, session, timeout, logger)
-    if data is None:
-        logger.log(logging.ERROR, f'Failed to parse Pokémon "{name}" from "{url}".')
-    else:
+
+    data = parse_pokemon(url, session, timeout, logger, generations, max_generation)
+    if data is not None:
         logger.log(logging.INFO, f'Successfully parsed Pokémon "{name}" from "{url}".')
         json_dump = json.dumps(data, indent=4)
         save(f"data/pokemon/{name}.json", json_dump, logger)
-        save(f"data-bk/pokemon/{name}.json", json_dump, logger)
+        save(f"generations/gen-{max_generation}/pokemon/{name}.json", json_dump, logger)
 
 
 def main():
@@ -192,6 +245,7 @@ def main():
     load_dotenv()
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
+    MAX_GENERATION = int(os.getenv("MAX_GENERATION"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
     THREADS = int(os.getenv("THREADS"))
     LOG = os.getenv("LOG") == "True"
@@ -207,11 +261,14 @@ def main():
     # Create a ThreadingManager instance (which creates its own session with retry support).
     tm = ThreadingManager(threads=THREADS, timeout=TIMEOUT, logger=logger)
 
+    # Get generation data.
+    generations = parse_game_versions(tm.session, TIMEOUT, logger)
+
     try:
         logger.log(logging.INFO, f"Requesting Pokémon index data from '{api_url}'.")
         response = tm.session.get(api_url, timeout=TIMEOUT)
     except Exception as e:
-        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}", exc_info=True)
+        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}")
         return
 
     if response.status_code != 200:
@@ -229,7 +286,11 @@ def main():
     # Populate the shared queue with the results.
     tm.add_to_queue(results)
     # Run worker threads using the ThreadingManager.
-    tm.run_workers(process_pokemon_result)
+    tm.run_workers(
+        lambda result, session, timeout, logger: process_pokemon_result(
+            result, session, timeout, logger, generations, MAX_GENERATION
+        )
+    )
 
 
 if __name__ == "__main__":

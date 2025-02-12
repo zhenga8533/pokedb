@@ -1,0 +1,61 @@
+{
+    "name": "seed-flare",
+    "accuracy": 85,
+    "damage_class": "special",
+    "power": 120,
+    "pp": 5,
+    "priority": 0,
+    "target": "selected-pokemon",
+    "type": "grass",
+    "effect_chance": 40,
+    "effect_changes": [],
+    "effect": "Inflicts regular damage.  Has a 40% chance to lower the target's Special Defense by two stages.",
+    "flavor_text_entries": {
+        "diamond-pearl": "The user generates\na shock wave from\nwithin its body.\nIt may also lower the\ntarget\u2019s Sp. Def.",
+        "platinum": "The user generates\na shock wave from\nwithin its body.\nIt may also lower the\ntarget\u2019s Sp. Def.",
+        "heartgold-soulsilver": "The user generates\na shock wave from\nwithin its body.\nIt may also lower the\ntarget\u2019s Sp. Def.",
+        "black-white": "The user emits a shock wave from\nits body to attack its target. It may\nharshly lower the target\u2019s Sp. Def.",
+        "black-2-white-2": "The user emits a shock wave from\nits body to attack its target. It may\nharshly lower the target\u2019s Sp. Def.",
+        "x-y": "The user emits a shock wave from\nits body to attack its target. This may\nalso harshly lower the target\u2019s Sp. Def.",
+        "omega-ruby-alpha-sapphire": "The user emits a shock wave from\nits body to attack its target. This may\nalso harshly lower the target\u2019s Sp. Def.",
+        "sun-moon": "The user emits a shock wave from its body to attack\nits target. This may also harshly lower the target\u2019s\nSp. Def stat.",
+        "ultra-sun-ultra-moon": "The user emits a shock wave from its body to attack\nits target. This may also harshly lower the target\u2019s\nSp. Def stat.",
+        "lets-go-pikachu-lets-go-eevee": "The user emits a shock wave from its body to attack\nits target. This may also harshly lower the target\u2019s\nSp. Def stat.",
+        "sword-shield": "The user emits a shock wave from its body to attack\nits target. This may also harshly lower the target\u2019s\nSp. Def stat."
+    },
+    "meta": {
+        "ailment": {
+            "name": "none",
+            "url": "https://pokeapi.co/api/v2/move-ailment/0/"
+        },
+        "ailment_chance": 0,
+        "category": {
+            "name": "damage+lower",
+            "url": "https://pokeapi.co/api/v2/move-category/6/"
+        },
+        "crit_rate": 0,
+        "drain": 0,
+        "flinch_chance": 0,
+        "healing": 0,
+        "max_hits": null,
+        "max_turns": null,
+        "min_hits": null,
+        "min_turns": null,
+        "stat_chance": 40
+    },
+    "stat_changes": [
+        {
+            "change": -2,
+            "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+            }
+        }
+    ],
+    "generation": "generation-iv",
+    "learned_by": [
+        "shaymin-land",
+        "shaymin-sky"
+    ],
+    "machines": {}
+}

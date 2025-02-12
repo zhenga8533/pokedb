@@ -1,0 +1,80 @@
+{
+    "name": "razor-shell",
+    "accuracy": 95,
+    "damage_class": "physical",
+    "power": 75,
+    "pp": 10,
+    "priority": 0,
+    "target": "selected-pokemon",
+    "type": "water",
+    "effect_chance": 50,
+    "effect_changes": [],
+    "effect": "Inflicts regular damage.  Has a 50% chance to lower the target's Defense by one stage.",
+    "flavor_text_entries": {
+        "black-white": "The user cuts its target with sharp\nshells. This attack may also lower the\ntarget\u2019s Defense stat.",
+        "black-2-white-2": "The user cuts its target with sharp\nshells. This attack may also lower the\ntarget\u2019s Defense stat.",
+        "x-y": "The user cuts its target with sharp\nshells. This may also lower\nthe target\u2019s Defense stat.",
+        "omega-ruby-alpha-sapphire": "The user cuts its target with sharp\nshells. This may also lower\nthe target\u2019s Defense stat.",
+        "sun-moon": "The user cuts its target with sharp shells. This may\nalso lower the target\u2019s Defense stat.",
+        "ultra-sun-ultra-moon": "The user cuts its target with sharp shells. This may\nalso lower the target\u2019s Defense stat.",
+        "lets-go-pikachu-lets-go-eevee": "The user cuts its target with sharp shells. This may\nalso lower the target\u2019s Defense stat.",
+        "sword-shield": "The user cuts its target with sharp shells. This may\nalso lower the target\u2019s Defense stat."
+    },
+    "meta": {
+        "ailment": {
+            "name": "none",
+            "url": "https://pokeapi.co/api/v2/move-ailment/0/"
+        },
+        "ailment_chance": 0,
+        "category": {
+            "name": "damage+lower",
+            "url": "https://pokeapi.co/api/v2/move-category/6/"
+        },
+        "crit_rate": 0,
+        "drain": 0,
+        "flinch_chance": 0,
+        "healing": 0,
+        "max_hits": null,
+        "max_turns": null,
+        "min_hits": null,
+        "min_turns": null,
+        "stat_chance": 50
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+            }
+        }
+    ],
+    "generation": "generation-v",
+    "learned_by": [
+        "slowbro",
+        "shellder",
+        "cloyster",
+        "krabby",
+        "kingler",
+        "kabutops",
+        "mew",
+        "slowking",
+        "corphish",
+        "crawdaunt",
+        "oshawott",
+        "dewott",
+        "samurott",
+        "carracosta",
+        "escavalier",
+        "binacle",
+        "barbaracle",
+        "golisopod",
+        "drednaw",
+        "slowbro-galar",
+        "slowking-galar",
+        "samurott-hisui"
+    ],
+    "machines": {
+        "sword-shield": "tm83"
+    }
+}

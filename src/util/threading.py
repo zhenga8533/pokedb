@@ -66,7 +66,7 @@ class ThreadingManager:
                 # using the shared session and timeout if needed.
                 process_result_func(result, self.session, self.timeout, self.logger)
             except Exception as e:
-                self.logger.log(logging.ERROR, f"Error processing result {result}: {e}", exc_info=True)
+                self.logger.log(logging.ERROR, f"Error processing result {result}: {e}")
             process_count += 1
             self.queue.task_done()
 

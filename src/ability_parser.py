@@ -12,7 +12,7 @@ from util.logger import Logger
 from util.threading import ThreadingManager
 
 
-def process_ability_result(result: dict, session: Session, timeout: int, logger: object) -> None:
+def process_ability_result(result: dict, session: Session, timeout: int, logger: object, max_generation: int) -> None:
     """
     Processes an ability result by fetching its data from the API, checking the generation,
     and saving the processed JSON.
@@ -20,7 +20,8 @@ def process_ability_result(result: dict, session: Session, timeout: int, logger:
     :param result: The ability result from the API.
     :param session: The shared session to use for requests.
     :param timeout: The timeout for requests.
-    :param logger: The logger to use
+    :param logger: The logger to use.
+    :param max_generation: The maximum generation to process.
     :return: None
     """
 
@@ -32,7 +33,7 @@ def process_ability_result(result: dict, session: Session, timeout: int, logger:
     try:
         response = session.get(url, timeout=timeout)
     except Exception as e:
-        logger.log(logging.ERROR, f"Request failed for {url}: {e}", exc_info=True)
+        logger.log(logging.ERROR, f"Request failed for {url}: {e}")
         return
 
     if response.status_code != 200:
@@ -43,8 +44,7 @@ def process_ability_result(result: dict, session: Session, timeout: int, logger:
 
     # Check the generation (assumes the name is like "generation-i")
     generation = roman_to_int(data["generation"]["name"].split("-")[1])
-    MAX_GENERATION = 5  # For example, adjust as needed.
-    if generation > MAX_GENERATION:
+    if generation > max_generation:
         logger.log(logging.INFO, f"Skipping ability {name} due to generation {generation}.")
         return
 
@@ -84,7 +84,7 @@ def process_ability_result(result: dict, session: Session, timeout: int, logger:
 
     json_dump = json.dumps(ability, indent=4)
     save(f"data/abilities/{name}.json", json_dump, logger)
-    save(f"data-bk/abilities/{name}.json", json_dump, logger)
+    save(f"generations/gen-{max_generation}/abilities/{name}.json", json_dump, logger)
     logger.log(logging.INFO, f"Successfully processed ability {name}.")
 
 
@@ -99,6 +99,7 @@ def main():
     load_dotenv()
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
+    MAX_GENERATION = int(os.getenv("MAX_GENERATION"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
     THREADS = int(os.getenv("THREADS"))
     LOG = os.getenv("LOG") == "True"
@@ -127,7 +128,11 @@ def main():
 
     # Add the results to the queue and run workers.
     tm.add_to_queue(results)
-    tm.run_workers(process_ability_result)
+    tm.run_workers(
+        lambda result, session, timeout, logger: process_ability_result(
+            result, session, timeout, logger, MAX_GENERATION
+        )
+    )
 
 
 if __name__ == "__main__":

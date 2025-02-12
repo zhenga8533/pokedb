@@ -30,7 +30,7 @@ def parse_evolution_line(chain: dict, pokemon: list) -> dict:
     }
 
 
-def parse_evolution(url: str, session: Session, timeout: int, logger: Logger) -> dict:
+def parse_evolution(url: str, session: Session, timeout: int, logger: Logger, max_generation: int) -> dict:
     """
     Parse the evolution data from the API using the shared session.
 
@@ -38,6 +38,7 @@ def parse_evolution(url: str, session: Session, timeout: int, logger: Logger) ->
     :param session: The requests.Session object.
     :param timeout: The timeout for the request.
     :param logger: The logger instance.
+    :param max_generation: The maximum generation to parse.
     :return: A dictionary with the parsed evolution data, or None if unsuccessful.
     """
 
@@ -45,7 +46,7 @@ def parse_evolution(url: str, session: Session, timeout: int, logger: Logger) ->
         logger.log(logging.INFO, f"Requesting data from '{url}'.")
         response = session.get(url, timeout=timeout)
     except Exception as e:
-        logger.log(logging.ERROR, f"Request to '{url}' failed: {e}", exc_info=True)
+        logger.log(logging.ERROR, f"Request to '{url}' failed: {e}")
         return None
 
     if response.status_code != 200:
@@ -67,13 +68,14 @@ def parse_evolution(url: str, session: Session, timeout: int, logger: Logger) ->
             pokemon_data["evolutions"] = evolutions
             json_dump = json.dumps(pokemon_data, indent=4)
             save(file_path, json_dump, logger)
-            # Also save a backup.
-            save(file_path.replace("data/", "data-bk/"), json_dump, logger)
+            save(file_path.replace("data", "generations/gen-" + str(max_generation)), json_dump, logger)
 
     return data
 
 
-def process_evolution_result(result: dict, session: Session, timeout: int, logger: Logger) -> None:
+def process_evolution_result(
+    result: dict, session: Session, timeout: int, logger: Logger, max_generation: int
+) -> None:
     """
     Processes an evolution chain result by fetching its data from the API,
     parsing the evolution chain, and updating the corresponding Pokémon files.
@@ -82,12 +84,13 @@ def process_evolution_result(result: dict, session: Session, timeout: int, logge
     :param session: The shared session to use for requests.
     :param timeout: The timeout for requests.
     :param logger: The logger to use.
+    :param max_generation: The maximum generation to process.
     :return: None
     """
 
     url = result["url"]
     logger.log(logging.INFO, f'Processing evolution chain from "{url}".')
-    data = parse_evolution(url, session, timeout, logger)
+    data = parse_evolution(url, session, timeout, logger, max_generation)
     if data is None:
         logger.log(logging.ERROR, f'Failed to parse result "{url}".')
     else:
@@ -105,6 +108,7 @@ def main():
     load_dotenv()
     STARTING_INDEX = int(os.getenv("STARTING_INDEX"))
     ENDING_INDEX = int(os.getenv("ENDING_INDEX"))
+    MAX_GENERATION = int(os.getenv("MAX_GENERATION"))
     TIMEOUT = int(os.getenv("TIMEOUT"))
     THREADS = int(os.getenv("THREADS"))
     LOG = os.getenv("LOG") == "True"
@@ -125,7 +129,7 @@ def main():
         logger.log(logging.INFO, f"Requesting evolution chain index data from '{api_url}'.")
         response = tm.session.get(api_url, timeout=TIMEOUT)
     except Exception as e:
-        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}", exc_info=True)
+        logger.log(logging.ERROR, f"Request to '{api_url}' failed: {e}")
         return
 
     if response.status_code != 200:
@@ -143,7 +147,11 @@ def main():
     # Populate the shared queue with the results.
     tm.add_to_queue(results)
     # Run the worker threads, passing in the evolution processing callback.
-    tm.run_workers(process_evolution_result)
+    tm.run_workers(
+        lambda result, session, timeout, logger: process_evolution_result(
+            result, session, timeout, logger, MAX_GENERATION
+        )
+    )
 
 
 if __name__ == "__main__":

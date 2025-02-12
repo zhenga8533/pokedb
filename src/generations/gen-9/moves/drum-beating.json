@@ -1,0 +1,50 @@
+{
+    "name": "drum-beating",
+    "accuracy": 100,
+    "damage_class": "physical",
+    "power": 80,
+    "pp": 10,
+    "priority": 0,
+    "target": "selected-pokemon",
+    "type": "grass",
+    "effect_chance": 100,
+    "effect_changes": [],
+    "effect": "Inflicts regular damage.  Has a 100% chance to lower the target's Speed by one stage.",
+    "flavor_text_entries": {
+        "sword-shield": "The user plays its drum, controlling the drum\u2019s roots\nto attack the target. This also lowers the target\u2019s\nSpeed stat."
+    },
+    "meta": {
+        "ailment": {
+            "name": "none",
+            "url": "https://pokeapi.co/api/v2/move-ailment/0/"
+        },
+        "ailment_chance": 0,
+        "category": {
+            "name": "damage+lower",
+            "url": "https://pokeapi.co/api/v2/move-category/6/"
+        },
+        "crit_rate": 0,
+        "drain": 0,
+        "flinch_chance": 0,
+        "healing": 0,
+        "max_hits": null,
+        "max_turns": null,
+        "min_hits": null,
+        "min_turns": null,
+        "stat_chance": 100
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+            }
+        }
+    ],
+    "generation": "generation-viii",
+    "learned_by": [
+        "rillaboom"
+    ],
+    "machines": {}
+}

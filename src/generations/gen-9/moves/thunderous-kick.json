@@ -1,0 +1,50 @@
+{
+    "name": "thunderous-kick",
+    "accuracy": 100,
+    "damage_class": "physical",
+    "power": 90,
+    "pp": 10,
+    "priority": 0,
+    "target": "selected-pokemon",
+    "type": "fighting",
+    "effect_chance": 100,
+    "effect_changes": [],
+    "effect": "Inflicts regular damage.",
+    "flavor_text_entries": {
+        "sword-shield": "The user overwhelms the target with lightning-like\nmovement before delivering a kick. This also lowers\nthe target\u2019s Defense stat."
+    },
+    "meta": {
+        "ailment": {
+            "name": "none",
+            "url": "https://pokeapi.co/api/v2/move-ailment/0/"
+        },
+        "ailment_chance": 0,
+        "category": {
+            "name": "damage+lower",
+            "url": "https://pokeapi.co/api/v2/move-category/6/"
+        },
+        "crit_rate": 0,
+        "drain": 0,
+        "flinch_chance": 0,
+        "healing": 0,
+        "max_hits": null,
+        "max_turns": null,
+        "min_hits": null,
+        "min_turns": null,
+        "stat_chance": 100
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+            }
+        }
+    ],
+    "generation": "generation-viii",
+    "learned_by": [
+        "zapdos-galar"
+    ],
+    "machines": {}
+}

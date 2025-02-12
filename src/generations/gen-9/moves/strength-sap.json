@@ -1,0 +1,71 @@
+{
+    "name": "strength-sap",
+    "accuracy": 100,
+    "damage_class": "status",
+    "power": null,
+    "pp": 10,
+    "priority": 0,
+    "target": "selected-pokemon",
+    "type": "grass",
+    "effect_chance": 100,
+    "effect_changes": [],
+    "effect": "Lowers the target's Attack by one stage.  Heals the user by the target's current Attack, including modifiers, but not including this move's Attack-lowering effect.\n\nIf the target's Attack is already at -6, this move will fail.  In any other situation that would prevent a stat modification, the healing will still succeed.",
+    "flavor_text_entries": {
+        "sun-moon": "The user restores its HP by the same amount as the\ntarget\u2019s Attack stat. It also lowers the target\u2019s\nAttack stat.",
+        "ultra-sun-ultra-moon": "The user restores its HP by the same amount as the\ntarget\u2019s Attack stat. It also lowers the target\u2019s\nAttack stat.",
+        "lets-go-pikachu-lets-go-eevee": "The user restores its HP by the same amount as the\ntarget\u2019s Attack stat. It also lowers the target\u2019s\nAttack stat.",
+        "sword-shield": "The user restores its HP by the same amount as the\ntarget\u2019s Attack stat. It also lowers the target\u2019s\nAttack stat."
+    },
+    "meta": {
+        "ailment": {
+            "name": "none",
+            "url": "https://pokeapi.co/api/v2/move-ailment/0/"
+        },
+        "ailment_chance": 0,
+        "category": {
+            "name": "unique",
+            "url": "https://pokeapi.co/api/v2/move-category/13/"
+        },
+        "crit_rate": 0,
+        "drain": 0,
+        "flinch_chance": 0,
+        "healing": 0,
+        "max_hits": null,
+        "max_turns": null,
+        "min_hits": null,
+        "min_turns": null,
+        "stat_chance": 100
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+            }
+        }
+    ],
+    "generation": "generation-vii",
+    "learned_by": [
+        "oddish",
+        "gloom",
+        "vileplume",
+        "bellsprout",
+        "weepinbell",
+        "victreebel",
+        "bellossom",
+        "hoppip",
+        "drifblim",
+        "frillish",
+        "morelull",
+        "shiinotic",
+        "polteageist",
+        "cursola",
+        "smoliv",
+        "bramblin",
+        "brambleghast",
+        "sinistcha",
+        "corsola-galar"
+    ],
+    "machines": {}
+}
