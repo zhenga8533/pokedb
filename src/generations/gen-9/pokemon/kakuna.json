@@ -10,158 +10,28 @@
             "slot": 1
         }
     ],
+    "stats": {
+        "hp": 45,
+        "attack": 25,
+        "defense": 50,
+        "special-attack": 25,
+        "special-defense": 25,
+        "speed": 35
+    },
+    "ev_yield": {
+        "hp": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0
+    },
+    "types": [
+        "bug",
+        "poison"
+    ],
     "moves": {
         "yellow": [
-            {
-                "name": "harden",
-                "level_learned_at": 1,
-                "learn_method": "level-up"
-            }
-        ],
-        "xd": [
-            {
-                "name": "harden",
-                "level_learned_at": 1,
-                "learn_method": "level-up"
-            },
-            {
-                "name": "harden",
-                "level_learned_at": 7,
-                "learn_method": "level-up"
-            }
-        ],
-        "black-white": [
-            {
-                "name": "harden",
-                "level_learned_at": 1,
-                "learn_method": "level-up"
-            },
-            {
-                "name": "harden",
-                "level_learned_at": 7,
-                "learn_method": "level-up"
-            }
-        ],
-        "diamond-pearl": [
-            {
-                "name": "harden",
-                "level_learned_at": 1,
-                "learn_method": "level-up"
-            },
-            {
-                "name": "harden",
-                "level_learned_at": 7,
-                "learn_method": "level-up"
-            }
-        ],
-        "black-2-white-2": [
-            {
-                "name": "harden",
-                "level_learned_at": 1,
-                "learn_method": "level-up"
-            },
-            {
-                "name": "harden",
-                "level_learned_at": 7,
-                "learn_method": "level-up"
-            },
-            {
-                "name": "iron-defense",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "bug-bite",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "electroweb",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            }
-        ],
-        "red-blue": [
-            {
-                "name": "harden",
-                "level_learned_at": 1,
-                "learn_method": "level-up"
-            }
-        ],
-        "platinum": [
-            {
-                "name": "harden",
-                "level_learned_at": 1,
-                "learn_method": "level-up"
-            },
-            {
-                "name": "harden",
-                "level_learned_at": 7,
-                "learn_method": "level-up"
-            },
-            {
-                "name": "iron-defense",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            }
-        ],
-        "ultra-sun-ultra-moon": [
-            {
-                "name": "harden",
-                "level_learned_at": 0,
-                "learn_method": "level-up"
-            },
-            {
-                "name": "harden",
-                "level_learned_at": 1,
-                "learn_method": "level-up"
-            },
-            {
-                "name": "iron-defense",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "bug-bite",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "electroweb",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            }
-        ],
-        "gold-silver": [
-            {
-                "name": "harden",
-                "level_learned_at": 1,
-                "learn_method": "level-up"
-            },
-            {
-                "name": "harden",
-                "level_learned_at": 7,
-                "learn_method": "level-up"
-            }
-        ],
-        "emerald": [
-            {
-                "name": "harden",
-                "level_learned_at": 1,
-                "learn_method": "level-up"
-            },
-            {
-                "name": "harden",
-                "level_learned_at": 7,
-                "learn_method": "level-up"
-            }
-        ],
-        "sun-moon": [
-            {
-                "name": "harden",
-                "level_learned_at": 0,
-                "learn_method": "level-up"
-            },
             {
                 "name": "harden",
                 "level_learned_at": 1,
@@ -180,19 +50,14 @@
                 "learn_method": "level-up"
             }
         ],
-        "colosseum": [
+        "red-blue": [
             {
                 "name": "harden",
                 "level_learned_at": 1,
                 "learn_method": "level-up"
-            },
-            {
-                "name": "harden",
-                "level_learned_at": 7,
-                "learn_method": "level-up"
             }
         ],
-        "x-y": [
+        "colosseum": [
             {
                 "name": "harden",
                 "level_learned_at": 1,
@@ -216,7 +81,70 @@
                 "learn_method": "level-up"
             }
         ],
-        "crystal": [
+        "gold-silver": [
+            {
+                "name": "harden",
+                "level_learned_at": 1,
+                "learn_method": "level-up"
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 7,
+                "learn_method": "level-up"
+            }
+        ],
+        "black-white": [
+            {
+                "name": "harden",
+                "level_learned_at": 1,
+                "learn_method": "level-up"
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 7,
+                "learn_method": "level-up"
+            }
+        ],
+        "ruby-sapphire": [
+            {
+                "name": "harden",
+                "level_learned_at": 1,
+                "learn_method": "level-up"
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 7,
+                "learn_method": "level-up"
+            }
+        ],
+        "sun-moon": [
+            {
+                "name": "harden",
+                "level_learned_at": 0,
+                "learn_method": "level-up"
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 1,
+                "learn_method": "level-up"
+            }
+        ],
+        "heartgold-soulsilver": [
+            {
+                "name": "bug-bite",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "string-shot",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
             {
                 "name": "harden",
                 "level_learned_at": 1,
@@ -240,7 +168,22 @@
                 "learn_method": "level-up"
             }
         ],
-        "ruby-sapphire": [
+        "omega-ruby-alpha-sapphire": [
+            {
+                "name": "bug-bite",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "electroweb",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
             {
                 "name": "harden",
                 "level_learned_at": 1,
@@ -252,7 +195,7 @@
                 "learn_method": "level-up"
             }
         ],
-        "omega-ruby-alpha-sapphire": [
+        "diamond-pearl": [
             {
                 "name": "harden",
                 "level_learned_at": 1,
@@ -262,11 +205,30 @@
                 "name": "harden",
                 "level_learned_at": 7,
                 "learn_method": "level-up"
-            },
+            }
+        ],
+        "platinum": [
             {
                 "name": "iron-defense",
                 "level_learned_at": 0,
                 "learn_method": "tutor"
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 1,
+                "learn_method": "level-up"
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 7,
+                "learn_method": "level-up"
+            }
+        ],
+        "ultra-sun-ultra-moon": [
+            {
+                "name": "harden",
+                "level_learned_at": 0,
+                "learn_method": "level-up"
             },
             {
                 "name": "bug-bite",
@@ -277,11 +239,79 @@
                 "name": "electroweb",
                 "level_learned_at": 0,
                 "learn_method": "tutor"
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 1,
+                "learn_method": "level-up"
             }
         ],
-        "heartgold-soulsilver": [
+        "crystal": [
             {
-                "name": "string-shot",
+                "name": "harden",
+                "level_learned_at": 1,
+                "learn_method": "level-up"
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 7,
+                "learn_method": "level-up"
+            }
+        ],
+        "xd": [
+            {
+                "name": "harden",
+                "level_learned_at": 1,
+                "learn_method": "level-up"
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 7,
+                "learn_method": "level-up"
+            }
+        ],
+        "emerald": [
+            {
+                "name": "harden",
+                "level_learned_at": 1,
+                "learn_method": "level-up"
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 7,
+                "learn_method": "level-up"
+            }
+        ],
+        "x-y": [
+            {
+                "name": "harden",
+                "level_learned_at": 1,
+                "learn_method": "level-up"
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 7,
+                "learn_method": "level-up"
+            }
+        ],
+        "black-2-white-2": [
+            {
+                "name": "bug-bite",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "electroweb",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "iron-defense",
                 "level_learned_at": 0,
                 "learn_method": "tutor"
             },
@@ -294,39 +324,9 @@
                 "name": "harden",
                 "level_learned_at": 7,
                 "learn_method": "level-up"
-            },
-            {
-                "name": "iron-defense",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "bug-bite",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
             }
         ]
     },
-    "stats": {
-        "hp": 45,
-        "attack": 25,
-        "defense": 50,
-        "special-attack": 25,
-        "special-defense": 25,
-        "speed": 35
-    },
-    "ev_yield": {
-        "hp": 0,
-        "attack": 0,
-        "defense": 2,
-        "special-attack": 0,
-        "special-defense": 0,
-        "speed": 0
-    },
-    "types": [
-        "bug",
-        "poison"
-    ],
     "base_experience": 72,
     "held_items": {},
     "cry_latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/14.ogg",
