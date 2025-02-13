@@ -33,10 +33,14 @@ def parse_game_versions(session: Session, timeout: int, logger: Logger) -> dict:
         reponse3 = session_request(session, version_group["url"], timeout, logger)
         if reponse3 is None:
             return None
+        group_data = reponse3.json()
+        group_name = group_data["name"]
 
         # Store generation data.
-        generation = reponse3.json()["generation"]["name"]
-        generations[version_name] = roman_to_int(generation.rsplit("-", 1)[1])
+        generation = group_data["generation"]["name"]
+        generation = roman_to_int(generation.rsplit("-", 1)[1])
+        generations[group_name] = generation
+        generations[version_name] = generation
 
     return generations
 
@@ -121,7 +125,19 @@ def parse_pokemon(
 
     # Check the generation of the Pokémon.
     game_indices = data["game_indices"]
-    generation = min(generations[game_index["version"]["name"]] for game_index in game_indices)
+    generation = (
+        min((generations[game_index["version"]["name"]] for game_index in game_indices), default=float("inf"))
+        if len(game_indices) > 0
+        else min(
+            (
+                generations[version_group_detail["version_group"]["name"]]
+                for move in data["moves"]
+                for version_group_detail in move["version_group_details"]
+                if version_group_detail["version_group"]["name"] in generations
+            ),
+            default=float("inf"),
+        )
+    )
     if generation > max_generation:
         logger.log(logging.INFO, f"Skipping Pokémon {data['name']} due to generation {generation}.")
         return None

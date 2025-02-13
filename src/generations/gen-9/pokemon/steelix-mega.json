@@ -31,9 +31,14 @@
         "ground"
     ],
     "moves": {
-        "omega-ruby-alpha-sapphire": [
+        "sun-moon": [
             {
                 "name": "attract",
+                "level_learned_at": 0,
+                "learn_method": "machine"
+            },
+            {
+                "name": "brutal-swing",
                 "level_learned_at": 0,
                 "learn_method": "machine"
             },
@@ -48,17 +53,7 @@
                 "learn_method": "machine"
             },
             {
-                "name": "cut",
-                "level_learned_at": 0,
-                "learn_method": "machine"
-            },
-            {
                 "name": "dark-pulse",
-                "level_learned_at": 0,
-                "learn_method": "machine"
-            },
-            {
-                "name": "dig",
                 "level_learned_at": 0,
                 "learn_method": "machine"
             },
@@ -163,11 +158,6 @@
                 "learn_method": "machine"
             },
             {
-                "name": "rock-smash",
-                "level_learned_at": 0,
-                "learn_method": "machine"
-            },
-            {
                 "name": "rock-tomb",
                 "level_learned_at": 0,
                 "learn_method": "machine"
@@ -183,11 +173,6 @@
                 "learn_method": "machine"
             },
             {
-                "name": "secret-power",
-                "level_learned_at": 0,
-                "learn_method": "machine"
-            },
-            {
                 "name": "sleep-talk",
                 "level_learned_at": 0,
                 "learn_method": "machine"
@@ -199,11 +184,6 @@
             },
             {
                 "name": "stone-edge",
-                "level_learned_at": 0,
-                "learn_method": "machine"
-            },
-            {
-                "name": "strength",
                 "level_learned_at": 0,
                 "learn_method": "machine"
             },
@@ -236,56 +216,6 @@
                 "name": "toxic",
                 "level_learned_at": 0,
                 "learn_method": "machine"
-            },
-            {
-                "name": "aqua-tail",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "bind",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "block",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "dragon-pulse",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "earth-power",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "iron-head",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "iron-tail",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "magnet-rise",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "snore",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
-            },
-            {
-                "name": "stealth-rock",
-                "level_learned_at": 0,
-                "learn_method": "tutor"
             },
             {
                 "name": "bind",
@@ -780,14 +710,9 @@
                 "learn_method": "level-up"
             }
         ],
-        "sun-moon": [
+        "omega-ruby-alpha-sapphire": [
             {
                 "name": "attract",
-                "level_learned_at": 0,
-                "learn_method": "machine"
-            },
-            {
-                "name": "brutal-swing",
                 "level_learned_at": 0,
                 "learn_method": "machine"
             },
@@ -802,7 +727,17 @@
                 "learn_method": "machine"
             },
             {
+                "name": "cut",
+                "level_learned_at": 0,
+                "learn_method": "machine"
+            },
+            {
                 "name": "dark-pulse",
+                "level_learned_at": 0,
+                "learn_method": "machine"
+            },
+            {
+                "name": "dig",
                 "level_learned_at": 0,
                 "learn_method": "machine"
             },
@@ -907,6 +842,11 @@
                 "learn_method": "machine"
             },
             {
+                "name": "rock-smash",
+                "level_learned_at": 0,
+                "learn_method": "machine"
+            },
+            {
                 "name": "rock-tomb",
                 "level_learned_at": 0,
                 "learn_method": "machine"
@@ -922,6 +862,11 @@
                 "learn_method": "machine"
             },
             {
+                "name": "secret-power",
+                "level_learned_at": 0,
+                "learn_method": "machine"
+            },
+            {
                 "name": "sleep-talk",
                 "level_learned_at": 0,
                 "learn_method": "machine"
@@ -933,6 +878,11 @@
             },
             {
                 "name": "stone-edge",
+                "level_learned_at": 0,
+                "learn_method": "machine"
+            },
+            {
+                "name": "strength",
                 "level_learned_at": 0,
                 "learn_method": "machine"
             },
@@ -965,6 +915,56 @@
                 "name": "toxic",
                 "level_learned_at": 0,
                 "learn_method": "machine"
+            },
+            {
+                "name": "aqua-tail",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "bind",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "block",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "iron-head",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "iron-tail",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "magnet-rise",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "snore",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
+            },
+            {
+                "name": "stealth-rock",
+                "level_learned_at": 0,
+                "learn_method": "tutor"
             },
             {
                 "name": "bind",
