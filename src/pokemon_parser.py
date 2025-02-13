@@ -179,6 +179,10 @@ def parse_pokemon(
             for version_group_detail in move["version_group_details"]
         }
     }
+    # Sort moves category by generation.
+    pokemon["moves"] = {
+        version: pokemon["moves"][version] for version in sorted(pokemon["moves"], key=lambda x: (generations[x], x))
+    }
     # Sort moves by level learned, then by learn method, and finally by name.
     for version in pokemon["moves"]:
         pokemon["moves"][version] = sorted(

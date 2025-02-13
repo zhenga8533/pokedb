@@ -54,8 +54,8 @@ def parse_evolution(url: str, session: Session, timeout: int, logger: Logger, ma
 
     # Update each Pokémon's data file with its evolution information.
     for species in pokemon:
-        gen = "gen-" + str(max_generation)
-        file_pattern = f"generations/{gen}/pokemon/{species}*.json"
+        gen = "generations/gen-" + str(max_generation)
+        file_pattern = f"{gen}/pokemon/{species}*.json"
         files = glob.glob(file_pattern)
         for file_path in files:
             file_path = file_path.replace("\\", "/")
