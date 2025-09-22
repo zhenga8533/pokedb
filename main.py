@@ -1,9 +1,11 @@
 import argparse
 import json
 import os
+import shutil
 from datetime import datetime, timezone
-from typing import Any, Dict, List, Tuple, Type
+from typing import Any, Dict, List, Type
 
+from src.pokeapi_parser.api_client import ApiClient
 from src.pokeapi_parser.parsers.ability import AbilityParser
 from src.pokeapi_parser.parsers.base import BaseParser
 from src.pokeapi_parser.parsers.item import ItemParser
@@ -13,19 +15,11 @@ from src.pokeapi_parser.utils import (
     get_generation_dex_map,
     get_latest_generation,
     load_config,
-    setup_session,
 )
 
 
-def main() -> None:
-    """
-    Main entry point to run the specified parsers.
-
-    This function parses command-line arguments to determine which parsers to run
-    and for which Pokémon generation. It then fetches the necessary data from the
-    PokéAPI and executes the requested parsers, saving the cleaned data to the
-    output directory.
-    """
+def parse_arguments() -> argparse.Namespace:
+    """Parses command-line arguments."""
     parser = argparse.ArgumentParser(description="Run parsers for the PokéAPI.")
     parser.add_argument(
         "parsers", nargs="*", help="The name(s) of the parser to run (e.g., ability, item, move, pokemon)."
@@ -36,109 +30,138 @@ def main() -> None:
         type=int,
         help="Parse all data up to a specific generation number, outputting only that generation's folder.",
     )
-    args = parser.parse_args()
+    return parser.parse_args()
 
-    # If no specific parsers are listed and --all is not used, show help.
+
+def gather_initial_data(
+    api_client: ApiClient, config: Dict[str, Any], target_gen: int
+) -> tuple[Dict[int, List[str]], Dict[int, str]]:
+    """Gathers the initial data needed by the parsers."""
+    print(f"Gathering all data up to Generation {target_gen}...")
+    generation_version_groups: Dict[int, List[str]] = {}
+    try:
+        gen_data = api_client.get(f"{config['api_base_url']}generation/")
+        for gen_ref in gen_data.get("results", []):
+            gen_num = int(gen_ref["url"].split("/")[-2])
+            if gen_num <= target_gen:
+                gen_details = api_client.get(gen_ref["url"])
+                generation_version_groups[gen_num] = [vg["name"] for vg in gen_details.get("version_groups", [])]
+    except Exception as e:
+        print(f"Fatal: Could not fetch generation data. Error: {e}")
+        exit(1)
+
+    generation_dex_map = get_generation_dex_map(api_client, config)
+    print("Finished gathering data")
+    return generation_version_groups, generation_dex_map
+
+
+def run_parsers(
+    args: argparse.Namespace,
+    final_config: Dict[str, Any],
+    api_client: ApiClient,
+    generation_version_groups: Dict[int, List[str]],
+    target_gen: int,
+    generation_dex_map: Dict[int, str],
+) -> Dict[str, List[Dict[str, Any]]]:
+    """Initializes and runs the requested parsers."""
+    all_summaries: Dict[str, List[Dict[str, Any]]] = {}
+    parser_classes: Dict[str, Type[BaseParser]] = {
+        "ability": AbilityParser,
+        "move": MoveParser,
+        "item": ItemParser,
+    }
+
+    # Handle parsers that fetch their own master lists
+    for name, ParserClass in parser_classes.items():
+        if args.all or name in args.parsers:
+            parser_instance = ParserClass(
+                config=final_config,
+                api_client=api_client,
+                generation_version_groups=generation_version_groups,
+                target_gen=target_gen,
+                generation_dex_map=generation_dex_map,
+            )
+            summary_data = parser_instance.run()
+            if isinstance(summary_data, list):
+                all_summaries[name] = summary_data
+            print("-" * 20)
+
+    # Special handling for the Pokemon parser, which needs a pre-fetched species list
+    if args.all or "pokemon" in args.parsers:
+        all_species = api_client.get(f"{final_config['api_base_url']}pokemon-species?limit=2000").get("results", [])
+        pokemon_parser = PokemonParser(
+            config=final_config,
+            api_client=api_client,
+            generation_version_groups=generation_version_groups,
+            target_gen=target_gen,
+            generation_dex_map=generation_dex_map,
+        )
+        summary_data = pokemon_parser.run(all_species)
+        if isinstance(summary_data, dict):
+            all_summaries.update(summary_data)
+        print("-" * 20)
+
+    return all_summaries
+
+
+def write_index_file(
+    all_summaries: Dict[str, List[Dict[str, Any]]], target_gen: int, top_level_output_dir: str
+) -> None:
+    """Writes the final top-level index.json file."""
+    if not all_summaries:
+        print("No summary data was generated. Skipping index file.")
+        return
+
+    print("Creating top-level index.json...")
+    final_index: Dict[str, Any] = {
+        "metadata": {
+            "generation": target_gen,
+            "createdAt": datetime.now(timezone.utc).isoformat(),
+            "counts": {key: len(value) for key, value in all_summaries.items()},
+        }
+    }
+    final_index.update(all_summaries)
+    index_file_path = os.path.join(top_level_output_dir, "index.json")
+    os.makedirs(top_level_output_dir, exist_ok=True)
+    with open(index_file_path, "w", encoding="utf-8") as f:
+        json.dump(final_index, f, indent=4, ensure_ascii=False)
+    print(f"Top-level index.json created successfully at '{index_file_path}'")
+
+
+def main() -> None:
+    """
+    Main entry point to run the specified parsers.
+    """
+    args = parse_arguments()
     if not args.parsers and not args.all:
-        parser.print_help()
+        print("No parsers specified. Use --all to run all parsers or provide a list of parsers.")
         return
 
     config = load_config()
-    session = setup_session(config)
+    api_client = ApiClient(config)
 
-    latest_gen_num = get_latest_generation(session, config)
-    # If --gen is used, we parse up to that gen. Otherwise, just the latest.
+    latest_gen_num = get_latest_generation(api_client, config)
     target_gen = args.gen if args.gen and args.gen <= latest_gen_num else latest_gen_num
 
-    # --- Part 1: Data Gathering Loop ---
-    print(f"Gathering all data up to Generation {target_gen}...")
-    cumulative_abilities: List[Dict[str, str]] = []
-    cumulative_moves: List[Dict[str, str]] = []
-    cumulative_pokemon_species: List[Dict[str, str]] = []
-    generation_version_groups: Dict[int, List[str]] = {}
-    generation_dex_map = get_generation_dex_map(session, config)
+    generation_version_groups, generation_dex_map = gather_initial_data(api_client, config, target_gen)
 
-    for gen_num in range(1, target_gen + 1):
-        try:
-            gen_data_url = f"{config['api_base_url']}generation/{gen_num}"
-            response = session.get(gen_data_url, timeout=config["timeout"])
-            response.raise_for_status()
-            gen_data = response.json()
-
-            cumulative_abilities.extend(gen_data.get("abilities", []))
-            cumulative_moves.extend(gen_data.get("moves", []))
-            cumulative_pokemon_species.extend(gen_data.get("pokemon_species", []))
-            generation_version_groups[gen_num] = [vg["name"] for vg in gen_data.get("version_groups", [])]
-        except Exception as e:
-            print(f"Warning: Could not fetch data for Generation {gen_num}. Error: {e}")
-
-    print("Finished gathering data")
-
-    # --- Part 2: Parsing and Saving (Runs only ONCE) ---
     print(f"\n{'='*10} PARSING ALL DATA FOR GENERATION {target_gen} {'='*10}")
 
-    # Update config paths for the target generation
     final_config = config.copy()
     for key in final_config:
         if key.startswith("output_dir_"):
             final_config[key] = final_config[key].format(gen_num=target_gen)
 
-    all_summaries: Dict[str, List[Dict[str, Any]]] = {}
+    top_level_output_dir = os.path.dirname(final_config["output_dir_ability"])
+    if os.path.exists(top_level_output_dir):
+        print(f"Deleting existing directory: '{top_level_output_dir}'")
+        shutil.rmtree(top_level_output_dir)
 
-    # Define all parsers that take a list of API refs
-    list_based_parsers: Dict[str, Tuple[Type[BaseParser], List[Dict[str, str]]]] = {
-        "ability": (AbilityParser, cumulative_abilities),
-        "move": (MoveParser, cumulative_moves),
-        "pokemon": (PokemonParser, cumulative_pokemon_species),
-    }
+    all_summaries = run_parsers(
+        args, final_config, api_client, generation_version_groups, target_gen, generation_dex_map
+    )
 
-    for name, (ParserClass, item_list) in list_based_parsers.items():
-        if args.all or name in args.parsers:
-            parser_instance = ParserClass(
-                final_config, session, generation_version_groups, target_gen, generation_dex_map
-            )
-            summary_data = parser_instance.run(item_list)
-            if summary_data:
-                # Special handling for PokemonParser which returns a dict of summaries
-                if name == "pokemon" and isinstance(summary_data, dict):
-                    all_summaries.update(summary_data)
-                elif isinstance(summary_data, list):
-                    all_summaries[name] = summary_data
-            print("-" * 20)
-
-    # Run the special Item parser if requested
-    if args.all or "item" in args.parsers:
-        item_master_list_url = f"{config['api_base_url']}item?limit=3000"
-        response = session.get(item_master_list_url, timeout=config["timeout"])
-        all_items = response.json()["results"]
-
-        item_parser = ItemParser(final_config, session, generation_version_groups, target_gen, generation_dex_map)
-        summary_data = item_parser.run(all_items)
-        if isinstance(summary_data, list):
-            all_summaries["item"] = summary_data
-        print("-" * 20)
-
-    # Write the single index.json file for the target generation
-    if all_summaries:
-        print(f"Creating top-level index.json for Generation {target_gen}...")
-
-        # Build the final index object with metadata
-        final_index: Dict[str, Any] = {
-            "metadata": {
-                "generation": target_gen,
-                "createdAt": datetime.now(timezone.utc).isoformat(),
-                "counts": {key: len(value) for key, value in all_summaries.items()},
-            }
-        }
-        final_index.update(all_summaries)
-
-        top_level_path = os.path.dirname(final_config["output_dir_ability"])
-        os.makedirs(top_level_path, exist_ok=True)
-        index_file_path = os.path.join(top_level_path, "index.json")
-
-        with open(index_file_path, "w", encoding="utf-8") as f:
-            json.dump(final_index, f, indent=4, ensure_ascii=False)
-        print(f"Top-level index.json created successfully at '{index_file_path}'")
+    write_index_file(all_summaries, target_gen, top_level_output_dir)
 
 
 if __name__ == "__main__":

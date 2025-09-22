@@ -2,8 +2,7 @@ import json
 import os
 from typing import Any, Dict, List, Optional, Union
 
-import requests
-
+from ..api_client import ApiClient
 from ..utils import get_english_entry
 from .base import BaseParser
 
@@ -14,41 +13,27 @@ class ItemParser(BaseParser):
     def __init__(
         self,
         config: Dict[str, Any],
-        session: requests.Session,
+        api_client: ApiClient,
         generation_version_groups: Dict[int, List[str]],
         target_gen: int,
         generation_dex_map: Optional[Dict[int, str]] = None,
     ):
-        super().__init__(config, session, generation_version_groups, target_gen, generation_dex_map)
+        super().__init__(config, api_client, generation_version_groups, target_gen, generation_dex_map)
         self.item_name = "Item"
         self.api_endpoint = "item"
         self.output_dir_key = "output_dir_item"
 
     def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, Any], str]]:
-        """
-        Processes a single item from its API reference.
-
-        Args:
-            item_ref (Dict[str, str]): A dictionary containing the name and URL of the item.
-
-        Returns:
-            A dictionary with summary data for the item, or an error string, or None to skip.
-        """
+        """Processes a single item from its API reference."""
         try:
-            response = self.session.get(item_ref["url"], timeout=self.config["timeout"])
-            response.raise_for_status()
-            data = response.json()
-
-            # Find the first generation this item appeared in
+            data = self.api_client.get(item_ref["url"])
             game_indices = data.get("game_indices", [])
             if not game_indices:
-                return None  # Skip items with no generation data
+                return None
 
-            intro_gen_str = min(gi["generation"]["url"].split("/")[-2] for gi in game_indices)
-            introduction_gen = int(intro_gen_str)
+            introduction_gen = int(min(gi["generation"]["url"].split("/")[-2] for gi in game_indices))
 
             if self.target_gen is not None and introduction_gen <= self.target_gen:
-                # Prepare the cleaned data
                 fling_effect_obj = data.get("fling_effect")
                 fling_effect_name = fling_effect_obj.get("name") if fling_effect_obj else None
                 cleaned_data = {
@@ -70,7 +55,6 @@ class ItemParser(BaseParser):
                     "generations": sorted(list(set(gi["generation"]["name"] for gi in game_indices))),
                 }
 
-                # Save the data to the single target generation folder
                 output_path = self.config[self.output_dir_key]
                 os.makedirs(output_path, exist_ok=True)
                 file_path = os.path.join(output_path, f"{cleaned_data['name']}.json")
@@ -78,9 +62,6 @@ class ItemParser(BaseParser):
                     json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
 
                 return {"name": cleaned_data["name"], "id": cleaned_data["id"], "sprite": cleaned_data["sprite"]}
-
             return None
-        except requests.exceptions.RequestException as e:
-            return f"Request failed for {item_ref['name']}: {e}"
-        except (ValueError, KeyError, TypeError) as e:
-            return f"Processing failed for {item_ref['name']}: {e}"
+        except Exception as e:
+            return f"Parsing failed for {item_ref['name']}: {e}"

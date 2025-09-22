@@ -2,8 +2,7 @@ import json
 import os
 from typing import Any, Dict, List, Optional, Union
 
-import requests
-
+from ..api_client import ApiClient
 from ..utils import get_english_entry
 from .base import BaseParser
 
@@ -14,65 +13,37 @@ class MoveParser(BaseParser):
     def __init__(
         self,
         config: Dict[str, Any],
-        session: requests.Session,
+        api_client: ApiClient,
         generation_version_groups: Dict[int, List[str]],
         target_gen: int,
         generation_dex_map: Optional[Dict[int, str]] = None,
     ):
-        super().__init__(config, session, generation_version_groups, target_gen, generation_dex_map)
+        super().__init__(config, api_client, generation_version_groups, target_gen, generation_dex_map)
         self.item_name = "Move"
         self.api_endpoint = "move"
         self.output_dir_key = "output_dir_move"
-        self.machine_cache: Dict[str, str] = {}
 
     def _get_machine_for_generation(self, machine_entries: List[Dict[str, Any]]) -> Optional[str]:
-        """
-        Finds the machine name for the target generation, if it exists.
-
-        Args:
-            machine_entries (List[Dict[str, Any]]): A list of machine entry dicts from the API.
-
-        Returns:
-            Optional[str]: The name of the machine (e.g., 'tm01'), or None.
-        """
-        if not self.generation_version_groups or not self.target_gen:
+        """Finds the machine name for the target generation, if it exists."""
+        if not self.generation_version_groups or self.target_gen is None:
             return None
-
         target_version_groups = self.generation_version_groups.get(self.target_gen, [])
         for machine_entry in machine_entries:
             if machine_entry["version_group"]["name"] in target_version_groups:
-                machine_url = machine_entry["machine"]["url"]
-                if machine_url in self.machine_cache:
-                    return self.machine_cache[machine_url]
-
                 try:
-                    machine_res = self.session.get(machine_url, timeout=self.config["timeout"])
-                    machine_res.raise_for_status()
-                    machine_data = machine_res.json()
-                    machine_name = machine_data["item"]["name"]
-                    self.machine_cache[machine_url] = machine_name
-                    return machine_name
-                except requests.exceptions.RequestException as e:
-                    print(f"Warning: Could not fetch machine data from {machine_url}. Error: {e}")
+                    machine_data = self.api_client.get(machine_entry["machine"]["url"])
+                    return machine_data["item"]["name"]
+                except Exception as e:
+                    print(f"Warning: Could not fetch machine data from {machine_entry['machine']['url']}. Error: {e}")
                     return None
         return None
 
     def _clean_metadata(self, metadata: Optional[Dict[str, Any]]) -> Dict[str, Any]:
-        """
-        Cleans the metadata object from the API.
-
-        Args:
-            metadata (Optional[Dict[str, Any]]): The raw metadata dict from the API.
-
-        Returns:
-            Dict[str, Any]: A cleaned dictionary of metadata.
-        """
+        """Cleans the metadata object from the API."""
         if not metadata:
             return {}
-
         ailment = metadata.get("ailment")
         category = metadata.get("category")
-
         return {
             "ailment": ailment.get("name") if ailment else None,
             "category": category.get("name") if category else None,
@@ -89,28 +60,17 @@ class MoveParser(BaseParser):
         }
 
     def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, Any], str]]:
-        """
-        Processes a single move from its API reference.
-
-        Args:
-            item_ref (Dict[str, str]): A dictionary containing the name and URL of the move.
-
-        Returns:
-            A dictionary with summary data for the move, or an error string.
-        """
+        """Processes a single move from its API reference."""
         try:
-            response = self.session.get(item_ref["url"], timeout=self.config["timeout"])
-            response.raise_for_status()
-            data = response.json()
-
+            data = self.api_client.get(item_ref["url"])
             cleaned_data = {
                 "id": data["id"],
                 "name": data["name"],
                 "source_url": item_ref["url"],
                 "accuracy": data.get("accuracy"),
                 "power": data.get("power"),
-                "pp": data["pp"],
-                "priority": data["priority"],
+                "pp": data.get("pp"),
+                "priority": data.get("priority"),
                 "damage_class": data.get("damage_class", {}).get("name"),
                 "type": data.get("type", {}).get("name"),
                 "target": data.get("target", {}).get("name"),
@@ -142,7 +102,5 @@ class MoveParser(BaseParser):
                 "type": cleaned_data["type"],
                 "damage_class": cleaned_data["damage_class"],
             }
-        except requests.exceptions.RequestException as e:
-            return f"Request failed for {item_ref['name']}: {e}"
-        except (KeyError, TypeError) as e:
+        except Exception as e:
             return f"Parsing failed for {item_ref['name']}: {e}"
