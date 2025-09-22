@@ -1,9 +1,9 @@
 {
     "id": 975,
     "name": "cetitan",
-    "height": 45,
-    "weight": 7000,
-    "base_experience": 182,
+    "species": "cetitan",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/975/",
     "types": [
         "ice"
     ],
@@ -32,14 +32,322 @@
         "special-defense": 55,
         "speed": 73
     },
+    "ev_yield": [
+        {
+            "stat": "hp",
+            "effort": 2
+        }
+    ],
+    "height": 45,
+    "weight": 7000,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/975.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/975.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/975.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/975.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/975.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/975.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/975.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/975.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/975.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/975.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/975.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/975.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/975.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 182,
+    "base_happiness": 50,
+    "capture_rate": 50,
+    "hatch_counter": 25,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 975,
+        "paldea": 362
+    },
+    "color": "white",
+    "shape": "upright",
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": "This Pokémon wanders around snowy, icy areas. It protects its body with powerful muscles and a thick layer of fat under its skin.",
     "genus": "Terra Whale Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 50,
-    "growth_rate": "medium-slow"
+    "evolution_chain": {
+        "species_name": "cetoddle",
+        "evolves_to": [
+            {
+                "species_name": "cetitan",
+                "evolution_details": {
+                    "item": "ice-stone",
+                    "trigger": "use-item",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "ice-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "amnesia",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icicle-spear",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "avalanche",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heavy-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0
+            },
+            {
+                "name": "high-horsepower",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stomping-tantrum",
+                "level_learned_at": 0
+            },
+            {
+                "name": "liquidation",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-press",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-spinner",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hard-press",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "tackle",
+                "level_learned_at": 1
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 36
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 19
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 49
+            },
+            {
+                "name": "growl",
+                "level_learned_at": 6
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 53
+            },
+            {
+                "name": "amnesia",
+                "level_learned_at": 40
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 15
+            },
+            {
+                "name": "flail",
+                "level_learned_at": 25
+            },
+            {
+                "name": "powder-snow",
+                "level_learned_at": 1
+            },
+            {
+                "name": "bounce",
+                "level_learned_at": 31
+            },
+            {
+                "name": "avalanche",
+                "level_learned_at": 27
+            },
+            {
+                "name": "ice-shard",
+                "level_learned_at": 12
+            },
+            {
+                "name": "echoed-voice",
+                "level_learned_at": 9
+            },
+            {
+                "name": "ice-spinner",
+                "level_learned_at": 44
+            }
+        ]
+    },
+    "forms": [
+        "cetitan"
+    ]
 }

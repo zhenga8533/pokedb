@@ -1,9 +1,9 @@
 {
     "id": 296,
     "name": "makuhita",
-    "height": 10,
-    "weight": 864,
-    "base_experience": 47,
+    "species": "makuhita",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/296/",
     "types": [
         "fighting"
     ],
@@ -32,14 +32,406 @@
         "special-defense": 30,
         "speed": 25
     },
+    "ev_yield": [
+        {
+            "stat": "hp",
+            "effort": 1
+        }
+    ],
+    "height": 10,
+    "weight": 864,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/296.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/296.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/296.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/296.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/296.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/296.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/296.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/296.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/296.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/296.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/296.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/296.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/296.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/296.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/296.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/296.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 47,
+    "base_happiness": 70,
+    "capture_rate": 180,
+    "hatch_counter": 20,
+    "gender_rate": 2,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 296,
+        "paldea": 116
+    },
+    "color": "yellow",
+    "shape": "humanoid",
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": "MAKUHITA is tenacious - it will keep getting up and attacking its foe however many times it is knocked down. Every time it gets back up, this POKéMON stores more energy in its body for evolving.",
     "genus": "Guts Pokémon",
     "generation": "generation-iii",
-    "capture_rate": 180,
-    "growth_rate": "fast-then-very-slow"
+    "evolution_chain": {
+        "species_name": "makuhita",
+        "evolves_to": [
+            {
+                "species_name": "hariyama",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 24,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "fire-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "low-kick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dig",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metronome",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reversal",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulk-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "close-combat",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poison-jab",
+                "level_learned_at": 0
+            },
+            {
+                "name": "drain-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "vacuum-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "smack-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heavy-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "low-sweep",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stomping-tantrum",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-press",
+                "level_learned_at": 0
+            },
+            {
+                "name": "coaching",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "upper-hand",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "whirlwind",
+                "level_learned_at": 16
+            },
+            {
+                "name": "sand-attack",
+                "level_learned_at": 4
+            },
+            {
+                "name": "tackle",
+                "level_learned_at": 1
+            },
+            {
+                "name": "seismic-toss",
+                "level_learned_at": 31
+            },
+            {
+                "name": "focus-energy",
+                "level_learned_at": 1
+            },
+            {
+                "name": "reversal",
+                "level_learned_at": 43
+            },
+            {
+                "name": "belly-drum",
+                "level_learned_at": 25
+            },
+            {
+                "name": "detect",
+                "level_learned_at": 28
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 37
+            },
+            {
+                "name": "fake-out",
+                "level_learned_at": 10
+            },
+            {
+                "name": "focus-punch",
+                "level_learned_at": 34
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 19
+            },
+            {
+                "name": "arm-thrust",
+                "level_learned_at": 7
+            },
+            {
+                "name": "bulk-up",
+                "level_learned_at": 22
+            },
+            {
+                "name": "close-combat",
+                "level_learned_at": 40
+            },
+            {
+                "name": "force-palm",
+                "level_learned_at": 13
+            },
+            {
+                "name": "heavy-slam",
+                "level_learned_at": 46
+            }
+        ],
+        "egg": [
+            {
+                "name": "counter",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dynamic-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "cross-chop",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "feint",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "wide-guard",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "makuhita"
+    ]
 }

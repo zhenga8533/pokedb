@@ -1,6 +1,7 @@
 {
     "id": 225,
     "name": "dragon-breath",
+    "source_url": "https://pokeapi.co/api/v2/move/225/",
     "accuracy": 100,
     "power": 60,
     "pp": 20,
@@ -12,7 +13,7 @@
     "effect_chance": 30,
     "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
     "short_effect": "Has a 30% chance to paralyze the target.",
-    "flavor_text": "A strong breath attack.",
+    "flavor_text": "The user exhales a mighty gust that inflicts damage. This may also leave the target with paralysis.",
     "learned_by_pokemon": [
         "charmander",
         "charmeleon",
@@ -106,5 +107,20 @@
         "miraidon-aquatic-mode",
         "miraidon-glide-mode"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": null,
+    "metadata": {
+        "ailment": "paralysis",
+        "category": "damage+ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 30,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

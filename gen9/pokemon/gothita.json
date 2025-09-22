@@ -1,9 +1,9 @@
 {
     "id": 574,
     "name": "gothita",
-    "height": 4,
-    "weight": 58,
-    "base_experience": 58,
+    "species": "gothita",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/574/",
     "types": [
         "psychic"
     ],
@@ -32,14 +32,383 @@
         "special-defense": 65,
         "speed": 45
     },
+    "ev_yield": [
+        {
+            "stat": "special-defense",
+            "effort": 1
+        }
+    ],
+    "height": 4,
+    "weight": 58,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/574.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/574.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/574.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/574.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/574.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/574.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/574.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/574.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/574.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/574.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/574.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/574.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/574.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/574.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/574.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/574.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 58,
+    "base_happiness": 70,
+    "capture_rate": 200,
+    "hatch_counter": 20,
+    "gender_rate": 6,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 574,
+        "paldea": 234
+    },
+    "color": "purple",
+    "shape": "humanoid",
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": "Their ribbonlike feelers increase their psychic power. They are always staring at something.",
     "genus": "Fixation Pokémon",
     "generation": "generation-v",
-    "capture_rate": 200,
-    "growth_rate": "medium-slow"
+    "evolution_chain": {
+        "species_name": "gothita",
+        "evolves_to": [
+            {
+                "species_name": "gothorita",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 32,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": [
+                    {
+                        "species_name": "gothitelle",
+                        "evolution_details": {
+                            "item": null,
+                            "trigger": "level-up",
+                            "gender": null,
+                            "held_item": null,
+                            "known_move": null,
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": 41,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": false,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": "",
+                            "trade_species": null,
+                            "turn_upside_down": false
+                        },
+                        "evolves_to": []
+                    }
+                ]
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "pound",
+                "level_learned_at": 1
+            },
+            {
+                "name": "psybeam",
+                "level_learned_at": 12
+            },
+            {
+                "name": "confusion",
+                "level_learned_at": 1
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 36
+            },
+            {
+                "name": "hypnosis",
+                "level_learned_at": 24
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 16
+            },
+            {
+                "name": "psych-up",
+                "level_learned_at": 33
+            },
+            {
+                "name": "future-sight",
+                "level_learned_at": 44
+            },
+            {
+                "name": "flatter",
+                "level_learned_at": 40
+            },
+            {
+                "name": "fake-tears",
+                "level_learned_at": 28
+            },
+            {
+                "name": "tickle",
+                "level_learned_at": 8
+            },
+            {
+                "name": "psyshock",
+                "level_learned_at": 20
+            },
+            {
+                "name": "magic-room",
+                "level_learned_at": 48
+            },
+            {
+                "name": "play-nice",
+                "level_learned_at": 4
+            }
+        ],
+        "machine": [
+            {
+                "name": "psybeam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psych-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "future-sight",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skill-swap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fake-tears",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dark-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick-room",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psyshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stored-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "expanding-force",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic-noise",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "mean-look",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mirror-coat",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fake-out",
+                "level_learned_at": 0
+            },
+            {
+                "name": "torment",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heal-pulse",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "gothita"
+    ]
 }

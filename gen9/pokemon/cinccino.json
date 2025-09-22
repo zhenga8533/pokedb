@@ -1,9 +1,9 @@
 {
     "id": 573,
     "name": "cinccino",
-    "height": 5,
-    "weight": 75,
-    "base_experience": 165,
+    "species": "cinccino",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/573/",
     "types": [
         "normal"
     ],
@@ -32,14 +32,381 @@
         "special-defense": 60,
         "speed": 115
     },
+    "ev_yield": [
+        {
+            "stat": "speed",
+            "effort": 2
+        }
+    ],
+    "height": 5,
+    "weight": 75,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/573.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/573.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/573.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/573.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/573.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/573.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/573.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/573.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/573.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/573.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/573.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/573.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/573.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/573.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/573.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/573.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 165,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 15,
+    "gender_rate": 6,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 573
+    },
+    "color": "gray",
+    "shape": "quadruped",
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": "Their white fur is coated in a special oil that makes it easy for them to deflect attacks.",
     "genus": "Scarf Pokémon",
     "generation": "generation-v",
-    "capture_rate": 60,
-    "growth_rate": "fast"
+    "evolution_chain": {
+        "species_name": "minccino",
+        "evolves_to": [
+            {
+                "species_name": "cinccino",
+                "evolution_details": {
+                    "item": "shiny-stone",
+                    "trigger": "use-item",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "pound",
+                "level_learned_at": 1
+            },
+            {
+                "name": "sing",
+                "level_learned_at": 1
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 1
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 1
+            },
+            {
+                "name": "tail-slap",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tail-whip",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flail",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tickle",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "last-resort",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aqua-tail",
+                "level_learned_at": 0
+            },
+            {
+                "name": "after-you",
+                "level_learned_at": 0
+            },
+            {
+                "name": "echoed-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "baby-doll-eyes",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tidy-up",
+                "level_learned_at": 0
+            }
+        ],
+        "machine": [
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dig",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "super-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "baton-pass",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "uproar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endeavor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fake-tears",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "u-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gunk-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "triple-axel",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-spinner",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "alluring-voice",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "cinccino"
+    ]
 }

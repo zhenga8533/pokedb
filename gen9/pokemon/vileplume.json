@@ -1,9 +1,9 @@
 {
     "id": 45,
     "name": "vileplume",
-    "height": 12,
-    "weight": 186,
-    "base_experience": 221,
+    "species": "vileplume",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/45/",
     "types": [
         "grass",
         "poison"
@@ -28,14 +28,402 @@
         "special-defense": 90,
         "speed": 50
     },
-    "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/45.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/45.png"
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 3
+        }
+    ],
+    "height": 12,
+    "weight": 186,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/45.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/45.ogg"
     },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/45.png",
+        "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/45.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/45.png",
+        "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/45.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
+        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/45.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/45.png",
+        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/45.png",
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/45.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/45.png",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/45.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/45.png",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/45.png"
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/45.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/45.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/45.gif",
+                "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/female/45.gif",
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/45.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/45.gif",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/female/45.gif",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/45.gif",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/female/45.gif"
+            }
+        }
+    },
+    "base_experience": 221,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 45
+    },
+    "color": "red",
+    "shape": "humanoid",
+    "egg_groups": [
+        "plant"
+    ],
     "flavor_text": "It has the world’s largest petals. With every step, the petals shake out heavy clouds of toxic pollen.",
     "genus": "Flower Pokémon",
     "generation": "generation-i",
-    "capture_rate": 45,
-    "growth_rate": "medium-slow"
+    "evolution_chain": {
+        "species_name": "oddish",
+        "evolves_to": [
+            {
+                "species_name": "gloom",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 21,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": [
+                    {
+                        "species_name": "vileplume",
+                        "evolution_details": {
+                            "item": "leaf-stone",
+                            "trigger": "use-item",
+                            "gender": null,
+                            "held_item": null,
+                            "known_move": null,
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": null,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": false,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": "",
+                            "trade_species": null,
+                            "turn_upside_down": false
+                        },
+                        "evolves_to": []
+                    },
+                    {
+                        "species_name": "bellossom",
+                        "evolution_details": {
+                            "item": "sun-stone",
+                            "trigger": "use-item",
+                            "gender": null,
+                            "held_item": null,
+                            "known_move": null,
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": null,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": false,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": "",
+                            "trade_species": null,
+                            "turn_upside_down": false
+                        },
+                        "evolves_to": []
+                    }
+                ]
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "swords-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "venoshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acid-spray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "petal-blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-blade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pollen-puff",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-glide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "acid",
+                "level_learned_at": 1
+            },
+            {
+                "name": "absorb",
+                "level_learned_at": 1
+            },
+            {
+                "name": "mega-drain",
+                "level_learned_at": 1
+            },
+            {
+                "name": "growth",
+                "level_learned_at": 1
+            },
+            {
+                "name": "poison-powder",
+                "level_learned_at": 1
+            },
+            {
+                "name": "stun-spore",
+                "level_learned_at": 1
+            },
+            {
+                "name": "sleep-powder",
+                "level_learned_at": 1
+            },
+            {
+                "name": "petal-dance",
+                "level_learned_at": 1
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 1
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 1
+            },
+            {
+                "name": "sweet-scent",
+                "level_learned_at": 1
+            },
+            {
+                "name": "moonlight",
+                "level_learned_at": 1
+            },
+            {
+                "name": "petal-blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-terrain",
+                "level_learned_at": 1
+            },
+            {
+                "name": "moonblast",
+                "level_learned_at": 1
+            }
+        ],
+        "egg": [
+            {
+                "name": "leech-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "razor-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flail",
+                "level_learned_at": 0
+            },
+            {
+                "name": "synthesis",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ingrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "teeter-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tickle",
+                "level_learned_at": 0
+            },
+            {
+                "name": "after-you",
+                "level_learned_at": 0
+            },
+            {
+                "name": "strength-sap",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "vileplume"
+    ]
 }

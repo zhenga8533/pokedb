@@ -1,9 +1,9 @@
 {
     "id": 73,
     "name": "tentacruel",
-    "height": 16,
-    "weight": 550,
-    "base_experience": 180,
+    "species": "tentacruel",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/73/",
     "types": [
         "water",
         "poison"
@@ -33,14 +33,381 @@
         "special-defense": 120,
         "speed": 100
     },
+    "ev_yield": [
+        {
+            "stat": "special-defense",
+            "effort": 2
+        }
+    ],
+    "height": 16,
+    "weight": 550,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/73.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/73.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/73.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/73.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/73.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/73.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/73.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/73.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/73.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/73.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/73.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/73.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/73.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/73.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/73.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 180,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 73
+    },
+    "color": "blue",
+    "shape": "tentacles",
+    "egg_groups": [
+        "water3"
+    ],
     "flavor_text": "The tentacles are normally kept short. On hunts, they are extended to ensnare and immobilize prey.",
     "genus": "Jellyfish Pokémon",
     "generation": "generation-i",
-    "capture_rate": 60,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "tentacool",
+        "evolves_to": [
+            {
+                "species_name": "tentacruel",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 30,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "swords-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "haze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "whirlpool",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "muddy-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic-spikes",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poison-jab",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gunk-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "venoshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acid-spray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hex",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "throat-chop",
+                "level_learned_at": 0
+            },
+            {
+                "name": "liquidation",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skitter-smack",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flip-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pounce",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "wrap",
+                "level_learned_at": 1
+            },
+            {
+                "name": "poison-sting",
+                "level_learned_at": 1
+            },
+            {
+                "name": "supersonic",
+                "level_learned_at": 12
+            },
+            {
+                "name": "acid",
+                "level_learned_at": 1
+            },
+            {
+                "name": "water-gun",
+                "level_learned_at": 1
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 58
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 46
+            },
+            {
+                "name": "bubble-beam",
+                "level_learned_at": 24
+            },
+            {
+                "name": "screech",
+                "level_learned_at": 20
+            },
+            {
+                "name": "acid-armor",
+                "level_learned_at": 34
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 16
+            },
+            {
+                "name": "poison-jab",
+                "level_learned_at": 40
+            },
+            {
+                "name": "sludge-wave",
+                "level_learned_at": 52
+            },
+            {
+                "name": "hex",
+                "level_learned_at": 28
+            },
+            {
+                "name": "reflect-type",
+                "level_learned_at": 1
+            }
+        ],
+        "egg": [
+            {
+                "name": "aurora-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "haze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rapid-spin",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mirror-coat",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tickle",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acupressure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aqua-ring",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "tentacruel"
+    ]
 }

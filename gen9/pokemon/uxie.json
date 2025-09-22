@@ -1,9 +1,9 @@
 {
     "id": 480,
     "name": "uxie",
-    "height": 3,
-    "weight": 3,
-    "base_experience": 261,
+    "species": "uxie",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/480/",
     "types": [
         "psychic"
     ],
@@ -22,14 +22,386 @@
         "special-defense": 130,
         "speed": 95
     },
+    "ev_yield": [
+        {
+            "stat": "defense",
+            "effort": 2
+        },
+        {
+            "stat": "special-defense",
+            "effort": 1
+        }
+    ],
+    "height": 3,
+    "weight": 3,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/480.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/480.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/480.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/480.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/480.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/480.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/480.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/480.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/480.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/480.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/480.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/480.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/480.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/480.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/480.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/480.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 261,
+    "base_happiness": 140,
+    "capture_rate": 3,
+    "hatch_counter": 80,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 480
+    },
+    "color": "yellow",
+    "shape": "upright",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "Known as “The Being of Knowledge.” It is said that it can wipe out the memory of those who see its eyes.",
     "genus": "Knowledge Pokémon",
     "generation": "generation-iv",
-    "capture_rate": 3,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "uxie",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "fire-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psybeam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metronome",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "amnesia",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "baton-pass",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psych-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "future-sight",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skill-swap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "u-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "drain-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick-room",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stealth-rock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charge-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psyshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stored-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acrobatics",
+                "level_learned_at": 0
+            },
+            {
+                "name": "draining-kiss",
+                "level_learned_at": 0
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "expanding-force",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic-noise",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "psybeam",
+                "level_learned_at": 21
+            },
+            {
+                "name": "confusion",
+                "level_learned_at": 1
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 49
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 7
+            },
+            {
+                "name": "amnesia",
+                "level_learned_at": 42
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 1
+            },
+            {
+                "name": "flail",
+                "level_learned_at": 70
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 14
+            },
+            {
+                "name": "future-sight",
+                "level_learned_at": 63
+            },
+            {
+                "name": "memento",
+                "level_learned_at": 77
+            },
+            {
+                "name": "yawn",
+                "level_learned_at": 56
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 28
+            },
+            {
+                "name": "extrasensory",
+                "level_learned_at": 35
+            },
+            {
+                "name": "mystical-power",
+                "level_learned_at": 84
+            }
+        ]
+    },
+    "forms": [
+        "uxie"
+    ]
 }

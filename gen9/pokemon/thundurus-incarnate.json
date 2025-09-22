@@ -1,9 +1,9 @@
 {
     "id": 642,
     "name": "thundurus-incarnate",
-    "height": 15,
-    "weight": 610,
-    "base_experience": 261,
+    "species": "thundurus",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/642/",
     "types": [
         "electric",
         "flying"
@@ -28,14 +28,367 @@
         "special-defense": 80,
         "speed": 111
     },
+    "ev_yield": [
+        {
+            "stat": "attack",
+            "effort": 3
+        }
+    ],
+    "height": 15,
+    "weight": 610,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/642.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/642.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/642.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/642.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/642.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/642.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/642.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/642.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/642.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/642.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/642.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/642.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/642.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/642.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/642.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/642.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 261,
+    "base_happiness": 90,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": 0,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 642
+    },
+    "color": "blue",
+    "shape": "arms",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "Countless charred remains mar the landscape of places through which Thundurus has passed.",
     "genus": "Bolt Strike Pokémon",
     "generation": "generation-v",
-    "capture_rate": 3,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "thundurus",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fly",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "agility",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "crunch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "uproar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulk-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "u-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dark-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flash-cannon",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charge-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "smack-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "electro-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acrobatics",
+                "level_learned_at": 0
+            },
+            {
+                "name": "volt-switch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "electroweb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "wild-charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snarl",
+                "level_learned_at": 0
+            },
+            {
+                "name": "eerie-impulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "electric-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "smart-strike",
+                "level_learned_at": 0
+            },
+            {
+                "name": "lash-out",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "supercell-slam",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "thrash",
+                "level_learned_at": 70
+            },
+            {
+                "name": "leer",
+                "level_learned_at": 5
+            },
+            {
+                "name": "bite",
+                "level_learned_at": 15
+            },
+            {
+                "name": "thunder-shock",
+                "level_learned_at": 1
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 65
+            },
+            {
+                "name": "agility",
+                "level_learned_at": 25
+            },
+            {
+                "name": "swagger",
+                "level_learned_at": 10
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 60
+            },
+            {
+                "name": "crunch",
+                "level_learned_at": 40
+            },
+            {
+                "name": "uproar",
+                "level_learned_at": 50
+            },
+            {
+                "name": "charge",
+                "level_learned_at": 30
+            },
+            {
+                "name": "astonish",
+                "level_learned_at": 1
+            },
+            {
+                "name": "shock-wave",
+                "level_learned_at": 20
+            },
+            {
+                "name": "hammer-arm",
+                "level_learned_at": 55
+            },
+            {
+                "name": "discharge",
+                "level_learned_at": 45
+            },
+            {
+                "name": "volt-switch",
+                "level_learned_at": 35
+            },
+            {
+                "name": "wildbolt-storm",
+                "level_learned_at": 75
+            }
+        ]
+    },
+    "forms": [
+        "thundurus-incarnate",
+        "thundurus-therian"
+    ]
 }

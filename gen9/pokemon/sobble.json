@@ -1,9 +1,9 @@
 {
     "id": 816,
     "name": "sobble",
-    "height": 3,
-    "weight": 40,
-    "base_experience": 62,
+    "species": "sobble",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/816/",
     "types": [
         "water"
     ],
@@ -27,14 +27,311 @@
         "special-defense": 40,
         "speed": 70
     },
+    "ev_yield": [
+        {
+            "stat": "special-defense",
+            "effort": 1
+        },
+        {
+            "stat": "speed",
+            "effort": 1
+        }
+    ],
+    "height": 3,
+    "weight": 40,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/816.ogg",
+        "legacy": null
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/816.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/816.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/816.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/816.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/816.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/816.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/816.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/816.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/816.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/816.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/816.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/816.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/816.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/816.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 62,
+    "base_happiness": 50,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 816
+    },
+    "color": "blue",
+    "shape": "quadruped",
+    "egg_groups": [
+        "water1",
+        "ground"
+    ],
     "flavor_text": "When scared, this Pokémon cries. Its tears pack the chemical punch of 100 onions, and attackers won’t be able to resist weeping.",
     "genus": "Water Lizard Pokémon",
     "generation": "generation-viii",
-    "capture_rate": 45,
-    "growth_rate": "medium-slow"
+    "evolution_chain": {
+        "species_name": "sobble",
+        "evolves_to": [
+            {
+                "species_name": "drizzile",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 16,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": [
+                    {
+                        "species_name": "inteleon",
+                        "evolution_details": {
+                            "item": null,
+                            "trigger": "level-up",
+                            "gender": null,
+                            "held_item": null,
+                            "known_move": null,
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": 35,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": false,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": "",
+                            "trade_species": null,
+                            "turn_upside_down": false
+                        },
+                        "evolves_to": []
+                    }
+                ]
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "pound",
+                "level_learned_at": 1
+            },
+            {
+                "name": "bind",
+                "level_learned_at": 8
+            },
+            {
+                "name": "growl",
+                "level_learned_at": 1
+            },
+            {
+                "name": "water-gun",
+                "level_learned_at": 6
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 36
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 12
+            },
+            {
+                "name": "u-turn",
+                "level_learned_at": 24
+            },
+            {
+                "name": "sucker-punch",
+                "level_learned_at": 20
+            },
+            {
+                "name": "soak",
+                "level_learned_at": 32
+            },
+            {
+                "name": "liquidation",
+                "level_learned_at": 28
+            },
+            {
+                "name": "tearful-look",
+                "level_learned_at": 17
+            }
+        ],
+        "machine": [
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "haze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "waterfall",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "whirlpool",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "muddy-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "u-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pledge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "liquidation",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "mist",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-team",
+                "level_learned_at": 0
+            },
+            {
+                "name": "haze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aqua-ring",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-shard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aqua-jet",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fell-stinger",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "sobble"
+    ]
 }

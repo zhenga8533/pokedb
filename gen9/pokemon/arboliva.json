@@ -1,9 +1,9 @@
 {
     "id": 930,
     "name": "arboliva",
-    "height": 14,
-    "weight": 482,
-    "base_experience": 255,
+    "species": "arboliva",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/930/",
     "types": [
         "grass",
         "normal"
@@ -28,14 +28,347 @@
         "special-defense": 109,
         "speed": 39
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 3
+        }
+    ],
+    "height": 14,
+    "weight": 482,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/930.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/930.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/930.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/930.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/930.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/930.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/930.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/930.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/930.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/930.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/930.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/930.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/930.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 255,
+    "base_happiness": 50,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 930,
+        "paldea": 86
+    },
+    "color": "green",
+    "shape": "humanoid",
+    "egg_groups": [
+        "plant"
+    ],
     "flavor_text": "This calm Pokémon is very compassionate. It will share its delicious, nutrient-rich oil with weakened Pokémon.",
     "genus": "Olive Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 45,
-    "growth_rate": "medium-slow"
+    "evolution_chain": {
+        "species_name": "smoliv",
+        "evolves_to": [
+            {
+                "species_name": "dolliv",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 25,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": [
+                    {
+                        "species_name": "arboliva",
+                        "evolution_details": {
+                            "item": null,
+                            "trigger": "level-up",
+                            "gender": null,
+                            "held_item": null,
+                            "known_move": null,
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": 35,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": false,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": "",
+                            "trade_species": null,
+                            "turn_upside_down": false
+                        },
+                        "evolves_to": []
+                    }
+                ]
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "tackle",
+                "level_learned_at": 1
+            },
+            {
+                "name": "absorb",
+                "level_learned_at": 5
+            },
+            {
+                "name": "mega-drain",
+                "level_learned_at": 20
+            },
+            {
+                "name": "leech-seed",
+                "level_learned_at": 39
+            },
+            {
+                "name": "growth",
+                "level_learned_at": 7
+            },
+            {
+                "name": "razor-leaf",
+                "level_learned_at": 10
+            },
+            {
+                "name": "petal-dance",
+                "level_learned_at": 58
+            },
+            {
+                "name": "flail",
+                "level_learned_at": 16
+            },
+            {
+                "name": "safeguard",
+                "level_learned_at": 1
+            },
+            {
+                "name": "sweet-scent",
+                "level_learned_at": 1
+            },
+            {
+                "name": "mirror-coat",
+                "level_learned_at": 1
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 13
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 29
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 34
+            },
+            {
+                "name": "petal-blizzard",
+                "level_learned_at": 52
+            },
+            {
+                "name": "grassy-terrain",
+                "level_learned_at": 23
+            },
+            {
+                "name": "terrain-pulse",
+                "level_learned_at": 46
+            }
+        ],
+        "machine": [
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metronome",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psych-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "petal-blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-blade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pollen-puff",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "alluring-voice",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "arboliva"
+    ]
 }

@@ -1,9 +1,9 @@
 {
     "id": 613,
     "name": "cubchoo",
-    "height": 5,
-    "weight": 85,
-    "base_experience": 61,
+    "species": "cubchoo",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/613/",
     "types": [
         "ice"
     ],
@@ -32,14 +32,374 @@
         "special-defense": 40,
         "speed": 40
     },
+    "ev_yield": [
+        {
+            "stat": "attack",
+            "effort": 1
+        }
+    ],
+    "height": 5,
+    "weight": 85,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/613.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/613.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/613.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/613.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/613.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/613.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/613.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/613.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/613.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/613.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/613.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/613.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/613.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/613.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/613.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/613.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 61,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 613,
+        "paldea": 355
+    },
+    "color": "white",
+    "shape": "upright",
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": "When it is not feeling well, its mucus gets watery and the power of its Ice-type moves decreases.",
     "genus": "Chill Pokémon",
     "generation": "generation-v",
-    "capture_rate": 120,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "cubchoo",
+        "evolves_to": [
+            {
+                "species_name": "beartic",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 37,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "ice-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "low-kick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dig",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metal-claw",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "crunch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endeavor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aerial-ace",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icicle-spear",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "x-scissor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "avalanche",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-claw",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heavy-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snarl",
+                "level_learned_at": 0
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0
+            },
+            {
+                "name": "liquidation",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-press",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "thrash",
+                "level_learned_at": 33
+            },
+            {
+                "name": "growl",
+                "level_learned_at": 1
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 39
+            },
+            {
+                "name": "fury-swipes",
+                "level_learned_at": 6
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 36
+            },
+            {
+                "name": "slash",
+                "level_learned_at": 21
+            },
+            {
+                "name": "flail",
+                "level_learned_at": 24
+            },
+            {
+                "name": "powder-snow",
+                "level_learned_at": 1
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 9
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 3
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 27
+            },
+            {
+                "name": "sheer-cold",
+                "level_learned_at": 42
+            },
+            {
+                "name": "brine",
+                "level_learned_at": 15
+            },
+            {
+                "name": "frost-breath",
+                "level_learned_at": 18
+            },
+            {
+                "name": "play-nice",
+                "level_learned_at": 12
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 30
+            }
+        ],
+        "egg": [
+            {
+                "name": "focus-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "yawn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "night-slash",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "cubchoo"
+    ]
 }

@@ -1,6 +1,7 @@
 {
     "id": 479,
     "name": "smack-down",
+    "source_url": "https://pokeapi.co/api/v2/move/479/",
     "accuracy": 100,
     "power": 50,
     "pp": 15,
@@ -12,7 +13,7 @@
     "effect_chance": 100,
     "effect": "Inflicts regular damage. Removes the target’s immunity to ground-type damage. This effect removes any existing Ground immunity due to levitate, magnet rise, or telekinesis, and causes the target’s flying type to be ignored when it takes Ground damage. If the target isn’t immune to Ground damage, this move will fail. This move can hit Pokémon under the effect of bounce, fly, or sky drop, and ends the effect of Bounce or Fly.",
     "short_effect": "Removes any immunity to Ground damage.",
-    "flavor_text": "The user throws a stone or projectile to attack an opponent. A flying Pokémon will fall to the ground when hit.",
+    "flavor_text": "The user throws a stone or similar projectile to attack the target. If the target is in the air, it will be knocked down to the ground.",
     "learned_by_pokemon": [
         "blastoise",
         "sandshrew",
@@ -201,5 +202,20 @@
         "decidueye-hisui",
         "ursaluna-bloodmoon"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": "tm179",
+    "metadata": {
+        "ailment": "unknown",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 100,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

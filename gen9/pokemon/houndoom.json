@@ -1,9 +1,9 @@
 {
     "id": 229,
     "name": "houndoom",
-    "height": 14,
-    "weight": 350,
-    "base_experience": 175,
+    "species": "houndoom",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/229/",
     "types": [
         "dark",
         "fire"
@@ -33,14 +33,389 @@
         "special-defense": 80,
         "speed": 95
     },
-    "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/229.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/229.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/229.png"
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 2
+        }
+    ],
+    "height": 14,
+    "weight": 350,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/229.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/229.ogg"
     },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/229.png",
+        "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/229.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/229.png",
+        "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/229.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/229.png",
+        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/229.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/229.png",
+        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/229.png",
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/229.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/229.png",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/229.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/229.png",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/229.png"
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/229.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/229.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/229.gif",
+                "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/female/229.gif",
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/229.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/229.gif",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/female/229.gif",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/229.gif",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/female/229.gif"
+            }
+        }
+    },
+    "base_experience": 175,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 229,
+        "paldea": 26
+    },
+    "color": "black",
+    "shape": "quadruped",
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": "If you are burned by the flames it shoots from its mouth, the pain will never go away.",
     "genus": "Dark Pokémon",
     "generation": "generation-ii",
-    "capture_rate": 45,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "houndour",
+        "evolves_to": [
+            {
+                "species_name": "houndoom",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 24,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "roar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flamethrower",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fire-spin",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fire-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "super-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reversal",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "crunch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heat-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "will-o-wisp",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endeavor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "overheat",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flare-blitz",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dark-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fire-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flame-charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snarl",
+                "level_learned_at": 0
+            },
+            {
+                "name": "throat-chop",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic-fangs",
+                "level_learned_at": 0
+            },
+            {
+                "name": "burning-jealousy",
+                "level_learned_at": 0
+            },
+            {
+                "name": "lash-out",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "temper-flare",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "leer",
+                "level_learned_at": 1
+            },
+            {
+                "name": "bite",
+                "level_learned_at": 16
+            },
+            {
+                "name": "roar",
+                "level_learned_at": 13
+            },
+            {
+                "name": "ember",
+                "level_learned_at": 1
+            },
+            {
+                "name": "flamethrower",
+                "level_learned_at": 50
+            },
+            {
+                "name": "smog",
+                "level_learned_at": 1
+            },
+            {
+                "name": "crunch",
+                "level_learned_at": 56
+            },
+            {
+                "name": "beat-up",
+                "level_learned_at": 26
+            },
+            {
+                "name": "torment",
+                "level_learned_at": 35
+            },
+            {
+                "name": "howl",
+                "level_learned_at": 1
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 1
+            },
+            {
+                "name": "thunder-fang",
+                "level_learned_at": 1
+            },
+            {
+                "name": "fire-fang",
+                "level_learned_at": 30
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 45
+            },
+            {
+                "name": "incinerate",
+                "level_learned_at": 20
+            },
+            {
+                "name": "inferno",
+                "level_learned_at": 62
+            },
+            {
+                "name": "comeuppance",
+                "level_learned_at": 41
+            }
+        ]
+    },
+    "forms": [
+        "houndoom",
+        "houndoom-mega"
+    ]
 }

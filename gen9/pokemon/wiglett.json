@@ -1,9 +1,9 @@
 {
     "id": 960,
     "name": "wiglett",
-    "height": 12,
-    "weight": 18,
-    "base_experience": 49,
+    "species": "wiglett",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/960/",
     "types": [
         "water"
     ],
@@ -32,14 +32,284 @@
         "special-defense": 25,
         "speed": 95
     },
+    "ev_yield": [
+        {
+            "stat": "speed",
+            "effort": 1
+        }
+    ],
+    "height": 12,
+    "weight": 18,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/960.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/960.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/960.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/960.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/960.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/960.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/960.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/960.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/960.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/960.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/960.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/960.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/960.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 49,
+    "base_happiness": 50,
+    "capture_rate": 255,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 960,
+        "paldea": 288
+    },
+    "color": "white",
+    "shape": "blob",
+    "egg_groups": [
+        "water3"
+    ],
     "flavor_text": "This Pokémon can pick up the scent of a Veluza just over 65 feet away and will hide itself in the sand.",
     "genus": "Garden Eel Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 255,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "wiglett",
+        "evolves_to": [
+            {
+                "species_name": "wugtrio",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 26,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "slam",
+                "level_learned_at": 20
+            },
+            {
+                "name": "sand-attack",
+                "level_learned_at": 1
+            },
+            {
+                "name": "headbutt",
+                "level_learned_at": 24
+            },
+            {
+                "name": "wrap",
+                "level_learned_at": 8
+            },
+            {
+                "name": "water-gun",
+                "level_learned_at": 1
+            },
+            {
+                "name": "dig",
+                "level_learned_at": 28
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 4
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 20
+            },
+            {
+                "name": "sucker-punch",
+                "level_learned_at": 32
+            },
+            {
+                "name": "aqua-jet",
+                "level_learned_at": 12
+            },
+            {
+                "name": "throat-chop",
+                "level_learned_at": 36
+            },
+            {
+                "name": "liquidation",
+                "level_learned_at": 40
+            }
+        ],
+        "machine": [
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dig",
+                "level_learned_at": 0
+            },
+            {
+                "name": "agility",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "whirlpool",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "muddy-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "throat-chop",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stomping-tantrum",
+                "level_learned_at": 0
+            },
+            {
+                "name": "liquidation",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "memento",
+                "level_learned_at": 0
+            },
+            {
+                "name": "final-gambit",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "wiglett"
+    ]
 }

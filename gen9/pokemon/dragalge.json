@@ -1,9 +1,9 @@
 {
     "id": 691,
     "name": "dragalge",
-    "height": 18,
-    "weight": 815,
-    "base_experience": 173,
+    "species": "dragalge",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/691/",
     "types": [
         "poison",
         "dragon"
@@ -33,14 +33,347 @@
         "special-defense": 123,
         "speed": 44
     },
+    "ev_yield": [
+        {
+            "stat": "special-defense",
+            "effort": 2
+        }
+    ],
+    "height": 18,
+    "weight": 815,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/691.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/691.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/691.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/691.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/691.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/691.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/691.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/691.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/691.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/691.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/691.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/691.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/691.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 173,
+    "base_happiness": 70,
+    "capture_rate": 55,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 691,
+        "paldea": 338
+    },
+    "color": "brown",
+    "shape": "blob",
+    "egg_groups": [
+        "water1",
+        "dragon"
+    ],
     "flavor_text": "Their poison is strong enough to eat through the hull of a tanker, and they spit it indiscriminately at anything that enters their territory.",
     "genus": "Mock Kelp Pokémon",
     "generation": "generation-vi",
-    "capture_rate": 55,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "skrelp",
+        "evolves_to": [
+            {
+                "species_name": "dragalge",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 48,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "tackle",
+                "level_learned_at": 1
+            },
+            {
+                "name": "tail-whip",
+                "level_learned_at": 15
+            },
+            {
+                "name": "acid",
+                "level_learned_at": 1
+            },
+            {
+                "name": "water-gun",
+                "level_learned_at": 1
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 59
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 35
+            },
+            {
+                "name": "double-team",
+                "level_learned_at": 20
+            },
+            {
+                "name": "smokescreen",
+                "level_learned_at": 1
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 52
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 66
+            },
+            {
+                "name": "poison-tail",
+                "level_learned_at": 25
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 30
+            },
+            {
+                "name": "aqua-tail",
+                "level_learned_at": 45
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 40
+            }
+        ],
+        "machine": [
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "haze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "waterfall",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "whirlpool",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "muddy-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poison-tail",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic-spikes",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "draco-meteor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gunk-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "venoshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acid-spray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scald",
+                "level_learned_at": 0
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0
+            },
+            {
+                "name": "liquidation",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scale-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flip-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "dragalge"
+    ]
 }

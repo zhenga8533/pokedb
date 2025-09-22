@@ -1,9 +1,9 @@
 {
     "id": 471,
     "name": "glaceon",
-    "height": 8,
-    "weight": 259,
-    "base_experience": 184,
+    "species": "glaceon",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/471/",
     "types": [
         "ice"
     ],
@@ -27,14 +27,536 @@
         "special-defense": 95,
         "speed": 65
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 2
+        }
+    ],
+    "height": 8,
+    "weight": 259,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/471.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/471.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/471.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/471.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/471.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/471.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/471.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/471.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/471.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/471.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/471.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/471.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/471.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/471.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/471.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 184,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 35,
+    "gender_rate": 1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 471,
+        "paldea": 186
+    },
+    "color": "blue",
+    "shape": "quadruped",
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": "As a protective technique, it can completely freeze its fur to make its hairs stand like needles.",
     "genus": "Fresh Snow Pokémon",
     "generation": "generation-iv",
-    "capture_rate": 45,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "eevee",
+        "evolves_to": [
+            {
+                "species_name": "vaporeon",
+                "evolution_details": {
+                    "item": "water-stone",
+                    "trigger": "use-item",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            },
+            {
+                "species_name": "jolteon",
+                "evolution_details": {
+                    "item": "thunder-stone",
+                    "trigger": "use-item",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            },
+            {
+                "species_name": "flareon",
+                "evolution_details": {
+                    "item": "fire-stone",
+                    "trigger": "use-item",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            },
+            {
+                "species_name": "espeon",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": 160,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "day",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            },
+            {
+                "species_name": "umbreon",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": 160,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "night",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            },
+            {
+                "species_name": "leafeon",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": "eterna-forest",
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            },
+            {
+                "species_name": "glaceon",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": "sinnoh-route-217",
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            },
+            {
+                "species_name": "sylveon",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": "fairy",
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": 2,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "sand-attack",
+                "level_learned_at": 5
+            },
+            {
+                "name": "tackle",
+                "level_learned_at": 1
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 1
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 1
+            },
+            {
+                "name": "tail-whip",
+                "level_learned_at": 1
+            },
+            {
+                "name": "bite",
+                "level_learned_at": 25
+            },
+            {
+                "name": "growl",
+                "level_learned_at": 1
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 50
+            },
+            {
+                "name": "quick-attack",
+                "level_learned_at": 10
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 1
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 1
+            },
+            {
+                "name": "baton-pass",
+                "level_learned_at": 1
+            },
+            {
+                "name": "mirror-coat",
+                "level_learned_at": 45
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 1
+            },
+            {
+                "name": "covet",
+                "level_learned_at": 1
+            },
+            {
+                "name": "copycat",
+                "level_learned_at": 1
+            },
+            {
+                "name": "last-resort",
+                "level_learned_at": 55
+            },
+            {
+                "name": "ice-shard",
+                "level_learned_at": 20
+            },
+            {
+                "name": "ice-fang",
+                "level_learned_at": 30
+            },
+            {
+                "name": "freeze-dry",
+                "level_learned_at": 40
+            },
+            {
+                "name": "baby-doll-eyes",
+                "level_learned_at": 15
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 35
+            }
+        ],
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "roar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dig",
+                "level_learned_at": 0
+            },
+            {
+                "name": "haze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "baton-pass",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fake-tears",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icicle-spear",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "avalanche",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stored-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "triple-axel",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "alluring-voice",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "glaceon"
+    ]
 }

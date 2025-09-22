@@ -1,9 +1,9 @@
 {
     "id": 618,
     "name": "stunfisk",
-    "height": 7,
-    "weight": 110,
-    "base_experience": 165,
+    "species": "stunfisk",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/618/",
     "types": [
         "ground",
         "electric"
@@ -33,14 +33,79 @@
         "special-defense": 99,
         "speed": 32
     },
+    "ev_yield": [
+        {
+            "stat": "hp",
+            "effort": 2
+        }
+    ],
+    "height": 7,
+    "weight": 110,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/618.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/618.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/618.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/618.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/618.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/618.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/618.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/618.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/618.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/618.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/618.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/618.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/618.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/618.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/618.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/618.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 165,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 618
+    },
+    "color": "brown",
+    "shape": "fish",
+    "egg_groups": [
+        "water1",
+        "indeterminate"
+    ],
     "flavor_text": "Its skin is very hard, so it is unhurt even if stepped on by sumo wrestlers. It smiles when transmitting electricity.",
     "genus": "Trap Pokémon",
     "generation": "generation-v",
-    "capture_rate": 75,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "stunfisk",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {},
+    "forms": [
+        "stunfisk",
+        "stunfisk-galar"
+    ]
 }

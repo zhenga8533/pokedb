@@ -1,9 +1,9 @@
 {
     "id": 547,
     "name": "whimsicott",
-    "height": 7,
-    "weight": 66,
-    "base_experience": 168,
+    "species": "whimsicott",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/547/",
     "types": [
         "grass",
         "fairy"
@@ -33,14 +33,362 @@
         "special-defense": 75,
         "speed": 116
     },
+    "ev_yield": [
+        {
+            "stat": "speed",
+            "effort": 2
+        }
+    ],
+    "height": 7,
+    "weight": 66,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/547.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/547.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/547.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/547.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/547.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/547.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/547.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/547.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/547.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/547.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/547.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/547.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/547.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/547.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/547.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/547.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 168,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 547
+    },
+    "color": "green",
+    "shape": "humanoid",
+    "egg_groups": [
+        "plant",
+        "fairy"
+    ],
     "flavor_text": "Like the wind, it can slip through any gap, no matter how small. It leaves balls of white fluff behind.",
     "genus": "Windveiled Pokémon",
     "generation": "generation-v",
-    "capture_rate": 75,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "cottonee",
+        "evolves_to": [
+            {
+                "species_name": "whimsicott",
+                "evolution_details": {
+                    "item": "sun-stone",
+                    "trigger": "use-item",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "gust",
+                "level_learned_at": 1
+            },
+            {
+                "name": "absorb",
+                "level_learned_at": 1
+            },
+            {
+                "name": "mega-drain",
+                "level_learned_at": 1
+            },
+            {
+                "name": "leech-seed",
+                "level_learned_at": 1
+            },
+            {
+                "name": "growth",
+                "level_learned_at": 1
+            },
+            {
+                "name": "razor-leaf",
+                "level_learned_at": 1
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 1
+            },
+            {
+                "name": "poison-powder",
+                "level_learned_at": 1
+            },
+            {
+                "name": "stun-spore",
+                "level_learned_at": 1
+            },
+            {
+                "name": "cotton-spore",
+                "level_learned_at": 1
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 1
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 1
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 1
+            },
+            {
+                "name": "memento",
+                "level_learned_at": 1
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 1
+            },
+            {
+                "name": "endeavor",
+                "level_learned_at": 1
+            },
+            {
+                "name": "tailwind",
+                "level_learned_at": 1
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 1
+            },
+            {
+                "name": "cotton-guard",
+                "level_learned_at": 1
+            },
+            {
+                "name": "hurricane",
+                "level_learned_at": 1
+            },
+            {
+                "name": "fairy-wind",
+                "level_learned_at": 1
+            },
+            {
+                "name": "moonblast",
+                "level_learned_at": 1
+            }
+        ],
+        "machine": [
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endeavor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fake-tears",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tailwind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "u-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick-room",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hurricane",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "misty-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-glide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "beat-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "memento",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tickle",
+                "level_learned_at": 0
+            },
+            {
+                "name": "worry-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "switcheroo",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "whimsicott"
+    ]
 }

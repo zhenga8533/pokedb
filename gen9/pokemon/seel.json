@@ -1,9 +1,9 @@
 {
     "id": 86,
     "name": "seel",
-    "height": 11,
-    "weight": 900,
-    "base_experience": 65,
+    "species": "seel",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/86/",
     "types": [
         "water"
     ],
@@ -32,14 +32,370 @@
         "special-defense": 70,
         "speed": 45
     },
+    "ev_yield": [
+        {
+            "stat": "special-defense",
+            "effort": 1
+        }
+    ],
+    "height": 11,
+    "weight": 900,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/86.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/86.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/86.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/86.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/86.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/86.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/86.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/86.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/86.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/86.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/86.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/86.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/86.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/86.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/86.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 65,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 86
+    },
+    "color": "white",
+    "shape": "fish",
+    "egg_groups": [
+        "water1",
+        "ground"
+    ],
     "flavor_text": "The protruding horn on its head is very hard. It is used for bashing through thick ice.",
     "genus": "Sea Lion Pokémon",
     "generation": "generation-i",
-    "capture_rate": 190,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "seel",
+        "evolves_to": [
+            {
+                "species_name": "dewgong",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 34,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "headbutt",
+                "level_learned_at": 1
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 37
+            },
+            {
+                "name": "growl",
+                "level_learned_at": 3
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 47
+            },
+            {
+                "name": "aurora-beam",
+                "level_learned_at": 27
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 21
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 11
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 7
+            },
+            {
+                "name": "safeguard",
+                "level_learned_at": 51
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 13
+            },
+            {
+                "name": "dive",
+                "level_learned_at": 41
+            },
+            {
+                "name": "brine",
+                "level_learned_at": 33
+            },
+            {
+                "name": "aqua-ring",
+                "level_learned_at": 23
+            },
+            {
+                "name": "aqua-tail",
+                "level_learned_at": 43
+            },
+            {
+                "name": "ice-shard",
+                "level_learned_at": 17
+            },
+            {
+                "name": "aqua-jet",
+                "level_learned_at": 31
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 53
+            }
+        ],
+        "egg": [
+            {
+                "name": "horn-drill",
+                "level_learned_at": 0
+            },
+            {
+                "name": "disable",
+                "level_learned_at": 0
+            },
+            {
+                "name": "lick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "perish-song",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fake-out",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stockpile",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spit-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swallow",
+                "level_learned_at": 0
+            },
+            {
+                "name": "entrainment",
+                "level_learned_at": 0
+            },
+            {
+                "name": "belch",
+                "level_learned_at": 0
+            }
+        ],
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "haze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "waterfall",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "whirlpool",
+                "level_learned_at": 0
+            },
+            {
+                "name": "uproar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "muddy-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icicle-spear",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "avalanche",
+                "level_learned_at": 0
+            },
+            {
+                "name": "drill-run",
+                "level_learned_at": 0
+            },
+            {
+                "name": "smart-strike",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flip-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "triple-axel",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-spinner",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "seel"
+    ]
 }

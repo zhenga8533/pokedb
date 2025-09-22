@@ -1,9 +1,9 @@
 {
     "id": 477,
     "name": "dusknoir",
-    "height": 22,
-    "weight": 1066,
-    "base_experience": 236,
+    "species": "dusknoir",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/477/",
     "types": [
         "ghost"
     ],
@@ -27,14 +27,450 @@
         "special-defense": 135,
         "speed": 45
     },
+    "ev_yield": [
+        {
+            "stat": "defense",
+            "effort": 1
+        },
+        {
+            "stat": "special-defense",
+            "effort": 2
+        }
+    ],
+    "height": 22,
+    "weight": 1066,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/477.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/477.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/477.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/477.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/477.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/477.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/477.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/477.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/477.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/477.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/477.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/477.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/477.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/477.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/477.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/477.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 236,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 477
+    },
+    "color": "black",
+    "shape": "arms",
+    "egg_groups": [
+        "indeterminate"
+    ],
     "flavor_text": "The antenna on its head captures radio waves from the world of spirits that command it to take people there.",
     "genus": "Gripper Pokémon",
     "generation": "generation-iv",
-    "capture_rate": 45,
-    "growth_rate": "fast"
+    "evolution_chain": {
+        "species_name": "duskull",
+        "evolves_to": [
+            {
+                "species_name": "dusclops",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 37,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": [
+                    {
+                        "species_name": "dusknoir",
+                        "evolution_details": {
+                            "item": null,
+                            "trigger": "trade",
+                            "gender": null,
+                            "held_item": "reaper-cloth",
+                            "known_move": null,
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": null,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": false,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": "",
+                            "trade_species": null,
+                            "turn_upside_down": false
+                        },
+                        "evolves_to": []
+                    }
+                ]
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "fire-punch",
+                "level_learned_at": 1
+            },
+            {
+                "name": "ice-punch",
+                "level_learned_at": 1
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 1
+            },
+            {
+                "name": "bind",
+                "level_learned_at": 1
+            },
+            {
+                "name": "leer",
+                "level_learned_at": 1
+            },
+            {
+                "name": "disable",
+                "level_learned_at": 1
+            },
+            {
+                "name": "night-shade",
+                "level_learned_at": 16
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 12
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 36
+            },
+            {
+                "name": "destiny-bond",
+                "level_learned_at": 54
+            },
+            {
+                "name": "mean-look",
+                "level_learned_at": 28
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 42
+            },
+            {
+                "name": "future-sight",
+                "level_learned_at": 48
+            },
+            {
+                "name": "will-o-wisp",
+                "level_learned_at": 24
+            },
+            {
+                "name": "astonish",
+                "level_learned_at": 1
+            },
+            {
+                "name": "shadow-punch",
+                "level_learned_at": 1
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 1
+            },
+            {
+                "name": "payback",
+                "level_learned_at": 20
+            },
+            {
+                "name": "shadow-sneak",
+                "level_learned_at": 1
+            },
+            {
+                "name": "hex",
+                "level_learned_at": 32
+            }
+        ],
+        "machine": [
+            {
+                "name": "fire-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "night-shade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "haze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metronome",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leech-life",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psych-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "future-sight",
+                "level_learned_at": 0
+            },
+            {
+                "name": "will-o-wisp",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skill-swap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dark-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick-room",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charge-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hex",
+                "level_learned_at": 0
+            },
+            {
+                "name": "phantom-force",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skitter-smack",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poltergeist",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hard-press",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "haze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "memento",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "dusknoir"
+    ]
 }

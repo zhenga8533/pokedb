@@ -1,9 +1,9 @@
 {
     "id": 855,
     "name": "polteageist",
-    "height": 2,
-    "weight": 4,
-    "base_experience": 178,
+    "species": "polteageist",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/855/",
     "types": [
         "ghost"
     ],
@@ -27,14 +27,317 @@
         "special-defense": 114,
         "speed": 70
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 2
+        }
+    ],
+    "height": 2,
+    "weight": 4,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/855.ogg",
+        "legacy": null
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/855.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/855.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/855.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/855.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/855.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/855.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/855.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/855.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/855.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/855.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/855.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/855.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/855.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/855.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 178,
+    "base_happiness": 50,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 855,
+        "paldea": 238
+    },
+    "color": "purple",
+    "shape": "ball",
+    "egg_groups": [
+        "mineral",
+        "indeterminate"
+    ],
     "flavor_text": "This species lives in antique teapots. Most pots are forgeries, but on rare occasions, an authentic work is found.",
     "genus": "Black Tea Pokémon",
     "generation": "generation-viii",
-    "capture_rate": 60,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "sinistea",
+        "evolves_to": [
+            {
+                "species_name": "polteageist",
+                "evolution_details": {
+                    "item": "cracked-pot",
+                    "trigger": "use-item",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "psybeam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "night-shade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metronome",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "baton-pass",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "will-o-wisp",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skill-swap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 0
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dark-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick-room",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psyshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stored-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hex",
+                "level_learned_at": 0
+            },
+            {
+                "name": "phantom-force",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poltergeist",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "mega-drain",
+                "level_learned_at": 1
+            },
+            {
+                "name": "withdraw",
+                "level_learned_at": 1
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 66
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 18
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 36
+            },
+            {
+                "name": "sweet-scent",
+                "level_learned_at": 30
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 48
+            },
+            {
+                "name": "memento",
+                "level_learned_at": 54
+            },
+            {
+                "name": "astonish",
+                "level_learned_at": 1
+            },
+            {
+                "name": "sucker-punch",
+                "level_learned_at": 24
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 42
+            },
+            {
+                "name": "shell-smash",
+                "level_learned_at": 60
+            },
+            {
+                "name": "aromatic-mist",
+                "level_learned_at": 1
+            },
+            {
+                "name": "strength-sap",
+                "level_learned_at": 1
+            },
+            {
+                "name": "teatime",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "polteageist"
+    ]
 }

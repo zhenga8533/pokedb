@@ -1,9 +1,9 @@
 {
     "id": 707,
     "name": "klefki",
-    "height": 2,
-    "weight": 30,
-    "base_experience": 165,
+    "species": "klefki",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/707/",
     "types": [
         "steel",
         "fairy"
@@ -28,14 +28,289 @@
         "special-defense": 87,
         "speed": 75
     },
+    "ev_yield": [
+        {
+            "stat": "defense",
+            "effort": 1
+        }
+    ],
+    "height": 2,
+    "weight": 30,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/707.ogg",
+        "legacy": null
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/707.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/707.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/707.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/707.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/707.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/707.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/707.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/707.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/707.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/707.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/707.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/707.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/707.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/707.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 165,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 707,
+        "paldea": 240
+    },
+    "color": "gray",
+    "shape": "ball",
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": "These key collectors threaten any attackers by fiercely jingling their keys at them.",
     "genus": "Key Ring Pokémon",
     "generation": "generation-vi",
-    "capture_rate": 75,
-    "growth_rate": "fast"
+    "evolution_chain": {
+        "species_name": "klefki",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "tackle",
+                "level_learned_at": 4
+            },
+            {
+                "name": "torment",
+                "level_learned_at": 12
+            },
+            {
+                "name": "recycle",
+                "level_learned_at": 28
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 32
+            },
+            {
+                "name": "astonish",
+                "level_learned_at": 1
+            },
+            {
+                "name": "metal-sound",
+                "level_learned_at": 20
+            },
+            {
+                "name": "last-resort",
+                "level_learned_at": 52
+            },
+            {
+                "name": "flash-cannon",
+                "level_learned_at": 36
+            },
+            {
+                "name": "magic-room",
+                "level_learned_at": 44
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 48
+            },
+            {
+                "name": "draining-kiss",
+                "level_learned_at": 24
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 40
+            },
+            {
+                "name": "fairy-wind",
+                "level_learned_at": 8
+            },
+            {
+                "name": "fairy-lock",
+                "level_learned_at": 16
+            }
+        ],
+        "machine": [
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spikes",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psych-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metal-sound",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flash-cannon",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick-room",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psyshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stored-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "draining-kiss",
+                "level_learned_at": 0
+            },
+            {
+                "name": "misty-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "steel-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skitter-smack",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "magnet-rise",
+                "level_learned_at": 0
+            },
+            {
+                "name": "switcheroo",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "klefki"
+    ]
 }

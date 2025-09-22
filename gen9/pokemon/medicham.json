@@ -1,9 +1,9 @@
 {
     "id": 308,
     "name": "medicham",
-    "height": 13,
-    "weight": 315,
-    "base_experience": 144,
+    "species": "medicham",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/308/",
     "types": [
         "fighting",
         "psychic"
@@ -28,14 +28,433 @@
         "special-defense": 75,
         "speed": 80
     },
-    "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/308.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/308.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/308.png"
+    "ev_yield": [
+        {
+            "stat": "speed",
+            "effort": 2
+        }
+    ],
+    "height": 13,
+    "weight": 315,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/308.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/308.ogg"
     },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/308.png",
+        "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/308.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/308.png",
+        "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/308.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/308.png",
+        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/308.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/308.png",
+        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/308.png",
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/308.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/308.png",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/308.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/308.png",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/308.png"
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/308.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/308.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/308.gif",
+                "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/female/308.gif",
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/308.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/308.gif",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/female/308.gif",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/308.gif",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/female/308.gif"
+            }
+        }
+    },
+    "base_experience": 144,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 308,
+        "paldea": 162
+    },
+    "color": "red",
+    "shape": "humanoid",
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": "It is said that through meditation, MEDICHAM heightens energy inside its body and sharpens its sixth sense. This POKéMON hides its presence by merging itself with fields and mountains.",
     "genus": "Meditate Pokémon",
     "generation": "generation-iii",
-    "capture_rate": 90,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "meditite",
+        "evolves_to": [
+            {
+                "species_name": "medicham",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 37,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "fire-punch",
+                "level_learned_at": 1
+            },
+            {
+                "name": "ice-punch",
+                "level_learned_at": 1
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 1
+            },
+            {
+                "name": "psybeam",
+                "level_learned_at": 20
+            },
+            {
+                "name": "counter",
+                "level_learned_at": 53
+            },
+            {
+                "name": "confusion",
+                "level_learned_at": 1
+            },
+            {
+                "name": "recover",
+                "level_learned_at": 47
+            },
+            {
+                "name": "high-jump-kick",
+                "level_learned_at": 28
+            },
+            {
+                "name": "detect",
+                "level_learned_at": 1
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 12
+            },
+            {
+                "name": "psych-up",
+                "level_learned_at": 31
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 23
+            },
+            {
+                "name": "feint",
+                "level_learned_at": 15
+            },
+            {
+                "name": "acupressure",
+                "level_learned_at": 33
+            },
+            {
+                "name": "power-trick",
+                "level_learned_at": 36
+            },
+            {
+                "name": "force-palm",
+                "level_learned_at": 17
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 25
+            },
+            {
+                "name": "work-up",
+                "level_learned_at": 1
+            },
+            {
+                "name": "axe-kick",
+                "level_learned_at": 53
+            }
+        ],
+        "machine": [
+            {
+                "name": "fire-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psybeam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "low-kick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "night-shade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metronome",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reversal",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "baton-pass",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psych-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skill-swap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aerial-ace",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulk-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 0
+            },
+            {
+                "name": "close-combat",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aura-sphere",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poison-jab",
+                "level_learned_at": 0
+            },
+            {
+                "name": "drain-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "vacuum-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick-room",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psyshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "low-sweep",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stored-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "expanding-force",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "upper-hand",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "medicham",
+        "medicham-mega"
+    ]
 }

@@ -1,9 +1,9 @@
 {
     "id": 271,
     "name": "lombre",
-    "height": 12,
-    "weight": 325,
-    "base_experience": 119,
+    "species": "lombre",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/271/",
     "types": [
         "water",
         "grass"
@@ -33,14 +33,423 @@
         "special-defense": 70,
         "speed": 50
     },
+    "ev_yield": [
+        {
+            "stat": "special-defense",
+            "effort": 2
+        }
+    ],
+    "height": 12,
+    "weight": 325,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/271.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/271.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/271.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/271.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/271.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/271.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/271.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/271.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/271.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/271.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/271.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/271.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/271.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/271.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/271.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/271.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 119,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 15,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 271
+    },
+    "color": "green",
+    "shape": "humanoid",
+    "egg_groups": [
+        "water1",
+        "plant"
+    ],
     "flavor_text": "It lives at the water’s edge where it is sunny. It sleeps on a bed of water grass by day and becomes active at night.",
     "genus": "Jolly Pokémon",
     "generation": "generation-iii",
-    "capture_rate": 120,
-    "growth_rate": "medium-slow"
+    "evolution_chain": {
+        "species_name": "lotad",
+        "evolves_to": [
+            {
+                "species_name": "lombre",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 14,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": [
+                    {
+                        "species_name": "ludicolo",
+                        "evolution_details": {
+                            "item": "water-stone",
+                            "trigger": "use-item",
+                            "gender": null,
+                            "held_item": null,
+                            "known_move": null,
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": null,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": false,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": "",
+                            "trade_species": null,
+                            "turn_upside_down": false
+                        },
+                        "evolves_to": []
+                    }
+                ]
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "fire-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swords-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metronome",
+                "level_learned_at": 0
+            },
+            {
+                "name": "waterfall",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "whirlpool",
+                "level_learned_at": 0
+            },
+            {
+                "name": "uproar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "muddy-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "drain-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "disarming-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-glide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "growl",
+                "level_learned_at": 1
+            },
+            {
+                "name": "mist",
+                "level_learned_at": 9
+            },
+            {
+                "name": "water-gun",
+                "level_learned_at": 1
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 64
+            },
+            {
+                "name": "bubble-beam",
+                "level_learned_at": 24
+            },
+            {
+                "name": "absorb",
+                "level_learned_at": 1
+            },
+            {
+                "name": "mega-drain",
+                "level_learned_at": 12
+            },
+            {
+                "name": "leech-seed",
+                "level_learned_at": 30
+            },
+            {
+                "name": "fury-swipes",
+                "level_learned_at": 18
+            },
+            {
+                "name": "flail",
+                "level_learned_at": 1
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 36
+            },
+            {
+                "name": "fake-out",
+                "level_learned_at": 1
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 1
+            },
+            {
+                "name": "teeter-dance",
+                "level_learned_at": 1
+            },
+            {
+                "name": "astonish",
+                "level_learned_at": 1
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 57
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 50
+            }
+        ],
+        "egg": [
+            {
+                "name": "counter",
+                "level_learned_at": 0
+            },
+            {
+                "name": "razor-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sweet-scent",
+                "level_learned_at": 0
+            },
+            {
+                "name": "synthesis",
+                "level_learned_at": 0
+            },
+            {
+                "name": "teeter-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tickle",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "lombre"
+    ]
 }

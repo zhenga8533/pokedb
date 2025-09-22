@@ -1,9 +1,9 @@
 {
     "id": 761,
     "name": "bounsweet",
-    "height": 3,
-    "weight": 32,
-    "base_experience": 42,
+    "species": "bounsweet",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/761/",
     "types": [
         "grass"
     ],
@@ -32,14 +32,303 @@
         "special-defense": 38,
         "speed": 32
     },
+    "ev_yield": [
+        {
+            "stat": "hp",
+            "effort": 1
+        }
+    ],
+    "height": 3,
+    "weight": 32,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/761.ogg",
+        "legacy": null
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/761.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/761.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/761.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/761.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/761.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/761.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/761.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/761.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/761.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/761.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/761.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/761.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/761.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/761.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 42,
+    "base_happiness": 70,
+    "capture_rate": 235,
+    "hatch_counter": 20,
+    "gender_rate": 8,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 761,
+        "paldea": 81
+    },
+    "color": "purple",
+    "shape": "legs",
+    "egg_groups": [
+        "plant"
+    ],
     "flavor_text": "A delectable aroma pours from its body. They are often swallowed whole by Toucannon lured by that wafting deliciousness.",
     "genus": "Fruit Pokémon",
     "generation": "generation-vii",
-    "capture_rate": 235,
-    "growth_rate": "medium-slow"
+    "evolution_chain": {
+        "species_name": "bounsweet",
+        "evolves_to": [
+            {
+                "species_name": "steenee",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 18,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": [
+                    {
+                        "species_name": "tsareena",
+                        "evolution_details": {
+                            "item": null,
+                            "trigger": "level-up",
+                            "gender": null,
+                            "held_item": null,
+                            "known_move": "stomp",
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": null,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": false,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": "",
+                            "trade_species": null,
+                            "turn_upside_down": false
+                        },
+                        "evolves_to": []
+                    }
+                ]
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endeavor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "draining-kiss",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-glide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "razor-leaf",
+                "level_learned_at": 12
+            },
+            {
+                "name": "splash",
+                "level_learned_at": 1
+            },
+            {
+                "name": "flail",
+                "level_learned_at": 24
+            },
+            {
+                "name": "rapid-spin",
+                "level_learned_at": 8
+            },
+            {
+                "name": "sweet-scent",
+                "level_learned_at": 16
+            },
+            {
+                "name": "teeter-dance",
+                "level_learned_at": 28
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 20
+            },
+            {
+                "name": "play-nice",
+                "level_learned_at": 4
+            },
+            {
+                "name": "aromatic-mist",
+                "level_learned_at": 32
+            }
+        ],
+        "egg": [
+            {
+                "name": "synthesis",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endeavor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acupressure",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "bounsweet"
+    ]
 }

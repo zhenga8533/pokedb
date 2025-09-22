@@ -1,6 +1,7 @@
 {
     "id": 196,
     "name": "mental-herb",
+    "source_url": "https://pokeapi.co/api/v2/item/196/",
     "cost": 4000,
     "fling_power": 10,
     "fling_effect": "herb-effect",
@@ -10,7 +11,8 @@
     ],
     "category": "held-items",
     "effect": "Held in battle : When the holder is attracted, it consumes this item to cure the attraction.",
-    "flavor_text": "A hold item that snaps POKéMON out of infatuation.",
+    "short_effect": "Held: Consumed to cure infatuation. Gen V: Also removes Taunt, Encore, Torment, Disable, and Cursed Body.",
+    "flavor_text": "An item to be held by a Pokémon. The holder shakes off move-binding effects to move freely. It can be used only once.",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mental-herb.png",
     "held_by_pokemon": [
         "lotad",
@@ -21,5 +23,13 @@
         "leavanny",
         "pancham",
         "pangoro"
+    ],
+    "generations": [
+        "generation-iii",
+        "generation-iv",
+        "generation-v",
+        "generation-vi",
+        "generation-vii",
+        "generation-viii"
     ]
 }

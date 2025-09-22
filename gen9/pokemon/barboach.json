@@ -1,9 +1,9 @@
 {
     "id": 339,
     "name": "barboach",
-    "height": 4,
-    "weight": 19,
-    "base_experience": 58,
+    "species": "barboach",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/339/",
     "types": [
         "water",
         "ground"
@@ -33,14 +33,334 @@
         "special-defense": 41,
         "speed": 60
     },
+    "ev_yield": [
+        {
+            "stat": "hp",
+            "effort": 1
+        }
+    ],
+    "height": 4,
+    "weight": 19,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/339.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/339.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/339.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/339.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/339.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/339.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/339.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/339.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/339.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/339.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/339.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/339.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/339.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/339.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/339.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/339.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 58,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 339,
+        "paldea": 168
+    },
+    "color": "gray",
+    "shape": "fish",
+    "egg_groups": [
+        "water2"
+    ],
     "flavor_text": "BARBOACH’s sensitive whiskers serve as a superb radar system. This POKéMON hides in mud, leaving only its two whiskers exposed while it waits for prey to come along.",
     "genus": "Whiskers Pokémon",
     "generation": "generation-iii",
-    "capture_rate": 190,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "barboach",
+        "evolves_to": [
+            {
+                "species_name": "whiscash",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 30,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "egg": [
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thrash",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flail",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spark",
+                "level_learned_at": 0
+            }
+        ],
+        "machine": [
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "waterfall",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "amnesia",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "future-sight",
+                "level_learned_at": 0
+            },
+            {
+                "name": "whirlpool",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "muddy-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stealth-rock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "high-horsepower",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stomping-tantrum",
+                "level_learned_at": 0
+            },
+            {
+                "name": "liquidation",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "water-gun",
+                "level_learned_at": 1
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 36
+            },
+            {
+                "name": "fissure",
+                "level_learned_at": 48
+            },
+            {
+                "name": "amnesia",
+                "level_learned_at": 18
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 6
+            },
+            {
+                "name": "snore",
+                "level_learned_at": 6
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 1
+            },
+            {
+                "name": "future-sight",
+                "level_learned_at": 42
+            },
+            {
+                "name": "muddy-water",
+                "level_learned_at": 31
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 12
+            },
+            {
+                "name": "aqua-tail",
+                "level_learned_at": 24
+            }
+        ]
+    },
+    "forms": [
+        "barboach"
+    ]
 }

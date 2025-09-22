@@ -1,9 +1,9 @@
 {
     "id": 703,
     "name": "carbink",
-    "height": 3,
-    "weight": 57,
-    "base_experience": 100,
+    "species": "carbink",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/703/",
     "types": [
         "rock",
         "fairy"
@@ -28,14 +28,327 @@
         "special-defense": 150,
         "speed": 50
     },
+    "ev_yield": [
+        {
+            "stat": "defense",
+            "effort": 1
+        },
+        {
+            "stat": "special-defense",
+            "effort": 1
+        }
+    ],
+    "height": 3,
+    "weight": 57,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/703.ogg",
+        "legacy": null
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/703.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/703.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/703.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/703.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/703.png"
+        "other": {
+            "dream_world": {
+                "front_default": null,
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/703.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/703.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/703.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/703.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/703.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/703.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/703.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/703.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 100,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 25,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 703
+    },
+    "color": "gray",
+    "shape": "ball",
+    "egg_groups": [
+        "fairy",
+        "mineral"
+    ],
     "flavor_text": "Born from the temperatures and pressures deep underground, it fires beams from the stone in its head.",
     "genus": "Jewel Pokémon",
     "generation": "generation-vi",
-    "capture_rate": 60,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "carbink",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "tackle",
+                "level_learned_at": 1
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 1
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 30
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 35
+            },
+            {
+                "name": "flail",
+                "level_learned_at": 15
+            },
+            {
+                "name": "ancient-power",
+                "level_learned_at": 20
+            },
+            {
+                "name": "skill-swap",
+                "level_learned_at": 40
+            },
+            {
+                "name": "rock-polish",
+                "level_learned_at": 25
+            },
+            {
+                "name": "power-gem",
+                "level_learned_at": 45
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 60
+            },
+            {
+                "name": "stealth-rock",
+                "level_learned_at": 50
+            },
+            {
+                "name": "guard-split",
+                "level_learned_at": 5
+            },
+            {
+                "name": "smack-down",
+                "level_learned_at": 10
+            },
+            {
+                "name": "moonblast",
+                "level_learned_at": 55
+            }
+        ],
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spikes",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psych-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endeavor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skill-swap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sand-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gyro-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "power-gem",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flash-cannon",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick-room",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-head",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stealth-rock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "smack-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heavy-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "misty-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stomping-tantrum",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-press",
+                "level_learned_at": 0
+            },
+            {
+                "name": "meteor-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "misty-explosion",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "carbink"
+    ]
 }

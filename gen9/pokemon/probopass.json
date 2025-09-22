@@ -1,9 +1,9 @@
 {
     "id": 476,
     "name": "probopass",
-    "height": 14,
-    "weight": 3400,
-    "base_experience": 184,
+    "species": "probopass",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/476/",
     "types": [
         "rock",
         "steel"
@@ -33,14 +33,409 @@
         "special-defense": 150,
         "speed": 40
     },
+    "ev_yield": [
+        {
+            "stat": "defense",
+            "effort": 1
+        },
+        {
+            "stat": "special-defense",
+            "effort": 2
+        }
+    ],
+    "height": 14,
+    "weight": 3400,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/476.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/476.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/476.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/476.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/476.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/476.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/476.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/476.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/476.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/476.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/476.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/476.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/476.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/476.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/476.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/476.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 184,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 476
+    },
+    "color": "gray",
+    "shape": "heads",
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": "It freely controls three small units called Mini-Noses using magnetic force.",
     "genus": "Compass Pokémon",
     "generation": "generation-iv",
-    "capture_rate": 60,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "nosepass",
+        "evolves_to": [
+            {
+                "species_name": "probopass",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": "mt-coronet",
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "fire-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metal-sound",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sand-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 0
+            },
+            {
+                "name": "power-gem",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flash-cannon",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-head",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stealth-rock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "smack-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heavy-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "volt-switch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "high-horsepower",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stomping-tantrum",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-press",
+                "level_learned_at": 0
+            },
+            {
+                "name": "steel-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "meteor-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hard-press",
+                "level_learned_at": 0
+            },
+            {
+                "name": "supercell-slam",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "tackle",
+                "level_learned_at": 1
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 13
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 16
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 22
+            },
+            {
+                "name": "tri-attack",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zap-cannon",
+                "level_learned_at": 43
+            },
+            {
+                "name": "lock-on",
+                "level_learned_at": 43
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 34
+            },
+            {
+                "name": "spark",
+                "level_learned_at": 19
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 1
+            },
+            {
+                "name": "block",
+                "level_learned_at": 1
+            },
+            {
+                "name": "rock-blast",
+                "level_learned_at": 28
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 1
+            },
+            {
+                "name": "magnet-rise",
+                "level_learned_at": 1
+            },
+            {
+                "name": "power-gem",
+                "level_learned_at": 25
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 37
+            },
+            {
+                "name": "discharge",
+                "level_learned_at": 31
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 40
+            },
+            {
+                "name": "wide-guard",
+                "level_learned_at": 1
+            },
+            {
+                "name": "magnetic-flux",
+                "level_learned_at": 1
+            }
+        ],
+        "egg": [
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rollout",
+                "level_learned_at": 0
+            },
+            {
+                "name": "head-smash",
+                "level_learned_at": 0
+            },
+            {
+                "name": "wide-guard",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "probopass"
+    ]
 }

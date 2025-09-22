@@ -1,9 +1,9 @@
 {
     "id": 1021,
     "name": "raging-bolt",
-    "height": 52,
-    "weight": 4800,
-    "base_experience": 295,
+    "species": "raging-bolt",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/1021/",
     "types": [
         "electric",
         "dragon"
@@ -23,14 +23,334 @@
         "special-defense": 89,
         "speed": 75
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 3
+        }
+    ],
+    "height": 52,
+    "weight": 4800,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/1021.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1021.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1021.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1021.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1021.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1021.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/1021.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1021.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1021.png"
+            },
+            "showdown": {
+                "back_default": null,
+                "back_female": null,
+                "back_shiny": null,
+                "back_shiny_female": null,
+                "front_default": null,
+                "front_female": null,
+                "front_shiny": null,
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 295,
+    "base_happiness": 0,
+    "capture_rate": 10,
+    "hatch_counter": 50,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 1021
+    },
+    "color": "yellow",
+    "shape": "quadruped",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "It's said to incinerate everything around it with lightning launched from its fur. Very little is known about this creature.",
     "genus": "Paradox Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 10,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "raging-bolt",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "stomp",
+                "level_learned_at": 1
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 91
+            },
+            {
+                "name": "zap-cannon",
+                "level_learned_at": 77
+            },
+            {
+                "name": "dragon-breath",
+                "level_learned_at": 14
+            },
+            {
+                "name": "twister",
+                "level_learned_at": 1
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 1
+            },
+            {
+                "name": "charge",
+                "level_learned_at": 7
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 42
+            },
+            {
+                "name": "shock-wave",
+                "level_learned_at": 1
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 70
+            },
+            {
+                "name": "discharge",
+                "level_learned_at": 28
+            },
+            {
+                "name": "dragon-tail",
+                "level_learned_at": 35
+            },
+            {
+                "name": "electric-terrain",
+                "level_learned_at": 21
+            },
+            {
+                "name": "dragon-hammer",
+                "level_learned_at": 56
+            },
+            {
+                "name": "body-press",
+                "level_learned_at": 84
+            },
+            {
+                "name": "rising-voltage",
+                "level_learned_at": 63
+            },
+            {
+                "name": "thunderclap",
+                "level_learned_at": 49
+            }
+        ],
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "roar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "crunch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "draco-meteor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charge-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heavy-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "electro-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "volt-switch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-tail",
+                "level_learned_at": 0
+            },
+            {
+                "name": "electroweb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "wild-charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snarl",
+                "level_learned_at": 0
+            },
+            {
+                "name": "eerie-impulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "electric-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stomping-tantrum",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-press",
+                "level_learned_at": 0
+            },
+            {
+                "name": "breaking-swipe",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-cheer",
+                "level_learned_at": 0
+            },
+            {
+                "name": "supercell-slam",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "ancient-power",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "raging-bolt"
+    ]
 }

@@ -1,9 +1,9 @@
 {
     "id": 192,
     "name": "sunflora",
-    "height": 8,
-    "weight": 85,
-    "base_experience": 149,
+    "species": "sunflora",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/192/",
     "types": [
         "grass"
     ],
@@ -32,14 +32,316 @@
         "special-defense": 85,
         "speed": 30
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 2
+        }
+    ],
+    "height": 8,
+    "weight": 85,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/192.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/192.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/192.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/192.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/192.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/192.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/192.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/192.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/192.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/192.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/192.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/192.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/192.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/192.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/192.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/192.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 149,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 192,
+        "paldea": 32
+    },
+    "color": "yellow",
+    "shape": "humanoid",
+    "egg_groups": [
+        "plant"
+    ],
     "flavor_text": "It converts sun­ light into energy. In the darkness after sunset, it closes its petals and becomes still.",
     "genus": "Sun Pokémon",
     "generation": "generation-ii",
-    "capture_rate": 120,
-    "growth_rate": "medium-slow"
+    "evolution_chain": {
+        "species_name": "sunkern",
+        "evolves_to": [
+            {
+                "species_name": "sunflora",
+                "evolution_details": {
+                    "item": "sun-stone",
+                    "trigger": "use-item",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "pound",
+                "level_learned_at": 1
+            },
+            {
+                "name": "tackle",
+                "level_learned_at": 1
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 34
+            },
+            {
+                "name": "absorb",
+                "level_learned_at": 7
+            },
+            {
+                "name": "mega-drain",
+                "level_learned_at": 10
+            },
+            {
+                "name": "leech-seed",
+                "level_learned_at": 13
+            },
+            {
+                "name": "growth",
+                "level_learned_at": 1
+            },
+            {
+                "name": "razor-leaf",
+                "level_learned_at": 16
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 31
+            },
+            {
+                "name": "petal-dance",
+                "level_learned_at": 28
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 22
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 39
+            },
+            {
+                "name": "ingrain",
+                "level_learned_at": 4
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 25
+            },
+            {
+                "name": "worry-seed",
+                "level_learned_at": 19
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 43
+            },
+            {
+                "name": "petal-blizzard",
+                "level_learned_at": 50
+            }
+        ],
+        "machine": [
+            {
+                "name": "swords-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endeavor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "petal-blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-glide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "sunflora"
+    ]
 }

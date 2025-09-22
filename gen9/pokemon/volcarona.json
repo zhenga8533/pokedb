@@ -1,9 +1,9 @@
 {
     "id": 637,
     "name": "volcarona",
-    "height": 16,
-    "weight": 460,
-    "base_experience": 248,
+    "species": "volcarona",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/637/",
     "types": [
         "bug",
         "fire"
@@ -28,14 +28,384 @@
         "special-defense": 105,
         "speed": 100
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 3
+        }
+    ],
+    "height": 16,
+    "weight": 460,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/637.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/637.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/637.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/637.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/637.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/637.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/637.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/637.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/637.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/637.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/637.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/637.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/637.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/637.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/637.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 248,
+    "base_happiness": 70,
+    "capture_rate": 15,
+    "hatch_counter": 40,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 637,
+        "paldea": 275
+    },
+    "color": "white",
+    "shape": "bug-wings",
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": "When volcanic ash darkened the atmosphere, it is said that Volcarona’s fire provided a replacement for the sun.",
     "genus": "Sun Pokémon",
     "generation": "generation-v",
-    "capture_rate": 15,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "larvesta",
+        "evolves_to": [
+            {
+                "species_name": "volcarona",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 59,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "gust",
+                "level_learned_at": 1
+            },
+            {
+                "name": "whirlwind",
+                "level_learned_at": 1
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 1
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 1
+            },
+            {
+                "name": "ember",
+                "level_learned_at": 1
+            },
+            {
+                "name": "string-shot",
+                "level_learned_at": 1
+            },
+            {
+                "name": "fire-spin",
+                "level_learned_at": 1
+            },
+            {
+                "name": "screech",
+                "level_learned_at": 30
+            },
+            {
+                "name": "fire-blast",
+                "level_learned_at": 70
+            },
+            {
+                "name": "amnesia",
+                "level_learned_at": 54
+            },
+            {
+                "name": "leech-life",
+                "level_learned_at": 36
+            },
+            {
+                "name": "flame-wheel",
+                "level_learned_at": 18
+            },
+            {
+                "name": "heat-wave",
+                "level_learned_at": 48
+            },
+            {
+                "name": "flare-blitz",
+                "level_learned_at": 1
+            },
+            {
+                "name": "bug-buzz",
+                "level_learned_at": 42
+            },
+            {
+                "name": "bug-bite",
+                "level_learned_at": 24
+            },
+            {
+                "name": "rage-powder",
+                "level_learned_at": 78
+            },
+            {
+                "name": "quiver-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flame-charge",
+                "level_learned_at": 1
+            },
+            {
+                "name": "struggle-bug",
+                "level_learned_at": 1
+            },
+            {
+                "name": "hurricane",
+                "level_learned_at": 62
+            },
+            {
+                "name": "fiery-dance",
+                "level_learned_at": 1
+            }
+        ],
+        "machine": [
+            {
+                "name": "fly",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flamethrower",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fire-spin",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fire-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "amnesia",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leech-life",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heat-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "will-o-wisp",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "air-cutter",
+                "level_learned_at": 0
+            },
+            {
+                "name": "overheat",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tailwind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "u-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flare-blitz",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poison-jab",
+                "level_learned_at": 0
+            },
+            {
+                "name": "air-slash",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bug-buzz",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bug-bite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flame-charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acrobatics",
+                "level_learned_at": 0
+            },
+            {
+                "name": "struggle-bug",
+                "level_learned_at": 0
+            },
+            {
+                "name": "wild-charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hurricane",
+                "level_learned_at": 0
+            },
+            {
+                "name": "lunge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skitter-smack",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dual-wingbeat",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pounce",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "volcarona"
+    ]
 }

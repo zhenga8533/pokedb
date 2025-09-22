@@ -1,9 +1,9 @@
 {
     "id": 453,
     "name": "croagunk",
-    "height": 7,
-    "weight": 230,
-    "base_experience": 60,
+    "species": "croagunk",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/453/",
     "types": [
         "poison",
         "fighting"
@@ -33,14 +33,430 @@
         "special-defense": 40,
         "speed": 50
     },
-    "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/453.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/453.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/453.png"
+    "ev_yield": [
+        {
+            "stat": "attack",
+            "effort": 1
+        }
+    ],
+    "height": 7,
+    "weight": 230,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/453.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/453.ogg"
     },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/453.png",
+        "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/453.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/453.png",
+        "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/453.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/453.png",
+        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/453.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/453.png",
+        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/453.png",
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/453.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/453.png",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/453.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/453.png",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/453.png"
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/453.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/453.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/453.gif",
+                "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/female/453.gif",
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/453.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/453.gif",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/female/453.gif",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/453.gif",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/female/453.gif"
+            }
+        }
+    },
+    "base_experience": 60,
+    "base_happiness": 100,
+    "capture_rate": 140,
+    "hatch_counter": 10,
+    "gender_rate": 4,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 453,
+        "paldea": 175
+    },
+    "color": "blue",
+    "shape": "humanoid",
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": "Its cheeks hold poison sacs. It tries to catch foes off guard to jab them with toxic fingers.",
     "genus": "Toxic Mouth Pokémon",
     "generation": "generation-iv",
-    "capture_rate": 140,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "croagunk",
+        "evolves_to": [
+            {
+                "species_name": "toxicroak",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 37,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "ice-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "low-kick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dig",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "super-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reversal",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "baton-pass",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aerial-ace",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulk-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poison-jab",
+                "level_learned_at": 0
+            },
+            {
+                "name": "x-scissor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "drain-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "vacuum-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-claw",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gunk-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "venoshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "low-sweep",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acid-spray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "lash-out",
+                "level_learned_at": 0
+            },
+            {
+                "name": "coaching",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "upper-hand",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "counter",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dynamic-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "cross-chop",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fake-out",
+                "level_learned_at": 0
+            },
+            {
+                "name": "feint",
+                "level_learned_at": 0
+            },
+            {
+                "name": "vacuum-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "quick-guard",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "poison-sting",
+                "level_learned_at": 1
+            },
+            {
+                "name": "low-kick",
+                "level_learned_at": 16
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 36
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 44
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 1
+            },
+            {
+                "name": "swagger",
+                "level_learned_at": 28
+            },
+            {
+                "name": "flatter",
+                "level_learned_at": 12
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 8
+            },
+            {
+                "name": "astonish",
+                "level_learned_at": 4
+            },
+            {
+                "name": "sucker-punch",
+                "level_learned_at": 24
+            },
+            {
+                "name": "poison-jab",
+                "level_learned_at": 32
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 40
+            },
+            {
+                "name": "venoshock",
+                "level_learned_at": 20
+            },
+            {
+                "name": "belch",
+                "level_learned_at": 48
+            }
+        ]
+    },
+    "forms": [
+        "croagunk"
+    ]
 }

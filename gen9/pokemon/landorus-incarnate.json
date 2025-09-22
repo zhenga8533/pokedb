@@ -1,9 +1,9 @@
 {
     "id": 645,
     "name": "landorus-incarnate",
-    "height": 15,
-    "weight": 680,
-    "base_experience": 270,
+    "species": "landorus",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/645/",
     "types": [
         "ground",
         "flying"
@@ -28,14 +28,343 @@
         "special-defense": 80,
         "speed": 101
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 3
+        }
+    ],
+    "height": 15,
+    "weight": 680,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/645.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/645.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/645.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/645.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/645.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/645.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/645.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/645.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/645.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/645.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/645.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/645.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/645.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/645.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/645.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/645.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 270,
+    "base_happiness": 90,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": 0,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 645
+    },
+    "color": "brown",
+    "shape": "arms",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "Lands visited by Landorus grant such bountiful crops that it has been hailed as “The Guardian of the Fields.”",
     "genus": "Abundance Pokémon",
     "generation": "generation-v",
-    "capture_rate": 3,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "landorus",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "swords-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fly",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dig",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "crunch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sand-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulk-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 0
+            },
+            {
+                "name": "u-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stealth-rock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "smack-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stomping-tantrum",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scorching-sands",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "leer",
+                "level_learned_at": 5
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 65
+            },
+            {
+                "name": "fissure",
+                "level_learned_at": 75
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 35
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 70
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 60
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 30
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 20
+            },
+            {
+                "name": "extrasensory",
+                "level_learned_at": 45
+            },
+            {
+                "name": "sand-tomb",
+                "level_learned_at": 1
+            },
+            {
+                "name": "block",
+                "level_learned_at": 10
+            },
+            {
+                "name": "hammer-arm",
+                "level_learned_at": 55
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 40
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 50
+            },
+            {
+                "name": "smack-down",
+                "level_learned_at": 1
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 15
+            },
+            {
+                "name": "sandsear-storm",
+                "level_learned_at": 80
+            }
+        ]
+    },
+    "forms": [
+        "landorus-incarnate",
+        "landorus-therian"
+    ]
 }

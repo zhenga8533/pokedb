@@ -1,6 +1,7 @@
 {
     "id": 258,
     "name": "black-sludge",
+    "source_url": "https://pokeapi.co/api/v2/item/258/",
     "cost": 4000,
     "fling_power": 30,
     "fling_effect": null,
@@ -10,7 +11,8 @@
     ],
     "category": "held-items",
     "effect": "Held: If the holder is Poison-type, restores 1/16 max HP at the end of each turn. Otherwise, damages the holder by 1/16 its max HP at the end of each turn.",
-    "flavor_text": "A hold item that gradually restores the HP of Poison-type Pokémon. It inflicts damage on all other types.",
+    "short_effect": "Held: Poison-type holder recovers 1/16 (6.25%) max HP each turn. Non-Poison-Types take 1/8 (12.5%) max HP damage.",
+    "flavor_text": "An item to be held by a Pokémon. It gradually restores HP to Poison-type Pokémon. It damages any other type.",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-sludge.png",
     "held_by_pokemon": [
         "grimer",
@@ -21,5 +23,12 @@
         "garbodor",
         "grimer-alola",
         "muk-alola"
+    ],
+    "generations": [
+        "generation-iv",
+        "generation-v",
+        "generation-vi",
+        "generation-vii",
+        "generation-viii"
     ]
 }

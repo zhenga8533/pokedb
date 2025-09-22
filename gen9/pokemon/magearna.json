@@ -1,9 +1,9 @@
 {
     "id": 801,
     "name": "magearna",
-    "height": 10,
-    "weight": 805,
-    "base_experience": 270,
+    "species": "magearna",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/801/",
     "types": [
         "steel",
         "fairy"
@@ -23,14 +23,407 @@
         "special-defense": 115,
         "speed": 65
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 3
+        }
+    ],
+    "height": 10,
+    "weight": 805,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/801.ogg",
+        "legacy": null
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/801.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/801.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/801.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/801.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/801.png"
+        "other": {
+            "dream_world": {
+                "front_default": null,
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/801.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/801.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/801.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/801.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/801.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/801.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/801.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/801.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 270,
+    "base_happiness": 0,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": true,
+    "pokedex_numbers": {
+        "national": 801
+    },
+    "color": "gray",
+    "shape": "humanoid",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "This artificial Pokémon, constructed more than 500 years ago, can understand human speech but cannot itself speak.",
     "genus": "Artificial Pokémon",
     "generation": "generation-vii",
-    "capture_rate": 3,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "magearna",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psybeam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "agility",
+                "level_learned_at": 0
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spikes",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "false-swipe",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "baton-pass",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skill-swap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metal-sound",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gyro-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aura-sphere",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flash-cannon",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick-room",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-head",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charge-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psyshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heavy-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "electro-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stored-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "volt-switch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "electroweb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "disarming-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "draining-kiss",
+                "level_learned_at": 0
+            },
+            {
+                "name": "misty-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0
+            },
+            {
+                "name": "eerie-impulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "steel-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "misty-explosion",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-spinner",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "psybeam",
+                "level_learned_at": 30
+            },
+            {
+                "name": "aurora-beam",
+                "level_learned_at": 36
+            },
+            {
+                "name": "defense-curl",
+                "level_learned_at": 6
+            },
+            {
+                "name": "zap-cannon",
+                "level_learned_at": 84
+            },
+            {
+                "name": "lock-on",
+                "level_learned_at": 42
+            },
+            {
+                "name": "rollout",
+                "level_learned_at": 12
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 78
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 1
+            },
+            {
+                "name": "trick",
+                "level_learned_at": 54
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 18
+            },
+            {
+                "name": "gyro-ball",
+                "level_learned_at": 1
+            },
+            {
+                "name": "aura-sphere",
+                "level_learned_at": 66
+            },
+            {
+                "name": "flash-cannon",
+                "level_learned_at": 72
+            },
+            {
+                "name": "iron-head",
+                "level_learned_at": 60
+            },
+            {
+                "name": "shift-gear",
+                "level_learned_at": 48
+            },
+            {
+                "name": "magnetic-flux",
+                "level_learned_at": 24
+            },
+            {
+                "name": "fleur-cannon",
+                "level_learned_at": 90
+            }
+        ]
+    },
+    "forms": [
+        "magearna",
+        "magearna-original"
+    ]
 }

@@ -1,9 +1,9 @@
 {
     "id": 965,
     "name": "varoom",
-    "height": 10,
-    "weight": 350,
-    "base_experience": 60,
+    "species": "varoom",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/965/",
     "types": [
         "steel",
         "poison"
@@ -28,14 +28,324 @@
         "special-defense": 45,
         "speed": 47
     },
+    "ev_yield": [
+        {
+            "stat": "attack",
+            "effort": 1
+        }
+    ],
+    "height": 10,
+    "weight": 350,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/965.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/965.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/965.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/965.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/965.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/965.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/965.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/965.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/965.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/965.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/965.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/965.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/965.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 60,
+    "base_happiness": 50,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 965,
+        "paldea": 293
+    },
+    "color": "gray",
+    "shape": "legs",
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": "It is said that this Pokémon was born when an unknown poison Pokémon entered and inspirited an engine left at a scrap-processing factory.",
     "genus": "Single-Cyl Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 190,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "varoom",
+        "evolves_to": [
+            {
+                "species_name": "revavroom",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 40,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "headbutt",
+                "level_learned_at": 21
+            },
+            {
+                "name": "screech",
+                "level_learned_at": 25
+            },
+            {
+                "name": "lick",
+                "level_learned_at": 1
+            },
+            {
+                "name": "smog",
+                "level_learned_at": 4
+            },
+            {
+                "name": "sludge",
+                "level_learned_at": 13
+            },
+            {
+                "name": "poison-gas",
+                "level_learned_at": 1
+            },
+            {
+                "name": "swagger",
+                "level_learned_at": 32
+            },
+            {
+                "name": "uproar",
+                "level_learned_at": 41
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 7
+            },
+            {
+                "name": "gyro-ball",
+                "level_learned_at": 17
+            },
+            {
+                "name": "assurance",
+                "level_learned_at": 10
+            },
+            {
+                "name": "poison-jab",
+                "level_learned_at": 36
+            },
+            {
+                "name": "gunk-shot",
+                "level_learned_at": 50
+            },
+            {
+                "name": "iron-head",
+                "level_learned_at": 28
+            },
+            {
+                "name": "spin-out",
+                "level_learned_at": 46
+            }
+        ],
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "haze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "uproar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "metal-sound",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gyro-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic-spikes",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poison-jab",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flash-cannon",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gunk-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-head",
+                "level_learned_at": 0
+            },
+            {
+                "name": "venoshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acid-spray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "steel-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "toxic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "haze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "self-destruct",
+                "level_learned_at": 0
+            },
+            {
+                "name": "torment",
+                "level_learned_at": 0
+            },
+            {
+                "name": "parting-shot",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "varoom"
+    ]
 }

@@ -1,9 +1,9 @@
 {
     "id": 548,
     "name": "petilil",
-    "height": 5,
-    "weight": 66,
-    "base_experience": 56,
+    "species": "petilil",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/548/",
     "types": [
         "grass"
     ],
@@ -32,14 +32,278 @@
         "special-defense": 50,
         "speed": 30
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 1
+        }
+    ],
+    "height": 5,
+    "weight": 66,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/548.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/548.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/548.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/548.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/548.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/548.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/548.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/548.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/548.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/548.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/548.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/548.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/548.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/548.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/548.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/548.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 56,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 8,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 548,
+        "paldea": 104
+    },
+    "color": "green",
+    "shape": "blob",
+    "egg_groups": [
+        "plant"
+    ],
     "flavor_text": "The leaves on its head are very bitter. Eating one of these leaves is known to refresh a tired body.",
     "genus": "Bulb Pokémon",
     "generation": "generation-v",
-    "capture_rate": 190,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "petilil",
+        "evolves_to": [
+            {
+                "species_name": "lilligant",
+                "evolution_details": {
+                    "item": "sun-stone",
+                    "trigger": "use-item",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "absorb",
+                "level_learned_at": 1
+            },
+            {
+                "name": "mega-drain",
+                "level_learned_at": 9
+            },
+            {
+                "name": "leech-seed",
+                "level_learned_at": 24
+            },
+            {
+                "name": "growth",
+                "level_learned_at": 1
+            },
+            {
+                "name": "stun-spore",
+                "level_learned_at": 6
+            },
+            {
+                "name": "sleep-powder",
+                "level_learned_at": 18
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 21
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 12
+            },
+            {
+                "name": "synthesis",
+                "level_learned_at": 33
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 36
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 3
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 15
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 30
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 42
+            },
+            {
+                "name": "entrainment",
+                "level_learned_at": 39
+            },
+            {
+                "name": "after-you",
+                "level_learned_at": 27
+            }
+        ],
+        "machine": [
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pollen-puff",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-glide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "sweet-scent",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ingrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "healing-wish",
+                "level_learned_at": 0
+            },
+            {
+                "name": "worry-seed",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "petilil"
+    ]
 }

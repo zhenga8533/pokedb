@@ -1,9 +1,9 @@
 {
     "id": 25,
     "name": "pikachu",
-    "height": 4,
-    "weight": 60,
-    "base_experience": 112,
+    "species": "pikachu",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/25/",
     "types": [
         "electric"
     ],
@@ -27,14 +27,422 @@
         "special-defense": 50,
         "speed": 90
     },
-    "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+    "ev_yield": [
+        {
+            "stat": "speed",
+            "effort": 2
+        }
+    ],
+    "height": 4,
+    "weight": 60,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/25.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/25.ogg"
     },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
+        "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/25.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/25.png",
+        "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/25.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/25.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png",
+        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/25.png",
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/25.png",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/25.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/25.png",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/25.png"
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/25.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/25.gif",
+                "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/female/25.gif",
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/25.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/25.gif",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/female/25.gif",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/25.gif",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/female/25.gif"
+            }
+        }
+    },
+    "base_experience": 112,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 10,
+    "gender_rate": 4,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 25,
+        "paldea": 74
+    },
+    "color": "yellow",
+    "shape": "quadruped",
+    "egg_groups": [
+        "ground",
+        "fairy"
+    ],
     "flavor_text": "When several of these POKéMON gather, their electricity could build and cause lightning storms.",
     "genus": "Mouse Pokémon",
     "generation": "generation-i",
-    "capture_rate": 190,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "pichu",
+        "evolves_to": [
+            {
+                "species_name": "pikachu",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": 220,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": [
+                    {
+                        "species_name": "raichu",
+                        "evolution_details": {
+                            "item": "thunder-stone",
+                            "trigger": "use-item",
+                            "gender": null,
+                            "held_item": null,
+                            "known_move": null,
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": null,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": false,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": "",
+                            "trade_species": null,
+                            "turn_upside_down": false
+                        },
+                        "evolves_to": []
+                    }
+                ]
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dig",
+                "level_learned_at": 0
+            },
+            {
+                "name": "agility",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reversal",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "encore",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endeavor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fake-tears",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charge-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "electro-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "volt-switch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "electroweb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "wild-charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "disarming-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "draining-kiss",
+                "level_learned_at": 0
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0
+            },
+            {
+                "name": "eerie-impulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "electric-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "alluring-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "upper-hand",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "tail-whip",
+                "level_learned_at": 1
+            },
+            {
+                "name": "growl",
+                "level_learned_at": 1
+            },
+            {
+                "name": "thunder-shock",
+                "level_learned_at": 1
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 36
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 4
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 44
+            },
+            {
+                "name": "agility",
+                "level_learned_at": 24
+            },
+            {
+                "name": "quick-attack",
+                "level_learned_at": 1
+            },
+            {
+                "name": "double-team",
+                "level_learned_at": 8
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 40
+            },
+            {
+                "name": "sweet-kiss",
+                "level_learned_at": 1
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 1
+            },
+            {
+                "name": "spark",
+                "level_learned_at": 20
+            },
+            {
+                "name": "iron-tail",
+                "level_learned_at": 28
+            },
+            {
+                "name": "feint",
+                "level_learned_at": 16
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 1
+            },
+            {
+                "name": "discharge",
+                "level_learned_at": 32
+            },
+            {
+                "name": "electro-ball",
+                "level_learned_at": 12
+            },
+            {
+                "name": "play-nice",
+                "level_learned_at": 1
+            },
+            {
+                "name": "nuzzle",
+                "level_learned_at": 1
+            }
+        ]
+    },
+    "forms": [
+        "pikachu",
+        "pikachu-rock-star",
+        "pikachu-belle",
+        "pikachu-pop-star",
+        "pikachu-phd",
+        "pikachu-libre",
+        "pikachu-cosplay",
+        "pikachu-original-cap",
+        "pikachu-hoenn-cap",
+        "pikachu-sinnoh-cap",
+        "pikachu-unova-cap",
+        "pikachu-kalos-cap",
+        "pikachu-alola-cap",
+        "pikachu-partner-cap",
+        "pikachu-starter",
+        "pikachu-world-cap",
+        "pikachu-gmax"
+    ]
 }

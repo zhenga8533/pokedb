@@ -1,9 +1,9 @@
 {
     "id": 1024,
     "name": "terapagos",
-    "height": 2,
-    "weight": 65,
-    "base_experience": 90,
+    "species": "terapagos",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/1024/",
     "types": [
         "normal"
     ],
@@ -22,14 +22,338 @@
         "special-defense": 85,
         "speed": 60
     },
+    "ev_yield": [
+        {
+            "stat": "defense",
+            "effort": 1
+        }
+    ],
+    "height": 2,
+    "weight": 65,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/1024.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1024.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1024.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1024.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1024.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1024.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/1024.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1024.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1024.png"
+            },
+            "showdown": {
+                "back_default": null,
+                "back_female": null,
+                "back_shiny": null,
+                "back_shiny_female": null,
+                "front_default": null,
+                "front_female": null,
+                "front_shiny": null,
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 90,
+    "base_happiness": 50,
+    "capture_rate": 255,
+    "hatch_counter": 5,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 1024
+    },
+    "color": "blue",
+    "shape": "quadruped",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "Terapagos protects itself using its power to transform energy into hard crystals. This Pokémon is the source of the Terastal phenomenon.",
     "genus": "Tera Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 255,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "terapagos",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "headbutt",
+                "level_learned_at": 20
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 70
+            },
+            {
+                "name": "withdraw",
+                "level_learned_at": 1
+            },
+            {
+                "name": "tri-attack",
+                "level_learned_at": 1
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 30
+            },
+            {
+                "name": "rapid-spin",
+                "level_learned_at": 1
+            },
+            {
+                "name": "ancient-power",
+                "level_learned_at": 10
+            },
+            {
+                "name": "gyro-ball",
+                "level_learned_at": 90
+            },
+            {
+                "name": "rock-polish",
+                "level_learned_at": 80
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 40
+            },
+            {
+                "name": "heavy-slam",
+                "level_learned_at": 50
+            },
+            {
+                "name": "tera-starstorm",
+                "level_learned_at": 60
+            }
+        ],
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "roar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flamethrower",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "crunch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gyro-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flare-blitz",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aura-sphere",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dark-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bug-buzz",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "power-gem",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flash-cannon",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-head",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stealth-rock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heavy-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stored-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "wild-charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heat-crash",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-press",
+                "level_learned_at": 0
+            },
+            {
+                "name": "meteor-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scorching-sands",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ice-spinner",
+                "level_learned_at": 0
+            },
+            {
+                "name": "supercell-slam",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "terapagos",
+        "terapagos-terastal",
+        "terapagos-stellar"
+    ]
 }

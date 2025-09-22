@@ -1,9 +1,9 @@
 {
     "id": 357,
     "name": "tropius",
-    "height": 20,
-    "weight": 1000,
-    "base_experience": 161,
+    "species": "tropius",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/357/",
     "types": [
         "grass",
         "flying"
@@ -33,14 +33,362 @@
         "special-defense": 87,
         "speed": 51
     },
+    "ev_yield": [
+        {
+            "stat": "hp",
+            "effort": 2
+        }
+    ],
+    "height": 20,
+    "weight": 1000,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/357.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/357.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/357.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/357.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/357.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/357.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/357.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/357.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/357.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/357.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/357.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/357.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/357.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/357.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/357.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/357.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 161,
+    "base_happiness": 70,
+    "capture_rate": 200,
+    "hatch_counter": 25,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 357,
+        "paldea": 246
+    },
+    "color": "green",
+    "shape": "quadruped",
+    "egg_groups": [
+        "monster",
+        "plant"
+    ],
     "flavor_text": "The bunches of fruit around TROPIUS’s neck are very popular with children. This POKéMON loves fruit, and eats it continuously. Apparently, its love for fruit resulted in its own outgrowth of fruit.",
     "genus": "Fruit Pokémon",
     "generation": "generation-iii",
-    "capture_rate": 200,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "tropius",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "swords-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fly",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "roar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "air-cutter",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aerial-ace",
+                "level_learned_at": 0
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tailwind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "u-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "air-slash",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-tail",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hurricane",
+                "level_learned_at": 0
+            },
+            {
+                "name": "petal-blizzard",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-blade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stomping-tantrum",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-press",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dual-wingbeat",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "gust",
+                "level_learned_at": 1
+            },
+            {
+                "name": "whirlwind",
+                "level_learned_at": 21
+            },
+            {
+                "name": "stomp",
+                "level_learned_at": 10
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 41
+            },
+            {
+                "name": "leer",
+                "level_learned_at": 1
+            },
+            {
+                "name": "growth",
+                "level_learned_at": 1
+            },
+            {
+                "name": "razor-leaf",
+                "level_learned_at": 1
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 56
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 46
+            },
+            {
+                "name": "sweet-scent",
+                "level_learned_at": 6
+            },
+            {
+                "name": "synthesis",
+                "level_learned_at": 50
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 16
+            },
+            {
+                "name": "air-slash",
+                "level_learned_at": 36
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 1
+            },
+            {
+                "name": "wide-guard",
+                "level_learned_at": 30
+            }
+        ],
+        "egg": [
+            {
+                "name": "slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leech-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leaf-blade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-dance",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "tropius"
+    ]
 }

@@ -1,9 +1,9 @@
 {
     "id": 1009,
     "name": "walking-wake",
-    "height": 35,
-    "weight": 2800,
-    "base_experience": 295,
+    "species": "walking-wake",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/1009/",
     "types": [
         "water",
         "dragon"
@@ -23,14 +23,322 @@
         "special-defense": 83,
         "speed": 109
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 3
+        }
+    ],
+    "height": 35,
+    "weight": 2800,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/1009.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1009.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1009.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1009.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1009.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1009.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/1009.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1009.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1009.png"
+            },
+            "showdown": {
+                "back_default": null,
+                "back_female": null,
+                "back_shiny": null,
+                "back_shiny_female": null,
+                "front_default": null,
+                "front_female": null,
+                "front_shiny": null,
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 295,
+    "base_happiness": 0,
+    "capture_rate": 5,
+    "hatch_counter": 50,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 1009
+    },
+    "color": "blue",
+    "shape": "upright",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "This ferocious creature is shrouded in mystery. It's named after an aquatic monster mentioned in an old expedition journal.",
     "genus": "Paradox Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 5,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "walking-wake",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "roar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flamethrower",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 0
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "low-kick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "agility",
+                "level_learned_at": 0
+            },
+            {
+                "name": "waterfall",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "crunch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "whirlpool",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-claw",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fire-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "draco-meteor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scald",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hurricane",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snarl",
+                "level_learned_at": 0
+            },
+            {
+                "name": "liquidation",
+                "level_learned_at": 0
+            },
+            {
+                "name": "breaking-swipe",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flip-turn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-cheer",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "leer",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bite",
+                "level_learned_at": 7
+            },
+            {
+                "name": "roar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flamethrower",
+                "level_learned_at": 77
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 84
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 70
+            },
+            {
+                "name": "dragon-breath",
+                "level_learned_at": 28
+            },
+            {
+                "name": "twister",
+                "level_learned_at": 0
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 14
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 63
+            },
+            {
+                "name": "dragon-rush",
+                "level_learned_at": 42
+            },
+            {
+                "name": "aqua-jet",
+                "level_learned_at": 0
+            },
+            {
+                "name": "noble-roar",
+                "level_learned_at": 21
+            },
+            {
+                "name": "breaking-swipe",
+                "level_learned_at": 35
+            },
+            {
+                "name": "hydro-steam",
+                "level_learned_at": 56
+            }
+        ],
+        "tutor": [
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hone-claws",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "walking-wake"
+    ]
 }

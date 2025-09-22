@@ -1,9 +1,9 @@
 {
     "id": 769,
     "name": "sandygast",
-    "height": 5,
-    "weight": 700,
-    "base_experience": 64,
+    "species": "sandygast",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/769/",
     "types": [
         "ghost",
         "ground"
@@ -28,14 +28,362 @@
         "special-defense": 45,
         "speed": 15
     },
+    "ev_yield": [
+        {
+            "stat": "defense",
+            "effort": 1
+        }
+    ],
+    "height": 5,
+    "weight": 700,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/769.ogg",
+        "legacy": null
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/769.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/769.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/769.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/769.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/769.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/769.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/769.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/769.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/769.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/769.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/769.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/769.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/769.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/769.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 64,
+    "base_happiness": 70,
+    "capture_rate": 140,
+    "hatch_counter": 15,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 769,
+        "paldea": 322
+    },
+    "color": "brown",
+    "shape": "squiggle",
+    "egg_groups": [
+        "indeterminate"
+    ],
     "flavor_text": "Born from a sand mound playfully built by a child, this Pokémon embodies the grudges of the departed.",
     "genus": "Sand Heap Pokémon",
     "generation": "generation-vii",
-    "capture_rate": 140,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "sandygast",
+        "evolves_to": [
+            {
+                "species_name": "palossand",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 42,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "sand-attack",
+                "level_learned_at": 20
+            },
+            {
+                "name": "absorb",
+                "level_learned_at": 1
+            },
+            {
+                "name": "mega-drain",
+                "level_learned_at": 15
+            },
+            {
+                "name": "hypnosis",
+                "level_learned_at": 30
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 1
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 60
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 35
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 45
+            },
+            {
+                "name": "astonish",
+                "level_learned_at": 5
+            },
+            {
+                "name": "sand-tomb",
+                "level_learned_at": 10
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 40
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 50
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 25
+            },
+            {
+                "name": "shore-up",
+                "level_learned_at": 55
+            }
+        ],
+        "machine": [
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "night-shade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "amnesia",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skill-swap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sand-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gravity",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flash-cannon",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stealth-rock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hex",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poltergeist",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scorching-sands",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "chilling-water",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "destiny-bond",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ancient-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stockpile",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spit-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swallow",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "sandygast"
+    ]
 }

@@ -1,9 +1,9 @@
 {
     "id": 640,
     "name": "virizion",
-    "height": 20,
-    "weight": 2000,
-    "base_experience": 261,
+    "species": "virizion",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/640/",
     "types": [
         "grass",
         "fighting"
@@ -23,14 +23,340 @@
         "special-defense": 129,
         "speed": 108
     },
+    "ev_yield": [
+        {
+            "stat": "special-defense",
+            "effort": 3
+        }
+    ],
+    "height": 20,
+    "weight": 2000,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/640.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/640.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/640.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/640.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/640.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/640.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/640.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/640.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/640.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/640.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/640.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/640.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/640.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/640.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/640.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/640.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 261,
+    "base_happiness": 35,
+    "capture_rate": 3,
+    "hatch_counter": 80,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 640
+    },
+    "color": "green",
+    "shape": "quadruped",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "This Pokémon fought humans in order to protect its friends. Legends about it continue to be passed down.",
     "genus": "Grassland Pokémon",
     "generation": "generation-v",
-    "capture_rate": 3,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "virizion",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "swords-dance",
+                "level_learned_at": 56
+            },
+            {
+                "name": "double-kick",
+                "level_learned_at": 21
+            },
+            {
+                "name": "leer",
+                "level_learned_at": 1
+            },
+            {
+                "name": "quick-attack",
+                "level_learned_at": 1
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 35
+            },
+            {
+                "name": "synthesis",
+                "level_learned_at": 42
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 1
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 7
+            },
+            {
+                "name": "leaf-blade",
+                "level_learned_at": 63
+            },
+            {
+                "name": "close-combat",
+                "level_learned_at": 70
+            },
+            {
+                "name": "quick-guard",
+                "level_learned_at": 14
+            },
+            {
+                "name": "retaliate",
+                "level_learned_at": 28
+            },
+            {
+                "name": "work-up",
+                "level_learned_at": 1
+            },
+            {
+                "name": "sacred-sword",
+                "level_learned_at": 49
+            }
+        ],
+        "machine": [
+            {
+                "name": "swords-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "roar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reversal",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "false-swipe",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psych-up",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aerial-ace",
+                "level_learned_at": 0
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "close-combat",
+                "level_learned_at": 0
+            },
+            {
+                "name": "aura-sphere",
+                "level_learned_at": 0
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "air-slash",
+                "level_learned_at": 0
+            },
+            {
+                "name": "x-scissor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "vacuum-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "zen-headbutt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-blade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "smart-strike",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-glide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "coaching",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trailblaze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "upper-hand",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "virizion"
+    ]
 }

@@ -1,9 +1,9 @@
 {
     "id": 240,
     "name": "magby",
-    "height": 7,
-    "weight": 214,
-    "base_experience": 73,
+    "species": "magby",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/240/",
     "types": [
         "fire"
     ],
@@ -27,14 +27,358 @@
         "special-defense": 55,
         "speed": 83
     },
+    "ev_yield": [
+        {
+            "stat": "speed",
+            "effort": 1
+        }
+    ],
+    "height": 7,
+    "weight": 214,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/240.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/240.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/240.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/240.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/240.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/240.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/240.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/240.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/240.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/240.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/240.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/240.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/240.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/240.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/240.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/240.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 73,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": 2,
+    "has_gender_differences": false,
+    "is_baby": true,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 240
+    },
+    "color": "red",
+    "shape": "upright",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "Each and every time it inhales and exhales, hot embers dribble out of its mouth and nostrils.",
     "genus": "Live Coal Pokémon",
     "generation": "generation-ii",
-    "capture_rate": 45,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "magby",
+        "evolves_to": [
+            {
+                "species_name": "magmar",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 30,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": [
+                    {
+                        "species_name": "magmortar",
+                        "evolution_details": {
+                            "item": null,
+                            "trigger": "trade",
+                            "gender": null,
+                            "held_item": "magmarizer",
+                            "known_move": null,
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": null,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": false,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": "",
+                            "trade_species": null,
+                            "turn_upside_down": false
+                        },
+                        "evolves_to": []
+                    }
+                ]
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "fire-punch",
+                "level_learned_at": 28
+            },
+            {
+                "name": "leer",
+                "level_learned_at": 1
+            },
+            {
+                "name": "ember",
+                "level_learned_at": 4
+            },
+            {
+                "name": "flamethrower",
+                "level_learned_at": 40
+            },
+            {
+                "name": "low-kick",
+                "level_learned_at": 36
+            },
+            {
+                "name": "smokescreen",
+                "level_learned_at": 8
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 20
+            },
+            {
+                "name": "smog",
+                "level_learned_at": 1
+            },
+            {
+                "name": "fire-blast",
+                "level_learned_at": 48
+            },
+            {
+                "name": "flame-wheel",
+                "level_learned_at": 16
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 24
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 44
+            },
+            {
+                "name": "lava-plume",
+                "level_learned_at": 32
+            },
+            {
+                "name": "clear-smog",
+                "level_learned_at": 12
+            }
+        ],
+        "machine": [
+            {
+                "name": "fire-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flamethrower",
+                "level_learned_at": 0
+            },
+            {
+                "name": "low-kick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fire-spin",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fire-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heat-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "will-o-wisp",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0
+            },
+            {
+                "name": "overheat",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flare-blitz",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poison-jab",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flame-charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acid-spray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "burning-jealousy",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "temper-flare",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "mach-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "belly-drum",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dynamic-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "cross-chop",
+                "level_learned_at": 0
+            },
+            {
+                "name": "focus-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "follow-me",
+                "level_learned_at": 0
+            },
+            {
+                "name": "belch",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "magby"
+    ]
 }

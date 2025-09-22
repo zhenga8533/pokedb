@@ -1,6 +1,7 @@
 {
     "id": 189,
     "name": "mud-slap",
+    "source_url": "https://pokeapi.co/api/v2/move/189/",
     "accuracy": 100,
     "power": 20,
     "pp": 10,
@@ -12,7 +13,7 @@
     "effect_chance": 100,
     "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
     "short_effect": "Has a 100% chance to lower the target’s accuracy by one stage.",
-    "flavor_text": "Reduces the foe's accuracy.",
+    "flavor_text": "The user hurls mud in the target's face to inflict damage and lower its accuracy.",
     "learned_by_pokemon": [
         "bulbasaur",
         "ivysaur",
@@ -523,5 +524,20 @@
             "change": -1,
             "stat": "accuracy"
         }
-    ]
+    ],
+    "machine": "tm05",
+    "metadata": {
+        "ailment": "none",
+        "category": "damage+lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    }
 }

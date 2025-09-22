@@ -1,9 +1,9 @@
 {
     "id": 1019,
     "name": "hydrapple",
-    "height": 18,
-    "weight": 930,
-    "base_experience": 270,
+    "species": "hydrapple",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/1019/",
     "types": [
         "grass",
         "dragon"
@@ -33,14 +33,445 @@
         "special-defense": 80,
         "speed": 44
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 3
+        }
+    ],
+    "height": 18,
+    "weight": 930,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/1019.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1019.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1019.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1019.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1019.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1019.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/1019.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1019.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1019.png"
+            },
+            "showdown": {
+                "back_default": null,
+                "back_female": null,
+                "back_shiny": null,
+                "back_shiny_female": null,
+                "front_default": null,
+                "front_female": null,
+                "front_shiny": null,
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 270,
+    "base_happiness": 50,
+    "capture_rate": 10,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 1019
+    },
+    "color": "green",
+    "shape": "heads",
+    "egg_groups": [
+        "plant",
+        "dragon"
+    ],
     "flavor_text": "Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander.",
     "genus": "Apple Hydra Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 10,
-    "growth_rate": "slow-then-very-fast"
+    "evolution_chain": {
+        "species_name": "applin",
+        "evolves_to": [
+            {
+                "species_name": "flapple",
+                "evolution_details": {
+                    "item": "tart-apple",
+                    "trigger": "use-item",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            },
+            {
+                "species_name": "appletun",
+                "evolution_details": {
+                    "item": "sweet-apple",
+                    "trigger": "use-item",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            },
+            {
+                "species_name": "dipplin",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": null,
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": null,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": null,
+                    "trade_species": null,
+                    "turn_upside_down": null
+                },
+                "evolves_to": [
+                    {
+                        "species_name": "hydrapple",
+                        "evolution_details": {
+                            "item": null,
+                            "trigger": null,
+                            "gender": null,
+                            "held_item": null,
+                            "known_move": null,
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": null,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": null,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": null,
+                            "trade_species": null,
+                            "turn_upside_down": null
+                        },
+                        "evolves_to": []
+                    }
+                ]
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-drain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "uproar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 0
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gyro-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "draco-meteor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grass-knot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bug-bite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heavy-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-tail",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pollen-puff",
+                "level_learned_at": 0
+            },
+            {
+                "name": "body-press",
+                "level_learned_at": 0
+            },
+            {
+                "name": "breaking-swipe",
+                "level_learned_at": 0
+            },
+            {
+                "name": "grassy-glide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pounce",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-cheer",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "growth",
+                "level_learned_at": 8
+            },
+            {
+                "name": "recover",
+                "level_learned_at": 36
+            },
+            {
+                "name": "withdraw",
+                "level_learned_at": 1
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 44
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 16
+            },
+            {
+                "name": "dragon-breath",
+                "level_learned_at": 12
+            },
+            {
+                "name": "sweet-scent",
+                "level_learned_at": 1
+            },
+            {
+                "name": "recycle",
+                "level_learned_at": 1
+            },
+            {
+                "name": "astonish",
+                "level_learned_at": 1
+            },
+            {
+                "name": "bullet-seed",
+                "level_learned_at": 20
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 32
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 40
+            },
+            {
+                "name": "power-whip",
+                "level_learned_at": 54
+            },
+            {
+                "name": "dragon-tail",
+                "level_learned_at": 4
+            },
+            {
+                "name": "syrup-bomb",
+                "level_learned_at": 28
+            },
+            {
+                "name": "fickle-beam",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "defense-curl",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rollout",
+                "level_learned_at": 0
+            },
+            {
+                "name": "recycle",
+                "level_learned_at": 0
+            },
+            {
+                "name": "yawn",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sucker-punch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-hit",
+                "level_learned_at": 0
+            },
+            {
+                "name": "infestation",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "hydrapple"
+    ]
 }

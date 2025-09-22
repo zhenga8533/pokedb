@@ -1,9 +1,9 @@
 {
     "id": 682,
     "name": "spritzee",
-    "height": 2,
-    "weight": 5,
-    "base_experience": 68,
+    "species": "spritzee",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/682/",
     "types": [
         "fairy"
     ],
@@ -27,14 +27,102 @@
         "special-defense": 65,
         "speed": 23
     },
+    "ev_yield": [
+        {
+            "stat": "hp",
+            "effort": 1
+        }
+    ],
+    "height": 2,
+    "weight": 5,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/682.ogg",
+        "legacy": null
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/682.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/682.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/682.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/682.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/682.png"
+        "other": {
+            "dream_world": {
+                "front_default": null,
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/682.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/682.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/682.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/682.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/682.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/682.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/682.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/682.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 68,
+    "base_happiness": 70,
+    "capture_rate": 200,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 682
+    },
+    "color": "pink",
+    "shape": "arms",
+    "egg_groups": [
+        "fairy"
+    ],
     "flavor_text": "It emits a scent that enraptures those who smell it. This fragrance changes depending on what it has eaten.",
     "genus": "Perfume Pokémon",
     "generation": "generation-vi",
-    "capture_rate": 200,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "spritzee",
+        "evolves_to": [
+            {
+                "species_name": "aromatisse",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "trade",
+                    "gender": null,
+                    "held_item": "sachet",
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {},
+    "forms": [
+        "spritzee"
+    ]
 }

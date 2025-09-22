@@ -1,6 +1,7 @@
 {
     "id": 220,
     "name": "pain-split",
+    "source_url": "https://pokeapi.co/api/v2/move/220/",
     "accuracy": null,
     "power": null,
     "pp": 20,
@@ -12,7 +13,7 @@
     "effect_chance": null,
     "effect": "Changes the user’s and target’s remaining HP to the average of their current remaining HP. Ignores accuracy and evasion modifiers. This effect does not count as inflicting damage for other moves and effects that respond to damage taken. This effect fails against a substitute.",
     "short_effect": "Sets the user’s and targets’s HP to the average of their current HP.",
-    "flavor_text": "Adds user & foe's HPs. Shares total.",
+    "flavor_text": "The user adds its HP to the target's HP, then equally splits the combined HP between the target and itself.",
     "learned_by_pokemon": [
         "arbok",
         "vulpix",
@@ -200,5 +201,20 @@
         "basculegion-female",
         "dudunsparce-three-segment"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": "tm202",
+    "metadata": {
+        "ailment": "none",
+        "category": "unique",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

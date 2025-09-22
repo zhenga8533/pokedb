@@ -1,9 +1,9 @@
 {
     "id": 718,
     "name": "zygarde-50",
-    "height": 50,
-    "weight": 3050,
-    "base_experience": 270,
+    "species": "zygarde",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/718/",
     "types": [
         "dragon",
         "ground"
@@ -23,14 +23,79 @@
         "special-defense": 95,
         "speed": 95
     },
+    "ev_yield": [
+        {
+            "stat": "hp",
+            "effort": 3
+        }
+    ],
+    "height": 50,
+    "weight": 3050,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/718.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/718.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/718.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/718.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/718.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/718.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/718.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/718.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/718.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/718.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/718.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/718.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/718.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 270,
+    "base_happiness": 0,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 718
+    },
+    "color": "green",
+    "shape": "squiggle",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "When the Kalos region’s ecosystem falls into disarray, it appears and reveals its secret power.",
     "genus": "Order Pokémon",
     "generation": "generation-vi",
-    "capture_rate": 3,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "zygarde",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {},
+    "forms": [
+        "zygarde-50",
+        "zygarde-10-power-construct",
+        "zygarde-50-power-construct",
+        "zygarde-complete",
+        "zygarde-10"
+    ]
 }

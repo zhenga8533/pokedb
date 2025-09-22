@@ -1,6 +1,7 @@
 {
     "id": 356,
     "name": "gravity",
+    "source_url": "https://pokeapi.co/api/v2/move/356/",
     "accuracy": null,
     "power": null,
     "pp": 5,
@@ -12,7 +13,7 @@
     "effect_chance": null,
     "effect": "For five turns (including this one), all immunities to ground moves are disabled. For the duration of this effect, the evasion of every Pokémon on the field is lowered by two stages. Cancels the effects of bounce, fly, and sky drop. Specifically, flying Pokémon and those with levitate or that have used magnet rise are no longer immune to ground attacks, arena trap, spikes, or toxic spikes. bounce, fly, sky drop, high jump kick, jump kick, and splash cannot be used while this move is in effect. *Bug*: If this move is used during a double or triple battle while Pokémon are under the effect of sky drop, Sky Drop’s effect is not correctly canceled on its target, and it remains high in the air indefinitely. As Sky Drop prevents the target from acting, the only way to subsequently remove it from the field is to faint it.",
     "short_effect": "Disables moves and immunities that involve flying or levitating for five turns.",
-    "flavor_text": "Gravity is intensified for five turns, making moves involving flying unusable and negating Levitation.",
+    "flavor_text": "Enables Flying types or Pokémon with the Levitate Ability to be hit by Ground-type moves for five turns. Moves that involve flying can't be used.",
     "learned_by_pokemon": [
         "clefairy",
         "clefable",
@@ -170,5 +171,20 @@
         "terapagos-terastal",
         "terapagos-stellar"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": "tm178",
+    "metadata": {
+        "ailment": "none",
+        "category": "whole-field-effect",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

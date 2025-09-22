@@ -1,6 +1,7 @@
 {
     "id": 675,
     "name": "throat-chop",
+    "source_url": "https://pokeapi.co/api/v2/move/675/",
     "accuracy": 100,
     "power": 80,
     "pp": 15,
@@ -12,7 +13,7 @@
     "effect_chance": 100,
     "effect": "Inflicts regular damage. Silences the target for two turns, preventing it from using any sound-based moves.",
     "short_effect": "Prevents the target from using sound-based moves for two turns.",
-    "flavor_text": "The user attacks the target’s throat, and the resultant suffering prevents the target from using moves that emit sound for two turns.",
+    "flavor_text": "The user attacks the target's throat, and the resultant suffering prevents the target from using sound-based moves for two turns.",
     "learned_by_pokemon": [
         "beedrill",
         "raticate",
@@ -228,5 +229,20 @@
         "ogerpon-hearthflame-mask",
         "ogerpon-cornerstone-mask"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": "tm221",
+    "metadata": {
+        "ailment": "silence",
+        "category": "damage+ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": 2,
+        "max_turns": 2,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 100,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

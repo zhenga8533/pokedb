@@ -1,6 +1,7 @@
 {
     "id": 275,
     "name": "ingrain",
+    "source_url": "https://pokeapi.co/api/v2/move/275/",
     "accuracy": null,
     "power": null,
     "pp": 20,
@@ -12,7 +13,7 @@
     "effect_chance": null,
     "effect": "Prevents the user from switching out. User regains 1/16 of its max HP at the end of every turn. If the user was immune to ground attacks, it will now take normal damage from them. roar and whirlwind will not affect the user. The user cannot use magnet rise. The user may still use u turn to leave the field. This effect can be passed with baton pass.",
     "short_effect": "Prevents the user from leaving battle. User regains 1/16 of its max HP every turn.",
-    "flavor_text": "Lays roots that restore HP. The user can’t switch out.",
+    "flavor_text": "The user lays roots that restore its own HP every turn. Because the user is now rooted, it can't switch out.",
     "learned_by_pokemon": [
         "bulbasaur",
         "ivysaur",
@@ -63,5 +64,20 @@
         "abomasnow-mega",
         "lurantis-totem"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": null,
+    "metadata": {
+        "ailment": "ingrain",
+        "category": "ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

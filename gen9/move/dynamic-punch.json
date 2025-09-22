@@ -1,6 +1,7 @@
 {
     "id": 223,
     "name": "dynamic-punch",
+    "source_url": "https://pokeapi.co/api/v2/move/223/",
     "accuracy": 50,
     "power": 100,
     "pp": 5,
@@ -12,7 +13,7 @@
     "effect_chance": 100,
     "effect": "Inflicts regular damage. Has a 100% chance to confuse the target.",
     "short_effect": "Has a 100% chance to confuse the target.",
-    "flavor_text": "An attack that always confuses.",
+    "flavor_text": "The user attacks by punching the target with full concentrated power. This also confuses the target.",
     "learned_by_pokemon": [
         "charmander",
         "charmeleon",
@@ -156,5 +157,20 @@
         "deoxys-speed",
         "urshifu-rapid-strike"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": null,
+    "metadata": {
+        "ailment": "confusion",
+        "category": "damage+ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": 2,
+        "max_turns": 5,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 100,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

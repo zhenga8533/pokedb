@@ -1,9 +1,9 @@
 {
     "id": 953,
     "name": "rellor",
-    "height": 2,
-    "weight": 10,
-    "base_experience": 54,
+    "species": "rellor",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/953/",
     "types": [
         "bug"
     ],
@@ -27,14 +27,268 @@
         "special-defense": 58,
         "speed": 30
     },
+    "ev_yield": [
+        {
+            "stat": "defense",
+            "effort": 1
+        }
+    ],
+    "height": 2,
+    "weight": 10,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/953.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/953.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/953.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/953.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/953.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/953.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/953.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/953.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/953.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/953.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/953.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/953.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/953.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 54,
+    "base_happiness": 50,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 953,
+        "paldea": 254
+    },
+    "color": "brown",
+    "shape": "armor",
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": "This Pokémon creates a mud ball by mixing sand and dirt with psychic energy. It treasures its mud ball more than its own life.",
     "genus": "Rolling Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 190,
-    "growth_rate": "fast"
+    "evolution_chain": {
+        "species_name": "rellor",
+        "evolves_to": [
+            {
+                "species_name": "rabsca",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "other",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": null,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "sand-attack",
+                "level_learned_at": 4
+            },
+            {
+                "name": "tackle",
+                "level_learned_at": 1
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 24
+            },
+            {
+                "name": "dig",
+                "level_learned_at": 29
+            },
+            {
+                "name": "defense-curl",
+                "level_learned_at": 1
+            },
+            {
+                "name": "rollout",
+                "level_learned_at": 11
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 15
+            },
+            {
+                "name": "bug-bite",
+                "level_learned_at": 20
+            },
+            {
+                "name": "struggle-bug",
+                "level_learned_at": 7
+            },
+            {
+                "name": "lunge",
+                "level_learned_at": 35
+            }
+        ],
+        "machine": [
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dig",
+                "level_learned_at": 0
+            },
+            {
+                "name": "leech-life",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-slap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fling",
+                "level_learned_at": 0
+            },
+            {
+                "name": "x-scissor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bug-buzz",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gunk-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bug-bite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "struggle-bug",
+                "level_learned_at": 0
+            },
+            {
+                "name": "lunge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skitter-smack",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pounce",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "recover",
+                "level_learned_at": 0
+            },
+            {
+                "name": "memento",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "cosmic-power",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "rellor"
+    ]
 }

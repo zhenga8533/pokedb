@@ -1,9 +1,9 @@
 {
     "id": 442,
     "name": "spiritomb",
-    "height": 10,
-    "weight": 1080,
-    "base_experience": 170,
+    "species": "spiritomb",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/442/",
     "types": [
         "ghost",
         "dark"
@@ -28,14 +28,341 @@
         "special-defense": 108,
         "speed": 35
     },
+    "ev_yield": [
+        {
+            "stat": "defense",
+            "effort": 1
+        },
+        {
+            "stat": "special-defense",
+            "effort": 1
+        }
+    ],
+    "height": 10,
+    "weight": 1080,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/442.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/442.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/442.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/442.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/442.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/442.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/442.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/442.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/442.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/442.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/442.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/442.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/442.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/442.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/442.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/442.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 170,
+    "base_happiness": 70,
+    "capture_rate": 100,
+    "hatch_counter": 30,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 442,
+        "paldea": 302
+    },
+    "color": "purple",
+    "shape": "blob",
+    "egg_groups": [
+        "indeterminate"
+    ],
     "flavor_text": "A Pokémon that was formed by 108 spirits. It is bound to a fissure in an odd keystone.",
     "genus": "Forbidden Pokémon",
     "generation": "generation-iv",
-    "capture_rate": 100,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "spiritomb",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psybeam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "night-shade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thief",
+                "level_learned_at": 0
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "will-o-wisp",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "skill-swap",
+                "level_learned_at": 0
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dark-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick-room",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psyshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stored-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hex",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snarl",
+                "level_learned_at": 0
+            },
+            {
+                "name": "phantom-force",
+                "level_learned_at": 0
+            },
+            {
+                "name": "burning-jealousy",
+                "level_learned_at": 0
+            },
+            {
+                "name": "lash-out",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poltergeist",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "disable",
+                "level_learned_at": 0
+            },
+            {
+                "name": "smokescreen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "destiny-bond",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ally-switch",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "hypnosis",
+                "level_learned_at": 55
+            },
+            {
+                "name": "night-shade",
+                "level_learned_at": 1
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 1
+            },
+            {
+                "name": "dream-eater",
+                "level_learned_at": 60
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 40
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 10
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 45
+            },
+            {
+                "name": "memento",
+                "level_learned_at": 30
+            },
+            {
+                "name": "payback",
+                "level_learned_at": 15
+            },
+            {
+                "name": "sucker-punch",
+                "level_learned_at": 35
+            },
+            {
+                "name": "dark-pulse",
+                "level_learned_at": 50
+            },
+            {
+                "name": "nasty-plot",
+                "level_learned_at": 20
+            },
+            {
+                "name": "shadow-sneak",
+                "level_learned_at": 5
+            },
+            {
+                "name": "hex",
+                "level_learned_at": 25
+            }
+        ]
+    },
+    "forms": [
+        "spiritomb"
+    ]
 }

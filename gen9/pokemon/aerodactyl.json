@@ -1,9 +1,9 @@
 {
     "id": 142,
     "name": "aerodactyl",
-    "height": 18,
-    "weight": 590,
-    "base_experience": 180,
+    "species": "aerodactyl",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/142/",
     "types": [
         "rock",
         "flying"
@@ -33,14 +33,78 @@
         "special-defense": 75,
         "speed": 130
     },
+    "ev_yield": [
+        {
+            "stat": "speed",
+            "effort": 2
+        }
+    ],
+    "height": 18,
+    "weight": 590,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/142.ogg",
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/142.ogg"
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/142.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/142.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/142.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/142.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/142.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/142.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/142.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/142.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/142.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/142.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/142.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/142.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/142.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 180,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 35,
+    "gender_rate": 1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 142
+    },
+    "color": "purple",
+    "shape": "wings",
+    "egg_groups": [
+        "flying"
+    ],
     "flavor_text": "A Pokémon that roamed the skies in the dinosaur era. Its teeth are like saw blades.",
     "genus": "Fossil Pokémon",
     "generation": "generation-i",
-    "capture_rate": 45,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "aerodactyl",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {},
+    "forms": [
+        "aerodactyl",
+        "aerodactyl-mega"
+    ]
 }

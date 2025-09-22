@@ -1,6 +1,7 @@
 {
     "id": 92,
     "name": "toxic",
+    "source_url": "https://pokeapi.co/api/v2/move/92/",
     "accuracy": 90,
     "power": null,
     "pp": 10,
@@ -12,7 +13,7 @@
     "effect_chance": null,
     "effect": "Badly poisons the target. Never misses when used by a poison-type Pokémon.",
     "short_effect": "Badly poisons the target, inflicting more damage every turn.",
-    "flavor_text": "A poison move with increasing damage.",
+    "flavor_text": "A move that leaves the target badly poisoned. Its poison damage worsens every turn.",
     "learned_by_pokemon": [
         "bulbasaur",
         "ivysaur",
@@ -992,5 +993,20 @@
         "terapagos-terastal",
         "terapagos-stellar"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": "tm175",
+    "metadata": {
+        "ailment": "poison",
+        "category": "ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": 15,
+        "max_turns": 15,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

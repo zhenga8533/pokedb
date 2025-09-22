@@ -1,6 +1,7 @@
 {
     "id": 9,
     "name": "thunder-punch",
+    "source_url": "https://pokeapi.co/api/v2/move/9/",
     "accuracy": 100,
     "power": 75,
     "pp": 15,
@@ -12,7 +13,7 @@
     "effect_chance": 10,
     "effect": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
     "short_effect": "Has a 10% chance to paralyze the target.",
-    "flavor_text": "An electric punch. It may paralyze.",
+    "flavor_text": "The target is attacked with an electrified punch. This may also leave the target with paralysis.",
     "learned_by_pokemon": [
         "charmander",
         "charmeleon",
@@ -279,5 +280,20 @@
         "goodra-hisui",
         "ursaluna-bloodmoon"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": "tm68",
+    "metadata": {
+        "ailment": "paralysis",
+        "category": "damage+ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 10,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

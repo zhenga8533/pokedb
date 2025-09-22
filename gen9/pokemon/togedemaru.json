@@ -1,9 +1,9 @@
 {
     "id": 777,
     "name": "togedemaru",
-    "height": 3,
-    "weight": 33,
-    "base_experience": 152,
+    "species": "togedemaru",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/777/",
     "types": [
         "electric",
         "steel"
@@ -33,14 +33,79 @@
         "special-defense": 73,
         "speed": 96
     },
+    "ev_yield": [
+        {
+            "stat": "attack",
+            "effort": 2
+        }
+    ],
+    "height": 3,
+    "weight": 33,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/777.ogg",
+        "legacy": null
+    },
     "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/777.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/777.png",
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/777.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/777.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/777.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/777.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/777.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/777.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/777.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/777.png"
+            },
+            "showdown": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/777.gif",
+                "back_female": null,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/777.gif",
+                "back_shiny_female": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/777.gif",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/777.gif",
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 152,
+    "base_happiness": 70,
+    "capture_rate": 180,
+    "hatch_counter": 10,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 777
+    },
+    "color": "gray",
+    "shape": "upright",
+    "egg_groups": [
+        "ground",
+        "fairy"
+    ],
     "flavor_text": "The spiny fur on its back is normally at rest. When this Pokémon becomes agitated, its fur stands on end and stabs into its attackers.",
     "genus": "Roly-Poly Pokémon",
     "generation": "generation-vii",
-    "capture_rate": 180,
-    "growth_rate": "medium"
+    "evolution_chain": {
+        "species_name": "togedemaru",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {},
+    "forms": [
+        "togedemaru",
+        "togedemaru-totem"
+    ]
 }

@@ -1,9 +1,9 @@
 {
     "id": 970,
     "name": "glimmora",
-    "height": 15,
-    "weight": 450,
-    "base_experience": 184,
+    "species": "glimmora",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/970/",
     "types": [
         "rock",
         "poison"
@@ -28,14 +28,330 @@
         "special-defense": 81,
         "speed": 86
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 2
+        }
+    ],
+    "height": 15,
+    "weight": 450,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/970.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/970.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/970.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/970.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/970.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/970.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/970.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/970.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/970.png"
+            },
+            "showdown": {
+                "back_default": null,
+                "back_female": null,
+                "back_shiny": null,
+                "back_shiny_female": null,
+                "front_default": null,
+                "front_female": null,
+                "front_shiny": null,
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 184,
+    "base_happiness": 50,
+    "capture_rate": 25,
+    "hatch_counter": 30,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 970,
+        "paldea": 309
+    },
+    "color": "blue",
+    "shape": "ball",
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": "When this Pokémon detects danger, it will open up its crystalline petals and fire beams from its conical body.",
     "genus": "Ore Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 25,
-    "growth_rate": "medium-slow"
+    "evolution_chain": {
+        "species_name": "glimmet",
+        "evolves_to": [
+            {
+                "species_name": "glimmora",
+                "evolution_details": {
+                    "item": null,
+                    "trigger": "level-up",
+                    "gender": null,
+                    "held_item": null,
+                    "known_move": null,
+                    "known_move_type": null,
+                    "location": null,
+                    "min_level": 35,
+                    "min_happiness": null,
+                    "min_beauty": null,
+                    "min_affection": null,
+                    "needs_overworld_rain": false,
+                    "party_species": null,
+                    "party_type": null,
+                    "relative_physical_stats": null,
+                    "time_of_day": "",
+                    "trade_species": null,
+                    "turn_upside_down": false
+                },
+                "evolves_to": []
+            }
+        ]
+    },
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-bomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spikes",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sand-tomb",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 0
+            },
+            {
+                "name": "mud-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rock-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "toxic-spikes",
+                "level_learned_at": 0
+            },
+            {
+                "name": "power-gem",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earth-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flash-cannon",
+                "level_learned_at": 0
+            },
+            {
+                "name": "gunk-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stealth-rock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "venoshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "smack-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sludge-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "acid-spray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "meteor-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            }
+        ],
+        "level-up": [
+            {
+                "name": "rock-throw",
+                "level_learned_at": 1
+            },
+            {
+                "name": "harden",
+                "level_learned_at": 1
+            },
+            {
+                "name": "self-destruct",
+                "level_learned_at": 29
+            },
+            {
+                "name": "acid-armor",
+                "level_learned_at": 44
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 33
+            },
+            {
+                "name": "sandstorm",
+                "level_learned_at": 26
+            },
+            {
+                "name": "ancient-power",
+                "level_learned_at": 11
+            },
+            {
+                "name": "toxic-spikes",
+                "level_learned_at": 1
+            },
+            {
+                "name": "rock-polish",
+                "level_learned_at": 15
+            },
+            {
+                "name": "power-gem",
+                "level_learned_at": 39
+            },
+            {
+                "name": "stealth-rock",
+                "level_learned_at": 18
+            },
+            {
+                "name": "venoshock",
+                "level_learned_at": 22
+            },
+            {
+                "name": "smack-down",
+                "level_learned_at": 1
+            },
+            {
+                "name": "sludge-wave",
+                "level_learned_at": 50
+            },
+            {
+                "name": "acid-spray",
+                "level_learned_at": 7
+            },
+            {
+                "name": "spiky-shield",
+                "level_learned_at": 1
+            },
+            {
+                "name": "mortal-spin",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "glimmora"
+    ]
 }

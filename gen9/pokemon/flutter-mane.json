@@ -1,9 +1,9 @@
 {
     "id": 987,
     "name": "flutter-mane",
-    "height": 14,
-    "weight": 40,
-    "base_experience": 285,
+    "species": "flutter-mane",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/987/",
     "types": [
         "ghost",
         "fairy"
@@ -23,14 +23,327 @@
         "special-defense": 135,
         "speed": 135
     },
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 1
+        },
+        {
+            "stat": "special-defense",
+            "effort": 1
+        },
+        {
+            "stat": "speed",
+            "effort": 1
+        }
+    ],
+    "height": 14,
+    "weight": 40,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/987.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/987.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/987.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/987.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/987.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/987.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/987.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/987.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/987.png"
+            },
+            "showdown": {
+                "back_default": null,
+                "back_female": null,
+                "back_shiny": null,
+                "back_shiny_female": null,
+                "front_default": null,
+                "front_female": null,
+                "front_shiny": null,
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 285,
+    "base_happiness": 0,
+    "capture_rate": 30,
+    "hatch_counter": 50,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 987,
+        "paldea": 379
+    },
+    "color": "gray",
+    "shape": "wings",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "This Pokémon has characteristics similar to those of Flutter Mane, a creature mentioned in a certain book.",
     "genus": "Paradox Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 30,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "flutter-mane",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "psybeam",
+                "level_learned_at": 7
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 1
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 1
+            },
+            {
+                "name": "perish-song",
+                "level_learned_at": 91
+            },
+            {
+                "name": "mean-look",
+                "level_learned_at": 14
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 77
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 42
+            },
+            {
+                "name": "memento",
+                "level_learned_at": 21
+            },
+            {
+                "name": "wish",
+                "level_learned_at": 28
+            },
+            {
+                "name": "astonish",
+                "level_learned_at": 1
+            },
+            {
+                "name": "power-gem",
+                "level_learned_at": 56
+            },
+            {
+                "name": "psyshock",
+                "level_learned_at": 63
+            },
+            {
+                "name": "phantom-force",
+                "level_learned_at": 70
+            },
+            {
+                "name": "moonblast",
+                "level_learned_at": 84
+            },
+            {
+                "name": "mystical-fire",
+                "level_learned_at": 49
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 35
+            }
+        ],
+        "machine": [
+            {
+                "name": "psybeam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 0
+            },
+            {
+                "name": "night-shade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "icy-wind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charm",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fake-tears",
+                "level_learned_at": 0
+            },
+            {
+                "name": "magical-leaf",
+                "level_learned_at": 0
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dark-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "power-gem",
+                "level_learned_at": 0
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "trick-room",
+                "level_learned_at": 0
+            },
+            {
+                "name": "charge-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psyshock",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stored-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hex",
+                "level_learned_at": 0
+            },
+            {
+                "name": "phantom-force",
+                "level_learned_at": 0
+            },
+            {
+                "name": "disarming-voice",
+                "level_learned_at": 0
+            },
+            {
+                "name": "draining-kiss",
+                "level_learned_at": 0
+            },
+            {
+                "name": "misty-terrain",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "poltergeist",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            }
+        ],
+        "egg": [
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "flutter-mane"
+    ]
 }

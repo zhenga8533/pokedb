@@ -1,9 +1,9 @@
 {
     "id": 1020,
     "name": "gouging-fire",
-    "height": 35,
-    "weight": 5900,
-    "base_experience": 295,
+    "species": "gouging-fire",
+    "is_default": true,
+    "source_url": "https://pokeapi.co/api/v2/pokemon/1020/",
     "types": [
         "fire",
         "dragon"
@@ -23,14 +23,350 @@
         "special-defense": 93,
         "speed": 91
     },
+    "ev_yield": [
+        {
+            "stat": "defense",
+            "effort": 3
+        }
+    ],
+    "height": 35,
+    "weight": 5900,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/1020.ogg",
+        "legacy": null
+    },
     "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1020.png",
         "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1020.png",
-        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1020.png"
+        "other": {
+            "dream_world": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1020.svg",
+                "front_female": null
+            },
+            "home": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1020.png",
+                "front_female": null,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/1020.png",
+                "front_shiny_female": null
+            },
+            "official-artwork": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1020.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1020.png"
+            },
+            "showdown": {
+                "back_default": null,
+                "back_female": null,
+                "back_shiny": null,
+                "back_shiny_female": null,
+                "front_default": null,
+                "front_female": null,
+                "front_shiny": null,
+                "front_shiny_female": null
+            }
+        }
     },
+    "base_experience": 295,
+    "base_happiness": 0,
+    "capture_rate": 10,
+    "hatch_counter": 50,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "pokedex_numbers": {
+        "national": 1020
+    },
+    "color": "brown",
+    "shape": "quadruped",
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": "There are scant few reports of this creature being sighted. One short video shows it rampaging and spouting pillars of flame.",
     "genus": "Paradox Pokémon",
     "generation": "generation-ix",
-    "capture_rate": 10,
-    "growth_rate": "slow"
+    "evolution_chain": {
+        "species_name": "gouging-fire",
+        "evolves_to": []
+    },
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "stomp",
+                "level_learned_at": 1
+            },
+            {
+                "name": "leer",
+                "level_learned_at": 1
+            },
+            {
+                "name": "bite",
+                "level_learned_at": 21
+            },
+            {
+                "name": "fire-blast",
+                "level_learned_at": 63
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 77
+            },
+            {
+                "name": "morning-sun",
+                "level_learned_at": 42
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 1
+            },
+            {
+                "name": "crush-claw",
+                "level_learned_at": 35
+            },
+            {
+                "name": "howl",
+                "level_learned_at": 14
+            },
+            {
+                "name": "dragon-claw",
+                "level_learned_at": 28
+            },
+            {
+                "name": "flare-blitz",
+                "level_learned_at": 84
+            },
+            {
+                "name": "dragon-rush",
+                "level_learned_at": 56
+            },
+            {
+                "name": "fire-fang",
+                "level_learned_at": 7
+            },
+            {
+                "name": "lava-plume",
+                "level_learned_at": 70
+            },
+            {
+                "name": "incinerate",
+                "level_learned_at": 1
+            },
+            {
+                "name": "raging-fury",
+                "level_learned_at": 91
+            },
+            {
+                "name": "burning-bulwark",
+                "level_learned_at": 49
+            }
+        ],
+        "egg": [
+            {
+                "name": "double-kick",
+                "level_learned_at": 0
+            },
+            {
+                "name": "ancient-power",
+                "level_learned_at": 0
+            },
+            {
+                "name": "noble-roar",
+                "level_learned_at": 0
+            }
+        ],
+        "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "roar",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flamethrower",
+                "level_learned_at": 0
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fire-spin",
+                "level_learned_at": 0
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fire-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0
+            },
+            {
+                "name": "reversal",
+                "level_learned_at": 0
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0
+            },
+            {
+                "name": "outrage",
+                "level_learned_at": 0
+            },
+            {
+                "name": "endure",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sleep-talk",
+                "level_learned_at": 0
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0
+            },
+            {
+                "name": "crunch",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heat-wave",
+                "level_learned_at": 0
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0
+            },
+            {
+                "name": "weather-ball",
+                "level_learned_at": 0
+            },
+            {
+                "name": "overheat",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-claw",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-dance",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flare-blitz",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-pulse",
+                "level_learned_at": 0
+            },
+            {
+                "name": "giga-impact",
+                "level_learned_at": 0
+            },
+            {
+                "name": "thunder-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "fire-fang",
+                "level_learned_at": 0
+            },
+            {
+                "name": "draco-meteor",
+                "level_learned_at": 0
+            },
+            {
+                "name": "iron-head",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stone-edge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "flame-charge",
+                "level_learned_at": 0
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-tail",
+                "level_learned_at": 0
+            },
+            {
+                "name": "heat-crash",
+                "level_learned_at": 0
+            },
+            {
+                "name": "snarl",
+                "level_learned_at": 0
+            },
+            {
+                "name": "smart-strike",
+                "level_learned_at": 0
+            },
+            {
+                "name": "psychic-fangs",
+                "level_learned_at": 0
+            },
+            {
+                "name": "stomping-tantrum",
+                "level_learned_at": 0
+            },
+            {
+                "name": "breaking-swipe",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scale-shot",
+                "level_learned_at": 0
+            },
+            {
+                "name": "scorching-sands",
+                "level_learned_at": 0
+            },
+            {
+                "name": "tera-blast",
+                "level_learned_at": 0
+            },
+            {
+                "name": "dragon-cheer",
+                "level_learned_at": 0
+            },
+            {
+                "name": "temper-flare",
+                "level_learned_at": 0
+            }
+        ]
+    },
+    "forms": [
+        "gouging-fire"
+    ]
 }

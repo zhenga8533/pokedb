@@ -1,6 +1,7 @@
 {
     "id": 85,
     "name": "thunderbolt",
+    "source_url": "https://pokeapi.co/api/v2/move/85/",
     "accuracy": 100,
     "power": 90,
     "pp": 15,
@@ -12,7 +13,7 @@
     "effect_chance": 10,
     "effect": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
     "short_effect": "Has a 10% chance to paralyze the target.",
-    "flavor_text": "An attack that may cause paralysis.",
+    "flavor_text": "The user attacks the target with a strong electric blast. This may also leave the target with paralysis.",
     "learned_by_pokemon": [
         "rattata",
         "raticate",
@@ -358,5 +359,20 @@
         "terapagos-terastal",
         "terapagos-stellar"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": "tm126",
+    "metadata": {
+        "ailment": "paralysis",
+        "category": "damage+ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 10,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

@@ -1,6 +1,7 @@
 {
     "id": 257,
     "name": "heat-wave",
+    "source_url": "https://pokeapi.co/api/v2/move/257/",
     "accuracy": 90,
     "power": 95,
     "pp": 10,
@@ -12,7 +13,7 @@
     "effect_chance": 10,
     "effect": "Inflicts regular damage. Has a 10% chance to burn the target.",
     "short_effect": "Has a 10% chance to burn the target.",
-    "flavor_text": "Exhales a hot breath on the foe. May inflict a burn.",
+    "flavor_text": "The user attacks by exhaling hot breath on opposing Pokémon. This may also leave them with a burn.",
     "learned_by_pokemon": [
         "charmander",
         "charmeleon",
@@ -198,5 +199,20 @@
         "koraidon-swimming-build",
         "koraidon-gliding-build"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": "tm118",
+    "metadata": {
+        "ailment": "burn",
+        "category": "damage+ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 10,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

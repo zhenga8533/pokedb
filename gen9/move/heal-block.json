@@ -1,6 +1,7 @@
 {
     "id": 377,
     "name": "heal-block",
+    "source_url": "https://pokeapi.co/api/v2/move/377/",
     "accuracy": 100,
     "power": null,
     "pp": 15,
@@ -12,7 +13,7 @@
     "effect_chance": null,
     "effect": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
     "short_effect": "Prevents target from restoring its HP for five turns.",
-    "flavor_text": "The user prevents the foe from using any HP-recovery moves for five turns.",
+    "flavor_text": "This move can’t be used. It’s recommended that this move is forgotten. Once forgotten, this move can’t be remembered.",
     "learned_by_pokemon": [
         "celebi",
         "shedinja",
@@ -43,5 +44,20 @@
         "thundurus-therian",
         "latios-mega"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": null,
+    "metadata": {
+        "ailment": "heal-block",
+        "category": "ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": 5,
+        "max_turns": 5,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

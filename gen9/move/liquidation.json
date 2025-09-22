@@ -1,6 +1,7 @@
 {
     "id": 710,
     "name": "liquidation",
+    "source_url": "https://pokeapi.co/api/v2/move/710/",
     "accuracy": 100,
     "power": 85,
     "pp": 10,
@@ -12,7 +13,7 @@
     "effect_chance": 20,
     "effect": "Inflicts regular damage. Has a 20% chance to lower the target’s Defense by one stage.",
     "short_effect": "Has a 20% chance to lower the target’s Defense by one stage.",
-    "flavor_text": "The user slams into the target using a full-force blast of water. This may also lower the target’s Defense stat.",
+    "flavor_text": "The user slams into the target using a full-force blast of water. This may also lower the target's Defense stat.",
     "learned_by_pokemon": [
         "squirtle",
         "wartortle",
@@ -192,5 +193,20 @@
             "change": -1,
             "stat": "defense"
         }
-    ]
+    ],
+    "machine": "tm110",
+    "metadata": {
+        "ailment": "none",
+        "category": "damage+lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 20
+    }
 }

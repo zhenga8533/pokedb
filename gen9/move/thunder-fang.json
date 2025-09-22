@@ -1,6 +1,7 @@
 {
     "id": 422,
     "name": "thunder-fang",
+    "source_url": "https://pokeapi.co/api/v2/move/422/",
     "accuracy": 95,
     "power": 65,
     "pp": 15,
@@ -12,7 +13,7 @@
     "effect_chance": 10,
     "effect": "Inflicts regular damage. Has a 10% chance to paralyze the target and a separate 10% chance to make the target flinch.",
     "short_effect": "Has a 10% chance to paralyze the target and a 10% chance to make the target flinch.",
-    "flavor_text": "The user bites with electrified fangs. It may also make the foe flinch or become paralyzed.",
+    "flavor_text": "The user bites with electrified fangs. This may also make the target flinch or leave it with paralysis.",
     "learned_by_pokemon": [
         "arbok",
         "growlithe",
@@ -134,5 +135,20 @@
         "koraidon-swimming-build",
         "koraidon-gliding-build"
     ],
-    "stat_changes": []
+    "stat_changes": [],
+    "machine": "tm09",
+    "metadata": {
+        "ailment": "paralysis",
+        "category": "damage+ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 10,
+        "flinch_chance": 10,
+        "stat_chance": 0
+    }
 }
