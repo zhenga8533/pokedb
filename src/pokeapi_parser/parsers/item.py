@@ -45,11 +45,13 @@ class ItemParser(BaseParser):
                     "attributes": [attr["name"] for attr in data.get("attributes", [])],
                     "category": data.get("category", {}).get("name"),
                     "effect": get_english_entry(data.get("effect_entries", []), "effect"),
+                    "short_effect": get_english_entry(data.get("effect_entries", []), "short_effect"),
                     "flavor_text": get_english_entry(
                         data.get("flavor_text_entries", []), "text", self.generation_version_groups, self.target_gen
                     ),
                     "sprite": data.get("sprites", {}).get("default"),
                     "held_by_pokemon": [p["pokemon"]["name"] for p in data.get("held_by_pokemon", [])],
+                    "generations": sorted(list(set(gi["generation"]["name"] for gi in game_indices))),
                 }
 
                 # Save the data to the single target generation folder
