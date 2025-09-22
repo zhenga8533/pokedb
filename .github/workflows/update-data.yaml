@@ -12,7 +12,7 @@ jobs:
       contents: write
 
     steps:
-      # 1. Check out the 'main' branch and fetch all branch history
+      # 1. Check out the repository and fetch all branch history
       - name: Check out repository
         uses: actions/checkout@v4
         with:
@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # 4. Run all the parsers (while still on the main branch)
+      # 4. Run all the parsers (this creates the local 'output' folder)
       - name: Run Parsers
         run: python main.py --all
 
@@ -41,8 +41,8 @@ jobs:
           git checkout data
 
           echo "Restructuring data folders..."
-          mv data/* .
-          rm -r data
+          mv output/* .
+          rm -r output
 
           git add .
 
