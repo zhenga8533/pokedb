@@ -1,5 +1,6 @@
 import json
 import os
+from typing import Any, Dict, List, Optional, Union
 
 import requests
 
@@ -10,14 +11,29 @@ from .base import BaseParser
 class ItemParser(BaseParser):
     """A parser for Pokémon items."""
 
-    def __init__(self, config, session, generation_version_groups, target_gen, generation_dex_map=None):
+    def __init__(
+        self,
+        config: Dict[str, Any],
+        session: requests.Session,
+        generation_version_groups: Dict[int, List[str]],
+        target_gen: int,
+        generation_dex_map: Optional[Dict[int, str]] = None,
+    ):
         super().__init__(config, session, generation_version_groups, target_gen, generation_dex_map)
         self.item_name = "Item"
         self.api_endpoint = "item"
         self.output_dir_key = "output_dir_item"
 
-    def process(self, item_ref):
-        """Processes a single item from its API reference."""
+    def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, Any], str]]:
+        """
+        Processes a single item from its API reference.
+
+        Args:
+            item_ref (Dict[str, str]): A dictionary containing the name and URL of the item.
+
+        Returns:
+            A dictionary with summary data for the item, or an error string, or None to skip.
+        """
         try:
             response = self.session.get(item_ref["url"], timeout=self.config["timeout"])
             response.raise_for_status()
@@ -31,7 +47,7 @@ class ItemParser(BaseParser):
             intro_gen_str = min(gi["generation"]["url"].split("/")[-2] for gi in game_indices)
             introduction_gen = int(intro_gen_str)
 
-            if introduction_gen <= self.target_gen:
+            if self.target_gen is not None and introduction_gen <= self.target_gen:
                 # Prepare the cleaned data
                 fling_effect_obj = data.get("fling_effect")
                 fling_effect_name = fling_effect_obj.get("name") if fling_effect_obj else None
@@ -68,8 +84,3 @@ class ItemParser(BaseParser):
             return f"Request failed for {item_ref['name']}: {e}"
         except (ValueError, KeyError, TypeError) as e:
             return f"Processing failed for {item_ref['name']}: {e}"
-
-    def run(self, all_items):
-        """The main execution logic for the item parser."""
-        # Call the original run method and return its result
-        return super().run(all_items)

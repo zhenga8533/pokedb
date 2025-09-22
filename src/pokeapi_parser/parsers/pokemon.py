@@ -1,5 +1,6 @@
 import json
 import os
+from typing import Any, Dict, List, Optional, Union
 
 import requests
 
@@ -12,14 +13,30 @@ class PokemonParser(BaseParser):
     A comprehensive parser for Pokémon species and all their forms/varieties.
     """
 
-    def __init__(self, config, session, generation_version_groups, target_gen, generation_dex_map):
+    def __init__(
+        self,
+        config: Dict[str, Any],
+        session: requests.Session,
+        generation_version_groups: Dict[int, List[str]],
+        target_gen: int,
+        generation_dex_map: Dict[int, str],
+    ):
         super().__init__(config, session, generation_version_groups, target_gen, generation_dex_map)
         self.item_name = "Pokemon"
         self.output_dir_key_pokemon = "output_dir_pokemon"
         self.output_dir_key_form = "output_dir_form"
-        self.evolution_cache = {}
+        self.evolution_cache: Dict[str, Any] = {}
 
-    def _get_evolution_chain(self, chain_url):
+    def _get_evolution_chain(self, chain_url: str) -> Optional[Dict[str, Any]]:
+        """
+        Recursively fetches and processes an evolution chain.
+
+        Args:
+            chain_url (str): The URL of the evolution chain to fetch.
+
+        Returns:
+            A nested dictionary representing the evolution chain, or None on failure.
+        """
         if chain_url in self.evolution_cache:
             return self.evolution_cache[chain_url]
         try:
@@ -27,9 +44,9 @@ class PokemonParser(BaseParser):
             response.raise_for_status()
             chain_data = response.json()["chain"]
 
-            def recurse_chain(chain):
+            def recurse_chain(chain: Dict[str, Any]) -> Dict[str, Any]:
                 species_name = chain["species"]["name"]
-                evolves_to = []
+                evolves_to: List[Dict[str, Any]] = []
                 for evolution in chain.get("evolves_to", []):
                     details_list = evolution.get("evolution_details", [])
                     details = details_list[0] if details_list else {}
@@ -69,8 +86,26 @@ class PokemonParser(BaseParser):
             print(f"Warning: Could not fetch evolution chain from {chain_url}. Error: {e}")
             return None
 
-    def _get_generation_data(self, data, key, name_key, details_key, version_key):
-        gen_data = {}
+    def _get_generation_data(
+        self, data: Dict[str, Any], key: str, name_key: str, details_key: str, version_key: str
+    ) -> Union[Dict[str, Any], Dict[str, int]]:
+        """
+        A generic helper to filter data (like moves or held items) by the target generation.
+
+        Args:
+            data (Dict[str, Any]): The raw Pokémon data dictionary.
+            key (str): The top-level key for the data list (e.g., 'moves').
+            name_key (str): The key for the item's name (e.g., 'move').
+            details_key (str): The key for the version details list.
+            version_key (str): The key for the version/version_group object.
+
+        Returns:
+            A dictionary of generation-specific data.
+        """
+        gen_data: Dict[str, Any] = {}
+        if not self.generation_version_groups or self.target_gen is None:
+            return {}
+
         target_groups = self.generation_version_groups.get(self.target_gen, [])
         for item in data.get(key, []):
             item_name = item[name_key]["name"]
@@ -86,8 +121,17 @@ class PokemonParser(BaseParser):
                         break
         return gen_data
 
-    def _process_sprites(self, sprites):
-        if not sprites or "versions" not in sprites:
+    def _process_sprites(self, sprites: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Filters the versions sprites object to only include the target generation.
+
+        Args:
+            sprites (Dict[str, Any]): The raw sprites object from the API.
+
+        Returns:
+            Dict[str, Any]: The sprites object with the 'versions' key filtered.
+        """
+        if not sprites or "versions" not in sprites or self.target_gen is None:
             return sprites
         roman_map = {1: "i", 2: "ii", 3: "iii", 4: "iv", 5: "v", 6: "vi", 7: "vii", 8: "viii", 9: "ix"}
         gen_roman = roman_map.get(self.target_gen)
@@ -98,8 +142,19 @@ class PokemonParser(BaseParser):
         sprites["versions"] = {gen_key: sprites["versions"].get(gen_key, {})}
         return sprites
 
-    def _get_generation_pokedex_numbers(self, pokedex_numbers):
-        gen_numbers = {}
+    def _get_generation_pokedex_numbers(self, pokedex_numbers: List[Dict[str, Any]]) -> Dict[str, int]:
+        """
+        Filters Pokédex numbers for national and the target generation's regional dex.
+
+        Args:
+            pokedex_numbers (List[Dict[str, Any]]): The list of Pokédex number entries.
+
+        Returns:
+            Dict[str, int]: A dictionary of relevant Pokédex numbers.
+        """
+        gen_numbers: Dict[str, int] = {}
+        if not self.generation_dex_map or self.target_gen is None:
+            return {}
         regional_dex_name = self.generation_dex_map.get(self.target_gen)
         for entry in pokedex_numbers:
             pokedex_name = entry["pokedex"]["name"]
@@ -107,21 +162,29 @@ class PokemonParser(BaseParser):
                 gen_numbers[pokedex_name] = entry["entry_number"]
         return gen_numbers
 
-    def process(self, species_ref):
-        """Processes a Pokémon species and all its varieties, saving them to pokemon/ and form/ dirs."""
+    def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, List[Dict[str, Any]]], str]]:
+        """
+        Processes a Pokémon species and all its varieties, saving them to pokemon/ and form/ dirs.
+
+        Args:
+            item_ref (Dict[str, str]): A dictionary containing the name and URL of the species.
+
+        Returns:
+            A dictionary containing lists of summary data for 'pokemon' and 'form', or an error string.
+        """
         try:
-            species_res = self.session.get(species_ref["url"], timeout=self.config["timeout"])
+            species_res = self.session.get(item_ref["url"], timeout=self.config["timeout"])
             species_res.raise_for_status()
             species_data = species_res.json()
 
             generation_url = species_data.get("generation", {}).get("url", "")
-            if generation_url and int(generation_url.split("/")[-2]) > self.target_gen:
+            if generation_url and self.target_gen and int(generation_url.split("/")[-2]) > self.target_gen:
                 return None
 
             evolution_chain = self._get_evolution_chain(species_data["evolution_chain"]["url"])
 
             # This list will hold the summary dicts for ALL forms of this species
-            summaries = {"pokemon": [], "form": []}
+            summaries: Dict[str, List[Dict[str, Any]]] = {"pokemon": [], "form": []}
 
             for variety in species_data.get("varieties", []):
                 pokemon_res = self.session.get(variety["pokemon"]["url"], timeout=self.config["timeout"])
@@ -131,7 +194,7 @@ class PokemonParser(BaseParser):
                 is_default_form = variety.get("is_default", False)
 
                 # --- Create the combined JSON object ---
-                cleaned_data = {
+                cleaned_data: Dict[str, Any] = {
                     "id": pokemon_data["id"],
                     "name": pokemon_data["name"],
                     "species": species_data["name"],
@@ -193,7 +256,8 @@ class PokemonParser(BaseParser):
                     )
 
                 # --- Save the file and create the summary ---
-                output_dir = self.config[self.output_dir_key_pokemon if is_default_form else self.output_dir_key_form]
+                output_dir_key = self.output_dir_key_pokemon if is_default_form else self.output_dir_key_form
+                output_dir = self.config[output_dir_key]
                 os.makedirs(output_dir, exist_ok=True)
                 file_path = os.path.join(output_dir, f"{cleaned_data['name']}.json")
                 with open(file_path, "w", encoding="utf-8") as f:
@@ -212,22 +276,30 @@ class PokemonParser(BaseParser):
             return summaries
 
         except requests.exceptions.RequestException as e:
-            return f"Request failed for {species_ref['name']}: {e}"
+            return f"Request failed for {item_ref['name']}: {e}"
         except (ValueError, KeyError, TypeError) as e:
-            return f"Parsing failed for {species_ref['name']}: {e}"
+            return f"Parsing failed for {item_ref['name']}: {e}"
 
-    def run(self, all_items):
-        """Override the base run method to handle the dict of summaries from process."""
+    def run(self, all_items: List[Dict[str, str]]) -> Dict[str, List[Dict[str, Any]]]:
+        """
+        Override the base run method to handle the dict of summaries from process.
+
+        Args:
+            all_items (List[Dict[str, str]]): A list of all species references to process.
+
+        Returns:
+            A dictionary containing two keys, 'pokemon' and 'form', each with a list of summaries.
+        """
         print(f"--- Running {self.item_name} Parser ---")
         if not all_items:
             print(f"No {self.item_name.lower()}s to process.")
             return {}
 
         print(f"Found {len(all_items)} species. Parsing all Pokemon and Forms...")
-        errors = []
+        errors: List[str] = []
         # We now have two distinct summary lists to build
-        pokemon_summaries = []
-        form_summaries = []
+        pokemon_summaries: List[Dict[str, Any]] = []
+        form_summaries: List[Dict[str, Any]] = []
 
         from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -241,7 +313,7 @@ class PokemonParser(BaseParser):
                     pokemon_summaries.extend(result.get("pokemon", []))
                     form_summaries.extend(result.get("form", []))
                 elif result is not None:
-                    errors.append(result)
+                    errors.append(str(result))
 
         print("\nPokemon and Form processing complete.")
         if errors:

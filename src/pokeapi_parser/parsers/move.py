@@ -1,5 +1,6 @@
 import json
 import os
+from typing import Any, Dict, List, Optional, Union
 
 import requests
 
@@ -10,15 +11,33 @@ from .base import BaseParser
 class MoveParser(BaseParser):
     """A parser for Pokémon moves."""
 
-    def __init__(self, config, session, generation_version_groups, target_gen, generation_dex_map=None):
+    def __init__(
+        self,
+        config: Dict[str, Any],
+        session: requests.Session,
+        generation_version_groups: Dict[int, List[str]],
+        target_gen: int,
+        generation_dex_map: Optional[Dict[int, str]] = None,
+    ):
         super().__init__(config, session, generation_version_groups, target_gen, generation_dex_map)
         self.item_name = "Move"
         self.api_endpoint = "move"
         self.output_dir_key = "output_dir_move"
-        self.machine_cache = {}
+        self.machine_cache: Dict[str, str] = {}
 
-    def _get_machine_for_generation(self, machine_entries):
-        """Finds the machine name for the target generation, if it exists."""
+    def _get_machine_for_generation(self, machine_entries: List[Dict[str, Any]]) -> Optional[str]:
+        """
+        Finds the machine name for the target generation, if it exists.
+
+        Args:
+            machine_entries (List[Dict[str, Any]]): A list of machine entry dicts from the API.
+
+        Returns:
+            Optional[str]: The name of the machine (e.g., 'tm01'), or None.
+        """
+        if not self.generation_version_groups or not self.target_gen:
+            return None
+
         target_version_groups = self.generation_version_groups.get(self.target_gen, [])
         for machine_entry in machine_entries:
             if machine_entry["version_group"]["name"] in target_version_groups:
@@ -38,8 +57,16 @@ class MoveParser(BaseParser):
                     return None
         return None
 
-    def _clean_metadata(self, metadata):
-        """Cleans the metadata object from the API."""
+    def _clean_metadata(self, metadata: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+        """
+        Cleans the metadata object from the API.
+
+        Args:
+            metadata (Optional[Dict[str, Any]]): The raw metadata dict from the API.
+
+        Returns:
+            Dict[str, Any]: A cleaned dictionary of metadata.
+        """
         if not metadata:
             return {}
 
@@ -61,8 +88,16 @@ class MoveParser(BaseParser):
             "stat_chance": metadata.get("stat_chance"),
         }
 
-    def process(self, item_ref):
-        """Processes a single move from its API reference."""
+    def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, Any], str]]:
+        """
+        Processes a single move from its API reference.
+
+        Args:
+            item_ref (Dict[str, str]): A dictionary containing the name and URL of the move.
+
+        Returns:
+            A dictionary with summary data for the move, or an error string.
+        """
         try:
             response = self.session.get(item_ref["url"], timeout=self.config["timeout"])
             response.raise_for_status()

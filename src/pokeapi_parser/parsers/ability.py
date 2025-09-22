@@ -1,5 +1,6 @@
 import json
 import os
+from typing import Any, Dict, List, Optional, Union
 
 import requests
 
@@ -10,14 +11,29 @@ from .base import BaseParser
 class AbilityParser(BaseParser):
     """A parser for Pokémon abilities."""
 
-    def __init__(self, config, session, generation_version_groups, target_gen, generation_dex_map=None):
+    def __init__(
+        self,
+        config: Dict[str, Any],
+        session: requests.Session,
+        generation_version_groups: Dict[int, List[str]],
+        target_gen: int,
+        generation_dex_map: Optional[Dict[int, str]] = None,
+    ):
         super().__init__(config, session, generation_version_groups, target_gen, generation_dex_map)
         self.item_name = "Ability"
         self.api_endpoint = "ability"
         self.output_dir_key = "output_dir_ability"
 
-    def process(self, item_ref):
-        """Processes a single ability from its API reference."""
+    def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, Any], str]]:
+        """
+        Processes a single ability from its API reference.
+
+        Args:
+            item_ref (Dict[str, str]): A dictionary containing the name and URL of the ability.
+
+        Returns:
+            A dictionary with summary data for the ability, or an error string.
+        """
         try:
             response = self.session.get(item_ref["url"], timeout=self.config["timeout"])
             response.raise_for_status()

@@ -2,8 +2,10 @@ import argparse
 import json
 import os
 from datetime import datetime, timezone
+from typing import Any, Dict, List, Tuple, Type
 
 from src.pokeapi_parser.parsers.ability import AbilityParser
+from src.pokeapi_parser.parsers.base import BaseParser
 from src.pokeapi_parser.parsers.item import ItemParser
 from src.pokeapi_parser.parsers.move import MoveParser
 from src.pokeapi_parser.parsers.pokemon import PokemonParser
@@ -15,8 +17,15 @@ from src.pokeapi_parser.utils import (
 )
 
 
-def main():
-    """Main entry point to run the specified parsers."""
+def main() -> None:
+    """
+    Main entry point to run the specified parsers.
+
+    This function parses command-line arguments to determine which parsers to run
+    and for which Pokémon generation. It then fetches the necessary data from the
+    PokéAPI and executes the requested parsers, saving the cleaned data to the
+    output directory.
+    """
     parser = argparse.ArgumentParser(description="Run parsers for the PokéAPI.")
     parser.add_argument(
         "parsers", nargs="*", help="The name(s) of the parser to run (e.g., ability, item, move, pokemon)."
@@ -43,10 +52,10 @@ def main():
 
     # --- Part 1: Data Gathering Loop ---
     print(f"Gathering all data up to Generation {target_gen}...")
-    cumulative_abilities = []
-    cumulative_moves = []
-    cumulative_pokemon_species = []
-    generation_version_groups = {}
+    cumulative_abilities: List[Dict[str, str]] = []
+    cumulative_moves: List[Dict[str, str]] = []
+    cumulative_pokemon_species: List[Dict[str, str]] = []
+    generation_version_groups: Dict[int, List[str]] = {}
     generation_dex_map = get_generation_dex_map(session, config)
 
     for gen_num in range(1, target_gen + 1):
@@ -74,10 +83,10 @@ def main():
         if key.startswith("output_dir_"):
             final_config[key] = final_config[key].format(gen_num=target_gen)
 
-    all_summaries = {}
+    all_summaries: Dict[str, List[Dict[str, Any]]] = {}
 
     # Define all parsers that take a list of API refs
-    list_based_parsers = {
+    list_based_parsers: Dict[str, Tuple[Type[BaseParser], List[Dict[str, str]]]] = {
         "ability": (AbilityParser, cumulative_abilities),
         "move": (MoveParser, cumulative_moves),
         "pokemon": (PokemonParser, cumulative_pokemon_species),
@@ -91,9 +100,9 @@ def main():
             summary_data = parser_instance.run(item_list)
             if summary_data:
                 # Special handling for PokemonParser which returns a dict of summaries
-                if name == "pokemon":
+                if name == "pokemon" and isinstance(summary_data, dict):
                     all_summaries.update(summary_data)
-                else:
+                elif isinstance(summary_data, list):
                     all_summaries[name] = summary_data
             print("-" * 20)
 
@@ -105,7 +114,7 @@ def main():
 
         item_parser = ItemParser(final_config, session, generation_version_groups, target_gen, generation_dex_map)
         summary_data = item_parser.run(all_items)
-        if summary_data:
+        if isinstance(summary_data, list):
             all_summaries["item"] = summary_data
         print("-" * 20)
 
@@ -114,7 +123,7 @@ def main():
         print(f"Creating top-level index.json for Generation {target_gen}...")
 
         # Build the final index object with metadata
-        final_index = {
+        final_index: Dict[str, Any] = {
             "metadata": {
                 "generation": target_gen,
                 "createdAt": datetime.now(timezone.utc).isoformat(),
