@@ -12,9 +12,11 @@ jobs:
       contents: write
 
     steps:
-      # 1. Check out the 'main' branch to get the scripts
-      - name: Check out main branch
+      # 1. Check out the 'main' branch and fetch all branch history
+      - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # 2. Set up Python
       - name: Set up Python
@@ -37,7 +39,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           echo "Switching to the data branch..."
-          git checkout -t origin/data
+          git checkout data
 
           echo "Restructuring data folders..."
           mv data/* .
