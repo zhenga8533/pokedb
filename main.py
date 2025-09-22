@@ -1,6 +1,6 @@
 import argparse
 
-from src.pokeapi_parser.parsers import ability
+from src.pokeapi_parser.parsers import ability, item
 
 
 def main():
@@ -13,8 +13,7 @@ def main():
 
     available_parsers = {
         "ability": ability.main,
-        # Add new parsers here as you create them
-        # "item": item.main,
+        "item": item.main,
     }
 
     parsers_to_run = []
