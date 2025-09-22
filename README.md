@@ -3,7 +3,6 @@
 [![Update PokéAPI Data](https://github.com/zhenga8533/pokeapi-parser/actions/workflows/update-data.yaml/badge.svg)](https://github.com/zhenga8533/pokeapi-parser/actions/workflows/update-data.yaml)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 A Python-based tool designed to fetch, parse, and structure data from the [PokéAPI](https://pokeapi.co/). This project automates the process of collecting detailed information about Pokémon, their abilities, moves, items, and more, and saves it into a clean, easy-to-use JSON format.
 
