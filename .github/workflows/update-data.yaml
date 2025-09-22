@@ -8,39 +8,49 @@ on:
 jobs:
   build-and-push-data:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
 
     steps:
-      - name: Check out main branch
+      # 1. Check out the existing 'data' branch to preserve its history
+      - name: Check out data branch
         uses: actions/checkout@v4
+        with:
+          ref: data
 
+      # 2. Check out the 'main' branch into a separate directory to get the scripts
+      - name: Check out main branch for scripts
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main_repo
+
+      # 3. Set up Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
+      # 4. Install dependencies from the main_repo checkout
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r main_repo/requirements.txt
 
+      # 5. Run all the parsers from the main_repo checkout
       - name: Run Parsers
-        run: python main.py --all
+        run: python main_repo/main.py --all
 
+      # 6. Commit and push the changes (new folders) back to the 'data' branch
       - name: Commit and Push Data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git checkout --orphan data
-          git rm -rf --cached .
-          git add -f data/
-          git mv data/* .
+          git add .
 
           if git diff --staged --quiet; then
             echo "No data changes to commit."
           else
             git commit -m "Data update: $(date -u)"
-            git push -f origin data
+            git push origin data
             echo "Data pushed successfully."
           fi
