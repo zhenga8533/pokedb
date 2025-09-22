@@ -12,38 +12,36 @@ jobs:
       contents: write
 
     steps:
-      # 1. Check out the existing 'data' branch to preserve its history
-      - name: Check out data branch
+      # 1. Check out the 'main' branch to get the scripts
+      - name: Check out main branch
         uses: actions/checkout@v4
-        with:
-          ref: data
 
-      # 2. Check out the 'main' branch into a separate directory to get the scripts
-      - name: Check out main branch for scripts
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          path: main_repo
-
-      # 3. Set up Python
+      # 2. Set up Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      # 4. Install dependencies from the main_repo checkout
+      # 3. Install dependencies
       - name: Install dependencies
-        run: pip install -r main_repo/requirements.txt
+        run: pip install -r requirements.txt
 
-      # 5. Run all the parsers from the main_repo checkout
+      # 4. Run all the parsers (this creates the local 'data' folder)
       - name: Run Parsers
-        run: python main_repo/main.py --all
+        run: python main.py --all
 
-      # 6. Commit and push the changes (new folders) back to the 'data' branch
+      # 5. Commit and push the data to the 'data' branch
       - name: Commit and Push Data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          echo "Switching to the data branch..."
+          git checkout -t origin/data
+
+          echo "Restructuring data folders..."
+          mv data/* .
+          rm -r data
 
           git add .
 
