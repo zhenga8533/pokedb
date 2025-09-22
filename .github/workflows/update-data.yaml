@@ -32,7 +32,7 @@ jobs:
       - name: Run Parsers
         run: python main.py --all
 
-      # 5. Switch to the data branch, clean old data, and commit new results
+      # 5. Switch to the data branch and sync the new results
       - name: Commit and Push Data
         run: |
           git config user.name "github-actions[bot]"
@@ -46,12 +46,10 @@ jobs:
             exit 0
           fi
 
-          echo "Cleaning up old data directory: $new_gen_dir"
-          rm -rf "$new_gen_dir"
+          echo "Syncing data from output/$new_gen_dir to the root..."
+          rsync -av --delete output/$new_gen_dir/ .
 
-          echo "Restructuring data folders..."
-          mv -T output/$new_gen_dir .
-          rm -r output
+          rm -rf output
 
           git add .
 

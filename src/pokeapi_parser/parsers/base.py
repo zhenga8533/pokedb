@@ -55,7 +55,7 @@ class BaseParser(ABC):
 
         with ThreadPoolExecutor(max_workers=self.config["max_workers"]) as executor:
             future_map = {executor.submit(self.process, item): item for item in all_items}
-            for future in tqdm(as_completed(future_map), total=len(all_items), desc=f"Processing {self.item_name}s"):
+            for future in tqdm(as_completed(future_map), total=len(all_items), desc=f"Processing {self.item_name}"):
                 result = future.result()
                 if isinstance(result, dict) and ("pokemon" in result or "form" in result):
                     pokemon_summaries.extend(result.get("pokemon", []))
