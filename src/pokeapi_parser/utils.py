@@ -1,8 +1,6 @@
 import json
 import os
-import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime
 
 import requests
 from requests.adapters import HTTPAdapter, Retry
@@ -86,38 +84,3 @@ def run_parser(parser_config):
         output_dir_key = f"output_dir_{item_name.lower()}"
         output_path = config[output_dir_key]
         print(f"All {item_name.lower()}s successfully parsed and saved to '{os.path.abspath(output_path)}'.")
-
-
-def git_push_data():
-    """Commits and pushes the 'data' directory to the 'data' branch."""
-    print("\nAttempting to push data to the 'data' branch...")
-    try:
-        original_branch = subprocess.check_output(["git", "rev-parse", "--abbrev-ref", "HEAD"]).strip().decode("utf-8")
-
-        try:
-            subprocess.check_call(["git", "rev-parse", "--verify", "data"])
-            subprocess.check_call(["git", "switch", "data"])
-        except subprocess.CalledProcessError:
-            print("Creating 'data' branch as it does not exist.")
-            subprocess.check_call(["git", "switch", "-c", "data"])
-
-        subprocess.check_call(["git", "add", "data/"])
-
-        status_output = subprocess.check_output(["git", "status", "--porcelain", "data/"]).strip()
-        if not status_output:
-            print("No data changes to commit.")
-        else:
-            commit_message = f"Data update: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-            subprocess.check_call(["git", "commit", "-m", commit_message])
-            print("Pushing to origin/data...")
-            subprocess.check_call(["git", "push", "origin", "data"])
-            print("Data pushed successfully.")
-
-        subprocess.check_call(["git", "switch", original_branch])
-        print(f"Switched back to '{original_branch}' branch.")
-
-    except subprocess.CalledProcessError as e:
-        print(f"An error occurred during Git operations: {e}")
-        print("Please ensure Git is installed, the repository is initialized, and you are authenticated.")
-    except FileNotFoundError:
-        print("Error: Git command not found. Please ensure Git is installed and in your system's PATH.")

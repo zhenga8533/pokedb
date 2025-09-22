@@ -1,0 +1,52 @@
+name: Update PokéAPI Data
+
+# Controls when the action will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Runs on a schedule (this example runs at 05:00 UTC every day)
+  schedule:
+    - cron: "0 5 * * *"
+
+jobs:
+  build-and-push-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the repository's 'main' branch
+      - name: Check out main branch
+        uses: actions/checkout@v4
+
+      # 2. Set up Python 3.12
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 4. Run all the parsers
+      - name: Run Parsers
+        run: python main.py --all
+
+      # 5. Commit and push the data to the 'data' branch
+      - name: Commit and Push Data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout --orphan data
+          git rm -rf --cached .
+          git add -f data/
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "Data update: $(date -u)"
+            git push -f origin data
+            echo "Data pushed successfully."
+          fi
