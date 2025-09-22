@@ -32,13 +32,14 @@ jobs:
       - name: Run Parsers
         run: python main.py --all
 
-      # 5. Switch to the data branch and sync the new results
+      # 5. Switch to the data branch, replace old data, and commit new results
       - name: Commit and Push Data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout data
 
+          # Find the new generation directory name (e.g., "gen9")
           new_gen_dir=$(find output -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | head -n 1)
 
           if [ -z "$new_gen_dir" ]; then
@@ -46,11 +47,18 @@ jobs:
             exit 0
           fi
 
-          echo "Syncing data from output/$new_gen_dir to the root..."
-          rsync -av --delete output/$new_gen_dir/ .
+          # Remove the old directory from the branch to handle deleted files
+          echo "Removing old directory: $new_gen_dir"
+          rm -rf "./$new_gen_dir"
 
+          # Move the newly generated directory into the root
+          echo "Moving new data into place..."
+          mv "output/$new_gen_dir" .
+
+          # Clean up the now-empty output folder
           rm -rf output
 
+          # Add all changes, including new files and deletions
           git add .
 
           if git diff --staged --quiet; then
