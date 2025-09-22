@@ -18,24 +18,24 @@ jobs:
         with:
           fetch-depth: 0
 
-      # 2. Configure Git and switch to the data branch immediately
+      # 2. Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 4. Configure Git and switch to the data branch
       - name: Switch to Data Branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout data
 
-      # 3. Set up Python
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      # 4. Install dependencies
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      # 5. Run all the parsers (this creates the local 'data' folder)
+      # 5. Run all the parsers
       - name: Run Parsers
         run: python main.py --all
 
