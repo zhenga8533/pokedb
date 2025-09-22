@@ -10,8 +10,8 @@ from .base import BaseParser
 class MoveParser(BaseParser):
     """A parser for Pokémon moves."""
 
-    def __init__(self, config, session, generation_version_groups, target_gen):
-        super().__init__(config, session, generation_version_groups, target_gen)
+    def __init__(self, config, session, generation_version_groups, target_gen, generation_dex_map=None):
+        super().__init__(config, session, generation_version_groups, target_gen, generation_dex_map)
         self.item_name = "Move"
         self.api_endpoint = "move"
         self.output_dir_key = "output_dir_move"

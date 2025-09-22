@@ -76,24 +76,25 @@ def main():
 
     all_summaries = {}
 
-    # Run the efficient parsers
-    parser_map = {
-        "abilities": (
-            AbilityParser(final_config, session, generation_version_groups, target_gen),
-            cumulative_abilities,
-        ),
-        "moves": (MoveParser(final_config, session, generation_version_groups, target_gen), cumulative_moves),
-        "pokemon_species": (
-            PokemonParser(final_config, session, generation_version_groups, target_gen, generation_dex_map),
-            cumulative_pokemon_species,
-        ),
+    # Define all parsers that take a list of API refs
+    list_based_parsers = {
+        "ability": (AbilityParser, cumulative_abilities),
+        "move": (MoveParser, cumulative_moves),
+        "pokemon": (PokemonParser, cumulative_pokemon_species),
     }
-    for api_key, (parser_instance, item_list) in parser_map.items():
-        parser_name = parser_instance.item_name.lower()
-        if args.all or parser_name in args.parsers:
+
+    for name, (ParserClass, item_list) in list_based_parsers.items():
+        if args.all or name in args.parsers:
+            parser_instance = ParserClass(
+                final_config, session, generation_version_groups, target_gen, generation_dex_map
+            )
             summary_data = parser_instance.run(item_list)
             if summary_data:
-                all_summaries[parser_name] = summary_data
+                # Special handling for PokemonParser which returns a dict of summaries
+                if name == "pokemon":
+                    all_summaries.update(summary_data)
+                else:
+                    all_summaries[name] = summary_data
             print("-" * 20)
 
     # Run the special Item parser if requested
@@ -102,7 +103,7 @@ def main():
         response = session.get(item_master_list_url, timeout=config["timeout"])
         all_items = response.json()["results"]
 
-        item_parser = ItemParser(final_config, session, generation_version_groups, target_gen)
+        item_parser = ItemParser(final_config, session, generation_version_groups, target_gen, generation_dex_map)
         summary_data = item_parser.run(all_items)
         if summary_data:
             all_summaries["item"] = summary_data

@@ -8,20 +8,20 @@ from .base import BaseParser
 
 
 class PokemonParser(BaseParser):
-    """A parser for Pokémon."""
+    """
+    A comprehensive parser for Pokémon species and all their forms/varieties.
+    """
 
     def __init__(self, config, session, generation_version_groups, target_gen, generation_dex_map):
         super().__init__(config, session, generation_version_groups, target_gen, generation_dex_map)
         self.item_name = "Pokemon"
-        self.api_endpoint = "pokemon"
-        self.output_dir_key = "output_dir_pokemon"
+        self.output_dir_key_pokemon = "output_dir_pokemon"
+        self.output_dir_key_form = "output_dir_form"
         self.evolution_cache = {}
 
     def _get_evolution_chain(self, chain_url):
-        """Recursively fetches and processes an evolution chain."""
         if chain_url in self.evolution_cache:
             return self.evolution_cache[chain_url]
-
         try:
             response = self.session.get(chain_url, timeout=self.config["timeout"])
             response.raise_for_status()
@@ -31,8 +31,8 @@ class PokemonParser(BaseParser):
                 species_name = chain["species"]["name"]
                 evolves_to = []
                 for evolution in chain.get("evolves_to", []):
-                    evolution_details_list = evolution.get("evolution_details", [])
-                    details = evolution_details_list[0] if evolution_details_list else {}
+                    details_list = evolution.get("evolution_details", [])
+                    details = details_list[0] if details_list else {}
                     next_evolution = recurse_chain(evolution)
                     evolves_to.append(
                         {
@@ -65,168 +65,191 @@ class PokemonParser(BaseParser):
             result = recurse_chain(chain_data)
             self.evolution_cache[chain_url] = result
             return result
-
         except requests.exceptions.RequestException as e:
             print(f"Warning: Could not fetch evolution chain from {chain_url}. Error: {e}")
             return None
 
-    def _get_generation_moves(self, moves):
-        """Filters moves that are available in the target generation."""
-        gen_moves = {}
-        target_version_groups = self.generation_version_groups.get(self.target_gen, [])
-        for move in moves:
-            move_name = move["move"]["name"]
-            for version_group_details in move["version_group_details"]:
-                if version_group_details["version_group"]["name"] in target_version_groups:
-                    learn_method = version_group_details["move_learn_method"]["name"]
-                    if learn_method not in gen_moves:
-                        gen_moves[learn_method] = []
-                    gen_moves[learn_method].append(
-                        {
-                            "name": move_name,
-                            "level_learned_at": version_group_details["level_learned_at"],
-                        }
-                    )
-        return gen_moves
+    def _get_generation_data(self, data, key, name_key, details_key, version_key):
+        gen_data = {}
+        target_groups = self.generation_version_groups.get(self.target_gen, [])
+        for item in data.get(key, []):
+            item_name = item[name_key]["name"]
+            for details in item[details_key]:
+                if details[version_key]["name"] in target_groups:
+                    if name_key == "move":
+                        method = details["move_learn_method"]["name"]
+                        if method not in gen_data:
+                            gen_data[method] = []
+                        gen_data[method].append({"name": item_name, "level_learned_at": details["level_learned_at"]})
+                    else:  # held_items
+                        gen_data[item_name] = details["rarity"]
+                        break
+        return gen_data
 
     def _process_sprites(self, sprites):
-        """
-        Filters the versions sprites object to only include the target generation.
-        """
         if not sprites or "versions" not in sprites:
             return sprites
-
-        # Map generation number to the API's roman numeral string
         roman_map = {1: "i", 2: "ii", 3: "iii", 4: "iv", 5: "v", 6: "vi", 7: "vii", 8: "viii", 9: "ix"}
         gen_roman = roman_map.get(self.target_gen)
         if not gen_roman:
-            sprites["versions"] = {}  # Clear versions if gen is not mapped
+            sprites["versions"] = {}
             return sprites
-
         gen_key = f"generation-{gen_roman}"
-
-        # Keep only the target generation's sprites
-        filtered_versions = {gen_key: sprites["versions"].get(gen_key, {})}
-        sprites["versions"] = filtered_versions
-
+        sprites["versions"] = {gen_key: sprites["versions"].get(gen_key, {})}
         return sprites
 
-    def _get_generation_held_items(self, held_items):
-        """Filters held items for the target generation and simplifies the structure."""
-        gen_items = {}
-        # Get all version group names for the target generation
-        target_version_group_names = self.generation_version_groups.get(self.target_gen, [])
-
-        for item in held_items:
-            item_name = item["item"]["name"]
-            for version_details in item["version_details"]:
-                # The version name in the held_item details matches a version name, not version_group
-                # We need to find which version_group this version belongs to.
-                # This is complex, so for now we'll assume a version name contains a keyword
-                # from the version_group names for simplicity. A truly robust solution
-                # would pre-fetch all version and version_group data.
-                version_name = version_details["version"]["name"]
-                if any(vg_name in version_name for vg_name in target_version_group_names):
-                    gen_items[item_name] = version_details["rarity"]
-                    break
-        return gen_items
-
     def _get_generation_pokedex_numbers(self, pokedex_numbers):
-        """Filters Pokédex numbers for national and the target generation's regional dex."""
         gen_numbers = {}
         regional_dex_name = self.generation_dex_map.get(self.target_gen)
-
         for entry in pokedex_numbers:
             pokedex_name = entry["pokedex"]["name"]
             if pokedex_name == "national" or pokedex_name == regional_dex_name:
                 gen_numbers[pokedex_name] = entry["entry_number"]
-
         return gen_numbers
 
-    def process(self, item_ref):
-        """Processes a single Pokémon species from its API reference."""
+    def process(self, species_ref):
+        """Processes a Pokémon species and all its varieties, saving them to pokemon/ and form/ dirs."""
         try:
-            # --- Step 1: Fetch the SPECIES data ---
-            species_response = self.session.get(item_ref["url"], timeout=self.config["timeout"])
-            species_response.raise_for_status()
-            species_data = species_response.json()
+            species_res = self.session.get(species_ref["url"], timeout=self.config["timeout"])
+            species_res.raise_for_status()
+            species_data = species_res.json()
 
-            # --- Step 2: Find the default variety and fetch the main POKEMON data ---
-            default_pokemon_url = None
-            for variety in species_data.get("varieties", []):
-                if variety.get("is_default", False):
-                    default_pokemon_url = variety["pokemon"]["url"]
-                    break
+            generation_url = species_data.get("generation", {}).get("url", "")
+            if generation_url and int(generation_url.split("/")[-2]) > self.target_gen:
+                return None
 
-            if not default_pokemon_url and species_data.get("varieties"):
-                default_pokemon_url = species_data["varieties"][0]["pokemon"]["url"]
-
-            if not default_pokemon_url:
-                raise ValueError("No varieties found for this species")
-
-            pokemon_response = self.session.get(default_pokemon_url, timeout=self.config["timeout"])
-            pokemon_response.raise_for_status()
-            pokemon_data = pokemon_response.json()
-
-            # --- Step 3: Get Evolution Chain ---
             evolution_chain = self._get_evolution_chain(species_data["evolution_chain"]["url"])
 
-            # --- Step 4: Combine data from all endpoints ---
-            cleaned_data = {
-                "id": pokemon_data["id"],
-                "name": pokemon_data["name"],
-                "species": species_data["name"],
-                "source_url": item_ref["url"],
-                "height": pokemon_data["height"],
-                "weight": pokemon_data["weight"],
-                "base_experience": pokemon_data["base_experience"],
-                "base_happiness": species_data.get("base_happiness"),
-                "capture_rate": species_data.get("capture_rate"),
-                "hatch_counter": species_data.get("hatch_counter"),
-                "gender_rate": species_data.get("gender_rate"),
-                "has_gender_differences": species_data.get("has_gender_differences"),
-                "is_baby": species_data.get("is_baby"),
-                "is_legendary": species_data.get("is_legendary"),
-                "is_mythical": species_data.get("is_mythical"),
-                "cries": pokemon_data.get("cries", {}),
-                "types": [t["type"]["name"] for t in pokemon_data.get("types", [])],
-                "abilities": [
-                    {"name": a["ability"]["name"], "is_hidden": a["is_hidden"], "slot": a["slot"]}
-                    for a in pokemon_data.get("abilities", [])
-                ],
-                "stats": {s["stat"]["name"]: s["base_stat"] for s in pokemon_data.get("stats", [])},
-                "ev_yield": [
-                    {"stat": s["stat"]["name"], "effort": s["effort"]}
-                    for s in pokemon_data.get("stats", [])
-                    if s["effort"] > 0
-                ],
-                "held_items": self._get_generation_held_items(pokemon_data.get("held_items", [])),
-                "forms": [form["name"] for form in pokemon_data.get("forms", [])],
-                "sprites": self._process_sprites(pokemon_data.get("sprites", {})),
-                "moves": self._get_generation_moves(pokemon_data.get("moves", [])),
-                "pokedex_numbers": self._get_generation_pokedex_numbers(species_data.get("pokedex_numbers", [])),
-                "color": species_data.get("color", {}).get("name"),
-                "shape": species_data.get("shape", {}).get("name"),
-                "egg_groups": [group["name"] for group in species_data.get("egg_groups", [])],
-                "flavor_text": get_english_entry(
-                    species_data.get("flavor_text_entries", []),
-                    "flavor_text",
-                    self.generation_version_groups,
-                    self.target_gen,
-                ),
-                "genus": get_english_entry(species_data.get("genera", []), "genus"),
-                "generation": species_data.get("generation", {}).get("name"),
-                "evolution_chain": evolution_chain,
-            }
+            # This list will hold the summary dicts for ALL forms of this species
+            summaries = {"pokemon": [], "form": []}
 
-            output_path = self.config[self.output_dir_key]
-            os.makedirs(output_path, exist_ok=True)
-            file_path = os.path.join(output_path, f"{cleaned_data['name']}.json")
-            with open(file_path, "w", encoding="utf-8") as f:
-                json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
+            for variety in species_data.get("varieties", []):
+                pokemon_res = self.session.get(variety["pokemon"]["url"], timeout=self.config["timeout"])
+                pokemon_res.raise_for_status()
+                pokemon_data = pokemon_res.json()
 
-            return {"name": cleaned_data["name"], "id": cleaned_data["id"], "types": cleaned_data["types"]}
+                is_default_form = variety.get("is_default", False)
+
+                # --- Create the combined JSON object ---
+                cleaned_data = {
+                    "id": pokemon_data["id"],
+                    "name": pokemon_data["name"],
+                    "species": species_data["name"],
+                    "is_default": is_default_form,
+                    "source_url": variety["pokemon"]["url"],
+                    "types": [t["type"]["name"] for t in pokemon_data.get("types", [])],
+                    "abilities": [
+                        {"name": a["ability"]["name"], "is_hidden": a["is_hidden"], "slot": a["slot"]}
+                        for a in pokemon_data.get("abilities", [])
+                    ],
+                    "stats": {s["stat"]["name"]: s["base_stat"] for s in pokemon_data.get("stats", [])},
+                    "ev_yield": [
+                        {"stat": s["stat"]["name"], "effort": s["effort"]}
+                        for s in pokemon_data.get("stats", [])
+                        if s["effort"] > 0
+                    ],
+                    "height": pokemon_data["height"],
+                    "weight": pokemon_data["weight"],
+                    "cries": pokemon_data.get("cries", {}),
+                    "sprites": self._process_sprites(pokemon_data.get("sprites", {})),
+                }
+
+                # --- Add species-level data ONLY to the default form ---
+                if is_default_form:
+                    cleaned_data.update(
+                        {
+                            "base_experience": pokemon_data["base_experience"],
+                            "base_happiness": species_data.get("base_happiness"),
+                            "capture_rate": species_data.get("capture_rate"),
+                            "hatch_counter": species_data.get("hatch_counter"),
+                            "gender_rate": species_data.get("gender_rate"),
+                            "has_gender_differences": species_data.get("has_gender_differences"),
+                            "is_baby": species_data.get("is_baby"),
+                            "is_legendary": species_data.get("is_legendary"),
+                            "is_mythical": species_data.get("is_mythical"),
+                            "pokedex_numbers": self._get_generation_pokedex_numbers(
+                                species_data.get("pokedex_numbers", [])
+                            ),
+                            "color": species_data.get("color", {}).get("name"),
+                            "shape": species_data.get("shape", {}).get("name"),
+                            "egg_groups": [group["name"] for group in species_data.get("egg_groups", [])],
+                            "flavor_text": get_english_entry(
+                                species_data.get("flavor_text_entries", []),
+                                "flavor_text",
+                                self.generation_version_groups,
+                                self.target_gen,
+                            ),
+                            "genus": get_english_entry(species_data.get("genera", []), "genus"),
+                            "generation": species_data.get("generation", {}).get("name"),
+                            "evolution_chain": evolution_chain,
+                            "held_items": self._get_generation_data(
+                                pokemon_data, "held_items", "item", "version_details", "version"
+                            ),
+                            "moves": self._get_generation_data(
+                                pokemon_data, "moves", "move", "version_group_details", "version_group"
+                            ),
+                            "forms": [v["pokemon"]["name"] for v in species_data.get("varieties", [])],
+                        }
+                    )
+
+                # --- Save the file and create the summary ---
+                output_dir = self.config[self.output_dir_key_pokemon if is_default_form else self.output_dir_key_form]
+                os.makedirs(output_dir, exist_ok=True)
+                file_path = os.path.join(output_dir, f"{cleaned_data['name']}.json")
+                with open(file_path, "w", encoding="utf-8") as f:
+                    json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
+
+                summary_key = "pokemon" if is_default_form else "form"
+                summaries[summary_key].append(
+                    {
+                        "name": cleaned_data["name"],
+                        "id": cleaned_data["id"],
+                        "types": cleaned_data["types"],
+                        "sprite": cleaned_data["sprites"].get("front_default"),
+                    }
+                )
+
+            return summaries
+
         except requests.exceptions.RequestException as e:
-            return f"Request failed for {item_ref['name']}: {e}"
+            return f"Request failed for {species_ref['name']}: {e}"
         except (ValueError, KeyError, TypeError) as e:
-            return f"Parsing failed for {item_ref['name']}: {e}"
+            return f"Parsing failed for {species_ref['name']}: {e}"
+
+    def run(self, all_items):
+        """Override the base run method to handle the dict of summaries from process."""
+        print(f"--- Running {self.item_name} Parser ---")
+        if not all_items:
+            print(f"No {self.item_name.lower()}s to process.")
+            return {}
+
+        print(f"Found {len(all_items)} species. Parsing all Pokemon and Forms...")
+        errors = []
+        # We now have two distinct summary lists to build
+        pokemon_summaries = []
+        form_summaries = []
+
+        from concurrent.futures import ThreadPoolExecutor, as_completed
+
+        from tqdm import tqdm
+
+        with ThreadPoolExecutor(max_workers=self.config["max_workers"]) as executor:
+            future_map = {executor.submit(self.process, item): item for item in all_items}
+            for future in tqdm(as_completed(future_map), total=len(all_items), desc="Processing Species"):
+                result = future.result()
+                if isinstance(result, dict):
+                    pokemon_summaries.extend(result.get("pokemon", []))
+                    form_summaries.extend(result.get("form", []))
+                elif result is not None:
+                    errors.append(result)
+
+        print("\nPokemon and Form processing complete.")
+        if errors:
+            print("\nThe following errors occurred:")
+            for error in errors:
+                print(f"- {error}")
+
+        pokemon_summaries.sort(key=lambda x: x["id"])
+        form_summaries.sort(key=lambda x: x["id"])
+
+        return {"pokemon": pokemon_summaries, "form": form_summaries}
