@@ -35,6 +35,7 @@ jobs:
           git checkout --orphan data
           git rm -rf --cached .
           git add -f data/
+          git mv data/* .
 
           if git diff --staged --quiet; then
             echo "No data changes to commit."

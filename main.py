@@ -1,13 +1,18 @@
 import argparse
 
-from src.pokeapi_parser.parsers import ability, item, move, pokemon
+from src.pokeapi_parser.parsers.ability import AbilityParser
+from src.pokeapi_parser.parsers.item import ItemParser
+from src.pokeapi_parser.parsers.move import MoveParser
+from src.pokeapi_parser.parsers.pokemon import PokemonParser
 from src.pokeapi_parser.utils import get_latest_generation, load_config, setup_session
 
 
 def main():
     """Main entry point to run the specified parsers."""
     parser = argparse.ArgumentParser(description="Run parsers for the PokéAPI.")
-    parser.add_argument("parsers", nargs="*", help="The name(s) of the parser to run.")
+    parser.add_argument(
+        "parsers", nargs="*", help="The name(s) of the parser to run (e.g., ability, item, move, pokemon)."
+    )
     parser.add_argument("--all", action="store_true", help="Run all available parsers.")
     args = parser.parse_args()
 
@@ -18,9 +23,15 @@ def main():
         if key.startswith("output_dir_"):
             config[key] = config[key].format(gen_num=latest_gen_num)
 
-    available_parsers = {"ability": ability.main, "item": item.main, "move": move.main, "pokemon": pokemon.main}
-    parsers_to_run = []
+    # Map names to class instances
+    available_parsers = {
+        "ability": AbilityParser(config, session),
+        "item": ItemParser(config, session),
+        "move": MoveParser(config, session),
+        "pokemon": PokemonParser(config, session),
+    }
 
+    parsers_to_run = []
     if args.all:
         parsers_to_run = list(available_parsers.values())
     else:
@@ -31,12 +42,12 @@ def main():
                 print(f"Warning: Parser '{parser_name}' not found. Skipping.")
 
     if not parsers_to_run:
-        print("No valid parsers specified. Use --all or provide a name.")
+        print("No valid parsers specified.")
         return
 
     if parsers_to_run:
-        for run_parser_func in parsers_to_run:
-            run_parser_func(config, session)
+        for parser_instance in parsers_to_run:
+            parser_instance.run()
             print("-" * 20)
 
 
