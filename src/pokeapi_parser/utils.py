@@ -35,6 +35,35 @@ def get_latest_generation(session, config):
         return 9  # Fallback to a sensible default
 
 
+def get_generation_dex_map(session, config):
+    """Fetches all Pokédexes and creates a map of generation number to regional dex name."""
+    print("Fetching Pokédex information...")
+    dex_map = {}
+    try:
+        # The pokedex endpoint is not paginated, but we set a high limit to be safe
+        response = session.get(f"{config['api_base_url']}pokedex?limit=100", timeout=config["timeout"])
+        response.raise_for_status()
+        pokedexes = response.json()["results"]
+        for pokedex_ref in pokedexes:
+            # We need to fetch the individual pokedex to find its generation
+            dex_res = session.get(pokedex_ref["url"], timeout=config["timeout"])
+            dex_res.raise_for_status()
+            dex_data = dex_res.json()
+            if dex_data.get("is_main_series") and "version_groups" in dex_data and dex_data["version_groups"]:
+                # Fetch the version group to find the generation
+                vg_res = session.get(dex_data["version_groups"][0]["url"], timeout=config["timeout"])
+                vg_res.raise_for_status()
+                vg_data = vg_res.json()
+                gen_num = int(vg_data["generation"]["url"].split("/")[-2])
+                if gen_num not in dex_map:  # Only take the first main series dex we find for a gen
+                    dex_map[gen_num] = dex_data["name"]
+        print("Successfully created Pokédex map.")
+        return dex_map
+    except Exception as e:
+        print(f"Could not create Pokédex map. Falling back to manual mapping. Error: {e}")
+        exit(1)
+
+
 def get_english_entry(entries, key_name, generation_version_groups=None, target_gen=None):
     """
     Finds and cleans the English entry from a list of multilingual API entries.
@@ -45,7 +74,7 @@ def get_english_entry(entries, key_name, generation_version_groups=None, target_
         return None
 
     # This logic applies to any key that has version_group specific entries.
-    if "version_group" in entries[0] and generation_version_groups and target_gen:
+    if entries and "version_group" in entries[0] and generation_version_groups and target_gen:
         # Create a master list of all version groups from latest to oldest
         all_version_groups = []
         for gen in range(target_gen, 0, -1):

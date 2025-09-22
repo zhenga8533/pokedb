@@ -8,11 +8,12 @@ from tqdm import tqdm
 class BaseParser(ABC):
     """An abstract base class for all parsers."""
 
-    def __init__(self, config, session, generation_version_groups, target_gen: int):
+    def __init__(self, config, session, generation_version_groups=None, target_gen=None, generation_dex_map=None):
         self.config = config
         self.session = session
         self.generation_version_groups = generation_version_groups
         self.target_gen = target_gen
+        self.generation_dex_map = generation_dex_map
         self.item_name = ""  # e.g., "Ability", "Item"
         self.api_endpoint = ""  # e.g., "ability", "item"
         self.output_dir_key = ""  # e.g., "output_dir_ability"

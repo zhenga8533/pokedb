@@ -7,7 +7,12 @@ from src.pokeapi_parser.parsers.ability import AbilityParser
 from src.pokeapi_parser.parsers.item import ItemParser
 from src.pokeapi_parser.parsers.move import MoveParser
 from src.pokeapi_parser.parsers.pokemon import PokemonParser
-from src.pokeapi_parser.utils import get_latest_generation, load_config, setup_session
+from src.pokeapi_parser.utils import (
+    get_generation_dex_map,
+    get_latest_generation,
+    load_config,
+    setup_session,
+)
 
 
 def main():
@@ -42,6 +47,7 @@ def main():
     cumulative_moves = []
     cumulative_pokemon_species = []
     generation_version_groups = {}
+    generation_dex_map = get_generation_dex_map(session, config)
 
     for gen_num in range(1, target_gen + 1):
         try:
@@ -78,7 +84,7 @@ def main():
         ),
         "moves": (MoveParser(final_config, session, generation_version_groups, target_gen), cumulative_moves),
         "pokemon_species": (
-            PokemonParser(final_config, session, generation_version_groups, target_gen),
+            PokemonParser(final_config, session, generation_version_groups, target_gen, generation_dex_map),
             cumulative_pokemon_species,
         ),
     }
