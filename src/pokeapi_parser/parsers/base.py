@@ -23,19 +23,13 @@ class BaseParser(ABC):
         """
         pass
 
-    def run(self):
+    def run(self, all_items):
         """The main execution logic for a parser, returns summary data."""
-        print(f"Starting the {self.item_name} Parser...")
-        master_list_url = f"{self.config['api_base_url']}{self.api_endpoint}?limit=3000"
+        print(f"--- Running {self.item_name} Parser ---")
 
-        print(f"Fetching master list of {self.item_name.lower()}s...")
-        try:
-            response = self.session.get(master_list_url, timeout=self.config["timeout"])
-            response.raise_for_status()
-            all_items = response.json()["results"]
-        except Exception as e:
-            print(f"Fatal: Could not fetch {self.item_name.lower()} list. {e}")
-            return None
+        if not all_items:
+            print(f"No {self.item_name.lower()}s to process for this generation.")
+            return []
 
         print(f"Found {len(all_items)} {self.item_name.lower()}s. Starting concurrent processing...")
         errors = []
