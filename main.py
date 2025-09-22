@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+from datetime import datetime, timezone
 
 from src.pokeapi_parser.parsers.ability import AbilityParser
 from src.pokeapi_parser.parsers.item import ItemParser
@@ -12,7 +13,7 @@ from src.pokeapi_parser.utils import get_latest_generation, load_config, setup_s
 def main():
     """Main entry point to run the specified parsers."""
     parser = argparse.ArgumentParser(description="Run parsers for the PokéAPI.")
-    parser.add_argument("parsers", nargs="*", help="The name(s) of the parser to run.")
+    parser.add_argument("parsers", nargs="*", help="The name(s) of the parser to run (e.g., ability, item).")
     parser.add_argument("--all", action="store_true", help="Run all available parsers.")
     parser.add_argument(
         "--gen",
@@ -50,7 +51,7 @@ def main():
 
     print("Finished gathering data.")
 
-    # --- Part 2: Parsing and Saving Loop (Runs only ONCE) ---
+    # --- Part 2: Parsing and Saving (Runs only ONCE) ---
     print(f"\n{'='*10} PARSING ALL DATA FOR GENERATION {target_gen} {'='*10}")
 
     # Update config paths for the target generation
@@ -59,12 +60,14 @@ def main():
         if key.startswith("output_dir_"):
             final_config[key] = final_config[key].format(gen_num=target_gen)
 
+    all_summaries = {}
+
+    # Run the efficient parsers
     parser_map = {
         "abilities": (AbilityParser(final_config, session), cumulative_abilities),
         "moves": (MoveParser(final_config, session), cumulative_moves),
         "pokemon_species": (PokemonParser(final_config, session), cumulative_pokemon_species),
     }
-    all_summaries = {}
     for api_key, (parser_instance, item_list) in parser_map.items():
         parser_name = parser_instance.item_name.lower()
         if args.all or parser_name in args.parsers:
@@ -80,21 +83,33 @@ def main():
         response = session.get(item_master_list_url, timeout=config["timeout"])
         all_items = response.json()["results"]
 
-        # We need to re-instantiate the item parser with the final config
         item_parser = ItemParser(final_config, session)
-        # We also need to modify its run method to only save to the target gen, not all of them.
-        # For now, let's keep its special cumulative saving logic as it is correct.
-        item_parser.run(all_items)
+        summary_data = item_parser.run(all_items)
+        if summary_data:
+            all_summaries["item"] = summary_data
+        print("-" * 20)
 
     # Write the single index.json file for the target generation
     if all_summaries:
-        print(f"Creating index.json for Generation {target_gen}...")
+        print(f"Creating top-level index.json for Generation {target_gen}...")
+
+        # Build the final index object with metadata
+        final_index = {
+            "metadata": {
+                "generation": target_gen,
+                "createdAt": datetime.now(timezone.utc).isoformat(),
+                "counts": {key: len(value) for key, value in all_summaries.items()},
+            }
+        }
+        final_index.update(all_summaries)
+
         top_level_path = os.path.dirname(final_config["output_dir_ability"])
         os.makedirs(top_level_path, exist_ok=True)
         index_file_path = os.path.join(top_level_path, "index.json")
+
         with open(index_file_path, "w", encoding="utf-8") as f:
-            json.dump(all_summaries, f, indent=4, ensure_ascii=False)
-        print(f"index.json for Generation {target_gen} created successfully.")
+            json.dump(final_index, f, indent=4, ensure_ascii=False)
+        print(f"Top-level index.json created successfully at '{index_file_path}'")
 
 
 if __name__ == "__main__":

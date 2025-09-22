@@ -50,7 +50,13 @@ class MoveParser(BaseParser):
             file_path = os.path.join(output_path, f"{cleaned_data['name']}.json")
             with open(file_path, "w", encoding="utf-8") as f:
                 json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
-            return None
+
+            return {
+                "name": cleaned_data["name"],
+                "id": cleaned_data["id"],
+                "type": cleaned_data["type"],
+                "damage_class": cleaned_data["damage_class"],
+            }
         except requests.exceptions.RequestException as e:
             return f"Request failed for {item_ref['name']}: {e}"
         except (KeyError, TypeError) as e:

@@ -58,7 +58,9 @@ class ItemParser(BaseParser):
                 with open(file_path, "w", encoding="utf-8") as f:
                     json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
 
-            return None  # Success
+                return {"name": cleaned_data["name"], "id": cleaned_data["id"], "sprite": cleaned_data["sprite"]}
+
+            return None
         except requests.exceptions.RequestException as e:
             return f"Request failed for {item_ref['name']}: {e}"
         except (ValueError, KeyError, TypeError) as e:

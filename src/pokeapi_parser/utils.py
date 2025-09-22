@@ -1,10 +1,8 @@
 import json
 import os
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 from requests.adapters import HTTPAdapter, Retry
-from tqdm import tqdm
 
 
 def load_config():
@@ -45,42 +43,3 @@ def get_english_entry(entries, key_name):
         if entry.get("language", {}).get("name") == "en":
             return " ".join(entry[key_name].split())
     return None
-
-
-def run_parser(parser_config):
-    """A generic runner for fetching and processing a list of items concurrently."""
-    item_name = parser_config["item_name"]
-    master_list_url = parser_config["master_list_url"]
-    processing_func = parser_config["processing_func"]
-    session = parser_config["session"]
-    config = parser_config["config"]
-
-    print(f"Fetching master list of {item_name.lower()}s...")
-    try:
-        response = session.get(master_list_url, timeout=config["timeout"])
-        response.raise_for_status()
-        all_items = response.json()["results"]
-    except requests.exceptions.RequestException as e:
-        print(f"Fatal: Could not fetch {item_name.lower()} list. {e}")
-        return
-
-    print(f"Found {len(all_items)} {item_name.lower()}s. Starting concurrent processing...")
-
-    errors = []
-    with ThreadPoolExecutor(max_workers=config["max_workers"]) as executor:
-        future_map = {executor.submit(processing_func, item, session, config): item for item in all_items}
-
-        for future in tqdm(as_completed(future_map), total=len(all_items), desc=f"Processing {item_name}s"):
-            result = future.result()
-            if result:
-                errors.append(result)
-
-    print(f"\n{item_name} processing complete.")
-    if errors:
-        print("\nThe following errors occurred:")
-        for error in errors:
-            print(f"- {error}")
-    else:
-        output_dir_key = f"output_dir_{item_name.lower()}"
-        output_path = config[output_dir_key]
-        print(f"All {item_name.lower()}s successfully parsed and saved to '{os.path.abspath(output_path)}'.")

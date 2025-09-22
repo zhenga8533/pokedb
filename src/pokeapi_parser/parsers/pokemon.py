@@ -73,7 +73,8 @@ class PokemonParser(BaseParser):
             file_path = os.path.join(output_path, f"{cleaned_data['name']}.json")
             with open(file_path, "w", encoding="utf-8") as f:
                 json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
-            return None
+
+            return {"name": cleaned_data["name"], "id": cleaned_data["id"], "types": cleaned_data["types"]}
         except requests.exceptions.RequestException as e:
             return f"Request failed for {item_ref['name']}: {e}"
         except (ValueError, KeyError, TypeError) as e:
