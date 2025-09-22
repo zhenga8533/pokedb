@@ -12,35 +12,36 @@ jobs:
       contents: write
 
     steps:
-      # 1. Check out the 'main' branch and fetch all branch history
+      # 1. Check out the repository and fetch all branch history
       - name: Check out repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # 2. Set up Python
+      # 2. Configure Git and switch to the data branch immediately
+      - name: Switch to Data Branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout data
+
+      # 3. Set up Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      # 3. Install dependencies
+      # 4. Install dependencies
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # 4. Run all the parsers (this creates the local 'data' folder)
+      # 5. Run all the parsers (this creates the local 'data' folder)
       - name: Run Parsers
         run: python main.py --all
 
-      # 5. Commit and push the data to the 'data' branch
+      # 6. Commit and push the new data
       - name: Commit and Push Data
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          echo "Switching to the data branch..."
-          git checkout data
-
           echo "Restructuring data folders..."
           mv data/* .
           rm -r data
