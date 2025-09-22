@@ -1,6 +1,6 @@
 import argparse
 
-from src.pokeapi_parser.parsers import ability, item, move
+from src.pokeapi_parser.parsers import ability, item, move, pokemon
 
 
 def main():
@@ -15,6 +15,7 @@ def main():
         "ability": ability.main,
         "item": item.main,
         "move": move.main,
+        "pokemon": pokemon.main,
     }
 
     parsers_to_run = []
