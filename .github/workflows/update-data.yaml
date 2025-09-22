@@ -32,23 +32,28 @@ jobs:
       - name: Run Parsers
         run: python main.py --all
 
-      # 5. Switch to the data branch, clean the old data, and commit the new results
+      # 5. Switch to the data branch, clean old data, and commit new results
       - name: Commit and Push Data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout data
 
-          new_gen_dir=$(ls -d output/gen* | head -n 1 | cut -d'/' -f2)
+          new_gen_dir=$(find output -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | head -n 1)
+
+          if [ -z "$new_gen_dir" ]; then
+            echo "No generation directory found in output. Nothing to commit."
+            exit 0
+          fi
 
           echo "Cleaning up old data directory: $new_gen_dir"
           rm -rf "$new_gen_dir"
 
           echo "Restructuring data folders..."
-          mv output/* .
+          mv -T output/$new_gen_dir .
           rm -r output
 
-          git add "$new_gen_dir"
+          git add .
 
           if git diff --staged --quiet; then
             echo "No data changes to commit."
