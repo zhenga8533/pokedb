@@ -26,6 +26,7 @@ class AbilityParser(BaseParser):
             cleaned_data = {
                 "id": data["id"],
                 "name": data["name"],
+                "source_url": item_ref["url"],
                 "is_main_series": data["is_main_series"],
                 "generation": data.get("generation", {}).get("name"),
                 "effect": get_english_entry(data.get("effect_entries", []), "effect"),

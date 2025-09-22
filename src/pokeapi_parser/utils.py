@@ -36,22 +36,37 @@ def get_latest_generation(session, config):
 
 
 def get_english_entry(entries, key_name, generation_version_groups=None, target_gen=None):
-    """Finds and cleans the English entry from a list of multilingual API entries."""
+    """
+    Finds and cleans the English entry from a list of multilingual API entries.
+    It prioritizes the latest game version within the target generation.
+    If not found, it searches backwards from the latest known game version.
+    """
     if not entries:
         return None
 
-    if key_name == "flavor_text" and generation_version_groups and target_gen:
-        # Get the version groups for the target generation in reverse order (latest first)
-        version_groups = reversed(generation_version_groups.get(target_gen, []))
-        for version_group in version_groups:
-            for entry in entries:
-                if (
-                    entry.get("language", {}).get("name") == "en"
-                    and entry.get("version_group", {}).get("name") == version_group
-                ):
-                    return " ".join(entry[key_name].split())
+    # This logic applies to any key that has version_group specific entries.
+    if "version_group" in entries[0] and generation_version_groups and target_gen:
+        # Create a master list of all version groups from latest to oldest
+        all_version_groups = []
+        for gen in range(target_gen, 0, -1):
+            # The API for generation provides version groups in oldest-to-newest order
+            # so we reverse it to prioritize newer games within the same generation.
+            all_version_groups.extend(reversed(generation_version_groups.get(gen, [])))
 
-    # Fallback for other keys or if no version-specific entry is found
+        # Create a quick lookup for entries by version_group name
+        entry_map = {}
+        for entry in entries:
+            if entry.get("language", {}).get("name") == "en":
+                version_group_name = entry.get("version_group", {}).get("name")
+                if version_group_name:
+                    entry_map[version_group_name] = entry
+
+        # Find the best match from our prioritized list
+        for vg_name in all_version_groups:
+            if vg_name in entry_map:
+                return " ".join(entry_map[vg_name][key_name].split())
+
+    # Fallback for entries that are not version-specific or if the above logic fails
     for entry in entries:
         if entry.get("language", {}).get("name") == "en":
             return " ".join(entry[key_name].split())

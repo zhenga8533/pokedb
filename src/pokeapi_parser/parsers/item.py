@@ -38,6 +38,7 @@ class ItemParser(BaseParser):
                 cleaned_data = {
                     "id": data["id"],
                     "name": data["name"],
+                    "source_url": item_ref["url"],
                     "cost": data["cost"],
                     "fling_power": data["fling_power"],
                     "fling_effect": fling_effect_name,

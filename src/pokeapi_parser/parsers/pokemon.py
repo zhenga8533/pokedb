@@ -46,6 +46,7 @@ class PokemonParser(BaseParser):
             cleaned_data = {
                 "id": pokemon_data["id"],
                 "name": pokemon_data["name"],
+                "source_url": item_ref["url"],
                 "height": pokemon_data["height"],
                 "weight": pokemon_data["weight"],
                 "base_experience": pokemon_data["base_experience"],

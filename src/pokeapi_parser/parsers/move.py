@@ -26,6 +26,7 @@ class MoveParser(BaseParser):
             cleaned_data = {
                 "id": data["id"],
                 "name": data["name"],
+                "source_url": item_ref["url"],
                 "accuracy": data.get("accuracy"),
                 "power": data.get("power"),
                 "pp": data["pp"],
