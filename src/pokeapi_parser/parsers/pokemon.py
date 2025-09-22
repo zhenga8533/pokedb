@@ -34,7 +34,6 @@ class PokemonParser(BaseParser):
                 species_name = chain["species"]["name"]
                 evolves_to: List[Dict[str, Any]] = []
                 for evolution in chain.get("evolves_to", []):
-                    # Robustly handle empty evolution_details list
                     details_list = evolution.get("evolution_details", [])
                     details = details_list[0] if details_list else {}
                     next_evolution = recurse_chain(evolution)
@@ -94,17 +93,30 @@ class PokemonParser(BaseParser):
         return gen_data
 
     def _process_sprites(self, sprites: Dict[str, Any]) -> Dict[str, Any]:
-        """Filters the versions sprites object to only include the target generation."""
-        if not sprites or "versions" not in sprites or self.target_gen is None:
-            return sprites
-        roman_map = {1: "i", 2: "ii", 3: "iii", 4: "iv", 5: "v", 6: "vi", 7: "vii", 8: "viii", 9: "ix"}
-        gen_roman = roman_map.get(self.target_gen)
-        if not gen_roman:
-            sprites["versions"] = {}
-            return sprites
-        gen_key = f"generation-{gen_roman}"
-        sprites["versions"] = {gen_key: sprites["versions"].get(gen_key, {})}
-        return sprites
+        """
+        Refines the sprites object by lifting the target generation's sprites
+        to the top level and removing the 'versions' key.
+        """
+        if not sprites:
+            return {}
+
+        # Start with a copy of the sprites dictionary, excluding 'versions'
+        processed_sprites = {k: v for k, v in sprites.items() if k != "versions"}
+
+        # Find the target generation's sprites and merge them into the top level
+        if "versions" in sprites and self.target_gen is not None:
+            roman_map = {1: "i", 2: "ii", 3: "iii", 4: "iv", 5: "v", 6: "vi", 7: "vii", 8: "viii", 9: "ix"}
+            gen_roman = roman_map.get(self.target_gen)
+            if gen_roman:
+                gen_key = f"generation-{gen_roman}"
+                gen_sprites = sprites["versions"].get(gen_key, {})
+                for game, game_sprites in gen_sprites.items():
+                    for sprite_type, url in game_sprites.items():
+                        if url:
+                            # Create a descriptive key, e.g., 'scarlet-violet_front_shiny'
+                            processed_sprites[f"{game}_{sprite_type}"] = url
+
+        return {k: v for k, v in processed_sprites.items() if v is not None}
 
     def _get_generation_pokedex_numbers(self, pokedex_numbers: List[Dict[str, Any]]) -> Dict[str, int]:
         """Filters Pokédex numbers for national and the target generation's regional dex."""

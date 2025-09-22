@@ -18,16 +18,7 @@ class BaseParser(ABC):
         target_gen: Optional[int] = None,
         generation_dex_map: Optional[Dict[int, str]] = None,
     ):
-        """
-        Initializes the BaseParser.
-
-        Args:
-            config (Dict[str, Any]): The application configuration.
-            api_client (ApiClient): The client for making API calls.
-            generation_version_groups (Optional[Dict[int, List[str]]]): Map of generations to version groups.
-            target_gen (Optional[int]): The target generation number for parsing.
-            generation_dex_map (Optional[Dict[int, str]]): Map of generations to Pokédex names.
-        """
+        """Initializes the BaseParser."""
         self.config = config
         self.api_client = api_client
         self.generation_version_groups = generation_version_groups
@@ -39,16 +30,7 @@ class BaseParser(ABC):
 
     @abstractmethod
     def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, Any], List[Dict[str, Any]], str]]:
-        """
-        Processes a single item reference from the API's master list.
-        This method MUST be implemented by a subclass.
-
-        Args:
-            item_ref (Dict[str, str]): A dictionary containing the name and URL of the item to process.
-
-        Returns:
-            An object for the summary, a list of summary objects, or an error string.
-        """
+        """Processes a single item reference from the API's master list."""
         pass
 
     def run(
