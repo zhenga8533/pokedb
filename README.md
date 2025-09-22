@@ -10,7 +10,7 @@ The parsed generation data is automatically saved to the **`data` branch** weekl
 
 ## Documentation
 
-For detailed information about the project's architecture, configuration, and data structures, please visit the **[Official Wiki](https://www.google.com/search?q=https://github.com/zhenga8533/pokeapi-parser/wiki)**.
+For detailed information about the project's architecture, configuration, and data structures, please visit the **[Official Wiki](https://github.com/zhenga8533/pokeapi-parser/wiki)**.
 
 ## Features
 
