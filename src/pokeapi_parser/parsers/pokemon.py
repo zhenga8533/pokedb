@@ -10,8 +10,8 @@ from .base import BaseParser
 class PokemonParser(BaseParser):
     """A parser for Pokémon."""
 
-    def __init__(self, config, session):
-        super().__init__(config, session)
+    def __init__(self, config, session, generation_version_groups, target_gen):
+        super().__init__(config, session, generation_version_groups, target_gen)
         self.item_name = "Pokemon"
         self.api_endpoint = "pokemon"
         self.output_dir_key = "output_dir_pokemon"
@@ -61,7 +61,12 @@ class PokemonParser(BaseParser):
                     "official_artwork": pokemon_data["sprites"]["other"]["official-artwork"]["front_default"],
                 },
                 # Data from the species endpoint
-                "flavor_text": get_english_entry(species_data.get("flavor_text_entries", []), "flavor_text"),
+                "flavor_text": get_english_entry(
+                    species_data.get("flavor_text_entries", []),
+                    "flavor_text",
+                    self.generation_version_groups,
+                    self.target_gen,
+                ),
                 "genus": get_english_entry(species_data.get("genera", []), "genus"),
                 "generation": species_data.get("generation", {}).get("name"),
                 "capture_rate": species_data.get("capture_rate"),

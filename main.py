@@ -41,6 +41,7 @@ def main():
     cumulative_abilities = []
     cumulative_moves = []
     cumulative_pokemon_species = []
+    generation_version_groups = {}
 
     for gen_num in range(1, target_gen + 1):
         try:
@@ -52,6 +53,7 @@ def main():
             cumulative_abilities.extend(gen_data.get("abilities", []))
             cumulative_moves.extend(gen_data.get("moves", []))
             cumulative_pokemon_species.extend(gen_data.get("pokemon_species", []))
+            generation_version_groups[gen_num] = [vg["name"] for vg in gen_data.get("version_groups", [])]
         except Exception as e:
             print(f"Warning: Could not fetch data for Generation {gen_num}. Error: {e}")
 
@@ -70,9 +72,15 @@ def main():
 
     # Run the efficient parsers
     parser_map = {
-        "abilities": (AbilityParser(final_config, session), cumulative_abilities),
-        "moves": (MoveParser(final_config, session), cumulative_moves),
-        "pokemon_species": (PokemonParser(final_config, session), cumulative_pokemon_species),
+        "abilities": (
+            AbilityParser(final_config, session, generation_version_groups, target_gen),
+            cumulative_abilities,
+        ),
+        "moves": (MoveParser(final_config, session, generation_version_groups, target_gen), cumulative_moves),
+        "pokemon_species": (
+            PokemonParser(final_config, session, generation_version_groups, target_gen),
+            cumulative_pokemon_species,
+        ),
     }
     for api_key, (parser_instance, item_list) in parser_map.items():
         parser_name = parser_instance.item_name.lower()
@@ -88,7 +96,7 @@ def main():
         response = session.get(item_master_list_url, timeout=config["timeout"])
         all_items = response.json()["results"]
 
-        item_parser = ItemParser(final_config, session)
+        item_parser = ItemParser(final_config, session, generation_version_groups, target_gen)
         summary_data = item_parser.run(all_items)
         if summary_data:
             all_summaries["item"] = summary_data

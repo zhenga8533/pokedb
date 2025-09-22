@@ -10,8 +10,8 @@ from .base import BaseParser
 class MoveParser(BaseParser):
     """A parser for Pokémon moves."""
 
-    def __init__(self, config, session):
-        super().__init__(config, session)
+    def __init__(self, config, session, generation_version_groups, target_gen):
+        super().__init__(config, session, generation_version_groups, target_gen)
         self.item_name = "Move"
         self.api_endpoint = "move"
         self.output_dir_key = "output_dir_move"
@@ -37,7 +37,9 @@ class MoveParser(BaseParser):
                 "effect_chance": data.get("effect_chance"),
                 "effect": get_english_entry(data.get("effect_entries", []), "effect"),
                 "short_effect": get_english_entry(data.get("effect_entries", []), "short_effect"),
-                "flavor_text": get_english_entry(data.get("flavor_text_entries", []), "flavor_text"),
+                "flavor_text": get_english_entry(
+                    data.get("flavor_text_entries", []), "flavor_text", self.generation_version_groups, self.target_gen
+                ),
                 "learned_by_pokemon": [p["name"] for p in data.get("learned_by_pokemon", [])],
                 "stat_changes": [
                     {"change": sc["change"], "stat": sc.get("stat", {}).get("name")}

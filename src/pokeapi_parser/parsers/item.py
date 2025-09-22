@@ -10,12 +10,11 @@ from .base import BaseParser
 class ItemParser(BaseParser):
     """A parser for Pokémon items."""
 
-    def __init__(self, config, session):
-        super().__init__(config, session)
+    def __init__(self, config, session, generation_version_groups, target_gen):
+        super().__init__(config, session, generation_version_groups, target_gen)
         self.item_name = "Item"
         self.api_endpoint = "item"
         self.output_dir_key = "output_dir_item"
-        self.target_gen = 0
 
     def process(self, item_ref):
         """Processes a single item from its API reference."""
@@ -45,7 +44,9 @@ class ItemParser(BaseParser):
                     "attributes": [attr["name"] for attr in data.get("attributes", [])],
                     "category": data.get("category", {}).get("name"),
                     "effect": get_english_entry(data.get("effect_entries", []), "effect"),
-                    "flavor_text": get_english_entry(data.get("flavor_text_entries", []), "text"),
+                    "flavor_text": get_english_entry(
+                        data.get("flavor_text_entries", []), "text", self.generation_version_groups, self.target_gen
+                    ),
                     "sprite": data.get("sprites", {}).get("default"),
                     "held_by_pokemon": [p["pokemon"]["name"] for p in data.get("held_by_pokemon", [])],
                 }
@@ -67,12 +68,5 @@ class ItemParser(BaseParser):
 
     def run(self, all_items):
         """The main execution logic for the item parser."""
-        try:
-            # Determine target generation from the formatted path in the config
-            self.target_gen = int(self.config[self.output_dir_key].split("/gen")[1].split("/")[0])
-        except (IndexError, ValueError):
-            print("Warning: Could not determine target generation for ItemParser. Aborting item processing.")
-            return []
-
         # Call the original run method and return its result
         return super().run(all_items)

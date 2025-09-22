@@ -35,11 +35,25 @@ def get_latest_generation(session, config):
         return 9  # Fallback to a sensible default
 
 
-def get_english_entry(entries, key_name):
+def get_english_entry(entries, key_name, generation_version_groups=None, target_gen=None):
     """Finds and cleans the English entry from a list of multilingual API entries."""
     if not entries:
         return None
+
+    if key_name == "flavor_text" and generation_version_groups and target_gen:
+        # Get the version groups for the target generation in reverse order (latest first)
+        version_groups = reversed(generation_version_groups.get(target_gen, []))
+        for version_group in version_groups:
+            for entry in entries:
+                if (
+                    entry.get("language", {}).get("name") == "en"
+                    and entry.get("version_group", {}).get("name") == version_group
+                ):
+                    return " ".join(entry[key_name].split())
+
+    # Fallback for other keys or if no version-specific entry is found
     for entry in entries:
         if entry.get("language", {}).get("name") == "en":
             return " ".join(entry[key_name].split())
+
     return None

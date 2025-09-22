@@ -10,8 +10,8 @@ from .base import BaseParser
 class AbilityParser(BaseParser):
     """A parser for Pokémon abilities."""
 
-    def __init__(self, config, session):
-        super().__init__(config, session)
+    def __init__(self, config, session, generation_version_groups, target_gen):
+        super().__init__(config, session, generation_version_groups, target_gen)
         self.item_name = "Ability"
         self.api_endpoint = "ability"
         self.output_dir_key = "output_dir_ability"
@@ -30,7 +30,9 @@ class AbilityParser(BaseParser):
                 "generation": data.get("generation", {}).get("name"),
                 "effect": get_english_entry(data.get("effect_entries", []), "effect"),
                 "short_effect": get_english_entry(data.get("effect_entries", []), "short_effect"),
-                "flavor_text": get_english_entry(data.get("flavor_text_entries", []), "flavor_text"),
+                "flavor_text": get_english_entry(
+                    data.get("flavor_text_entries", []), "flavor_text", self.generation_version_groups, self.target_gen
+                ),
                 "pokemon": [
                     {"name": p["pokemon"]["name"], "is_hidden": p["is_hidden"], "slot": p["slot"]}
                     for p in data.get("pokemon", [])
