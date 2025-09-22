@@ -48,11 +48,9 @@ def process_move(move_ref, session, config):
         return f"Parsing failed for {move_ref['name']}: {e}"
 
 
-def main():
+def main(config, session):
     """Orchestrates the move parsing process."""
     print("Starting the Move Parser...")
-    config = load_config()
-    session = setup_session(config)
 
     parser_config = {
         "item_name": "Move",
@@ -66,4 +64,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    config = load_config()
+    session = setup_session(config)
+    main(config, session)

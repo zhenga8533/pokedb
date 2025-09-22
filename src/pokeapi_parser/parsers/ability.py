@@ -44,11 +44,9 @@ def process_ability(ability_ref, session, config):
         return f"Parsing failed for {ability_ref['name']}: {e}"
 
 
-def main():
+def main(config, session):
     """Orchestrates the ability parsing process."""
     print("Starting the Ability Parser...")
-    config = load_config()
-    session = setup_session(config)
 
     parser_config = {
         "item_name": "Ability",
@@ -62,4 +60,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    config = load_config()
+    session = setup_session(config)
+    main(config, session)

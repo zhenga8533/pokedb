@@ -43,11 +43,9 @@ def process_item(item_ref, session, config):
         return f"Parsing failed for {item_ref['name']}: {e}"
 
 
-def main():
+def main(config, session):
     """Orchestrates the item parsing process."""
     print("Starting the Item Parser...")
-    config = load_config()
-    session = setup_session(config)
 
     parser_config = {
         "item_name": "Item",
@@ -61,4 +59,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    config = load_config()
+    session = setup_session(config)
+    main(config, session)

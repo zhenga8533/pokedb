@@ -55,11 +55,9 @@ def process_pokemon(pokemon_ref, session, config):
         return f"Parsing failed for {pokemon_ref['name']}: {e}"
 
 
-def main():
+def main(config, session):
     """Orchestrates the Pokémon parsing process."""
     print("Starting the Pokémon Parser...")
-    config = load_config()
-    session = setup_session(config)
 
     parser_config = {
         "item_name": "Pokemon",
@@ -73,4 +71,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    config = load_config()
+    session = setup_session(config)
+    main(config, session)
