@@ -17,8 +17,8 @@ class ItemParser(BaseParser):
         self.output_dir_key = "output_dir_item"
         self.target_gen = 0
 
-    def process_item_for_target_gen(self, item_ref):
-        """Processes a single item and saves it ONLY to the target generation folder."""
+    def process(self, item_ref):
+        """Processes a single item from its API reference."""
         try:
             response = self.session.get(item_ref["url"], timeout=self.config["timeout"])
             response.raise_for_status()
@@ -32,7 +32,6 @@ class ItemParser(BaseParser):
             intro_gen_str = min(gi["generation"]["url"].split("/")[-2] for gi in game_indices)
             introduction_gen = int(intro_gen_str)
 
-            # --- MODIFIED: Only proceed if the item is from the correct generation ---
             if introduction_gen <= self.target_gen:
                 # Prepare the cleaned data
                 fling_effect_obj = data.get("fling_effect")
@@ -66,18 +65,14 @@ class ItemParser(BaseParser):
         except (ValueError, KeyError, TypeError) as e:
             return f"Processing failed for {item_ref['name']}: {e}"
 
-    # Override the process method to call the new one
-    def process(self, item_ref):
-        return self.process_item_for_target_gen(item_ref)
-
-    # Override the run method to set the target generation
     def run(self, all_items):
+        """The main execution logic for the item parser."""
         try:
             # Determine target generation from the formatted path in the config
             self.target_gen = int(self.config[self.output_dir_key].split("/gen")[1].split("/")[0])
         except (IndexError, ValueError):
             print("Warning: Could not determine target generation for ItemParser. Aborting item processing.")
-            return
+            return []
 
-        # Call the original run method from the BaseParser
-        super().run(all_items)
+        # Call the original run method and return its result
+        return super().run(all_items)

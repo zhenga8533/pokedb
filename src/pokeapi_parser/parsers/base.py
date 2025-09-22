@@ -28,7 +28,7 @@ class BaseParser(ABC):
         """The main execution logic for a parser, returns rich summary data."""
         print(f"--- Running {self.item_name} Parser ---")
         if not all_items:
-            print(f"No {self.item_name.lower()}s to process for this generation.")
+            print(f"No {self.item_name.lower()}s to process for this generation")
             return []
 
         print(f"Found {len(all_items)} {self.item_name.lower()}s. Starting concurrent processing...")
@@ -44,11 +44,11 @@ class BaseParser(ABC):
                 elif result is not None:
                     errors.append(result)
 
-        print(f"\n{self.item_name} processing complete.")
+        print(f"\n{self.item_name} processing complete")
 
         if not errors:
             output_path = self.config[self.output_dir_key]
-            print(f"All {self.item_name.lower()}s successfully parsed and saved to '{os.path.abspath(output_path)}'.")
+            print(f"All {self.item_name.lower()}s successfully parsed and saved to '{os.path.abspath(output_path)}'")
 
         if errors:
             print("\nThe following errors occurred:")

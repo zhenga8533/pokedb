@@ -13,7 +13,9 @@ from src.pokeapi_parser.utils import get_latest_generation, load_config, setup_s
 def main():
     """Main entry point to run the specified parsers."""
     parser = argparse.ArgumentParser(description="Run parsers for the PokéAPI.")
-    parser.add_argument("parsers", nargs="*", help="The name(s) of the parser to run (e.g., ability, item).")
+    parser.add_argument(
+        "parsers", nargs="*", help="The name(s) of the parser to run (e.g., ability, item, move, pokemon)."
+    )
     parser.add_argument("--all", action="store_true", help="Run all available parsers.")
     parser.add_argument(
         "--gen",
@@ -21,6 +23,11 @@ def main():
         help="Parse all data up to a specific generation number, outputting only that generation's folder.",
     )
     args = parser.parse_args()
+
+    # If no specific parsers are listed and --all is not used, show help.
+    if not args.parsers and not args.all:
+        parser.print_help()
+        return
 
     config = load_config()
     session = setup_session(config)
@@ -30,7 +37,6 @@ def main():
     target_gen = args.gen if args.gen and args.gen <= latest_gen_num else latest_gen_num
 
     # --- Part 1: Data Gathering Loop ---
-    # This loop gathers all cumulative data without running the parsers yet.
     print(f"Gathering all data up to Generation {target_gen}...")
     cumulative_abilities = []
     cumulative_moves = []
@@ -49,7 +55,7 @@ def main():
         except Exception as e:
             print(f"Warning: Could not fetch data for Generation {gen_num}. Error: {e}")
 
-    print("Finished gathering data.")
+    print("Finished gathering data")
 
     # --- Part 2: Parsing and Saving (Runs only ONCE) ---
     print(f"\n{'='*10} PARSING ALL DATA FOR GENERATION {target_gen} {'='*10}")
@@ -78,7 +84,6 @@ def main():
 
     # Run the special Item parser if requested
     if args.all or "item" in args.parsers:
-        print("\n--- Running Item Parser (Cumulative) ---")
         item_master_list_url = f"{config['api_base_url']}item?limit=3000"
         response = session.get(item_master_list_url, timeout=config["timeout"])
         all_items = response.json()["results"]
