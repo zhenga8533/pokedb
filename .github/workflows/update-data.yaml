@@ -58,8 +58,9 @@ jobs:
           # Clean up the now-empty output folder
           rm -rf output
 
-          # Add all changes, including new files and deletions
-          git add .
+          # Add ONLY the new generation directory to the commit
+          echo "Staging new data from: $new_gen_dir"
+          git add "$new_gen_dir"
 
           if git diff --staged --quiet; then
             echo "No data changes to commit."
