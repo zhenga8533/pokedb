@@ -3,7 +3,7 @@ import os
 
 import requests
 
-from utils import get_english_entry, load_config, run_parser, setup_session
+from ..utils import get_english_entry, load_config, run_parser, setup_session
 
 
 def process_ability(ability_ref, session, config):
@@ -25,18 +25,19 @@ def process_ability(ability_ref, session, config):
                 {
                     "name": p["pokemon"]["name"],
                     "is_hidden": p["is_hidden"],
+                    "slot": p["slot"],  # ADDED: Include the ability slot
                 }
                 for p in ability_data.get("pokemon", [])
             ],
         }
 
         output_path = config["output_dir_ability"]
-        file_path = os.path.join(output_path, f"{cleaned_data['name']}.json")
         os.makedirs(output_path, exist_ok=True)
+        file_path = os.path.join(output_path, f"{cleaned_data['name']}.json")
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
 
-        return None  # Success
+        return None
     except requests.exceptions.RequestException as e:
         return f"Request failed for {ability_ref['name']}: {e}"
     except (KeyError, TypeError) as e:
@@ -44,7 +45,7 @@ def process_ability(ability_ref, session, config):
 
 
 def main():
-    """Main function to orchestrate the ability parsing process."""
+    """Orchestrates the ability parsing process."""
     print("Starting the Ability Parser...")
     config = load_config()
     session = setup_session(config)
