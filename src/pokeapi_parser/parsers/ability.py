@@ -25,7 +25,7 @@ def process_ability(ability_ref, session, config):
                 {
                     "name": p["pokemon"]["name"],
                     "is_hidden": p["is_hidden"],
-                    "slot": p["slot"],  # ADDED: Include the ability slot
+                    "slot": p["slot"],
                 }
                 for p in ability_data.get("pokemon", [])
             ],
