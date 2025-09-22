@@ -3,7 +3,7 @@ name: Update PokéAPI Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 5 * * *"
+    - cron: "0 0 * * 0"
 
 jobs:
   build-and-push-data:
@@ -12,7 +12,7 @@ jobs:
       contents: write
 
     steps:
-      # 1. Check out the repository and fetch all branch history
+      # 1. Check out the 'main' branch and fetch all branch history
       - name: Check out repository
         uses: actions/checkout@v4
         with:
@@ -28,20 +28,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # 4. Configure Git and switch to the data branch
-      - name: Switch to Data Branch
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout data
-
-      # 5. Run all the parsers
+      # 4. Run all the parsers (while still on the main branch)
       - name: Run Parsers
         run: python main.py --all
 
-      # 6. Commit and push the new data
+      # 5. Switch to the data branch and commit the results
       - name: Commit and Push Data
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout data
+
           echo "Restructuring data folders..."
           mv data/* .
           rm -r data
