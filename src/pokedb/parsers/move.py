@@ -81,7 +81,6 @@ class MoveParser(GenerationParser):
                 "flavor_text": get_all_english_entries_for_gen_by_game(
                     data.get("flavor_text_entries", []), "flavor_text", self.generation_version_groups, self.target_gen
                 ),
-                "learned_by_pokemon": [p["name"] for p in data.get("learned_by_pokemon", [])],
                 "stat_changes": [
                     {"change": sc["change"], "stat": sc.get("stat", {}).get("name")}
                     for sc in data.get("stat_changes", [])
