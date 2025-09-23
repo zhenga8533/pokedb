@@ -73,7 +73,6 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
             if not generations or target_gen not in generations:
                 continue
 
-            found_change = False
             for pattern, handler in rules:
                 if pattern in text:
                     change = handler(li, text)
@@ -90,10 +89,7 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
                                         changes[key] = value
                                 else:
                                     changes[key] = value
-                        found_change = True
                         break
-            if not found_change:
-                print(f"Warning: Unhandled change for {pokemon_name}: {text}")
     except Exception as e:
         print(f"Warning: Failed to parse scraped data for {pokemon_name}. Error: {e}")
 
