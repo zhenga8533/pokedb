@@ -4,10 +4,10 @@ from typing import Any, Dict, List, Optional, Union
 
 from ..api_client import ApiClient
 from ..utils import get_english_entry
-from .base import BaseParser
+from .generation import GenerationParser
 
 
-class MoveParser(BaseParser):
+class MoveParser(GenerationParser):
     """A parser for Pokémon moves."""
 
     def __init__(
@@ -20,7 +20,7 @@ class MoveParser(BaseParser):
     ):
         super().__init__(config, api_client, generation_version_groups, target_gen, generation_dex_map)
         self.item_name = "Move"
-        self.api_endpoint = "move"
+        self.api_endpoint = "moves"
         self.output_dir_key = "output_dir_move"
 
     def _get_machine_for_generation(self, machine_entries: List[Dict[str, Any]]) -> Optional[str]:

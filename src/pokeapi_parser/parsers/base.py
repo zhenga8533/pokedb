@@ -1,8 +1,5 @@
 from abc import ABC, abstractmethod
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any, Dict, List, Optional, Union
-
-from tqdm import tqdm
 
 from ..api_client import ApiClient
 
@@ -33,51 +30,7 @@ class BaseParser(ABC):
         """Processes a single item reference from the API's master list."""
         pass
 
-    def run(
-        self, all_items: Optional[List[Dict[str, str]]] = None
-    ) -> Union[List[Dict[str, Any]], Dict[str, List[Dict[str, Any]]]]:
+    @abstractmethod
+    def run(self) -> Union[List[Dict[str, Any]], Dict[str, List[Dict[str, Any]]]]:
         """The main execution logic for a parser."""
-        print(f"--- Running {self.item_name} Parser ---")
-
-        if all_items is None:
-            endpoint_url = f"{self.config['api_base_url']}{self.api_endpoint}?limit=3000"
-            all_items = self.api_client.get(endpoint_url).get("results", [])
-
-        if not all_items:
-            print(f"No {self.item_name.lower()}s to process.")
-            return []
-
-        print(f"Found {len(all_items)} {self.item_name.lower()}(s). Starting concurrent processing...")
-        errors: List[str] = []
-        summary_data: List[Dict[str, Any]] = []
-        pokemon_summaries: List[Dict[str, Any]] = []
-        form_summaries: List[Dict[str, Any]] = []
-
-        with ThreadPoolExecutor(max_workers=self.config["max_workers"]) as executor:
-            future_map = {executor.submit(self.process, item): item for item in all_items}
-            for future in tqdm(as_completed(future_map), total=len(all_items), desc=f"Processing {self.item_name}"):
-                result = future.result()
-                if isinstance(result, dict) and ("pokemon" in result or "form" in result):
-                    pokemon_summaries.extend(result.get("pokemon", []))
-                    form_summaries.extend(result.get("form", []))
-                elif isinstance(result, dict):
-                    summary_data.append(result)
-                elif isinstance(result, list):
-                    summary_data.extend(result)
-                elif result is not None:
-                    errors.append(str(result))
-
-        print(f"\n{self.item_name} processing complete")
-
-        if errors:
-            print("\nThe following errors occurred:")
-            for error in errors:
-                print(f"- {error}")
-
-        if pokemon_summaries or form_summaries:
-            pokemon_summaries.sort(key=lambda x: x.get("id", 0))
-            form_summaries.sort(key=lambda x: x.get("id", 0))
-            return {"pokemon": pokemon_summaries, "form": form_summaries}
-
-        summary_data.sort(key=lambda x: x.get("id", 0))
-        return summary_data
+        pass

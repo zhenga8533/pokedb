@@ -4,10 +4,10 @@ from typing import Any, Dict, List, Optional, Union
 
 from ..api_client import ApiClient
 from ..utils import get_english_entry
-from .base import BaseParser
+from .generation import GenerationParser
 
 
-class PokemonParser(BaseParser):
+class PokemonParser(GenerationParser):
     """
     A comprehensive parser for Pokémon species and all their forms/varieties.
     """
@@ -101,10 +101,8 @@ class PokemonParser(BaseParser):
         if not sprites:
             return {}
 
-        # Start with a copy of the sprites dictionary, excluding 'versions'
         processed_sprites = {k: v for k, v in sprites.items() if k != "versions"}
 
-        # Find the target generation's sprites and merge them into the top level
         if "versions" in sprites and self.target_gen is not None:
             roman_map = {1: "i", 2: "ii", 3: "iii", 4: "iv", 5: "v", 6: "vi", 7: "vii", 8: "viii", 9: "ix"}
             gen_roman = roman_map.get(self.target_gen)
@@ -114,7 +112,6 @@ class PokemonParser(BaseParser):
                 for game, game_sprites in gen_sprites.items():
                     for sprite_type, url in game_sprites.items():
                         if url:
-                            # Create a descriptive key, e.g., 'scarlet-violet_front_shiny'
                             processed_sprites[f"{game}_{sprite_type}"] = url
 
         return {k: v for k, v in processed_sprites.items() if v is not None}
@@ -135,16 +132,25 @@ class PokemonParser(BaseParser):
         """Processes a Pokémon species and all its varieties."""
         try:
             species_data = self.api_client.get(item_ref["url"])
-            generation_url = species_data.get("generation", {}).get("url", "")
-            if generation_url and self.target_gen and int(generation_url.split("/")[-2]) > self.target_gen:
-                return None
-
             evolution_chain = self._get_evolution_chain(species_data["evolution_chain"]["url"])
             summaries: Dict[str, List[Dict[str, Any]]] = {"pokemon": [], "form": []}
 
             for variety in species_data.get("varieties", []):
                 pokemon_data = self.api_client.get(variety["pokemon"]["url"])
                 is_default = variety.get("is_default", False)
+
+                if not is_default:
+                    form_url = pokemon_data.get("forms", [{}])[0].get("url")
+                    if not form_url:
+                        continue
+                    form_data = self.api_client.get(form_url)
+                    version_group_url = form_data.get("version_group", {}).get("url")
+                    if not version_group_url:
+                        continue
+                    version_group_data = self.api_client.get(version_group_url)
+                    form_introduction_gen = int(version_group_data["generation"]["url"].split("/")[-2])
+                    if self.target_gen is not None and form_introduction_gen > self.target_gen:
+                        continue
 
                 cleaned_data: Dict[str, Any] = {
                     "id": pokemon_data["id"],
