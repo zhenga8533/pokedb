@@ -3,7 +3,7 @@ import os
 from typing import Any, Dict, List, Optional, Union
 
 from ..api_client import ApiClient
-from ..utils import get_english_entry
+from ..utils import get_all_english_entries_for_gen_by_game, get_english_entry
 from .generation import GenerationParser
 
 
@@ -32,16 +32,14 @@ class AbilityParser(GenerationParser):
                 "name": data["name"],
                 "source_url": item_ref["url"],
                 "is_main_series": data.get("is_main_series"),
-                "generation": data.get("generation", {}).get("name"),
                 "effect": get_english_entry(data.get("effect_entries", []), "effect"),
                 "short_effect": get_english_entry(data.get("effect_entries", []), "short_effect"),
-                "flavor_text": get_english_entry(
-                    data.get("flavor_text_entries", []), "flavor_text", self.generation_version_groups, self.target_gen
+                "flavor_text": get_all_english_entries_for_gen_by_game(
+                    data.get("flavor_text_entries", []),
+                    "flavor_text",
+                    self.generation_version_groups,
+                    self.target_gen,
                 ),
-                "pokemon": [
-                    {"name": p["pokemon"]["name"], "is_hidden": p["is_hidden"], "slot": p["slot"]}
-                    for p in data.get("pokemon", [])
-                ],
             }
 
             output_path = self.config[self.output_dir_key]
