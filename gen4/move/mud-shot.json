@@ -1,0 +1,42 @@
+{
+    "id": 341,
+    "name": "mud-shot",
+    "source_url": "https://pokeapi.co/api/v2/move/341/",
+    "accuracy": 95,
+    "power": 55,
+    "pp": 15,
+    "priority": 0,
+    "damage_class": "special",
+    "type": "ground",
+    "target": "selected-pokemon",
+    "generation": "generation-iii",
+    "effect_chance": 100,
+    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
+    "short_effect": "Has a 100% chance to lower the target’s Speed by one stage.",
+    "flavor_text": {
+        "diamond-pearl": "The user attacks by hurling a blob of mud at the foe. It also reduces the target’s Speed.",
+        "platinum": "The user attacks by hurling a blob of mud at the foe. It also reduces the target’s Speed.",
+        "heartgold-soulsilver": "The user attacks by hurling a blob of mud at the foe. It also reduces the target’s Speed."
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "speed"
+        }
+    ],
+    "machine": null,
+    "metadata": {
+        "ailment": "none",
+        "category": "damage+lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    }
+}

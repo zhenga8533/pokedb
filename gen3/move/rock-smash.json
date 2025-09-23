@@ -1,0 +1,42 @@
+{
+    "id": 249,
+    "name": "rock-smash",
+    "source_url": "https://pokeapi.co/api/v2/move/249/",
+    "accuracy": 100,
+    "power": 40,
+    "pp": 15,
+    "priority": 0,
+    "damage_class": "physical",
+    "type": "fighting",
+    "target": "selected-pokemon",
+    "generation": "generation-ii",
+    "effect_chance": 50,
+    "effect": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
+    "short_effect": "Has a 50% chance to lower the target’s Defense by one stage.",
+    "flavor_text": {
+        "ruby-sapphire": "A rock-crushing attack that may lower DEFENSE.",
+        "emerald": "A rock-crushing attack that may lower DEFENSE.",
+        "firered-leafgreen": "An attack that may also cut DEFENSE. It can also smash cracked boulders."
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "defense"
+        }
+    ],
+    "machine": "hm06",
+    "metadata": {
+        "ailment": "none",
+        "category": "damage+lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 50
+    }
+}
