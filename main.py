@@ -6,13 +6,13 @@ import sys
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Type
 
-from src.pokeapi_parser.api_client import ApiClient
-from src.pokeapi_parser.parsers.ability import AbilityParser
-from src.pokeapi_parser.parsers.base import BaseParser
-from src.pokeapi_parser.parsers.item import ItemParser
-from src.pokeapi_parser.parsers.move import MoveParser
-from src.pokeapi_parser.parsers.pokemon import PokemonParser
-from src.pokeapi_parser.utils import (
+from src.pokedb.api_client import ApiClient
+from src.pokedb.parsers.ability import AbilityParser
+from src.pokedb.parsers.base import BaseParser
+from src.pokedb.parsers.item import ItemParser
+from src.pokedb.parsers.move import MoveParser
+from src.pokedb.parsers.pokemon import PokemonParser
+from src.pokedb.utils import (
     get_generation_dex_map,
     get_latest_generation,
     load_config,
@@ -63,6 +63,7 @@ def run_parsers(
     generation_version_groups: Dict[int, List[str]],
     target_gen: int,
     generation_dex_map: Dict[int, str],
+    is_historical: bool,
 ) -> Dict[str, List[Dict[str, Any]]]:
     """Initializes and runs the requested parsers."""
     all_summaries: Dict[str, List[Dict[str, Any]]] = {}
@@ -75,13 +76,24 @@ def run_parsers(
 
     for name, ParserClass in parser_classes.items():
         if args.all or name in args.parsers:
-            parser_instance = ParserClass(
-                config=final_config,
-                api_client=api_client,
-                generation_version_groups=generation_version_groups,
-                target_gen=target_gen,
-                generation_dex_map=generation_dex_map,
-            )
+            # Pass the is_historical flag only to the PokemonParser
+            if name == "pokemon":
+                parser_instance = PokemonParser(
+                    config=final_config,
+                    api_client=api_client,
+                    generation_version_groups=generation_version_groups,
+                    target_gen=target_gen,
+                    generation_dex_map=generation_dex_map,
+                    is_historical=is_historical,
+                )
+            else:
+                parser_instance = ParserClass(
+                    config=final_config,
+                    api_client=api_client,
+                    generation_version_groups=generation_version_groups,
+                    target_gen=target_gen,
+                    generation_dex_map=generation_dex_map,
+                )
             summary_data = parser_instance.run()
             if isinstance(summary_data, list):
                 all_summaries[name] = summary_data
@@ -130,6 +142,10 @@ def main() -> None:
 
     latest_gen_num = get_latest_generation(api_client, config)
     target_gen = args.gen if args.gen and args.gen <= latest_gen_num else latest_gen_num
+    is_historical = target_gen < latest_gen_num
+
+    if is_historical:
+        print(f"Performing a historical parse for Generation {target_gen}. Scraping for changes...")
 
     generation_version_groups, generation_dex_map = gather_initial_data(api_client, config, target_gen)
 
@@ -151,7 +167,7 @@ def main() -> None:
             sys.exit(0)
 
     all_summaries = run_parsers(
-        args, final_config, api_client, generation_version_groups, target_gen, generation_dex_map
+        args, final_config, api_client, generation_version_groups, target_gen, generation_dex_map, is_historical
     )
 
     write_index_file(all_summaries, target_gen, top_level_output_dir)

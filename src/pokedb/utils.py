@@ -1,36 +1,51 @@
 import json
 import os
+import re
 import sys
 from typing import Any, Dict, List, Optional
 
 from .api_client import ApiClient
 
 
-def int_to_roman(num: int) -> Optional[str]:
+def parse_gen_range(gen_text: str) -> Optional[List[int]]:
+    """Parses a generation string like 'Generations 3-6' into a list of ints."""
+    gen_text = gen_text.lower()
+    if "generation" in gen_text:
+        numbers = re.findall(r"\d+", gen_text)
+        if len(numbers) == 1:
+            return [int(numbers[0])]
+        if len(numbers) == 2:
+            return list(range(int(numbers[0]), int(numbers[1]) + 1))
+    return None
+
+
+def int_to_roman(num: int) -> str:
     """Converts an integer to a Roman numeral."""
-    if not 0 < num < 4000:
-        return None
+    if not isinstance(num, int) or not 0 < num < 4000:
+        raise ValueError("Input must be an integer between 1 and 3999.")
+
     val_map = [
-        (1000, "m"),
-        (900, "cm"),
-        (500, "d"),
-        (400, "cd"),
-        (100, "c"),
-        (90, "xc"),
-        (50, "l"),
-        (40, "xl"),
-        (10, "x"),
-        (9, "ix"),
-        (5, "v"),
-        (4, "iv"),
-        (1, "i"),
+        (1000, "M"),
+        (900, "CM"),
+        (500, "D"),
+        (400, "CD"),
+        (100, "C"),
+        (90, "XC"),
+        (50, "L"),
+        (40, "XL"),
+        (10, "X"),
+        (9, "IX"),
+        (5, "V"),
+        (4, "IV"),
+        (1, "I"),
     ]
-    roman_num = ""
+
+    roman_numeral = []
     for val, numeral in val_map:
-        while num >= val:
-            roman_num += numeral
-            num -= val
-    return roman_num
+        count, num = divmod(num, val)
+        roman_numeral.append(numeral * count)
+
+    return "".join(roman_numeral)
 
 
 def load_config() -> Dict[str, Any]:

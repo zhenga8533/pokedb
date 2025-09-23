@@ -3,6 +3,7 @@ import os
 from typing import Any, Dict, List, Optional, Union
 
 from ..api_client import ApiClient
+from ..scraper import scrape_pokemon_changes
 from ..utils import get_english_entry, int_to_roman
 from .generation import GenerationParser
 
@@ -19,12 +20,39 @@ class PokemonParser(GenerationParser):
         generation_version_groups: Dict[int, List[str]],
         target_gen: int,
         generation_dex_map: Dict[int, str],
+        is_historical: bool = False,
     ):
         super().__init__(config, api_client, generation_version_groups, target_gen, generation_dex_map)
         self.item_name = "Species"
         self.api_endpoint = "pokemon_species"
         self.output_dir_key_pokemon = "output_dir_pokemon"
         self.output_dir_key_form = "output_dir_form"
+        self.is_historical = is_historical
+
+    def _apply_historical_changes(self, cleaned_data: Dict[str, Any]):
+        """Applies scraped historical changes to the cleaned data."""
+        if not self.target_gen:
+            return
+
+        changes = scrape_pokemon_changes(cleaned_data["species"], self.target_gen)
+        if not changes:
+            return
+
+        if "ability" in changes:
+            for i, ability in enumerate(cleaned_data.get("abilities", [])):
+                if not ability.get("is_hidden"):
+                    cleaned_data["abilities"][i]["name"] = changes["ability"]
+                    break
+        if "stats" in changes:
+            cleaned_data["stats"].update(changes["stats"])
+        if "types" in changes:
+            cleaned_data["types"] = changes["types"]
+        if "base_experience" in changes:
+            cleaned_data["base_experience"] = changes["base_experience"]
+        if "base_happiness" in changes:
+            cleaned_data["base_happiness"] = changes["base_happiness"]
+        if "capture_rate" in changes:
+            cleaned_data["capture_rate"] = changes["capture_rate"]
 
     def _get_evolution_chain(self, chain_url: str) -> Optional[Dict[str, Any]]:
         """Recursively fetches and processes an evolution chain."""
@@ -123,12 +151,13 @@ class PokemonParser(GenerationParser):
         processed_sprites = {k: v for k, v in sprites.items() if k != "versions"}
 
         if "versions" in sprites and self.target_gen is not None:
-            gen_roman = int_to_roman(self.target_gen)
-            if not gen_roman:
-                return processed_sprites
-            gen_key = f"generation-{gen_roman.lower()}"
-            if gen_key in sprites["versions"]:
-                processed_sprites["versions"] = sprites["versions"][gen_key]
+            try:
+                gen_roman = int_to_roman(self.target_gen)
+                gen_key = f"generation-{gen_roman.lower()}"
+                if gen_key in sprites["versions"]:
+                    processed_sprites["versions"] = sprites["versions"][gen_key]
+            except ValueError:
+                pass
 
         return {k: v for k, v in processed_sprites.items() if v is not None}
 
@@ -244,6 +273,8 @@ class PokemonParser(GenerationParser):
 
                 if is_default:
                     self._add_default_species_data(cleaned_data, pokemon_data, species_data, evolution_chain)
+                    if self.is_historical:
+                        self._apply_historical_changes(cleaned_data)
 
                 output_key = self.output_dir_key_pokemon if is_default else self.output_dir_key_form
                 output_dir = self.config[output_key]
