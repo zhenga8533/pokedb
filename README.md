@@ -1,6 +1,6 @@
-# Pokémon Data Collector
+# Pokémon Database
 
-[![Update Pokémon Data](https://github.com/zhenga8533/pokeapi-parser/actions/workflows/update-data.yaml/badge.svg)](https://github.com/zhenga8533/pokeapi-parser/actions/workflows/update-data.yaml)
+[![Update Pokémon Data](https://github.com/zhenga8533/pokedb/actions/workflows/update-data.yaml/badge.svg)](https://github.com/zhenga8533/pokedb/actions/workflows/update-data.yaml)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -10,7 +10,7 @@ The parsed generation data is automatically saved to the **`data` branch** weekl
 
 ## Documentation
 
-For detailed information about the project's architecture, configuration, and data structures, please visit the **[Official Wiki](https://github.com/zhenga8533/pokeapi-parser/wiki)**.
+For detailed information about the project's architecture, configuration, and data structures, please visit the **[Official Wiki](https://github.com/zhenga8533/pokedb/wiki)**.
 
 ## Features
 
@@ -33,8 +33,8 @@ For detailed information about the project's architecture, configuration, and da
 1.  Clone the repository:
 
     ```bash
-    git clone [https://github.com/zhenga8533/pokeapi-parser.git](https://github.com/zhenga8533/pokeapi-parser.git)
-    cd pokeapi-parser
+    git clone [https://github.com/zhenga8533/pokedb.git](https://github.com/zhenga8533/pokedb.git)
+    cd pokedb
     ```
 
 2.  Install the required dependencies:
