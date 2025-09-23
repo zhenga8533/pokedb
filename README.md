@@ -46,7 +46,7 @@ For detailed information about the project's architecture, configuration, data s
     python main.py --all --gen 3
     ```
 
-    For more detailed instructions, see the **[[Getting Started]]** page on the wiki.
+    For more detailed instructions, see the [**Getting Started**](https://github.com/zhenga8533/pokedb/wiki/Getting-Started) page on the wiki.
 
 ## License
 
