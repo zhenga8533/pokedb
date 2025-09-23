@@ -75,22 +75,42 @@ class PokemonParser(GenerationParser):
         self, data: Dict[str, Any], key: str, name_key: str, details_key: str, version_key: str
     ) -> Dict[str, Any]:
         """A generic helper to filter data by the target generation."""
-        gen_data: Dict[str, Any] = {}
         if not self.generation_version_groups or self.target_gen is None:
             return {}
+
         target_groups = self.generation_version_groups.get(self.target_gen, [])
+
+        if key == "moves":
+            temp_moves: Dict[tuple[str, str, int], set[str]] = {}
+            for move_item in data.get("moves", []):
+                move_name = move_item["move"]["name"]
+                for details in move_item["version_group_details"]:
+                    version_group = details["version_group"]["name"]
+                    if version_group in target_groups:
+                        learn_method = details["move_learn_method"]["name"]
+                        level = details["level_learned_at"]
+                        key_tuple = (move_name, learn_method, level)
+
+                        if key_tuple not in temp_moves:
+                            temp_moves[key_tuple] = set()
+                        temp_moves[key_tuple].add(version_group)
+
+            processed_moves: Dict[str, List[Dict[str, Any]]] = {}
+            for (move_name, learn_method, level), games in temp_moves.items():
+                if learn_method not in processed_moves:
+                    processed_moves[learn_method] = []
+                processed_moves[learn_method].append(
+                    {"name": move_name, "level_learned_at": level, "version_groups": sorted(list(games))}
+                )
+            return processed_moves
+
+        gen_data: Dict[str, Any] = {}
         for item in data.get(key, []):
             item_name = item[name_key]["name"]
             for details in item[details_key]:
                 if details[version_key]["name"] in target_groups:
-                    if name_key == "move":
-                        method = details["move_learn_method"]["name"]
-                        if method not in gen_data:
-                            gen_data[method] = []
-                        gen_data[method].append({"name": item_name, "level_learned_at": details["level_learned_at"]})
-                    else:  # held_items
-                        gen_data[item_name] = details["rarity"]
-                        break
+                    gen_data[item_name] = details["rarity"]
+                    break
         return gen_data
 
     def _process_sprites(self, sprites: Dict[str, Any]) -> Dict[str, Any]:
@@ -104,10 +124,11 @@ class PokemonParser(GenerationParser):
 
         if "versions" in sprites and self.target_gen is not None:
             gen_roman = int_to_roman(self.target_gen)
-            if gen_roman:
-                gen_key = f"generation-{gen_roman}"
-                if gen_key in sprites["versions"]:
-                    processed_sprites["versions"] = sprites["versions"][gen_key]
+            if not gen_roman:
+                return processed_sprites
+            gen_key = f"generation-{gen_roman.lower()}"
+            if gen_key in sprites["versions"]:
+                processed_sprites["versions"] = sprites["versions"][gen_key]
 
         return {k: v for k, v in processed_sprites.items() if v is not None}
 
