@@ -3,7 +3,7 @@ import os
 from typing import Any, Dict, List, Optional, Union
 
 from ..api_client import ApiClient
-from ..utils import get_english_entry
+from ..utils import get_english_entry, int_to_roman
 from .generation import GenerationParser
 
 
@@ -95,8 +95,7 @@ class PokemonParser(GenerationParser):
 
     def _process_sprites(self, sprites: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Refines the sprites object by lifting the target generation's sprites
-        to the top level and removing the 'versions' key.
+        Refines the sprites object to only include the target generation's version data.
         """
         if not sprites:
             return {}
@@ -104,15 +103,11 @@ class PokemonParser(GenerationParser):
         processed_sprites = {k: v for k, v in sprites.items() if k != "versions"}
 
         if "versions" in sprites and self.target_gen is not None:
-            roman_map = {1: "i", 2: "ii", 3: "iii", 4: "iv", 5: "v", 6: "vi", 7: "vii", 8: "viii", 9: "ix"}
-            gen_roman = roman_map.get(self.target_gen)
+            gen_roman = int_to_roman(self.target_gen)
             if gen_roman:
                 gen_key = f"generation-{gen_roman}"
-                gen_sprites = sprites["versions"].get(gen_key, {})
-                for game, game_sprites in gen_sprites.items():
-                    for sprite_type, url in game_sprites.items():
-                        if url:
-                            processed_sprites[f"{game}_{sprite_type}"] = url
+                if gen_key in sprites["versions"]:
+                    processed_sprites["versions"] = sprites["versions"][gen_key]
 
         return {k: v for k, v in processed_sprites.items() if v is not None}
 

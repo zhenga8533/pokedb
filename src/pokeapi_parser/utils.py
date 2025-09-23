@@ -6,6 +6,33 @@ from typing import Any, Dict, List, Optional
 from .api_client import ApiClient
 
 
+def int_to_roman(num: int) -> Optional[str]:
+    """Converts an integer to a Roman numeral."""
+    if not 0 < num < 4000:
+        return None
+    val_map = [
+        (1000, "m"),
+        (900, "cm"),
+        (500, "d"),
+        (400, "cd"),
+        (100, "c"),
+        (90, "xc"),
+        (50, "l"),
+        (40, "xl"),
+        (10, "x"),
+        (9, "ix"),
+        (5, "v"),
+        (4, "iv"),
+        (1, "i"),
+    ]
+    roman_num = ""
+    for val, numeral in val_map:
+        while num >= val:
+            roman_num += numeral
+            num -= val
+    return roman_num
+
+
 def load_config() -> Dict[str, Any]:
     """Loads settings from the root config.json file."""
     config_path = os.path.join(os.path.dirname(__file__), "..", "..", "config.json")
