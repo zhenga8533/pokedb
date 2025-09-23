@@ -8,26 +8,13 @@ class ApiClient:
     """A memoized API client for making requests to the PokéAPI."""
 
     def __init__(self, config: Dict[str, Any]):
-        """
-        Initializes the ApiClient.
-
-        Args:
-            config (Dict[str, Any]): The application configuration.
-        """
+        """Initializes the ApiClient."""
         self._session = self._setup_session(config)
         self._cache: Dict[str, Dict[str, Any]] = {}
         self.timeout = config.get("timeout", 15)
 
     def _setup_session(self, config: Dict[str, Any]) -> requests.Session:
-        """
-        Creates a requests Session with automatic retry logic.
-
-        Args:
-            config (Dict[str, Any]): The application configuration dictionary.
-
-        Returns:
-            requests.Session: A requests Session object configured with retries.
-        """
+        """Creates a requests Session with automatic retry logic."""
         session = requests.Session()
         retries = Retry(
             total=config.get("max_retries", 3),
@@ -38,18 +25,7 @@ class ApiClient:
         return session
 
     def get(self, url: str) -> Dict[str, Any]:
-        """
-        Fetches JSON data from a URL, using a cache to avoid redundant requests.
-
-        Args:
-            url (str): The URL to fetch data from.
-
-        Returns:
-            Dict[str, Any]: The JSON response as a dictionary.
-
-        Raises:
-            requests.exceptions.RequestException: If the request fails after all retries.
-        """
+        """Fetches JSON data from a URL, using a cache to avoid redundant requests."""
         if url in self._cache:
             return self._cache[url]
 

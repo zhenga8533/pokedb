@@ -1,4 +1,5 @@
 import re
+import time
 from typing import Any, Dict, List, Optional
 
 import requests
@@ -10,22 +11,31 @@ from .utils import parse_gen_range
 def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]:
     """
     Scrapes Pokémon DB for historical changes for a specific Pokémon and
-    returns a dictionary of changes applicable to the target generation.
-
-    Args:
-        pokemon_name (str): The name of the Pokémon to scrape.
-        target_gen (int): The generation being targeted.
-
-    Returns:
-        Dict[str, Any]: A dictionary of changes to apply.
+    returns a dictionary of changes applicable to the target generation.gs
     """
     changes: Dict[str, Any] = {}
-    try:
-        url = f"https://pokemondb.net/pokedex/{pokemon_name.lower()}"
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
+    url = f"https://pokemondb.net/pokedex/{pokemon_name.lower()}"
+    max_retries = 3
+    retry_delay = 5  # seconds
 
-        soup = BeautifulSoup(response.content, "lxml")
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, "lxml")
+            break  # If successful, exit the retry loop
+        except requests.RequestException as e:
+            if attempt < max_retries - 1:
+                time.sleep(retry_delay)
+            else:
+                print(
+                    f"Warning: Failed to scrape Pokémon DB for {pokemon_name} after {max_retries} attempts. Error: {e}"
+                )
+                return {}  # Return empty if all retries fail
+    else:
+        return {}  # Should not be reached, but for safety
+
+    try:
         changes_header = soup.find("h2", string=re.compile(f"{pokemon_name.capitalize()} changes"))
         if not changes_header:
             return {}
@@ -40,6 +50,7 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
             ("base experience yield", _parse_simple_stat("base_experience")),
             ("base Friendship value", _parse_simple_stat("base_happiness")),
             ("catch rate", _parse_simple_stat("capture_rate")),
+            ("EVs", _parse_ev_yield),
             ("base Special stat", _parse_special_stat),
             ("base HP", _parse_base_stat("hp")),
             ("base Attack", _parse_base_stat("attack")),
@@ -50,6 +61,9 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
         ]
 
         for li in changes_list.find_all("li"):
+            if not isinstance(li, Tag):
+                continue
+
             text = li.get_text()
             gen_abbr = li.find("abbr")
             if not gen_abbr:
@@ -66,20 +80,20 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
                     if change:
                         if isinstance(change, dict):
                             for key, value in change.items():
-                                if isinstance(value, dict):
-                                    changes[key] = changes.get(key, {})
-                                    changes[key].update(value)
+                                if isinstance(value, (dict, list)):
+                                    if key in changes and isinstance(changes[key], type(value)):
+                                        if isinstance(value, dict):
+                                            changes[key].update(value)
+                                        else:
+                                            changes[key].extend(value)
+                                    else:
+                                        changes[key] = value
                                 else:
                                     changes[key] = value
-                        else:
-                            changes.update(change)
                         found_change = True
-                    break
+                        break
             if not found_change:
-                print(f"Warning: Unhandled change pattern in text: '{text}'")
-
-    except requests.RequestException as e:
-        print(f"Warning: Could not scrape Pokémon DB for {pokemon_name}. Error: {e}")
+                print(f"Warning: Unhandled change for {pokemon_name}: {text}")
     except Exception as e:
         print(f"Warning: Failed to parse scraped data for {pokemon_name}. Error: {e}")
 
@@ -87,7 +101,6 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
 
 
 def _parse_ability(li: Tag, text: str) -> Optional[Dict[str, str]]:
-    """Parses an ability change."""
     ability_tag = li.find("a", href=re.compile("/ability/"))
     if ability_tag:
         return {"ability": ability_tag.get_text(strip=True).lower()}
@@ -95,7 +108,6 @@ def _parse_ability(li: Tag, text: str) -> Optional[Dict[str, str]]:
 
 
 def _parse_types(li: Tag, text: str) -> Optional[Dict[str, List[str]]]:
-    """Parses a type change."""
     types = [a.get_text(strip=True).lower() for a in li.find_all("a", class_="itype")]
     if types:
         return {"types": types}
@@ -103,8 +115,6 @@ def _parse_types(li: Tag, text: str) -> Optional[Dict[str, List[str]]]:
 
 
 def _parse_simple_stat(stat_name: str):
-    """Factory function to create a parser for simple numeric stats."""
-
     def handler(li: Tag, text: str) -> Optional[Dict[str, int]]:
         match = re.search(r"of (\d+)", text)
         if match:
@@ -115,8 +125,6 @@ def _parse_simple_stat(stat_name: str):
 
 
 def _parse_base_stat(stat_name: str):
-    """Factory function to create a parser for base stats (HP, Attack, etc.)."""
-
     def handler(li: Tag, text: str) -> Optional[Dict[str, Dict[str, int]]]:
         match = re.search(r"of (\d+)", text)
         if match:
@@ -127,9 +135,28 @@ def _parse_base_stat(stat_name: str):
 
 
 def _parse_special_stat(li: Tag, text: str) -> Optional[Dict[str, Any]]:
-    """Parses the Gen 1 'Special' stat and maps it to both Sp. Atk and Sp. Def."""
     match = re.search(r"base Special stat of (\d+)", text)
     if match:
         value = int(match.group(1))
         return {"stats": {"special-attack": value, "special-defense": value}}
+    return None
+
+
+def _parse_ev_yield(li: Tag, text: str) -> Optional[Dict[str, List[Dict[str, Any]]]]:
+    """Parses EV yield changes, which can be complex."""
+    match = re.search(r"has (\d+) ([\w\s]+) EV", text)
+    if match:
+        effort = int(match.group(1))
+        stat_name_raw = match.group(2).strip().lower()
+        stat_name_map = {
+            "hp": "hp",
+            "attack": "attack",
+            "defense": "defense",
+            "special attack": "special-attack",
+            "special defense": "special-defense",
+            "speed": "speed",
+        }
+        stat = stat_name_map.get(stat_name_raw)
+        if stat:
+            return {"ev_yield": [{"effort": effort, "stat": stat}]}
     return None

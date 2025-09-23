@@ -53,6 +53,8 @@ class PokemonParser(GenerationParser):
             cleaned_data["base_happiness"] = changes["base_happiness"]
         if "capture_rate" in changes:
             cleaned_data["capture_rate"] = changes["capture_rate"]
+        if "ev_yield" in changes:
+            cleaned_data["ev_yield"] = changes["ev_yield"]
 
     def _get_evolution_chain(self, chain_url: str) -> Optional[Dict[str, Any]]:
         """Recursively fetches and processes an evolution chain."""
