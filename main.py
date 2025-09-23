@@ -69,9 +69,9 @@ def run_parsers(
         "ability": AbilityParser,
         "move": MoveParser,
         "item": ItemParser,
+        "pokemon": PokemonParser,
     }
 
-    # Handle parsers that fetch their own master lists
     for name, ParserClass in parser_classes.items():
         if args.all or name in args.parsers:
             parser_instance = ParserClass(
@@ -84,22 +84,9 @@ def run_parsers(
             summary_data = parser_instance.run()
             if isinstance(summary_data, list):
                 all_summaries[name] = summary_data
+            elif isinstance(summary_data, dict):
+                all_summaries.update(summary_data)
             print("-" * 20)
-
-    # Special handling for the Pokemon parser, which needs a pre-fetched species list
-    if args.all or "pokemon" in args.parsers:
-        all_species = api_client.get(f"{final_config['api_base_url']}pokemon-species?limit=2000").get("results", [])
-        pokemon_parser = PokemonParser(
-            config=final_config,
-            api_client=api_client,
-            generation_version_groups=generation_version_groups,
-            target_gen=target_gen,
-            generation_dex_map=generation_dex_map,
-        )
-        summary_data = pokemon_parser.run(all_species)
-        if isinstance(summary_data, dict):
-            all_summaries.update(summary_data)
-        print("-" * 20)
 
     return all_summaries
 
