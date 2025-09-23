@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 from typing import Any, Dict, List, Optional
 
 from .api_client import ApiClient
@@ -18,12 +19,14 @@ def get_latest_generation(api_client: ApiClient, config: Dict[str, Any]) -> int:
     try:
         data = api_client.get(f"{config['api_base_url']}generation/")
         generations = data.get("results", [])
+        if not generations:
+            raise ValueError("No generations found in API response.")
         latest_gen_num = max(int(g["url"].split("/")[-2]) for g in generations)
         print(f"Latest generation found: {latest_gen_num}")
         return latest_gen_num
     except Exception as e:
-        print(f"Could not determine latest generation. Defaulting to 9. Error: {e}")
-        return 9
+        print(f"Fatal: Could not determine latest generation. Error: {e}")
+        sys.exit(1)
 
 
 def get_generation_dex_map(api_client: ApiClient, config: Dict[str, Any]) -> Dict[int, str]:
@@ -32,6 +35,8 @@ def get_generation_dex_map(api_client: ApiClient, config: Dict[str, Any]) -> Dic
     dex_map: Dict[int, str] = {}
     try:
         pokedex_list = api_client.get(f"{config['api_base_url']}pokedex?limit=100").get("results", [])
+        if not pokedex_list:
+            raise ValueError("No pokedexes found in API response.")
         for pokedex_ref in pokedex_list:
             dex_data = api_client.get(pokedex_ref["url"])
             if dex_data.get("is_main_series") and dex_data.get("version_groups"):
@@ -42,18 +47,8 @@ def get_generation_dex_map(api_client: ApiClient, config: Dict[str, Any]) -> Dic
         print("Successfully created Pokédex map.")
         return dex_map
     except Exception as e:
-        print(f"Could not create Pokédex map. Falling back to manual mapping. Error: {e}")
-        return {
-            1: "kanto",
-            2: "johto",
-            3: "hoenn",
-            4: "sinnoh",
-            5: "unova",
-            6: "kalos",
-            7: "alola",
-            8: "galar",
-            9: "paldea",
-        }
+        print(f"Fatal: Could not create Pokédex map. Error: {e}")
+        sys.exit(1)
 
 
 def get_all_english_entries_for_gen_by_game(
