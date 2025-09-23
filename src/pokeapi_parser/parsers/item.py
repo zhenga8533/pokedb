@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional, Union
 from tqdm import tqdm
 
 from ..api_client import ApiClient
-from ..utils import get_english_entry
+from ..utils import get_all_english_flavor_texts_for_gen, get_english_entry
 from .base import BaseParser
 
 
@@ -84,12 +84,10 @@ class ItemParser(BaseParser):
                     "category": data.get("category", {}).get("name"),
                     "effect": get_english_entry(data.get("effect_entries", []), "effect"),
                     "short_effect": get_english_entry(data.get("effect_entries", []), "short_effect"),
-                    "flavor_text": get_english_entry(
-                        data.get("flavor_text_entries", []), "text", self.generation_version_groups, self.target_gen
+                    "flavor_text": get_all_english_flavor_texts_for_gen(
+                        data.get("flavor_text_entries", []), self.generation_version_groups, self.target_gen
                     ),
                     "sprite": data.get("sprites", {}).get("default"),
-                    "held_by_pokemon": [p["pokemon"]["name"] for p in data.get("held_by_pokemon", [])],
-                    "generations": sorted(list(set(gi["generation"]["name"] for gi in game_indices))),
                 }
 
                 output_path = self.config[self.output_dir_key]

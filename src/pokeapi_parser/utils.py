@@ -56,6 +56,33 @@ def get_generation_dex_map(api_client: ApiClient, config: Dict[str, Any]) -> Dic
         }
 
 
+def get_all_english_flavor_texts_for_gen(
+    entries: List[Dict[str, Any]],
+    generation_version_groups: Optional[Dict[int, List[str]]] = None,
+    target_gen: Optional[int] = None,
+) -> Dict[str, str]:
+    """
+    Finds and cleans all unique English flavor text entries for a specific generation,
+    mapping them to their version group.
+    """
+    if not entries or not generation_version_groups or target_gen is None:
+        return {}
+
+    target_version_groups = generation_version_groups.get(target_gen, [])
+    if not target_version_groups:
+        return {}
+
+    flavor_texts: Dict[str, str] = {}
+    for entry in entries:
+        version_group_name = entry.get("version_group", {}).get("name")
+        if entry.get("language", {}).get("name") == "en" and version_group_name in target_version_groups:
+            cleaned_text = " ".join(entry.get("text", "").split())
+            if cleaned_text and version_group_name not in flavor_texts:
+                flavor_texts[version_group_name] = cleaned_text
+
+    return flavor_texts
+
+
 def get_english_entry(
     entries: List[Dict[str, Any]],
     key_name: str,
