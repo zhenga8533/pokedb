@@ -1,3 +1,4 @@
+import copy
 import json
 import os
 from typing import Any, Dict, List, Optional, Union
@@ -26,7 +27,9 @@ class PokemonParser(GenerationParser):
         self.item_name = "Species"
         self.api_endpoint = "pokemon_species"
         self.output_dir_key_pokemon = "output_dir_pokemon"
-        self.output_dir_key_form = "output_dir_form"
+        self.output_dir_key_variant = "output_dir_variant"
+        self.output_dir_key_transformation = "output_dir_transformation"
+        self.output_dir_key_cosmetic = "output_dir_cosmetic"
         self.is_historical = is_historical
 
     def _apply_historical_changes(self, cleaned_data: Dict[str, Any]):
@@ -175,29 +178,26 @@ class PokemonParser(GenerationParser):
                 gen_numbers[pokedex_name] = entry["entry_number"]
         return gen_numbers
 
-    def _should_skip_form(self, pokemon_data: Dict[str, Any]) -> bool:
+    def _should_skip_form(self, form_data: Dict[str, Any]) -> bool:
         """Checks if a form should be skipped based on the target generation."""
-        form_url = pokemon_data.get("forms", [{}])[0].get("url")
-        if not form_url:
-            return True
-        form_data = self.api_client.get(form_url)
         version_group_url = form_data.get("version_group", {}).get("url")
         if not version_group_url:
-            return True
+            return False
+
         version_group_data = self.api_client.get(version_group_url)
         form_introduction_gen = int(version_group_data["generation"]["url"].split("/")[-2])
         return self.target_gen is not None and form_introduction_gen > self.target_gen
 
     def _build_base_pokemon_data(
-        self, pokemon_data: Dict[str, Any], species_data: Dict[str, Any], variety: Dict[str, Any]
+        self, pokemon_data: Dict[str, Any], species_data: Dict[str, Any], source_url: str
     ) -> Dict[str, Any]:
         """Builds the common data dictionary for any Pokémon form or variety."""
         return {
             "id": pokemon_data["id"],
             "name": pokemon_data["name"],
             "species": species_data["name"],
-            "is_default": variety.get("is_default", False),
-            "source_url": variety["pokemon"]["url"],
+            "is_default": pokemon_data.get("is_default", False),
+            "source_url": source_url,
             "types": [t["type"]["name"] for t in pokemon_data.get("types", [])],
             "abilities": [
                 {"name": a["ability"]["name"], "is_hidden": a["is_hidden"], "slot": a["slot"]}
@@ -225,7 +225,7 @@ class PokemonParser(GenerationParser):
         """Adds extra fields that only apply to the default species."""
         cleaned_data.update(
             {
-                "base_experience": pokemon_data["base_experience"],
+                "base_experience": pokemon_data.get("base_experience"),
                 "base_happiness": species_data.get("base_happiness"),
                 "capture_rate": species_data.get("capture_rate"),
                 "hatch_counter": species_data.get("hatch_counter"),
@@ -253,48 +253,138 @@ class PokemonParser(GenerationParser):
                 "moves": self._get_generation_data(
                     pokemon_data, "moves", "move", "version_group_details", "version_group"
                 ),
-                "forms": [v["pokemon"]["name"] for v in species_data.get("varieties", [])],
+                "forms": [f["pokemon"]["name"] for f in species_data.get("varieties", [])],
             }
         )
 
     def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, List[Dict[str, Any]]], str]]:
-        """Processes a Pokémon species and all its varieties."""
+        """Processes a Pokémon species and all its varieties and forms."""
+        species_name = ""
         try:
             species_data = self.api_client.get(item_ref["url"])
-            evolution_chain = self._get_evolution_chain(species_data["evolution_chain"]["url"])
-            summaries: Dict[str, List[Dict[str, Any]]] = {"pokemon": [], "form": []}
+            species_name = species_data["name"]
+            evolution_chain_url = species_data.get("evolution_chain", {}).get("url")
+            evolution_chain = self._get_evolution_chain(evolution_chain_url) if evolution_chain_url else None
 
-            for variety in species_data.get("varieties", []):
-                pokemon_data = self.api_client.get(variety["pokemon"]["url"])
-                is_default = variety.get("is_default", False)
+            summaries: Dict[str, List[Dict[str, Any]]] = {
+                "pokemon": [],
+                "variant": [],
+                "transformation": [],
+                "cosmetic": [],
+            }
 
-                if not is_default and self._should_skip_form(pokemon_data):
+            varieties = species_data.get("varieties", [])
+
+            if not varieties:
+                default_pokemon_url = f"{self.config['api_base_url']}pokemon/{species_data['id']}"
+                default_variety = {"is_default": True, "pokemon": {"name": species_name, "url": default_pokemon_url}}
+                varieties = [default_variety]
+            else:
+                default_variety = next((v for v in varieties if v["is_default"]), varieties[0])
+
+            default_pokemon_url = default_variety["pokemon"]["url"]
+            default_pokemon_data = self.api_client.get(default_pokemon_url)
+
+            default_template = self._build_base_pokemon_data(default_pokemon_data, species_data, default_pokemon_url)
+            self._add_default_species_data(default_template, default_pokemon_data, species_data, evolution_chain)
+            if self.is_historical:
+                self._apply_historical_changes(default_template)
+
+            output_dir = self.config[self.output_dir_key_pokemon]
+            os.makedirs(output_dir, exist_ok=True)
+            file_path = os.path.join(output_dir, f"{default_template['name']}.json")
+            with open(file_path, "w", encoding="utf-8") as f:
+                json.dump(default_template, f, indent=4, ensure_ascii=False)
+            summaries["pokemon"].append(
+                {
+                    "name": default_template["name"],
+                    "id": default_template["id"],
+                    "types": default_template["types"],
+                    "sprite": default_template["sprites"].get("front_default"),
+                }
+            )
+
+            variety_urls = {v["pokemon"]["url"] for v in varieties}
+            processed_urls = {default_pokemon_url}
+
+            # Process non-default varieties
+            for pokemon_url in variety_urls - processed_urls:
+                pokemon_data = self.api_client.get(pokemon_url)
+                form_ref_url = pokemon_data.get("forms", [{}])[0].get("url")
+                form_data = self.api_client.get(form_ref_url) if form_ref_url else {}
+
+                if self._should_skip_form(form_data):
                     continue
 
-                cleaned_data = self._build_base_pokemon_data(pokemon_data, species_data, variety)
+                variant_data = copy.deepcopy(default_template)
+                variant_base_data = self._build_base_pokemon_data(pokemon_data, species_data, pokemon_url)
+                variant_data.update(variant_base_data)
 
-                if is_default:
-                    self._add_default_species_data(cleaned_data, pokemon_data, species_data, evolution_chain)
-                    if self.is_historical:
-                        self._apply_historical_changes(cleaned_data)
+                is_battle_only = form_data.get("is_battle_only", False)
+                if is_battle_only:
+                    output_key, summary_key = self.output_dir_key_transformation, "transformation"
+                else:
+                    output_key, summary_key = self.output_dir_key_variant, "variant"
 
-                output_key = self.output_dir_key_pokemon if is_default else self.output_dir_key_form
                 output_dir = self.config[output_key]
                 os.makedirs(output_dir, exist_ok=True)
-                file_path = os.path.join(output_dir, f"{cleaned_data['name']}.json")
+                file_path = os.path.join(output_dir, f"{variant_data['name']}.json")
                 with open(file_path, "w", encoding="utf-8") as f:
-                    json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
-
-                summary_key = "pokemon" if is_default else "form"
+                    json.dump(variant_data, f, indent=4, ensure_ascii=False)
                 summaries[summary_key].append(
                     {
-                        "name": cleaned_data["name"],
-                        "id": cleaned_data["id"],
-                        "types": cleaned_data["types"],
-                        "sprite": cleaned_data["sprites"].get("front_default"),
+                        "name": variant_data["name"],
+                        "id": variant_data["id"],
+                        "types": variant_data["types"],
+                        "sprite": variant_data["sprites"].get("front_default"),
+                    }
+                )
+                processed_urls.add(pokemon_url)
+
+            # Process purely cosmetic forms
+            all_form_refs = default_pokemon_data.get("forms", [])
+            variety_form_urls = set()
+            for url in variety_urls:
+                p_data = self.api_client.get(url)
+                if p_data.get("forms"):
+                    variety_form_urls.add(p_data["forms"][0]["url"])
+
+            cosmetic_form_refs = [ref for ref in all_form_refs if ref["url"] not in variety_form_urls]
+
+            for form_ref in cosmetic_form_refs:
+                form_data = self.api_client.get(form_ref["url"])
+
+                if self._should_skip_form(form_data):
+                    continue
+
+                cosmetic_data = copy.deepcopy(default_template)
+                # Cosmetic forms share the same base pokemon data, so we don't need to re-fetch it
+                cosmetic_base_data = self._build_base_pokemon_data(
+                    default_pokemon_data, species_data, default_pokemon_url
+                )
+                cosmetic_data.update(cosmetic_base_data)
+
+                # Crucially, override the name and sprites with the form-specific ones
+                cosmetic_data["name"] = form_data.get("name", default_pokemon_data["name"])
+                cosmetic_data["sprites"] = self._process_sprites(form_data.get("sprites", {}))
+                cosmetic_data["is_default"] = False  # Ensure it's not marked as default
+
+                output_dir = self.config[self.output_dir_key_cosmetic]
+                os.makedirs(output_dir, exist_ok=True)
+                file_path = os.path.join(output_dir, f"{cosmetic_data['name']}.json")
+                with open(file_path, "w", encoding="utf-8") as f:
+                    json.dump(cosmetic_data, f, indent=4, ensure_ascii=False)
+                summaries["cosmetic"].append(
+                    {
+                        "name": cosmetic_data["name"],
+                        "id": cosmetic_data["id"],
+                        "types": cosmetic_data["types"],
+                        "sprite": cosmetic_data["sprites"].get("front_default"),
                     }
                 )
 
             return summaries
         except Exception as e:
-            return f"Parsing failed for {item_ref['name']}: {e}"
+            if not species_name:
+                species_name = item_ref.get("name", "unknown")
+            return f"Parsing failed for {species_name}: {e}"

@@ -51,16 +51,20 @@ class BaseParser(ABC):
         print(f"Found {len(all_items)} {self.item_name.lower()}(s). Starting concurrent processing...")
         errors: List[str] = []
         summary_data: List[Dict[str, Any]] = []
-        pokemon_summaries: List[Dict[str, Any]] = []
-        form_summaries: List[Dict[str, Any]] = []
+        pokemon_summaries: Dict[str, List[Dict[str, Any]]] = {
+            "pokemon": [],
+            "variant": [],
+            "transformation": [],
+            "cosmetic": [],
+        }
 
         with ThreadPoolExecutor(max_workers=self.config["max_workers"]) as executor:
             future_map = {executor.submit(self.process, item): item for item in all_items}
             for future in tqdm(as_completed(future_map), total=len(all_items), desc=f"Processing {self.item_name}"):
                 result = future.result()
-                if isinstance(result, dict) and ("pokemon" in result or "form" in result):
-                    pokemon_summaries.extend(result.get("pokemon", []))
-                    form_summaries.extend(result.get("form", []))
+                if isinstance(result, dict) and any(key in result for key in pokemon_summaries):
+                    for key in pokemon_summaries:
+                        pokemon_summaries[key].extend(result.get(key, []))
                 elif isinstance(result, dict):
                     summary_data.append(result)
                 elif isinstance(result, list):
@@ -75,10 +79,10 @@ class BaseParser(ABC):
             for error in errors:
                 print(f"- {error}")
 
-        if pokemon_summaries or form_summaries:
-            pokemon_summaries.sort(key=lambda x: x.get("id", 0))
-            form_summaries.sort(key=lambda x: x.get("id", 0))
-            return {"pokemon": pokemon_summaries, "form": form_summaries}
+        if any(pokemon_summaries.values()):
+            for key in pokemon_summaries:
+                pokemon_summaries[key].sort(key=lambda x: x.get("id", 0))
+            return {key: value for key, value in pokemon_summaries.items() if value}
 
         summary_data.sort(key=lambda x: x.get("id", 0))
         return summary_data

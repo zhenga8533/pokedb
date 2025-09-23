@@ -76,7 +76,6 @@ def run_parsers(
 
     for name, ParserClass in parser_classes.items():
         if args.all or name in args.parsers:
-            # Pass the is_historical flag only to the PokemonParser
             if name == "pokemon":
                 parser_instance = PokemonParser(
                     config=final_config,
@@ -117,10 +116,10 @@ def write_index_file(
         "metadata": {
             "generation": target_gen,
             "createdAt": datetime.now(timezone.utc).isoformat(),
-            "counts": {key: len(value) for key, value in all_summaries.items()},
+            "counts": {key: len(value) for key, value in all_summaries.items() if value},
         }
     }
-    final_index.update(all_summaries)
+    final_index.update({key: value for key, value in all_summaries.items() if value})
     index_file_path = os.path.join(top_level_output_dir, "index.json")
     os.makedirs(top_level_output_dir, exist_ok=True)
     with open(index_file_path, "w", encoding="utf-8") as f:
