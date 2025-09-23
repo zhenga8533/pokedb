@@ -19,7 +19,7 @@ The data is organized into generation-specific folders (e.g., `gen1`, `gen9`). E
 
 The data on this branch can be accessed directly via HTTP, allowing you to use it as a simple, free, and static JSON API.
 
-For detailed information on endpoints, data structures, and usage examples, please see the **[[API Documentation|API-Documentation]]** page on the project's wiki.
+For detailed information on endpoints, data structures, and usage examples, please see the [**API Documentation**](https://github.com/zhenga8533/pokedb/wiki/API-Documentation) page on the project's wiki.
 
 ### Quick Example
 
