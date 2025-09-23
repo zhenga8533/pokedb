@@ -22,7 +22,7 @@ class PokemonParser(GenerationParser):
     ):
         super().__init__(config, api_client, generation_version_groups, target_gen, generation_dex_map)
         self.item_name = "Species"
-        self.api_endpoint = "pokemon-species"
+        self.api_endpoint = "pokemon_species"
         self.output_dir_key_pokemon = "output_dir_pokemon"
         self.output_dir_key_form = "output_dir_form"
 

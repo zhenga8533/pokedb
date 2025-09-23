@@ -17,10 +17,7 @@ class GenerationParser(BaseParser):
             for gen_num in range(1, self.target_gen + 1):
                 try:
                     gen_data = self.api_client.get(f"{self.config['api_base_url']}generation/{gen_num}")
-                    endpoint_key = (
-                        self.api_endpoint.replace("-", "_") if "species" in self.api_endpoint else self.api_endpoint
-                    )
-                    items_in_gen = gen_data.get(endpoint_key, [])
+                    items_in_gen = gen_data.get(self.api_endpoint, [])
                     all_items.extend(items_in_gen)
                 except Exception as e:
                     print(f"Warning: Could not fetch {self.item_name} data for Generation {gen_num}. Error: {e}")
