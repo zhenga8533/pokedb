@@ -13,7 +13,14 @@ This dataset is a comprehensive aggregation of information from two primary sour
 
 ## Data Structure
 
-The data is organized into generation-specific folders (e.g., `gen1`, `gen9`). Each folder contains an `index.json` with summary data and subdirectories for detailed JSON files (`pokemon`, `ability`, `item`, etc.).
+The data is organized into generation-specific folders (e.g., `gen1`, `gen9`). Each folder contains subdirectories for `ability`, `item`, `move`, and a top-level `pokemon` directory that is further organized into the following categories:
+
+* `/pokemon/default`
+* `/pokemon/variant`
+* `/pokemon/transformation`
+* `/pokemon/cosmetic`
+
+Each generation folder also contains a main `index.json` with summary lists for all data points.
 
 ## Use as a Static API
 
