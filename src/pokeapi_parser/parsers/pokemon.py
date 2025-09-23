@@ -128,6 +128,88 @@ class PokemonParser(GenerationParser):
                 gen_numbers[pokedex_name] = entry["entry_number"]
         return gen_numbers
 
+    def _should_skip_form(self, pokemon_data: Dict[str, Any]) -> bool:
+        """Checks if a form should be skipped based on the target generation."""
+        form_url = pokemon_data.get("forms", [{}])[0].get("url")
+        if not form_url:
+            return True
+        form_data = self.api_client.get(form_url)
+        version_group_url = form_data.get("version_group", {}).get("url")
+        if not version_group_url:
+            return True
+        version_group_data = self.api_client.get(version_group_url)
+        form_introduction_gen = int(version_group_data["generation"]["url"].split("/")[-2])
+        return self.target_gen is not None and form_introduction_gen > self.target_gen
+
+    def _build_base_pokemon_data(
+        self, pokemon_data: Dict[str, Any], species_data: Dict[str, Any], variety: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Builds the common data dictionary for any Pokémon form or variety."""
+        return {
+            "id": pokemon_data["id"],
+            "name": pokemon_data["name"],
+            "species": species_data["name"],
+            "is_default": variety.get("is_default", False),
+            "source_url": variety["pokemon"]["url"],
+            "types": [t["type"]["name"] for t in pokemon_data.get("types", [])],
+            "abilities": [
+                {"name": a["ability"]["name"], "is_hidden": a["is_hidden"], "slot": a["slot"]}
+                for a in pokemon_data.get("abilities", [])
+            ],
+            "stats": {s["stat"]["name"]: s["base_stat"] for s in pokemon_data.get("stats", [])},
+            "ev_yield": [
+                {"stat": s["stat"]["name"], "effort": s["effort"]}
+                for s in pokemon_data.get("stats", [])
+                if s["effort"] > 0
+            ],
+            "height": pokemon_data["height"],
+            "weight": pokemon_data["weight"],
+            "cries": pokemon_data.get("cries", {}),
+            "sprites": self._process_sprites(pokemon_data.get("sprites", {})),
+        }
+
+    def _add_default_species_data(
+        self,
+        cleaned_data: Dict[str, Any],
+        pokemon_data: Dict[str, Any],
+        species_data: Dict[str, Any],
+        evolution_chain: Optional[Dict[str, Any]],
+    ):
+        """Adds extra fields that only apply to the default species."""
+        cleaned_data.update(
+            {
+                "base_experience": pokemon_data["base_experience"],
+                "base_happiness": species_data.get("base_happiness"),
+                "capture_rate": species_data.get("capture_rate"),
+                "hatch_counter": species_data.get("hatch_counter"),
+                "gender_rate": species_data.get("gender_rate"),
+                "has_gender_differences": species_data.get("has_gender_differences"),
+                "is_baby": species_data.get("is_baby"),
+                "is_legendary": species_data.get("is_legendary"),
+                "is_mythical": species_data.get("is_mythical"),
+                "pokedex_numbers": self._get_generation_pokedex_numbers(species_data.get("pokedex_numbers", [])),
+                "color": species_data.get("color", {}).get("name"),
+                "shape": species_data.get("shape", {}).get("name"),
+                "egg_groups": [group["name"] for group in species_data.get("egg_groups", [])],
+                "flavor_text": get_english_entry(
+                    species_data.get("flavor_text_entries", []),
+                    "flavor_text",
+                    self.generation_version_groups,
+                    self.target_gen,
+                ),
+                "genus": get_english_entry(species_data.get("genera", []), "genus"),
+                "generation": species_data.get("generation", {}).get("name"),
+                "evolution_chain": evolution_chain,
+                "held_items": self._get_generation_data(
+                    pokemon_data, "held_items", "item", "version_details", "version"
+                ),
+                "moves": self._get_generation_data(
+                    pokemon_data, "moves", "move", "version_group_details", "version_group"
+                ),
+                "forms": [v["pokemon"]["name"] for v in species_data.get("varieties", [])],
+            }
+        )
+
     def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, List[Dict[str, Any]]], str]]:
         """Processes a Pokémon species and all its varieties."""
         try:
@@ -139,78 +221,13 @@ class PokemonParser(GenerationParser):
                 pokemon_data = self.api_client.get(variety["pokemon"]["url"])
                 is_default = variety.get("is_default", False)
 
-                if not is_default:
-                    form_url = pokemon_data.get("forms", [{}])[0].get("url")
-                    if not form_url:
-                        continue
-                    form_data = self.api_client.get(form_url)
-                    version_group_url = form_data.get("version_group", {}).get("url")
-                    if not version_group_url:
-                        continue
-                    version_group_data = self.api_client.get(version_group_url)
-                    form_introduction_gen = int(version_group_data["generation"]["url"].split("/")[-2])
-                    if self.target_gen is not None and form_introduction_gen > self.target_gen:
-                        continue
+                if not is_default and self._should_skip_form(pokemon_data):
+                    continue
 
-                cleaned_data: Dict[str, Any] = {
-                    "id": pokemon_data["id"],
-                    "name": pokemon_data["name"],
-                    "species": species_data["name"],
-                    "is_default": is_default,
-                    "source_url": variety["pokemon"]["url"],
-                    "types": [t["type"]["name"] for t in pokemon_data.get("types", [])],
-                    "abilities": [
-                        {"name": a["ability"]["name"], "is_hidden": a["is_hidden"], "slot": a["slot"]}
-                        for a in pokemon_data.get("abilities", [])
-                    ],
-                    "stats": {s["stat"]["name"]: s["base_stat"] for s in pokemon_data.get("stats", [])},
-                    "ev_yield": [
-                        {"stat": s["stat"]["name"], "effort": s["effort"]}
-                        for s in pokemon_data.get("stats", [])
-                        if s["effort"] > 0
-                    ],
-                    "height": pokemon_data["height"],
-                    "weight": pokemon_data["weight"],
-                    "cries": pokemon_data.get("cries", {}),
-                    "sprites": self._process_sprites(pokemon_data.get("sprites", {})),
-                }
+                cleaned_data = self._build_base_pokemon_data(pokemon_data, species_data, variety)
 
                 if is_default:
-                    cleaned_data.update(
-                        {
-                            "base_experience": pokemon_data["base_experience"],
-                            "base_happiness": species_data.get("base_happiness"),
-                            "capture_rate": species_data.get("capture_rate"),
-                            "hatch_counter": species_data.get("hatch_counter"),
-                            "gender_rate": species_data.get("gender_rate"),
-                            "has_gender_differences": species_data.get("has_gender_differences"),
-                            "is_baby": species_data.get("is_baby"),
-                            "is_legendary": species_data.get("is_legendary"),
-                            "is_mythical": species_data.get("is_mythical"),
-                            "pokedex_numbers": self._get_generation_pokedex_numbers(
-                                species_data.get("pokedex_numbers", [])
-                            ),
-                            "color": species_data.get("color", {}).get("name"),
-                            "shape": species_data.get("shape", {}).get("name"),
-                            "egg_groups": [group["name"] for group in species_data.get("egg_groups", [])],
-                            "flavor_text": get_english_entry(
-                                species_data.get("flavor_text_entries", []),
-                                "flavor_text",
-                                self.generation_version_groups,
-                                self.target_gen,
-                            ),
-                            "genus": get_english_entry(species_data.get("genera", []), "genus"),
-                            "generation": species_data.get("generation", {}).get("name"),
-                            "evolution_chain": evolution_chain,
-                            "held_items": self._get_generation_data(
-                                pokemon_data, "held_items", "item", "version_details", "version"
-                            ),
-                            "moves": self._get_generation_data(
-                                pokemon_data, "moves", "move", "version_group_details", "version_group"
-                            ),
-                            "forms": [v["pokemon"]["name"] for v in species_data.get("varieties", [])],
-                        }
-                    )
+                    self._add_default_species_data(cleaned_data, pokemon_data, species_data, evolution_chain)
 
                 output_key = self.output_dir_key_pokemon if is_default else self.output_dir_key_form
                 output_dir = self.config[output_key]

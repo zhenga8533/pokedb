@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 import shutil
+import sys
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Type
 
@@ -141,8 +142,13 @@ def main() -> None:
 
     top_level_output_dir = os.path.dirname(final_config["output_dir_ability"])
     if os.path.exists(top_level_output_dir):
-        print(f"Deleting existing directory: '{top_level_output_dir}'")
-        shutil.rmtree(top_level_output_dir)
+        response = input(f"Directory '{top_level_output_dir}' already exists. Delete it? (y/n): ")
+        if response.lower() == "y":
+            print(f"Deleting existing directory: '{top_level_output_dir}'")
+            shutil.rmtree(top_level_output_dir)
+        else:
+            print("Operation cancelled.")
+            sys.exit(0)
 
     all_summaries = run_parsers(
         args, final_config, api_client, generation_version_groups, target_gen, generation_dex_map
