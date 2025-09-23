@@ -3,7 +3,7 @@ import os
 from typing import Any, Dict, List, Optional, Union
 
 from ..api_client import ApiClient
-from ..utils import get_english_entry
+from ..utils import get_all_english_entries_for_gen_by_game, get_english_entry
 from .generation import GenerationParser
 
 
@@ -78,7 +78,7 @@ class MoveParser(GenerationParser):
                 "effect_chance": data.get("effect_chance"),
                 "effect": get_english_entry(data.get("effect_entries", []), "effect"),
                 "short_effect": get_english_entry(data.get("effect_entries", []), "short_effect"),
-                "flavor_text": get_english_entry(
+                "flavor_text": get_all_english_entries_for_gen_by_game(
                     data.get("flavor_text_entries", []), "flavor_text", self.generation_version_groups, self.target_gen
                 ),
                 "learned_by_pokemon": [p["name"] for p in data.get("learned_by_pokemon", [])],
