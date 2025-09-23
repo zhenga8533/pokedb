@@ -1,12 +1,12 @@
-# PokéAPI Parser
+# Pokémon Data Collector
 
-[![Update PokéAPI Data](https://github.com/zhenga8533/pokeapi-parser/actions/workflows/update-data.yaml/badge.svg)](https://github.com/zhenga8533/pokeapi-parser/actions/workflows/update-data.yaml)
+[![Update Pokémon Data](https://github.com/zhenga8533/pokeapi-parser/actions/workflows/update-data.yaml/badge.svg)](https://github.com/zhenga8533/pokeapi-parser/actions/workflows/update-data.yaml)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A Python-based tool designed to fetch, parse, and structure data from the [PokéAPI](https://pokeapi.co/). This project automates the process of collecting detailed information about Pokémon, their abilities, moves, items, and more, and saves it into a clean, easy-to-use JSON format.
+A Python-based tool designed to create a comprehensive and generation-accurate Pokémon database. It intelligently combines data from the official [PokéAPI](httpshttps://pokeapi.co/) with historical changes scraped from [Pokémon DB](https://pokemondb.net/) to provide the most precise data for any Pokémon generation.
 
-The parsed generation data is automatically saved to the **`data` branch** weekly, ensuring that you always have the latest information.
+The parsed generation data is automatically saved to the **`data` branch** weekly, ensuring that you always have access to the latest information.
 
 ## Documentation
 
@@ -14,12 +14,13 @@ For detailed information about the project's architecture, configuration, and da
 
 ## Features
 
+- **Dual-Source Data Aggregation**: Combines the structured, modern data from PokéAPI with historical data scraped from Pokémon DB.
+- **Historical Accuracy**: When parsing older generations, the tool automatically scrapes for and applies historical changes to a Pokémon's types, abilities, stats, EV yields, and more.
 - **Comprehensive Data Parsing**: Extracts data for Pokémon (including all forms and varieties), abilities, items, and moves.
-- **Concurrent Processing**: Utilizes a thread pool to fetch data from the API concurrently, significantly speeding up the parsing process.
-- **Configuration-driven**: Easily configure settings like API endpoints, timeouts, and output directories through the `config.json` file.
-- **Generation-specific Data**: Allows you to parse data up to a specific Pokémon generation.
+- **Concurrent Processing**: Utilizes a thread pool to fetch and process data concurrently, significantly speeding up the collection process.
+- **Configuration-driven**: Easily configure settings like API endpoints, timeouts, and output directories through a simple `config.json` file.
+- **Structured JSON Output**: Saves the parsed data in a well-structured and easy-to-navigate JSON format, tailored to be accurate for the specified generation.
 - **Automated Data Updates**: Includes a GitHub Actions workflow to automatically update the data on a weekly basis.
-- **Structured JSON Output**: Saves the parsed data in a well-structured and easy-to-navigate JSON format.
 
 ## How to Use
 
@@ -32,7 +33,7 @@ For detailed information about the project's architecture, configuration, and da
 1.  Clone the repository:
 
     ```bash
-    git clone https://github.com/zhenga8533/pokeapi-parser.git
+    git clone [https://github.com/zhenga8533/pokeapi-parser.git](https://github.com/zhenga8533/pokeapi-parser.git)
     cd pokeapi-parser
     ```
 
@@ -42,25 +43,25 @@ For detailed information about the project's architecture, configuration, and da
     pip install -r requirements.txt
     ```
 
-### Running the Parsers
+### Running the Collector
 
-You can run all parsers at once or specify the ones you need.
+You can run all collectors at once or specify the ones you need.
 
-- **Run all parsers**:
+- **Run all collectors for the latest generation**:
 
   ```bash
   python main.py --all
   ```
 
-- **Run specific parsers**:
-  You can specify one or more parsers to run by listing their names. The available parsers are `pokemon`, `ability`, `item`, and `move`.
+- **Run specific collectors**:
+  You can specify one or more collectors to run by listing their names. The available options are `pokemon`, `ability`, `item`, and `move`.
 
   ```bash
   python main.py pokemon item
   ```
 
-- **Parse data for a specific generation**:
-  Use the `--gen` flag to parse all data up to a specific generation. The output will be placed in a folder corresponding to that generation (e.g., `output/gen3`).
+- **Parse data for a specific (historical) generation**:
+  Use the `--gen` flag to parse all data for a specific generation. If the requested generation is not the latest one, the tool will automatically scrape Pokémon DB for any historical changes to ensure the data is accurate for that time period. The output will be placed in a folder corresponding to that generation (e.g., `output/gen3`).
 
   ```bash
   python main.py --all --gen 3
