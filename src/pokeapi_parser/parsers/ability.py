@@ -27,6 +27,15 @@ class AbilityParser(BaseParser):
         """Processes a single ability from its API reference."""
         try:
             data = self.api_client.get(item_ref["url"])
+
+            generation_url = data.get("generation", {}).get("url")
+            if not generation_url:
+                return None  # Skip if generation info is missing
+
+            introduction_gen = int(generation_url.split("/")[-2])
+            if self.target_gen is not None and introduction_gen > self.target_gen:
+                return None  # Skip if the ability is from a future generation
+
             cleaned_data = {
                 "id": data["id"],
                 "name": data["name"],
@@ -38,10 +47,6 @@ class AbilityParser(BaseParser):
                 "flavor_text": get_english_entry(
                     data.get("flavor_text_entries", []), "flavor_text", self.generation_version_groups, self.target_gen
                 ),
-                "pokemon": [
-                    {"name": p["pokemon"]["name"], "is_hidden": p["is_hidden"], "slot": p["slot"]}
-                    for p in data.get("pokemon", [])
-                ],
             }
 
             output_path = self.config[self.output_dir_key]
