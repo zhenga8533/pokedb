@@ -1,4 +1,4 @@
-# Pokémon Database
+# PokéDB
 
 [![Update Pokémon Data](https://github.com/zhenga8533/pokedb/actions/workflows/update-data.yaml/badge.svg)](https://github.com/zhenga8533/pokedb/actions/workflows/update-data.yaml)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)
