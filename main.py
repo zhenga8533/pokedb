@@ -110,7 +110,10 @@ def run_parsers(
 
 
 def write_index_file(
-    all_summaries: Dict[str, List[Dict[str, Any]]], target_gen: int, top_level_output_dir: str
+    all_summaries: Dict[str, List[Dict[str, Any]]],
+    target_gen: int,
+    top_level_output_dir: str,
+    generation_version_groups: Dict[int, List[str]],
 ) -> None:
     """Writes the final top-level index.json file."""
     if not all_summaries:
@@ -121,6 +124,7 @@ def write_index_file(
     final_index: Dict[str, Any] = {
         "metadata": {
             "generation": target_gen,
+            "version_groups": generation_version_groups.get(target_gen, []),
             "createdAt": datetime.now(timezone.utc).isoformat(),
             "counts": {key: len(value) for key, value in all_summaries.items() if value},
         }
@@ -184,7 +188,7 @@ def main() -> None:
         target_versions,
     )
 
-    write_index_file(all_summaries, target_gen, top_level_output_dir)
+    write_index_file(all_summaries, target_gen, top_level_output_dir, generation_version_groups)
 
 
 if __name__ == "__main__":
