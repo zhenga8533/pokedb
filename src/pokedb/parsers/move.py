@@ -59,6 +59,60 @@ class MoveParser(GenerationParser):
             "stat_chance": metadata.get("stat_chance"),
         }
 
+    def _apply_past_values(self, cleaned_data: Dict[str, Any], past_values: List[Dict[str, Any]]):
+        """Applies historical values to the data if applicable for the target generation."""
+        if not self.target_gen or not self.generation_version_groups:
+            return
+
+        vg_to_gen_map = {
+            vg_name: gen_num for gen_num, vg_list in self.generation_version_groups.items() for vg_name in vg_list
+        }
+
+        target_gen_vgs = self.generation_version_groups.get(self.target_gen, [])
+        change_fields = ["accuracy", "power", "pp", "effect_chance", "type", "effect", "short_effect"]
+        gen_specific_values: Dict[str, Dict[str, Any]] = {field: {} for field in change_fields}
+
+        for vg_name in target_gen_vgs:
+            temp_data = {
+                "accuracy": cleaned_data.get("accuracy"),
+                "power": cleaned_data.get("power"),
+                "pp": cleaned_data.get("pp"),
+                "effect_chance": cleaned_data.get("effect_chance"),
+                "type": cleaned_data.get("type"),
+                "effect": cleaned_data.get("effect"),
+                "short_effect": cleaned_data.get("short_effect"),
+            }
+            sorted_past_values = sorted(
+                [pv for pv in past_values if vg_to_gen_map.get(pv["version_group"]["name"], 999) <= self.target_gen],
+                key=lambda x: vg_to_gen_map.get(x["version_group"]["name"], 999),
+            )
+            for pv in sorted_past_values:
+                if vg_to_gen_map.get(pv["version_group"]["name"], 999) > vg_to_gen_map.get(vg_name, 0):
+                    break
+                if pv.get("accuracy") is not None:
+                    temp_data["accuracy"] = pv["accuracy"]
+                if pv.get("power") is not None:
+                    temp_data["power"] = pv["power"]
+                if pv.get("pp") is not None:
+                    temp_data["pp"] = pv["pp"]
+                if pv.get("effect_chance") is not None:
+                    temp_data["effect_chance"] = pv["effect_chance"]
+                if pv.get("type"):
+                    temp_data["type"] = pv["type"]["name"]
+                if pv.get("effect_entries"):
+                    effect = get_english_entry(pv["effect_entries"], "effect")
+                    short_effect = get_english_entry(pv["effect_entries"], "short_effect")
+                    if effect:
+                        temp_data["effect"] = effect
+                    if short_effect:
+                        temp_data["short_effect"] = short_effect
+
+            for field in change_fields:
+                gen_specific_values[field][vg_name] = temp_data[field]
+
+        for field, values_map in gen_specific_values.items():
+            cleaned_data[field] = values_map
+
     def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, Any], str]]:
         """Processes a single move from its API reference."""
         try:
@@ -88,6 +142,10 @@ class MoveParser(GenerationParser):
                 "machine": self._get_machine_for_generation(data.get("machines", [])),
                 "metadata": self._clean_metadata(data.get("meta")),
             }
+
+            past_values = data.get("past_values", [])
+            if past_values:
+                self._apply_past_values(cleaned_data, past_values)
 
             output_path = self.config[self.output_dir_key]
             os.makedirs(output_path, exist_ok=True)
