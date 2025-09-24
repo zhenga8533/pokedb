@@ -36,9 +36,9 @@ class ItemParser(BaseParser):
             if not game_indices:
                 return None
 
-            introduction_gen = int(min(gi["generation"]["url"].split("/")[-2] for gi in game_indices))
+            item_generations = {int(gi["generation"]["url"].split("/")[-2]) for gi in game_indices}
 
-            if self.target_gen is not None and introduction_gen <= self.target_gen:
+            if self.target_gen is not None and self.target_gen in item_generations:
                 fling_effect_obj = data.get("fling_effect")
                 fling_effect_name = fling_effect_obj.get("name") if fling_effect_obj else None
                 cleaned_data = {
