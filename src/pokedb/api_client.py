@@ -16,7 +16,7 @@ class ApiClient:
         self._session = self._setup_session(config)
         self._cache: Dict[str, Dict[str, Any]] = {}
         self.timeout = config.get("timeout", 15)
-        self.cache_dir = config.get("cache_dir")
+        self.cache_dir = config.get("parser_cache_dir")
         self.cache_expires = config.get("cache_expires")
 
         if self.cache_dir:
@@ -37,7 +37,7 @@ class ApiClient:
         """Generates a file path for a given URL."""
         hashed_url = hashlib.md5(url.encode("utf-8")).hexdigest()
         if not self.cache_dir:
-            raise ValueError("cache_dir must be set to use caching.")
+            raise ValueError("cache_dir must be set to generate a cache path.")
         return os.path.join(self.cache_dir, f"{hashed_url}.json")
 
     def get(self, url: str) -> Dict[str, Any]:
