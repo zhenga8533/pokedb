@@ -121,7 +121,6 @@ class PokemonParser(GenerationParser):
             for details in item[details_key]:
                 entity_name = details[version_key]["name"]
 
-                # Check if the entity (version group or version) is relevant
                 is_relevant = False
                 if key == "moves":
                     is_relevant = entity_name in target_groups
@@ -308,82 +307,83 @@ class PokemonParser(GenerationParser):
                 {
                     "name": default_template["name"],
                     "id": default_template["id"],
-                    "types": default_template["types"],
                     "sprite": default_template["sprites"].get("front_default"),
                 }
             )
 
             processed_urls = {default_pokemon_url}
-
             all_form_urls = {form["url"] for form in default_pokemon_data.get("forms", [])}
             variety_form_urls = set()
+
             for variety in varieties:
-                if variety["pokemon"]["url"] not in processed_urls:
-                    pokemon_data = self.api_client.get(variety["pokemon"]["url"])
-                    form_ref_url = pokemon_data.get("forms", [{}])[0].get("url")
+                if variety["pokemon"]["url"] in processed_urls:
+                    continue
+
+                pokemon_data = self.api_client.get(variety["pokemon"]["url"])
+                form_ref_url = pokemon_data.get("forms", [{}])[0].get("url")
+                if form_ref_url:
                     variety_form_urls.add(form_ref_url)
-                    form_data = self.api_client.get(form_ref_url) if form_ref_url else {}
 
-                    if self._should_skip_form(form_data):
-                        continue
+                form_data = self.api_client.get(form_ref_url) if form_ref_url else {}
+                if self._should_skip_form(form_data):
+                    continue
 
-                    variant_data = copy.deepcopy(default_template)
-                    variant_base_data = self._build_base_pokemon_data(
-                        pokemon_data, species_data, variety["pokemon"]["url"]
-                    )
-                    variant_data.update(variant_base_data)
+                variant_data = copy.deepcopy(default_template)
+                variant_base_data = self._build_base_pokemon_data(
+                    pokemon_data, species_data, variety["pokemon"]["url"]
+                )
+                variant_data.update(variant_base_data)
 
-                    is_battle_only = form_data.get("is_battle_only", False)
-                    if is_battle_only:
-                        output_key, summary_key = self.output_dir_key_transformation, "transformation"
-                    else:
-                        output_key, summary_key = self.output_dir_key_variant, "variant"
+                is_battle_only = form_data.get("is_battle_only", False)
+                if is_battle_only:
+                    output_key, summary_key = self.output_dir_key_transformation, "transformation"
+                else:
+                    output_key, summary_key = self.output_dir_key_variant, "variant"
 
-                    output_dir = self.config[output_key]
-                    os.makedirs(output_dir, exist_ok=True)
-                    file_path = os.path.join(output_dir, f"{variant_data['name']}.json")
-                    with open(file_path, "w", encoding="utf-8") as f:
-                        json.dump(variant_data, f, indent=4, ensure_ascii=False)
-                    summaries[summary_key].append(
-                        {
-                            "name": variant_data["name"],
-                            "id": variant_data["id"],
-                            "types": variant_data["types"],
-                            "sprite": variant_data["sprites"].get("front_default"),
-                        }
-                    )
-                    processed_urls.add(variety["pokemon"]["url"])
+                output_dir = self.config[output_key]
+                os.makedirs(output_dir, exist_ok=True)
+                file_path = os.path.join(output_dir, f"{variant_data['name']}.json")
+                with open(file_path, "w", encoding="utf-8") as f:
+                    json.dump(variant_data, f, indent=4, ensure_ascii=False)
+                summaries[summary_key].append(
+                    {
+                        "name": variant_data["name"],
+                        "id": variant_data["id"],
+                        "sprite": variant_data["sprites"].get("front_default"),
+                    }
+                )
+                processed_urls.add(variety["pokemon"]["url"])
 
             for form_url in all_form_urls - variety_form_urls:
                 form_data = self.api_client.get(form_url)
-                pokemon_url_from_form = form_data.get("pokemon", {}).get("url")
 
-                if pokemon_url_from_form and pokemon_url_from_form not in processed_urls:
-                    if self._should_skip_form(form_data):
-                        continue
+                if self._should_skip_form(form_data) or form_data.get("is_default"):
+                    continue
 
-                    cosmetic_data = copy.deepcopy(default_template)
-                    cosmetic_pokemon_data = self.api_client.get(pokemon_url_from_form)
-                    cosmetic_base_data = self._build_base_pokemon_data(
-                        cosmetic_pokemon_data, species_data, pokemon_url_from_form
-                    )
-                    cosmetic_data.update(cosmetic_base_data)
-                    cosmetic_data["name"] = form_data.get("name", cosmetic_pokemon_data["name"])
+                cosmetic_data = copy.deepcopy(default_template)
+                cosmetic_data["name"] = form_data.get("name", default_template["name"])
+                cosmetic_data["is_default"] = False
 
-                    output_dir = self.config[self.output_dir_key_cosmetic]
-                    os.makedirs(output_dir, exist_ok=True)
-                    file_path = os.path.join(output_dir, f"{cosmetic_data['name']}.json")
-                    with open(file_path, "w", encoding="utf-8") as f:
-                        json.dump(cosmetic_data, f, indent=4, ensure_ascii=False)
-                    summaries["cosmetic"].append(
-                        {
-                            "name": cosmetic_data["name"],
-                            "id": cosmetic_data["id"],
-                            "types": cosmetic_data["types"],
-                            "sprite": cosmetic_data["sprites"].get("front_default"),
-                        }
-                    )
-                    processed_urls.add(pokemon_url_from_form)
+                form_sprites = form_data.get("sprites", {})
+                if form_sprites:
+                    cosmetic_data["sprites"]["front_default"] = form_sprites.get("front_default")
+                    cosmetic_data["sprites"]["front_shiny"] = form_sprites.get("front_shiny")
+                    cosmetic_data["sprites"]["back_default"] = form_sprites.get("back_default")
+                    cosmetic_data["sprites"]["back_shiny"] = form_sprites.get("back_shiny")
+
+                output_dir = self.config[self.output_dir_key_cosmetic]
+                os.makedirs(output_dir, exist_ok=True)
+                file_path = os.path.join(output_dir, f"{cosmetic_data['name']}.json")
+                with open(file_path, "w", encoding="utf-8") as f:
+                    json.dump(cosmetic_data, f, indent=4, ensure_ascii=False)
+
+                summaries["cosmetic"].append(
+                    {
+                        "name": cosmetic_data["name"],
+                        "id": cosmetic_data["id"],
+                        "sprite": cosmetic_data["sprites"].get("front_default"),
+                    }
+                )
 
             return summaries
         except Exception as e:

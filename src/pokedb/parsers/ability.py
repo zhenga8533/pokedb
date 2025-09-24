@@ -51,11 +51,12 @@ class AbilityParser(GenerationParser):
                 }
                 target_gen_vgs = self.generation_version_groups.get(self.target_gen, [])
                 effect_map = {}
-                short_effect_map = {}
+
+                # short_effect is not in effect_changes, so we find the latest one and use it
+                latest_short_effect = get_english_entry(data.get("effect_entries", []), "short_effect")
 
                 for vg_name in target_gen_vgs:
                     current_effect = get_english_entry(data.get("effect_entries", []), "effect")
-                    current_short_effect = get_english_entry(data.get("effect_entries", []), "short_effect")
                     sorted_effect_changes = sorted(
                         [
                             ec
@@ -68,15 +69,12 @@ class AbilityParser(GenerationParser):
                         if vg_to_gen_map.get(ec["version_group"]["name"], 999) > vg_to_gen_map.get(vg_name, 0):
                             break
                         effect = get_english_entry(ec.get("effect_entries", []), "effect")
-                        short_effect = get_english_entry(ec.get("effect_entries", []), "short_effect")
                         if effect:
                             current_effect = effect
-                        if short_effect:
-                            current_short_effect = short_effect
                     effect_map[vg_name] = current_effect
-                    short_effect_map[vg_name] = current_short_effect
+
                 cleaned_data["effect"] = effect_map
-                cleaned_data["short_effect"] = short_effect_map
+                cleaned_data["short_effect"] = latest_short_effect
 
             output_path = self.config[self.output_dir_key]
             os.makedirs(output_path, exist_ok=True)
@@ -84,10 +82,6 @@ class AbilityParser(GenerationParser):
             with open(file_path, "w", encoding="utf-8") as f:
                 json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
 
-            return {
-                "name": cleaned_data["name"],
-                "id": cleaned_data["id"],
-                "short_effect": cleaned_data["short_effect"],
-            }
+            return {"name": cleaned_data["name"], "id": cleaned_data["id"]}
         except Exception as e:
             return f"Parsing failed for {item_ref['name']}: {e}"

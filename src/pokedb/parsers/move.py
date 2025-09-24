@@ -153,11 +153,6 @@ class MoveParser(GenerationParser):
             with open(file_path, "w", encoding="utf-8") as f:
                 json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
 
-            return {
-                "name": cleaned_data["name"],
-                "id": cleaned_data["id"],
-                "type": cleaned_data["type"],
-                "damage_class": cleaned_data["damage_class"],
-            }
+            return {"name": cleaned_data["name"], "id": cleaned_data["id"]}
         except Exception as e:
             return f"Parsing failed for {item_ref['name']}: {e}"
