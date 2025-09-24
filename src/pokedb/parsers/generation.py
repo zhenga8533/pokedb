@@ -13,7 +13,7 @@ class GenerationParser(BaseParser):
         """Gets all item references from the API by iterating through generations."""
         all_items: List[Dict[str, str]] = []
         if self.target_gen:
-            print(f"Collecting all {self.item_name.lower()}s up to Generation {self.target_gen}...")
+            print(f"Collecting all {self.item_name.lower()} up to Generation {self.target_gen}...")
             for gen_num in range(1, self.target_gen + 1):
                 try:
                     gen_data = self.api_client.get(f"{self.config['api_base_url']}generation/{gen_num}")

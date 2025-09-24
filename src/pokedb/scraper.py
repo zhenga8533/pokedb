@@ -1,4 +1,5 @@
 import hashlib
+import json
 import os
 import re
 import time
@@ -10,50 +11,19 @@ from bs4 import BeautifulSoup, Tag
 from .utils import load_config, parse_gen_range
 
 config = load_config()
-SCRAPER_CACHE_DIR = config.get("scraper_cache_dir")
+scraper_cache_dir = config.get("scraper_cache_dir")
 CACHE_EXPIRES = config.get("cache_expires")
 
-if SCRAPER_CACHE_DIR:
-    os.makedirs(SCRAPER_CACHE_DIR, exist_ok=True)
+if scraper_cache_dir:
+    os.makedirs(scraper_cache_dir, exist_ok=True)
 
 
 def _get_cache_path(url: str) -> str:
     """Generates a file path for a given URL."""
     hashed_url = hashlib.md5(url.encode("utf-8")).hexdigest()
-    if SCRAPER_CACHE_DIR:
-        return os.path.join(SCRAPER_CACHE_DIR, f"{hashed_url}.html")
-    raise ValueError("SCRAPER_CACHE_DIR is not set.")
-
-
-def _get_soup_from_url(url: str) -> Optional[BeautifulSoup]:
-    """Fetches and parses HTML from a URL, using a file-based cache."""
-    cache_path = None
-    if SCRAPER_CACHE_DIR and CACHE_EXPIRES is not None:
-        cache_path = _get_cache_path(url)
-        if os.path.exists(cache_path):
-            file_mod_time = os.path.getmtime(cache_path)
-            if time.time() - file_mod_time < CACHE_EXPIRES:
-                with open(cache_path, "r", encoding="utf-8") as f:
-                    return BeautifulSoup(f.read(), "lxml")
-
-    max_retries = 3
-    retry_delay = 5  # seconds
-    for attempt in range(max_retries):
-        try:
-            response = requests.get(url, timeout=10)
-            response.raise_for_status()
-            content = response.content
-            if cache_path:
-                with open(cache_path, "w", encoding="utf-8") as f:
-                    f.write(content.decode("utf-8"))
-            return BeautifulSoup(content, "lxml")
-        except requests.RequestException as e:
-            if attempt < max_retries - 1:
-                time.sleep(retry_delay)
-            else:
-                print(f"Warning: Failed to scrape {url} after {max_retries} attempts. Error: {e}")
-                return None
-    return None
+    if scraper_cache_dir:
+        return os.path.join(scraper_cache_dir, f"{hashed_url}.json")
+    raise ValueError("scraper_cache_dir is not set.")
 
 
 def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]:
@@ -61,9 +31,32 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
     Scrapes Pokémon DB for historical changes for a specific Pokémon and
     returns a dictionary of changes applicable to the target generation.
     """
-    changes: Dict[str, Any] = {}
     url = f"https://pokemondb.net/pokedex/{pokemon_name.lower()}"
-    soup = _get_soup_from_url(url)
+    json_cache_path = None
+    if scraper_cache_dir and CACHE_EXPIRES is not None:
+        json_cache_path = _get_cache_path(url)
+        if os.path.exists(json_cache_path):
+            file_mod_time = os.path.getmtime(json_cache_path)
+            if time.time() - file_mod_time < CACHE_EXPIRES:
+                with open(json_cache_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+
+    changes: Dict[str, Any] = {}
+    soup: Optional[BeautifulSoup] = None
+    max_retries = 3
+    retry_delay = 5  # seconds
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, "lxml")
+            break
+        except requests.RequestException as e:
+            if attempt < max_retries - 1:
+                time.sleep(retry_delay)
+            else:
+                print(f"Warning: Failed to scrape {url} after {max_retries} attempts. Error: {e}")
+                return {}
 
     if not soup:
         return {}
@@ -71,10 +64,16 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
     try:
         changes_header = soup.find("h2", string=re.compile(f"{pokemon_name.capitalize()} changes"))
         if not changes_header:
+            if json_cache_path:
+                with open(json_cache_path, "w", encoding="utf-8") as f:
+                    json.dump({}, f)
             return {}
 
         changes_list = changes_header.find_next_sibling("ul")
         if not isinstance(changes_list, Tag):
+            if json_cache_path:
+                with open(json_cache_path, "w", encoding="utf-8") as f:
+                    json.dump({}, f)
             return {}
 
         rules = [
@@ -125,6 +124,10 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
                         break
     except Exception as e:
         print(f"Warning: Failed to parse scraped data for {pokemon_name}. Error: {e}")
+
+    if json_cache_path:
+        with open(json_cache_path, "w", encoding="utf-8") as f:
+            json.dump(changes, f, indent=4)
 
     return changes
 
