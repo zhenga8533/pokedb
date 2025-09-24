@@ -5,7 +5,7 @@ from typing import Any, Dict, List, Optional, Set, Union
 
 from ..api_client import ApiClient
 from ..scraper import scrape_pokemon_changes
-from ..utils import get_english_entry, int_to_roman
+from ..utils import get_all_english_entries_for_gen_by_game, get_english_entry, int_to_roman
 from .generation import GenerationParser
 
 
@@ -246,7 +246,7 @@ class PokemonParser(GenerationParser):
                 "color": species_data.get("color", {}).get("name"),
                 "shape": species_data.get("shape", {}).get("name"),
                 "egg_groups": [group["name"] for group in species_data.get("egg_groups", [])],
-                "flavor_text": get_english_entry(
+                "flavor_text": get_all_english_entries_for_gen_by_game(
                     species_data.get("flavor_text_entries", []),
                     "flavor_text",
                     self.generation_version_groups,
