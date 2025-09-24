@@ -4,7 +4,7 @@ import os
 import shutil
 import sys
 from datetime import datetime, timezone
-from typing import Any, Dict, List, Type
+from typing import Any, Dict, List, Set, Tuple, Type
 
 from src.pokedb.api_client import ApiClient
 from src.pokedb.parsers.ability import AbilityParser
@@ -36,24 +36,33 @@ def parse_arguments() -> argparse.Namespace:
 
 def gather_initial_data(
     api_client: ApiClient, config: Dict[str, Any], target_gen: int
-) -> tuple[Dict[int, List[str]], Dict[int, str]]:
+) -> Tuple[Dict[int, List[str]], Dict[int, str], Set[str]]:
     """Gathers the initial data needed by the parsers."""
     print(f"Gathering all data up to Generation {target_gen}...")
     generation_version_groups: Dict[int, List[str]] = {}
+    target_versions: Set[str] = set()
     try:
         gen_data = api_client.get(f"{config['api_base_url']}generation/")
         for gen_ref in gen_data.get("results", []):
             gen_num = int(gen_ref["url"].split("/")[-2])
             if gen_num <= target_gen:
                 gen_details = api_client.get(gen_ref["url"])
-                generation_version_groups[gen_num] = [vg["name"] for vg in gen_details.get("version_groups", [])]
+                version_groups = [vg["name"] for vg in gen_details.get("version_groups", [])]
+                generation_version_groups[gen_num] = version_groups
+
+                if gen_num == target_gen:
+                    for vg_name in version_groups:
+                        vg_data = api_client.get(f"{config['api_base_url']}version-group/{vg_name}")
+                        for version in vg_data.get("versions", []):
+                            target_versions.add(version["name"])
+
     except Exception as e:
         print(f"Fatal: Could not fetch generation data. Error: {e}")
         exit(1)
 
     generation_dex_map = get_generation_dex_map(api_client, config)
     print("Finished gathering data")
-    return generation_version_groups, generation_dex_map
+    return generation_version_groups, generation_dex_map, target_versions
 
 
 def run_parsers(
@@ -64,6 +73,7 @@ def run_parsers(
     target_gen: int,
     generation_dex_map: Dict[int, str],
     is_historical: bool,
+    target_versions: Set[str],
 ) -> Dict[str, List[Dict[str, Any]]]:
     """Initializes and runs the requested parsers."""
     all_summaries: Dict[str, List[Dict[str, Any]]] = {}
@@ -76,24 +86,20 @@ def run_parsers(
 
     for name, ParserClass in parser_classes.items():
         if args.all or name in args.parsers:
+            parser_kwargs = {
+                "config": final_config,
+                "api_client": api_client,
+                "generation_version_groups": generation_version_groups,
+                "target_gen": target_gen,
+                "generation_dex_map": generation_dex_map,
+            }
             if name == "pokemon":
-                parser_instance = PokemonParser(
-                    config=final_config,
-                    api_client=api_client,
-                    generation_version_groups=generation_version_groups,
-                    target_gen=target_gen,
-                    generation_dex_map=generation_dex_map,
-                    is_historical=is_historical,
-                )
-            else:
-                parser_instance = ParserClass(
-                    config=final_config,
-                    api_client=api_client,
-                    generation_version_groups=generation_version_groups,
-                    target_gen=target_gen,
-                    generation_dex_map=generation_dex_map,
-                )
+                parser_kwargs["is_historical"] = is_historical
+                parser_kwargs["target_versions"] = target_versions
+
+            parser_instance = ParserClass(**parser_kwargs)
             summary_data = parser_instance.run()
+
             if isinstance(summary_data, list):
                 all_summaries[name] = summary_data
             elif isinstance(summary_data, dict):
@@ -146,7 +152,9 @@ def main() -> None:
     if is_historical:
         print(f"Performing a historical parse for Generation {target_gen}. Scraping for changes...")
 
-    generation_version_groups, generation_dex_map = gather_initial_data(api_client, config, target_gen)
+    generation_version_groups, generation_dex_map, target_versions = gather_initial_data(
+        api_client, config, target_gen
+    )
 
     print(f"\n{'='*10} PARSING ALL DATA FOR GENERATION {target_gen} {'='*10}")
 
@@ -166,7 +174,14 @@ def main() -> None:
             sys.exit(0)
 
     all_summaries = run_parsers(
-        args, final_config, api_client, generation_version_groups, target_gen, generation_dex_map, is_historical
+        args,
+        final_config,
+        api_client,
+        generation_version_groups,
+        target_gen,
+        generation_dex_map,
+        is_historical,
+        target_versions,
     )
 
     write_index_file(all_summaries, target_gen, top_level_output_dir)
