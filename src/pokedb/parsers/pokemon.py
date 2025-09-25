@@ -35,31 +35,36 @@ class PokemonParser(GenerationParser):
         self.target_versions = target_versions or set()
 
     def _apply_historical_changes(self, cleaned_data: Dict[str, Any]):
-        """Applies scraped historical changes to the cleaned data."""
+        """Applies scraped historical changes to the cleaned data for the target generation."""
         if not self.target_gen:
             return
 
-        changes = scrape_pokemon_changes(cleaned_data["species"], self.target_gen)
-        if not changes:
+        scraper_data = scrape_pokemon_changes(cleaned_data["species"])
+        all_changes = scraper_data.get("changes", [])
+        if not all_changes:
             return
 
-        if "ability" in changes:
-            for i, ability in enumerate(cleaned_data.get("abilities", [])):
-                if not ability.get("is_hidden"):
-                    cleaned_data["abilities"][i]["name"] = changes["ability"]
-                    break
-        if "stats" in changes:
-            cleaned_data["stats"].update(changes["stats"])
-        if "types" in changes:
-            cleaned_data["types"] = changes["types"]
-        if "base_experience" in changes:
-            cleaned_data["base_experience"] = changes["base_experience"]
-        if "base_happiness" in changes:
-            cleaned_data["base_happiness"] = changes["base_happiness"]
-        if "capture_rate" in changes:
-            cleaned_data["capture_rate"] = changes["capture_rate"]
-        if "ev_yield" in changes:
-            cleaned_data["ev_yield"] = changes["ev_yield"]
+        for change_item in all_changes:
+            generations = change_item.get("generations", [])
+            change = change_item.get("change", {})
+            if self.target_gen in generations:
+                if "ability" in change:
+                    for i, ability in enumerate(cleaned_data.get("abilities", [])):
+                        if not ability.get("is_hidden"):
+                            cleaned_data["abilities"][i]["name"] = change["ability"]
+                            break
+                if "stats" in change:
+                    cleaned_data["stats"].update(change["stats"])
+                if "types" in change:
+                    cleaned_data["types"] = change["types"]
+                if "base_experience" in change:
+                    cleaned_data["base_experience"] = change["base_experience"]
+                if "base_happiness" in change:
+                    cleaned_data["base_happiness"] = change["base_happiness"]
+                if "capture_rate" in change:
+                    cleaned_data["capture_rate"] = change["capture_rate"]
+                if "ev_yield" in change:
+                    cleaned_data["ev_yield"] = change["ev_yield"]
 
     def _get_evolution_chain(self, chain_url: str) -> Optional[Dict[str, Any]]:
         """Recursively fetches and processes an evolution chain."""

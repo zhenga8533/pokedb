@@ -11,29 +11,29 @@ from bs4 import BeautifulSoup, Tag
 from .utils import load_config, parse_gen_range
 
 config = load_config()
-scraper_cache_dir = config.get("scraper_cache_dir")
+SCRAPER_CACHE_DIR = config.get("scraper_cache_dir")
 CACHE_EXPIRES = config.get("cache_expires")
 
-if scraper_cache_dir:
-    os.makedirs(scraper_cache_dir, exist_ok=True)
+if SCRAPER_CACHE_DIR:
+    os.makedirs(SCRAPER_CACHE_DIR, exist_ok=True)
 
 
 def _get_cache_path(url: str) -> str:
     """Generates a file path for a given URL."""
     hashed_url = hashlib.md5(url.encode("utf-8")).hexdigest()
-    if scraper_cache_dir:
-        return os.path.join(scraper_cache_dir, f"{hashed_url}.json")
-    raise ValueError("scraper_cache_dir is not set.")
+    if SCRAPER_CACHE_DIR:
+        return os.path.join(SCRAPER_CACHE_DIR, f"{hashed_url}.json")
+    raise ValueError("SCRAPER_CACHE_DIR is not set.")
 
 
-def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]:
+def scrape_pokemon_changes(pokemon_name: str) -> Dict[str, Any]:
     """
-    Scrapes Pokémon DB for historical changes for a specific Pokémon and
-    returns a dictionary of changes applicable to the target generation.
+    Scrapes Pokémon DB for all historical changes for a specific Pokémon
+    and returns a dictionary containing metadata and a list of changes.
     """
     url = f"https://pokemondb.net/pokedex/{pokemon_name.lower()}"
     json_cache_path = None
-    if scraper_cache_dir and CACHE_EXPIRES is not None:
+    if SCRAPER_CACHE_DIR and CACHE_EXPIRES is not None:
         json_cache_path = _get_cache_path(url)
         if os.path.exists(json_cache_path):
             file_mod_time = os.path.getmtime(json_cache_path)
@@ -41,10 +41,10 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
                 with open(json_cache_path, "r", encoding="utf-8") as f:
                     return json.load(f)
 
-    changes: Dict[str, Any] = {}
+    all_changes: List[Dict[str, Any]] = []
     soup: Optional[BeautifulSoup] = None
     max_retries = 3
-    retry_delay = 5  # seconds
+    retry_delay = 5
     for attempt in range(max_retries):
         try:
             response = requests.get(url, timeout=10)
@@ -66,15 +66,15 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
         if not changes_header:
             if json_cache_path:
                 with open(json_cache_path, "w", encoding="utf-8") as f:
-                    json.dump({}, f)
-            return {}
+                    json.dump({"metadata": {"name": pokemon_name, "source": url}, "changes": []}, f)
+            return {"metadata": {"name": pokemon_name, "source": url}, "changes": []}
 
         changes_list = changes_header.find_next_sibling("ul")
         if not isinstance(changes_list, Tag):
             if json_cache_path:
                 with open(json_cache_path, "w", encoding="utf-8") as f:
-                    json.dump({}, f)
-            return {}
+                    json.dump({"metadata": {"name": pokemon_name, "source": url}, "changes": []}, f)
+            return {"metadata": {"name": pokemon_name, "source": url}, "changes": []}
 
         rules = [
             ("ability", _parse_ability),
@@ -102,34 +102,24 @@ def scrape_pokemon_changes(pokemon_name: str, target_gen: int) -> Dict[str, Any]
                 continue
 
             generations = parse_gen_range(gen_abbr.get_text())
-            if not generations or target_gen not in generations:
+            if not generations:
                 continue
 
             for pattern, handler in rules:
                 if pattern in text:
                     change = handler(li, text)
-                    if change:
-                        if isinstance(change, dict):
-                            for key, value in change.items():
-                                if isinstance(value, (dict, list)):
-                                    if key in changes and isinstance(changes[key], type(value)):
-                                        if isinstance(value, dict):
-                                            changes[key].update(value)
-                                        else:
-                                            changes[key].extend(value)
-                                    else:
-                                        changes[key] = value
-                                else:
-                                    changes[key] = value
+                    if change and isinstance(change, dict):
+                        all_changes.append({"generations": generations, "change": change})
                         break
     except Exception as e:
         print(f"Warning: Failed to parse scraped data for {pokemon_name}. Error: {e}")
 
+    output = {"metadata": {"name": pokemon_name, "source": url}, "changes": all_changes}
     if json_cache_path:
         with open(json_cache_path, "w", encoding="utf-8") as f:
-            json.dump(changes, f, indent=4)
+            json.dump(output, f, indent=4)
 
-    return changes
+    return output
 
 
 def _parse_ability(li: Tag, text: str) -> Optional[Dict[str, str]]:
