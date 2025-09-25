@@ -37,7 +37,7 @@ jobs:
 
       # 4. Run all the parsers (this creates the local '.output' folder)
       - name: Run Parsers
-        run: python main.py --all
+        run: python main.py --all --no-cache
 
       # 5. Switch to the data branch, replace old data, and commit new results
       - name: Commit and Push Data

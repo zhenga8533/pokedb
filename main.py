@@ -31,6 +31,7 @@ def parse_arguments() -> argparse.Namespace:
         type=int,
         help="Parse all data up to a specific generation number, outputting only that generation's folder.",
     )
+    parser.add_argument("--no-cache", action="store_true", help="Disable caching for the run.")
     return parser.parse_args()
 
 
@@ -147,6 +148,12 @@ def main() -> None:
         return
 
     config = load_config()
+    if args.no_cache:
+        print("Caching is disabled for this run.")
+        config["parser_cache_dir"] = None
+        config["scraper_cache_dir"] = None
+        config["cache_expires"] = None
+
     api_client = ApiClient(config)
 
     latest_gen_num = get_latest_generation(api_client, config)
