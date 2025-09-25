@@ -35,7 +35,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # 4. Run all the parsers (this creates the local 'output' folder)
+      # 4. Run all the parsers (this creates the local '.output' folder)
       - name: Run Parsers
         run: python main.py --all
 
@@ -47,10 +47,10 @@ jobs:
           git checkout data
 
           # Find the new generation directory name (e.g., "gen9")
-          new_gen_dir=$(find output -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | head -n 1)
+          new_gen_dir=$(find .output -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | head -n 1)
 
           if [ -z "$new_gen_dir" ]; then
-            echo "No generation directory found in output. Nothing to commit."
+            echo "No generation directory found in .output. Nothing to commit."
             exit 0
           fi
 
@@ -60,10 +60,10 @@ jobs:
 
           # Move the newly generated directory into the root
           echo "Moving new data into place..."
-          mv "output/$new_gen_dir" .
+          mv ".output/$new_gen_dir" .
 
           # Clean up the now-empty output folder
-          rm -rf output
+          rm -rf .output
 
           # Add ONLY the new generation directory to the commit
           echo "Staging new data from: $new_gen_dir"
