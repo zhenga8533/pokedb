@@ -1,0 +1,70 @@
+{
+    "id": 94,
+    "name": "psychic",
+    "source_url": "https://pokeapi.co/api/v2/move/94/",
+    "accuracy": {
+        "sun-moon": 100,
+        "ultra-sun-ultra-moon": 100,
+        "lets-go-pikachu-lets-go-eevee": 100
+    },
+    "power": {
+        "sun-moon": 90,
+        "ultra-sun-ultra-moon": 90,
+        "lets-go-pikachu-lets-go-eevee": 90
+    },
+    "pp": {
+        "sun-moon": 10,
+        "ultra-sun-ultra-moon": 10,
+        "lets-go-pikachu-lets-go-eevee": 10
+    },
+    "priority": 0,
+    "damage_class": "special",
+    "type": {
+        "sun-moon": "psychic",
+        "ultra-sun-ultra-moon": "psychic",
+        "lets-go-pikachu-lets-go-eevee": "psychic"
+    },
+    "target": "selected-pokemon",
+    "generation": "generation-i",
+    "effect_chance": {
+        "sun-moon": 10,
+        "ultra-sun-ultra-moon": 10,
+        "lets-go-pikachu-lets-go-eevee": 10
+    },
+    "effect": {
+        "sun-moon": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "ultra-sun-ultra-moon": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "lets-go-pikachu-lets-go-eevee": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "sun-moon": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "ultra-sun-ultra-moon": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "lets-go-pikachu-lets-go-eevee": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "flavor_text": {
+        "sun-moon": "The target is hit by a strong telekinetic force. This may also lower the target’s Sp. Def stat.",
+        "ultra-sun-ultra-moon": "The target is hit by a strong telekinetic force. This may also lower the target’s Sp. Def stat.",
+        "lets-go-pikachu-lets-go-eevee": "The target is hit by a strong telekinetic force. This may also lower the target’s Sp. Def stat."
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "special-defense"
+        }
+    ],
+    "machine": "tm29",
+    "metadata": {
+        "ailment": "none",
+        "category": "damage+lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 10
+    }
+}

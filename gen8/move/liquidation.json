@@ -1,0 +1,41 @@
+{
+    "id": 710,
+    "name": "liquidation",
+    "source_url": "https://pokeapi.co/api/v2/move/710/",
+    "accuracy": 100,
+    "power": 85,
+    "pp": 10,
+    "priority": 0,
+    "damage_class": "physical",
+    "type": "water",
+    "target": "selected-pokemon",
+    "generation": "generation-vii",
+    "effect_chance": 20,
+    "effect": "Inflicts regular damage. Has a 20% chance to lower the target’s Defense by one stage.",
+    "short_effect": "Has a 20% chance to lower the target’s Defense by one stage.",
+    "flavor_text": {
+        "sword-shield": "The user slams into the target using a full-force blast of water. This may also lower the target’s Defense stat.",
+        "legends-arceus": "The user slams into the target using a full-force blast of water. This may also lower the target’s defensive stats."
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "defense"
+        }
+    ],
+    "machine": "tr98",
+    "metadata": {
+        "ailment": "none",
+        "category": "damage+lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 20
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "id": 94,
+    "name": "psychic",
+    "source_url": "https://pokeapi.co/api/v2/move/94/",
+    "accuracy": {
+        "x-y": 100,
+        "omega-ruby-alpha-sapphire": 100
+    },
+    "power": {
+        "x-y": 90,
+        "omega-ruby-alpha-sapphire": 90
+    },
+    "pp": {
+        "x-y": 10,
+        "omega-ruby-alpha-sapphire": 10
+    },
+    "priority": 0,
+    "damage_class": "special",
+    "type": {
+        "x-y": "psychic",
+        "omega-ruby-alpha-sapphire": "psychic"
+    },
+    "target": "selected-pokemon",
+    "generation": "generation-i",
+    "effect_chance": {
+        "x-y": 10,
+        "omega-ruby-alpha-sapphire": 10
+    },
+    "effect": {
+        "x-y": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "omega-ruby-alpha-sapphire": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "x-y": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "omega-ruby-alpha-sapphire": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "flavor_text": {
+        "x-y": "The target is hit by a strong telekinetic force. This may also lower the target’s Sp. Def stat.",
+        "omega-ruby-alpha-sapphire": "The target is hit by a strong telekinetic force. This may also lower the target’s Sp. Def stat."
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "special-defense"
+        }
+    ],
+    "machine": "tm29",
+    "metadata": {
+        "ailment": "none",
+        "category": "damage+lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 10
+    }
+}

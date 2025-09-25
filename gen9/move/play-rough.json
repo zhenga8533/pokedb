@@ -1,0 +1,40 @@
+{
+    "id": 583,
+    "name": "play-rough",
+    "source_url": "https://pokeapi.co/api/v2/move/583/",
+    "accuracy": 90,
+    "power": 90,
+    "pp": 10,
+    "priority": 0,
+    "damage_class": "physical",
+    "type": "fairy",
+    "target": "selected-pokemon",
+    "generation": "generation-vi",
+    "effect_chance": 10,
+    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage.",
+    "short_effect": "Has a 10% chance to lower the target’s Attack by one stage.",
+    "flavor_text": {
+        "scarlet-violet": "The user attacks by playing rough with the target. This may also lower the target's Attack stat."
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "attack"
+        }
+    ],
+    "machine": "tm127",
+    "metadata": {
+        "ailment": "none",
+        "category": "damage+lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 10
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "id": 523,
+    "name": "bulldoze",
+    "source_url": "https://pokeapi.co/api/v2/move/523/",
+    "accuracy": 100,
+    "power": 60,
+    "pp": 20,
+    "priority": 0,
+    "damage_class": "physical",
+    "type": "ground",
+    "target": "all-other-pokemon",
+    "generation": "generation-v",
+    "effect_chance": 100,
+    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
+    "short_effect": "Has a 100% chance to lower the target’s Speed by one stage.",
+    "flavor_text": {
+        "x-y": "The user strikes everything around it by stomping down on the ground. This lowers the Speed stat of those hit.",
+        "omega-ruby-alpha-sapphire": "The user strikes everything around it by stomping down on the ground. This lowers the Speed stat of those hit."
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "speed"
+        }
+    ],
+    "machine": "tm78",
+    "metadata": {
+        "ailment": "none",
+        "category": "damage+lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    }
+}

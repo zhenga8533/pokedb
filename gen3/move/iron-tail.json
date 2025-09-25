@@ -1,0 +1,42 @@
+{
+    "id": 231,
+    "name": "iron-tail",
+    "source_url": "https://pokeapi.co/api/v2/move/231/",
+    "accuracy": 75,
+    "power": 100,
+    "pp": 15,
+    "priority": 0,
+    "damage_class": "physical",
+    "type": "steel",
+    "target": "selected-pokemon",
+    "generation": "generation-ii",
+    "effect_chance": 30,
+    "effect": "Inflicts regular damage. Has a 30% chance to lower the target’s Defense by one stage.",
+    "short_effect": "Has a 30% chance to lower the target’s Defense by one stage.",
+    "flavor_text": {
+        "ruby-sapphire": "Attacks with a rock-hard tail. May lower DEFENSE.",
+        "emerald": "Attacks with a rock-hard tail. May lower DEFENSE.",
+        "firered-leafgreen": "An attack with a steel-hard tail. It may lower the foe’s DEFENSE stat."
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "defense"
+        }
+    ],
+    "machine": "tm23",
+    "metadata": {
+        "ailment": "none",
+        "category": "damage+lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 30
+    }
+}

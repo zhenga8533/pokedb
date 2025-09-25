@@ -1,0 +1,62 @@
+{
+    "id": 249,
+    "name": "rock-smash",
+    "source_url": "https://pokeapi.co/api/v2/move/249/",
+    "accuracy": {
+        "black-white": 100,
+        "black-2-white-2": 100
+    },
+    "power": {
+        "black-white": 20,
+        "black-2-white-2": 20
+    },
+    "pp": {
+        "black-white": 15,
+        "black-2-white-2": 15
+    },
+    "priority": 0,
+    "damage_class": "physical",
+    "type": {
+        "black-white": "fighting",
+        "black-2-white-2": "fighting"
+    },
+    "target": "selected-pokemon",
+    "generation": "generation-ii",
+    "effect_chance": {
+        "black-white": 50,
+        "black-2-white-2": 50
+    },
+    "effect": {
+        "black-white": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
+        "black-2-white-2": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage."
+    },
+    "short_effect": {
+        "black-white": "Has a 50% chance to lower the target’s Defense by one stage.",
+        "black-2-white-2": "Has a 50% chance to lower the target’s Defense by one stage."
+    },
+    "flavor_text": {
+        "black-white": "The user attacks with a punch that can shatter a rock. It may also lower the target’s Defense stat.",
+        "black-2-white-2": "The user attacks with a punch that can shatter a rock. It may also lower the target’s Defense stat."
+    },
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "defense"
+        }
+    ],
+    "machine": "tm94",
+    "metadata": {
+        "ailment": "none",
+        "category": "damage+lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 50
+    }
+}
