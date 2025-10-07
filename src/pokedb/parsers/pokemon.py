@@ -5,7 +5,11 @@ from typing import Any, Dict, List, Optional, Set, Union
 
 from ..api_client import ApiClient
 from ..scraper import scrape_pokemon_changes
-from ..utils import get_all_english_entries_for_gen_by_game, get_english_entry, int_to_roman
+from ..utils import (
+    get_all_english_entries_for_gen_by_game,
+    get_english_entry,
+    int_to_roman,
+)
 from .generation import GenerationParser
 
 
@@ -24,7 +28,13 @@ class PokemonParser(GenerationParser):
         is_historical: bool = False,
         target_versions: Optional[Set[str]] = None,
     ):
-        super().__init__(config, api_client, generation_version_groups, target_gen, generation_dex_map)
+        super().__init__(
+            config,
+            api_client,
+            generation_version_groups,
+            target_gen,
+            generation_dex_map,
+        )
         self.item_name = "Species"
         self.api_endpoint = "pokemon_species"
         self.output_dir_key_pokemon = "output_dir_pokemon"
@@ -85,20 +95,36 @@ class PokemonParser(GenerationParser):
                                 "item": (details.get("item") or {}).get("name"),
                                 "trigger": (details.get("trigger") or {}).get("name"),
                                 "gender": details.get("gender"),
-                                "held_item": (details.get("held_item") or {}).get("name"),
-                                "known_move": (details.get("known_move") or {}).get("name"),
-                                "known_move_type": (details.get("known_move_type") or {}).get("name"),
+                                "held_item": (details.get("held_item") or {}).get(
+                                    "name"
+                                ),
+                                "known_move": (details.get("known_move") or {}).get(
+                                    "name"
+                                ),
+                                "known_move_type": (
+                                    details.get("known_move_type") or {}
+                                ).get("name"),
                                 "location": (details.get("location") or {}).get("name"),
                                 "min_level": details.get("min_level"),
                                 "min_happiness": details.get("min_happiness"),
                                 "min_beauty": details.get("min_beauty"),
                                 "min_affection": details.get("min_affection"),
-                                "needs_overworld_rain": details.get("needs_overworld_rain"),
-                                "party_species": (details.get("party_species") or {}).get("name"),
-                                "party_type": (details.get("party_type") or {}).get("name"),
-                                "relative_physical_stats": details.get("relative_physical_stats"),
+                                "needs_overworld_rain": details.get(
+                                    "needs_overworld_rain"
+                                ),
+                                "party_species": (
+                                    details.get("party_species") or {}
+                                ).get("name"),
+                                "party_type": (details.get("party_type") or {}).get(
+                                    "name"
+                                ),
+                                "relative_physical_stats": details.get(
+                                    "relative_physical_stats"
+                                ),
                                 "time_of_day": details.get("time_of_day"),
-                                "trade_species": (details.get("trade_species") or {}).get("name"),
+                                "trade_species": (
+                                    details.get("trade_species") or {}
+                                ).get("name"),
                                 "turn_upside_down": details.get("turn_upside_down"),
                             },
                             "evolves_to": next_evolution["evolves_to"],
@@ -108,11 +134,18 @@ class PokemonParser(GenerationParser):
 
             return recurse_chain(chain_data)
         except Exception as e:
-            print(f"Warning: Could not process evolution chain from {chain_url}. Error: {e}")
+            print(
+                f"Warning: Could not process evolution chain from {chain_url}. Error: {e}"
+            )
             return None
 
     def _get_generation_data(
-        self, data: Dict[str, Any], key: str, name_key: str, details_key: str, version_key: str
+        self,
+        data: Dict[str, Any],
+        key: str,
+        name_key: str,
+        details_key: str,
+        version_key: str,
     ) -> Dict[str, Any]:
         """A generic helper to filter data by the target generation."""
         gen_data: Dict[str, Any] = {}
@@ -153,7 +186,11 @@ class PokemonParser(GenerationParser):
                 processed_moves[method] = []
                 for (move_name, level), games in move_groups.items():
                     processed_moves[method].append(
-                        {"name": move_name, "level_learned_at": level, "version_groups": sorted(list(games))}
+                        {
+                            "name": move_name,
+                            "level_learned_at": level,
+                            "version_groups": sorted(list(games)),
+                        }
                     )
             return processed_moves
 
@@ -179,7 +216,9 @@ class PokemonParser(GenerationParser):
 
         return {k: v for k, v in processed_sprites.items() if v is not None}
 
-    def _get_generation_pokedex_numbers(self, pokedex_numbers: List[Dict[str, Any]]) -> Dict[str, int]:
+    def _get_generation_pokedex_numbers(
+        self, pokedex_numbers: List[Dict[str, Any]]
+    ) -> Dict[str, int]:
         """Filters Pokédex numbers for national and the target generation's regional dex."""
         gen_numbers: Dict[str, int] = {}
         if not self.generation_dex_map or self.target_gen is None:
@@ -198,11 +237,16 @@ class PokemonParser(GenerationParser):
             return False
 
         version_group_data = self.api_client.get(version_group_url)
-        form_introduction_gen = int(version_group_data["generation"]["url"].split("/")[-2])
+        form_introduction_gen = int(
+            version_group_data["generation"]["url"].split("/")[-2]
+        )
         return self.target_gen is not None and form_introduction_gen > self.target_gen
 
     def _build_base_pokemon_data(
-        self, pokemon_data: Dict[str, Any], species_data: Dict[str, Any], source_url: str
+        self,
+        pokemon_data: Dict[str, Any],
+        species_data: Dict[str, Any],
+        source_url: str,
     ) -> Dict[str, Any]:
         """Builds the common data dictionary for any Pokémon form or variety."""
         return {
@@ -213,10 +257,16 @@ class PokemonParser(GenerationParser):
             "source_url": source_url,
             "types": [t["type"]["name"] for t in pokemon_data.get("types", [])],
             "abilities": [
-                {"name": a["ability"]["name"], "is_hidden": a["is_hidden"], "slot": a["slot"]}
+                {
+                    "name": a["ability"]["name"],
+                    "is_hidden": a["is_hidden"],
+                    "slot": a["slot"],
+                }
                 for a in pokemon_data.get("abilities", [])
             ],
-            "stats": {s["stat"]["name"]: s["base_stat"] for s in pokemon_data.get("stats", [])},
+            "stats": {
+                s["stat"]["name"]: s["base_stat"] for s in pokemon_data.get("stats", [])
+            },
             "ev_yield": [
                 {"stat": s["stat"]["name"], "effort": s["effort"]}
                 for s in pokemon_data.get("stats", [])
@@ -247,10 +297,14 @@ class PokemonParser(GenerationParser):
                 "is_baby": species_data.get("is_baby"),
                 "is_legendary": species_data.get("is_legendary"),
                 "is_mythical": species_data.get("is_mythical"),
-                "pokedex_numbers": self._get_generation_pokedex_numbers(species_data.get("pokedex_numbers", [])),
+                "pokedex_numbers": self._get_generation_pokedex_numbers(
+                    species_data.get("pokedex_numbers", [])
+                ),
                 "color": species_data.get("color", {}).get("name"),
                 "shape": species_data.get("shape", {}).get("name"),
-                "egg_groups": [group["name"] for group in species_data.get("egg_groups", [])],
+                "egg_groups": [
+                    group["name"] for group in species_data.get("egg_groups", [])
+                ],
                 "flavor_text": get_all_english_entries_for_gen_by_game(
                     species_data.get("flavor_text_entries", []),
                     "flavor_text",
@@ -264,20 +318,29 @@ class PokemonParser(GenerationParser):
                     pokemon_data, "held_items", "item", "version_details", "version"
                 ),
                 "moves": self._get_generation_data(
-                    pokemon_data, "moves", "move", "version_group_details", "version_group"
+                    pokemon_data,
+                    "moves",
+                    "move",
+                    "version_group_details",
+                    "version_group",
                 ),
-                "forms": [f["pokemon"]["name"] for f in species_data.get("varieties", [])],
             }
         )
 
-    def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, List[Dict[str, Any]]], str]]:
+    def process(
+        self, item_ref: Dict[str, str]
+    ) -> Optional[Union[Dict[str, List[Dict[str, Any]]], str]]:
         """Processes a Pokémon species and all its varieties and forms."""
         species_name = ""
         try:
             species_data = self.api_client.get(item_ref["url"])
             species_name = species_data["name"]
             evolution_chain_url = species_data.get("evolution_chain", {}).get("url")
-            evolution_chain = self._get_evolution_chain(evolution_chain_url) if evolution_chain_url else None
+            evolution_chain = (
+                self._get_evolution_chain(evolution_chain_url)
+                if evolution_chain_url
+                else None
+            )
 
             summaries: Dict[str, List[Dict[str, Any]]] = {
                 "pokemon": [],
@@ -289,17 +352,62 @@ class PokemonParser(GenerationParser):
             varieties = species_data.get("varieties", [])
 
             if not varieties:
-                default_pokemon_url = f"{self.config['api_base_url']}pokemon/{species_data['id']}"
-                default_variety = {"is_default": True, "pokemon": {"name": species_name, "url": default_pokemon_url}}
+                default_pokemon_url = (
+                    f"{self.config['api_base_url']}pokemon/{species_data['id']}"
+                )
+                default_variety = {
+                    "is_default": True,
+                    "pokemon": {"name": species_name, "url": default_pokemon_url},
+                }
                 varieties = [default_variety]
-            else:
-                default_variety = next((v for v in varieties if v["is_default"]), varieties[0])
 
-            default_pokemon_url = default_variety["pokemon"]["url"]
-            default_pokemon_data = self.api_client.get(default_pokemon_url)
+            default_variety = next(
+                (v for v in varieties if v["is_default"]), varieties[0]
+            )
+            default_pokemon_data = self.api_client.get(
+                default_variety["pokemon"]["url"]
+            )
 
-            default_template = self._build_base_pokemon_data(default_pokemon_data, species_data, default_pokemon_url)
-            self._add_default_species_data(default_template, default_pokemon_data, species_data, evolution_chain)
+            all_forms_in_gen: List[Dict[str, str]] = []
+            variety_form_urls: Set[str] = set()
+
+            for variety in varieties:
+                pokemon_data = self.api_client.get(variety["pokemon"]["url"])
+                form_ref_url = pokemon_data.get("forms", [{}])[0].get("url")
+                if form_ref_url:
+                    variety_form_urls.add(form_ref_url)
+                    form_data = self.api_client.get(form_ref_url)
+                    if not self._should_skip_form(form_data):
+                        category = "variant"
+                        if variety.get("is_default"):
+                            category = "default"
+                        elif form_data.get("is_battle_only"):
+                            category = "transformation"
+                        all_forms_in_gen.append(
+                            {"name": pokemon_data["name"], "category": category}
+                        )
+
+            all_form_urls = {
+                form["url"] for form in default_pokemon_data.get("forms", [])
+            }
+            for form_url in all_form_urls - variety_form_urls:
+                form_data = self.api_client.get(form_url)
+                if not self._should_skip_form(form_data) and not form_data.get(
+                    "is_default"
+                ):
+                    all_forms_in_gen.append(
+                        {"name": form_data.get("name", ""), "category": "cosmetic"}
+                    )
+
+            all_forms_in_gen.sort(key=lambda x: x["name"])
+
+            default_template = self._build_base_pokemon_data(
+                default_pokemon_data, species_data, default_variety["pokemon"]["url"]
+            )
+            self._add_default_species_data(
+                default_template, default_pokemon_data, species_data, evolution_chain
+            )
+            default_template["forms"] = all_forms_in_gen
             if self.is_historical:
                 self._apply_historical_changes(default_template)
 
@@ -316,9 +424,7 @@ class PokemonParser(GenerationParser):
                 }
             )
 
-            processed_urls = {default_pokemon_url}
-            all_form_urls = {form["url"] for form in default_pokemon_data.get("forms", [])}
-            variety_form_urls = set()
+            processed_urls = {default_variety["pokemon"]["url"]}
 
             for variety in varieties:
                 if variety["pokemon"]["url"] in processed_urls:
@@ -326,8 +432,6 @@ class PokemonParser(GenerationParser):
 
                 pokemon_data = self.api_client.get(variety["pokemon"]["url"])
                 form_ref_url = pokemon_data.get("forms", [{}])[0].get("url")
-                if form_ref_url:
-                    variety_form_urls.add(form_ref_url)
 
                 form_data = self.api_client.get(form_ref_url) if form_ref_url else {}
                 if self._should_skip_form(form_data):
@@ -341,7 +445,10 @@ class PokemonParser(GenerationParser):
 
                 is_battle_only = form_data.get("is_battle_only", False)
                 if is_battle_only:
-                    output_key, summary_key = self.output_dir_key_transformation, "transformation"
+                    output_key, summary_key = (
+                        self.output_dir_key_transformation,
+                        "transformation",
+                    )
                 else:
                     output_key, summary_key = self.output_dir_key_variant, "variant"
 
@@ -371,10 +478,18 @@ class PokemonParser(GenerationParser):
 
                 form_sprites = form_data.get("sprites", {})
                 if form_sprites:
-                    cosmetic_data["sprites"]["front_default"] = form_sprites.get("front_default")
-                    cosmetic_data["sprites"]["front_shiny"] = form_sprites.get("front_shiny")
-                    cosmetic_data["sprites"]["back_default"] = form_sprites.get("back_default")
-                    cosmetic_data["sprites"]["back_shiny"] = form_sprites.get("back_shiny")
+                    cosmetic_data["sprites"]["front_default"] = form_sprites.get(
+                        "front_default"
+                    )
+                    cosmetic_data["sprites"]["front_shiny"] = form_sprites.get(
+                        "front_shiny"
+                    )
+                    cosmetic_data["sprites"]["back_default"] = form_sprites.get(
+                        "back_default"
+                    )
+                    cosmetic_data["sprites"]["back_shiny"] = form_sprites.get(
+                        "back_shiny"
+                    )
 
                 output_dir = self.config[self.output_dir_key_cosmetic]
                 os.makedirs(output_dir, exist_ok=True)
