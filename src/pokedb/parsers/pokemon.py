@@ -85,6 +85,17 @@ class PokemonParser(GenerationParser):
                 species_name = chain["species"]["name"]
                 evolves_to: List[Dict[str, Any]] = []
                 for evolution in chain.get("evolves_to", []):
+                    # Check if this evolution is from a future generation
+                    species_url = evolution["species"]["url"]
+                    species_data = self.api_client.get(species_url)
+                    evolution_gen = int(
+                        species_data["generation"]["url"].split("/")[-2]
+                    )
+
+                    # Skip evolutions from future generations
+                    if self.target_gen is not None and evolution_gen > self.target_gen:
+                        continue
+
                     details_list = evolution.get("evolution_details", [])
                     details = details_list[0] if details_list else {}
                     next_evolution = recurse_chain(evolution)
