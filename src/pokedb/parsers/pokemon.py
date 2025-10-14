@@ -9,6 +9,7 @@ from ..utils import (
     get_all_english_entries_for_gen_by_game,
     get_english_entry,
     int_to_roman,
+    transform_keys_to_snake_case,
 )
 from .generation import GenerationParser
 
@@ -426,7 +427,7 @@ class PokemonParser(GenerationParser):
             os.makedirs(output_dir, exist_ok=True)
             file_path = os.path.join(output_dir, f"{default_template['name']}.json")
             with open(file_path, "w", encoding="utf-8") as f:
-                json.dump(default_template, f, indent=4, ensure_ascii=False)
+                json.dump(transform_keys_to_snake_case(default_template), f, indent=4, ensure_ascii=False)
             summaries["pokemon"].append(
                 {
                     "name": default_template["name"],
@@ -467,7 +468,7 @@ class PokemonParser(GenerationParser):
                 os.makedirs(output_dir, exist_ok=True)
                 file_path = os.path.join(output_dir, f"{variant_data['name']}.json")
                 with open(file_path, "w", encoding="utf-8") as f:
-                    json.dump(variant_data, f, indent=4, ensure_ascii=False)
+                    json.dump(transform_keys_to_snake_case(variant_data), f, indent=4, ensure_ascii=False)
                 summaries[summary_key].append(
                     {
                         "name": variant_data["name"],
@@ -506,7 +507,7 @@ class PokemonParser(GenerationParser):
                 os.makedirs(output_dir, exist_ok=True)
                 file_path = os.path.join(output_dir, f"{cosmetic_data['name']}.json")
                 with open(file_path, "w", encoding="utf-8") as f:
-                    json.dump(cosmetic_data, f, indent=4, ensure_ascii=False)
+                    json.dump(transform_keys_to_snake_case(cosmetic_data), f, indent=4, ensure_ascii=False)
 
                 summaries["cosmetic"].append(
                     {

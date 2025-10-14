@@ -3,7 +3,7 @@ import os
 from typing import Any, Dict, List, Optional, Union
 
 from ..api_client import ApiClient
-from ..utils import get_all_english_entries_for_gen_by_game, get_english_entry
+from ..utils import get_all_english_entries_for_gen_by_game, get_english_entry, transform_keys_to_snake_case
 from .generation import GenerationParser
 
 
@@ -80,7 +80,7 @@ class AbilityParser(GenerationParser):
             os.makedirs(output_path, exist_ok=True)
             file_path = os.path.join(output_path, f"{cleaned_data['name']}.json")
             with open(file_path, "w", encoding="utf-8") as f:
-                json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
+                json.dump(transform_keys_to_snake_case(cleaned_data), f, indent=4, ensure_ascii=False)
 
             return {"name": cleaned_data["name"], "id": cleaned_data["id"]}
         except Exception as e:
