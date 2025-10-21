@@ -152,3 +152,26 @@ def get_english_entry(
             return " ".join(entry[key_name].split())
 
     return None
+
+
+def kebab_to_snake(text: str) -> str:
+    """Converts a kebab-case string to snake_case."""
+    return text.replace("-", "_")
+
+
+def transform_keys_to_snake_case(data: Any) -> Any:
+    """
+    Recursively transforms all dictionary keys from kebab-case to snake_case.
+
+    Args:
+        data: Can be a dict, list, or any other type
+
+    Returns:
+        The transformed data structure with all keys converted to snake_case
+    """
+    if isinstance(data, dict):
+        return {kebab_to_snake(key): transform_keys_to_snake_case(value) for key, value in data.items()}
+    elif isinstance(data, list):
+        return [transform_keys_to_snake_case(item) for item in data]
+    else:
+        return data
