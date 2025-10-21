@@ -2,17 +2,59 @@
     "id": 180,
     "name": "spite",
     "source_url": "https://pokeapi.co/api/v2/move/180/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "ghost",
+    "type": {
+        "sword_shield": "ghost",
+        "the_isle_of_armor": "ghost",
+        "the_crown_tundra": "ghost",
+        "brilliant_diamond_and_shining_pearl": "ghost",
+        "legends_arceus": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
-    "short_effect": "Lowers the PP of the target’s last used move by 4.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
+        "the_isle_of_armor": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
+        "the_crown_tundra": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
+        "brilliant_diamond_and_shining_pearl": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
+        "legends_arceus": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail."
+    },
+    "short_effect": {
+        "sword_shield": "Lowers the PP of the target’s last used move by 4.",
+        "the_isle_of_armor": "Lowers the PP of the target’s last used move by 4.",
+        "the_crown_tundra": "Lowers the PP of the target’s last used move by 4.",
+        "brilliant_diamond_and_shining_pearl": "Lowers the PP of the target’s last used move by 4.",
+        "legends_arceus": "Lowers the PP of the target’s last used move by 4."
+    },
     "flavor_text": {
         "sword_shield": "The user unleashes its grudge on the move last used by the target by cutting 4 PP from it.",
         "legends_arceus": "The user unleashes its grudge on the move last used by the target by cutting 4 PP from it."

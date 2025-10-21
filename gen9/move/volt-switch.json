@@ -2,17 +2,45 @@
     "id": 521,
     "name": "volt-switch",
     "source_url": "https://pokeapi.co/api/v2/move/521/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 20,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 70,
+        "the_teal_mask": 70,
+        "the_indigo_disk": 70
+    },
+    "pp": {
+        "scarlet_violet": 20,
+        "the_teal_mask": 20,
+        "the_indigo_disk": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "electric",
+    "type": {
+        "scarlet_violet": "electric",
+        "the_teal_mask": "electric",
+        "the_indigo_disk": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage, then the user immediately switches out, and the trainer selects a replacement Pokémon from the party. If the target faints from this attack, the user’s trainer selects the new Pokémon to send out first. If the user is the last Pokémon in its party that can battle, it will not switch out. The user may be hit by pursuit when it switches out, if it has been targeted and pursuit has not yet been used. This move may be used even if the user is under the effect of ingrain. ingrain’s effect will end.",
-    "short_effect": "User must switch out after attacking.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage, then the user immediately switches out, and the trainer selects a replacement Pokémon from the party. If the target faints from this attack, the user’s trainer selects the new Pokémon to send out first. If the user is the last Pokémon in its party that can battle, it will not switch out. The user may be hit by pursuit when it switches out, if it has been targeted and pursuit has not yet been used. This move may be used even if the user is under the effect of ingrain. ingrain’s effect will end.",
+        "the_teal_mask": "Inflicts regular damage, then the user immediately switches out, and the trainer selects a replacement Pokémon from the party. If the target faints from this attack, the user’s trainer selects the new Pokémon to send out first. If the user is the last Pokémon in its party that can battle, it will not switch out. The user may be hit by pursuit when it switches out, if it has been targeted and pursuit has not yet been used. This move may be used even if the user is under the effect of ingrain. ingrain’s effect will end.",
+        "the_indigo_disk": "Inflicts regular damage, then the user immediately switches out, and the trainer selects a replacement Pokémon from the party. If the target faints from this attack, the user’s trainer selects the new Pokémon to send out first. If the user is the last Pokémon in its party that can battle, it will not switch out. The user may be hit by pursuit when it switches out, if it has been targeted and pursuit has not yet been used. This move may be used even if the user is under the effect of ingrain. ingrain’s effect will end."
+    },
+    "short_effect": {
+        "scarlet_violet": "User must switch out after attacking.",
+        "the_teal_mask": "User must switch out after attacking.",
+        "the_indigo_disk": "User must switch out after attacking."
+    },
     "flavor_text": {
         "scarlet_violet": "After making its attack, the user rushes back to switch places with a party Pokémon in waiting."
     },

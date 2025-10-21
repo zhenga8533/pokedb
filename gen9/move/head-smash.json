@@ -2,17 +2,45 @@
     "id": 457,
     "name": "head-smash",
     "source_url": "https://pokeapi.co/api/v2/move/457/",
-    "accuracy": 80,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "scarlet_violet": 80,
+        "the_teal_mask": 80,
+        "the_indigo_disk": 80
+    },
+    "power": {
+        "scarlet_violet": 150,
+        "the_teal_mask": 150,
+        "the_indigo_disk": 150
+    },
+    "pp": {
+        "scarlet_violet": 5,
+        "the_teal_mask": 5,
+        "the_indigo_disk": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "rock",
+    "type": {
+        "scarlet_violet": "rock",
+        "the_teal_mask": "rock",
+        "the_indigo_disk": "rock"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil.",
-    "short_effect": "User receives 1/2 the damage inflicted in recoil.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil.",
+        "the_teal_mask": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil.",
+        "the_indigo_disk": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil."
+    },
+    "short_effect": {
+        "scarlet_violet": "User receives 1/2 the damage inflicted in recoil.",
+        "the_teal_mask": "User receives 1/2 the damage inflicted in recoil.",
+        "the_indigo_disk": "User receives 1/2 the damage inflicted in recoil."
+    },
     "flavor_text": {
         "scarlet_violet": "The user attacks the target with a hazardous full-power headbutt. This also damages the user terribly."
     },

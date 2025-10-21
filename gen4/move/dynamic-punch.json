@@ -2,17 +2,45 @@
     "id": 223,
     "name": "dynamic-punch",
     "source_url": "https://pokeapi.co/api/v2/move/223/",
-    "accuracy": 50,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "diamond_pearl": 50,
+        "platinum": 50,
+        "heartgold_soulsilver": 50
+    },
+    "power": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "pp": {
+        "diamond_pearl": 5,
+        "platinum": 5,
+        "heartgold_soulsilver": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "diamond_pearl": "fighting",
+        "platinum": "fighting",
+        "heartgold_soulsilver": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to confuse the target.",
-    "short_effect": "Has a 100% chance to confuse the target.",
+    "effect_chance": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 100% chance to confuse the target.",
+        "platinum": "Inflicts regular damage. Has a 100% chance to confuse the target.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 100% chance to confuse the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 100% chance to confuse the target.",
+        "platinum": "Has a 100% chance to confuse the target.",
+        "heartgold_soulsilver": "Has a 100% chance to confuse the target."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is punched with the user’s full, concentrated power. It confuses the foe if it hits.",
         "platinum": "The foe is punched with the user’s full, concentrated power. It confuses the foe if it hits.",

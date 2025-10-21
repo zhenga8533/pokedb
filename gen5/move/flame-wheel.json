@@ -2,17 +2,38 @@
     "id": 172,
     "name": "flame-wheel",
     "source_url": "https://pokeapi.co/api/v2/move/172/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 25,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 60,
+        "black_2_white_2": 60
+    },
+    "pp": {
+        "black_white": 25,
+        "black_2_white_2": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "black_white": "fire",
+        "black_2_white_2": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
-    "short_effect": "Has a 10% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 10% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "black_2_white_2": "Inflicts regular damage. Has a 10% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw."
+    },
+    "short_effect": {
+        "black_white": "Has a 10% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "black_2_white_2": "Has a 10% chance to burn the target. Lets frozen Pokémon thaw themselves."
+    },
     "flavor_text": {
         "black_white": "The user cloaks itself in fire and charges at the target. It may also leave the target with a burn.",
         "black_2_white_2": "The user cloaks itself in fire and charges at the target. It may also leave the target with a burn."

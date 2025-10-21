@@ -2,17 +2,38 @@
     "id": 75,
     "name": "razor-leaf",
     "source_url": "https://pokeapi.co/api/v2/move/75/",
-    "accuracy": 95,
-    "power": 55,
-    "pp": 25,
+    "accuracy": {
+        "gold_silver": 95,
+        "crystal": 95
+    },
+    "power": {
+        "gold_silver": 55,
+        "crystal": 55
+    },
+    "pp": {
+        "gold_silver": 25,
+        "crystal": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "grass",
+    "type": {
+        "gold_silver": "grass",
+        "crystal": "grass"
+    },
     "target": "all-opponents",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
-    "short_effect": "Has an increased chance for a critical hit.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
+        "crystal": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move."
+    },
+    "short_effect": {
+        "gold_silver": "Has an increased chance for a critical hit.",
+        "crystal": "Has an increased chance for a critical hit."
+    },
     "flavor_text": {
         "gold_silver": "Has a high criti­ cal hit ratio.",
         "crystal": "Has a high criti­ cal hit ratio."

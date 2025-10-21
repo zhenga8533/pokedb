@@ -2,21 +2,62 @@
     "id": 835,
     "name": "chloroblast",
     "source_url": "https://pokeapi.co/api/v2/move/835/",
-    "accuracy": 95,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "scarlet_violet": 95,
+        "the_teal_mask": 95,
+        "the_indigo_disk": 95
+    },
+    "power": {
+        "scarlet_violet": 150,
+        "the_teal_mask": 150,
+        "the_indigo_disk": 150
+    },
+    "pp": {
+        "scarlet_violet": 5,
+        "the_teal_mask": 5,
+        "the_indigo_disk": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "grass",
+    "type": {
+        "scarlet_violet": "grass",
+        "the_teal_mask": "grass",
+        "the_indigo_disk": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-viii",
-    "effect_chance": null,
-    "effect": null,
-    "short_effect": null,
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "short_effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
     "flavor_text": {
         "scarlet_violet": "The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user."
     },
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

@@ -2,17 +2,59 @@
     "id": 710,
     "name": "liquidation",
     "source_url": "https://pokeapi.co/api/v2/move/710/",
-    "accuracy": 100,
-    "power": 85,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 85,
+        "the_isle_of_armor": 85,
+        "the_crown_tundra": 85,
+        "brilliant_diamond_and_shining_pearl": 85,
+        "legends_arceus": 85
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "water",
+    "type": {
+        "sword_shield": "water",
+        "the_isle_of_armor": "water",
+        "the_crown_tundra": "water",
+        "brilliant_diamond_and_shining_pearl": "water",
+        "legends_arceus": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to lower the target’s Defense by one stage.",
-    "short_effect": "Has a 20% chance to lower the target’s Defense by one stage.",
+    "effect_chance": {
+        "sword_shield": 20,
+        "the_isle_of_armor": 20,
+        "the_crown_tundra": 20,
+        "brilliant_diamond_and_shining_pearl": 20,
+        "legends_arceus": 20
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 20% chance to lower the target’s Defense by one stage.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 20% chance to lower the target’s Defense by one stage.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 20% chance to lower the target’s Defense by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 20% chance to lower the target’s Defense by one stage.",
+        "legends_arceus": "Inflicts regular damage. Has a 20% chance to lower the target’s Defense by one stage."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 20% chance to lower the target’s Defense by one stage.",
+        "the_isle_of_armor": "Has a 20% chance to lower the target’s Defense by one stage.",
+        "the_crown_tundra": "Has a 20% chance to lower the target’s Defense by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Has a 20% chance to lower the target’s Defense by one stage.",
+        "legends_arceus": "Has a 20% chance to lower the target’s Defense by one stage."
+    },
     "flavor_text": {
         "sword_shield": "The user slams into the target using a full-force blast of water. This may also lower the target’s Defense stat.",
         "legends_arceus": "The user slams into the target using a full-force blast of water. This may also lower the target’s defensive stats."

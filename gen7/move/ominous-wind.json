@@ -2,17 +2,45 @@
     "id": 466,
     "name": "ominous-wind",
     "source_url": "https://pokeapi.co/api/v2/move/466/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 60,
+        "ultra_sun_ultra_moon": 60,
+        "lets_go_pikachu_lets_go_eevee": 60
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ghost",
+    "type": {
+        "sun_moon": "ghost",
+        "ultra_sun_ultra_moon": "ghost",
+        "lets_go_pikachu_lets_go_eevee": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
-    "short_effect": "Has a 10% chance to raise all of the user’s stats by one stage.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 10% chance to raise all of the user’s stats by one stage.",
+        "ultra_sun_ultra_moon": "Has a 10% chance to raise all of the user’s stats by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 10% chance to raise all of the user’s stats by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The user blasts the target with a gust of repulsive wind. This may also raise all the user’s stats at once.",
         "ultra_sun_ultra_moon": "The user blasts the target with a gust of repulsive wind. This may also raise all the user’s stats at once.",

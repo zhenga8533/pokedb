@@ -2,17 +2,59 @@
     "id": 299,
     "name": "blaze-kick",
     "source_url": "https://pokeapi.co/api/v2/move/299/",
-    "accuracy": 90,
-    "power": 85,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": 90,
+        "the_isle_of_armor": 90,
+        "the_crown_tundra": 90,
+        "brilliant_diamond_and_shining_pearl": 90,
+        "legends_arceus": 90
+    },
+    "power": {
+        "sword_shield": 85,
+        "the_isle_of_armor": 85,
+        "the_crown_tundra": 85,
+        "brilliant_diamond_and_shining_pearl": 85,
+        "legends_arceus": 85
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "sword_shield": "fire",
+        "the_isle_of_armor": "fire",
+        "the_crown_tundra": "fire",
+        "brilliant_diamond_and_shining_pearl": "fire",
+        "legends_arceus": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
-    "short_effect": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+    "effect_chance": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
+        "the_isle_of_armor": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
+        "the_crown_tundra": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
+        "legends_arceus": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target."
+    },
+    "short_effect": {
+        "sword_shield": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+        "the_isle_of_armor": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+        "the_crown_tundra": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+        "brilliant_diamond_and_shining_pearl": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+        "legends_arceus": "Has an increased chance for a critical hit and a 10% chance to burn the target."
+    },
     "flavor_text": {
         "sword_shield": "The user launches a kick that lands a critical hit more easily. This may also leave the target with a burn.",
         "legends_arceus": "The user launches a kick that lands a critical hit more easily. This may also leave the target with a burn."

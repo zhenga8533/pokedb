@@ -2,17 +2,59 @@
     "id": 280,
     "name": "brick-break",
     "source_url": "https://pokeapi.co/api/v2/move/280/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 15,
+    "accuracy": {
+        "ruby_sapphire": 100,
+        "emerald": 100,
+        "firered_leafgreen": 100,
+        "colosseum": 100,
+        "xd": 100
+    },
+    "power": {
+        "ruby_sapphire": 75,
+        "emerald": 75,
+        "firered_leafgreen": 75,
+        "colosseum": 75,
+        "xd": 75
+    },
+    "pp": {
+        "ruby_sapphire": 15,
+        "emerald": 15,
+        "firered_leafgreen": 15,
+        "colosseum": 15,
+        "xd": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "ruby_sapphire": "fighting",
+        "emerald": "fighting",
+        "firered_leafgreen": "fighting",
+        "colosseum": "fighting",
+        "xd": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
-    "short_effect": "Destroys Reflect and Light Screen.",
+    "effect_chance": {
+        "ruby_sapphire": null,
+        "emerald": null,
+        "firered_leafgreen": null,
+        "colosseum": null,
+        "xd": null
+    },
+    "effect": {
+        "ruby_sapphire": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
+        "emerald": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
+        "firered_leafgreen": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
+        "colosseum": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
+        "xd": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage."
+    },
+    "short_effect": {
+        "ruby_sapphire": "Destroys Reflect and Light Screen.",
+        "emerald": "Destroys Reflect and Light Screen.",
+        "firered_leafgreen": "Destroys Reflect and Light Screen.",
+        "colosseum": "Destroys Reflect and Light Screen.",
+        "xd": "Destroys Reflect and Light Screen."
+    },
     "flavor_text": {
         "ruby_sapphire": "Destroys barriers such as REFLECT and causes damage.",
         "emerald": "Destroys barriers such as REFLECT and causes damage.",

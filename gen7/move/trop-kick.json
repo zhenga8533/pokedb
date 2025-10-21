@@ -2,17 +2,45 @@
     "id": 688,
     "name": "trop-kick",
     "source_url": "https://pokeapi.co/api/v2/move/688/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 70,
+        "ultra_sun_ultra_moon": 70,
+        "lets_go_pikachu_lets_go_eevee": 70
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "grass",
+    "type": {
+        "sun_moon": "grass",
+        "ultra_sun_ultra_moon": "grass",
+        "lets_go_pikachu_lets_go_eevee": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Lowers the target’s Attack by one stage.",
-    "short_effect": "Lowers the target’s Attack by one stage after inflicting damage.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Lowers the target’s Attack by one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Lowers the target’s Attack by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Lowers the target’s Attack by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Lowers the target’s Attack by one stage after inflicting damage.",
+        "ultra_sun_ultra_moon": "Lowers the target’s Attack by one stage after inflicting damage.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s Attack by one stage after inflicting damage."
+    },
     "flavor_text": {
         "sun_moon": "The user lands an intense kick of tropical origins on the target. This also lowers the target’s Attack stat.",
         "ultra_sun_ultra_moon": "The user lands an intense kick of tropical origins on the target. This also lowers the target’s Attack stat.",

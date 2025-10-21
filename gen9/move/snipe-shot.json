@@ -2,17 +2,45 @@
     "id": 745,
     "name": "snipe-shot",
     "source_url": "https://pokeapi.co/api/v2/move/745/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 80,
+        "the_teal_mask": 80,
+        "the_indigo_disk": 80
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "scarlet_violet": "water",
+        "the_teal_mask": "water",
+        "the_indigo_disk": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-viii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage, then (if successful) sets reflect on the user’s side of the field.",
-    "short_effect": "Sets Reflect on the user’s side of the field after inflicting damage.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage, then (if successful) sets reflect on the user’s side of the field.",
+        "the_teal_mask": "Inflicts regular damage, then (if successful) sets reflect on the user’s side of the field.",
+        "the_indigo_disk": "Inflicts regular damage, then (if successful) sets reflect on the user’s side of the field."
+    },
+    "short_effect": {
+        "scarlet_violet": "Sets Reflect on the user’s side of the field after inflicting damage.",
+        "the_teal_mask": "Sets Reflect on the user’s side of the field after inflicting damage.",
+        "the_indigo_disk": "Sets Reflect on the user’s side of the field after inflicting damage."
+    },
     "flavor_text": {
         "scarlet_violet": "The user ignores the effects of opposing Pokémon's moves and Abilities that draw in moves, allowing this move to hit the chosen target."
     },

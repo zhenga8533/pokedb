@@ -2,17 +2,45 @@
     "id": 138,
     "name": "dream-eater",
     "source_url": "https://pokeapi.co/api/v2/move/138/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 15,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "pp": {
+        "diamond_pearl": 15,
+        "platinum": 15,
+        "heartgold_soulsilver": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "diamond_pearl": "psychic",
+        "platinum": "psychic",
+        "heartgold_soulsilver": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
-    "short_effect": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "platinum": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "heartgold_soulsilver": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user."
+    },
+    "short_effect": {
+        "diamond_pearl": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+        "platinum": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+        "heartgold_soulsilver": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user."
+    },
     "flavor_text": {
         "diamond_pearl": "An attack that works only on a sleeping foe. It absorbs half the damage caused to heal the user’s HP.",
         "platinum": "An attack that works only on a sleeping foe. It absorbs half the damage caused to heal the user’s HP.",

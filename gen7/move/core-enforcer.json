@@ -2,17 +2,45 @@
     "id": 687,
     "name": "core-enforcer",
     "source_url": "https://pokeapi.co/api/v2/move/687/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dragon",
+    "type": {
+        "sun_moon": "dragon",
+        "ultra_sun_ultra_moon": "dragon",
+        "lets_go_pikachu_lets_go_eevee": "dragon"
+    },
     "target": "all-opponents",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the target has already moved this turn, its ability is nullified.",
-    "short_effect": "Nullifies the target’s ability if it moves earlier.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. If the target has already moved this turn, its ability is nullified.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. If the target has already moved this turn, its ability is nullified.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. If the target has already moved this turn, its ability is nullified."
+    },
+    "short_effect": {
+        "sun_moon": "Nullifies the target’s ability if it moves earlier.",
+        "ultra_sun_ultra_moon": "Nullifies the target’s ability if it moves earlier.",
+        "lets_go_pikachu_lets_go_eevee": "Nullifies the target’s ability if it moves earlier."
+    },
     "flavor_text": {
         "sun_moon": "If the Pokémon the user has inflicted damage on have already used their moves, this move eliminates the effect of the target’s Ability.",
         "ultra_sun_ultra_moon": "If the Pokémon the user has inflicted damage on have already used their moves, this move eliminates the effect of the target’s Ability.",

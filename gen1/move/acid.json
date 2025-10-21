@@ -2,17 +2,52 @@
     "id": 51,
     "name": "acid",
     "source_url": "https://pokeapi.co/api/v2/move/51/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 30,
+    "accuracy": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "power": {
+        "red_blue": 40,
+        "yellow": 40,
+        "red_green_japan": 40,
+        "blue_japan": 40
+    },
+    "pp": {
+        "red_blue": 30,
+        "yellow": 30,
+        "red_green_japan": 30,
+        "blue_japan": 30
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "poison",
+    "type": {
+        "red_blue": "poison",
+        "yellow": "poison",
+        "red_green_japan": "poison",
+        "blue_japan": "poison"
+    },
     "target": "all-opponents",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+    "effect_chance": {
+        "red_blue": 10,
+        "yellow": 10,
+        "red_green_japan": 10,
+        "blue_japan": 10
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "yellow": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "red_green_japan": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "blue_japan": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "red_blue": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "yellow": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "red_green_japan": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "blue_japan": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
     "flavor_text": {},
     "stat_changes": [
         {

@@ -2,17 +2,59 @@
     "id": 223,
     "name": "dynamic-punch",
     "source_url": "https://pokeapi.co/api/v2/move/223/",
-    "accuracy": 50,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "ruby_sapphire": 50,
+        "emerald": 50,
+        "firered_leafgreen": 50,
+        "colosseum": 50,
+        "xd": 50
+    },
+    "power": {
+        "ruby_sapphire": 100,
+        "emerald": 100,
+        "firered_leafgreen": 100,
+        "colosseum": 100,
+        "xd": 100
+    },
+    "pp": {
+        "ruby_sapphire": 5,
+        "emerald": 5,
+        "firered_leafgreen": 5,
+        "colosseum": 5,
+        "xd": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "ruby_sapphire": "fighting",
+        "emerald": "fighting",
+        "firered_leafgreen": "fighting",
+        "colosseum": "fighting",
+        "xd": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to confuse the target.",
-    "short_effect": "Has a 100% chance to confuse the target.",
+    "effect_chance": {
+        "ruby_sapphire": 100,
+        "emerald": 100,
+        "firered_leafgreen": 100,
+        "colosseum": 100,
+        "xd": 100
+    },
+    "effect": {
+        "ruby_sapphire": "Inflicts regular damage. Has a 100% chance to confuse the target.",
+        "emerald": "Inflicts regular damage. Has a 100% chance to confuse the target.",
+        "firered_leafgreen": "Inflicts regular damage. Has a 100% chance to confuse the target.",
+        "colosseum": "Inflicts regular damage. Has a 100% chance to confuse the target.",
+        "xd": "Inflicts regular damage. Has a 100% chance to confuse the target."
+    },
+    "short_effect": {
+        "ruby_sapphire": "Has a 100% chance to confuse the target.",
+        "emerald": "Has a 100% chance to confuse the target.",
+        "firered_leafgreen": "Has a 100% chance to confuse the target.",
+        "colosseum": "Has a 100% chance to confuse the target.",
+        "xd": "Has a 100% chance to confuse the target."
+    },
     "flavor_text": {
         "ruby_sapphire": "Powerful and sure to cause confusion, but inaccurate.",
         "emerald": "Powerful and sure to cause confusion, but inaccurate.",

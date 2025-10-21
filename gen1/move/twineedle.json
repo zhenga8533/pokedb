@@ -2,17 +2,52 @@
     "id": 41,
     "name": "twineedle",
     "source_url": "https://pokeapi.co/api/v2/move/41/",
-    "accuracy": 100,
-    "power": 25,
-    "pp": 20,
+    "accuracy": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "power": {
+        "red_blue": 25,
+        "yellow": 25,
+        "red_green_japan": 25,
+        "blue_japan": 25
+    },
+    "pp": {
+        "red_blue": 20,
+        "yellow": 20,
+        "red_green_japan": 20,
+        "blue_japan": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "bug",
+    "type": {
+        "red_blue": "bug",
+        "yellow": "bug",
+        "red_green_japan": "bug",
+        "blue_japan": "bug"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Hits twice in the same turn. Has a 20% chance to poison the target.",
-    "short_effect": "Hits twice in the same turn. Has a 20% chance to poison the target.",
+    "effect_chance": {
+        "red_blue": 20,
+        "yellow": 20,
+        "red_green_japan": 20,
+        "blue_japan": 20
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage. Hits twice in the same turn. Has a 20% chance to poison the target.",
+        "yellow": "Inflicts regular damage. Hits twice in the same turn. Has a 20% chance to poison the target.",
+        "red_green_japan": "Inflicts regular damage. Hits twice in the same turn. Has a 20% chance to poison the target.",
+        "blue_japan": "Inflicts regular damage. Hits twice in the same turn. Has a 20% chance to poison the target."
+    },
+    "short_effect": {
+        "red_blue": "Hits twice in the same turn. Has a 20% chance to poison the target.",
+        "yellow": "Hits twice in the same turn. Has a 20% chance to poison the target.",
+        "red_green_japan": "Hits twice in the same turn. Has a 20% chance to poison the target.",
+        "blue_japan": "Hits twice in the same turn. Has a 20% chance to poison the target."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

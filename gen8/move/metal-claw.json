@@ -2,17 +2,59 @@
     "id": 232,
     "name": "metal-claw",
     "source_url": "https://pokeapi.co/api/v2/move/232/",
-    "accuracy": 95,
-    "power": 50,
-    "pp": 35,
+    "accuracy": {
+        "sword_shield": 95,
+        "the_isle_of_armor": 95,
+        "the_crown_tundra": 95,
+        "brilliant_diamond_and_shining_pearl": 95,
+        "legends_arceus": 95
+    },
+    "power": {
+        "sword_shield": 50,
+        "the_isle_of_armor": 50,
+        "the_crown_tundra": 50,
+        "brilliant_diamond_and_shining_pearl": 50,
+        "legends_arceus": 50
+    },
+    "pp": {
+        "sword_shield": 35,
+        "the_isle_of_armor": 35,
+        "the_crown_tundra": 35,
+        "brilliant_diamond_and_shining_pearl": 35,
+        "legends_arceus": 35
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "sword_shield": "steel",
+        "the_isle_of_armor": "steel",
+        "the_crown_tundra": "steel",
+        "brilliant_diamond_and_shining_pearl": "steel",
+        "legends_arceus": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
-    "short_effect": "Has a 10% chance to raise the user’s Attack by one stage.",
+    "effect_chance": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
+        "legends_arceus": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 10% chance to raise the user’s Attack by one stage.",
+        "the_isle_of_armor": "Has a 10% chance to raise the user’s Attack by one stage.",
+        "the_crown_tundra": "Has a 10% chance to raise the user’s Attack by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Has a 10% chance to raise the user’s Attack by one stage.",
+        "legends_arceus": "Has a 10% chance to raise the user’s Attack by one stage."
+    },
     "flavor_text": {
         "sword_shield": "The target is raked with steel claws. This may also raise the user’s Attack stat.",
         "legends_arceus": "The target is raked with steel claws. This may also raise the user's Attack stat."

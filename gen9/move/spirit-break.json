@@ -2,17 +2,45 @@
     "id": 789,
     "name": "spirit-break",
     "source_url": "https://pokeapi.co/api/v2/move/789/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 75,
+        "the_teal_mask": 75,
+        "the_indigo_disk": 75
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fairy",
+    "type": {
+        "scarlet_violet": "fairy",
+        "the_teal_mask": "fairy",
+        "the_indigo_disk": "fairy"
+    },
     "target": "selected-pokemon",
     "generation": "generation-viii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+    "effect_chance": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_teal_mask": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_teal_mask": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_indigo_disk": "Has a 100% chance to lower the target’s Special Attack by one stage."
+    },
     "flavor_text": {
         "scarlet_violet": "The user attacks the target with so much force that it could break the target's spirit. This also lowers the target's Sp. Atk stat."
     },

@@ -2,17 +2,59 @@
     "id": 584,
     "name": "fairy-wind",
     "source_url": "https://pokeapi.co/api/v2/move/584/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 30,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 40,
+        "the_isle_of_armor": 40,
+        "the_crown_tundra": 40,
+        "brilliant_diamond_and_shining_pearl": 40,
+        "legends_arceus": 40
+    },
+    "pp": {
+        "sword_shield": 30,
+        "the_isle_of_armor": 30,
+        "the_crown_tundra": 30,
+        "brilliant_diamond_and_shining_pearl": 30,
+        "legends_arceus": 30
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fairy",
+    "type": {
+        "sword_shield": "fairy",
+        "the_isle_of_armor": "fairy",
+        "the_crown_tundra": "fairy",
+        "brilliant_diamond_and_shining_pearl": "fairy",
+        "legends_arceus": "fairy"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage.",
-    "short_effect": "Inflicts regular damage with no additional effect.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage.",
+        "the_isle_of_armor": "Inflicts regular damage.",
+        "the_crown_tundra": "Inflicts regular damage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage.",
+        "legends_arceus": "Inflicts regular damage."
+    },
+    "short_effect": {
+        "sword_shield": "Inflicts regular damage with no additional effect.",
+        "the_isle_of_armor": "Inflicts regular damage with no additional effect.",
+        "the_crown_tundra": "Inflicts regular damage with no additional effect.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage with no additional effect.",
+        "legends_arceus": "Inflicts regular damage with no additional effect."
+    },
     "flavor_text": {
         "sword_shield": "The user stirs up a fairy wind and strikes the target with it.",
         "legends_arceus": "The user stirs up a fairy wind and strikes the target with it."

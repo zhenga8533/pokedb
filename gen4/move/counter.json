@@ -2,17 +2,45 @@
     "id": 68,
     "name": "counter",
     "source_url": "https://pokeapi.co/api/v2/move/68/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
     "priority": -5,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "diamond_pearl": "fighting",
+        "platinum": "fighting",
+        "heartgold_soulsilver": "fighting"
+    },
     "target": "specific-move",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Targets the last opposing Pokémon to hit the user with a physical move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
-    "short_effect": "Inflicts twice the damage the user received from the last physical hit it took.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Targets the last opposing Pokémon to hit the user with a physical move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
+        "platinum": "Targets the last opposing Pokémon to hit the user with a physical move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
+        "heartgold_soulsilver": "Targets the last opposing Pokémon to hit the user with a physical move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome."
+    },
+    "short_effect": {
+        "diamond_pearl": "Inflicts twice the damage the user received from the last physical hit it took.",
+        "platinum": "Inflicts twice the damage the user received from the last physical hit it took.",
+        "heartgold_soulsilver": "Inflicts twice the damage the user received from the last physical hit it took."
+    },
     "flavor_text": {
         "diamond_pearl": "A retaliation move that counters any physical attack, inflicting double the damage taken.",
         "platinum": "A retaliation move that counters any physical attack, inflicting double the damage taken.",

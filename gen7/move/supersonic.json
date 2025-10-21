@@ -2,17 +2,45 @@
     "id": 48,
     "name": "supersonic",
     "source_url": "https://pokeapi.co/api/v2/move/48/",
-    "accuracy": 55,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 55,
+        "ultra_sun_ultra_moon": 55,
+        "lets_go_pikachu_lets_go_eevee": 55
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "sun_moon": "normal",
+        "ultra_sun_ultra_moon": "normal",
+        "lets_go_pikachu_lets_go_eevee": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Confuses the target.",
-    "short_effect": "Confuses the target.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Confuses the target.",
+        "ultra_sun_ultra_moon": "Confuses the target.",
+        "lets_go_pikachu_lets_go_eevee": "Confuses the target."
+    },
+    "short_effect": {
+        "sun_moon": "Confuses the target.",
+        "ultra_sun_ultra_moon": "Confuses the target.",
+        "lets_go_pikachu_lets_go_eevee": "Confuses the target."
+    },
     "flavor_text": {
         "sun_moon": "The user generates odd sound waves from its body that confuse the target.",
         "ultra_sun_ultra_moon": "The user generates odd sound waves from its body that confuse the target.",

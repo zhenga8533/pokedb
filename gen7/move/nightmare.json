@@ -2,17 +2,45 @@
     "id": 171,
     "name": "nightmare",
     "source_url": "https://pokeapi.co/api/v2/move/171/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "ghost",
+    "type": {
+        "sun_moon": "ghost",
+        "ultra_sun_ultra_moon": "ghost",
+        "lets_go_pikachu_lets_go_eevee": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Only works on sleeping Pokémon. Gives the target a nightmare, damaging it for 1/4 its max HP every turn. If the target wakes up or leaves the field, this effect ends.",
-    "short_effect": "Target loses 1/4 its max HP every turn as long as it’s asleep.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Only works on sleeping Pokémon. Gives the target a nightmare, damaging it for 1/4 its max HP every turn. If the target wakes up or leaves the field, this effect ends.",
+        "ultra_sun_ultra_moon": "Only works on sleeping Pokémon. Gives the target a nightmare, damaging it for 1/4 its max HP every turn. If the target wakes up or leaves the field, this effect ends.",
+        "lets_go_pikachu_lets_go_eevee": "Only works on sleeping Pokémon. Gives the target a nightmare, damaging it for 1/4 its max HP every turn. If the target wakes up or leaves the field, this effect ends."
+    },
+    "short_effect": {
+        "sun_moon": "Target loses 1/4 its max HP every turn as long as it’s asleep.",
+        "ultra_sun_ultra_moon": "Target loses 1/4 its max HP every turn as long as it’s asleep.",
+        "lets_go_pikachu_lets_go_eevee": "Target loses 1/4 its max HP every turn as long as it’s asleep."
+    },
     "flavor_text": {
         "sun_moon": "A sleeping target sees a nightmare that inflicts some damage every turn.",
         "ultra_sun_ultra_moon": "A sleeping target sees a nightmare that inflicts some damage every turn.",

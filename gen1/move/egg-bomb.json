@@ -2,17 +2,52 @@
     "id": 121,
     "name": "egg-bomb",
     "source_url": "https://pokeapi.co/api/v2/move/121/",
-    "accuracy": 75,
-    "power": 100,
-    "pp": 10,
+    "accuracy": {
+        "red_blue": 75,
+        "yellow": 75,
+        "red_green_japan": 75,
+        "blue_japan": 75
+    },
+    "power": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "pp": {
+        "red_blue": 10,
+        "yellow": 10,
+        "red_green_japan": 10,
+        "blue_japan": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "red_blue": "normal",
+        "yellow": "normal",
+        "red_green_japan": "normal",
+        "blue_japan": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage.",
-    "short_effect": "Inflicts regular damage with no additional effect.",
+    "effect_chance": {
+        "red_blue": null,
+        "yellow": null,
+        "red_green_japan": null,
+        "blue_japan": null
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage.",
+        "yellow": "Inflicts regular damage.",
+        "red_green_japan": "Inflicts regular damage.",
+        "blue_japan": "Inflicts regular damage."
+    },
+    "short_effect": {
+        "red_blue": "Inflicts regular damage with no additional effect.",
+        "yellow": "Inflicts regular damage with no additional effect.",
+        "red_green_japan": "Inflicts regular damage with no additional effect.",
+        "blue_japan": "Inflicts regular damage with no additional effect."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": "tm37",

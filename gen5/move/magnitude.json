@@ -2,17 +2,38 @@
     "id": 222,
     "name": "magnitude",
     "source_url": "https://pokeapi.co/api/v2/move/222/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 30,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 30,
+        "black_2_white_2": 30
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ground",
+    "type": {
+        "black_white": "ground",
+        "black_2_white_2": "ground"
+    },
     "target": "all-other-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power is selected at random between 10 and 150, with an average of 71: Magnitude | Power | Chance --------: | ----: | -----: 4 | 10 | 5% 5 | 30 | 10% 6 | 50 | 20% 7 | 70 | 30% 8 | 90 | 20% 9 | 110 | 10% 10 | 150 | 5% This move has double power against Pokémon currently underground due to dig.",
-    "short_effect": "Power varies randomly from 10 to 150.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Power is selected at random between 10 and 150, with an average of 71: Magnitude | Power | Chance --------: | ----: | -----: 4 | 10 | 5% 5 | 30 | 10% 6 | 50 | 20% 7 | 70 | 30% 8 | 90 | 20% 9 | 110 | 10% 10 | 150 | 5% This move has double power against Pokémon currently underground due to dig.",
+        "black_2_white_2": "Inflicts regular damage. Power is selected at random between 10 and 150, with an average of 71: Magnitude | Power | Chance --------: | ----: | -----: 4 | 10 | 5% 5 | 30 | 10% 6 | 50 | 20% 7 | 70 | 30% 8 | 90 | 20% 9 | 110 | 10% 10 | 150 | 5% This move has double power against Pokémon currently underground due to dig."
+    },
+    "short_effect": {
+        "black_white": "Power varies randomly from 10 to 150.",
+        "black_2_white_2": "Power varies randomly from 10 to 150."
+    },
     "flavor_text": {
         "black_white": "The user looses a ground-shaking quake affecting everyone around the user. Its power varies.",
         "black_2_white_2": "The user looses a ground-shaking quake affecting everyone around the user. Its power varies."

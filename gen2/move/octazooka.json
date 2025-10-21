@@ -2,17 +2,38 @@
     "id": 190,
     "name": "octazooka",
     "source_url": "https://pokeapi.co/api/v2/move/190/",
-    "accuracy": 85,
-    "power": 65,
-    "pp": 10,
+    "accuracy": {
+        "gold_silver": 85,
+        "crystal": 85
+    },
+    "power": {
+        "gold_silver": 65,
+        "crystal": 65
+    },
+    "pp": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "gold_silver": "water",
+        "crystal": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to lower the target’s accuracy by one stage.",
-    "short_effect": "Has a 50% chance to lower the target’s accuracy by one stage.",
+    "effect_chance": {
+        "gold_silver": 50,
+        "crystal": 50
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 50% chance to lower the target’s accuracy by one stage.",
+        "crystal": "Inflicts regular damage. Has a 50% chance to lower the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 50% chance to lower the target’s accuracy by one stage.",
+        "crystal": "Has a 50% chance to lower the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "gold_silver": "An attack that may reduce accuracy.",
         "crystal": "An attack that may reduce accuracy."

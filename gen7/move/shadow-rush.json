@@ -2,19 +2,60 @@
     "id": 10001,
     "name": "shadow-rush",
     "source_url": "https://pokeapi.co/api/v2/move/10001/",
-    "accuracy": 100,
-    "power": 55,
-    "pp": null,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 55,
+        "ultra_sun_ultra_moon": 55,
+        "lets_go_pikachu_lets_go_eevee": 55
+    },
+    "pp": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "shadow",
+    "type": {
+        "sun_moon": "shadow",
+        "ultra_sun_ultra_moon": "shadow",
+        "lets_go_pikachu_lets_go_eevee": "shadow"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move while in hyper mode.",
-    "short_effect": "Has an increased chance for a critical hit in Hyper Mode.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move while in hyper mode.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move while in hyper mode.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move while in hyper mode."
+    },
+    "short_effect": {
+        "sun_moon": "Has an increased chance for a critical hit in Hyper Mode.",
+        "ultra_sun_ultra_moon": "Has an increased chance for a critical hit in Hyper Mode.",
+        "lets_go_pikachu_lets_go_eevee": "Has an increased chance for a critical hit in Hyper Mode."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

@@ -2,17 +2,45 @@
     "id": 310,
     "name": "astonish",
     "source_url": "https://pokeapi.co/api/v2/move/310/",
-    "accuracy": 100,
-    "power": 30,
-    "pp": 15,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 30,
+        "platinum": 30,
+        "heartgold_soulsilver": 30
+    },
+    "pp": {
+        "diamond_pearl": 15,
+        "platinum": 15,
+        "heartgold_soulsilver": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ghost",
+    "type": {
+        "diamond_pearl": "ghost",
+        "platinum": "ghost",
+        "heartgold_soulsilver": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "diamond_pearl": 30,
+        "platinum": 30,
+        "heartgold_soulsilver": 30
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "platinum": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 30% chance to make the target flinch.",
+        "platinum": "Has a 30% chance to make the target flinch.",
+        "heartgold_soulsilver": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {
         "diamond_pearl": "The user attacks the foe while shouting in a startling fashion. It may also make the target flinch.",
         "platinum": "The user attacks the foe while shouting in a startling fashion. It may also make the target flinch.",

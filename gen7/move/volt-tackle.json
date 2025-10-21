@@ -2,17 +2,45 @@
     "id": 344,
     "name": "volt-tackle",
     "source_url": "https://pokeapi.co/api/v2/move/344/",
-    "accuracy": 100,
-    "power": 120,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 120,
+        "ultra_sun_ultra_moon": 120,
+        "lets_go_pikachu_lets_go_eevee": 120
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "sun_moon": "electric",
+        "ultra_sun_ultra_moon": "electric",
+        "lets_go_pikachu_lets_go_eevee": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. User takes 1/3 the damage it inflicts in recoil. Has a 10% chance to paralyze the target.",
-    "short_effect": "User takes 1/3 the damage inflicted in recoil. Has a 10% chance to paralyze the target.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. User takes 1/3 the damage it inflicts in recoil. Has a 10% chance to paralyze the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. User takes 1/3 the damage it inflicts in recoil. Has a 10% chance to paralyze the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. User takes 1/3 the damage it inflicts in recoil. Has a 10% chance to paralyze the target."
+    },
+    "short_effect": {
+        "sun_moon": "User takes 1/3 the damage inflicted in recoil. Has a 10% chance to paralyze the target.",
+        "ultra_sun_ultra_moon": "User takes 1/3 the damage inflicted in recoil. Has a 10% chance to paralyze the target.",
+        "lets_go_pikachu_lets_go_eevee": "User takes 1/3 the damage inflicted in recoil. Has a 10% chance to paralyze the target."
+    },
     "flavor_text": {
         "sun_moon": "The user electrifies itself and charges the target. This also damages the user quite a lot. This attack may leave the target with paralysis.",
         "ultra_sun_ultra_moon": "The user electrifies itself and charges the target. This also damages the user quite a lot. This attack may leave the target with paralysis.",

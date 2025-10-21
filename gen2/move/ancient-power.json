@@ -2,17 +2,38 @@
     "id": 246,
     "name": "ancient-power",
     "source_url": "https://pokeapi.co/api/v2/move/246/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 5,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": 60,
+        "crystal": 60
+    },
+    "pp": {
+        "gold_silver": 5,
+        "crystal": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "rock",
+    "type": {
+        "gold_silver": "rock",
+        "crystal": "rock"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
-    "short_effect": "Has a 10% chance to raise all of the user’s stats by one stage.",
+    "effect_chance": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
+        "crystal": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 10% chance to raise all of the user’s stats by one stage.",
+        "crystal": "Has a 10% chance to raise all of the user’s stats by one stage."
+    },
     "flavor_text": {
         "gold_silver": "An attack that may raise all stats.",
         "crystal": "An attack that may raise all stats."

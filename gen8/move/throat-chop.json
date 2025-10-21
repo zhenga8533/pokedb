@@ -2,17 +2,59 @@
     "id": 675,
     "name": "throat-chop",
     "source_url": "https://pokeapi.co/api/v2/move/675/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 80,
+        "the_isle_of_armor": 80,
+        "the_crown_tundra": 80,
+        "brilliant_diamond_and_shining_pearl": 80,
+        "legends_arceus": 80
+    },
+    "pp": {
+        "sword_shield": 15,
+        "the_isle_of_armor": 15,
+        "the_crown_tundra": 15,
+        "brilliant_diamond_and_shining_pearl": 15,
+        "legends_arceus": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dark",
+    "type": {
+        "sword_shield": "dark",
+        "the_isle_of_armor": "dark",
+        "the_crown_tundra": "dark",
+        "brilliant_diamond_and_shining_pearl": "dark",
+        "legends_arceus": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Silences the target for two turns, preventing it from using any sound-based moves.",
-    "short_effect": "Prevents the target from using sound-based moves for two turns.",
+    "effect_chance": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Silences the target for two turns, preventing it from using any sound-based moves.",
+        "the_isle_of_armor": "Inflicts regular damage. Silences the target for two turns, preventing it from using any sound-based moves.",
+        "the_crown_tundra": "Inflicts regular damage. Silences the target for two turns, preventing it from using any sound-based moves.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Silences the target for two turns, preventing it from using any sound-based moves.",
+        "legends_arceus": "Inflicts regular damage. Silences the target for two turns, preventing it from using any sound-based moves."
+    },
+    "short_effect": {
+        "sword_shield": "Prevents the target from using sound-based moves for two turns.",
+        "the_isle_of_armor": "Prevents the target from using sound-based moves for two turns.",
+        "the_crown_tundra": "Prevents the target from using sound-based moves for two turns.",
+        "brilliant_diamond_and_shining_pearl": "Prevents the target from using sound-based moves for two turns.",
+        "legends_arceus": "Prevents the target from using sound-based moves for two turns."
+    },
     "flavor_text": {
         "sword_shield": "The user attacks the target’s throat, and the resultant suffering prevents the target from using moves that emit sound for two turns.",
         "legends_arceus": "The user attacks the target's throat, and the resultant suffering prevents the target from using moves that emit sound for two turns."

@@ -2,17 +2,45 @@
     "id": 180,
     "name": "spite",
     "source_url": "https://pokeapi.co/api/v2/move/180/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "ghost",
+    "type": {
+        "diamond_pearl": "ghost",
+        "platinum": "ghost",
+        "heartgold_soulsilver": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
-    "short_effect": "Lowers the PP of the target’s last used move by 4.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
+        "platinum": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
+        "heartgold_soulsilver": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail."
+    },
+    "short_effect": {
+        "diamond_pearl": "Lowers the PP of the target’s last used move by 4.",
+        "platinum": "Lowers the PP of the target’s last used move by 4.",
+        "heartgold_soulsilver": "Lowers the PP of the target’s last used move by 4."
+    },
     "flavor_text": {
         "diamond_pearl": "The user looses its grudge on the move last used by the foe by cutting 4 PP from it.",
         "platinum": "The user looses its grudge on the move last used by the foe by cutting 4 PP from it.",

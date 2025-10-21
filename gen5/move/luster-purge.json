@@ -2,17 +2,38 @@
     "id": 295,
     "name": "luster-purge",
     "source_url": "https://pokeapi.co/api/v2/move/295/",
-    "accuracy": 100,
-    "power": 95,
-    "pp": 5,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 95,
+        "black_2_white_2": 95
+    },
+    "pp": {
+        "black_white": 5,
+        "black_2_white_2": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "black_white": "psychic",
+        "black_2_white_2": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to lower the target’s Special Defense by one stage.",
-    "short_effect": "Has a 50% chance to lower the target’s Special Defense by one stage.",
+    "effect_chance": {
+        "black_white": 50,
+        "black_2_white_2": 50
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 50% chance to lower the target’s Special Defense by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 50% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 50% chance to lower the target’s Special Defense by one stage.",
+        "black_2_white_2": "Has a 50% chance to lower the target’s Special Defense by one stage."
+    },
     "flavor_text": {
         "black_white": "The user lets loose a damaging burst of light. It may also reduce the target’s Sp. Def stat.",
         "black_2_white_2": "The user lets loose a damaging burst of light. It may also reduce the target’s Sp. Def stat."

@@ -2,17 +2,45 @@
     "id": 611,
     "name": "infestation",
     "source_url": "https://pokeapi.co/api/v2/move/611/",
-    "accuracy": 100,
-    "power": 20,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "bug",
+    "type": {
+        "sun_moon": "bug",
+        "ultra_sun_ultra_moon": "bug",
+        "lets_go_pikachu_lets_go_eevee": "bug"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. For the next 2–5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn. The user continues to use other moves during this time. If the user leaves the field, this effect ends. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use. rapid spin cancels this effect.",
-    "short_effect": "Prevents the target from fleeing and inflicts damage for 2-5 turns.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. For the next 2–5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn. The user continues to use other moves during this time. If the user leaves the field, this effect ends. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use. rapid spin cancels this effect.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. For the next 2–5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn. The user continues to use other moves during this time. If the user leaves the field, this effect ends. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use. rapid spin cancels this effect.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. For the next 2–5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn. The user continues to use other moves during this time. If the user leaves the field, this effect ends. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use. rapid spin cancels this effect."
+    },
+    "short_effect": {
+        "sun_moon": "Prevents the target from fleeing and inflicts damage for 2-5 turns.",
+        "ultra_sun_ultra_moon": "Prevents the target from fleeing and inflicts damage for 2-5 turns.",
+        "lets_go_pikachu_lets_go_eevee": "Prevents the target from fleeing and inflicts damage for 2-5 turns."
+    },
     "flavor_text": {
         "sun_moon": "The target is infested and attacked for four to five turns. The target can’t flee during this time.",
         "ultra_sun_ultra_moon": "The target is infested and attacked for four to five turns. The target can’t flee during this time.",

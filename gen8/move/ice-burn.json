@@ -2,17 +2,59 @@
     "id": 554,
     "name": "ice-burn",
     "source_url": "https://pokeapi.co/api/v2/move/554/",
-    "accuracy": 90,
-    "power": 140,
-    "pp": 5,
+    "accuracy": {
+        "sword_shield": 90,
+        "the_isle_of_armor": 90,
+        "the_crown_tundra": 90,
+        "brilliant_diamond_and_shining_pearl": 90,
+        "legends_arceus": 90
+    },
+    "power": {
+        "sword_shield": 140,
+        "the_isle_of_armor": 140,
+        "the_crown_tundra": 140,
+        "brilliant_diamond_and_shining_pearl": 140,
+        "legends_arceus": 140
+    },
+    "pp": {
+        "sword_shield": 5,
+        "the_isle_of_armor": 5,
+        "the_crown_tundra": 5,
+        "brilliant_diamond_and_shining_pearl": 5,
+        "legends_arceus": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ice",
+    "type": {
+        "sword_shield": "ice",
+        "the_isle_of_armor": "ice",
+        "the_crown_tundra": "ice",
+        "brilliant_diamond_and_shining_pearl": "ice",
+        "legends_arceus": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to burn the target. User charges for one turn before attacking.",
-    "short_effect": "Requires a turn to charge before attacking. Has a 30% chance to burn the target.",
+    "effect_chance": {
+        "sword_shield": 30,
+        "the_isle_of_armor": 30,
+        "the_crown_tundra": 30,
+        "brilliant_diamond_and_shining_pearl": 30,
+        "legends_arceus": 30
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 30% chance to burn the target. User charges for one turn before attacking.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 30% chance to burn the target. User charges for one turn before attacking.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 30% chance to burn the target. User charges for one turn before attacking.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 30% chance to burn the target. User charges for one turn before attacking.",
+        "legends_arceus": "Inflicts regular damage. Has a 30% chance to burn the target. User charges for one turn before attacking."
+    },
+    "short_effect": {
+        "sword_shield": "Requires a turn to charge before attacking. Has a 30% chance to burn the target.",
+        "the_isle_of_armor": "Requires a turn to charge before attacking. Has a 30% chance to burn the target.",
+        "the_crown_tundra": "Requires a turn to charge before attacking. Has a 30% chance to burn the target.",
+        "brilliant_diamond_and_shining_pearl": "Requires a turn to charge before attacking. Has a 30% chance to burn the target.",
+        "legends_arceus": "Requires a turn to charge before attacking. Has a 30% chance to burn the target."
+    },
     "flavor_text": {
         "sword_shield": "On the second turn, an ultracold, freezing wind surrounds the target. This may leave the target with a burn.",
         "legends_arceus": "On the second turn, an ultracold, freezing wind surrounds the target. This may leave the target with a burn."

@@ -2,17 +2,38 @@
     "id": 612,
     "name": "power-up-punch",
     "source_url": "https://pokeapi.co/api/v2/move/612/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 20,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 40,
+        "omega_ruby_alpha_sapphire": 40
+    },
+    "pp": {
+        "x_y": 20,
+        "omega_ruby_alpha_sapphire": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "x_y": "fighting",
+        "omega_ruby_alpha_sapphire": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Raises the user’s Attack by one stage.",
-    "short_effect": "Raises the user’s Attack by one stage after inflicting damage.",
+    "effect_chance": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Raises the user’s Attack by one stage.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Raises the user’s Attack by one stage."
+    },
+    "short_effect": {
+        "x_y": "Raises the user’s Attack by one stage after inflicting damage.",
+        "omega_ruby_alpha_sapphire": "Raises the user’s Attack by one stage after inflicting damage."
+    },
     "flavor_text": {
         "x_y": "Striking opponents over and over makes the user’s fists harder. Hitting a target raises the Attack stat.",
         "omega_ruby_alpha_sapphire": "Striking opponents over and over makes the user’s fists harder. Hitting a target raises the Attack stat."

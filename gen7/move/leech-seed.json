@@ -2,17 +2,45 @@
     "id": 73,
     "name": "leech-seed",
     "source_url": "https://pokeapi.co/api/v2/move/73/",
-    "accuracy": 90,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "grass",
+    "type": {
+        "sun_moon": "grass",
+        "ultra_sun_ultra_moon": "grass",
+        "lets_go_pikachu_lets_go_eevee": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
-    "short_effect": "Seeds the target, stealing HP from it every turn.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
+        "ultra_sun_ultra_moon": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
+        "lets_go_pikachu_lets_go_eevee": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass."
+    },
+    "short_effect": {
+        "sun_moon": "Seeds the target, stealing HP from it every turn.",
+        "ultra_sun_ultra_moon": "Seeds the target, stealing HP from it every turn.",
+        "lets_go_pikachu_lets_go_eevee": "Seeds the target, stealing HP from it every turn."
+    },
     "flavor_text": {
         "sun_moon": "A seed is planted on the target. It steals some HP from the target every turn.",
         "ultra_sun_ultra_moon": "A seed is planted on the target. It steals some HP from the target every turn.",

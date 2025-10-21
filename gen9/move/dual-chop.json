@@ -2,17 +2,45 @@
     "id": 530,
     "name": "dual-chop",
     "source_url": "https://pokeapi.co/api/v2/move/530/",
-    "accuracy": 90,
-    "power": 40,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "power": {
+        "scarlet_violet": 40,
+        "the_teal_mask": 40,
+        "the_indigo_disk": 40
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dragon",
+    "type": {
+        "scarlet_violet": "dragon",
+        "the_teal_mask": "dragon",
+        "the_indigo_disk": "dragon"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Hits twice in one turn.",
-    "short_effect": "Hits twice in one turn.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Hits twice in one turn.",
+        "the_teal_mask": "Inflicts regular damage. Hits twice in one turn.",
+        "the_indigo_disk": "Inflicts regular damage. Hits twice in one turn."
+    },
+    "short_effect": {
+        "scarlet_violet": "Hits twice in one turn.",
+        "the_teal_mask": "Hits twice in one turn.",
+        "the_indigo_disk": "Hits twice in one turn."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

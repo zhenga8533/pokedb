@@ -2,17 +2,38 @@
     "id": 109,
     "name": "confuse-ray",
     "source_url": "https://pokeapi.co/api/v2/move/109/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "ghost",
+    "type": {
+        "black_white": "ghost",
+        "black_2_white_2": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Confuses the target.",
-    "short_effect": "Confuses the target.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Confuses the target.",
+        "black_2_white_2": "Confuses the target."
+    },
+    "short_effect": {
+        "black_white": "Confuses the target.",
+        "black_2_white_2": "Confuses the target."
+    },
     "flavor_text": {
         "black_white": "The target is exposed to a sinister ray that triggers confusion.",
         "black_2_white_2": "The target is exposed to a sinister ray that triggers confusion."

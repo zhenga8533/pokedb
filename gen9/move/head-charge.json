@@ -2,17 +2,45 @@
     "id": 543,
     "name": "head-charge",
     "source_url": "https://pokeapi.co/api/v2/move/543/",
-    "accuracy": 100,
-    "power": 120,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 120,
+        "the_teal_mask": 120,
+        "the_indigo_disk": 120
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "scarlet_violet": "normal",
+        "the_teal_mask": "normal",
+        "the_indigo_disk": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil.",
-    "short_effect": "User receives 1/4 the damage it inflicts in recoil.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil.",
+        "the_teal_mask": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil.",
+        "the_indigo_disk": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil."
+    },
+    "short_effect": {
+        "scarlet_violet": "User receives 1/4 the damage it inflicts in recoil.",
+        "the_teal_mask": "User receives 1/4 the damage it inflicts in recoil.",
+        "the_indigo_disk": "User receives 1/4 the damage it inflicts in recoil."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

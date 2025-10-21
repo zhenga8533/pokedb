@@ -2,17 +2,45 @@
     "id": 451,
     "name": "charge-beam",
     "source_url": "https://pokeapi.co/api/v2/move/451/",
-    "accuracy": 90,
-    "power": 50,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 90,
+        "platinum": 90,
+        "heartgold_soulsilver": 90
+    },
+    "power": {
+        "diamond_pearl": 50,
+        "platinum": 50,
+        "heartgold_soulsilver": 50
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "electric",
+    "type": {
+        "diamond_pearl": "electric",
+        "platinum": "electric",
+        "heartgold_soulsilver": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 70,
-    "effect": "Inflicts regular damage. Has a 70% chance to raise the user’s Special Attack by one stage.",
-    "short_effect": "Has a 70% chance to raise the user’s Special Attack by one stage.",
+    "effect_chance": {
+        "diamond_pearl": 70,
+        "platinum": 70,
+        "heartgold_soulsilver": 70
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 70% chance to raise the user’s Special Attack by one stage.",
+        "platinum": "Inflicts regular damage. Has a 70% chance to raise the user’s Special Attack by one stage.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 70% chance to raise the user’s Special Attack by one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 70% chance to raise the user’s Special Attack by one stage.",
+        "platinum": "Has a 70% chance to raise the user’s Special Attack by one stage.",
+        "heartgold_soulsilver": "Has a 70% chance to raise the user’s Special Attack by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "The user fires a concentrated bundle of electricity. It may also raise the user’s Sp. Atk stat.",
         "platinum": "The user fires a concentrated bundle of electricity. It may also raise the user’s Sp. Atk stat.",

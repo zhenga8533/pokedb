@@ -2,17 +2,45 @@
     "id": 1,
     "name": "pound",
     "source_url": "https://pokeapi.co/api/v2/move/1/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 35,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 40,
+        "the_teal_mask": 40,
+        "the_indigo_disk": 40
+    },
+    "pp": {
+        "scarlet_violet": 35,
+        "the_teal_mask": 35,
+        "the_indigo_disk": 35
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "scarlet_violet": "normal",
+        "the_teal_mask": "normal",
+        "the_indigo_disk": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage.",
-    "short_effect": "Inflicts regular damage with no additional effect.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage.",
+        "the_teal_mask": "Inflicts regular damage.",
+        "the_indigo_disk": "Inflicts regular damage."
+    },
+    "short_effect": {
+        "scarlet_violet": "Inflicts regular damage with no additional effect.",
+        "the_teal_mask": "Inflicts regular damage with no additional effect.",
+        "the_indigo_disk": "Inflicts regular damage with no additional effect."
+    },
     "flavor_text": {
         "scarlet_violet": "The target is physically pounded with a long tail, a foreleg, or the like."
     },

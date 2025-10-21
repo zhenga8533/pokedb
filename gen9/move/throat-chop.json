@@ -2,17 +2,45 @@
     "id": 675,
     "name": "throat-chop",
     "source_url": "https://pokeapi.co/api/v2/move/675/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 80,
+        "the_teal_mask": 80,
+        "the_indigo_disk": 80
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dark",
+    "type": {
+        "scarlet_violet": "dark",
+        "the_teal_mask": "dark",
+        "the_indigo_disk": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Silences the target for two turns, preventing it from using any sound-based moves.",
-    "short_effect": "Prevents the target from using sound-based moves for two turns.",
+    "effect_chance": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Silences the target for two turns, preventing it from using any sound-based moves.",
+        "the_teal_mask": "Inflicts regular damage. Silences the target for two turns, preventing it from using any sound-based moves.",
+        "the_indigo_disk": "Inflicts regular damage. Silences the target for two turns, preventing it from using any sound-based moves."
+    },
+    "short_effect": {
+        "scarlet_violet": "Prevents the target from using sound-based moves for two turns.",
+        "the_teal_mask": "Prevents the target from using sound-based moves for two turns.",
+        "the_indigo_disk": "Prevents the target from using sound-based moves for two turns."
+    },
     "flavor_text": {
         "scarlet_violet": "The user attacks the target's throat, and the resultant suffering prevents the target from using sound-based moves for two turns."
     },

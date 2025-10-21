@@ -2,17 +2,38 @@
     "id": 341,
     "name": "mud-shot",
     "source_url": "https://pokeapi.co/api/v2/move/341/",
-    "accuracy": 95,
-    "power": 55,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 95,
+        "black_2_white_2": 95
+    },
+    "power": {
+        "black_white": 55,
+        "black_2_white_2": 55
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ground",
+    "type": {
+        "black_white": "ground",
+        "black_2_white_2": "ground"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s Speed by one stage.",
+    "effect_chance": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 100% chance to lower the target’s Speed by one stage.",
+        "black_2_white_2": "Has a 100% chance to lower the target’s Speed by one stage."
+    },
     "flavor_text": {
         "black_white": "The user attacks by hurling a blob of mud at the target. It also reduces the target’s Speed.",
         "black_2_white_2": "The user attacks by hurling a blob of mud at the target. It also reduces the target’s Speed."

@@ -2,17 +2,45 @@
     "id": 575,
     "name": "parting-shot",
     "source_url": "https://pokeapi.co/api/v2/move/575/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "dark",
+    "type": {
+        "sun_moon": "dark",
+        "ultra_sun_ultra_moon": "dark",
+        "lets_go_pikachu_lets_go_eevee": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": 100,
-    "effect": "Lowers all targets’ Attack and Special Attack by one stage. Makes the user switch out.",
-    "short_effect": "Lowers all targets’ Attack and Special Attack by one stage. Makes the user switch out.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Lowers all targets’ Attack and Special Attack by one stage. Makes the user switch out.",
+        "ultra_sun_ultra_moon": "Lowers all targets’ Attack and Special Attack by one stage. Makes the user switch out.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers all targets’ Attack and Special Attack by one stage. Makes the user switch out."
+    },
+    "short_effect": {
+        "sun_moon": "Lowers all targets’ Attack and Special Attack by one stage. Makes the user switch out.",
+        "ultra_sun_ultra_moon": "Lowers all targets’ Attack and Special Attack by one stage. Makes the user switch out.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers all targets’ Attack and Special Attack by one stage. Makes the user switch out."
+    },
     "flavor_text": {
         "sun_moon": "With a parting threat, the user lowers the target’s Attack and Sp. Atk stats. Then it switches with a party Pokémon.",
         "ultra_sun_ultra_moon": "With a parting threat, the user lowers the target’s Attack and Sp. Atk stats. Then it switches with a party Pokémon.",

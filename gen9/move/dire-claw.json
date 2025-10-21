@@ -2,21 +2,62 @@
     "id": 827,
     "name": "dire-claw",
     "source_url": "https://pokeapi.co/api/v2/move/827/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 80,
+        "the_teal_mask": 80,
+        "the_indigo_disk": 80
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "poison",
+    "type": {
+        "scarlet_violet": "poison",
+        "the_teal_mask": "poison",
+        "the_indigo_disk": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-viii",
-    "effect_chance": null,
-    "effect": null,
-    "short_effect": null,
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "short_effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
     "flavor_text": {
         "scarlet_violet": "The user lashes out at the target with ruinous claws. This may also leave the target poisoned, paralyzed, or asleep."
     },
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

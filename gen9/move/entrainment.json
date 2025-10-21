@@ -2,17 +2,45 @@
     "id": 494,
     "name": "entrainment",
     "source_url": "https://pokeapi.co/api/v2/move/494/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "scarlet_violet": "normal",
+        "the_teal_mask": "normal",
+        "the_indigo_disk": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Changes the target’s ability to match the user’s. This effect ends when the target leaves battle.",
-    "short_effect": "Copies the user’s ability onto the target.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Changes the target’s ability to match the user’s. This effect ends when the target leaves battle.",
+        "the_teal_mask": "Changes the target’s ability to match the user’s. This effect ends when the target leaves battle.",
+        "the_indigo_disk": "Changes the target’s ability to match the user’s. This effect ends when the target leaves battle."
+    },
+    "short_effect": {
+        "scarlet_violet": "Copies the user’s ability onto the target.",
+        "the_teal_mask": "Copies the user’s ability onto the target.",
+        "the_indigo_disk": "Copies the user’s ability onto the target."
+    },
     "flavor_text": {
         "scarlet_violet": "The user dances with an odd rhythm that compels the target to mimic it, making the target's Ability the same as the user's."
     },

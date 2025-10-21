@@ -2,17 +2,38 @@
     "id": 223,
     "name": "dynamic-punch",
     "source_url": "https://pokeapi.co/api/v2/move/223/",
-    "accuracy": 50,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "x_y": 50,
+        "omega_ruby_alpha_sapphire": 50
+    },
+    "power": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "pp": {
+        "x_y": 5,
+        "omega_ruby_alpha_sapphire": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "x_y": "fighting",
+        "omega_ruby_alpha_sapphire": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to confuse the target.",
-    "short_effect": "Has a 100% chance to confuse the target.",
+    "effect_chance": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Has a 100% chance to confuse the target.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Has a 100% chance to confuse the target."
+    },
+    "short_effect": {
+        "x_y": "Has a 100% chance to confuse the target.",
+        "omega_ruby_alpha_sapphire": "Has a 100% chance to confuse the target."
+    },
     "flavor_text": {
         "x_y": "The user punches the target with full, concentrated power. This confuses the target if it hits.",
         "omega_ruby_alpha_sapphire": "The user punches the target with full, concentrated power. This confuses the target if it hits."

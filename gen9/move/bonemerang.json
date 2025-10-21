@@ -2,17 +2,45 @@
     "id": 155,
     "name": "bonemerang",
     "source_url": "https://pokeapi.co/api/v2/move/155/",
-    "accuracy": 90,
-    "power": 50,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "power": {
+        "scarlet_violet": 50,
+        "the_teal_mask": 50,
+        "the_indigo_disk": 50
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ground",
+    "type": {
+        "scarlet_violet": "ground",
+        "the_teal_mask": "ground",
+        "the_indigo_disk": "ground"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Hits twice in one turn.",
-    "short_effect": "Hits twice in one turn.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Hits twice in one turn.",
+        "the_teal_mask": "Inflicts regular damage. Hits twice in one turn.",
+        "the_indigo_disk": "Inflicts regular damage. Hits twice in one turn."
+    },
+    "short_effect": {
+        "scarlet_violet": "Hits twice in one turn.",
+        "the_teal_mask": "Hits twice in one turn.",
+        "the_indigo_disk": "Hits twice in one turn."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

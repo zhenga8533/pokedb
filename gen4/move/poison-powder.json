@@ -2,17 +2,45 @@
     "id": 77,
     "name": "poison-powder",
     "source_url": "https://pokeapi.co/api/v2/move/77/",
-    "accuracy": 75,
-    "power": null,
-    "pp": 35,
+    "accuracy": {
+        "diamond_pearl": 75,
+        "platinum": 75,
+        "heartgold_soulsilver": 75
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 35,
+        "platinum": 35,
+        "heartgold_soulsilver": 35
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "diamond_pearl": "poison",
+        "platinum": "poison",
+        "heartgold_soulsilver": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Poisons the target.",
-    "short_effect": "Poisons the target.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Poisons the target.",
+        "platinum": "Poisons the target.",
+        "heartgold_soulsilver": "Poisons the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Poisons the target.",
+        "platinum": "Poisons the target.",
+        "heartgold_soulsilver": "Poisons the target."
+    },
     "flavor_text": {
         "diamond_pearl": "A cloud of poisonous dust is scattered on the foe. It may poison the target.",
         "platinum": "A cloud of poisonous dust is scattered on the foe. It may poison the target.",

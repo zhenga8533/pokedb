@@ -2,17 +2,45 @@
     "id": 491,
     "name": "acid-spray",
     "source_url": "https://pokeapi.co/api/v2/move/491/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 40,
+        "ultra_sun_ultra_moon": 40,
+        "lets_go_pikachu_lets_go_eevee": 40
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "poison",
+    "type": {
+        "sun_moon": "poison",
+        "ultra_sun_ultra_moon": "poison",
+        "lets_go_pikachu_lets_go_eevee": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Lowers the target’s Special Defense by two stages.",
-    "short_effect": "Lowers the target’s Special Defense by two stages.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Lowers the target’s Special Defense by two stages.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Lowers the target’s Special Defense by two stages.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Lowers the target’s Special Defense by two stages."
+    },
+    "short_effect": {
+        "sun_moon": "Lowers the target’s Special Defense by two stages.",
+        "ultra_sun_ultra_moon": "Lowers the target’s Special Defense by two stages.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s Special Defense by two stages."
+    },
     "flavor_text": {
         "sun_moon": "The user spits fluid that works to melt the target. This harshly lowers the target’s Sp. Def stat.",
         "ultra_sun_ultra_moon": "The user spits fluid that works to melt the target. This harshly lowers the target’s Sp. Def stat.",

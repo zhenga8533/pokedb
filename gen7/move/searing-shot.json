@@ -2,17 +2,45 @@
     "id": 545,
     "name": "searing-shot",
     "source_url": "https://pokeapi.co/api/v2/move/545/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fire",
+    "type": {
+        "sun_moon": "fire",
+        "ultra_sun_ultra_moon": "fire",
+        "lets_go_pikachu_lets_go_eevee": "fire"
+    },
     "target": "all-other-pokemon",
     "generation": "generation-v",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to burn the target.",
-    "short_effect": "Has a 30% chance to burn the target.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 30% chance to burn the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 30% chance to burn the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 30% chance to burn the target."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 30% chance to burn the target.",
+        "ultra_sun_ultra_moon": "Has a 30% chance to burn the target.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 30% chance to burn the target."
+    },
     "flavor_text": {
         "sun_moon": "The user torches everything around it in an inferno of scarlet flames. This may also leave those it hits with a burn.",
         "ultra_sun_ultra_moon": "The user torches everything around it in an inferno of scarlet flames. This may also leave those it hits with a burn.",

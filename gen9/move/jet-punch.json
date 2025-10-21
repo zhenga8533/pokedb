@@ -2,21 +2,62 @@
     "id": 857,
     "name": "jet-punch",
     "source_url": "https://pokeapi.co/api/v2/move/857/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 60,
+        "the_teal_mask": 60,
+        "the_indigo_disk": 60
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 1,
     "damage_class": "physical",
-    "type": "water",
+    "type": {
+        "scarlet_violet": "water",
+        "the_teal_mask": "water",
+        "the_indigo_disk": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ix",
-    "effect_chance": null,
-    "effect": null,
-    "short_effect": null,
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "short_effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
     "flavor_text": {
         "scarlet_violet": "The user summons a torrent around its fist and punches at blinding speed. This move always goes first."
     },
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

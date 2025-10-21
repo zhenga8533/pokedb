@@ -2,17 +2,38 @@
     "id": 138,
     "name": "dream-eater",
     "source_url": "https://pokeapi.co/api/v2/move/138/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 15,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "pp": {
+        "x_y": 15,
+        "omega_ruby_alpha_sapphire": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "x_y": "psychic",
+        "omega_ruby_alpha_sapphire": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
-    "short_effect": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+    "effect_chance": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "effect": {
+        "x_y": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "omega_ruby_alpha_sapphire": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user."
+    },
+    "short_effect": {
+        "x_y": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+        "omega_ruby_alpha_sapphire": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user."
+    },
     "flavor_text": {
         "x_y": "The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal its own HP.",
         "omega_ruby_alpha_sapphire": "The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal its own HP."

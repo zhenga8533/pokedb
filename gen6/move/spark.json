@@ -2,17 +2,38 @@
     "id": 209,
     "name": "spark",
     "source_url": "https://pokeapi.co/api/v2/move/209/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 65,
+        "omega_ruby_alpha_sapphire": 65
+    },
+    "pp": {
+        "x_y": 20,
+        "omega_ruby_alpha_sapphire": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "x_y": "electric",
+        "omega_ruby_alpha_sapphire": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
-    "short_effect": "Has a 30% chance to paralyze the target.",
+    "effect_chance": {
+        "x_y": 30,
+        "omega_ruby_alpha_sapphire": 30
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Has a 30% chance to paralyze the target."
+    },
+    "short_effect": {
+        "x_y": "Has a 30% chance to paralyze the target.",
+        "omega_ruby_alpha_sapphire": "Has a 30% chance to paralyze the target."
+    },
     "flavor_text": {
         "x_y": "The user throws an electrically charged tackle at the target. This may also leave the target with paralysis.",
         "omega_ruby_alpha_sapphire": "The user throws an electrically charged tackle at the target. This may also leave the target with paralysis."

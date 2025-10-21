@@ -2,17 +2,52 @@
     "id": 127,
     "name": "waterfall",
     "source_url": "https://pokeapi.co/api/v2/move/127/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "power": {
+        "red_blue": 80,
+        "yellow": 80,
+        "red_green_japan": 80,
+        "blue_japan": 80
+    },
+    "pp": {
+        "red_blue": 15,
+        "yellow": 15,
+        "red_green_japan": 15,
+        "blue_japan": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "water",
+    "type": {
+        "red_blue": "water",
+        "yellow": "water",
+        "red_green_japan": "water",
+        "blue_japan": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
-    "short_effect": "Has a 20% chance to make the target flinch.",
+    "effect_chance": {
+        "red_blue": 20,
+        "yellow": 20,
+        "red_green_japan": 20,
+        "blue_japan": 20
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "yellow": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "red_green_japan": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "blue_japan": "Inflicts regular damage. Has a 20% chance to make the target flinch."
+    },
+    "short_effect": {
+        "red_blue": "Has a 20% chance to make the target flinch.",
+        "yellow": "Has a 20% chance to make the target flinch.",
+        "red_green_japan": "Has a 20% chance to make the target flinch.",
+        "blue_japan": "Has a 20% chance to make the target flinch."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

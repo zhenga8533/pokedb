@@ -2,17 +2,38 @@
     "id": 430,
     "name": "flash-cannon",
     "source_url": "https://pokeapi.co/api/v2/move/430/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 80,
+        "black_2_white_2": 80
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "steel",
+    "type": {
+        "black_white": "steel",
+        "black_2_white_2": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "black_2_white_2": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
     "flavor_text": {
         "black_white": "The user gathers all its light energy and releases it at once. It may also lower the target’s Sp. Def stat.",
         "black_2_white_2": "The user gathers all its light energy and releases it at once. It may also lower the target’s Sp. Def stat."

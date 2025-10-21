@@ -2,17 +2,52 @@
     "id": 36,
     "name": "take-down",
     "source_url": "https://pokeapi.co/api/v2/move/36/",
-    "accuracy": 85,
-    "power": 90,
-    "pp": 20,
+    "accuracy": {
+        "red_blue": 85,
+        "yellow": 85,
+        "red_green_japan": 85,
+        "blue_japan": 85
+    },
+    "power": {
+        "red_blue": 90,
+        "yellow": 90,
+        "red_green_japan": 90,
+        "blue_japan": 90
+    },
+    "pp": {
+        "red_blue": 20,
+        "yellow": 20,
+        "red_green_japan": 20,
+        "blue_japan": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "red_blue": "normal",
+        "yellow": "normal",
+        "red_green_japan": "normal",
+        "blue_japan": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil.",
-    "short_effect": "User receives 1/4 the damage it inflicts in recoil.",
+    "effect_chance": {
+        "red_blue": null,
+        "yellow": null,
+        "red_green_japan": null,
+        "blue_japan": null
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil.",
+        "yellow": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil.",
+        "red_green_japan": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil.",
+        "blue_japan": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil."
+    },
+    "short_effect": {
+        "red_blue": "User receives 1/4 the damage it inflicts in recoil.",
+        "yellow": "User receives 1/4 the damage it inflicts in recoil.",
+        "red_green_japan": "User receives 1/4 the damage it inflicts in recoil.",
+        "blue_japan": "User receives 1/4 the damage it inflicts in recoil."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": "tm09",

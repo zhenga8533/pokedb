@@ -2,21 +2,62 @@
     "id": 867,
     "name": "doodle",
     "source_url": "https://pokeapi.co/api/v2/move/867/",
-    "accuracy": 100,
-    "power": 0,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 0,
+        "the_teal_mask": 0,
+        "the_indigo_disk": 0
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "scarlet_violet": "normal",
+        "the_teal_mask": "normal",
+        "the_indigo_disk": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ix",
-    "effect_chance": null,
-    "effect": null,
-    "short_effect": null,
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "short_effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
     "flavor_text": {
         "scarlet_violet": "The user captures the very essence of the target in a sketch. This changes the Abilities of the user and its ally Pokémon to that of the target."
     },
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

@@ -2,17 +2,45 @@
     "id": 445,
     "name": "captivate",
     "source_url": "https://pokeapi.co/api/v2/move/445/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "sun_moon": "normal",
+        "ultra_sun_ultra_moon": "normal",
+        "lets_go_pikachu_lets_go_eevee": "normal"
+    },
     "target": "all-opponents",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Lowers the target’s Special Attack by two stages. If the user and target are the same gender, or either is genderless, this move will fail.",
-    "short_effect": "Lowers the target’s Special Attack by two stages if it’s the opposite gender.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Lowers the target’s Special Attack by two stages. If the user and target are the same gender, or either is genderless, this move will fail.",
+        "ultra_sun_ultra_moon": "Lowers the target’s Special Attack by two stages. If the user and target are the same gender, or either is genderless, this move will fail.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s Special Attack by two stages. If the user and target are the same gender, or either is genderless, this move will fail."
+    },
+    "short_effect": {
+        "sun_moon": "Lowers the target’s Special Attack by two stages if it’s the opposite gender.",
+        "ultra_sun_ultra_moon": "Lowers the target’s Special Attack by two stages if it’s the opposite gender.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s Special Attack by two stages if it’s the opposite gender."
+    },
     "flavor_text": {
         "sun_moon": "If any opposing Pokémon is the opposite gender of the user, it is charmed, which harshly lowers its Sp. Atk stat.",
         "ultra_sun_ultra_moon": "If any opposing Pokémon is the opposite gender of the user, it is charmed, which harshly lowers its Sp. Atk stat.",

@@ -2,17 +2,59 @@
     "id": 712,
     "name": "spectral-thief",
     "source_url": "https://pokeapi.co/api/v2/move/712/",
-    "accuracy": 100,
-    "power": 90,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 90,
+        "the_isle_of_armor": 90,
+        "the_crown_tundra": 90,
+        "brilliant_diamond_and_shining_pearl": 90,
+        "legends_arceus": 90
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ghost",
+    "type": {
+        "sword_shield": "ghost",
+        "the_isle_of_armor": "ghost",
+        "the_crown_tundra": "ghost",
+        "brilliant_diamond_and_shining_pearl": "ghost",
+        "legends_arceus": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "Steals the target’s stat increases, then inflicts regular damage. Will not steal stat increases that would put any of the user’s stats at more than +6; any excess is left on the target. Stolen increases are affected by abilities as normal.",
-    "short_effect": "Steals the target’s stat increases, then inflicts damage.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Steals the target’s stat increases, then inflicts regular damage. Will not steal stat increases that would put any of the user’s stats at more than +6; any excess is left on the target. Stolen increases are affected by abilities as normal.",
+        "the_isle_of_armor": "Steals the target’s stat increases, then inflicts regular damage. Will not steal stat increases that would put any of the user’s stats at more than +6; any excess is left on the target. Stolen increases are affected by abilities as normal.",
+        "the_crown_tundra": "Steals the target’s stat increases, then inflicts regular damage. Will not steal stat increases that would put any of the user’s stats at more than +6; any excess is left on the target. Stolen increases are affected by abilities as normal.",
+        "brilliant_diamond_and_shining_pearl": "Steals the target’s stat increases, then inflicts regular damage. Will not steal stat increases that would put any of the user’s stats at more than +6; any excess is left on the target. Stolen increases are affected by abilities as normal.",
+        "legends_arceus": "Steals the target’s stat increases, then inflicts regular damage. Will not steal stat increases that would put any of the user’s stats at more than +6; any excess is left on the target. Stolen increases are affected by abilities as normal."
+    },
+    "short_effect": {
+        "sword_shield": "Steals the target’s stat increases, then inflicts damage.",
+        "the_isle_of_armor": "Steals the target’s stat increases, then inflicts damage.",
+        "the_crown_tundra": "Steals the target’s stat increases, then inflicts damage.",
+        "brilliant_diamond_and_shining_pearl": "Steals the target’s stat increases, then inflicts damage.",
+        "legends_arceus": "Steals the target’s stat increases, then inflicts damage."
+    },
     "flavor_text": {
         "sword_shield": "The user hides in the target’s shadow, steals the target’s stat boosts, and then attacks."
     },

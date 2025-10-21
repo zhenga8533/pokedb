@@ -2,19 +2,74 @@
     "id": 10004,
     "name": "shadow-bolt",
     "source_url": "https://pokeapi.co/api/v2/move/10004/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": null,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 75,
+        "the_isle_of_armor": 75,
+        "the_crown_tundra": 75,
+        "brilliant_diamond_and_shining_pearl": 75,
+        "legends_arceus": 75
+    },
+    "pp": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "shadow",
+    "type": {
+        "sword_shield": "shadow",
+        "the_isle_of_armor": "shadow",
+        "the_crown_tundra": "shadow",
+        "brilliant_diamond_and_shining_pearl": "shadow",
+        "legends_arceus": "shadow"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
-    "short_effect": "Has a 10% chance to paralyze the target.",
+    "effect_chance": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "legends_arceus": "Inflicts regular damage. Has a 10% chance to paralyze the target."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 10% chance to paralyze the target.",
+        "the_isle_of_armor": "Has a 10% chance to paralyze the target.",
+        "the_crown_tundra": "Has a 10% chance to paralyze the target.",
+        "brilliant_diamond_and_shining_pearl": "Has a 10% chance to paralyze the target.",
+        "legends_arceus": "Has a 10% chance to paralyze the target."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

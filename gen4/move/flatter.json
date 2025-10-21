@@ -2,17 +2,45 @@
     "id": 260,
     "name": "flatter",
     "source_url": "https://pokeapi.co/api/v2/move/260/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 15,
+        "platinum": 15,
+        "heartgold_soulsilver": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "dark",
+    "type": {
+        "diamond_pearl": "dark",
+        "platinum": "dark",
+        "heartgold_soulsilver": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Raises the target’s Special Attack by one stage, then confuses it.",
-    "short_effect": "Raises the target’s Special Attack by one stage and confuses the target.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Raises the target’s Special Attack by one stage, then confuses it.",
+        "platinum": "Raises the target’s Special Attack by one stage, then confuses it.",
+        "heartgold_soulsilver": "Raises the target’s Special Attack by one stage, then confuses it."
+    },
+    "short_effect": {
+        "diamond_pearl": "Raises the target’s Special Attack by one stage and confuses the target.",
+        "platinum": "Raises the target’s Special Attack by one stage and confuses the target.",
+        "heartgold_soulsilver": "Raises the target’s Special Attack by one stage and confuses the target."
+    },
     "flavor_text": {
         "diamond_pearl": "Flattery is used to confuse the foe. However, it also raises the target’s Sp. Atk stat.",
         "platinum": "Flattery is used to confuse the foe. However, it also raises the target’s Sp. Atk stat.",

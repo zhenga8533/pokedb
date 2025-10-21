@@ -2,17 +2,38 @@
     "id": 280,
     "name": "brick-break",
     "source_url": "https://pokeapi.co/api/v2/move/280/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 15,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 75,
+        "omega_ruby_alpha_sapphire": 75
+    },
+    "pp": {
+        "x_y": 15,
+        "omega_ruby_alpha_sapphire": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "x_y": "fighting",
+        "omega_ruby_alpha_sapphire": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
-    "short_effect": "Destroys Reflect and Light Screen.",
+    "effect_chance": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "effect": {
+        "x_y": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
+        "omega_ruby_alpha_sapphire": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage."
+    },
+    "short_effect": {
+        "x_y": "Destroys Reflect and Light Screen.",
+        "omega_ruby_alpha_sapphire": "Destroys Reflect and Light Screen."
+    },
     "flavor_text": {
         "x_y": "The user attacks with a swift chop. It can also break barriers, such as Light Screen and Reflect.",
         "omega_ruby_alpha_sapphire": "The user attacks with a swift chop. It can also break barriers, such as Light Screen and Reflect."

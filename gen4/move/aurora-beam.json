@@ -2,17 +2,45 @@
     "id": 62,
     "name": "aurora-beam",
     "source_url": "https://pokeapi.co/api/v2/move/62/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 65,
+        "platinum": 65,
+        "heartgold_soulsilver": 65
+    },
+    "pp": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ice",
+    "type": {
+        "diamond_pearl": "ice",
+        "platinum": "ice",
+        "heartgold_soulsilver": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Attack by one stage.",
+    "effect_chance": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage.",
+        "platinum": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 10% chance to lower the target’s Attack by one stage.",
+        "platinum": "Has a 10% chance to lower the target’s Attack by one stage.",
+        "heartgold_soulsilver": "Has a 10% chance to lower the target’s Attack by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is hit with a rainbow-colored beam. It may also lower the target’s Attack stat.",
         "platinum": "The foe is hit with a rainbow-colored beam. It may also lower the target’s Attack stat.",

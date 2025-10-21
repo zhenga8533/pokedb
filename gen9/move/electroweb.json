@@ -2,17 +2,45 @@
     "id": 527,
     "name": "electroweb",
     "source_url": "https://pokeapi.co/api/v2/move/527/",
-    "accuracy": 95,
-    "power": 55,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 95,
+        "the_teal_mask": 95,
+        "the_indigo_disk": 95
+    },
+    "power": {
+        "scarlet_violet": 55,
+        "the_teal_mask": 55,
+        "the_indigo_disk": 55
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "electric",
+    "type": {
+        "scarlet_violet": "electric",
+        "the_teal_mask": "electric",
+        "the_indigo_disk": "electric"
+    },
     "target": "all-opponents",
     "generation": "generation-v",
-    "effect_chance": 100,
-    "effect": "Lowers the target’s Speed by one stage.",
-    "short_effect": "Lowers the target’s Speed by one stage.",
+    "effect_chance": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "effect": {
+        "scarlet_violet": "Lowers the target’s Speed by one stage.",
+        "the_teal_mask": "Lowers the target’s Speed by one stage.",
+        "the_indigo_disk": "Lowers the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "scarlet_violet": "Lowers the target’s Speed by one stage.",
+        "the_teal_mask": "Lowers the target’s Speed by one stage.",
+        "the_indigo_disk": "Lowers the target’s Speed by one stage."
+    },
     "flavor_text": {
         "scarlet_violet": "The user captures opposing Pokémon in an electric net to inflict damage. This also lowers their Speed stats."
     },

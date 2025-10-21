@@ -2,17 +2,45 @@
     "id": 705,
     "name": "fleur-cannon",
     "source_url": "https://pokeapi.co/api/v2/move/705/",
-    "accuracy": 90,
-    "power": 130,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "power": {
+        "sun_moon": 130,
+        "ultra_sun_ultra_moon": 130,
+        "lets_go_pikachu_lets_go_eevee": 130
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fairy",
+    "type": {
+        "sun_moon": "fairy",
+        "ultra_sun_ultra_moon": "fairy",
+        "lets_go_pikachu_lets_go_eevee": "fairy"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
-    "short_effect": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage, then lowers the user’s Special Attack by two stages."
+    },
+    "short_effect": {
+        "sun_moon": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+        "ultra_sun_ultra_moon": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the user’s Special Attack by two stages after inflicting damage."
+    },
     "flavor_text": {
         "sun_moon": "The user unleashes a strong beam. The attack’s recoil harshly lowers the user’s Sp. Atk stat.",
         "ultra_sun_ultra_moon": "The user unleashes a strong beam. The attack’s recoil harshly lowers the user’s Sp. Atk stat.",

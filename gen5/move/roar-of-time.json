@@ -2,17 +2,38 @@
     "id": 459,
     "name": "roar-of-time",
     "source_url": "https://pokeapi.co/api/v2/move/459/",
-    "accuracy": 90,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "black_white": 90,
+        "black_2_white_2": 90
+    },
+    "power": {
+        "black_white": 150,
+        "black_2_white_2": 150
+    },
+    "pp": {
+        "black_white": 5,
+        "black_2_white_2": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dragon",
+    "type": {
+        "black_white": "dragon",
+        "black_2_white_2": "dragon"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
-    "short_effect": "User foregoes its next turn to recharge.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+        "black_2_white_2": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn."
+    },
+    "short_effect": {
+        "black_white": "User foregoes its next turn to recharge.",
+        "black_2_white_2": "User foregoes its next turn to recharge."
+    },
     "flavor_text": {
         "black_white": "The user blasts the target with power that distorts even time. The user must rest on the next turn.",
         "black_2_white_2": "The user blasts the target with power that distorts even time. The user must rest on the next turn."

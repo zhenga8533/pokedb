@@ -2,17 +2,45 @@
     "id": 77,
     "name": "poison-powder",
     "source_url": "https://pokeapi.co/api/v2/move/77/",
-    "accuracy": 75,
-    "power": null,
-    "pp": 35,
+    "accuracy": {
+        "scarlet_violet": 75,
+        "the_teal_mask": 75,
+        "the_indigo_disk": 75
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 35,
+        "the_teal_mask": 35,
+        "the_indigo_disk": 35
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "scarlet_violet": "poison",
+        "the_teal_mask": "poison",
+        "the_indigo_disk": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Poisons the target.",
-    "short_effect": "Poisons the target.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Poisons the target.",
+        "the_teal_mask": "Poisons the target.",
+        "the_indigo_disk": "Poisons the target."
+    },
+    "short_effect": {
+        "scarlet_violet": "Poisons the target.",
+        "the_teal_mask": "Poisons the target.",
+        "the_indigo_disk": "Poisons the target."
+    },
     "flavor_text": {
         "scarlet_violet": "The user scatters a cloud of poisonous dust that poisons the target."
     },

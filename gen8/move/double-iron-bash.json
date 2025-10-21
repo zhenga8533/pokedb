@@ -2,17 +2,59 @@
     "id": 742,
     "name": "double-iron-bash",
     "source_url": "https://pokeapi.co/api/v2/move/742/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 5,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 60,
+        "the_isle_of_armor": 60,
+        "the_crown_tundra": 60,
+        "brilliant_diamond_and_shining_pearl": 60,
+        "legends_arceus": 60
+    },
+    "pp": {
+        "sword_shield": 5,
+        "the_isle_of_armor": 5,
+        "the_crown_tundra": 5,
+        "brilliant_diamond_and_shining_pearl": 5,
+        "legends_arceus": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "sword_shield": "steel",
+        "the_isle_of_armor": "steel",
+        "the_crown_tundra": "steel",
+        "brilliant_diamond_and_shining_pearl": "steel",
+        "legends_arceus": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Hits twice in one turn.",
-    "short_effect": "Hits twice in one turn.",
+    "effect_chance": {
+        "sword_shield": 30,
+        "the_isle_of_armor": 30,
+        "the_crown_tundra": 30,
+        "brilliant_diamond_and_shining_pearl": 30,
+        "legends_arceus": 30
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Hits twice in one turn.",
+        "the_isle_of_armor": "Inflicts regular damage. Hits twice in one turn.",
+        "the_crown_tundra": "Inflicts regular damage. Hits twice in one turn.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Hits twice in one turn.",
+        "legends_arceus": "Inflicts regular damage. Hits twice in one turn."
+    },
+    "short_effect": {
+        "sword_shield": "Hits twice in one turn.",
+        "the_isle_of_armor": "Hits twice in one turn.",
+        "the_crown_tundra": "Hits twice in one turn.",
+        "brilliant_diamond_and_shining_pearl": "Hits twice in one turn.",
+        "legends_arceus": "Hits twice in one turn."
+    },
     "flavor_text": {
         "sword_shield": "The user rotates, centering the hex nut in its chest, and then strikes with its arms twice in a row. This may also make the target flinch."
     },

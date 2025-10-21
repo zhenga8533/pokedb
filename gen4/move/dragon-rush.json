@@ -2,17 +2,45 @@
     "id": 407,
     "name": "dragon-rush",
     "source_url": "https://pokeapi.co/api/v2/move/407/",
-    "accuracy": 75,
-    "power": 100,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 75,
+        "platinum": 75,
+        "heartgold_soulsilver": 75
+    },
+    "power": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dragon",
+    "type": {
+        "diamond_pearl": "dragon",
+        "platinum": "dragon",
+        "heartgold_soulsilver": "dragon"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
-    "short_effect": "Has a 20% chance to make the target flinch.",
+    "effect_chance": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "platinum": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 20% chance to make the target flinch."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 20% chance to make the target flinch.",
+        "platinum": "Has a 20% chance to make the target flinch.",
+        "heartgold_soulsilver": "Has a 20% chance to make the target flinch."
+    },
     "flavor_text": {
         "diamond_pearl": "The user tackles the foe while exhibiting overwhelming menace. It may also make the target flinch.",
         "platinum": "The user tackles the foe while exhibiting overwhelming menace. It may also make the target flinch.",

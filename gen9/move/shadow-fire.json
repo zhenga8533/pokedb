@@ -2,19 +2,60 @@
     "id": 10008,
     "name": "shadow-fire",
     "source_url": "https://pokeapi.co/api/v2/move/10008/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": null,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 75,
+        "the_teal_mask": 75,
+        "the_indigo_disk": 75
+    },
+    "pp": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "shadow",
+    "type": {
+        "scarlet_violet": "shadow",
+        "the_teal_mask": "shadow",
+        "the_indigo_disk": "shadow"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to burn the target.",
-    "short_effect": "Has a 10% chance to burn the target.",
+    "effect_chance": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 10% chance to burn the target.",
+        "the_teal_mask": "Inflicts regular damage. Has a 10% chance to burn the target.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 10% chance to burn the target."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 10% chance to burn the target.",
+        "the_teal_mask": "Has a 10% chance to burn the target.",
+        "the_indigo_disk": "Has a 10% chance to burn the target."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

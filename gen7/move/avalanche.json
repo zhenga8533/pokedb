@@ -2,17 +2,45 @@
     "id": 419,
     "name": "avalanche",
     "source_url": "https://pokeapi.co/api/v2/move/419/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 60,
+        "ultra_sun_ultra_moon": 60,
+        "lets_go_pikachu_lets_go_eevee": 60
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": -4,
     "damage_class": "physical",
-    "type": "ice",
+    "type": {
+        "sun_moon": "ice",
+        "ultra_sun_ultra_moon": "ice",
+        "lets_go_pikachu_lets_go_eevee": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the target damaged the user this turn and was the last to do so, this move has double power. pain split does not count as damaging the user.",
-    "short_effect": "Inflicts double damage if the user takes damage before attacking this turn.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. If the target damaged the user this turn and was the last to do so, this move has double power. pain split does not count as damaging the user.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. If the target damaged the user this turn and was the last to do so, this move has double power. pain split does not count as damaging the user.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. If the target damaged the user this turn and was the last to do so, this move has double power. pain split does not count as damaging the user."
+    },
+    "short_effect": {
+        "sun_moon": "Inflicts double damage if the user takes damage before attacking this turn.",
+        "ultra_sun_ultra_moon": "Inflicts double damage if the user takes damage before attacking this turn.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts double damage if the user takes damage before attacking this turn."
+    },
     "flavor_text": {
         "sun_moon": "The power of this attack move is doubled if the user has been hurt by the target in the same turn.",
         "ultra_sun_ultra_moon": "The power of this attack move is doubled if the user has been hurt by the target in the same turn.",

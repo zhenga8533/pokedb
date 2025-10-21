@@ -2,17 +2,38 @@
     "id": 523,
     "name": "bulldoze",
     "source_url": "https://pokeapi.co/api/v2/move/523/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 20,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 60,
+        "black_2_white_2": 60
+    },
+    "pp": {
+        "black_white": 20,
+        "black_2_white_2": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ground",
+    "type": {
+        "black_white": "ground",
+        "black_2_white_2": "ground"
+    },
     "target": "all-other-pokemon",
     "generation": "generation-v",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s Speed by one stage.",
+    "effect_chance": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 100% chance to lower the target’s Speed by one stage.",
+        "black_2_white_2": "Has a 100% chance to lower the target’s Speed by one stage."
+    },
     "flavor_text": {
         "black_white": "The user stomps down on the ground and attacks everything in the area. Hit Pokémon’s Speed stat is reduced.",
         "black_2_white_2": "The user stomps down on the ground and attacks everything in the area. Hit Pokémon’s Speed stat is reduced."

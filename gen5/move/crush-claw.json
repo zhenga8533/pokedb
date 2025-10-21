@@ -2,17 +2,38 @@
     "id": 306,
     "name": "crush-claw",
     "source_url": "https://pokeapi.co/api/v2/move/306/",
-    "accuracy": 95,
-    "power": 75,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 95,
+        "black_2_white_2": 95
+    },
+    "power": {
+        "black_white": 75,
+        "black_2_white_2": 75
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
-    "short_effect": "Has a 50% chance to lower the target’s Defense by one stage.",
+    "effect_chance": {
+        "black_white": 50,
+        "black_2_white_2": 50
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 50% chance to lower the target’s Defense by one stage.",
+        "black_2_white_2": "Has a 50% chance to lower the target’s Defense by one stage."
+    },
     "flavor_text": {
         "black_white": "The user slashes the target with hard and sharp claws. It may also lower the target’s Defense.",
         "black_2_white_2": "The user slashes the target with hard and sharp claws. It may also lower the target’s Defense."

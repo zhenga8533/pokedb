@@ -2,17 +2,45 @@
     "id": 108,
     "name": "smokescreen",
     "source_url": "https://pokeapi.co/api/v2/move/108/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "diamond_pearl": "normal",
+        "platinum": "normal",
+        "heartgold_soulsilver": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Lowers the target’s accuracy by one stage.",
-    "short_effect": "Lowers the target’s accuracy by one stage.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Lowers the target’s accuracy by one stage.",
+        "platinum": "Lowers the target’s accuracy by one stage.",
+        "heartgold_soulsilver": "Lowers the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Lowers the target’s accuracy by one stage.",
+        "platinum": "Lowers the target’s accuracy by one stage.",
+        "heartgold_soulsilver": "Lowers the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "The user releases an obscuring cloud of smoke or ink. It reduces the foe’s accuracy.",
         "platinum": "The user releases an obscuring cloud of smoke or ink. It reduces the foe’s accuracy.",

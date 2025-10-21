@@ -2,17 +2,45 @@
     "id": 598,
     "name": "eerie-impulse",
     "source_url": "https://pokeapi.co/api/v2/move/598/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "electric",
+    "type": {
+        "scarlet_violet": "electric",
+        "the_teal_mask": "electric",
+        "the_indigo_disk": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": null,
-    "effect": "Lowers the target’s Special Attack by two stages.",
-    "short_effect": "Lowers the target’s Special Attack by two stages.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Lowers the target’s Special Attack by two stages.",
+        "the_teal_mask": "Lowers the target’s Special Attack by two stages.",
+        "the_indigo_disk": "Lowers the target’s Special Attack by two stages."
+    },
+    "short_effect": {
+        "scarlet_violet": "Lowers the target’s Special Attack by two stages.",
+        "the_teal_mask": "Lowers the target’s Special Attack by two stages.",
+        "the_indigo_disk": "Lowers the target’s Special Attack by two stages."
+    },
     "flavor_text": {
         "scarlet_violet": "The user's body generates an eerie impulse. Exposing the target to it harshly lowers the target's Sp. Atk stat."
     },

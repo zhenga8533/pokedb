@@ -2,17 +2,52 @@
     "id": 138,
     "name": "dream-eater",
     "source_url": "https://pokeapi.co/api/v2/move/138/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 15,
+    "accuracy": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "power": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "pp": {
+        "red_blue": 15,
+        "yellow": 15,
+        "red_green_japan": 15,
+        "blue_japan": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "red_blue": "psychic",
+        "yellow": "psychic",
+        "red_green_japan": "psychic",
+        "blue_japan": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
-    "short_effect": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+    "effect_chance": {
+        "red_blue": null,
+        "yellow": null,
+        "red_green_japan": null,
+        "blue_japan": null
+    },
+    "effect": {
+        "red_blue": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "yellow": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "red_green_japan": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "blue_japan": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user."
+    },
+    "short_effect": {
+        "red_blue": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+        "yellow": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+        "red_green_japan": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+        "blue_japan": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": "tm42",

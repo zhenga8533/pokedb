@@ -2,17 +2,45 @@
     "id": 239,
     "name": "twister",
     "source_url": "https://pokeapi.co/api/v2/move/239/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 40,
+        "ultra_sun_ultra_moon": 40,
+        "lets_go_pikachu_lets_go_eevee": 40
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dragon",
+    "type": {
+        "sun_moon": "dragon",
+        "ultra_sun_ultra_moon": "dragon",
+        "lets_go_pikachu_lets_go_eevee": "dragon"
+    },
     "target": "all-opponents",
     "generation": "generation-ii",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to make each target flinch. If the target is under the effect of bounce, fly, or sky drop, this move will hit with double power.",
-    "short_effect": "Has a 20% chance to make the target flinch.",
+    "effect_chance": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 20% chance to make each target flinch. If the target is under the effect of bounce, fly, or sky drop, this move will hit with double power.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 20% chance to make each target flinch. If the target is under the effect of bounce, fly, or sky drop, this move will hit with double power.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 20% chance to make each target flinch. If the target is under the effect of bounce, fly, or sky drop, this move will hit with double power."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 20% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Has a 20% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 20% chance to make the target flinch."
+    },
     "flavor_text": {
         "sun_moon": "The user whips up a vicious tornado to tear at the opposing Pokémon. This may also make them flinch.",
         "ultra_sun_ultra_moon": "The user whips up a vicious tornado to tear at the opposing Pokémon. This may also make them flinch.",

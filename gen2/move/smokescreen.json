@@ -2,17 +2,38 @@
     "id": 108,
     "name": "smokescreen",
     "source_url": "https://pokeapi.co/api/v2/move/108/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "pp": {
+        "gold_silver": 20,
+        "crystal": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "gold_silver": "normal",
+        "crystal": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Lowers the target’s accuracy by one stage.",
-    "short_effect": "Lowers the target’s accuracy by one stage.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Lowers the target’s accuracy by one stage.",
+        "crystal": "Lowers the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "gold_silver": "Lowers the target’s accuracy by one stage.",
+        "crystal": "Lowers the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "gold_silver": "Lowers the foe's accuracy.",
         "crystal": "Lowers the foe's accuracy."

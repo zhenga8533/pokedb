@@ -2,17 +2,45 @@
     "id": 377,
     "name": "heal-block",
     "source_url": "https://pokeapi.co/api/v2/move/377/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "psychic",
+    "type": {
+        "scarlet_violet": "psychic",
+        "the_teal_mask": "psychic",
+        "the_indigo_disk": "psychic"
+    },
     "target": "all-opponents",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
-    "short_effect": "Prevents target from restoring its HP for five turns.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
+        "the_teal_mask": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
+        "the_indigo_disk": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target."
+    },
+    "short_effect": {
+        "scarlet_violet": "Prevents target from restoring its HP for five turns.",
+        "the_teal_mask": "Prevents target from restoring its HP for five turns.",
+        "the_indigo_disk": "Prevents target from restoring its HP for five turns."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

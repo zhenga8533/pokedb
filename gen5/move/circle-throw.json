@@ -2,17 +2,38 @@
     "id": 509,
     "name": "circle-throw",
     "source_url": "https://pokeapi.co/api/v2/move/509/",
-    "accuracy": 90,
-    "power": 60,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 90,
+        "black_2_white_2": 90
+    },
+    "power": {
+        "black_white": 60,
+        "black_2_white_2": 60
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": -6,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "black_white": "fighting",
+        "black_2_white_2": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage, then switches the target out for another of its trainer’s Pokémon, selected at random. If the target is under the effect of ingrain or suction cups, or it has a substitute, or its Trainer has no more usable Pokémon, it will not be switched out. If the target is a wild Pokémon, the battle ends instead.",
-    "short_effect": "Ends wild battles. Forces trainers to switch Pokémon.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage, then switches the target out for another of its trainer’s Pokémon, selected at random. If the target is under the effect of ingrain or suction cups, or it has a substitute, or its Trainer has no more usable Pokémon, it will not be switched out. If the target is a wild Pokémon, the battle ends instead.",
+        "black_2_white_2": "Inflicts regular damage, then switches the target out for another of its trainer’s Pokémon, selected at random. If the target is under the effect of ingrain or suction cups, or it has a substitute, or its Trainer has no more usable Pokémon, it will not be switched out. If the target is a wild Pokémon, the battle ends instead."
+    },
+    "short_effect": {
+        "black_white": "Ends wild battles. Forces trainers to switch Pokémon.",
+        "black_2_white_2": "Ends wild battles. Forces trainers to switch Pokémon."
+    },
     "flavor_text": {
         "black_white": "The user throws the target and drags out another Pokémon in its party. In the wild, the battle ends.",
         "black_2_white_2": "The target is thrown and switched. In the wild, a battle against a single Pokémon ends."

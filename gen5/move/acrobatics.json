@@ -2,17 +2,38 @@
     "id": 512,
     "name": "acrobatics",
     "source_url": "https://pokeapi.co/api/v2/move/512/",
-    "accuracy": 100,
-    "power": 55,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 55,
+        "black_2_white_2": 55
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "flying",
+    "type": {
+        "black_white": "flying",
+        "black_2_white_2": "flying"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the user has no held item, this move has double power.",
-    "short_effect": "Has double power if the user has no held item.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. If the user has no held item, this move has double power.",
+        "black_2_white_2": "Inflicts regular damage. If the user has no held item, this move has double power."
+    },
+    "short_effect": {
+        "black_white": "Has double power if the user has no held item.",
+        "black_2_white_2": "Has double power if the user has no held item."
+    },
     "flavor_text": {
         "black_white": "The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage.",
         "black_2_white_2": "The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage."

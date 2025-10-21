@@ -2,17 +2,59 @@
     "id": 209,
     "name": "spark",
     "source_url": "https://pokeapi.co/api/v2/move/209/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 65,
+        "the_isle_of_armor": 65,
+        "the_crown_tundra": 65,
+        "brilliant_diamond_and_shining_pearl": 65,
+        "legends_arceus": 65
+    },
+    "pp": {
+        "sword_shield": 20,
+        "the_isle_of_armor": 20,
+        "the_crown_tundra": 20,
+        "brilliant_diamond_and_shining_pearl": 20,
+        "legends_arceus": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "sword_shield": "electric",
+        "the_isle_of_armor": "electric",
+        "the_crown_tundra": "electric",
+        "brilliant_diamond_and_shining_pearl": "electric",
+        "legends_arceus": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
-    "short_effect": "Has a 30% chance to paralyze the target.",
+    "effect_chance": {
+        "sword_shield": 30,
+        "the_isle_of_armor": 30,
+        "the_crown_tundra": 30,
+        "brilliant_diamond_and_shining_pearl": 30,
+        "legends_arceus": 30
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "legends_arceus": "Inflicts regular damage. Has a 30% chance to paralyze the target."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 30% chance to paralyze the target.",
+        "the_isle_of_armor": "Has a 30% chance to paralyze the target.",
+        "the_crown_tundra": "Has a 30% chance to paralyze the target.",
+        "brilliant_diamond_and_shining_pearl": "Has a 30% chance to paralyze the target.",
+        "legends_arceus": "Has a 30% chance to paralyze the target."
+    },
     "flavor_text": {
         "sword_shield": "The user throws an electrically charged tackle at the target. This may also leave the target with paralysis.",
         "legends_arceus": "The user throws an electrically charged tackle at the target to deal damage. This may also leave the target with paralysis."

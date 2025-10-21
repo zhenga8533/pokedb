@@ -2,17 +2,38 @@
     "id": 132,
     "name": "constrict",
     "source_url": "https://pokeapi.co/api/v2/move/132/",
-    "accuracy": 100,
-    "power": 10,
-    "pp": 35,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "pp": {
+        "black_white": 35,
+        "black_2_white_2": 35
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Speed by one stage.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "black_2_white_2": "Has a 10% chance to lower the target’s Speed by one stage."
+    },
     "flavor_text": {
         "black_white": "The target is attacked with long, creeping tentacles or vines. It may also lower the target’s Speed stat.",
         "black_2_white_2": "The target is attacked with long, creeping tentacles or vines. It may also lower the target’s Speed stat."

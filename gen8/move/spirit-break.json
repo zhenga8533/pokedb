@@ -2,17 +2,59 @@
     "id": 789,
     "name": "spirit-break",
     "source_url": "https://pokeapi.co/api/v2/move/789/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 15,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 75,
+        "the_isle_of_armor": 75,
+        "the_crown_tundra": 75,
+        "brilliant_diamond_and_shining_pearl": 75,
+        "legends_arceus": 75
+    },
+    "pp": {
+        "sword_shield": 15,
+        "the_isle_of_armor": 15,
+        "the_crown_tundra": 15,
+        "brilliant_diamond_and_shining_pearl": 15,
+        "legends_arceus": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fairy",
+    "type": {
+        "sword_shield": "fairy",
+        "the_isle_of_armor": "fairy",
+        "the_crown_tundra": "fairy",
+        "brilliant_diamond_and_shining_pearl": "fairy",
+        "legends_arceus": "fairy"
+    },
     "target": "selected-pokemon",
     "generation": "generation-viii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+    "effect_chance": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "legends_arceus": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_isle_of_armor": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_crown_tundra": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "legends_arceus": "Has a 100% chance to lower the target’s Special Attack by one stage."
+    },
     "flavor_text": {
         "sword_shield": "The user attacks the target with so much force that it could break the target’s spirit. This also lowers the target’s Sp. Atk stat.",
         "legends_arceus": "The user attacks the target with so much force that it could break the target's spirit. This also lowers the target's Sp. Atk stat."

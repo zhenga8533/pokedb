@@ -2,17 +2,38 @@
     "id": 532,
     "name": "horn-leech",
     "source_url": "https://pokeapi.co/api/v2/move/532/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 75,
+        "black_2_white_2": 75
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "grass",
+    "type": {
+        "black_white": "grass",
+        "black_2_white_2": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Drains half the damage inflicted to heal the user.",
-    "short_effect": "Drains half the damage inflicted to heal the user.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "black_2_white_2": "Inflicts regular damage. Drains half the damage inflicted to heal the user."
+    },
+    "short_effect": {
+        "black_white": "Drains half the damage inflicted to heal the user.",
+        "black_2_white_2": "Drains half the damage inflicted to heal the user."
+    },
     "flavor_text": {
         "black_white": "The user drains the target’s energy with its horns. The user’s HP is restored by half the damage taken by the target.",
         "black_2_white_2": "The user drains the target’s energy with its horns. The user’s HP is restored by half the damage taken by the target."

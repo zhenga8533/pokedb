@@ -2,17 +2,38 @@
     "id": 218,
     "name": "frustration",
     "source_url": "https://pokeapi.co/api/v2/move/218/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "pp": {
+        "gold_silver": 20,
+        "crystal": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "gold_silver": "normal",
+        "crystal": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power increases inversely with happiness, given by `(255 - happiness) * 2 / 5`, to a maximum of 102. Power bottoms out at 1.",
-    "short_effect": "Power increases as happiness decreases, up to a maximum of 102.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Power increases inversely with happiness, given by `(255 - happiness) * 2 / 5`, to a maximum of 102. Power bottoms out at 1.",
+        "crystal": "Inflicts regular damage. Power increases inversely with happiness, given by `(255 - happiness) * 2 / 5`, to a maximum of 102. Power bottoms out at 1."
+    },
+    "short_effect": {
+        "gold_silver": "Power increases as happiness decreases, up to a maximum of 102.",
+        "crystal": "Power increases as happiness decreases, up to a maximum of 102."
+    },
     "flavor_text": {
         "gold_silver": "An attack based on lack of loyalty.",
         "crystal": "An attack based on lack of loyalty."

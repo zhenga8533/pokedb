@@ -2,17 +2,45 @@
     "id": 213,
     "name": "attract",
     "source_url": "https://pokeapi.co/api/v2/move/213/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "sun_moon": "normal",
+        "ultra_sun_ultra_moon": "normal",
+        "lets_go_pikachu_lets_go_eevee": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Causes the target to fall in love with the user, giving it a 50% chance to do nothing each turn. If the user and target are the same gender, or either is genderless, this move will fail. If either Pokémon leaves the field, this effect ends.",
-    "short_effect": "Target falls in love if it has the opposite gender, and has a 50% chance to refuse attacking the user.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Causes the target to fall in love with the user, giving it a 50% chance to do nothing each turn. If the user and target are the same gender, or either is genderless, this move will fail. If either Pokémon leaves the field, this effect ends.",
+        "ultra_sun_ultra_moon": "Causes the target to fall in love with the user, giving it a 50% chance to do nothing each turn. If the user and target are the same gender, or either is genderless, this move will fail. If either Pokémon leaves the field, this effect ends.",
+        "lets_go_pikachu_lets_go_eevee": "Causes the target to fall in love with the user, giving it a 50% chance to do nothing each turn. If the user and target are the same gender, or either is genderless, this move will fail. If either Pokémon leaves the field, this effect ends."
+    },
+    "short_effect": {
+        "sun_moon": "Target falls in love if it has the opposite gender, and has a 50% chance to refuse attacking the user.",
+        "ultra_sun_ultra_moon": "Target falls in love if it has the opposite gender, and has a 50% chance to refuse attacking the user.",
+        "lets_go_pikachu_lets_go_eevee": "Target falls in love if it has the opposite gender, and has a 50% chance to refuse attacking the user."
+    },
     "flavor_text": {
         "sun_moon": "If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.",
         "ultra_sun_ultra_moon": "If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.",

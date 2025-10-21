@@ -2,17 +2,45 @@
     "id": 751,
     "name": "dragon-darts",
     "source_url": "https://pokeapi.co/api/v2/move/751/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 50,
+        "the_teal_mask": 50,
+        "the_indigo_disk": 50
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dragon",
+    "type": {
+        "scarlet_violet": "dragon",
+        "the_teal_mask": "dragon",
+        "the_indigo_disk": "dragon"
+    },
     "target": "selected-pokemon",
     "generation": "generation-viii",
-    "effect_chance": null,
-    "effect": null,
-    "short_effect": null,
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "short_effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
     "flavor_text": {
         "scarlet_violet": "The user attacks twice using Dreepy. If there are two opposing Pokémon, this move hits each of them once."
     },

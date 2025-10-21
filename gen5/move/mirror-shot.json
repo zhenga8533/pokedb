@@ -2,17 +2,38 @@
     "id": 429,
     "name": "mirror-shot",
     "source_url": "https://pokeapi.co/api/v2/move/429/",
-    "accuracy": 85,
-    "power": 65,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 85,
+        "black_2_white_2": 85
+    },
+    "power": {
+        "black_white": 65,
+        "black_2_white_2": 65
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "steel",
+    "type": {
+        "black_white": "steel",
+        "black_2_white_2": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to lower the target’s accuracy by one stage.",
-    "short_effect": "Has a 30% chance to lower the target’s accuracy by one stage.",
+    "effect_chance": {
+        "black_white": 30,
+        "black_2_white_2": 30
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 30% chance to lower the target’s accuracy by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 30% chance to lower the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 30% chance to lower the target’s accuracy by one stage.",
+        "black_2_white_2": "Has a 30% chance to lower the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "black_white": "The user looses a flash of energy at the target from its polished body. It may also lower the target’s accuracy.",
         "black_2_white_2": "The user looses a flash of energy at the target from its polished body. It may also lower the target’s accuracy."

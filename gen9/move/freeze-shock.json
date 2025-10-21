@@ -2,17 +2,45 @@
     "id": 553,
     "name": "freeze-shock",
     "source_url": "https://pokeapi.co/api/v2/move/553/",
-    "accuracy": 90,
-    "power": 140,
-    "pp": 5,
+    "accuracy": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "power": {
+        "scarlet_violet": 140,
+        "the_teal_mask": 140,
+        "the_indigo_disk": 140
+    },
+    "pp": {
+        "scarlet_violet": 5,
+        "the_teal_mask": 5,
+        "the_indigo_disk": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ice",
+    "type": {
+        "scarlet_violet": "ice",
+        "the_teal_mask": "ice",
+        "the_indigo_disk": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target. User charges for one turn before attacking.",
-    "short_effect": "Requires a turn to charge before attacking. Has a 30% chance to paralyze the target.",
+    "effect_chance": {
+        "scarlet_violet": 30,
+        "the_teal_mask": 30,
+        "the_indigo_disk": 30
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 30% chance to paralyze the target. User charges for one turn before attacking.",
+        "the_teal_mask": "Inflicts regular damage. Has a 30% chance to paralyze the target. User charges for one turn before attacking.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 30% chance to paralyze the target. User charges for one turn before attacking."
+    },
+    "short_effect": {
+        "scarlet_violet": "Requires a turn to charge before attacking. Has a 30% chance to paralyze the target.",
+        "the_teal_mask": "Requires a turn to charge before attacking. Has a 30% chance to paralyze the target.",
+        "the_indigo_disk": "Requires a turn to charge before attacking. Has a 30% chance to paralyze the target."
+    },
     "flavor_text": {
         "scarlet_violet": "The turn after using this move, the user hits the target with electrically charged ice to inflict damage. This may also leave the target with paralysis."
     },

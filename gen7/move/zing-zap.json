@@ -2,17 +2,45 @@
     "id": 716,
     "name": "zing-zap",
     "source_url": "https://pokeapi.co/api/v2/move/716/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 80,
+        "ultra_sun_ultra_moon": 80,
+        "lets_go_pikachu_lets_go_eevee": 80
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "sun_moon": "electric",
+        "ultra_sun_ultra_moon": "electric",
+        "lets_go_pikachu_lets_go_eevee": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 30% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Has a 30% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {
         "sun_moon": "A strong electric blast crashes down on the target, giving it an electric shock. This may also make the target flinch.",
         "ultra_sun_ultra_moon": "A strong electric blast crashes down on the target, giving it an electric shock. This may also make the target flinch.",

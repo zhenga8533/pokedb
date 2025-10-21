@@ -2,17 +2,52 @@
     "id": 124,
     "name": "sludge",
     "source_url": "https://pokeapi.co/api/v2/move/124/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "power": {
+        "red_blue": 65,
+        "yellow": 65,
+        "red_green_japan": 65,
+        "blue_japan": 65
+    },
+    "pp": {
+        "red_blue": 20,
+        "yellow": 20,
+        "red_green_japan": 20,
+        "blue_japan": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "poison",
+    "type": {
+        "red_blue": "poison",
+        "yellow": "poison",
+        "red_green_japan": "poison",
+        "blue_japan": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to poison the target.",
-    "short_effect": "Has a 30% chance to poison the target.",
+    "effect_chance": {
+        "red_blue": 30,
+        "yellow": 30,
+        "red_green_japan": 30,
+        "blue_japan": 30
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage. Has a 30% chance to poison the target.",
+        "yellow": "Inflicts regular damage. Has a 30% chance to poison the target.",
+        "red_green_japan": "Inflicts regular damage. Has a 30% chance to poison the target.",
+        "blue_japan": "Inflicts regular damage. Has a 30% chance to poison the target."
+    },
+    "short_effect": {
+        "red_blue": "Has a 30% chance to poison the target.",
+        "yellow": "Has a 30% chance to poison the target.",
+        "red_green_japan": "Has a 30% chance to poison the target.",
+        "blue_japan": "Has a 30% chance to poison the target."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

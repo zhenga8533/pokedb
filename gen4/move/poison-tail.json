@@ -2,17 +2,45 @@
     "id": 342,
     "name": "poison-tail",
     "source_url": "https://pokeapi.co/api/v2/move/342/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 25,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 50,
+        "platinum": 50,
+        "heartgold_soulsilver": 50
+    },
+    "pp": {
+        "diamond_pearl": 25,
+        "platinum": 25,
+        "heartgold_soulsilver": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "poison",
+    "type": {
+        "diamond_pearl": "poison",
+        "platinum": "poison",
+        "heartgold_soulsilver": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
-    "short_effect": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+    "effect_chance": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
+        "platinum": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
+        "heartgold_soulsilver": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+        "platinum": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+        "heartgold_soulsilver": "Has an increased chance for a critical hit and a 10% chance to poison the target."
+    },
     "flavor_text": {
         "diamond_pearl": "An attack with a high critical-hit ratio. This tail attack may also poison the foe.",
         "platinum": "An attack with a high critical-hit ratio. This tail attack may also poison the foe.",

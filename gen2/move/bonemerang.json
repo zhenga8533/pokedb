@@ -2,17 +2,38 @@
     "id": 155,
     "name": "bonemerang",
     "source_url": "https://pokeapi.co/api/v2/move/155/",
-    "accuracy": 90,
-    "power": 50,
-    "pp": 10,
+    "accuracy": {
+        "gold_silver": 90,
+        "crystal": 90
+    },
+    "power": {
+        "gold_silver": 50,
+        "crystal": 50
+    },
+    "pp": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ground",
+    "type": {
+        "gold_silver": "ground",
+        "crystal": "ground"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Hits twice in one turn.",
-    "short_effect": "Hits twice in one turn.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Hits twice in one turn.",
+        "crystal": "Inflicts regular damage. Hits twice in one turn."
+    },
+    "short_effect": {
+        "gold_silver": "Hits twice in one turn.",
+        "crystal": "Hits twice in one turn."
+    },
     "flavor_text": {
         "gold_silver": "An attack that strikes twice.",
         "crystal": "An attack that strikes twice."

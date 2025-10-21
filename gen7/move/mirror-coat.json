@@ -2,17 +2,45 @@
     "id": 243,
     "name": "mirror-coat",
     "source_url": "https://pokeapi.co/api/v2/move/243/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": -5,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "sun_moon": "psychic",
+        "ultra_sun_ultra_moon": "psychic",
+        "lets_go_pikachu_lets_go_eevee": "psychic"
+    },
     "target": "specific-move",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Targets the last opposing Pokémon to hit the user with a special move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
-    "short_effect": "Inflicts twice the damage the user received from the last special hit it took.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Targets the last opposing Pokémon to hit the user with a special move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
+        "ultra_sun_ultra_moon": "Targets the last opposing Pokémon to hit the user with a special move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
+        "lets_go_pikachu_lets_go_eevee": "Targets the last opposing Pokémon to hit the user with a special move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome."
+    },
+    "short_effect": {
+        "sun_moon": "Inflicts twice the damage the user received from the last special hit it took.",
+        "ultra_sun_ultra_moon": "Inflicts twice the damage the user received from the last special hit it took.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts twice the damage the user received from the last special hit it took."
+    },
     "flavor_text": {
         "sun_moon": "A retaliation move that counters any special attack, inflicting double the damage taken.",
         "ultra_sun_ultra_moon": "A retaliation move that counters any special attack, inflicting double the damage taken.",

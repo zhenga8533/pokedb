@@ -2,17 +2,38 @@
     "id": 232,
     "name": "metal-claw",
     "source_url": "https://pokeapi.co/api/v2/move/232/",
-    "accuracy": 95,
-    "power": 50,
-    "pp": 35,
+    "accuracy": {
+        "black_white": 95,
+        "black_2_white_2": 95
+    },
+    "power": {
+        "black_white": 50,
+        "black_2_white_2": 50
+    },
+    "pp": {
+        "black_white": 35,
+        "black_2_white_2": 35
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "black_white": "steel",
+        "black_2_white_2": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
-    "short_effect": "Has a 10% chance to raise the user’s Attack by one stage.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 10% chance to raise the user’s Attack by one stage.",
+        "black_2_white_2": "Has a 10% chance to raise the user’s Attack by one stage."
+    },
     "flavor_text": {
         "black_white": "The target is raked with steel claws. It may also raise the user’s Attack stat.",
         "black_2_white_2": "The target is raked with steel claws. It may also raise the user’s Attack stat."

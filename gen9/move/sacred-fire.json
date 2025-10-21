@@ -2,17 +2,45 @@
     "id": 221,
     "name": "sacred-fire",
     "source_url": "https://pokeapi.co/api/v2/move/221/",
-    "accuracy": 95,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "scarlet_violet": 95,
+        "the_teal_mask": 95,
+        "the_indigo_disk": 95
+    },
+    "power": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "pp": {
+        "scarlet_violet": 5,
+        "the_teal_mask": 5,
+        "the_indigo_disk": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "scarlet_violet": "fire",
+        "the_teal_mask": "fire",
+        "the_indigo_disk": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
-    "short_effect": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+    "effect_chance": {
+        "scarlet_violet": 50,
+        "the_teal_mask": 50,
+        "the_indigo_disk": 50
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "the_teal_mask": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "the_teal_mask": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "the_indigo_disk": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves."
+    },
     "flavor_text": {
         "scarlet_violet": "The target is razed with a mystical fire of great intensity. This may also leave the target with a burn."
     },

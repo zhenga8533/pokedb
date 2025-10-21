@@ -2,17 +2,45 @@
     "id": 398,
     "name": "poison-jab",
     "source_url": "https://pokeapi.co/api/v2/move/398/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 20,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 80,
+        "platinum": 80,
+        "heartgold_soulsilver": 80
+    },
+    "pp": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "poison",
+    "type": {
+        "diamond_pearl": "poison",
+        "platinum": "poison",
+        "heartgold_soulsilver": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to poison the target.",
-    "short_effect": "Has a 30% chance to poison the target.",
+    "effect_chance": {
+        "diamond_pearl": 30,
+        "platinum": 30,
+        "heartgold_soulsilver": 30
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 30% chance to poison the target.",
+        "platinum": "Inflicts regular damage. Has a 30% chance to poison the target.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 30% chance to poison the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 30% chance to poison the target.",
+        "platinum": "Has a 30% chance to poison the target.",
+        "heartgold_soulsilver": "Has a 30% chance to poison the target."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is stabbed with a tentacle or arm steeped in poison. It may also poison the foe.",
         "platinum": "The foe is stabbed with a tentacle or arm steeped in poison. It may also poison the foe.",

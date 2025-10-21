@@ -2,17 +2,45 @@
     "id": 61,
     "name": "bubble-beam",
     "source_url": "https://pokeapi.co/api/v2/move/61/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 65,
+        "ultra_sun_ultra_moon": 65,
+        "lets_go_pikachu_lets_go_eevee": 65
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "sun_moon": "water",
+        "ultra_sun_ultra_moon": "water",
+        "lets_go_pikachu_lets_go_eevee": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Speed by one stage.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "ultra_sun_ultra_moon": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 10% chance to lower the target’s Speed by one stage."
+    },
     "flavor_text": {
         "sun_moon": "A spray of bubbles is forcefully ejected at the target. This may also lower its Speed stat.",
         "ultra_sun_ultra_moon": "A spray of bubbles is forcefully ejected at the target. This may also lower its Speed stat.",

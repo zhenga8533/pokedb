@@ -2,17 +2,38 @@
     "id": 77,
     "name": "poison-powder",
     "source_url": "https://pokeapi.co/api/v2/move/77/",
-    "accuracy": 75,
-    "power": null,
-    "pp": 35,
+    "accuracy": {
+        "gold_silver": 75,
+        "crystal": 75
+    },
+    "power": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "pp": {
+        "gold_silver": 35,
+        "crystal": 35
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "gold_silver": "poison",
+        "crystal": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Poisons the target.",
-    "short_effect": "Poisons the target.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Poisons the target.",
+        "crystal": "Poisons the target."
+    },
+    "short_effect": {
+        "gold_silver": "Poisons the target.",
+        "crystal": "Poisons the target."
+    },
     "flavor_text": {
         "gold_silver": "A move that may poison the foe.",
         "crystal": "A move that may poison the foe."

@@ -2,17 +2,38 @@
     "id": 555,
     "name": "snarl",
     "source_url": "https://pokeapi.co/api/v2/move/555/",
-    "accuracy": 95,
-    "power": 55,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 95,
+        "black_2_white_2": 95
+    },
+    "power": {
+        "black_white": 55,
+        "black_2_white_2": 55
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dark",
+    "type": {
+        "black_white": "dark",
+        "black_2_white_2": "dark"
+    },
     "target": "all-opponents",
     "generation": "generation-v",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+    "effect_chance": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "black_2_white_2": "Has a 100% chance to lower the target’s Special Attack by one stage."
+    },
     "flavor_text": {
         "black_white": "The user yells as if it is ranting about something, making the target’s Sp. Atk stat decrease.",
         "black_2_white_2": "The user yells as if it is ranting about something, making the targets’ Sp. Atk stat decrease."

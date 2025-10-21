@@ -2,17 +2,38 @@
     "id": 34,
     "name": "body-slam",
     "source_url": "https://pokeapi.co/api/v2/move/34/",
-    "accuracy": 100,
-    "power": 85,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 85,
+        "black_2_white_2": 85
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
-    "short_effect": "Has a 30% chance to paralyze the target.",
+    "effect_chance": {
+        "black_white": 30,
+        "black_2_white_2": 30
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "black_2_white_2": "Inflicts regular damage. Has a 30% chance to paralyze the target."
+    },
+    "short_effect": {
+        "black_white": "Has a 30% chance to paralyze the target.",
+        "black_2_white_2": "Has a 30% chance to paralyze the target."
+    },
     "flavor_text": {
         "black_white": "The user drops onto the target with its full body weight. It may also leave the target with paralysis.",
         "black_2_white_2": "The user drops onto the target with its full body weight. It may also leave the target with paralysis."

@@ -2,17 +2,38 @@
     "id": 7,
     "name": "fire-punch",
     "source_url": "https://pokeapi.co/api/v2/move/7/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 15,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": 75,
+        "crystal": 75
+    },
+    "pp": {
+        "gold_silver": 15,
+        "crystal": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "gold_silver": "fire",
+        "crystal": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to burn the target.",
-    "short_effect": "Has a 10% chance to burn the target.",
+    "effect_chance": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 10% chance to burn the target.",
+        "crystal": "Inflicts regular damage. Has a 10% chance to burn the target."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 10% chance to burn the target.",
+        "crystal": "Has a 10% chance to burn the target."
+    },
     "flavor_text": {
         "gold_silver": "A fiery punch. May cause a burn.",
         "crystal": "A fiery punch. May cause a burn."

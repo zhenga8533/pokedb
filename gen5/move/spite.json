@@ -2,17 +2,38 @@
     "id": 180,
     "name": "spite",
     "source_url": "https://pokeapi.co/api/v2/move/180/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "ghost",
+    "type": {
+        "black_white": "ghost",
+        "black_2_white_2": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
-    "short_effect": "Lowers the PP of the target’s last used move by 4.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
+        "black_2_white_2": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail."
+    },
+    "short_effect": {
+        "black_white": "Lowers the PP of the target’s last used move by 4.",
+        "black_2_white_2": "Lowers the PP of the target’s last used move by 4."
+    },
     "flavor_text": {
         "black_white": "The user unleashes its grudge on the move last used by the target by cutting 4 PP from it.",
         "black_2_white_2": "The user unleashes its grudge on the move last used by the target by cutting 4 PP from it."

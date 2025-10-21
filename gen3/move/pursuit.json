@@ -2,17 +2,59 @@
     "id": 228,
     "name": "pursuit",
     "source_url": "https://pokeapi.co/api/v2/move/228/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 20,
+    "accuracy": {
+        "ruby_sapphire": 100,
+        "emerald": 100,
+        "firered_leafgreen": 100,
+        "colosseum": 100,
+        "xd": 100
+    },
+    "power": {
+        "ruby_sapphire": 40,
+        "emerald": 40,
+        "firered_leafgreen": 40,
+        "colosseum": 40,
+        "xd": 40
+    },
+    "pp": {
+        "ruby_sapphire": 20,
+        "emerald": 20,
+        "firered_leafgreen": 20,
+        "colosseum": 20,
+        "xd": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dark",
+    "type": {
+        "ruby_sapphire": "dark",
+        "emerald": "dark",
+        "firered_leafgreen": "dark",
+        "colosseum": "dark",
+        "xd": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the target attempts to switch out this turn before the user acts, this move hits the target before it leaves and has double power. This effect can still hit a Pokémon that switches out when it has a substitute up or when an ally has used follow me.",
-    "short_effect": "Has double power against, and can hit, Pokémon attempting to switch out.",
+    "effect_chance": {
+        "ruby_sapphire": null,
+        "emerald": null,
+        "firered_leafgreen": null,
+        "colosseum": null,
+        "xd": null
+    },
+    "effect": {
+        "ruby_sapphire": "Inflicts regular damage. If the target attempts to switch out this turn before the user acts, this move hits the target before it leaves and has double power. This effect can still hit a Pokémon that switches out when it has a substitute up or when an ally has used follow me.",
+        "emerald": "Inflicts regular damage. If the target attempts to switch out this turn before the user acts, this move hits the target before it leaves and has double power. This effect can still hit a Pokémon that switches out when it has a substitute up or when an ally has used follow me.",
+        "firered_leafgreen": "Inflicts regular damage. If the target attempts to switch out this turn before the user acts, this move hits the target before it leaves and has double power. This effect can still hit a Pokémon that switches out when it has a substitute up or when an ally has used follow me.",
+        "colosseum": "Inflicts regular damage. If the target attempts to switch out this turn before the user acts, this move hits the target before it leaves and has double power. This effect can still hit a Pokémon that switches out when it has a substitute up or when an ally has used follow me.",
+        "xd": "Inflicts regular damage. If the target attempts to switch out this turn before the user acts, this move hits the target before it leaves and has double power. This effect can still hit a Pokémon that switches out when it has a substitute up or when an ally has used follow me."
+    },
+    "short_effect": {
+        "ruby_sapphire": "Has double power against, and can hit, Pokémon attempting to switch out.",
+        "emerald": "Has double power against, and can hit, Pokémon attempting to switch out.",
+        "firered_leafgreen": "Has double power against, and can hit, Pokémon attempting to switch out.",
+        "colosseum": "Has double power against, and can hit, Pokémon attempting to switch out.",
+        "xd": "Has double power against, and can hit, Pokémon attempting to switch out."
+    },
     "flavor_text": {
         "ruby_sapphire": "Inflicts bad damage if used on a foe switching out.",
         "emerald": "Inflicts bad damage if used on a foe switching out.",

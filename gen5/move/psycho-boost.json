@@ -2,17 +2,38 @@
     "id": 354,
     "name": "psycho-boost",
     "source_url": "https://pokeapi.co/api/v2/move/354/",
-    "accuracy": 90,
-    "power": 140,
-    "pp": 5,
+    "accuracy": {
+        "black_white": 90,
+        "black_2_white_2": 90
+    },
+    "power": {
+        "black_white": 140,
+        "black_2_white_2": 140
+    },
+    "pp": {
+        "black_white": 5,
+        "black_2_white_2": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "black_white": "psychic",
+        "black_2_white_2": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
-    "short_effect": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+    "effect_chance": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
+        "black_2_white_2": "Inflicts regular damage, then lowers the user’s Special Attack by two stages."
+    },
+    "short_effect": {
+        "black_white": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+        "black_2_white_2": "Lowers the user’s Special Attack by two stages after inflicting damage."
+    },
     "flavor_text": {
         "black_white": "The user attacks the target at full power. The attack’s recoil harshly reduces the user’s Sp. Atk stat.",
         "black_2_white_2": "The user attacks the target at full power. The attack’s recoil harshly reduces the user’s Sp. Atk stat."

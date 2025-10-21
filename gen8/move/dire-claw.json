@@ -2,21 +2,76 @@
     "id": 827,
     "name": "dire-claw",
     "source_url": "https://pokeapi.co/api/v2/move/827/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 80,
+        "the_isle_of_armor": 80,
+        "the_crown_tundra": 80,
+        "brilliant_diamond_and_shining_pearl": 80,
+        "legends_arceus": 80
+    },
+    "pp": {
+        "sword_shield": 15,
+        "the_isle_of_armor": 15,
+        "the_crown_tundra": 15,
+        "brilliant_diamond_and_shining_pearl": 15,
+        "legends_arceus": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "poison",
+    "type": {
+        "sword_shield": "poison",
+        "the_isle_of_armor": "poison",
+        "the_crown_tundra": "poison",
+        "brilliant_diamond_and_shining_pearl": "poison",
+        "legends_arceus": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-viii",
-    "effect_chance": null,
-    "effect": null,
-    "short_effect": null,
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "short_effect": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
     "flavor_text": {
         "legends_arceus": "The user lashes out at the target with ruinous claws, aiming to land a critical hit. This may also leave the target poisoned, paralyzed, or drowsy."
     },
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

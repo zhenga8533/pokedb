@@ -2,17 +2,45 @@
     "id": 449,
     "name": "judgment",
     "source_url": "https://pokeapi.co/api/v2/move/449/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "normal",
+    "type": {
+        "diamond_pearl": "normal",
+        "platinum": "normal",
+        "heartgold_soulsilver": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the user is holding a plate or a drive, this move’s type is the type corresponding to that item. Note: This effect is technically shared by both techno blast and judgment; however, Techno Blast is only affected by drives, and Judgment is only affected by plates.",
-    "short_effect": "If the user is holding a appropriate plate or drive, the damage inflicted will match it.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. If the user is holding a plate or a drive, this move’s type is the type corresponding to that item. Note: This effect is technically shared by both techno blast and judgment; however, Techno Blast is only affected by drives, and Judgment is only affected by plates.",
+        "platinum": "Inflicts regular damage. If the user is holding a plate or a drive, this move’s type is the type corresponding to that item. Note: This effect is technically shared by both techno blast and judgment; however, Techno Blast is only affected by drives, and Judgment is only affected by plates.",
+        "heartgold_soulsilver": "Inflicts regular damage. If the user is holding a plate or a drive, this move’s type is the type corresponding to that item. Note: This effect is technically shared by both techno blast and judgment; however, Techno Blast is only affected by drives, and Judgment is only affected by plates."
+    },
+    "short_effect": {
+        "diamond_pearl": "If the user is holding a appropriate plate or drive, the damage inflicted will match it.",
+        "platinum": "If the user is holding a appropriate plate or drive, the damage inflicted will match it.",
+        "heartgold_soulsilver": "If the user is holding a appropriate plate or drive, the damage inflicted will match it."
+    },
     "flavor_text": {
         "diamond_pearl": "The user releases countless shots of light. Its type varies with the kind of Plate the user is holding.",
         "platinum": "The user releases countless shots of light. Its type varies with the kind of Plate the user is holding.",

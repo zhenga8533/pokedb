@@ -2,17 +2,59 @@
     "id": 301,
     "name": "ice-ball",
     "source_url": "https://pokeapi.co/api/v2/move/301/",
-    "accuracy": 90,
-    "power": 30,
-    "pp": 20,
+    "accuracy": {
+        "sword_shield": 90,
+        "the_isle_of_armor": 90,
+        "the_crown_tundra": 90,
+        "brilliant_diamond_and_shining_pearl": 90,
+        "legends_arceus": 90
+    },
+    "power": {
+        "sword_shield": 30,
+        "the_isle_of_armor": 30,
+        "the_crown_tundra": 30,
+        "brilliant_diamond_and_shining_pearl": 30,
+        "legends_arceus": 30
+    },
+    "pp": {
+        "sword_shield": 20,
+        "the_isle_of_armor": 20,
+        "the_crown_tundra": 20,
+        "brilliant_diamond_and_shining_pearl": 20,
+        "legends_arceus": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ice",
+    "type": {
+        "sword_shield": "ice",
+        "the_isle_of_armor": "ice",
+        "the_crown_tundra": "ice",
+        "brilliant_diamond_and_shining_pearl": "ice",
+        "legends_arceus": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
-    "short_effect": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
+        "the_isle_of_armor": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
+        "the_crown_tundra": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
+        "legends_arceus": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power."
+    },
+    "short_effect": {
+        "sword_shield": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+        "the_isle_of_armor": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+        "the_crown_tundra": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+        "brilliant_diamond_and_shining_pearl": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+        "legends_arceus": "Power doubles every turn this move is used in succession after the first, resetting after five turns."
+    },
     "flavor_text": {
         "sword_shield": "This move can’t be used. It’s recommended that this move is forgotten. Once forgotten, this move can’t be remembered."
     },

@@ -2,17 +2,59 @@
     "id": 555,
     "name": "snarl",
     "source_url": "https://pokeapi.co/api/v2/move/555/",
-    "accuracy": 95,
-    "power": 55,
-    "pp": 15,
+    "accuracy": {
+        "sword_shield": 95,
+        "the_isle_of_armor": 95,
+        "the_crown_tundra": 95,
+        "brilliant_diamond_and_shining_pearl": 95,
+        "legends_arceus": 95
+    },
+    "power": {
+        "sword_shield": 55,
+        "the_isle_of_armor": 55,
+        "the_crown_tundra": 55,
+        "brilliant_diamond_and_shining_pearl": 55,
+        "legends_arceus": 55
+    },
+    "pp": {
+        "sword_shield": 15,
+        "the_isle_of_armor": 15,
+        "the_crown_tundra": 15,
+        "brilliant_diamond_and_shining_pearl": 15,
+        "legends_arceus": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dark",
+    "type": {
+        "sword_shield": "dark",
+        "the_isle_of_armor": "dark",
+        "the_crown_tundra": "dark",
+        "brilliant_diamond_and_shining_pearl": "dark",
+        "legends_arceus": "dark"
+    },
     "target": "all-opponents",
     "generation": "generation-v",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+    "effect_chance": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "legends_arceus": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_isle_of_armor": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_crown_tundra": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "legends_arceus": "Has a 100% chance to lower the target’s Special Attack by one stage."
+    },
     "flavor_text": {
         "sword_shield": "The user yells as if it’s ranting about something, which lowers the Sp. Atk stats of opposing Pokémon.",
         "legends_arceus": "The user attacks by crying out as if it's ranting about something. This also lowers the target's offensive stats."

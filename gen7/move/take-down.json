@@ -2,17 +2,45 @@
     "id": 36,
     "name": "take-down",
     "source_url": "https://pokeapi.co/api/v2/move/36/",
-    "accuracy": 85,
-    "power": 90,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 85,
+        "ultra_sun_ultra_moon": 85,
+        "lets_go_pikachu_lets_go_eevee": 85
+    },
+    "power": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "sun_moon": "normal",
+        "ultra_sun_ultra_moon": "normal",
+        "lets_go_pikachu_lets_go_eevee": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil.",
-    "short_effect": "User receives 1/4 the damage it inflicts in recoil.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. User takes 1/4 the damage it inflicts in recoil."
+    },
+    "short_effect": {
+        "sun_moon": "User receives 1/4 the damage it inflicts in recoil.",
+        "ultra_sun_ultra_moon": "User receives 1/4 the damage it inflicts in recoil.",
+        "lets_go_pikachu_lets_go_eevee": "User receives 1/4 the damage it inflicts in recoil."
+    },
     "flavor_text": {
         "sun_moon": "A reckless, full-body charge attack for slamming into the target. This also damages the user a little.",
         "ultra_sun_ultra_moon": "A reckless, full-body charge attack for slamming into the target. This also damages the user a little.",

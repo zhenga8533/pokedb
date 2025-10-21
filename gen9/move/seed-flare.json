@@ -2,17 +2,45 @@
     "id": 465,
     "name": "seed-flare",
     "source_url": "https://pokeapi.co/api/v2/move/465/",
-    "accuracy": 85,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "scarlet_violet": 85,
+        "the_teal_mask": 85,
+        "the_indigo_disk": 85
+    },
+    "power": {
+        "scarlet_violet": 120,
+        "the_teal_mask": 120,
+        "the_indigo_disk": 120
+    },
+    "pp": {
+        "scarlet_violet": 5,
+        "the_teal_mask": 5,
+        "the_indigo_disk": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "grass",
+    "type": {
+        "scarlet_violet": "grass",
+        "the_teal_mask": "grass",
+        "the_indigo_disk": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 40,
-    "effect": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
-    "short_effect": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+    "effect_chance": {
+        "scarlet_violet": 40,
+        "the_teal_mask": 40,
+        "the_indigo_disk": 40
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "the_teal_mask": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "the_teal_mask": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "the_indigo_disk": "Has a 40% chance to lower the target’s Special Defense by two stages."
+    },
     "flavor_text": {
         "scarlet_violet": "The user emits a shock wave from its body to attack its target. This may also harshly lower the target's Sp. Def stat."
     },

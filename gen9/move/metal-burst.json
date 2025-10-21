@@ -2,17 +2,45 @@
     "id": 368,
     "name": "metal-burst",
     "source_url": "https://pokeapi.co/api/v2/move/368/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "scarlet_violet": "steel",
+        "the_teal_mask": "steel",
+        "the_indigo_disk": "steel"
+    },
     "target": "specific-move",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
-    "short_effect": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
+        "the_teal_mask": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
+        "the_indigo_disk": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored."
+    },
+    "short_effect": {
+        "scarlet_violet": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+        "the_teal_mask": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+        "the_indigo_disk": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage."
+    },
     "flavor_text": {
         "scarlet_violet": "The user retaliates with much greater force against the opponent that last inflicted damage on it."
     },

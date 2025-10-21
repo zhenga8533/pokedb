@@ -2,17 +2,52 @@
     "id": 9,
     "name": "thunder-punch",
     "source_url": "https://pokeapi.co/api/v2/move/9/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 15,
+    "accuracy": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "power": {
+        "red_blue": 75,
+        "yellow": 75,
+        "red_green_japan": 75,
+        "blue_japan": 75
+    },
+    "pp": {
+        "red_blue": 15,
+        "yellow": 15,
+        "red_green_japan": 15,
+        "blue_japan": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "red_blue": "electric",
+        "yellow": "electric",
+        "red_green_japan": "electric",
+        "blue_japan": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
-    "short_effect": "Has a 10% chance to paralyze the target.",
+    "effect_chance": {
+        "red_blue": 10,
+        "yellow": 10,
+        "red_green_japan": 10,
+        "blue_japan": 10
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "yellow": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "red_green_japan": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "blue_japan": "Inflicts regular damage. Has a 10% chance to paralyze the target."
+    },
+    "short_effect": {
+        "red_blue": "Has a 10% chance to paralyze the target.",
+        "yellow": "Has a 10% chance to paralyze the target.",
+        "red_green_japan": "Has a 10% chance to paralyze the target.",
+        "blue_japan": "Has a 10% chance to paralyze the target."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

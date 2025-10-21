@@ -2,17 +2,59 @@
     "id": 221,
     "name": "sacred-fire",
     "source_url": "https://pokeapi.co/api/v2/move/221/",
-    "accuracy": 95,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "sword_shield": 95,
+        "the_isle_of_armor": 95,
+        "the_crown_tundra": 95,
+        "brilliant_diamond_and_shining_pearl": 95,
+        "legends_arceus": 95
+    },
+    "power": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "pp": {
+        "sword_shield": 5,
+        "the_isle_of_armor": 5,
+        "the_crown_tundra": 5,
+        "brilliant_diamond_and_shining_pearl": 5,
+        "legends_arceus": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "sword_shield": "fire",
+        "the_isle_of_armor": "fire",
+        "the_crown_tundra": "fire",
+        "brilliant_diamond_and_shining_pearl": "fire",
+        "legends_arceus": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
-    "short_effect": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+    "effect_chance": {
+        "sword_shield": 50,
+        "the_isle_of_armor": 50,
+        "the_crown_tundra": 50,
+        "brilliant_diamond_and_shining_pearl": 50,
+        "legends_arceus": 50
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "legends_arceus": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "the_isle_of_armor": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "the_crown_tundra": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "brilliant_diamond_and_shining_pearl": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "legends_arceus": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves."
+    },
     "flavor_text": {
         "sword_shield": "The target is razed with a mystical fire of great intensity. This may also leave the target with a burn.",
         "legends_arceus": "The target is razed with a mystical fire of great intensity. This may also leave the target with a burn."

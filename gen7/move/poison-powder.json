@@ -2,17 +2,45 @@
     "id": 77,
     "name": "poison-powder",
     "source_url": "https://pokeapi.co/api/v2/move/77/",
-    "accuracy": 75,
-    "power": null,
-    "pp": 35,
+    "accuracy": {
+        "sun_moon": 75,
+        "ultra_sun_ultra_moon": 75,
+        "lets_go_pikachu_lets_go_eevee": 75
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 35,
+        "ultra_sun_ultra_moon": 35,
+        "lets_go_pikachu_lets_go_eevee": 35
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "sun_moon": "poison",
+        "ultra_sun_ultra_moon": "poison",
+        "lets_go_pikachu_lets_go_eevee": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Poisons the target.",
-    "short_effect": "Poisons the target.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Poisons the target.",
+        "ultra_sun_ultra_moon": "Poisons the target.",
+        "lets_go_pikachu_lets_go_eevee": "Poisons the target."
+    },
+    "short_effect": {
+        "sun_moon": "Poisons the target.",
+        "ultra_sun_ultra_moon": "Poisons the target.",
+        "lets_go_pikachu_lets_go_eevee": "Poisons the target."
+    },
     "flavor_text": {
         "sun_moon": "The user scatters a cloud of poisonous dust that poisons the target.",
         "ultra_sun_ultra_moon": "The user scatters a cloud of poisonous dust that poisons the target.",

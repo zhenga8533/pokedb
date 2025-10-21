@@ -2,17 +2,38 @@
     "id": 232,
     "name": "metal-claw",
     "source_url": "https://pokeapi.co/api/v2/move/232/",
-    "accuracy": 95,
-    "power": 50,
-    "pp": 35,
+    "accuracy": {
+        "gold_silver": 95,
+        "crystal": 95
+    },
+    "power": {
+        "gold_silver": 50,
+        "crystal": 50
+    },
+    "pp": {
+        "gold_silver": 35,
+        "crystal": 35
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "gold_silver": "steel",
+        "crystal": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
-    "short_effect": "Has a 10% chance to raise the user’s Attack by one stage.",
+    "effect_chance": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
+        "crystal": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 10% chance to raise the user’s Attack by one stage.",
+        "crystal": "Has a 10% chance to raise the user’s Attack by one stage."
+    },
     "flavor_text": {
         "gold_silver": "An attack that may up user's ATTACK.",
         "crystal": "An attack that may up user's ATTACK."

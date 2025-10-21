@@ -2,17 +2,45 @@
     "id": 109,
     "name": "confuse-ray",
     "source_url": "https://pokeapi.co/api/v2/move/109/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "ghost",
+    "type": {
+        "sun_moon": "ghost",
+        "ultra_sun_ultra_moon": "ghost",
+        "lets_go_pikachu_lets_go_eevee": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Confuses the target.",
-    "short_effect": "Confuses the target.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Confuses the target.",
+        "ultra_sun_ultra_moon": "Confuses the target.",
+        "lets_go_pikachu_lets_go_eevee": "Confuses the target."
+    },
+    "short_effect": {
+        "sun_moon": "Confuses the target.",
+        "ultra_sun_ultra_moon": "Confuses the target.",
+        "lets_go_pikachu_lets_go_eevee": "Confuses the target."
+    },
     "flavor_text": {
         "sun_moon": "The target is exposed to a sinister ray that triggers confusion.",
         "ultra_sun_ultra_moon": "The target is exposed to a sinister ray that triggers confusion.",

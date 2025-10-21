@@ -2,17 +2,59 @@
     "id": 613,
     "name": "oblivion-wing",
     "source_url": "https://pokeapi.co/api/v2/move/613/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 80,
+        "the_isle_of_armor": 80,
+        "the_crown_tundra": 80,
+        "brilliant_diamond_and_shining_pearl": 80,
+        "legends_arceus": 80
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "flying",
+    "type": {
+        "sword_shield": "flying",
+        "the_isle_of_armor": "flying",
+        "the_crown_tundra": "flying",
+        "brilliant_diamond_and_shining_pearl": "flying",
+        "legends_arceus": "flying"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": null,
-    "effect": "Deals regular damage. Drains 75% of the damage inflicted to heal the user.",
-    "short_effect": "Drains 75% of the damage inflicted to heal the user.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Deals regular damage. Drains 75% of the damage inflicted to heal the user.",
+        "the_isle_of_armor": "Deals regular damage. Drains 75% of the damage inflicted to heal the user.",
+        "the_crown_tundra": "Deals regular damage. Drains 75% of the damage inflicted to heal the user.",
+        "brilliant_diamond_and_shining_pearl": "Deals regular damage. Drains 75% of the damage inflicted to heal the user.",
+        "legends_arceus": "Deals regular damage. Drains 75% of the damage inflicted to heal the user."
+    },
+    "short_effect": {
+        "sword_shield": "Drains 75% of the damage inflicted to heal the user.",
+        "the_isle_of_armor": "Drains 75% of the damage inflicted to heal the user.",
+        "the_crown_tundra": "Drains 75% of the damage inflicted to heal the user.",
+        "brilliant_diamond_and_shining_pearl": "Drains 75% of the damage inflicted to heal the user.",
+        "legends_arceus": "Drains 75% of the damage inflicted to heal the user."
+    },
     "flavor_text": {
         "sword_shield": "The user absorbs its target’s HP. The user’s HP is restored by over half of the damage taken by the target."
     },

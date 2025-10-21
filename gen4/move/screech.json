@@ -2,17 +2,45 @@
     "id": 103,
     "name": "screech",
     "source_url": "https://pokeapi.co/api/v2/move/103/",
-    "accuracy": 85,
-    "power": null,
-    "pp": 40,
+    "accuracy": {
+        "diamond_pearl": 85,
+        "platinum": 85,
+        "heartgold_soulsilver": 85
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 40,
+        "platinum": 40,
+        "heartgold_soulsilver": 40
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "diamond_pearl": "normal",
+        "platinum": "normal",
+        "heartgold_soulsilver": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Lowers the target’s Defense by two stages.",
-    "short_effect": "Lowers the target’s Defense by two stages.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Lowers the target’s Defense by two stages.",
+        "platinum": "Lowers the target’s Defense by two stages.",
+        "heartgold_soulsilver": "Lowers the target’s Defense by two stages."
+    },
+    "short_effect": {
+        "diamond_pearl": "Lowers the target’s Defense by two stages.",
+        "platinum": "Lowers the target’s Defense by two stages.",
+        "heartgold_soulsilver": "Lowers the target’s Defense by two stages."
+    },
     "flavor_text": {
         "diamond_pearl": "An earsplitting screech is emitted to sharply reduce the foe’s Defense stat.",
         "platinum": "An earsplitting screech is emitted to sharply reduce the foe’s Defense stat.",

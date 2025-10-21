@@ -2,17 +2,52 @@
     "id": 163,
     "name": "slash",
     "source_url": "https://pokeapi.co/api/v2/move/163/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 20,
+    "accuracy": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "power": {
+        "red_blue": 70,
+        "yellow": 70,
+        "red_green_japan": 70,
+        "blue_japan": 70
+    },
+    "pp": {
+        "red_blue": 20,
+        "yellow": 20,
+        "red_green_japan": 20,
+        "blue_japan": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "red_blue": "normal",
+        "yellow": "normal",
+        "red_green_japan": "normal",
+        "blue_japan": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
-    "short_effect": "Has an increased chance for a critical hit.",
+    "effect_chance": {
+        "red_blue": null,
+        "yellow": null,
+        "red_green_japan": null,
+        "blue_japan": null
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
+        "yellow": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
+        "red_green_japan": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
+        "blue_japan": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move."
+    },
+    "short_effect": {
+        "red_blue": "Has an increased chance for a critical hit.",
+        "yellow": "Has an increased chance for a critical hit.",
+        "red_green_japan": "Has an increased chance for a critical hit.",
+        "blue_japan": "Has an increased chance for a critical hit."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

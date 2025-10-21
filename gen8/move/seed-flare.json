@@ -2,17 +2,59 @@
     "id": 465,
     "name": "seed-flare",
     "source_url": "https://pokeapi.co/api/v2/move/465/",
-    "accuracy": 85,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "sword_shield": 85,
+        "the_isle_of_armor": 85,
+        "the_crown_tundra": 85,
+        "brilliant_diamond_and_shining_pearl": 85,
+        "legends_arceus": 85
+    },
+    "power": {
+        "sword_shield": 120,
+        "the_isle_of_armor": 120,
+        "the_crown_tundra": 120,
+        "brilliant_diamond_and_shining_pearl": 120,
+        "legends_arceus": 120
+    },
+    "pp": {
+        "sword_shield": 5,
+        "the_isle_of_armor": 5,
+        "the_crown_tundra": 5,
+        "brilliant_diamond_and_shining_pearl": 5,
+        "legends_arceus": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "grass",
+    "type": {
+        "sword_shield": "grass",
+        "the_isle_of_armor": "grass",
+        "the_crown_tundra": "grass",
+        "brilliant_diamond_and_shining_pearl": "grass",
+        "legends_arceus": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 40,
-    "effect": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
-    "short_effect": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+    "effect_chance": {
+        "sword_shield": 40,
+        "the_isle_of_armor": 40,
+        "the_crown_tundra": 40,
+        "brilliant_diamond_and_shining_pearl": 40,
+        "legends_arceus": 40
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "legends_arceus": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "the_isle_of_armor": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "the_crown_tundra": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "brilliant_diamond_and_shining_pearl": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "legends_arceus": "Has a 40% chance to lower the target’s Special Defense by two stages."
+    },
     "flavor_text": {
         "sword_shield": "The user emits a shock wave from its body to attack its target. This may also harshly lower the target’s Sp. Def stat.",
         "legends_arceus": "The user emits a shock wave from its body to attack its target. This may also lower the target’s defensive stats."

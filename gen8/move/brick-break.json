@@ -2,17 +2,59 @@
     "id": 280,
     "name": "brick-break",
     "source_url": "https://pokeapi.co/api/v2/move/280/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 15,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 75,
+        "the_isle_of_armor": 75,
+        "the_crown_tundra": 75,
+        "brilliant_diamond_and_shining_pearl": 75,
+        "legends_arceus": 75
+    },
+    "pp": {
+        "sword_shield": 15,
+        "the_isle_of_armor": 15,
+        "the_crown_tundra": 15,
+        "brilliant_diamond_and_shining_pearl": 15,
+        "legends_arceus": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "sword_shield": "fighting",
+        "the_isle_of_armor": "fighting",
+        "the_crown_tundra": "fighting",
+        "brilliant_diamond_and_shining_pearl": "fighting",
+        "legends_arceus": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
-    "short_effect": "Destroys Reflect and Light Screen.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
+        "the_isle_of_armor": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
+        "the_crown_tundra": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
+        "brilliant_diamond_and_shining_pearl": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
+        "legends_arceus": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage."
+    },
+    "short_effect": {
+        "sword_shield": "Destroys Reflect and Light Screen.",
+        "the_isle_of_armor": "Destroys Reflect and Light Screen.",
+        "the_crown_tundra": "Destroys Reflect and Light Screen.",
+        "brilliant_diamond_and_shining_pearl": "Destroys Reflect and Light Screen.",
+        "legends_arceus": "Destroys Reflect and Light Screen."
+    },
     "flavor_text": {
         "sword_shield": "The user attacks with a swift chop. It can also break barriers, such as Light Screen and Reflect.",
         "legends_arceus": "The user attacks with a swift chop. It can also break barriers, such as Light Screen and Reflect."

@@ -2,17 +2,45 @@
     "id": 354,
     "name": "psycho-boost",
     "source_url": "https://pokeapi.co/api/v2/move/354/",
-    "accuracy": 90,
-    "power": 140,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "power": {
+        "sun_moon": 140,
+        "ultra_sun_ultra_moon": 140,
+        "lets_go_pikachu_lets_go_eevee": 140
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "sun_moon": "psychic",
+        "ultra_sun_ultra_moon": "psychic",
+        "lets_go_pikachu_lets_go_eevee": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
-    "short_effect": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage, then lowers the user’s Special Attack by two stages."
+    },
+    "short_effect": {
+        "sun_moon": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+        "ultra_sun_ultra_moon": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the user’s Special Attack by two stages after inflicting damage."
+    },
     "flavor_text": {
         "sun_moon": "The user attacks the target at full power. The attack’s recoil harshly lowers the user’s Sp. Atk stat.",
         "ultra_sun_ultra_moon": "The user attacks the target at full power. The attack’s recoil harshly lowers the user’s Sp. Atk stat.",

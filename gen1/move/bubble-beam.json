@@ -2,17 +2,52 @@
     "id": 61,
     "name": "bubble-beam",
     "source_url": "https://pokeapi.co/api/v2/move/61/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "power": {
+        "red_blue": 65,
+        "yellow": 65,
+        "red_green_japan": 65,
+        "blue_japan": 65
+    },
+    "pp": {
+        "red_blue": 20,
+        "yellow": 20,
+        "red_green_japan": 20,
+        "blue_japan": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "red_blue": "water",
+        "yellow": "water",
+        "red_green_japan": "water",
+        "blue_japan": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Speed by one stage.",
+    "effect_chance": {
+        "red_blue": 10,
+        "yellow": 10,
+        "red_green_japan": 10,
+        "blue_japan": 10
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "yellow": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "red_green_japan": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "blue_japan": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "red_blue": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "yellow": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "red_green_japan": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "blue_japan": "Has a 10% chance to lower the target’s Speed by one stage."
+    },
     "flavor_text": {},
     "stat_changes": [
         {

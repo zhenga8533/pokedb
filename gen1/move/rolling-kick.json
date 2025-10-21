@@ -2,17 +2,52 @@
     "id": 27,
     "name": "rolling-kick",
     "source_url": "https://pokeapi.co/api/v2/move/27/",
-    "accuracy": 85,
-    "power": 60,
-    "pp": 15,
+    "accuracy": {
+        "red_blue": 85,
+        "yellow": 85,
+        "red_green_japan": 85,
+        "blue_japan": 85
+    },
+    "power": {
+        "red_blue": 60,
+        "yellow": 60,
+        "red_green_japan": 60,
+        "blue_japan": 60
+    },
+    "pp": {
+        "red_blue": 15,
+        "yellow": 15,
+        "red_green_japan": 15,
+        "blue_japan": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "red_blue": "fighting",
+        "yellow": "fighting",
+        "red_green_japan": "fighting",
+        "blue_japan": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "red_blue": 30,
+        "yellow": 30,
+        "red_green_japan": 30,
+        "blue_japan": 30
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "yellow": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "red_green_japan": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "blue_japan": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "red_blue": "Has a 30% chance to make the target flinch.",
+        "yellow": "Has a 30% chance to make the target flinch.",
+        "red_green_japan": "Has a 30% chance to make the target flinch.",
+        "blue_japan": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

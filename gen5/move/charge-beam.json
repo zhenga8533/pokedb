@@ -2,17 +2,38 @@
     "id": 451,
     "name": "charge-beam",
     "source_url": "https://pokeapi.co/api/v2/move/451/",
-    "accuracy": 90,
-    "power": 50,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 90,
+        "black_2_white_2": 90
+    },
+    "power": {
+        "black_white": 50,
+        "black_2_white_2": 50
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "electric",
+    "type": {
+        "black_white": "electric",
+        "black_2_white_2": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 70,
-    "effect": "Inflicts regular damage. Has a 70% chance to raise the user’s Special Attack by one stage.",
-    "short_effect": "Has a 70% chance to raise the user’s Special Attack by one stage.",
+    "effect_chance": {
+        "black_white": 70,
+        "black_2_white_2": 70
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 70% chance to raise the user’s Special Attack by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 70% chance to raise the user’s Special Attack by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 70% chance to raise the user’s Special Attack by one stage.",
+        "black_2_white_2": "Has a 70% chance to raise the user’s Special Attack by one stage."
+    },
     "flavor_text": {
         "black_white": "The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat.",
         "black_2_white_2": "The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat."

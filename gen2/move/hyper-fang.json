@@ -2,17 +2,38 @@
     "id": 158,
     "name": "hyper-fang",
     "source_url": "https://pokeapi.co/api/v2/move/158/",
-    "accuracy": 90,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "gold_silver": 90,
+        "crystal": 90
+    },
+    "power": {
+        "gold_silver": 80,
+        "crystal": 80
+    },
+    "pp": {
+        "gold_silver": 15,
+        "crystal": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "gold_silver": "normal",
+        "crystal": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to make the target flinch.",
-    "short_effect": "Has a 10% chance to make the target flinch.",
+    "effect_chance": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 10% chance to make the target flinch.",
+        "crystal": "Inflicts regular damage. Has a 10% chance to make the target flinch."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 10% chance to make the target flinch.",
+        "crystal": "Has a 10% chance to make the target flinch."
+    },
     "flavor_text": {
         "gold_silver": "An attack that may cause flinching.",
         "crystal": "An attack that may cause flinching."

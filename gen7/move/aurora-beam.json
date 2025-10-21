@@ -2,17 +2,45 @@
     "id": 62,
     "name": "aurora-beam",
     "source_url": "https://pokeapi.co/api/v2/move/62/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 65,
+        "ultra_sun_ultra_moon": 65,
+        "lets_go_pikachu_lets_go_eevee": 65
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ice",
+    "type": {
+        "sun_moon": "ice",
+        "ultra_sun_ultra_moon": "ice",
+        "lets_go_pikachu_lets_go_eevee": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Attack by one stage.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 10% chance to lower the target’s Attack by one stage.",
+        "ultra_sun_ultra_moon": "Has a 10% chance to lower the target’s Attack by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 10% chance to lower the target’s Attack by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The target is hit with a rainbow-colored beam. This may also lower the target’s Attack stat.",
         "ultra_sun_ultra_moon": "The target is hit with a rainbow-colored beam. This may also lower the target’s Attack stat.",

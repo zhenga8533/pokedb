@@ -2,17 +2,38 @@
     "id": 99,
     "name": "rage",
     "source_url": "https://pokeapi.co/api/v2/move/99/",
-    "accuracy": 100,
-    "power": 20,
-    "pp": 20,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": 20,
+        "crystal": 20
+    },
+    "pp": {
+        "gold_silver": 20,
+        "crystal": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "gold_silver": "normal",
+        "crystal": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage.",
-    "short_effect": "If the user is hit after using this move, its Attack rises by one stage.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage.",
+        "crystal": "Inflicts regular damage. Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage."
+    },
+    "short_effect": {
+        "gold_silver": "If the user is hit after using this move, its Attack rises by one stage.",
+        "crystal": "If the user is hit after using this move, its Attack rises by one stage."
+    },
     "flavor_text": {
         "gold_silver": "Raises ATTACK if the user is hit.",
         "crystal": "Raises ATTACK if the user is hit."

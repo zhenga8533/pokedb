@@ -2,17 +2,38 @@
     "id": 500,
     "name": "stored-power",
     "source_url": "https://pokeapi.co/api/v2/move/500/",
-    "accuracy": 100,
-    "power": 20,
-    "pp": 10,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 20,
+        "omega_ruby_alpha_sapphire": 20
+    },
+    "pp": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "x_y": "psychic",
+        "omega_ruby_alpha_sapphire": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power is increased by 100% its original value for every stage any of the user’s stats have been raised. Accuracy, evasion, and lowered stats do not affect this move’s power. For a Pokémon with all five stats modified to +6, this move’s power is 31×.",
-    "short_effect": "Power is higher the more the user’s stats have been raised, to a maximum of 31×.",
+    "effect_chance": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Power is increased by 100% its original value for every stage any of the user’s stats have been raised. Accuracy, evasion, and lowered stats do not affect this move’s power. For a Pokémon with all five stats modified to +6, this move’s power is 31×.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Power is increased by 100% its original value for every stage any of the user’s stats have been raised. Accuracy, evasion, and lowered stats do not affect this move’s power. For a Pokémon with all five stats modified to +6, this move’s power is 31×."
+    },
+    "short_effect": {
+        "x_y": "Power is higher the more the user’s stats have been raised, to a maximum of 31×.",
+        "omega_ruby_alpha_sapphire": "Power is higher the more the user’s stats have been raised, to a maximum of 31×."
+    },
     "flavor_text": {
         "x_y": "The user attacks the target with stored power. The more the user’s stats are raised, the greater the move’s power.",
         "omega_ruby_alpha_sapphire": "The user attacks the target with stored power. The more the user’s stats are raised, the greater the move’s power."

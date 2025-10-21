@@ -2,17 +2,45 @@
     "id": 431,
     "name": "rock-climb",
     "source_url": "https://pokeapi.co/api/v2/move/431/",
-    "accuracy": 85,
-    "power": 90,
-    "pp": 20,
+    "accuracy": {
+        "diamond_pearl": 85,
+        "platinum": 85,
+        "heartgold_soulsilver": 85
+    },
+    "power": {
+        "diamond_pearl": 90,
+        "platinum": 90,
+        "heartgold_soulsilver": 90
+    },
+    "pp": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "diamond_pearl": "normal",
+        "platinum": "normal",
+        "heartgold_soulsilver": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to confuse the target.",
-    "short_effect": "Has a 20% chance to confuse the target.",
+    "effect_chance": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 20% chance to confuse the target.",
+        "platinum": "Inflicts regular damage. Has a 20% chance to confuse the target.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 20% chance to confuse the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 20% chance to confuse the target.",
+        "platinum": "Has a 20% chance to confuse the target.",
+        "heartgold_soulsilver": "Has a 20% chance to confuse the target."
+    },
     "flavor_text": {
         "diamond_pearl": "A charging attack that may also leave the foe confused. It can also be used to scale rocky walls.",
         "platinum": "A charging attack that may also leave the foe confused. It can also be used to scale rocky walls.",

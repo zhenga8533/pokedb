@@ -2,17 +2,45 @@
     "id": 539,
     "name": "night-daze",
     "source_url": "https://pokeapi.co/api/v2/move/539/",
-    "accuracy": 95,
-    "power": 85,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 95,
+        "ultra_sun_ultra_moon": 95,
+        "lets_go_pikachu_lets_go_eevee": 95
+    },
+    "power": {
+        "sun_moon": 85,
+        "ultra_sun_ultra_moon": 85,
+        "lets_go_pikachu_lets_go_eevee": 85
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dark",
+    "type": {
+        "sun_moon": "dark",
+        "ultra_sun_ultra_moon": "dark",
+        "lets_go_pikachu_lets_go_eevee": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 40,
-    "effect": "Inflicts regular damage. Has a 40% chance to lower the target’s accuracy by one stage.",
-    "short_effect": "Has a 40% chance to lower the target’s accuracy by one stage.",
+    "effect_chance": {
+        "sun_moon": 40,
+        "ultra_sun_ultra_moon": 40,
+        "lets_go_pikachu_lets_go_eevee": 40
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 40% chance to lower the target’s accuracy by one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 40% chance to lower the target’s accuracy by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 40% chance to lower the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 40% chance to lower the target’s accuracy by one stage.",
+        "ultra_sun_ultra_moon": "Has a 40% chance to lower the target’s accuracy by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 40% chance to lower the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The user lets loose a pitch-black shock wave at its target. This may also lower the target’s accuracy.",
         "ultra_sun_ultra_moon": "The user lets loose a pitch-black shock wave at its target. This may also lower the target’s accuracy.",

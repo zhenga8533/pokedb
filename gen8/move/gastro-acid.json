@@ -2,17 +2,59 @@
     "id": 380,
     "name": "gastro-acid",
     "source_url": "https://pokeapi.co/api/v2/move/380/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "sword_shield": "poison",
+        "the_isle_of_armor": "poison",
+        "the_crown_tundra": "poison",
+        "brilliant_diamond_and_shining_pearl": "poison",
+        "legends_arceus": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
-    "short_effect": "Nullifies target’s ability until it leaves battle.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
+        "the_isle_of_armor": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
+        "the_crown_tundra": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
+        "brilliant_diamond_and_shining_pearl": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
+        "legends_arceus": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass."
+    },
+    "short_effect": {
+        "sword_shield": "Nullifies target’s ability until it leaves battle.",
+        "the_isle_of_armor": "Nullifies target’s ability until it leaves battle.",
+        "the_crown_tundra": "Nullifies target’s ability until it leaves battle.",
+        "brilliant_diamond_and_shining_pearl": "Nullifies target’s ability until it leaves battle.",
+        "legends_arceus": "Nullifies target’s ability until it leaves battle."
+    },
     "flavor_text": {
         "sword_shield": "The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target’s Ability.",
         "legends_arceus": "The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability."

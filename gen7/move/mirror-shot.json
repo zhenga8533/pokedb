@@ -2,17 +2,45 @@
     "id": 429,
     "name": "mirror-shot",
     "source_url": "https://pokeapi.co/api/v2/move/429/",
-    "accuracy": 85,
-    "power": 65,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 85,
+        "ultra_sun_ultra_moon": 85,
+        "lets_go_pikachu_lets_go_eevee": 85
+    },
+    "power": {
+        "sun_moon": 65,
+        "ultra_sun_ultra_moon": 65,
+        "lets_go_pikachu_lets_go_eevee": 65
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "steel",
+    "type": {
+        "sun_moon": "steel",
+        "ultra_sun_ultra_moon": "steel",
+        "lets_go_pikachu_lets_go_eevee": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to lower the target’s accuracy by one stage.",
-    "short_effect": "Has a 30% chance to lower the target’s accuracy by one stage.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 30% chance to lower the target’s accuracy by one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 30% chance to lower the target’s accuracy by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 30% chance to lower the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 30% chance to lower the target’s accuracy by one stage.",
+        "ultra_sun_ultra_moon": "Has a 30% chance to lower the target’s accuracy by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 30% chance to lower the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The user lets loose a flash of energy at the target from its polished body. This may also lower the target’s accuracy.",
         "ultra_sun_ultra_moon": "The user lets loose a flash of energy at the target from its polished body. This may also lower the target’s accuracy.",

@@ -2,17 +2,38 @@
     "id": 138,
     "name": "dream-eater",
     "source_url": "https://pokeapi.co/api/v2/move/138/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 15,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "pp": {
+        "gold_silver": 15,
+        "crystal": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "gold_silver": "psychic",
+        "crystal": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
-    "short_effect": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "crystal": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user."
+    },
+    "short_effect": {
+        "gold_silver": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+        "crystal": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user."
+    },
     "flavor_text": {
         "gold_silver": "Steals HP from a sleeping victim.",
         "crystal": "Steals HP from a sleeping victim."

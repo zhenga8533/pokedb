@@ -2,17 +2,38 @@
     "id": 342,
     "name": "poison-tail",
     "source_url": "https://pokeapi.co/api/v2/move/342/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 25,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 50,
+        "omega_ruby_alpha_sapphire": 50
+    },
+    "pp": {
+        "x_y": 25,
+        "omega_ruby_alpha_sapphire": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "poison",
+    "type": {
+        "x_y": "poison",
+        "omega_ruby_alpha_sapphire": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
-    "short_effect": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+    "effect_chance": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target."
+    },
+    "short_effect": {
+        "x_y": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+        "omega_ruby_alpha_sapphire": "Has an increased chance for a critical hit and a 10% chance to poison the target."
+    },
     "flavor_text": {
         "x_y": "The user hits the target with its tail. This may also poison the target. Critical hits land more easily.",
         "omega_ruby_alpha_sapphire": "The user hits the target with its tail. This may also poison the target. Critical hits land more easily."

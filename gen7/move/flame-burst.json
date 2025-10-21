@@ -2,17 +2,45 @@
     "id": 481,
     "name": "flame-burst",
     "source_url": "https://pokeapi.co/api/v2/move/481/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 70,
+        "ultra_sun_ultra_moon": 70,
+        "lets_go_pikachu_lets_go_eevee": 70
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fire",
+    "type": {
+        "sun_moon": "fire",
+        "ultra_sun_ultra_moon": "fire",
+        "lets_go_pikachu_lets_go_eevee": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If this move successfully hits the target, any Pokémon adjacent to the target are damaged for 1/16 their max HP.",
-    "short_effect": "Deals splash damage to Pokémon next to the target.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. If this move successfully hits the target, any Pokémon adjacent to the target are damaged for 1/16 their max HP.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. If this move successfully hits the target, any Pokémon adjacent to the target are damaged for 1/16 their max HP.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. If this move successfully hits the target, any Pokémon adjacent to the target are damaged for 1/16 their max HP."
+    },
+    "short_effect": {
+        "sun_moon": "Deals splash damage to Pokémon next to the target.",
+        "ultra_sun_ultra_moon": "Deals splash damage to Pokémon next to the target.",
+        "lets_go_pikachu_lets_go_eevee": "Deals splash damage to Pokémon next to the target."
+    },
     "flavor_text": {
         "sun_moon": "The user attacks the target with a bursting flame. The bursting flame damages Pokémon next to the target as well.",
         "ultra_sun_ultra_moon": "The user attacks the target with a bursting flame. The bursting flame damages Pokémon next to the target as well.",

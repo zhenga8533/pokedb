@@ -2,19 +2,60 @@
     "id": 10013,
     "name": "shadow-half",
     "source_url": "https://pokeapi.co/api/v2/move/10013/",
-    "accuracy": 100,
-    "power": null,
-    "pp": null,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "shadow",
+    "type": {
+        "scarlet_violet": "shadow",
+        "the_teal_mask": "shadow",
+        "the_indigo_disk": "shadow"
+    },
     "target": "entire-field",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Halves HP of all Pokémon on the field. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
-    "short_effect": "Halves HP of all Pokémon on the field. Must recharge",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Halves HP of all Pokémon on the field. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+        "the_teal_mask": "Halves HP of all Pokémon on the field. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+        "the_indigo_disk": "Halves HP of all Pokémon on the field. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn."
+    },
+    "short_effect": {
+        "scarlet_violet": "Halves HP of all Pokémon on the field. Must recharge",
+        "the_teal_mask": "Halves HP of all Pokémon on the field. Must recharge",
+        "the_indigo_disk": "Halves HP of all Pokémon on the field. Must recharge"
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

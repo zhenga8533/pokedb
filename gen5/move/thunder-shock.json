@@ -2,17 +2,38 @@
     "id": 84,
     "name": "thunder-shock",
     "source_url": "https://pokeapi.co/api/v2/move/84/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 30,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 40,
+        "black_2_white_2": 40
+    },
+    "pp": {
+        "black_white": 30,
+        "black_2_white_2": 30
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "electric",
+    "type": {
+        "black_white": "electric",
+        "black_2_white_2": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
-    "short_effect": "Has a 10% chance to paralyze the target.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "black_2_white_2": "Inflicts regular damage. Has a 10% chance to paralyze the target."
+    },
+    "short_effect": {
+        "black_white": "Has a 10% chance to paralyze the target.",
+        "black_2_white_2": "Has a 10% chance to paralyze the target."
+    },
     "flavor_text": {
         "black_white": "A jolt of electricity is hurled at the target to inflict damage. It may also leave the target with paralysis.",
         "black_2_white_2": "A jolt of electricity is hurled at the target to inflict damage. It may also leave the target with paralysis."

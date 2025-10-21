@@ -2,17 +2,59 @@
     "id": 279,
     "name": "revenge",
     "source_url": "https://pokeapi.co/api/v2/move/279/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 10,
+    "accuracy": {
+        "ruby_sapphire": 100,
+        "emerald": 100,
+        "firered_leafgreen": 100,
+        "colosseum": 100,
+        "xd": 100
+    },
+    "power": {
+        "ruby_sapphire": 60,
+        "emerald": 60,
+        "firered_leafgreen": 60,
+        "colosseum": 60,
+        "xd": 60
+    },
+    "pp": {
+        "ruby_sapphire": 10,
+        "emerald": 10,
+        "firered_leafgreen": 10,
+        "colosseum": 10,
+        "xd": 10
+    },
     "priority": -4,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "ruby_sapphire": "fighting",
+        "emerald": "fighting",
+        "firered_leafgreen": "fighting",
+        "colosseum": "fighting",
+        "xd": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the target damaged the user this turn and was the last to do so, this move has double power. pain split does not count as damaging the user.",
-    "short_effect": "Inflicts double damage if the user takes damage before attacking this turn.",
+    "effect_chance": {
+        "ruby_sapphire": null,
+        "emerald": null,
+        "firered_leafgreen": null,
+        "colosseum": null,
+        "xd": null
+    },
+    "effect": {
+        "ruby_sapphire": "Inflicts regular damage. If the target damaged the user this turn and was the last to do so, this move has double power. pain split does not count as damaging the user.",
+        "emerald": "Inflicts regular damage. If the target damaged the user this turn and was the last to do so, this move has double power. pain split does not count as damaging the user.",
+        "firered_leafgreen": "Inflicts regular damage. If the target damaged the user this turn and was the last to do so, this move has double power. pain split does not count as damaging the user.",
+        "colosseum": "Inflicts regular damage. If the target damaged the user this turn and was the last to do so, this move has double power. pain split does not count as damaging the user.",
+        "xd": "Inflicts regular damage. If the target damaged the user this turn and was the last to do so, this move has double power. pain split does not count as damaging the user."
+    },
+    "short_effect": {
+        "ruby_sapphire": "Inflicts double damage if the user takes damage before attacking this turn.",
+        "emerald": "Inflicts double damage if the user takes damage before attacking this turn.",
+        "firered_leafgreen": "Inflicts double damage if the user takes damage before attacking this turn.",
+        "colosseum": "Inflicts double damage if the user takes damage before attacking this turn.",
+        "xd": "Inflicts double damage if the user takes damage before attacking this turn."
+    },
     "flavor_text": {
         "ruby_sapphire": "An attack that gains power if injured by the foe.",
         "emerald": "An attack that gains power if injured by the foe.",

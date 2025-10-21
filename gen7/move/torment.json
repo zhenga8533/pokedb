@@ -2,17 +2,45 @@
     "id": 259,
     "name": "torment",
     "source_url": "https://pokeapi.co/api/v2/move/259/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "dark",
+    "type": {
+        "sun_moon": "dark",
+        "ultra_sun_ultra_moon": "dark",
+        "lets_go_pikachu_lets_go_eevee": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Prevents the target from attempting to use the same move twice in a row. When the target leaves the field, this effect ends. If the target is forced to attempt a repeated move due to choice band, choice scarf, choice specs, disable, encore, taunt, only having PP remaining for one move, or any other effect, the target will use struggle instead. The target is then free to use the forced move next turn, as it didn’t use that move this turn.",
-    "short_effect": "Prevents the target from using the same move twice in a row.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Prevents the target from attempting to use the same move twice in a row. When the target leaves the field, this effect ends. If the target is forced to attempt a repeated move due to choice band, choice scarf, choice specs, disable, encore, taunt, only having PP remaining for one move, or any other effect, the target will use struggle instead. The target is then free to use the forced move next turn, as it didn’t use that move this turn.",
+        "ultra_sun_ultra_moon": "Prevents the target from attempting to use the same move twice in a row. When the target leaves the field, this effect ends. If the target is forced to attempt a repeated move due to choice band, choice scarf, choice specs, disable, encore, taunt, only having PP remaining for one move, or any other effect, the target will use struggle instead. The target is then free to use the forced move next turn, as it didn’t use that move this turn.",
+        "lets_go_pikachu_lets_go_eevee": "Prevents the target from attempting to use the same move twice in a row. When the target leaves the field, this effect ends. If the target is forced to attempt a repeated move due to choice band, choice scarf, choice specs, disable, encore, taunt, only having PP remaining for one move, or any other effect, the target will use struggle instead. The target is then free to use the forced move next turn, as it didn’t use that move this turn."
+    },
+    "short_effect": {
+        "sun_moon": "Prevents the target from using the same move twice in a row.",
+        "ultra_sun_ultra_moon": "Prevents the target from using the same move twice in a row.",
+        "lets_go_pikachu_lets_go_eevee": "Prevents the target from using the same move twice in a row."
+    },
     "flavor_text": {
         "sun_moon": "The user torments and enrages the target, making it incapable of using the same move twice in a row.",
         "ultra_sun_ultra_moon": "The user torments and enrages the target, making it incapable of using the same move twice in a row.",

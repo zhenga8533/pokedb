@@ -2,17 +2,45 @@
     "id": 134,
     "name": "kinesis",
     "source_url": "https://pokeapi.co/api/v2/move/134/",
-    "accuracy": 80,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "diamond_pearl": 80,
+        "platinum": 80,
+        "heartgold_soulsilver": 80
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 15,
+        "platinum": 15,
+        "heartgold_soulsilver": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "psychic",
+    "type": {
+        "diamond_pearl": "psychic",
+        "platinum": "psychic",
+        "heartgold_soulsilver": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Lowers the target’s accuracy by one stage.",
-    "short_effect": "Lowers the target’s accuracy by one stage.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Lowers the target’s accuracy by one stage.",
+        "platinum": "Lowers the target’s accuracy by one stage.",
+        "heartgold_soulsilver": "Lowers the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Lowers the target’s accuracy by one stage.",
+        "platinum": "Lowers the target’s accuracy by one stage.",
+        "heartgold_soulsilver": "Lowers the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "The user distracts the foe by bending a spoon. It may lower the target’s accuracy.",
         "platinum": "The user distracts the foe by bending a spoon. It may lower the target’s accuracy.",

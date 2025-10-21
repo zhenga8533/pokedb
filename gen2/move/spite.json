@@ -2,17 +2,38 @@
     "id": 180,
     "name": "spite",
     "source_url": "https://pokeapi.co/api/v2/move/180/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "pp": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "ghost",
+    "type": {
+        "gold_silver": "ghost",
+        "crystal": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
-    "short_effect": "Lowers the PP of the target’s last used move by 4.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
+        "crystal": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail."
+    },
+    "short_effect": {
+        "gold_silver": "Lowers the PP of the target’s last used move by 4.",
+        "crystal": "Lowers the PP of the target’s last used move by 4."
+    },
     "flavor_text": {
         "gold_silver": "Cuts the PP of the foe's last move.",
         "crystal": "Cuts the PP of the foe's last move."

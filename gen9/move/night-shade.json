@@ -2,17 +2,45 @@
     "id": 101,
     "name": "night-shade",
     "source_url": "https://pokeapi.co/api/v2/move/101/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ghost",
+    "type": {
+        "scarlet_violet": "ghost",
+        "the_teal_mask": "ghost",
+        "the_indigo_disk": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts damage equal to the user’s level. Type immunity applies, but other type effects are ignored.",
-    "short_effect": "Inflicts damage equal to the user’s level.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts damage equal to the user’s level. Type immunity applies, but other type effects are ignored.",
+        "the_teal_mask": "Inflicts damage equal to the user’s level. Type immunity applies, but other type effects are ignored.",
+        "the_indigo_disk": "Inflicts damage equal to the user’s level. Type immunity applies, but other type effects are ignored."
+    },
+    "short_effect": {
+        "scarlet_violet": "Inflicts damage equal to the user’s level.",
+        "the_teal_mask": "Inflicts damage equal to the user’s level.",
+        "the_indigo_disk": "Inflicts damage equal to the user’s level."
+    },
     "flavor_text": {
         "scarlet_violet": "The user makes the target see a frightening mirage. It inflicts damage equal to the user's level."
     },

@@ -2,17 +2,45 @@
     "id": 217,
     "name": "present",
     "source_url": "https://pokeapi.co/api/v2/move/217/",
-    "accuracy": 90,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "sun_moon": "normal",
+        "ultra_sun_ultra_moon": "normal",
+        "lets_go_pikachu_lets_go_eevee": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Randomly uses one of the following effects. Effect | Chance -------------------------------------------------- | -----: Inflicts regular damage with 40 power | 40% Inflicts regular damage with 80 power | 30% Inflicts regular damage with 120 power | 10% Heals the target for 1/4 its max HP | 20% On average, this move inflicts regular damage with 52 power and heals the target for 1/20 its max HP.",
-    "short_effect": "Randomly inflicts damage with power from 40 to 120 or heals the target for 1/4 its max HP.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Randomly uses one of the following effects. Effect | Chance -------------------------------------------------- | -----: Inflicts regular damage with 40 power | 40% Inflicts regular damage with 80 power | 30% Inflicts regular damage with 120 power | 10% Heals the target for 1/4 its max HP | 20% On average, this move inflicts regular damage with 52 power and heals the target for 1/20 its max HP.",
+        "ultra_sun_ultra_moon": "Randomly uses one of the following effects. Effect | Chance -------------------------------------------------- | -----: Inflicts regular damage with 40 power | 40% Inflicts regular damage with 80 power | 30% Inflicts regular damage with 120 power | 10% Heals the target for 1/4 its max HP | 20% On average, this move inflicts regular damage with 52 power and heals the target for 1/20 its max HP.",
+        "lets_go_pikachu_lets_go_eevee": "Randomly uses one of the following effects. Effect | Chance -------------------------------------------------- | -----: Inflicts regular damage with 40 power | 40% Inflicts regular damage with 80 power | 30% Inflicts regular damage with 120 power | 10% Heals the target for 1/4 its max HP | 20% On average, this move inflicts regular damage with 52 power and heals the target for 1/20 its max HP."
+    },
+    "short_effect": {
+        "sun_moon": "Randomly inflicts damage with power from 40 to 120 or heals the target for 1/4 its max HP.",
+        "ultra_sun_ultra_moon": "Randomly inflicts damage with power from 40 to 120 or heals the target for 1/4 its max HP.",
+        "lets_go_pikachu_lets_go_eevee": "Randomly inflicts damage with power from 40 to 120 or heals the target for 1/4 its max HP."
+    },
     "flavor_text": {
         "sun_moon": "The user attacks by giving the target a gift with a hidden trap. It restores HP sometimes, however.",
         "ultra_sun_ultra_moon": "The user attacks by giving the target a gift with a hidden trap. It restores HP sometimes, however.",

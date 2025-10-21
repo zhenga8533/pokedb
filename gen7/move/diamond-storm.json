@@ -2,17 +2,45 @@
     "id": 591,
     "name": "diamond-storm",
     "source_url": "https://pokeapi.co/api/v2/move/591/",
-    "accuracy": 95,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 95,
+        "ultra_sun_ultra_moon": 95,
+        "lets_go_pikachu_lets_go_eevee": 95
+    },
+    "power": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "rock",
+    "type": {
+        "sun_moon": "rock",
+        "ultra_sun_ultra_moon": "rock",
+        "lets_go_pikachu_lets_go_eevee": "rock"
+    },
     "target": "all-opponents",
     "generation": "generation-vi",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
-    "short_effect": "Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
+    "effect_chance": {
+        "sun_moon": 50,
+        "ultra_sun_ultra_moon": 50,
+        "lets_go_pikachu_lets_go_eevee": 50
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 50% chance to raise the user’s Defense by two stages for each target hit."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
+        "ultra_sun_ultra_moon": "Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 50% chance to raise the user’s Defense by two stages for each target hit."
+    },
     "flavor_text": {
         "sun_moon": "The user whips up a storm of diamonds to damage opposing Pokémon. This may also sharply raise the user’s Defense stat.",
         "ultra_sun_ultra_moon": "The user whips up a storm of diamonds to damage opposing Pokémon. This may also sharply raise the user’s Defense stat.",

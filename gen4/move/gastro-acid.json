@@ -2,17 +2,45 @@
     "id": 380,
     "name": "gastro-acid",
     "source_url": "https://pokeapi.co/api/v2/move/380/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "diamond_pearl": "poison",
+        "platinum": "poison",
+        "heartgold_soulsilver": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
-    "short_effect": "Nullifies target’s ability until it leaves battle.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
+        "platinum": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
+        "heartgold_soulsilver": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass."
+    },
+    "short_effect": {
+        "diamond_pearl": "Nullifies target’s ability until it leaves battle.",
+        "platinum": "Nullifies target’s ability until it leaves battle.",
+        "heartgold_soulsilver": "Nullifies target’s ability until it leaves battle."
+    },
     "flavor_text": {
         "diamond_pearl": "The user hurls up its stomach acids on the foe. The fluid eliminates the effect of the foe’s ability.",
         "platinum": "The user hurls up its stomach acids on the foe. The fluid eliminates the effect of the foe’s ability.",

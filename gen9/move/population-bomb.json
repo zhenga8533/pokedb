@@ -2,21 +2,62 @@
     "id": 860,
     "name": "population-bomb",
     "source_url": "https://pokeapi.co/api/v2/move/860/",
-    "accuracy": 90,
-    "power": 20,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "power": {
+        "scarlet_violet": 20,
+        "the_teal_mask": 20,
+        "the_indigo_disk": 20
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "scarlet_violet": "normal",
+        "the_teal_mask": "normal",
+        "the_indigo_disk": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ix",
-    "effect_chance": null,
-    "effect": null,
-    "short_effect": null,
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "short_effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
     "flavor_text": {
         "scarlet_violet": "The user’s fellows gather in droves to perform a combo attack that hits the target one to ten times in a row."
     },
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

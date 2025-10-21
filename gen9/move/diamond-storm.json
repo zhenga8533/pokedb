@@ -2,17 +2,45 @@
     "id": 591,
     "name": "diamond-storm",
     "source_url": "https://pokeapi.co/api/v2/move/591/",
-    "accuracy": 95,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "scarlet_violet": 95,
+        "the_teal_mask": 95,
+        "the_indigo_disk": 95
+    },
+    "power": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "pp": {
+        "scarlet_violet": 5,
+        "the_teal_mask": 5,
+        "the_indigo_disk": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "rock",
+    "type": {
+        "scarlet_violet": "rock",
+        "the_teal_mask": "rock",
+        "the_indigo_disk": "rock"
+    },
     "target": "all-opponents",
     "generation": "generation-vi",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
-    "short_effect": "Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
+    "effect_chance": {
+        "scarlet_violet": 50,
+        "the_teal_mask": 50,
+        "the_indigo_disk": 50
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
+        "the_teal_mask": "Inflicts regular damage. Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 50% chance to raise the user’s Defense by two stages for each target hit."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
+        "the_teal_mask": "Has a 50% chance to raise the user’s Defense by two stages for each target hit.",
+        "the_indigo_disk": "Has a 50% chance to raise the user’s Defense by two stages for each target hit."
+    },
     "flavor_text": {
         "scarlet_violet": "The user whips up a storm of diamonds to damage opposing Pokémon. This may also sharply boost the user's Defense stat."
     },

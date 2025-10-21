@@ -2,17 +2,45 @@
     "id": 612,
     "name": "power-up-punch",
     "source_url": "https://pokeapi.co/api/v2/move/612/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 20,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 40,
+        "the_teal_mask": 40,
+        "the_indigo_disk": 40
+    },
+    "pp": {
+        "scarlet_violet": 20,
+        "the_teal_mask": 20,
+        "the_indigo_disk": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "scarlet_violet": "fighting",
+        "the_teal_mask": "fighting",
+        "the_indigo_disk": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Raises the user’s Attack by one stage.",
-    "short_effect": "Raises the user’s Attack by one stage after inflicting damage.",
+    "effect_chance": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Raises the user’s Attack by one stage.",
+        "the_teal_mask": "Inflicts regular damage. Raises the user’s Attack by one stage.",
+        "the_indigo_disk": "Inflicts regular damage. Raises the user’s Attack by one stage."
+    },
+    "short_effect": {
+        "scarlet_violet": "Raises the user’s Attack by one stage after inflicting damage.",
+        "the_teal_mask": "Raises the user’s Attack by one stage after inflicting damage.",
+        "the_indigo_disk": "Raises the user’s Attack by one stage after inflicting damage."
+    },
     "flavor_text": {},
     "stat_changes": [
         {

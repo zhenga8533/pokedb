@@ -2,19 +2,53 @@
     "id": 10013,
     "name": "shadow-half",
     "source_url": "https://pokeapi.co/api/v2/move/10013/",
-    "accuracy": 100,
-    "power": null,
-    "pp": null,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "shadow",
+    "type": {
+        "black_white": "shadow",
+        "black_2_white_2": "shadow"
+    },
     "target": "entire-field",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Halves HP of all Pokémon on the field. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
-    "short_effect": "Halves HP of all Pokémon on the field. Must recharge",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Halves HP of all Pokémon on the field. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+        "black_2_white_2": "Halves HP of all Pokémon on the field. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn."
+    },
+    "short_effect": {
+        "black_white": "Halves HP of all Pokémon on the field. Must recharge",
+        "black_2_white_2": "Halves HP of all Pokémon on the field. Must recharge"
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

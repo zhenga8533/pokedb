@@ -2,17 +2,52 @@
     "id": 93,
     "name": "confusion",
     "source_url": "https://pokeapi.co/api/v2/move/93/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 25,
+    "accuracy": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "power": {
+        "red_blue": 50,
+        "yellow": 50,
+        "red_green_japan": 50,
+        "blue_japan": 50
+    },
+    "pp": {
+        "red_blue": 25,
+        "yellow": 25,
+        "red_green_japan": 25,
+        "blue_japan": 25
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "red_blue": "psychic",
+        "yellow": "psychic",
+        "red_green_japan": "psychic",
+        "blue_japan": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to confuse the target.",
-    "short_effect": "Has a 10% chance to confuse the target.",
+    "effect_chance": {
+        "red_blue": 10,
+        "yellow": 10,
+        "red_green_japan": 10,
+        "blue_japan": 10
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage. Has a 10% chance to confuse the target.",
+        "yellow": "Inflicts regular damage. Has a 10% chance to confuse the target.",
+        "red_green_japan": "Inflicts regular damage. Has a 10% chance to confuse the target.",
+        "blue_japan": "Inflicts regular damage. Has a 10% chance to confuse the target."
+    },
+    "short_effect": {
+        "red_blue": "Has a 10% chance to confuse the target.",
+        "yellow": "Has a 10% chance to confuse the target.",
+        "red_green_japan": "Has a 10% chance to confuse the target.",
+        "blue_japan": "Has a 10% chance to confuse the target."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

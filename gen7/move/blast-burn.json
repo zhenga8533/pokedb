@@ -2,17 +2,45 @@
     "id": 307,
     "name": "blast-burn",
     "source_url": "https://pokeapi.co/api/v2/move/307/",
-    "accuracy": 90,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "power": {
+        "sun_moon": 150,
+        "ultra_sun_ultra_moon": 150,
+        "lets_go_pikachu_lets_go_eevee": 150
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fire",
+    "type": {
+        "sun_moon": "fire",
+        "ultra_sun_ultra_moon": "fire",
+        "lets_go_pikachu_lets_go_eevee": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
-    "short_effect": "User foregoes its next turn to recharge.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn."
+    },
+    "short_effect": {
+        "sun_moon": "User foregoes its next turn to recharge.",
+        "ultra_sun_ultra_moon": "User foregoes its next turn to recharge.",
+        "lets_go_pikachu_lets_go_eevee": "User foregoes its next turn to recharge."
+    },
     "flavor_text": {
         "sun_moon": "The target is razed by a fiery explosion. The user can’t move on the next turn.",
         "ultra_sun_ultra_moon": "The target is razed by a fiery explosion. The user can’t move on the next turn.",

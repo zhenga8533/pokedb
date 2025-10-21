@@ -2,17 +2,45 @@
     "id": 377,
     "name": "heal-block",
     "source_url": "https://pokeapi.co/api/v2/move/377/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 15,
+        "platinum": 15,
+        "heartgold_soulsilver": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "psychic",
+    "type": {
+        "diamond_pearl": "psychic",
+        "platinum": "psychic",
+        "heartgold_soulsilver": "psychic"
+    },
     "target": "all-opponents",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
-    "short_effect": "Prevents target from restoring its HP for five turns.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
+        "platinum": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
+        "heartgold_soulsilver": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Prevents target from restoring its HP for five turns.",
+        "platinum": "Prevents target from restoring its HP for five turns.",
+        "heartgold_soulsilver": "Prevents target from restoring its HP for five turns."
+    },
     "flavor_text": {
         "diamond_pearl": "The user prevents the foe from using any HP-recovery moves for five turns.",
         "platinum": "The user prevents the foe from using any HP-recovery moves for five turns.",

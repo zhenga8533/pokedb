@@ -2,17 +2,45 @@
     "id": 354,
     "name": "psycho-boost",
     "source_url": "https://pokeapi.co/api/v2/move/354/",
-    "accuracy": 90,
-    "power": 140,
-    "pp": 5,
+    "accuracy": {
+        "diamond_pearl": 90,
+        "platinum": 90,
+        "heartgold_soulsilver": 90
+    },
+    "power": {
+        "diamond_pearl": 140,
+        "platinum": 140,
+        "heartgold_soulsilver": 140
+    },
+    "pp": {
+        "diamond_pearl": 5,
+        "platinum": 5,
+        "heartgold_soulsilver": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "diamond_pearl": "psychic",
+        "platinum": "psychic",
+        "heartgold_soulsilver": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
-    "short_effect": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+    "effect_chance": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
+        "platinum": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
+        "heartgold_soulsilver": "Inflicts regular damage, then lowers the user’s Special Attack by two stages."
+    },
+    "short_effect": {
+        "diamond_pearl": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+        "platinum": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+        "heartgold_soulsilver": "Lowers the user’s Special Attack by two stages after inflicting damage."
+    },
     "flavor_text": {
         "diamond_pearl": "The user attacks the foe at full power. The attack’s recoil sharply reduces the user’s Sp. Atk stat.",
         "platinum": "The user attacks the foe at full power. The attack’s recoil sharply reduces the user’s Sp. Atk stat.",

@@ -2,17 +2,59 @@
     "id": 306,
     "name": "crush-claw",
     "source_url": "https://pokeapi.co/api/v2/move/306/",
-    "accuracy": 95,
-    "power": 75,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": 95,
+        "the_isle_of_armor": 95,
+        "the_crown_tundra": 95,
+        "brilliant_diamond_and_shining_pearl": 95,
+        "legends_arceus": 95
+    },
+    "power": {
+        "sword_shield": 75,
+        "the_isle_of_armor": 75,
+        "the_crown_tundra": 75,
+        "brilliant_diamond_and_shining_pearl": 75,
+        "legends_arceus": 75
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "sword_shield": "normal",
+        "the_isle_of_armor": "normal",
+        "the_crown_tundra": "normal",
+        "brilliant_diamond_and_shining_pearl": "normal",
+        "legends_arceus": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
-    "short_effect": "Has a 50% chance to lower the target’s Defense by one stage.",
+    "effect_chance": {
+        "sword_shield": 50,
+        "the_isle_of_armor": 50,
+        "the_crown_tundra": 50,
+        "brilliant_diamond_and_shining_pearl": 50,
+        "legends_arceus": 50
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
+        "legends_arceus": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 50% chance to lower the target’s Defense by one stage.",
+        "the_isle_of_armor": "Has a 50% chance to lower the target’s Defense by one stage.",
+        "the_crown_tundra": "Has a 50% chance to lower the target’s Defense by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Has a 50% chance to lower the target’s Defense by one stage.",
+        "legends_arceus": "Has a 50% chance to lower the target’s Defense by one stage."
+    },
     "flavor_text": {
         "sword_shield": "The user slashes the target with hard and sharp claws. This may also lower the target’s Defense stat.",
         "legends_arceus": "The user slashes the target with hard and sharp claws. This may also lower the target's Defense stat."

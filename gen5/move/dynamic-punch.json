@@ -2,17 +2,38 @@
     "id": 223,
     "name": "dynamic-punch",
     "source_url": "https://pokeapi.co/api/v2/move/223/",
-    "accuracy": 50,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "black_white": 50,
+        "black_2_white_2": 50
+    },
+    "power": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "pp": {
+        "black_white": 5,
+        "black_2_white_2": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "black_white": "fighting",
+        "black_2_white_2": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to confuse the target.",
-    "short_effect": "Has a 100% chance to confuse the target.",
+    "effect_chance": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 100% chance to confuse the target.",
+        "black_2_white_2": "Inflicts regular damage. Has a 100% chance to confuse the target."
+    },
+    "short_effect": {
+        "black_white": "Has a 100% chance to confuse the target.",
+        "black_2_white_2": "Has a 100% chance to confuse the target."
+    },
     "flavor_text": {
         "black_white": "The user punches the target with full, concentrated power. It confuses the target if it hits.",
         "black_2_white_2": "The user punches the target with full, concentrated power. It confuses the target if it hits."

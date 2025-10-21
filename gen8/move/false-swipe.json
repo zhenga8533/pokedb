@@ -2,17 +2,59 @@
     "id": 206,
     "name": "false-swipe",
     "source_url": "https://pokeapi.co/api/v2/move/206/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 40,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 40,
+        "the_isle_of_armor": 40,
+        "the_crown_tundra": 40,
+        "brilliant_diamond_and_shining_pearl": 40,
+        "legends_arceus": 40
+    },
+    "pp": {
+        "sword_shield": 40,
+        "the_isle_of_armor": 40,
+        "the_crown_tundra": 40,
+        "brilliant_diamond_and_shining_pearl": 40,
+        "legends_arceus": 40
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "sword_shield": "normal",
+        "the_isle_of_armor": "normal",
+        "the_crown_tundra": "normal",
+        "brilliant_diamond_and_shining_pearl": "normal",
+        "legends_arceus": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Will not reduce the target’s HP below 1.",
-    "short_effect": "Cannot lower the target’s HP below 1.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Will not reduce the target’s HP below 1.",
+        "the_isle_of_armor": "Inflicts regular damage. Will not reduce the target’s HP below 1.",
+        "the_crown_tundra": "Inflicts regular damage. Will not reduce the target’s HP below 1.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Will not reduce the target’s HP below 1.",
+        "legends_arceus": "Inflicts regular damage. Will not reduce the target’s HP below 1."
+    },
+    "short_effect": {
+        "sword_shield": "Cannot lower the target’s HP below 1.",
+        "the_isle_of_armor": "Cannot lower the target’s HP below 1.",
+        "the_crown_tundra": "Cannot lower the target’s HP below 1.",
+        "brilliant_diamond_and_shining_pearl": "Cannot lower the target’s HP below 1.",
+        "legends_arceus": "Cannot lower the target’s HP below 1."
+    },
     "flavor_text": {
         "sword_shield": "A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.",
         "legends_arceus": "A restrained attack that prevents the target from fainting. The target is left with at least 1 HP."

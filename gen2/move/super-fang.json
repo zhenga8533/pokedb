@@ -2,17 +2,38 @@
     "id": 162,
     "name": "super-fang",
     "source_url": "https://pokeapi.co/api/v2/move/162/",
-    "accuracy": 90,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "gold_silver": 90,
+        "crystal": 90
+    },
+    "power": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "pp": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "gold_silver": "normal",
+        "crystal": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts typeless damage equal to half the target’s remaining HP.",
-    "short_effect": "Inflicts damage equal to half the target’s HP.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Inflicts typeless damage equal to half the target’s remaining HP.",
+        "crystal": "Inflicts typeless damage equal to half the target’s remaining HP."
+    },
+    "short_effect": {
+        "gold_silver": "Inflicts damage equal to half the target’s HP.",
+        "crystal": "Inflicts damage equal to half the target’s HP."
+    },
     "flavor_text": {
         "gold_silver": "Cuts the foe's HP by 1/2.",
         "crystal": "Cuts the foe's HP by 1/2."

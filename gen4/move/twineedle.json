@@ -2,17 +2,45 @@
     "id": 41,
     "name": "twineedle",
     "source_url": "https://pokeapi.co/api/v2/move/41/",
-    "accuracy": 100,
-    "power": 25,
-    "pp": 20,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 25,
+        "platinum": 25,
+        "heartgold_soulsilver": 25
+    },
+    "pp": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "bug",
+    "type": {
+        "diamond_pearl": "bug",
+        "platinum": "bug",
+        "heartgold_soulsilver": "bug"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Hits twice in the same turn. Has a 20% chance to poison the target.",
-    "short_effect": "Hits twice in the same turn. Has a 20% chance to poison the target.",
+    "effect_chance": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Hits twice in the same turn. Has a 20% chance to poison the target.",
+        "platinum": "Inflicts regular damage. Hits twice in the same turn. Has a 20% chance to poison the target.",
+        "heartgold_soulsilver": "Inflicts regular damage. Hits twice in the same turn. Has a 20% chance to poison the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Hits twice in the same turn. Has a 20% chance to poison the target.",
+        "platinum": "Hits twice in the same turn. Has a 20% chance to poison the target.",
+        "heartgold_soulsilver": "Hits twice in the same turn. Has a 20% chance to poison the target."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is stabbed twice by a pair of stingers. It may also poison the target.",
         "platinum": "The foe is stabbed twice by a pair of stingers. It may also poison the target.",

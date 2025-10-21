@@ -2,17 +2,45 @@
     "id": 359,
     "name": "hammer-arm",
     "source_url": "https://pokeapi.co/api/v2/move/359/",
-    "accuracy": 90,
-    "power": 100,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 90,
+        "platinum": 90,
+        "heartgold_soulsilver": 90
+    },
+    "power": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "diamond_pearl": "fighting",
+        "platinum": "fighting",
+        "heartgold_soulsilver": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Speed by one stage.",
-    "short_effect": "Lowers user’s Speed by one stage.",
+    "effect_chance": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage, then lowers the user’s Speed by one stage.",
+        "platinum": "Inflicts regular damage, then lowers the user’s Speed by one stage.",
+        "heartgold_soulsilver": "Inflicts regular damage, then lowers the user’s Speed by one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Lowers user’s Speed by one stage.",
+        "platinum": "Lowers user’s Speed by one stage.",
+        "heartgold_soulsilver": "Lowers user’s Speed by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "The user swings and hits with its strong and heavy fist. It lowers the user’s Speed, however.",
         "platinum": "The user swings and hits with its strong and heavy fist. It lowers the user’s Speed, however.",

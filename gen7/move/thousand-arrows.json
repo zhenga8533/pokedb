@@ -2,17 +2,45 @@
     "id": 614,
     "name": "thousand-arrows",
     "source_url": "https://pokeapi.co/api/v2/move/614/",
-    "accuracy": 100,
-    "power": 90,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ground",
+    "type": {
+        "sun_moon": "ground",
+        "ultra_sun_ultra_moon": "ground",
+        "lets_go_pikachu_lets_go_eevee": "ground"
+    },
     "target": "all-opponents",
     "generation": "generation-vi",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Grounds the target until it leaves battle. Ignores levitation effects and the immunity of flying-type Pokémon.",
-    "short_effect": "Grounds the target, and hits even Flying-type or levitating Pokémon.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Grounds the target until it leaves battle. Ignores levitation effects and the immunity of flying-type Pokémon.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Grounds the target until it leaves battle. Ignores levitation effects and the immunity of flying-type Pokémon.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Grounds the target until it leaves battle. Ignores levitation effects and the immunity of flying-type Pokémon."
+    },
+    "short_effect": {
+        "sun_moon": "Grounds the target, and hits even Flying-type or levitating Pokémon.",
+        "ultra_sun_ultra_moon": "Grounds the target, and hits even Flying-type or levitating Pokémon.",
+        "lets_go_pikachu_lets_go_eevee": "Grounds the target, and hits even Flying-type or levitating Pokémon."
+    },
     "flavor_text": {
         "sun_moon": "This move also hits opposing Pokémon that are in the air. Those Pokémon are knocked down to the ground.",
         "ultra_sun_ultra_moon": "This move also hits opposing Pokémon that are in the air. Those Pokémon are knocked down to the ground.",

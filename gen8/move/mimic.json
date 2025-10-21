@@ -2,17 +2,59 @@
     "id": 102,
     "name": "mimic",
     "source_url": "https://pokeapi.co/api/v2/move/102/",
-    "accuracy": null,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "power": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "sword_shield": "normal",
+        "the_isle_of_armor": "normal",
+        "the_crown_tundra": "normal",
+        "brilliant_diamond_and_shining_pearl": "normal",
+        "legends_arceus": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "This move is replaced by the target’s last successfully used move, and its PP changes to 5. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if the user already knows the targeted move, this move will fail. This effect vanishes when the user leaves the field. If chatter, metronome, mimic, sketch, or struggle is selected, this move will fail. This move cannot be copied by mirror move, nor selected by assist or metronome, nor forced by encore.",
-    "short_effect": "Copies the target’s last used move.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "This move is replaced by the target’s last successfully used move, and its PP changes to 5. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if the user already knows the targeted move, this move will fail. This effect vanishes when the user leaves the field. If chatter, metronome, mimic, sketch, or struggle is selected, this move will fail. This move cannot be copied by mirror move, nor selected by assist or metronome, nor forced by encore.",
+        "the_isle_of_armor": "This move is replaced by the target’s last successfully used move, and its PP changes to 5. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if the user already knows the targeted move, this move will fail. This effect vanishes when the user leaves the field. If chatter, metronome, mimic, sketch, or struggle is selected, this move will fail. This move cannot be copied by mirror move, nor selected by assist or metronome, nor forced by encore.",
+        "the_crown_tundra": "This move is replaced by the target’s last successfully used move, and its PP changes to 5. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if the user already knows the targeted move, this move will fail. This effect vanishes when the user leaves the field. If chatter, metronome, mimic, sketch, or struggle is selected, this move will fail. This move cannot be copied by mirror move, nor selected by assist or metronome, nor forced by encore.",
+        "brilliant_diamond_and_shining_pearl": "This move is replaced by the target’s last successfully used move, and its PP changes to 5. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if the user already knows the targeted move, this move will fail. This effect vanishes when the user leaves the field. If chatter, metronome, mimic, sketch, or struggle is selected, this move will fail. This move cannot be copied by mirror move, nor selected by assist or metronome, nor forced by encore.",
+        "legends_arceus": "This move is replaced by the target’s last successfully used move, and its PP changes to 5. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if the user already knows the targeted move, this move will fail. This effect vanishes when the user leaves the field. If chatter, metronome, mimic, sketch, or struggle is selected, this move will fail. This move cannot be copied by mirror move, nor selected by assist or metronome, nor forced by encore."
+    },
+    "short_effect": {
+        "sword_shield": "Copies the target’s last used move.",
+        "the_isle_of_armor": "Copies the target’s last used move.",
+        "the_crown_tundra": "Copies the target’s last used move.",
+        "brilliant_diamond_and_shining_pearl": "Copies the target’s last used move.",
+        "legends_arceus": "Copies the target’s last used move."
+    },
     "flavor_text": {
         "sword_shield": "The user copies the target’s last move. The move can be used during battle until the Pokémon is switched out.",
         "legends_arceus": "The user copies the target's last move. The move can be used during battle until the Pokémon is switched out."

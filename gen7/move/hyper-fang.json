@@ -2,17 +2,45 @@
     "id": 158,
     "name": "hyper-fang",
     "source_url": "https://pokeapi.co/api/v2/move/158/",
-    "accuracy": 90,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "power": {
+        "sun_moon": 80,
+        "ultra_sun_ultra_moon": 80,
+        "lets_go_pikachu_lets_go_eevee": 80
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "sun_moon": "normal",
+        "ultra_sun_ultra_moon": "normal",
+        "lets_go_pikachu_lets_go_eevee": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to make the target flinch.",
-    "short_effect": "Has a 10% chance to make the target flinch.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 10% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 10% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 10% chance to make the target flinch."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 10% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Has a 10% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 10% chance to make the target flinch."
+    },
     "flavor_text": {
         "sun_moon": "The user bites hard on the target with its sharp front fangs. This may also make the target flinch.",
         "ultra_sun_ultra_moon": "The user bites hard on the target with its sharp front fangs. This may also make the target flinch.",

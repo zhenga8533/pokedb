@@ -2,17 +2,45 @@
     "id": 103,
     "name": "screech",
     "source_url": "https://pokeapi.co/api/v2/move/103/",
-    "accuracy": 85,
-    "power": null,
-    "pp": 40,
+    "accuracy": {
+        "sun_moon": 85,
+        "ultra_sun_ultra_moon": 85,
+        "lets_go_pikachu_lets_go_eevee": 85
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 40,
+        "ultra_sun_ultra_moon": 40,
+        "lets_go_pikachu_lets_go_eevee": 40
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "sun_moon": "normal",
+        "ultra_sun_ultra_moon": "normal",
+        "lets_go_pikachu_lets_go_eevee": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Lowers the target’s Defense by two stages.",
-    "short_effect": "Lowers the target’s Defense by two stages.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Lowers the target’s Defense by two stages.",
+        "ultra_sun_ultra_moon": "Lowers the target’s Defense by two stages.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s Defense by two stages."
+    },
+    "short_effect": {
+        "sun_moon": "Lowers the target’s Defense by two stages.",
+        "ultra_sun_ultra_moon": "Lowers the target’s Defense by two stages.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s Defense by two stages."
+    },
     "flavor_text": {
         "sun_moon": "An earsplitting screech harshly lowers the target’s Defense stat.",
         "ultra_sun_ultra_moon": "An earsplitting screech harshly lowers the target’s Defense stat.",

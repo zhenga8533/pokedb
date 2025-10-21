@@ -2,17 +2,59 @@
     "id": 32,
     "name": "horn-drill",
     "source_url": "https://pokeapi.co/api/v2/move/32/",
-    "accuracy": 30,
-    "power": null,
-    "pp": 5,
+    "accuracy": {
+        "sword_shield": 30,
+        "the_isle_of_armor": 30,
+        "the_crown_tundra": 30,
+        "brilliant_diamond_and_shining_pearl": 30,
+        "legends_arceus": 30
+    },
+    "power": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "pp": {
+        "sword_shield": 5,
+        "the_isle_of_armor": 5,
+        "the_crown_tundra": 5,
+        "brilliant_diamond_and_shining_pearl": 5,
+        "legends_arceus": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "sword_shield": "normal",
+        "the_isle_of_armor": "normal",
+        "the_crown_tundra": "normal",
+        "brilliant_diamond_and_shining_pearl": "normal",
+        "legends_arceus": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts damage equal to the target’s max HP. Ignores accuracy and evasion modifiers. This move’s accuracy is 30% plus 1% for each level the user is higher than the target. If the user is a lower level than the target, this move will fail. Because this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting. The effects of lock on, mind reader, and no guard still apply, as long as the user is equal or higher level than the target. However, they will not give this move a chance to break through detect or protect.",
-    "short_effect": "Causes a one-hit KO.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Inflicts damage equal to the target’s max HP. Ignores accuracy and evasion modifiers. This move’s accuracy is 30% plus 1% for each level the user is higher than the target. If the user is a lower level than the target, this move will fail. Because this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting. The effects of lock on, mind reader, and no guard still apply, as long as the user is equal or higher level than the target. However, they will not give this move a chance to break through detect or protect.",
+        "the_isle_of_armor": "Inflicts damage equal to the target’s max HP. Ignores accuracy and evasion modifiers. This move’s accuracy is 30% plus 1% for each level the user is higher than the target. If the user is a lower level than the target, this move will fail. Because this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting. The effects of lock on, mind reader, and no guard still apply, as long as the user is equal or higher level than the target. However, they will not give this move a chance to break through detect or protect.",
+        "the_crown_tundra": "Inflicts damage equal to the target’s max HP. Ignores accuracy and evasion modifiers. This move’s accuracy is 30% plus 1% for each level the user is higher than the target. If the user is a lower level than the target, this move will fail. Because this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting. The effects of lock on, mind reader, and no guard still apply, as long as the user is equal or higher level than the target. However, they will not give this move a chance to break through detect or protect.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts damage equal to the target’s max HP. Ignores accuracy and evasion modifiers. This move’s accuracy is 30% plus 1% for each level the user is higher than the target. If the user is a lower level than the target, this move will fail. Because this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting. The effects of lock on, mind reader, and no guard still apply, as long as the user is equal or higher level than the target. However, they will not give this move a chance to break through detect or protect.",
+        "legends_arceus": "Inflicts damage equal to the target’s max HP. Ignores accuracy and evasion modifiers. This move’s accuracy is 30% plus 1% for each level the user is higher than the target. If the user is a lower level than the target, this move will fail. Because this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting. The effects of lock on, mind reader, and no guard still apply, as long as the user is equal or higher level than the target. However, they will not give this move a chance to break through detect or protect."
+    },
+    "short_effect": {
+        "sword_shield": "Causes a one-hit KO.",
+        "the_isle_of_armor": "Causes a one-hit KO.",
+        "the_crown_tundra": "Causes a one-hit KO.",
+        "brilliant_diamond_and_shining_pearl": "Causes a one-hit KO.",
+        "legends_arceus": "Causes a one-hit KO."
+    },
     "flavor_text": {
         "sword_shield": "The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits.",
         "legends_arceus": "The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits."

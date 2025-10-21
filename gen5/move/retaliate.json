@@ -2,17 +2,38 @@
     "id": 514,
     "name": "retaliate",
     "source_url": "https://pokeapi.co/api/v2/move/514/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 5,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 70,
+        "black_2_white_2": 70
+    },
+    "pp": {
+        "black_white": 5,
+        "black_2_white_2": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If a friendly Pokémon fainted on the previous turn, this move has double power.",
-    "short_effect": "Has double power if a friendly Pokémon fainted last turn.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. If a friendly Pokémon fainted on the previous turn, this move has double power.",
+        "black_2_white_2": "Inflicts regular damage. If a friendly Pokémon fainted on the previous turn, this move has double power."
+    },
+    "short_effect": {
+        "black_white": "Has double power if a friendly Pokémon fainted last turn.",
+        "black_2_white_2": "Has double power if a friendly Pokémon fainted last turn."
+    },
     "flavor_text": {
         "black_white": "The user gets revenge for a fainted ally. If an ally fainted in the previous turn, this attack’s damage increases.",
         "black_2_white_2": "The user gets revenge for a fainted ally. If an ally fainted in the previous turn, this attack’s damage increases."

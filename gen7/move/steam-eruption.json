@@ -2,17 +2,45 @@
     "id": 592,
     "name": "steam-eruption",
     "source_url": "https://pokeapi.co/api/v2/move/592/",
-    "accuracy": 95,
-    "power": 110,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 95,
+        "ultra_sun_ultra_moon": 95,
+        "lets_go_pikachu_lets_go_eevee": 95
+    },
+    "power": {
+        "sun_moon": 110,
+        "ultra_sun_ultra_moon": 110,
+        "lets_go_pikachu_lets_go_eevee": 110
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "sun_moon": "water",
+        "ultra_sun_ultra_moon": "water",
+        "lets_go_pikachu_lets_go_eevee": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to burn the target.",
-    "short_effect": "Has a 30% chance to burn the target.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 30% chance to burn the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 30% chance to burn the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 30% chance to burn the target."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 30% chance to burn the target.",
+        "ultra_sun_ultra_moon": "Has a 30% chance to burn the target.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 30% chance to burn the target."
+    },
     "flavor_text": {
         "sun_moon": "The user immerses the target in superheated steam. This may also leave the target with a burn.",
         "ultra_sun_ultra_moon": "The user immerses the target in superheated steam. This may also leave the target with a burn.",

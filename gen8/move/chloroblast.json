@@ -2,21 +2,76 @@
     "id": 835,
     "name": "chloroblast",
     "source_url": "https://pokeapi.co/api/v2/move/835/",
-    "accuracy": 95,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "sword_shield": 95,
+        "the_isle_of_armor": 95,
+        "the_crown_tundra": 95,
+        "brilliant_diamond_and_shining_pearl": 95,
+        "legends_arceus": 95
+    },
+    "power": {
+        "sword_shield": 150,
+        "the_isle_of_armor": 150,
+        "the_crown_tundra": 150,
+        "brilliant_diamond_and_shining_pearl": 150,
+        "legends_arceus": 150
+    },
+    "pp": {
+        "sword_shield": 5,
+        "the_isle_of_armor": 5,
+        "the_crown_tundra": 5,
+        "brilliant_diamond_and_shining_pearl": 5,
+        "legends_arceus": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "grass",
+    "type": {
+        "sword_shield": "grass",
+        "the_isle_of_armor": "grass",
+        "the_crown_tundra": "grass",
+        "brilliant_diamond_and_shining_pearl": "grass",
+        "legends_arceus": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-viii",
-    "effect_chance": null,
-    "effect": null,
-    "short_effect": null,
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "short_effect": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
     "flavor_text": {
         "legends_arceus": "The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user and lowers the user's action speed."
     },
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

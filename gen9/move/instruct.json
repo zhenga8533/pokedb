@@ -2,17 +2,45 @@
     "id": 689,
     "name": "instruct",
     "source_url": "https://pokeapi.co/api/v2/move/689/",
-    "accuracy": null,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "psychic",
+    "type": {
+        "scarlet_violet": "psychic",
+        "the_teal_mask": "psychic",
+        "the_indigo_disk": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "The target immediately uses its most recently-used move. This is independent of the target’s normal action for the turn (i.e., it may end up moving twice), but otherwise functions as usual, including deduction of PP. This effect works for disabled moves and ignores torment.",
-    "short_effect": "Forces the target to repeat its last used move.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "The target immediately uses its most recently-used move. This is independent of the target’s normal action for the turn (i.e., it may end up moving twice), but otherwise functions as usual, including deduction of PP. This effect works for disabled moves and ignores torment.",
+        "the_teal_mask": "The target immediately uses its most recently-used move. This is independent of the target’s normal action for the turn (i.e., it may end up moving twice), but otherwise functions as usual, including deduction of PP. This effect works for disabled moves and ignores torment.",
+        "the_indigo_disk": "The target immediately uses its most recently-used move. This is independent of the target’s normal action for the turn (i.e., it may end up moving twice), but otherwise functions as usual, including deduction of PP. This effect works for disabled moves and ignores torment."
+    },
+    "short_effect": {
+        "scarlet_violet": "Forces the target to repeat its last used move.",
+        "the_teal_mask": "Forces the target to repeat its last used move.",
+        "the_indigo_disk": "Forces the target to repeat its last used move."
+    },
     "flavor_text": {
         "scarlet_violet": "The user instructs the target to reuse the move last used by the target."
     },

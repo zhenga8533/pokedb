@@ -2,17 +2,45 @@
     "id": 407,
     "name": "dragon-rush",
     "source_url": "https://pokeapi.co/api/v2/move/407/",
-    "accuracy": 75,
-    "power": 100,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 75,
+        "ultra_sun_ultra_moon": 75,
+        "lets_go_pikachu_lets_go_eevee": 75
+    },
+    "power": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dragon",
+    "type": {
+        "sun_moon": "dragon",
+        "ultra_sun_ultra_moon": "dragon",
+        "lets_go_pikachu_lets_go_eevee": "dragon"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
-    "short_effect": "Has a 20% chance to make the target flinch.",
+    "effect_chance": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 20% chance to make the target flinch."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 20% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Has a 20% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 20% chance to make the target flinch."
+    },
     "flavor_text": {
         "sun_moon": "The user tackles the target while exhibiting overwhelming menace. This may also make the target flinch.",
         "ultra_sun_ultra_moon": "The user tackles the target while exhibiting overwhelming menace. This may also make the target flinch.",

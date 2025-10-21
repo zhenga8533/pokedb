@@ -2,17 +2,45 @@
     "id": 555,
     "name": "snarl",
     "source_url": "https://pokeapi.co/api/v2/move/555/",
-    "accuracy": 95,
-    "power": 55,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 95,
+        "the_teal_mask": 95,
+        "the_indigo_disk": 95
+    },
+    "power": {
+        "scarlet_violet": 55,
+        "the_teal_mask": 55,
+        "the_indigo_disk": 55
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dark",
+    "type": {
+        "scarlet_violet": "dark",
+        "the_teal_mask": "dark",
+        "the_indigo_disk": "dark"
+    },
     "target": "all-opponents",
     "generation": "generation-v",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+    "effect_chance": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_teal_mask": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 100% chance to lower the target’s Special Attack by one stage."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_teal_mask": "Has a 100% chance to lower the target’s Special Attack by one stage.",
+        "the_indigo_disk": "Has a 100% chance to lower the target’s Special Attack by one stage."
+    },
     "flavor_text": {
         "scarlet_violet": "The user yells as if it's ranting about something, which lowers the Sp. Atk stats of opposing Pokémon."
     },

@@ -2,17 +2,45 @@
     "id": 29,
     "name": "headbutt",
     "source_url": "https://pokeapi.co/api/v2/move/29/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 15,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 70,
+        "platinum": 70,
+        "heartgold_soulsilver": 70
+    },
+    "pp": {
+        "diamond_pearl": 15,
+        "platinum": 15,
+        "heartgold_soulsilver": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "diamond_pearl": "normal",
+        "platinum": "normal",
+        "heartgold_soulsilver": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "diamond_pearl": 30,
+        "platinum": 30,
+        "heartgold_soulsilver": 30
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "platinum": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 30% chance to make the target flinch.",
+        "platinum": "Has a 30% chance to make the target flinch.",
+        "heartgold_soulsilver": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {
         "diamond_pearl": "The user sticks its head out and rams straight forward. It may make the foe flinch.",
         "platinum": "The user sticks its head out and rams straight forward. It may make the foe flinch.",

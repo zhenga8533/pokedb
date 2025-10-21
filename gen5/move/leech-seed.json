@@ -2,17 +2,38 @@
     "id": 73,
     "name": "leech-seed",
     "source_url": "https://pokeapi.co/api/v2/move/73/",
-    "accuracy": 90,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 90,
+        "black_2_white_2": 90
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "grass",
+    "type": {
+        "black_white": "grass",
+        "black_2_white_2": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
-    "short_effect": "Seeds the target, stealing HP from it every turn.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
+        "black_2_white_2": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass."
+    },
+    "short_effect": {
+        "black_white": "Seeds the target, stealing HP from it every turn.",
+        "black_2_white_2": "Seeds the target, stealing HP from it every turn."
+    },
     "flavor_text": {
         "black_white": "A seed is planted on the target. It steals some HP from the target every turn.",
         "black_2_white_2": "A seed is planted on the target. It steals some HP from the target every turn."

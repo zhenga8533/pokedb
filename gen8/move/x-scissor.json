@@ -2,17 +2,59 @@
     "id": 404,
     "name": "x-scissor",
     "source_url": "https://pokeapi.co/api/v2/move/404/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 80,
+        "the_isle_of_armor": 80,
+        "the_crown_tundra": 80,
+        "brilliant_diamond_and_shining_pearl": 80,
+        "legends_arceus": 80
+    },
+    "pp": {
+        "sword_shield": 15,
+        "the_isle_of_armor": 15,
+        "the_crown_tundra": 15,
+        "brilliant_diamond_and_shining_pearl": 15,
+        "legends_arceus": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "bug",
+    "type": {
+        "sword_shield": "bug",
+        "the_isle_of_armor": "bug",
+        "the_crown_tundra": "bug",
+        "brilliant_diamond_and_shining_pearl": "bug",
+        "legends_arceus": "bug"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage.",
-    "short_effect": "Inflicts regular damage with no additional effect.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage.",
+        "the_isle_of_armor": "Inflicts regular damage.",
+        "the_crown_tundra": "Inflicts regular damage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage.",
+        "legends_arceus": "Inflicts regular damage."
+    },
+    "short_effect": {
+        "sword_shield": "Inflicts regular damage with no additional effect.",
+        "the_isle_of_armor": "Inflicts regular damage with no additional effect.",
+        "the_crown_tundra": "Inflicts regular damage with no additional effect.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage with no additional effect.",
+        "legends_arceus": "Inflicts regular damage with no additional effect."
+    },
     "flavor_text": {
         "sword_shield": "The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors.",
         "legends_arceus": "The user strikes at the target by crossing its scythes or claws as if they were a pair of scissors. This move has a heightened chance of landing a critical hit."

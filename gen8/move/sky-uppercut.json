@@ -2,17 +2,59 @@
     "id": 327,
     "name": "sky-uppercut",
     "source_url": "https://pokeapi.co/api/v2/move/327/",
-    "accuracy": 90,
-    "power": 85,
-    "pp": 15,
+    "accuracy": {
+        "sword_shield": 90,
+        "the_isle_of_armor": 90,
+        "the_crown_tundra": 90,
+        "brilliant_diamond_and_shining_pearl": 90,
+        "legends_arceus": 90
+    },
+    "power": {
+        "sword_shield": 85,
+        "the_isle_of_armor": 85,
+        "the_crown_tundra": 85,
+        "brilliant_diamond_and_shining_pearl": 85,
+        "legends_arceus": 85
+    },
+    "pp": {
+        "sword_shield": 15,
+        "the_isle_of_armor": 15,
+        "the_crown_tundra": 15,
+        "brilliant_diamond_and_shining_pearl": 15,
+        "legends_arceus": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "sword_shield": "fighting",
+        "the_isle_of_armor": "fighting",
+        "the_crown_tundra": "fighting",
+        "brilliant_diamond_and_shining_pearl": "fighting",
+        "legends_arceus": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. This move can hit Pokémon under the effect of bounce, fly, or sky drop.",
-    "short_effect": "Inflicts regular damage and can hit Bounce and Fly users.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. This move can hit Pokémon under the effect of bounce, fly, or sky drop.",
+        "the_isle_of_armor": "Inflicts regular damage. This move can hit Pokémon under the effect of bounce, fly, or sky drop.",
+        "the_crown_tundra": "Inflicts regular damage. This move can hit Pokémon under the effect of bounce, fly, or sky drop.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. This move can hit Pokémon under the effect of bounce, fly, or sky drop.",
+        "legends_arceus": "Inflicts regular damage. This move can hit Pokémon under the effect of bounce, fly, or sky drop."
+    },
+    "short_effect": {
+        "sword_shield": "Inflicts regular damage and can hit Bounce and Fly users.",
+        "the_isle_of_armor": "Inflicts regular damage and can hit Bounce and Fly users.",
+        "the_crown_tundra": "Inflicts regular damage and can hit Bounce and Fly users.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage and can hit Bounce and Fly users.",
+        "legends_arceus": "Inflicts regular damage and can hit Bounce and Fly users."
+    },
     "flavor_text": {
         "sword_shield": "This move can’t be used. It’s recommended that this move is forgotten. Once forgotten, this move can’t be remembered."
     },

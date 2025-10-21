@@ -2,17 +2,45 @@
     "id": 221,
     "name": "sacred-fire",
     "source_url": "https://pokeapi.co/api/v2/move/221/",
-    "accuracy": 95,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 95,
+        "ultra_sun_ultra_moon": 95,
+        "lets_go_pikachu_lets_go_eevee": 95
+    },
+    "power": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "sun_moon": "fire",
+        "ultra_sun_ultra_moon": "fire",
+        "lets_go_pikachu_lets_go_eevee": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
-    "short_effect": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+    "effect_chance": {
+        "sun_moon": 50,
+        "ultra_sun_ultra_moon": 50,
+        "lets_go_pikachu_lets_go_eevee": 50
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "ultra_sun_ultra_moon": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves."
+    },
     "flavor_text": {
         "sun_moon": "The target is razed with a mystical fire of great intensity. This may also leave the target with a burn.",
         "ultra_sun_ultra_moon": "The target is razed with a mystical fire of great intensity. This may also leave the target with a burn.",

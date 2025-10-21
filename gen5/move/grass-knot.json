@@ -2,17 +2,38 @@
     "id": 447,
     "name": "grass-knot",
     "source_url": "https://pokeapi.co/api/v2/move/447/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 20,
+        "black_2_white_2": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "grass",
+    "type": {
+        "black_white": "grass",
+        "black_2_white_2": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power increases with the target’s weight in kilograms, to a maximum of 120. Target’s weight | Power --------------- | ----: Up to 10kg | 20 Up to 25kg | 40 Up to 50kg | 60 Up to 100kg | 80 Up to 200kg | 100 Above 200kg | 120",
-    "short_effect": "Inflicts more damage to heavier targets, with a maximum of 120 power.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Power increases with the target’s weight in kilograms, to a maximum of 120. Target’s weight | Power --------------- | ----: Up to 10kg | 20 Up to 25kg | 40 Up to 50kg | 60 Up to 100kg | 80 Up to 200kg | 100 Above 200kg | 120",
+        "black_2_white_2": "Inflicts regular damage. Power increases with the target’s weight in kilograms, to a maximum of 120. Target’s weight | Power --------------- | ----: Up to 10kg | 20 Up to 25kg | 40 Up to 50kg | 60 Up to 100kg | 80 Up to 200kg | 100 Above 200kg | 120"
+    },
+    "short_effect": {
+        "black_white": "Inflicts more damage to heavier targets, with a maximum of 120 power.",
+        "black_2_white_2": "Inflicts more damage to heavier targets, with a maximum of 120 power."
+    },
     "flavor_text": {
         "black_white": "The user snares the target with grass and trips it. The heavier the target, the greater the damage.",
         "black_2_white_2": "The user snares the target with grass and trips it. The heavier the target, the greater the damage."

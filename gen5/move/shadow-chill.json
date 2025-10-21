@@ -2,19 +2,53 @@
     "id": 10006,
     "name": "shadow-chill",
     "source_url": "https://pokeapi.co/api/v2/move/10006/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": null,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 75,
+        "black_2_white_2": 75
+    },
+    "pp": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "shadow",
+    "type": {
+        "black_white": "shadow",
+        "black_2_white_2": "shadow"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to freeze the target.",
-    "short_effect": "Has a 10% chance to freeze the target.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 10% chance to freeze the target.",
+        "black_2_white_2": "Inflicts regular damage. Has a 10% chance to freeze the target."
+    },
+    "short_effect": {
+        "black_white": "Has a 10% chance to freeze the target.",
+        "black_2_white_2": "Has a 10% chance to freeze the target."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

@@ -2,17 +2,59 @@
     "id": 51,
     "name": "acid",
     "source_url": "https://pokeapi.co/api/v2/move/51/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 30,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 40,
+        "the_isle_of_armor": 40,
+        "the_crown_tundra": 40,
+        "brilliant_diamond_and_shining_pearl": 40,
+        "legends_arceus": 40
+    },
+    "pp": {
+        "sword_shield": 30,
+        "the_isle_of_armor": 30,
+        "the_crown_tundra": 30,
+        "brilliant_diamond_and_shining_pearl": 30,
+        "legends_arceus": 30
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "poison",
+    "type": {
+        "sword_shield": "poison",
+        "the_isle_of_armor": "poison",
+        "the_crown_tundra": "poison",
+        "brilliant_diamond_and_shining_pearl": "poison",
+        "legends_arceus": "poison"
+    },
     "target": "all-opponents",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+    "effect_chance": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "legends_arceus": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_isle_of_armor": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_crown_tundra": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "legends_arceus": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
     "flavor_text": {
         "sword_shield": "Opposing Pokémon are attacked with a spray of harsh acid. This may also lower their Sp. Def stats.",
         "legends_arceus": "Opposing Pokémon are attacked with a spray of harsh acid. This may also lower their Sp. Def stats."

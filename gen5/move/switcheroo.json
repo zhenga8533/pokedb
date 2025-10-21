@@ -2,17 +2,38 @@
     "id": 415,
     "name": "switcheroo",
     "source_url": "https://pokeapi.co/api/v2/move/415/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "dark",
+    "type": {
+        "black_white": "dark",
+        "black_2_white_2": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "User and target permanently swap held items. Works even if one of the Pokémon isn’t holding anything. If either Pokémon is holding mail, this move will fail. If either Pokémon has multitype or sticky hold, this move will fail. If this move results in a Pokémon obtaining choice band, choice scarf, or choice specs, and that Pokémon was the latter of the pair to move this turn, then the move it used this turn becomes its chosen forced move. This applies even if both Pokémon had a choice item before this move was used. If the first of the two Pokémon gains a choice item, it may select whatever choice move it wishes next turn. Neither the user nor the target can recover its item with recycle. This move cannot be selected by assist or metronome.",
-    "short_effect": "User and target swap items.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "User and target permanently swap held items. Works even if one of the Pokémon isn’t holding anything. If either Pokémon is holding mail, this move will fail. If either Pokémon has multitype or sticky hold, this move will fail. If this move results in a Pokémon obtaining choice band, choice scarf, or choice specs, and that Pokémon was the latter of the pair to move this turn, then the move it used this turn becomes its chosen forced move. This applies even if both Pokémon had a choice item before this move was used. If the first of the two Pokémon gains a choice item, it may select whatever choice move it wishes next turn. Neither the user nor the target can recover its item with recycle. This move cannot be selected by assist or metronome.",
+        "black_2_white_2": "User and target permanently swap held items. Works even if one of the Pokémon isn’t holding anything. If either Pokémon is holding mail, this move will fail. If either Pokémon has multitype or sticky hold, this move will fail. If this move results in a Pokémon obtaining choice band, choice scarf, or choice specs, and that Pokémon was the latter of the pair to move this turn, then the move it used this turn becomes its chosen forced move. This applies even if both Pokémon had a choice item before this move was used. If the first of the two Pokémon gains a choice item, it may select whatever choice move it wishes next turn. Neither the user nor the target can recover its item with recycle. This move cannot be selected by assist or metronome."
+    },
+    "short_effect": {
+        "black_white": "User and target swap items.",
+        "black_2_white_2": "User and target swap items."
+    },
     "flavor_text": {
         "black_white": "The user trades held items with the target faster than the eye can follow.",
         "black_2_white_2": "The user trades held items with the target faster than the eye can follow."

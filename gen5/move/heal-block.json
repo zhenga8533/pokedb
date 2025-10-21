@@ -2,17 +2,38 @@
     "id": 377,
     "name": "heal-block",
     "source_url": "https://pokeapi.co/api/v2/move/377/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "psychic",
+    "type": {
+        "black_white": "psychic",
+        "black_2_white_2": "psychic"
+    },
     "target": "all-opponents",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
-    "short_effect": "Prevents target from restoring its HP for five turns.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
+        "black_2_white_2": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target."
+    },
+    "short_effect": {
+        "black_white": "Prevents target from restoring its HP for five turns.",
+        "black_2_white_2": "Prevents target from restoring its HP for five turns."
+    },
     "flavor_text": {
         "black_white": "For five turns, the user prevents the opposing team from using any moves, Abilities, or held items that recover HP.",
         "black_2_white_2": "For five turns, the user prevents the opposing team from using any moves, Abilities, or held items that recover HP."

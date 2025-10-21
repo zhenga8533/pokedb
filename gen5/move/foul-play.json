@@ -2,17 +2,38 @@
     "id": 492,
     "name": "foul-play",
     "source_url": "https://pokeapi.co/api/v2/move/492/",
-    "accuracy": 100,
-    "power": 95,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 95,
+        "black_2_white_2": 95
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dark",
+    "type": {
+        "black_white": "dark",
+        "black_2_white_2": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Damage is calculated using the target’s attacking stat rather than the user’s.",
-    "short_effect": "Calculates damage with the target’s attacking stat.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Damage is calculated using the target’s attacking stat rather than the user’s.",
+        "black_2_white_2": "Inflicts regular damage. Damage is calculated using the target’s attacking stat rather than the user’s."
+    },
+    "short_effect": {
+        "black_white": "Calculates damage with the target’s attacking stat.",
+        "black_2_white_2": "Calculates damage with the target’s attacking stat."
+    },
     "flavor_text": {
         "black_white": "The user turns the target’s power against it. The higher the target’s Attack stat, the greater the damage.",
         "black_2_white_2": "The user turns the target’s power against it. The higher the target’s Attack stat, the greater the damage."

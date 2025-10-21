@@ -2,17 +2,38 @@
     "id": 221,
     "name": "sacred-fire",
     "source_url": "https://pokeapi.co/api/v2/move/221/",
-    "accuracy": 95,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "gold_silver": 95,
+        "crystal": 95
+    },
+    "power": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "pp": {
+        "gold_silver": 5,
+        "crystal": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "gold_silver": "fire",
+        "crystal": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
-    "short_effect": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+    "effect_chance": {
+        "gold_silver": 50,
+        "crystal": 50
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "crystal": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "crystal": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves."
+    },
     "flavor_text": {
         "gold_silver": "An attack that may inflict a burn.",
         "crystal": "An attack that may inflict a burn."

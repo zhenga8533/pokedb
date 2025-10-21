@@ -2,17 +2,45 @@
     "id": 423,
     "name": "ice-fang",
     "source_url": "https://pokeapi.co/api/v2/move/423/",
-    "accuracy": 95,
-    "power": 65,
-    "pp": 15,
+    "accuracy": {
+        "diamond_pearl": 95,
+        "platinum": 95,
+        "heartgold_soulsilver": 95
+    },
+    "power": {
+        "diamond_pearl": 65,
+        "platinum": 65,
+        "heartgold_soulsilver": 65
+    },
+    "pp": {
+        "diamond_pearl": 15,
+        "platinum": 15,
+        "heartgold_soulsilver": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ice",
+    "type": {
+        "diamond_pearl": "ice",
+        "platinum": "ice",
+        "heartgold_soulsilver": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to freeze the target and a separate 10% chance to make the target flinch.",
-    "short_effect": "Has a 10% chance to freeze the target and a 10% chance to make the target flinch.",
+    "effect_chance": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 10% chance to freeze the target and a separate 10% chance to make the target flinch.",
+        "platinum": "Inflicts regular damage. Has a 10% chance to freeze the target and a separate 10% chance to make the target flinch.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 10% chance to freeze the target and a separate 10% chance to make the target flinch."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 10% chance to freeze the target and a 10% chance to make the target flinch.",
+        "platinum": "Has a 10% chance to freeze the target and a 10% chance to make the target flinch.",
+        "heartgold_soulsilver": "Has a 10% chance to freeze the target and a 10% chance to make the target flinch."
+    },
     "flavor_text": {
         "diamond_pearl": "The user bites with cold-infused fangs. It may also make the foe flinch or freeze.",
         "platinum": "The user bites with cold-infused fangs. It may also make the foe flinch or freeze.",

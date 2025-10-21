@@ -2,17 +2,38 @@
     "id": 302,
     "name": "needle-arm",
     "source_url": "https://pokeapi.co/api/v2/move/302/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 60,
+        "black_2_white_2": 60
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "grass",
+    "type": {
+        "black_white": "grass",
+        "black_2_white_2": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "black_white": 30,
+        "black_2_white_2": 30
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "black_2_white_2": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "black_white": "Has a 30% chance to make the target flinch.",
+        "black_2_white_2": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {
         "black_white": "The user attacks by wildly swinging its thorny arms. It may also make the target flinch.",
         "black_2_white_2": "The user attacks by wildly swinging its thorny arms. It may also make the target flinch."

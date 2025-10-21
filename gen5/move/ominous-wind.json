@@ -2,17 +2,38 @@
     "id": 466,
     "name": "ominous-wind",
     "source_url": "https://pokeapi.co/api/v2/move/466/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 5,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 60,
+        "black_2_white_2": 60
+    },
+    "pp": {
+        "black_white": 5,
+        "black_2_white_2": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ghost",
+    "type": {
+        "black_white": "ghost",
+        "black_2_white_2": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
-    "short_effect": "Has a 10% chance to raise all of the user’s stats by one stage.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 10% chance to raise all of the user’s stats by one stage.",
+        "black_2_white_2": "Has a 10% chance to raise all of the user’s stats by one stage."
+    },
     "flavor_text": {
         "black_white": "The user blasts the target with a gust of repulsive wind. It may also raise all the user’s stats at once.",
         "black_2_white_2": "The user blasts the target with a gust of repulsive wind. It may also raise all the user’s stats at once."

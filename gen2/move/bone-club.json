@@ -2,17 +2,38 @@
     "id": 125,
     "name": "bone-club",
     "source_url": "https://pokeapi.co/api/v2/move/125/",
-    "accuracy": 85,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "gold_silver": 85,
+        "crystal": 85
+    },
+    "power": {
+        "gold_silver": 65,
+        "crystal": 65
+    },
+    "pp": {
+        "gold_silver": 20,
+        "crystal": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ground",
+    "type": {
+        "gold_silver": "ground",
+        "crystal": "ground"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to make the target flinch.",
-    "short_effect": "Has a 10% chance to make the target flinch.",
+    "effect_chance": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 10% chance to make the target flinch.",
+        "crystal": "Inflicts regular damage. Has a 10% chance to make the target flinch."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 10% chance to make the target flinch.",
+        "crystal": "Has a 10% chance to make the target flinch."
+    },
     "flavor_text": {
         "gold_silver": "An attack that may cause flinching.",
         "crystal": "An attack that may cause flinching."

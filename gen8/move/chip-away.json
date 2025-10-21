@@ -2,17 +2,59 @@
     "id": 498,
     "name": "chip-away",
     "source_url": "https://pokeapi.co/api/v2/move/498/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 20,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 70,
+        "the_isle_of_armor": 70,
+        "the_crown_tundra": 70,
+        "brilliant_diamond_and_shining_pearl": 70,
+        "legends_arceus": 70
+    },
+    "pp": {
+        "sword_shield": 20,
+        "the_isle_of_armor": 20,
+        "the_crown_tundra": 20,
+        "brilliant_diamond_and_shining_pearl": 20,
+        "legends_arceus": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "sword_shield": "normal",
+        "the_isle_of_armor": "normal",
+        "the_crown_tundra": "normal",
+        "brilliant_diamond_and_shining_pearl": "normal",
+        "legends_arceus": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Damage calculation ignores the target’s stat modifiers, including evasion.",
-    "short_effect": "Ignores the target’s stat modifiers.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Damage calculation ignores the target’s stat modifiers, including evasion.",
+        "the_isle_of_armor": "Inflicts regular damage. Damage calculation ignores the target’s stat modifiers, including evasion.",
+        "the_crown_tundra": "Inflicts regular damage. Damage calculation ignores the target’s stat modifiers, including evasion.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Damage calculation ignores the target’s stat modifiers, including evasion.",
+        "legends_arceus": "Inflicts regular damage. Damage calculation ignores the target’s stat modifiers, including evasion."
+    },
+    "short_effect": {
+        "sword_shield": "Ignores the target’s stat modifiers.",
+        "the_isle_of_armor": "Ignores the target’s stat modifiers.",
+        "the_crown_tundra": "Ignores the target’s stat modifiers.",
+        "brilliant_diamond_and_shining_pearl": "Ignores the target’s stat modifiers.",
+        "legends_arceus": "Ignores the target’s stat modifiers."
+    },
     "flavor_text": {
         "sword_shield": "This move can’t be used. It’s recommended that this move is forgotten. Once forgotten, this move can’t be remembered."
     },

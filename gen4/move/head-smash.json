@@ -2,17 +2,45 @@
     "id": 457,
     "name": "head-smash",
     "source_url": "https://pokeapi.co/api/v2/move/457/",
-    "accuracy": 80,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "diamond_pearl": 80,
+        "platinum": 80,
+        "heartgold_soulsilver": 80
+    },
+    "power": {
+        "diamond_pearl": 150,
+        "platinum": 150,
+        "heartgold_soulsilver": 150
+    },
+    "pp": {
+        "diamond_pearl": 5,
+        "platinum": 5,
+        "heartgold_soulsilver": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "rock",
+    "type": {
+        "diamond_pearl": "rock",
+        "platinum": "rock",
+        "heartgold_soulsilver": "rock"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil.",
-    "short_effect": "User receives 1/2 the damage inflicted in recoil.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil.",
+        "platinum": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil.",
+        "heartgold_soulsilver": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil."
+    },
+    "short_effect": {
+        "diamond_pearl": "User receives 1/2 the damage inflicted in recoil.",
+        "platinum": "User receives 1/2 the damage inflicted in recoil.",
+        "heartgold_soulsilver": "User receives 1/2 the damage inflicted in recoil."
+    },
     "flavor_text": {
         "diamond_pearl": "The user delivers a life-endangering head butt at full power. The user also takes terrible damage.",
         "platinum": "The user delivers a life-endangering head butt at full power. The user also takes terrible damage.",

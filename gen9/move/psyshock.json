@@ -2,17 +2,45 @@
     "id": 473,
     "name": "psyshock",
     "source_url": "https://pokeapi.co/api/v2/move/473/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 80,
+        "the_teal_mask": 80,
+        "the_indigo_disk": 80
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "scarlet_violet": "psychic",
+        "the_teal_mask": "psychic",
+        "the_indigo_disk": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Damage calculation always uses the target’s Defense, regardless of this move’s damage class.",
-    "short_effect": "Inflicts damage based on the target’s Defense, not Special Defense.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Damage calculation always uses the target’s Defense, regardless of this move’s damage class.",
+        "the_teal_mask": "Inflicts regular damage. Damage calculation always uses the target’s Defense, regardless of this move’s damage class.",
+        "the_indigo_disk": "Inflicts regular damage. Damage calculation always uses the target’s Defense, regardless of this move’s damage class."
+    },
+    "short_effect": {
+        "scarlet_violet": "Inflicts damage based on the target’s Defense, not Special Defense.",
+        "the_teal_mask": "Inflicts damage based on the target’s Defense, not Special Defense.",
+        "the_indigo_disk": "Inflicts damage based on the target’s Defense, not Special Defense."
+    },
     "flavor_text": {
         "scarlet_violet": "The user materializes an odd psychic wave to attack the target. This move deals physical damage."
     },

@@ -2,17 +2,45 @@
     "id": 299,
     "name": "blaze-kick",
     "source_url": "https://pokeapi.co/api/v2/move/299/",
-    "accuracy": 90,
-    "power": 85,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 90,
+        "platinum": 90,
+        "heartgold_soulsilver": 90
+    },
+    "power": {
+        "diamond_pearl": 85,
+        "platinum": 85,
+        "heartgold_soulsilver": 85
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "diamond_pearl": "fire",
+        "platinum": "fire",
+        "heartgold_soulsilver": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
-    "short_effect": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+    "effect_chance": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
+        "platinum": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
+        "heartgold_soulsilver": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+        "platinum": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+        "heartgold_soulsilver": "Has an increased chance for a critical hit and a 10% chance to burn the target."
+    },
     "flavor_text": {
         "diamond_pearl": "The user launches a kick with a high critical-hit ratio. It may also leave the target with a burn.",
         "platinum": "The user launches a kick with a high critical-hit ratio. It may also leave the target with a burn.",

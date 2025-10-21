@@ -2,17 +2,45 @@
     "id": 398,
     "name": "poison-jab",
     "source_url": "https://pokeapi.co/api/v2/move/398/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 80,
+        "ultra_sun_ultra_moon": 80,
+        "lets_go_pikachu_lets_go_eevee": 80
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "poison",
+    "type": {
+        "sun_moon": "poison",
+        "ultra_sun_ultra_moon": "poison",
+        "lets_go_pikachu_lets_go_eevee": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to poison the target.",
-    "short_effect": "Has a 30% chance to poison the target.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 30% chance to poison the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 30% chance to poison the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 30% chance to poison the target."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 30% chance to poison the target.",
+        "ultra_sun_ultra_moon": "Has a 30% chance to poison the target.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 30% chance to poison the target."
+    },
     "flavor_text": {
         "sun_moon": "The target is stabbed with a tentacle or arm steeped in poison. This may also poison the target.",
         "ultra_sun_ultra_moon": "The target is stabbed with a tentacle or arm steeped in poison. This may also poison the target.",

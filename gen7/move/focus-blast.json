@@ -2,17 +2,45 @@
     "id": 411,
     "name": "focus-blast",
     "source_url": "https://pokeapi.co/api/v2/move/411/",
-    "accuracy": 70,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 70,
+        "ultra_sun_ultra_moon": 70,
+        "lets_go_pikachu_lets_go_eevee": 70
+    },
+    "power": {
+        "sun_moon": 120,
+        "ultra_sun_ultra_moon": 120,
+        "lets_go_pikachu_lets_go_eevee": 120
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fighting",
+    "type": {
+        "sun_moon": "fighting",
+        "ultra_sun_ultra_moon": "fighting",
+        "lets_go_pikachu_lets_go_eevee": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "ultra_sun_ultra_moon": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The user heightens its mental focus and unleashes its power. This may also lower the target’s Sp. Def stat.",
         "ultra_sun_ultra_moon": "The user heightens its mental focus and unleashes its power. This may also lower the target’s Sp. Def stat.",

@@ -2,17 +2,45 @@
     "id": 609,
     "name": "nuzzle",
     "source_url": "https://pokeapi.co/api/v2/move/609/",
-    "accuracy": 100,
-    "power": 20,
-    "pp": 20,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 20,
+        "the_teal_mask": 20,
+        "the_indigo_disk": 20
+    },
+    "pp": {
+        "scarlet_violet": 20,
+        "the_teal_mask": 20,
+        "the_indigo_disk": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "scarlet_violet": "electric",
+        "the_teal_mask": "electric",
+        "the_indigo_disk": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to paralyze the target.",
-    "short_effect": "Has a 100% chance to paralyze the target.",
+    "effect_chance": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 100% chance to paralyze the target.",
+        "the_teal_mask": "Inflicts regular damage. Has a 100% chance to paralyze the target.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 100% chance to paralyze the target."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 100% chance to paralyze the target.",
+        "the_teal_mask": "Has a 100% chance to paralyze the target.",
+        "the_indigo_disk": "Has a 100% chance to paralyze the target."
+    },
     "flavor_text": {
         "scarlet_violet": "The user attacks by nuzzling its electrified cheeks against the target. This also leaves the target with paralysis."
     },

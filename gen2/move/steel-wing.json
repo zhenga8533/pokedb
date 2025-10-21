@@ -2,17 +2,38 @@
     "id": 211,
     "name": "steel-wing",
     "source_url": "https://pokeapi.co/api/v2/move/211/",
-    "accuracy": 90,
-    "power": 70,
-    "pp": 25,
+    "accuracy": {
+        "gold_silver": 90,
+        "crystal": 90
+    },
+    "power": {
+        "gold_silver": 70,
+        "crystal": 70
+    },
+    "pp": {
+        "gold_silver": 25,
+        "crystal": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "gold_silver": "steel",
+        "crystal": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to raise the user’s Defense one stage.",
-    "short_effect": "Has a 10% chance to raise the user’s Defense by one stage.",
+    "effect_chance": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 10% chance to raise the user’s Defense one stage.",
+        "crystal": "Inflicts regular damage. Has a 10% chance to raise the user’s Defense one stage."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 10% chance to raise the user’s Defense by one stage.",
+        "crystal": "Has a 10% chance to raise the user’s Defense by one stage."
+    },
     "flavor_text": {
         "gold_silver": "Stiff wings strike the foe.",
         "crystal": "Stiff wings strike the foe."

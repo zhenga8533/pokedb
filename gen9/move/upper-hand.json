@@ -2,21 +2,62 @@
     "id": 918,
     "name": "upper-hand",
     "source_url": "https://pokeapi.co/api/v2/move/918/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 65,
+        "the_teal_mask": 65,
+        "the_indigo_disk": 65
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 3,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "scarlet_violet": "fighting",
+        "the_teal_mask": "fighting",
+        "the_indigo_disk": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ix",
-    "effect_chance": null,
-    "effect": null,
-    "short_effect": null,
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "short_effect": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
     "flavor_text": {
         "scarlet_violet": "The user reacts to the target's movement and strikes with the heel of its palm, making the target flinch. This move fails if the target is not readying a priority move."
     },
     "stat_changes": [],
     "machine": "tm229",
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

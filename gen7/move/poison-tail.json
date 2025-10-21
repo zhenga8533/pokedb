@@ -2,17 +2,45 @@
     "id": 342,
     "name": "poison-tail",
     "source_url": "https://pokeapi.co/api/v2/move/342/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 25,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 50,
+        "ultra_sun_ultra_moon": 50,
+        "lets_go_pikachu_lets_go_eevee": 50
+    },
+    "pp": {
+        "sun_moon": 25,
+        "ultra_sun_ultra_moon": 25,
+        "lets_go_pikachu_lets_go_eevee": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "poison",
+    "type": {
+        "sun_moon": "poison",
+        "ultra_sun_ultra_moon": "poison",
+        "lets_go_pikachu_lets_go_eevee": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
-    "short_effect": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target."
+    },
+    "short_effect": {
+        "sun_moon": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+        "ultra_sun_ultra_moon": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+        "lets_go_pikachu_lets_go_eevee": "Has an increased chance for a critical hit and a 10% chance to poison the target."
+    },
     "flavor_text": {
         "sun_moon": "The user hits the target with its tail. This may also poison the target. Critical hits land more easily.",
         "ultra_sun_ultra_moon": "The user hits the target with its tail. This may also poison the target. Critical hits land more easily.",

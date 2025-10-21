@@ -2,17 +2,45 @@
     "id": 742,
     "name": "double-iron-bash",
     "source_url": "https://pokeapi.co/api/v2/move/742/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 60,
+        "ultra_sun_ultra_moon": 60,
+        "lets_go_pikachu_lets_go_eevee": 60
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "sun_moon": "steel",
+        "ultra_sun_ultra_moon": "steel",
+        "lets_go_pikachu_lets_go_eevee": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Hits twice in one turn.",
-    "short_effect": "Hits twice in one turn.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Hits twice in one turn.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Hits twice in one turn.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Hits twice in one turn."
+    },
+    "short_effect": {
+        "sun_moon": "Hits twice in one turn.",
+        "ultra_sun_ultra_moon": "Hits twice in one turn.",
+        "lets_go_pikachu_lets_go_eevee": "Hits twice in one turn."
+    },
     "flavor_text": {
         "lets_go_pikachu_lets_go_eevee": "The user rotates, centering the hex nut in its chest, and then strikes with its arms twice in a row. This may also make the target flinch."
     },

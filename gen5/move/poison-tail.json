@@ -2,17 +2,38 @@
     "id": 342,
     "name": "poison-tail",
     "source_url": "https://pokeapi.co/api/v2/move/342/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 25,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 50,
+        "black_2_white_2": 50
+    },
+    "pp": {
+        "black_white": 25,
+        "black_2_white_2": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "poison",
+    "type": {
+        "black_white": "poison",
+        "black_2_white_2": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
-    "short_effect": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
+        "black_2_white_2": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target."
+    },
+    "short_effect": {
+        "black_white": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+        "black_2_white_2": "Has an increased chance for a critical hit and a 10% chance to poison the target."
+    },
     "flavor_text": {
         "black_white": "The user hits the target with its tail. It may also poison the target. Critical hits land more easily.",
         "black_2_white_2": "The user hits the target with its tail. It may also poison the target. Critical hits land more easily."

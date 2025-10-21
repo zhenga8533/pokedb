@@ -2,17 +2,45 @@
     "id": 445,
     "name": "captivate",
     "source_url": "https://pokeapi.co/api/v2/move/445/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "diamond_pearl": "normal",
+        "platinum": "normal",
+        "heartgold_soulsilver": "normal"
+    },
     "target": "all-opponents",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Lowers the target’s Special Attack by two stages. If the user and target are the same gender, or either is genderless, this move will fail.",
-    "short_effect": "Lowers the target’s Special Attack by two stages if it’s the opposite gender.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Lowers the target’s Special Attack by two stages. If the user and target are the same gender, or either is genderless, this move will fail.",
+        "platinum": "Lowers the target’s Special Attack by two stages. If the user and target are the same gender, or either is genderless, this move will fail.",
+        "heartgold_soulsilver": "Lowers the target’s Special Attack by two stages. If the user and target are the same gender, or either is genderless, this move will fail."
+    },
+    "short_effect": {
+        "diamond_pearl": "Lowers the target’s Special Attack by two stages if it’s the opposite gender.",
+        "platinum": "Lowers the target’s Special Attack by two stages if it’s the opposite gender.",
+        "heartgold_soulsilver": "Lowers the target’s Special Attack by two stages if it’s the opposite gender."
+    },
     "flavor_text": {
         "diamond_pearl": "If it is the opposite gender of the user, the foe is charmed into sharply lowering its Sp. Atk stat.",
         "platinum": "If it is the opposite gender of the user, the foe is charmed into sharply lowering its Sp. Atk stat.",

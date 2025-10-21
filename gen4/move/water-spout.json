@@ -2,17 +2,45 @@
     "id": 323,
     "name": "water-spout",
     "source_url": "https://pokeapi.co/api/v2/move/323/",
-    "accuracy": 100,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 150,
+        "platinum": 150,
+        "heartgold_soulsilver": 150
+    },
+    "pp": {
+        "diamond_pearl": 5,
+        "platinum": 5,
+        "heartgold_soulsilver": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "diamond_pearl": "water",
+        "platinum": "water",
+        "heartgold_soulsilver": "water"
+    },
     "target": "all-opponents",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power increases with the user’s remaining HP and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP.",
-    "short_effect": "Inflicts more damage when the user has more HP remaining, with a maximum of 150 power.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Power increases with the user’s remaining HP and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP.",
+        "platinum": "Inflicts regular damage. Power increases with the user’s remaining HP and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP.",
+        "heartgold_soulsilver": "Inflicts regular damage. Power increases with the user’s remaining HP and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP."
+    },
+    "short_effect": {
+        "diamond_pearl": "Inflicts more damage when the user has more HP remaining, with a maximum of 150 power.",
+        "platinum": "Inflicts more damage when the user has more HP remaining, with a maximum of 150 power.",
+        "heartgold_soulsilver": "Inflicts more damage when the user has more HP remaining, with a maximum of 150 power."
+    },
     "flavor_text": {
         "diamond_pearl": "The user spouts water to damage the foe. The lower the user’s HP, the less powerful it becomes.",
         "platinum": "The user spouts water to damage the foe. The lower the user’s HP, the less powerful it becomes.",

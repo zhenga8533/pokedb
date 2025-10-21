@@ -2,17 +2,45 @@
     "id": 93,
     "name": "confusion",
     "source_url": "https://pokeapi.co/api/v2/move/93/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 25,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 50,
+        "platinum": 50,
+        "heartgold_soulsilver": 50
+    },
+    "pp": {
+        "diamond_pearl": 25,
+        "platinum": 25,
+        "heartgold_soulsilver": 25
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "diamond_pearl": "psychic",
+        "platinum": "psychic",
+        "heartgold_soulsilver": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to confuse the target.",
-    "short_effect": "Has a 10% chance to confuse the target.",
+    "effect_chance": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 10% chance to confuse the target.",
+        "platinum": "Inflicts regular damage. Has a 10% chance to confuse the target.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 10% chance to confuse the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 10% chance to confuse the target.",
+        "platinum": "Has a 10% chance to confuse the target.",
+        "heartgold_soulsilver": "Has a 10% chance to confuse the target."
+    },
     "flavor_text": {
         "heartgold_soulsilver": "The foe is hit by a weak telekinetic force. It may also leave the foe confused.",
         "diamond_pearl": "The foe is hit by a weak telekinetic force. It may also leave the foe confused.",

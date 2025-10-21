@@ -2,17 +2,45 @@
     "id": 465,
     "name": "seed-flare",
     "source_url": "https://pokeapi.co/api/v2/move/465/",
-    "accuracy": 85,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 85,
+        "ultra_sun_ultra_moon": 85,
+        "lets_go_pikachu_lets_go_eevee": 85
+    },
+    "power": {
+        "sun_moon": 120,
+        "ultra_sun_ultra_moon": 120,
+        "lets_go_pikachu_lets_go_eevee": 120
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "grass",
+    "type": {
+        "sun_moon": "grass",
+        "ultra_sun_ultra_moon": "grass",
+        "lets_go_pikachu_lets_go_eevee": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 40,
-    "effect": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
-    "short_effect": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+    "effect_chance": {
+        "sun_moon": 40,
+        "ultra_sun_ultra_moon": 40,
+        "lets_go_pikachu_lets_go_eevee": 40
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "ultra_sun_ultra_moon": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 40% chance to lower the target’s Special Defense by two stages."
+    },
     "flavor_text": {
         "sun_moon": "The user emits a shock wave from its body to attack its target. This may also harshly lower the target’s Sp. Def stat.",
         "ultra_sun_ultra_moon": "The user emits a shock wave from its body to attack its target. This may also harshly lower the target’s Sp. Def stat.",

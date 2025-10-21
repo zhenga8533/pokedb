@@ -2,17 +2,38 @@
     "id": 360,
     "name": "gyro-ball",
     "source_url": "https://pokeapi.co/api/v2/move/360/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 5,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 5,
+        "black_2_white_2": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "black_white": "steel",
+        "black_2_white_2": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power increases with the target’s current Speed compared to the user, given by `1 + 25 * target Speed / user Speed`, capped at 150.",
-    "short_effect": "Power raises when the user has lower Speed, up to a maximum of 150.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Power increases with the target’s current Speed compared to the user, given by `1 + 25 * target Speed / user Speed`, capped at 150.",
+        "black_2_white_2": "Inflicts regular damage. Power increases with the target’s current Speed compared to the user, given by `1 + 25 * target Speed / user Speed`, capped at 150."
+    },
+    "short_effect": {
+        "black_white": "Power raises when the user has lower Speed, up to a maximum of 150.",
+        "black_2_white_2": "Power raises when the user has lower Speed, up to a maximum of 150."
+    },
     "flavor_text": {
         "black_white": "The user tackles the target with a high-speed spin. The slower the user, the greater the damage.",
         "black_2_white_2": "The user tackles the target with a high-speed spin. The slower the user, the greater the damage."

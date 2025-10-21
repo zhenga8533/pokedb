@@ -2,17 +2,59 @@
     "id": 721,
     "name": "plasma-fists",
     "source_url": "https://pokeapi.co/api/v2/move/721/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 15,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "pp": {
+        "sword_shield": 15,
+        "the_isle_of_armor": 15,
+        "the_crown_tundra": 15,
+        "brilliant_diamond_and_shining_pearl": 15,
+        "legends_arceus": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "sword_shield": "electric",
+        "the_isle_of_armor": "electric",
+        "the_crown_tundra": "electric",
+        "brilliant_diamond_and_shining_pearl": "electric",
+        "legends_arceus": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "After inflicting damage, all Normal-type moves become Electric-type for the remainder of the turn, including status moves. This effect is applied after move type-changing abilities, such as Pixilate and Normalize.",
-    "short_effect": "After inflicting damage, causes all Normal-type moves to become Electric-type for the remainder of the turn.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "After inflicting damage, all Normal-type moves become Electric-type for the remainder of the turn, including status moves. This effect is applied after move type-changing abilities, such as Pixilate and Normalize.",
+        "the_isle_of_armor": "After inflicting damage, all Normal-type moves become Electric-type for the remainder of the turn, including status moves. This effect is applied after move type-changing abilities, such as Pixilate and Normalize.",
+        "the_crown_tundra": "After inflicting damage, all Normal-type moves become Electric-type for the remainder of the turn, including status moves. This effect is applied after move type-changing abilities, such as Pixilate and Normalize.",
+        "brilliant_diamond_and_shining_pearl": "After inflicting damage, all Normal-type moves become Electric-type for the remainder of the turn, including status moves. This effect is applied after move type-changing abilities, such as Pixilate and Normalize.",
+        "legends_arceus": "After inflicting damage, all Normal-type moves become Electric-type for the remainder of the turn, including status moves. This effect is applied after move type-changing abilities, such as Pixilate and Normalize."
+    },
+    "short_effect": {
+        "sword_shield": "After inflicting damage, causes all Normal-type moves to become Electric-type for the remainder of the turn.",
+        "the_isle_of_armor": "After inflicting damage, causes all Normal-type moves to become Electric-type for the remainder of the turn.",
+        "the_crown_tundra": "After inflicting damage, causes all Normal-type moves to become Electric-type for the remainder of the turn.",
+        "brilliant_diamond_and_shining_pearl": "After inflicting damage, causes all Normal-type moves to become Electric-type for the remainder of the turn.",
+        "legends_arceus": "After inflicting damage, causes all Normal-type moves to become Electric-type for the remainder of the turn."
+    },
     "flavor_text": {
         "sword_shield": "The user attacks with electrically charged fists. This move changes Normal-type moves to Electric-type moves."
     },

@@ -2,17 +2,59 @@
     "id": 442,
     "name": "iron-head",
     "source_url": "https://pokeapi.co/api/v2/move/442/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 80,
+        "the_isle_of_armor": 80,
+        "the_crown_tundra": 80,
+        "brilliant_diamond_and_shining_pearl": 80,
+        "legends_arceus": 80
+    },
+    "pp": {
+        "sword_shield": 15,
+        "the_isle_of_armor": 15,
+        "the_crown_tundra": 15,
+        "brilliant_diamond_and_shining_pearl": 15,
+        "legends_arceus": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "sword_shield": "steel",
+        "the_isle_of_armor": "steel",
+        "the_crown_tundra": "steel",
+        "brilliant_diamond_and_shining_pearl": "steel",
+        "legends_arceus": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "sword_shield": 30,
+        "the_isle_of_armor": 30,
+        "the_crown_tundra": 30,
+        "brilliant_diamond_and_shining_pearl": 30,
+        "legends_arceus": 30
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "legends_arceus": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 30% chance to make the target flinch.",
+        "the_isle_of_armor": "Has a 30% chance to make the target flinch.",
+        "the_crown_tundra": "Has a 30% chance to make the target flinch.",
+        "brilliant_diamond_and_shining_pearl": "Has a 30% chance to make the target flinch.",
+        "legends_arceus": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {
         "sword_shield": "The user slams the target with its steel-hard head. This may also make the target flinch.",
         "legends_arceus": "The user slams the target with its steel-hard head."

@@ -2,17 +2,45 @@
     "id": 338,
     "name": "frenzy-plant",
     "source_url": "https://pokeapi.co/api/v2/move/338/",
-    "accuracy": 90,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "power": {
+        "scarlet_violet": 150,
+        "the_teal_mask": 150,
+        "the_indigo_disk": 150
+    },
+    "pp": {
+        "scarlet_violet": 5,
+        "the_teal_mask": 5,
+        "the_indigo_disk": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "grass",
+    "type": {
+        "scarlet_violet": "grass",
+        "the_teal_mask": "grass",
+        "the_indigo_disk": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
-    "short_effect": "User foregoes its next turn to recharge.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+        "the_teal_mask": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+        "the_indigo_disk": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn."
+    },
+    "short_effect": {
+        "scarlet_violet": "User foregoes its next turn to recharge.",
+        "the_teal_mask": "User foregoes its next turn to recharge.",
+        "the_indigo_disk": "User foregoes its next turn to recharge."
+    },
     "flavor_text": {
         "scarlet_violet": "The user slams the target with the roots of an enormous tree. The user can't move on the next turn."
     },

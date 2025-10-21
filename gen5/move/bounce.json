@@ -2,17 +2,38 @@
     "id": 340,
     "name": "bounce",
     "source_url": "https://pokeapi.co/api/v2/move/340/",
-    "accuracy": 85,
-    "power": 85,
-    "pp": 5,
+    "accuracy": {
+        "black_white": 85,
+        "black_2_white_2": 85
+    },
+    "power": {
+        "black_white": 85,
+        "black_2_white_2": 85
+    },
+    "pp": {
+        "black_white": 5,
+        "black_2_white_2": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "flying",
+    "type": {
+        "black_white": "flying",
+        "black_2_white_2": "flying"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. User bounces high into the air for one turn, becoming immune to attack, and hits on the second turn. Has a 30% chance to paralyze the target. During the immune turn, gust, hurricane, sky uppercut, smack down, thunder, and twister still hit the user normally. gust and twister also have double power against the user. The damage from hail and sandstorm still applies during the immune turn. The user may be hit during its immune turn if under the effect of lock on, mind reader, or no guard. This move cannot be used while gravity is in effect. This move cannot be selected by sleep talk.",
-    "short_effect": "User bounces high into the air, dodging all attacks, and hits next turn.",
+    "effect_chance": {
+        "black_white": 30,
+        "black_2_white_2": 30
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. User bounces high into the air for one turn, becoming immune to attack, and hits on the second turn. Has a 30% chance to paralyze the target. During the immune turn, gust, hurricane, sky uppercut, smack down, thunder, and twister still hit the user normally. gust and twister also have double power against the user. The damage from hail and sandstorm still applies during the immune turn. The user may be hit during its immune turn if under the effect of lock on, mind reader, or no guard. This move cannot be used while gravity is in effect. This move cannot be selected by sleep talk.",
+        "black_2_white_2": "Inflicts regular damage. User bounces high into the air for one turn, becoming immune to attack, and hits on the second turn. Has a 30% chance to paralyze the target. During the immune turn, gust, hurricane, sky uppercut, smack down, thunder, and twister still hit the user normally. gust and twister also have double power against the user. The damage from hail and sandstorm still applies during the immune turn. The user may be hit during its immune turn if under the effect of lock on, mind reader, or no guard. This move cannot be used while gravity is in effect. This move cannot be selected by sleep talk."
+    },
+    "short_effect": {
+        "black_white": "User bounces high into the air, dodging all attacks, and hits next turn.",
+        "black_2_white_2": "User bounces high into the air, dodging all attacks, and hits next turn."
+    },
     "flavor_text": {
         "black_white": "The user bounces up high, then drops on the target on the second turn. It may also leave the target with paralysis.",
         "black_2_white_2": "The user bounces up high, then drops on the target on the second turn. It may also leave the target with paralysis."

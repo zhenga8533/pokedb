@@ -2,17 +2,52 @@
     "id": 34,
     "name": "body-slam",
     "source_url": "https://pokeapi.co/api/v2/move/34/",
-    "accuracy": 100,
-    "power": 85,
-    "pp": 15,
+    "accuracy": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "power": {
+        "red_blue": 85,
+        "yellow": 85,
+        "red_green_japan": 85,
+        "blue_japan": 85
+    },
+    "pp": {
+        "red_blue": 15,
+        "yellow": 15,
+        "red_green_japan": 15,
+        "blue_japan": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "red_blue": "normal",
+        "yellow": "normal",
+        "red_green_japan": "normal",
+        "blue_japan": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
-    "short_effect": "Has a 30% chance to paralyze the target.",
+    "effect_chance": {
+        "red_blue": 30,
+        "yellow": 30,
+        "red_green_japan": 30,
+        "blue_japan": 30
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "yellow": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "red_green_japan": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "blue_japan": "Inflicts regular damage. Has a 30% chance to paralyze the target."
+    },
+    "short_effect": {
+        "red_blue": "Has a 30% chance to paralyze the target.",
+        "yellow": "Has a 30% chance to paralyze the target.",
+        "red_green_japan": "Has a 30% chance to paralyze the target.",
+        "blue_japan": "Has a 30% chance to paralyze the target."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": "tm08",

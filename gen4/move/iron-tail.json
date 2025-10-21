@@ -2,17 +2,45 @@
     "id": 231,
     "name": "iron-tail",
     "source_url": "https://pokeapi.co/api/v2/move/231/",
-    "accuracy": 75,
-    "power": 100,
-    "pp": 15,
+    "accuracy": {
+        "diamond_pearl": 75,
+        "platinum": 75,
+        "heartgold_soulsilver": 75
+    },
+    "power": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "pp": {
+        "diamond_pearl": 15,
+        "platinum": 15,
+        "heartgold_soulsilver": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "diamond_pearl": "steel",
+        "platinum": "steel",
+        "heartgold_soulsilver": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to lower the target’s Defense by one stage.",
-    "short_effect": "Has a 30% chance to lower the target’s Defense by one stage.",
+    "effect_chance": {
+        "diamond_pearl": 30,
+        "platinum": 30,
+        "heartgold_soulsilver": 30
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 30% chance to lower the target’s Defense by one stage.",
+        "platinum": "Inflicts regular damage. Has a 30% chance to lower the target’s Defense by one stage.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 30% chance to lower the target’s Defense by one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 30% chance to lower the target’s Defense by one stage.",
+        "platinum": "Has a 30% chance to lower the target’s Defense by one stage.",
+        "heartgold_soulsilver": "Has a 30% chance to lower the target’s Defense by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is slammed with a steel-hard tail. It may also lower the target’s Defense stat.",
         "platinum": "The foe is slammed with a steel-hard tail. It may also lower the target’s Defense stat.",

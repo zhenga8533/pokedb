@@ -2,17 +2,38 @@
     "id": 458,
     "name": "double-hit",
     "source_url": "https://pokeapi.co/api/v2/move/458/",
-    "accuracy": 90,
-    "power": 35,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 90,
+        "black_2_white_2": 90
+    },
+    "power": {
+        "black_white": 35,
+        "black_2_white_2": 35
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Hits twice in one turn.",
-    "short_effect": "Hits twice in one turn.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Hits twice in one turn.",
+        "black_2_white_2": "Inflicts regular damage. Hits twice in one turn."
+    },
+    "short_effect": {
+        "black_white": "Hits twice in one turn.",
+        "black_2_white_2": "Hits twice in one turn."
+    },
     "flavor_text": {
         "black_white": "The user slams the target with a long tail, vines, or tentacle. The target is hit twice in a row.",
         "black_2_white_2": "The user slams the target with a long tail, vines, or tentacle. The target is hit twice in a row."

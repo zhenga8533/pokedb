@@ -2,17 +2,45 @@
     "id": 585,
     "name": "moonblast",
     "source_url": "https://pokeapi.co/api/v2/move/585/",
-    "accuracy": 100,
-    "power": 95,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 95,
+        "ultra_sun_ultra_moon": 95,
+        "lets_go_pikachu_lets_go_eevee": 95
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fairy",
+    "type": {
+        "sun_moon": "fairy",
+        "ultra_sun_ultra_moon": "fairy",
+        "lets_go_pikachu_lets_go_eevee": "fairy"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to lower the target’s Special Attack by one stage.",
-    "short_effect": "Has a 30% chance to lower the target’s Special Attack by one stage.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 30% chance to lower the target’s Special Attack by one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 30% chance to lower the target’s Special Attack by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 30% chance to lower the target’s Special Attack by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 30% chance to lower the target’s Special Attack by one stage.",
+        "ultra_sun_ultra_moon": "Has a 30% chance to lower the target’s Special Attack by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 30% chance to lower the target’s Special Attack by one stage."
+    },
     "flavor_text": {
         "sun_moon": "Borrowing the power of the moon, the user attacks the target. This may also lower the target’s Sp. Atk stat.",
         "ultra_sun_ultra_moon": "Borrowing the power of the moon, the user attacks the target. This may also lower the target’s Sp. Atk stat.",

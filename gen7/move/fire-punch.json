@@ -2,17 +2,45 @@
     "id": 7,
     "name": "fire-punch",
     "source_url": "https://pokeapi.co/api/v2/move/7/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 75,
+        "ultra_sun_ultra_moon": 75,
+        "lets_go_pikachu_lets_go_eevee": 75
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "sun_moon": "fire",
+        "ultra_sun_ultra_moon": "fire",
+        "lets_go_pikachu_lets_go_eevee": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to burn the target.",
-    "short_effect": "Has a 10% chance to burn the target.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 10% chance to burn the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 10% chance to burn the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 10% chance to burn the target."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 10% chance to burn the target.",
+        "ultra_sun_ultra_moon": "Has a 10% chance to burn the target.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 10% chance to burn the target."
+    },
     "flavor_text": {
         "sun_moon": "The target is punched with a fiery fist. This may also leave the target with a burn.",
         "ultra_sun_ultra_moon": "The target is punched with a fiery fist. This may also leave the target with a burn.",

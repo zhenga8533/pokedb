@@ -2,17 +2,45 @@
     "id": 209,
     "name": "spark",
     "source_url": "https://pokeapi.co/api/v2/move/209/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 65,
+        "platinum": 65,
+        "heartgold_soulsilver": 65
+    },
+    "pp": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "diamond_pearl": "electric",
+        "platinum": "electric",
+        "heartgold_soulsilver": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
-    "short_effect": "Has a 30% chance to paralyze the target.",
+    "effect_chance": {
+        "diamond_pearl": 30,
+        "platinum": 30,
+        "heartgold_soulsilver": 30
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "platinum": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 30% chance to paralyze the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 30% chance to paralyze the target.",
+        "platinum": "Has a 30% chance to paralyze the target.",
+        "heartgold_soulsilver": "Has a 30% chance to paralyze the target."
+    },
     "flavor_text": {
         "diamond_pearl": "The user throws an electrically charged tackle at the foe. It may also leave the target paralyzed.",
         "platinum": "The user throws an electrically charged tackle at the foe. It may also leave the target paralyzed.",

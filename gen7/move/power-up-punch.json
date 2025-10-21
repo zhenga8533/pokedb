@@ -2,17 +2,45 @@
     "id": 612,
     "name": "power-up-punch",
     "source_url": "https://pokeapi.co/api/v2/move/612/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 40,
+        "ultra_sun_ultra_moon": 40,
+        "lets_go_pikachu_lets_go_eevee": 40
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "sun_moon": "fighting",
+        "ultra_sun_ultra_moon": "fighting",
+        "lets_go_pikachu_lets_go_eevee": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Raises the user’s Attack by one stage.",
-    "short_effect": "Raises the user’s Attack by one stage after inflicting damage.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Raises the user’s Attack by one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Raises the user’s Attack by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Raises the user’s Attack by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Raises the user’s Attack by one stage after inflicting damage.",
+        "ultra_sun_ultra_moon": "Raises the user’s Attack by one stage after inflicting damage.",
+        "lets_go_pikachu_lets_go_eevee": "Raises the user’s Attack by one stage after inflicting damage."
+    },
     "flavor_text": {
         "sun_moon": "Striking opponents over and over makes the user’s fists harder. Hitting a target raises the Attack stat.",
         "ultra_sun_ultra_moon": "Striking opponents over and over makes the user’s fists harder. Hitting a target raises the Attack stat.",

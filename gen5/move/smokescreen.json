@@ -2,17 +2,38 @@
     "id": 108,
     "name": "smokescreen",
     "source_url": "https://pokeapi.co/api/v2/move/108/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 20,
+        "black_2_white_2": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Lowers the target’s accuracy by one stage.",
-    "short_effect": "Lowers the target’s accuracy by one stage.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Lowers the target’s accuracy by one stage.",
+        "black_2_white_2": "Lowers the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "black_white": "Lowers the target’s accuracy by one stage.",
+        "black_2_white_2": "Lowers the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "black_white": "The user releases an obscuring cloud of smoke or ink. It reduces the target’s accuracy.",
         "black_2_white_2": "The user releases an obscuring cloud of smoke or ink. It reduces the target’s accuracy."

@@ -2,17 +2,38 @@
     "id": 457,
     "name": "head-smash",
     "source_url": "https://pokeapi.co/api/v2/move/457/",
-    "accuracy": 80,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "black_white": 80,
+        "black_2_white_2": 80
+    },
+    "power": {
+        "black_white": 150,
+        "black_2_white_2": 150
+    },
+    "pp": {
+        "black_white": 5,
+        "black_2_white_2": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "rock",
+    "type": {
+        "black_white": "rock",
+        "black_2_white_2": "rock"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil.",
-    "short_effect": "User receives 1/2 the damage inflicted in recoil.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil.",
+        "black_2_white_2": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil."
+    },
+    "short_effect": {
+        "black_white": "User receives 1/2 the damage inflicted in recoil.",
+        "black_2_white_2": "User receives 1/2 the damage inflicted in recoil."
+    },
     "flavor_text": {
         "black_white": "The user attacks the target with a hazardous, full-power headbutt. The user also takes terrible damage.",
         "black_2_white_2": "The user attacks the target with a hazardous, full-power headbutt. The user also takes terrible damage."

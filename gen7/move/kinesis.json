@@ -2,17 +2,45 @@
     "id": 134,
     "name": "kinesis",
     "source_url": "https://pokeapi.co/api/v2/move/134/",
-    "accuracy": 80,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 80,
+        "ultra_sun_ultra_moon": 80,
+        "lets_go_pikachu_lets_go_eevee": 80
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "psychic",
+    "type": {
+        "sun_moon": "psychic",
+        "ultra_sun_ultra_moon": "psychic",
+        "lets_go_pikachu_lets_go_eevee": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Lowers the target’s accuracy by one stage.",
-    "short_effect": "Lowers the target’s accuracy by one stage.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Lowers the target’s accuracy by one stage.",
+        "ultra_sun_ultra_moon": "Lowers the target’s accuracy by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Lowers the target’s accuracy by one stage.",
+        "ultra_sun_ultra_moon": "Lowers the target’s accuracy by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The user distracts the target by bending a spoon. This lowers the target’s accuracy.",
         "ultra_sun_ultra_moon": "The user distracts the target by bending a spoon. This lowers the target’s accuracy.",

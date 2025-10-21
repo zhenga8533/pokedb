@@ -2,17 +2,45 @@
     "id": 531,
     "name": "heart-stamp",
     "source_url": "https://pokeapi.co/api/v2/move/531/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 25,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 60,
+        "ultra_sun_ultra_moon": 60,
+        "lets_go_pikachu_lets_go_eevee": 60
+    },
+    "pp": {
+        "sun_moon": 25,
+        "ultra_sun_ultra_moon": 25,
+        "lets_go_pikachu_lets_go_eevee": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "psychic",
+    "type": {
+        "sun_moon": "psychic",
+        "ultra_sun_ultra_moon": "psychic",
+        "lets_go_pikachu_lets_go_eevee": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 30% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Has a 30% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {
         "sun_moon": "The user unleashes a vicious blow after its cute act makes the target less wary. This may also make the target flinch.",
         "ultra_sun_ultra_moon": "The user unleashes a vicious blow after its cute act makes the target less wary. This may also make the target flinch.",

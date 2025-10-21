@@ -2,17 +2,38 @@
     "id": 255,
     "name": "spit-up",
     "source_url": "https://pokeapi.co/api/v2/move/255/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power is equal to 100 times the amount of energy stored by stockpile. Ignores the random factor in the damage formula. Stored energy is consumed, and the user’s Defense and Special Defense are reset to what they would be if stockpile had not been used. If the user has no energy stored, this move will fail. This move cannot be copied by mirror move.",
-    "short_effect": "Power is 100 times the amount of energy Stockpiled.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Power is equal to 100 times the amount of energy stored by stockpile. Ignores the random factor in the damage formula. Stored energy is consumed, and the user’s Defense and Special Defense are reset to what they would be if stockpile had not been used. If the user has no energy stored, this move will fail. This move cannot be copied by mirror move.",
+        "black_2_white_2": "Inflicts regular damage. Power is equal to 100 times the amount of energy stored by stockpile. Ignores the random factor in the damage formula. Stored energy is consumed, and the user’s Defense and Special Defense are reset to what they would be if stockpile had not been used. If the user has no energy stored, this move will fail. This move cannot be copied by mirror move."
+    },
+    "short_effect": {
+        "black_white": "Power is 100 times the amount of energy Stockpiled.",
+        "black_2_white_2": "Power is 100 times the amount of energy Stockpiled."
+    },
     "flavor_text": {
         "black_white": "The power stored using the move Stockpile is released at once in an attack. The more power is stored, the greater the damage.",
         "black_2_white_2": "The power stored using the move Stockpile is released at once in an attack. The more power is stored, the greater the damage."

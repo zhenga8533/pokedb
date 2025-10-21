@@ -2,17 +2,45 @@
     "id": 618,
     "name": "origin-pulse",
     "source_url": "https://pokeapi.co/api/v2/move/618/",
-    "accuracy": 85,
-    "power": 110,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 85,
+        "ultra_sun_ultra_moon": 85,
+        "lets_go_pikachu_lets_go_eevee": 85
+    },
+    "power": {
+        "sun_moon": 110,
+        "ultra_sun_ultra_moon": 110,
+        "lets_go_pikachu_lets_go_eevee": 110
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "sun_moon": "water",
+        "ultra_sun_ultra_moon": "water",
+        "lets_go_pikachu_lets_go_eevee": "water"
+    },
     "target": "all-opponents",
     "generation": "generation-vi",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage.",
-    "short_effect": "Inflicts regular damage with no additional effect.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage."
+    },
+    "short_effect": {
+        "sun_moon": "Inflicts regular damage with no additional effect.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage with no additional effect.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage with no additional effect."
+    },
     "flavor_text": {
         "sun_moon": "The user attacks opposing Pokémon with countless beams of light that glow a deep and brilliant blue.",
         "ultra_sun_ultra_moon": "The user attacks opposing Pokémon with countless beams of light that glow a deep and brilliant blue.",

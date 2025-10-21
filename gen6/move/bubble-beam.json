@@ -2,17 +2,38 @@
     "id": 61,
     "name": "bubble-beam",
     "source_url": "https://pokeapi.co/api/v2/move/61/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 65,
+        "omega_ruby_alpha_sapphire": 65
+    },
+    "pp": {
+        "x_y": 20,
+        "omega_ruby_alpha_sapphire": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "x_y": "water",
+        "omega_ruby_alpha_sapphire": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Speed by one stage.",
+    "effect_chance": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "x_y": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "omega_ruby_alpha_sapphire": "Has a 10% chance to lower the target’s Speed by one stage."
+    },
     "flavor_text": {
         "x_y": "A spray of bubbles is forcefully ejected at the target. This may also lower its Speed stat.",
         "omega_ruby_alpha_sapphire": "A spray of bubbles is forcefully ejected at the target. This may also lower its Speed stat."

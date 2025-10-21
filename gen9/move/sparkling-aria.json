@@ -2,17 +2,45 @@
     "id": 664,
     "name": "sparkling-aria",
     "source_url": "https://pokeapi.co/api/v2/move/664/",
-    "accuracy": 100,
-    "power": 90,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "scarlet_violet": "water",
+        "the_teal_mask": "water",
+        "the_indigo_disk": "water"
+    },
     "target": "all-other-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the target has a burn and takes damage from this move, its burn is healed.",
-    "short_effect": "Cures the target of burns.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. If the target has a burn and takes damage from this move, its burn is healed.",
+        "the_teal_mask": "Inflicts regular damage. If the target has a burn and takes damage from this move, its burn is healed.",
+        "the_indigo_disk": "Inflicts regular damage. If the target has a burn and takes damage from this move, its burn is healed."
+    },
+    "short_effect": {
+        "scarlet_violet": "Cures the target of burns.",
+        "the_teal_mask": "Cures the target of burns.",
+        "the_indigo_disk": "Cures the target of burns."
+    },
     "flavor_text": {
         "scarlet_violet": "The user bursts into song, emitting many bubbles. Any Pokémon suffering from a burn will be cured by the touch of these bubbles."
     },

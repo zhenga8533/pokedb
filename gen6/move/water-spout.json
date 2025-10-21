@@ -2,17 +2,38 @@
     "id": 323,
     "name": "water-spout",
     "source_url": "https://pokeapi.co/api/v2/move/323/",
-    "accuracy": 100,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 150,
+        "omega_ruby_alpha_sapphire": 150
+    },
+    "pp": {
+        "x_y": 5,
+        "omega_ruby_alpha_sapphire": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "x_y": "water",
+        "omega_ruby_alpha_sapphire": "water"
+    },
     "target": "all-opponents",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power increases with the user’s remaining HP and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP.",
-    "short_effect": "Inflicts more damage when the user has more HP remaining, with a maximum of 150 power.",
+    "effect_chance": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Power increases with the user’s remaining HP and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Power increases with the user’s remaining HP and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP."
+    },
+    "short_effect": {
+        "x_y": "Inflicts more damage when the user has more HP remaining, with a maximum of 150 power.",
+        "omega_ruby_alpha_sapphire": "Inflicts more damage when the user has more HP remaining, with a maximum of 150 power."
+    },
     "flavor_text": {
         "x_y": "The user spouts water to damage opposing Pokémon. The lower the user’s HP, the lower the move’s power.",
         "omega_ruby_alpha_sapphire": "The user spouts water to damage opposing Pokémon. The lower the user’s HP, the lower the move’s power."

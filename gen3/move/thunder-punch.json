@@ -2,17 +2,59 @@
     "id": 9,
     "name": "thunder-punch",
     "source_url": "https://pokeapi.co/api/v2/move/9/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 15,
+    "accuracy": {
+        "ruby_sapphire": 100,
+        "emerald": 100,
+        "firered_leafgreen": 100,
+        "colosseum": 100,
+        "xd": 100
+    },
+    "power": {
+        "ruby_sapphire": 75,
+        "emerald": 75,
+        "firered_leafgreen": 75,
+        "colosseum": 75,
+        "xd": 75
+    },
+    "pp": {
+        "ruby_sapphire": 15,
+        "emerald": 15,
+        "firered_leafgreen": 15,
+        "colosseum": 15,
+        "xd": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "ruby_sapphire": "electric",
+        "emerald": "electric",
+        "firered_leafgreen": "electric",
+        "colosseum": "electric",
+        "xd": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
-    "short_effect": "Has a 10% chance to paralyze the target.",
+    "effect_chance": {
+        "ruby_sapphire": 10,
+        "emerald": 10,
+        "firered_leafgreen": 10,
+        "colosseum": 10,
+        "xd": 10
+    },
+    "effect": {
+        "ruby_sapphire": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "emerald": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "firered_leafgreen": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "colosseum": "Inflicts regular damage. Has a 10% chance to paralyze the target.",
+        "xd": "Inflicts regular damage. Has a 10% chance to paralyze the target."
+    },
+    "short_effect": {
+        "ruby_sapphire": "Has a 10% chance to paralyze the target.",
+        "emerald": "Has a 10% chance to paralyze the target.",
+        "firered_leafgreen": "Has a 10% chance to paralyze the target.",
+        "colosseum": "Has a 10% chance to paralyze the target.",
+        "xd": "Has a 10% chance to paralyze the target."
+    },
     "flavor_text": {
         "ruby_sapphire": "An electrified punch that may paralyze the foe.",
         "emerald": "An electrified punch that may paralyze the foe.",

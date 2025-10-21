@@ -2,17 +2,45 @@
     "id": 239,
     "name": "twister",
     "source_url": "https://pokeapi.co/api/v2/move/239/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 20,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 40,
+        "the_teal_mask": 40,
+        "the_indigo_disk": 40
+    },
+    "pp": {
+        "scarlet_violet": 20,
+        "the_teal_mask": 20,
+        "the_indigo_disk": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dragon",
+    "type": {
+        "scarlet_violet": "dragon",
+        "the_teal_mask": "dragon",
+        "the_indigo_disk": "dragon"
+    },
     "target": "all-opponents",
     "generation": "generation-ii",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to make each target flinch. If the target is under the effect of bounce, fly, or sky drop, this move will hit with double power.",
-    "short_effect": "Has a 20% chance to make the target flinch.",
+    "effect_chance": {
+        "scarlet_violet": 20,
+        "the_teal_mask": 20,
+        "the_indigo_disk": 20
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 20% chance to make each target flinch. If the target is under the effect of bounce, fly, or sky drop, this move will hit with double power.",
+        "the_teal_mask": "Inflicts regular damage. Has a 20% chance to make each target flinch. If the target is under the effect of bounce, fly, or sky drop, this move will hit with double power.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 20% chance to make each target flinch. If the target is under the effect of bounce, fly, or sky drop, this move will hit with double power."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 20% chance to make the target flinch.",
+        "the_teal_mask": "Has a 20% chance to make the target flinch.",
+        "the_indigo_disk": "Has a 20% chance to make the target flinch."
+    },
     "flavor_text": {
         "scarlet_violet": "The user whips up a vicious tornado to tear at opposing Pokémon. This may also make them flinch."
     },

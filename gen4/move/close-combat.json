@@ -2,17 +2,45 @@
     "id": 370,
     "name": "close-combat",
     "source_url": "https://pokeapi.co/api/v2/move/370/",
-    "accuracy": 100,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 120,
+        "platinum": 120,
+        "heartgold_soulsilver": 120
+    },
+    "pp": {
+        "diamond_pearl": 5,
+        "platinum": 5,
+        "heartgold_soulsilver": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "diamond_pearl": "fighting",
+        "platinum": "fighting",
+        "heartgold_soulsilver": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each.",
-    "short_effect": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage.",
+    "effect_chance": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each.",
+        "platinum": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each.",
+        "heartgold_soulsilver": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each."
+    },
+    "short_effect": {
+        "diamond_pearl": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage.",
+        "platinum": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage.",
+        "heartgold_soulsilver": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage."
+    },
     "flavor_text": {
         "diamond_pearl": "The user fights the foe in close without guarding itself. It also cuts the user’s Defense and Sp. Def.",
         "platinum": "The user fights the foe in close without guarding itself. It also cuts the user’s Defense and Sp. Def.",

@@ -2,17 +2,38 @@
     "id": 264,
     "name": "focus-punch",
     "source_url": "https://pokeapi.co/api/v2/move/264/",
-    "accuracy": 100,
-    "power": 150,
-    "pp": 20,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 150,
+        "black_2_white_2": 150
+    },
+    "pp": {
+        "black_white": 20,
+        "black_2_white_2": 20
+    },
     "priority": -3,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "black_white": "fighting",
+        "black_2_white_2": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the user takes damage this turn before hitting, this move will fail. This move cannot be copied by mirror move, nor selected by assist, metronome, or sleep talk.",
-    "short_effect": "If the user takes damage before attacking, the attack is canceled.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. If the user takes damage this turn before hitting, this move will fail. This move cannot be copied by mirror move, nor selected by assist, metronome, or sleep talk.",
+        "black_2_white_2": "Inflicts regular damage. If the user takes damage this turn before hitting, this move will fail. This move cannot be copied by mirror move, nor selected by assist, metronome, or sleep talk."
+    },
+    "short_effect": {
+        "black_white": "If the user takes damage before attacking, the attack is canceled.",
+        "black_2_white_2": "If the user takes damage before attacking, the attack is canceled."
+    },
     "flavor_text": {
         "black_white": "The user focuses its mind before launching a punch. It will fail if the user is hit before it is used.",
         "black_2_white_2": "The user focuses its mind before launching a punch. It will fail if the user is hit before it is used."

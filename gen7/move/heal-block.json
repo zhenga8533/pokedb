@@ -2,17 +2,45 @@
     "id": 377,
     "name": "heal-block",
     "source_url": "https://pokeapi.co/api/v2/move/377/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "psychic",
+    "type": {
+        "sun_moon": "psychic",
+        "ultra_sun_ultra_moon": "psychic",
+        "lets_go_pikachu_lets_go_eevee": "psychic"
+    },
     "target": "all-opponents",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
-    "short_effect": "Prevents target from restoring its HP for five turns.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
+        "ultra_sun_ultra_moon": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
+        "lets_go_pikachu_lets_go_eevee": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled. Moves that steal HP may still be used, but will only inflict damage and not heal the target."
+    },
+    "short_effect": {
+        "sun_moon": "Prevents target from restoring its HP for five turns.",
+        "ultra_sun_ultra_moon": "Prevents target from restoring its HP for five turns.",
+        "lets_go_pikachu_lets_go_eevee": "Prevents target from restoring its HP for five turns."
+    },
     "flavor_text": {
         "sun_moon": "For five turns, the user prevents the opposing team from using any moves, Abilities, or held items that recover HP.",
         "ultra_sun_ultra_moon": "For five turns, the user prevents the opposing team from using any moves, Abilities, or held items that recover HP.",

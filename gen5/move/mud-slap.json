@@ -2,17 +2,38 @@
     "id": 189,
     "name": "mud-slap",
     "source_url": "https://pokeapi.co/api/v2/move/189/",
-    "accuracy": 100,
-    "power": 20,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 20,
+        "black_2_white_2": 20
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ground",
+    "type": {
+        "black_white": "ground",
+        "black_2_white_2": "ground"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s accuracy by one stage.",
+    "effect_chance": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 100% chance to lower the target’s accuracy by one stage.",
+        "black_2_white_2": "Has a 100% chance to lower the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "black_white": "The user hurls mud in the target’s face to inflict damage and lower its accuracy.",
         "black_2_white_2": "The user hurls mud in the target’s face to inflict damage and lower its accuracy."

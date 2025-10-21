@@ -2,17 +2,38 @@
     "id": 109,
     "name": "confuse-ray",
     "source_url": "https://pokeapi.co/api/v2/move/109/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "pp": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "ghost",
+    "type": {
+        "gold_silver": "ghost",
+        "crystal": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Confuses the target.",
-    "short_effect": "Confuses the target.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Confuses the target.",
+        "crystal": "Confuses the target."
+    },
+    "short_effect": {
+        "gold_silver": "Confuses the target.",
+        "crystal": "Confuses the target."
+    },
     "flavor_text": {
         "gold_silver": "A move that causes confusion.",
         "crystal": "A move that causes confusion."

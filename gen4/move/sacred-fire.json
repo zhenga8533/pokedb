@@ -2,17 +2,45 @@
     "id": 221,
     "name": "sacred-fire",
     "source_url": "https://pokeapi.co/api/v2/move/221/",
-    "accuracy": 95,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "diamond_pearl": 95,
+        "platinum": 95,
+        "heartgold_soulsilver": 95
+    },
+    "power": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "pp": {
+        "diamond_pearl": 5,
+        "platinum": 5,
+        "heartgold_soulsilver": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "diamond_pearl": "fire",
+        "platinum": "fire",
+        "heartgold_soulsilver": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
-    "short_effect": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+    "effect_chance": {
+        "diamond_pearl": 50,
+        "platinum": 50,
+        "heartgold_soulsilver": 50
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "platinum": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 50% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "platinum": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "heartgold_soulsilver": "Has a 50% chance to burn the target. Lets frozen Pokémon thaw themselves."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is razed with a mystical fire of great intensity. It may also leave the target with a burn.",
         "platinum": "The foe is razed with a mystical fire of great intensity. It may also leave the target with a burn.",

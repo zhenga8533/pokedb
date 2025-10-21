@@ -2,17 +2,45 @@
     "id": 205,
     "name": "rollout",
     "source_url": "https://pokeapi.co/api/v2/move/205/",
-    "accuracy": 90,
-    "power": 30,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "power": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "rock",
+    "type": {
+        "sun_moon": "rock",
+        "ultra_sun_ultra_moon": "rock",
+        "lets_go_pikachu_lets_go_eevee": "rock"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
-    "short_effect": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power."
+    },
+    "short_effect": {
+        "sun_moon": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+        "ultra_sun_ultra_moon": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+        "lets_go_pikachu_lets_go_eevee": "Power doubles every turn this move is used in succession after the first, resetting after five turns."
+    },
     "flavor_text": {
         "sun_moon": "The user continually rolls into the target over five turns. It becomes more powerful each time it hits.",
         "ultra_sun_ultra_moon": "The user continually rolls into the target over five turns. It becomes more powerful each time it hits.",

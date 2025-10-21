@@ -2,17 +2,38 @@
     "id": 611,
     "name": "infestation",
     "source_url": "https://pokeapi.co/api/v2/move/611/",
-    "accuracy": 100,
-    "power": 20,
-    "pp": 20,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 20,
+        "omega_ruby_alpha_sapphire": 20
+    },
+    "pp": {
+        "x_y": 20,
+        "omega_ruby_alpha_sapphire": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "bug",
+    "type": {
+        "x_y": "bug",
+        "omega_ruby_alpha_sapphire": "bug"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. For the next 2–5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn. The user continues to use other moves during this time. If the user leaves the field, this effect ends. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use. rapid spin cancels this effect.",
-    "short_effect": "Prevents the target from fleeing and inflicts damage for 2-5 turns.",
+    "effect_chance": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. For the next 2–5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn. The user continues to use other moves during this time. If the user leaves the field, this effect ends. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use. rapid spin cancels this effect.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. For the next 2–5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn. The user continues to use other moves during this time. If the user leaves the field, this effect ends. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use. rapid spin cancels this effect."
+    },
+    "short_effect": {
+        "x_y": "Prevents the target from fleeing and inflicts damage for 2-5 turns.",
+        "omega_ruby_alpha_sapphire": "Prevents the target from fleeing and inflicts damage for 2-5 turns."
+    },
     "flavor_text": {
         "x_y": "The target is infested and attacked for four to five turns. The target can’t flee during this time.",
         "omega_ruby_alpha_sapphire": "The target is infested and attacked for four to five turns. The target can’t flee during this time."

@@ -2,17 +2,45 @@
     "id": 465,
     "name": "seed-flare",
     "source_url": "https://pokeapi.co/api/v2/move/465/",
-    "accuracy": 85,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "diamond_pearl": 85,
+        "platinum": 85,
+        "heartgold_soulsilver": 85
+    },
+    "power": {
+        "diamond_pearl": 120,
+        "platinum": 120,
+        "heartgold_soulsilver": 120
+    },
+    "pp": {
+        "diamond_pearl": 5,
+        "platinum": 5,
+        "heartgold_soulsilver": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "grass",
+    "type": {
+        "diamond_pearl": "grass",
+        "platinum": "grass",
+        "heartgold_soulsilver": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 40,
-    "effect": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
-    "short_effect": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+    "effect_chance": {
+        "diamond_pearl": 40,
+        "platinum": 40,
+        "heartgold_soulsilver": 40
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "platinum": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 40% chance to lower the target’s Special Defense by two stages."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "platinum": "Has a 40% chance to lower the target’s Special Defense by two stages.",
+        "heartgold_soulsilver": "Has a 40% chance to lower the target’s Special Defense by two stages."
+    },
     "flavor_text": {
         "diamond_pearl": "The user generates a shock wave from within its body. It may also lower the target’s Sp. Def.",
         "platinum": "The user generates a shock wave from within its body. It may also lower the target’s Sp. Def.",

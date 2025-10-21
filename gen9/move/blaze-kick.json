@@ -2,17 +2,45 @@
     "id": 299,
     "name": "blaze-kick",
     "source_url": "https://pokeapi.co/api/v2/move/299/",
-    "accuracy": 90,
-    "power": 85,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "power": {
+        "scarlet_violet": 85,
+        "the_teal_mask": 85,
+        "the_indigo_disk": 85
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "scarlet_violet": "fire",
+        "the_teal_mask": "fire",
+        "the_indigo_disk": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
-    "short_effect": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+    "effect_chance": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
+        "the_teal_mask": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
+        "the_indigo_disk": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+        "the_teal_mask": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+        "the_indigo_disk": "Has an increased chance for a critical hit and a 10% chance to burn the target."
+    },
     "flavor_text": {
         "scarlet_violet": "The user launches a kick that has a heightened chance of landing a critical hit. This may also leave the target with a burn."
     },

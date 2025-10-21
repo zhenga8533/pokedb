@@ -2,17 +2,45 @@
     "id": 527,
     "name": "electroweb",
     "source_url": "https://pokeapi.co/api/v2/move/527/",
-    "accuracy": 95,
-    "power": 55,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 95,
+        "ultra_sun_ultra_moon": 95,
+        "lets_go_pikachu_lets_go_eevee": 95
+    },
+    "power": {
+        "sun_moon": 55,
+        "ultra_sun_ultra_moon": 55,
+        "lets_go_pikachu_lets_go_eevee": 55
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "electric",
+    "type": {
+        "sun_moon": "electric",
+        "ultra_sun_ultra_moon": "electric",
+        "lets_go_pikachu_lets_go_eevee": "electric"
+    },
     "target": "all-opponents",
     "generation": "generation-v",
-    "effect_chance": 100,
-    "effect": "Lowers the target’s Speed by one stage.",
-    "short_effect": "Lowers the target’s Speed by one stage.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Lowers the target’s Speed by one stage.",
+        "ultra_sun_ultra_moon": "Lowers the target’s Speed by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Lowers the target’s Speed by one stage.",
+        "ultra_sun_ultra_moon": "Lowers the target’s Speed by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s Speed by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The user attacks and captures opposing Pokémon using an electric net. This lowers their Speed stat.",
         "ultra_sun_ultra_moon": "The user attacks and captures opposing Pokémon using an electric net. This lowers their Speed stat.",

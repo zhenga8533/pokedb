@@ -2,17 +2,45 @@
     "id": 731,
     "name": "floaty-fall",
     "source_url": "https://pokeapi.co/api/v2/move/731/",
-    "accuracy": 95,
-    "power": 90,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 95,
+        "ultra_sun_ultra_moon": 95,
+        "lets_go_pikachu_lets_go_eevee": 95
+    },
+    "power": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "flying",
+    "type": {
+        "sun_moon": "flying",
+        "ultra_sun_ultra_moon": "flying",
+        "lets_go_pikachu_lets_go_eevee": "flying"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage.",
-    "short_effect": "Inflicts regular damage with no additional effect.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage."
+    },
+    "short_effect": {
+        "sun_moon": "Inflicts regular damage with no additional effect.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage with no additional effect.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage with no additional effect."
+    },
     "flavor_text": {
         "lets_go_pikachu_lets_go_eevee": "The user floats in the air, and then dives at a steep angle to attack the target. This may also make the target flinch."
     },

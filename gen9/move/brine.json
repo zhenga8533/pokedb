@@ -2,17 +2,45 @@
     "id": 362,
     "name": "brine",
     "source_url": "https://pokeapi.co/api/v2/move/362/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 65,
+        "the_teal_mask": 65,
+        "the_indigo_disk": 65
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "scarlet_violet": "water",
+        "the_teal_mask": "water",
+        "the_indigo_disk": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the target has less than half its max HP remaining, this move has double power.",
-    "short_effect": "Has double power against Pokémon that have less than half their max HP remaining.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. If the target has less than half its max HP remaining, this move has double power.",
+        "the_teal_mask": "Inflicts regular damage. If the target has less than half its max HP remaining, this move has double power.",
+        "the_indigo_disk": "Inflicts regular damage. If the target has less than half its max HP remaining, this move has double power."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has double power against Pokémon that have less than half their max HP remaining.",
+        "the_teal_mask": "Has double power against Pokémon that have less than half their max HP remaining.",
+        "the_indigo_disk": "Has double power against Pokémon that have less than half their max HP remaining."
+    },
     "flavor_text": {
         "scarlet_violet": "This move's power is doubled if the target's HP is at half or less."
     },

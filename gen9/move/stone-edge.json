@@ -2,17 +2,45 @@
     "id": 444,
     "name": "stone-edge",
     "source_url": "https://pokeapi.co/api/v2/move/444/",
-    "accuracy": 80,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "scarlet_violet": 80,
+        "the_teal_mask": 80,
+        "the_indigo_disk": 80
+    },
+    "power": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "pp": {
+        "scarlet_violet": 5,
+        "the_teal_mask": 5,
+        "the_indigo_disk": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "rock",
+    "type": {
+        "scarlet_violet": "rock",
+        "the_teal_mask": "rock",
+        "the_indigo_disk": "rock"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
-    "short_effect": "Has an increased chance for a critical hit.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
+        "the_teal_mask": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
+        "the_indigo_disk": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has an increased chance for a critical hit.",
+        "the_teal_mask": "Has an increased chance for a critical hit.",
+        "the_indigo_disk": "Has an increased chance for a critical hit."
+    },
     "flavor_text": {
         "scarlet_violet": "The user stabs the target with sharpened stones. This move has a heightened chance of landing a critical hit."
     },

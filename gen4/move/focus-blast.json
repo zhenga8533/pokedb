@@ -2,17 +2,45 @@
     "id": 411,
     "name": "focus-blast",
     "source_url": "https://pokeapi.co/api/v2/move/411/",
-    "accuracy": 70,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "diamond_pearl": 70,
+        "platinum": 70,
+        "heartgold_soulsilver": 70
+    },
+    "power": {
+        "diamond_pearl": 120,
+        "platinum": 120,
+        "heartgold_soulsilver": 120
+    },
+    "pp": {
+        "diamond_pearl": 5,
+        "platinum": 5,
+        "heartgold_soulsilver": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fighting",
+    "type": {
+        "diamond_pearl": "fighting",
+        "platinum": "fighting",
+        "heartgold_soulsilver": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+    "effect_chance": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "platinum": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "platinum": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "heartgold_soulsilver": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "The user heightens its mental focus and unleashes its power. It may also lower the target’s Sp. Def.",
         "platinum": "The user heightens its mental focus and unleashes its power. It may also lower the target’s Sp. Def.",

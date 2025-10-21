@@ -2,17 +2,45 @@
     "id": 306,
     "name": "crush-claw",
     "source_url": "https://pokeapi.co/api/v2/move/306/",
-    "accuracy": 95,
-    "power": 75,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 95,
+        "platinum": 95,
+        "heartgold_soulsilver": 95
+    },
+    "power": {
+        "diamond_pearl": 75,
+        "platinum": 75,
+        "heartgold_soulsilver": 75
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "diamond_pearl": "normal",
+        "platinum": "normal",
+        "heartgold_soulsilver": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
-    "short_effect": "Has a 50% chance to lower the target’s Defense by one stage.",
+    "effect_chance": {
+        "diamond_pearl": 50,
+        "platinum": 50,
+        "heartgold_soulsilver": 50
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
+        "platinum": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 50% chance to lower the target’s Defense by one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 50% chance to lower the target’s Defense by one stage.",
+        "platinum": "Has a 50% chance to lower the target’s Defense by one stage.",
+        "heartgold_soulsilver": "Has a 50% chance to lower the target’s Defense by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "The user slashes the foe with hard and sharp claws. It may also lower the target’s Defense.",
         "platinum": "The user slashes the foe with hard and sharp claws. It may also lower the target’s Defense.",

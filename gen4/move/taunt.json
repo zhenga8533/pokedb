@@ -2,17 +2,45 @@
     "id": 269,
     "name": "taunt",
     "source_url": "https://pokeapi.co/api/v2/move/269/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "dark",
+    "type": {
+        "diamond_pearl": "dark",
+        "platinum": "dark",
+        "heartgold_soulsilver": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Target is forced to only use damaging moves for the next 3–5 turns, selected at random. Moves that select other moves not known in advance do not count as damaging. assist, copycat, me first, metronome, mirror move, and sleep talk do not directly inflict damage and thus may not be used. bide, counter, endeavor, metal burst, and mirror coat are allowed.",
-    "short_effect": "For the next few turns, the target can only use damaging moves.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Target is forced to only use damaging moves for the next 3–5 turns, selected at random. Moves that select other moves not known in advance do not count as damaging. assist, copycat, me first, metronome, mirror move, and sleep talk do not directly inflict damage and thus may not be used. bide, counter, endeavor, metal burst, and mirror coat are allowed.",
+        "platinum": "Target is forced to only use damaging moves for the next 3–5 turns, selected at random. Moves that select other moves not known in advance do not count as damaging. assist, copycat, me first, metronome, mirror move, and sleep talk do not directly inflict damage and thus may not be used. bide, counter, endeavor, metal burst, and mirror coat are allowed.",
+        "heartgold_soulsilver": "Target is forced to only use damaging moves for the next 3–5 turns, selected at random. Moves that select other moves not known in advance do not count as damaging. assist, copycat, me first, metronome, mirror move, and sleep talk do not directly inflict damage and thus may not be used. bide, counter, endeavor, metal burst, and mirror coat are allowed."
+    },
+    "short_effect": {
+        "diamond_pearl": "For the next few turns, the target can only use damaging moves.",
+        "platinum": "For the next few turns, the target can only use damaging moves.",
+        "heartgold_soulsilver": "For the next few turns, the target can only use damaging moves."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is taunted into a rage that allows it to use only attack moves for two to four turns.",
         "platinum": "The foe is taunted into a rage that allows it to use only attack moves for two to four turns.",

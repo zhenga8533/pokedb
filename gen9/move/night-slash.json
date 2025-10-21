@@ -2,17 +2,45 @@
     "id": 400,
     "name": "night-slash",
     "source_url": "https://pokeapi.co/api/v2/move/400/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 70,
+        "the_teal_mask": 70,
+        "the_indigo_disk": 70
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dark",
+    "type": {
+        "scarlet_violet": "dark",
+        "the_teal_mask": "dark",
+        "the_indigo_disk": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
-    "short_effect": "Has an increased chance for a critical hit.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
+        "the_teal_mask": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
+        "the_indigo_disk": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has an increased chance for a critical hit.",
+        "the_teal_mask": "Has an increased chance for a critical hit.",
+        "the_indigo_disk": "Has an increased chance for a critical hit."
+    },
     "flavor_text": {
         "scarlet_violet": "The user slashes the target the instant an opportunity arises. This move has a heightened chance of landing a critical hit."
     },

@@ -2,17 +2,59 @@
     "id": 324,
     "name": "signal-beam",
     "source_url": "https://pokeapi.co/api/v2/move/324/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 15,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 75,
+        "the_isle_of_armor": 75,
+        "the_crown_tundra": 75,
+        "brilliant_diamond_and_shining_pearl": 75,
+        "legends_arceus": 75
+    },
+    "pp": {
+        "sword_shield": 15,
+        "the_isle_of_armor": 15,
+        "the_crown_tundra": 15,
+        "brilliant_diamond_and_shining_pearl": 15,
+        "legends_arceus": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "bug",
+    "type": {
+        "sword_shield": "bug",
+        "the_isle_of_armor": "bug",
+        "the_crown_tundra": "bug",
+        "brilliant_diamond_and_shining_pearl": "bug",
+        "legends_arceus": "bug"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to confuse the target.",
-    "short_effect": "Has a 10% chance to confuse the target.",
+    "effect_chance": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 10% chance to confuse the target.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 10% chance to confuse the target.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 10% chance to confuse the target.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 10% chance to confuse the target.",
+        "legends_arceus": "Inflicts regular damage. Has a 10% chance to confuse the target."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 10% chance to confuse the target.",
+        "the_isle_of_armor": "Has a 10% chance to confuse the target.",
+        "the_crown_tundra": "Has a 10% chance to confuse the target.",
+        "brilliant_diamond_and_shining_pearl": "Has a 10% chance to confuse the target.",
+        "legends_arceus": "Has a 10% chance to confuse the target."
+    },
     "flavor_text": {
         "sword_shield": "This move can’t be used. It’s recommended that this move is forgotten. Once forgotten, this move can’t be remembered."
     },

@@ -2,17 +2,38 @@
     "id": 62,
     "name": "aurora-beam",
     "source_url": "https://pokeapi.co/api/v2/move/62/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 65,
+        "omega_ruby_alpha_sapphire": 65
+    },
+    "pp": {
+        "x_y": 20,
+        "omega_ruby_alpha_sapphire": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ice",
+    "type": {
+        "x_y": "ice",
+        "omega_ruby_alpha_sapphire": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Attack by one stage.",
+    "effect_chance": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Has a 10% chance to lower the target’s Attack by one stage."
+    },
+    "short_effect": {
+        "x_y": "Has a 10% chance to lower the target’s Attack by one stage.",
+        "omega_ruby_alpha_sapphire": "Has a 10% chance to lower the target’s Attack by one stage."
+    },
     "flavor_text": {
         "x_y": "The target is hit with a rainbow-colored beam. This may also lower the target’s Attack stat.",
         "omega_ruby_alpha_sapphire": "The target is hit with a rainbow-colored beam. This may also lower the target’s Attack stat."

@@ -2,17 +2,38 @@
     "id": 213,
     "name": "attract",
     "source_url": "https://pokeapi.co/api/v2/move/213/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "pp": {
+        "gold_silver": 15,
+        "crystal": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "gold_silver": "normal",
+        "crystal": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Causes the target to fall in love with the user, giving it a 50% chance to do nothing each turn. If the user and target are the same gender, or either is genderless, this move will fail. If either Pokémon leaves the field, this effect ends.",
-    "short_effect": "Target falls in love if it has the opposite gender, and has a 50% chance to refuse attacking the user.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Causes the target to fall in love with the user, giving it a 50% chance to do nothing each turn. If the user and target are the same gender, or either is genderless, this move will fail. If either Pokémon leaves the field, this effect ends.",
+        "crystal": "Causes the target to fall in love with the user, giving it a 50% chance to do nothing each turn. If the user and target are the same gender, or either is genderless, this move will fail. If either Pokémon leaves the field, this effect ends."
+    },
+    "short_effect": {
+        "gold_silver": "Target falls in love if it has the opposite gender, and has a 50% chance to refuse attacking the user.",
+        "crystal": "Target falls in love if it has the opposite gender, and has a 50% chance to refuse attacking the user."
+    },
     "flavor_text": {
         "gold_silver": "Makes the opposite gender infatuated.",
         "crystal": "Makes the opposite gender infatuated."

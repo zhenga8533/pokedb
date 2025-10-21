@@ -2,17 +2,38 @@
     "id": 243,
     "name": "mirror-coat",
     "source_url": "https://pokeapi.co/api/v2/move/243/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "pp": {
+        "gold_silver": 20,
+        "crystal": 20
+    },
     "priority": -5,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "gold_silver": "psychic",
+        "crystal": "psychic"
+    },
     "target": "specific-move",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Targets the last opposing Pokémon to hit the user with a special move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
-    "short_effect": "Inflicts twice the damage the user received from the last special hit it took.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Targets the last opposing Pokémon to hit the user with a special move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
+        "crystal": "Targets the last opposing Pokémon to hit the user with a special move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome."
+    },
+    "short_effect": {
+        "gold_silver": "Inflicts twice the damage the user received from the last special hit it took.",
+        "crystal": "Inflicts twice the damage the user received from the last special hit it took."
+    },
     "flavor_text": {
         "gold_silver": "Counters a SPCL. ATK. move double.",
         "crystal": "Counters a SPCL. ATK move double."

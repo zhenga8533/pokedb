@@ -2,17 +2,45 @@
     "id": 78,
     "name": "stun-spore",
     "source_url": "https://pokeapi.co/api/v2/move/78/",
-    "accuracy": 75,
-    "power": null,
-    "pp": 30,
+    "accuracy": {
+        "sun_moon": 75,
+        "ultra_sun_ultra_moon": 75,
+        "lets_go_pikachu_lets_go_eevee": 75
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "grass",
+    "type": {
+        "sun_moon": "grass",
+        "ultra_sun_ultra_moon": "grass",
+        "lets_go_pikachu_lets_go_eevee": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Paralyzes the target.",
-    "short_effect": "Paralyzes the target.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Paralyzes the target.",
+        "ultra_sun_ultra_moon": "Paralyzes the target.",
+        "lets_go_pikachu_lets_go_eevee": "Paralyzes the target."
+    },
+    "short_effect": {
+        "sun_moon": "Paralyzes the target.",
+        "ultra_sun_ultra_moon": "Paralyzes the target.",
+        "lets_go_pikachu_lets_go_eevee": "Paralyzes the target."
+    },
     "flavor_text": {
         "sun_moon": "The user scatters a cloud of numbing powder that paralyzes the target.",
         "ultra_sun_ultra_moon": "The user scatters a cloud of numbing powder that paralyzes the target.",

@@ -2,17 +2,45 @@
     "id": 553,
     "name": "freeze-shock",
     "source_url": "https://pokeapi.co/api/v2/move/553/",
-    "accuracy": 90,
-    "power": 140,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "power": {
+        "sun_moon": 140,
+        "ultra_sun_ultra_moon": 140,
+        "lets_go_pikachu_lets_go_eevee": 140
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ice",
+    "type": {
+        "sun_moon": "ice",
+        "ultra_sun_ultra_moon": "ice",
+        "lets_go_pikachu_lets_go_eevee": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target. User charges for one turn before attacking.",
-    "short_effect": "Requires a turn to charge before attacking. Has a 30% chance to paralyze the target.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 30% chance to paralyze the target. User charges for one turn before attacking.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 30% chance to paralyze the target. User charges for one turn before attacking.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 30% chance to paralyze the target. User charges for one turn before attacking."
+    },
+    "short_effect": {
+        "sun_moon": "Requires a turn to charge before attacking. Has a 30% chance to paralyze the target.",
+        "ultra_sun_ultra_moon": "Requires a turn to charge before attacking. Has a 30% chance to paralyze the target.",
+        "lets_go_pikachu_lets_go_eevee": "Requires a turn to charge before attacking. Has a 30% chance to paralyze the target."
+    },
     "flavor_text": {
         "sun_moon": "On the second turn, the user hits the target with electrically charged ice. This may also leave the target with paralysis.",
         "ultra_sun_ultra_moon": "On the second turn, the user hits the target with electrically charged ice. This may also leave the target with paralysis.",

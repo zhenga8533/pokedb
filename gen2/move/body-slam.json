@@ -2,17 +2,38 @@
     "id": 34,
     "name": "body-slam",
     "source_url": "https://pokeapi.co/api/v2/move/34/",
-    "accuracy": 100,
-    "power": 85,
-    "pp": 15,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": 85,
+        "crystal": 85
+    },
+    "pp": {
+        "gold_silver": 15,
+        "crystal": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "gold_silver": "normal",
+        "crystal": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
-    "short_effect": "Has a 30% chance to paralyze the target.",
+    "effect_chance": {
+        "gold_silver": 30,
+        "crystal": 30
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "crystal": "Inflicts regular damage. Has a 30% chance to paralyze the target."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 30% chance to paralyze the target.",
+        "crystal": "Has a 30% chance to paralyze the target."
+    },
     "flavor_text": {
         "gold_silver": "An attack that may cause paralysis.",
         "crystal": "An attack that may cause paralysis."

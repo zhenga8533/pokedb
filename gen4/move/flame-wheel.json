@@ -2,17 +2,45 @@
     "id": 172,
     "name": "flame-wheel",
     "source_url": "https://pokeapi.co/api/v2/move/172/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 25,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 60,
+        "platinum": 60,
+        "heartgold_soulsilver": 60
+    },
+    "pp": {
+        "diamond_pearl": 25,
+        "platinum": 25,
+        "heartgold_soulsilver": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "diamond_pearl": "fire",
+        "platinum": "fire",
+        "heartgold_soulsilver": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
-    "short_effect": "Has a 10% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+    "effect_chance": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 10% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "platinum": "Inflicts regular damage. Has a 10% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 10% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 10% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "platinum": "Has a 10% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "heartgold_soulsilver": "Has a 10% chance to burn the target. Lets frozen Pokémon thaw themselves."
+    },
     "flavor_text": {
         "diamond_pearl": "The user cloaks itself in fire and charges at the foe. It may also leave the target with a burn.",
         "platinum": "The user cloaks itself in fire and charges at the foe. It may also leave the target with a burn.",

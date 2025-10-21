@@ -2,17 +2,45 @@
     "id": 523,
     "name": "bulldoze",
     "source_url": "https://pokeapi.co/api/v2/move/523/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 60,
+        "ultra_sun_ultra_moon": 60,
+        "lets_go_pikachu_lets_go_eevee": 60
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ground",
+    "type": {
+        "sun_moon": "ground",
+        "ultra_sun_ultra_moon": "ground",
+        "lets_go_pikachu_lets_go_eevee": "ground"
+    },
     "target": "all-other-pokemon",
     "generation": "generation-v",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s Speed by one stage.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 100% chance to lower the target’s Speed by one stage.",
+        "ultra_sun_ultra_moon": "Has a 100% chance to lower the target’s Speed by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 100% chance to lower the target’s Speed by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The user strikes everything around it by stomping down on the ground. This lowers the Speed stat of those hit.",
         "ultra_sun_ultra_moon": "The user strikes everything around it by stomping down on the ground. This lowers the Speed stat of those hit.",

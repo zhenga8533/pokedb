@@ -2,17 +2,38 @@
     "id": 344,
     "name": "volt-tackle",
     "source_url": "https://pokeapi.co/api/v2/move/344/",
-    "accuracy": 100,
-    "power": 120,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 120,
+        "black_2_white_2": 120
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "black_white": "electric",
+        "black_2_white_2": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. User takes 1/3 the damage it inflicts in recoil. Has a 10% chance to paralyze the target.",
-    "short_effect": "User takes 1/3 the damage inflicted in recoil. Has a 10% chance to paralyze the target.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. User takes 1/3 the damage it inflicts in recoil. Has a 10% chance to paralyze the target.",
+        "black_2_white_2": "Inflicts regular damage. User takes 1/3 the damage it inflicts in recoil. Has a 10% chance to paralyze the target."
+    },
+    "short_effect": {
+        "black_white": "User takes 1/3 the damage inflicted in recoil. Has a 10% chance to paralyze the target.",
+        "black_2_white_2": "User takes 1/3 the damage inflicted in recoil. Has a 10% chance to paralyze the target."
+    },
     "flavor_text": {
         "black_white": "The user electrifies itself, then charges. It causes considerable damage to the user and may leave the target with paralysis.",
         "black_2_white_2": "The user electrifies itself, then charges. It causes considerable damage to the user and may leave the target with paralysis."

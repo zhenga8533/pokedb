@@ -2,17 +2,45 @@
     "id": 298,
     "name": "teeter-dance",
     "source_url": "https://pokeapi.co/api/v2/move/298/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "sun_moon": "normal",
+        "ultra_sun_ultra_moon": "normal",
+        "lets_go_pikachu_lets_go_eevee": "normal"
+    },
     "target": "all-other-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Confuses all targets.",
-    "short_effect": "Confuses the target.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Confuses all targets.",
+        "ultra_sun_ultra_moon": "Confuses all targets.",
+        "lets_go_pikachu_lets_go_eevee": "Confuses all targets."
+    },
+    "short_effect": {
+        "sun_moon": "Confuses the target.",
+        "ultra_sun_ultra_moon": "Confuses the target.",
+        "lets_go_pikachu_lets_go_eevee": "Confuses the target."
+    },
     "flavor_text": {
         "sun_moon": "The user performs a wobbly dance that confuses the Pokémon around it.",
         "ultra_sun_ultra_moon": "The user performs a wobbly dance that confuses the Pokémon around it.",

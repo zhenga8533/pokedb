@@ -2,17 +2,38 @@
     "id": 63,
     "name": "hyper-beam",
     "source_url": "https://pokeapi.co/api/v2/move/63/",
-    "accuracy": 90,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "gold_silver": 90,
+        "crystal": 90
+    },
+    "power": {
+        "gold_silver": 150,
+        "crystal": 150
+    },
+    "pp": {
+        "gold_silver": 5,
+        "crystal": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "normal",
+    "type": {
+        "gold_silver": "normal",
+        "crystal": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
-    "short_effect": "User foregoes its next turn to recharge.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+        "crystal": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn."
+    },
+    "short_effect": {
+        "gold_silver": "User foregoes its next turn to recharge.",
+        "crystal": "User foregoes its next turn to recharge."
+    },
     "flavor_text": {
         "gold_silver": "1st turn: Attack 2nd turn: Rest",
         "crystal": "1st turn: Attack 2nd turn: Rest"

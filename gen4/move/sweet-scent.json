@@ -2,17 +2,45 @@
     "id": 230,
     "name": "sweet-scent",
     "source_url": "https://pokeapi.co/api/v2/move/230/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "diamond_pearl": "normal",
+        "platinum": "normal",
+        "heartgold_soulsilver": "normal"
+    },
     "target": "all-opponents",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Lowers the target’s evasion by one stage.",
-    "short_effect": "Lowers the target’s evasion by one stage.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Lowers the target’s evasion by one stage.",
+        "platinum": "Lowers the target’s evasion by one stage.",
+        "heartgold_soulsilver": "Lowers the target’s evasion by one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Lowers the target’s evasion by one stage.",
+        "platinum": "Lowers the target’s evasion by one stage.",
+        "heartgold_soulsilver": "Lowers the target’s evasion by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "A sweet scent that lowers the foe’s evasiveness. It also lures wild Pokémon if used in grass, etc.",
         "platinum": "A sweet scent that lowers the foe’s evasiveness. It also lures wild Pokémon if used in grass, etc.",

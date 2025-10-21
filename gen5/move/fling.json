@@ -2,17 +2,38 @@
     "id": 374,
     "name": "fling",
     "source_url": "https://pokeapi.co/api/v2/move/374/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dark",
+    "type": {
+        "black_white": "dark",
+        "black_2_white_2": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power and type are determined by the user’s held item. The item is consumed. If the user is not holding an item, or its item has no set type and power, this move will fail. This move ignores sticky hold. If the user is under the effect of embargo, this move will fail.",
-    "short_effect": "Throws held item at the target; power depends on the item.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Power and type are determined by the user’s held item. The item is consumed. If the user is not holding an item, or its item has no set type and power, this move will fail. This move ignores sticky hold. If the user is under the effect of embargo, this move will fail.",
+        "black_2_white_2": "Inflicts regular damage. Power and type are determined by the user’s held item. The item is consumed. If the user is not holding an item, or its item has no set type and power, this move will fail. This move ignores sticky hold. If the user is under the effect of embargo, this move will fail."
+    },
+    "short_effect": {
+        "black_white": "Throws held item at the target; power depends on the item.",
+        "black_2_white_2": "Throws held item at the target; power depends on the item."
+    },
     "flavor_text": {
         "black_white": "The user flings its held item at the target to attack. Its power and effects depend on the item.",
         "black_2_white_2": "The user flings its held item at the target to attack. Its power and effects depend on the item."

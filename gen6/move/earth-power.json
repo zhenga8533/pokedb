@@ -2,17 +2,38 @@
     "id": 414,
     "name": "earth-power",
     "source_url": "https://pokeapi.co/api/v2/move/414/",
-    "accuracy": 100,
-    "power": 90,
-    "pp": 10,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 90,
+        "omega_ruby_alpha_sapphire": 90
+    },
+    "pp": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ground",
+    "type": {
+        "x_y": "ground",
+        "omega_ruby_alpha_sapphire": "ground"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+    "effect_chance": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "x_y": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "omega_ruby_alpha_sapphire": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
     "flavor_text": {
         "x_y": "The user makes the ground under the target erupt with power. This may also lower the target’s Sp. Def.",
         "omega_ruby_alpha_sapphire": "The user makes the ground under the target erupt with power. This may also lower the target’s Sp. Def."

@@ -2,17 +2,45 @@
     "id": 223,
     "name": "dynamic-punch",
     "source_url": "https://pokeapi.co/api/v2/move/223/",
-    "accuracy": 50,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 50,
+        "ultra_sun_ultra_moon": 50,
+        "lets_go_pikachu_lets_go_eevee": 50
+    },
+    "power": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "sun_moon": "fighting",
+        "ultra_sun_ultra_moon": "fighting",
+        "lets_go_pikachu_lets_go_eevee": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to confuse the target.",
-    "short_effect": "Has a 100% chance to confuse the target.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 100% chance to confuse the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 100% chance to confuse the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 100% chance to confuse the target."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 100% chance to confuse the target.",
+        "ultra_sun_ultra_moon": "Has a 100% chance to confuse the target.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 100% chance to confuse the target."
+    },
     "flavor_text": {
         "sun_moon": "The user punches the target with full, concentrated power. This confuses the target if it hits.",
         "ultra_sun_ultra_moon": "The user punches the target with full, concentrated power. This confuses the target if it hits.",

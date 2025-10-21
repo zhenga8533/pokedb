@@ -2,17 +2,45 @@
     "id": 206,
     "name": "false-swipe",
     "source_url": "https://pokeapi.co/api/v2/move/206/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 40,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 40,
+        "the_teal_mask": 40,
+        "the_indigo_disk": 40
+    },
+    "pp": {
+        "scarlet_violet": 40,
+        "the_teal_mask": 40,
+        "the_indigo_disk": 40
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "scarlet_violet": "normal",
+        "the_teal_mask": "normal",
+        "the_indigo_disk": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Will not reduce the target’s HP below 1.",
-    "short_effect": "Cannot lower the target’s HP below 1.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Will not reduce the target’s HP below 1.",
+        "the_teal_mask": "Inflicts regular damage. Will not reduce the target’s HP below 1.",
+        "the_indigo_disk": "Inflicts regular damage. Will not reduce the target’s HP below 1."
+    },
+    "short_effect": {
+        "scarlet_violet": "Cannot lower the target’s HP below 1.",
+        "the_teal_mask": "Cannot lower the target’s HP below 1.",
+        "the_indigo_disk": "Cannot lower the target’s HP below 1."
+    },
     "flavor_text": {
         "scarlet_violet": "A restrained attack that prevents the target from fainting. The target is left with at least 1 HP."
     },

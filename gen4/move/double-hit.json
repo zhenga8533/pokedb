@@ -2,17 +2,45 @@
     "id": 458,
     "name": "double-hit",
     "source_url": "https://pokeapi.co/api/v2/move/458/",
-    "accuracy": 90,
-    "power": 35,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 90,
+        "platinum": 90,
+        "heartgold_soulsilver": 90
+    },
+    "power": {
+        "diamond_pearl": 35,
+        "platinum": 35,
+        "heartgold_soulsilver": 35
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "diamond_pearl": "normal",
+        "platinum": "normal",
+        "heartgold_soulsilver": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Hits twice in one turn.",
-    "short_effect": "Hits twice in one turn.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Hits twice in one turn.",
+        "platinum": "Inflicts regular damage. Hits twice in one turn.",
+        "heartgold_soulsilver": "Inflicts regular damage. Hits twice in one turn."
+    },
+    "short_effect": {
+        "diamond_pearl": "Hits twice in one turn.",
+        "platinum": "Hits twice in one turn.",
+        "heartgold_soulsilver": "Hits twice in one turn."
+    },
     "flavor_text": {
         "diamond_pearl": "The user slams the foe with a tail, etc. The target is hit twice in a row.",
         "platinum": "The user slams the foe with a tail, etc. The target is hit twice in a row.",

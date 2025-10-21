@@ -2,17 +2,45 @@
     "id": 712,
     "name": "spectral-thief",
     "source_url": "https://pokeapi.co/api/v2/move/712/",
-    "accuracy": 100,
-    "power": 90,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ghost",
+    "type": {
+        "sun_moon": "ghost",
+        "ultra_sun_ultra_moon": "ghost",
+        "lets_go_pikachu_lets_go_eevee": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "Steals the target’s stat increases, then inflicts regular damage. Will not steal stat increases that would put any of the user’s stats at more than +6; any excess is left on the target. Stolen increases are affected by abilities as normal.",
-    "short_effect": "Steals the target’s stat increases, then inflicts damage.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Steals the target’s stat increases, then inflicts regular damage. Will not steal stat increases that would put any of the user’s stats at more than +6; any excess is left on the target. Stolen increases are affected by abilities as normal.",
+        "ultra_sun_ultra_moon": "Steals the target’s stat increases, then inflicts regular damage. Will not steal stat increases that would put any of the user’s stats at more than +6; any excess is left on the target. Stolen increases are affected by abilities as normal.",
+        "lets_go_pikachu_lets_go_eevee": "Steals the target’s stat increases, then inflicts regular damage. Will not steal stat increases that would put any of the user’s stats at more than +6; any excess is left on the target. Stolen increases are affected by abilities as normal."
+    },
+    "short_effect": {
+        "sun_moon": "Steals the target’s stat increases, then inflicts damage.",
+        "ultra_sun_ultra_moon": "Steals the target’s stat increases, then inflicts damage.",
+        "lets_go_pikachu_lets_go_eevee": "Steals the target’s stat increases, then inflicts damage."
+    },
     "flavor_text": {
         "sun_moon": "The user hides in the target’s shadow, steals the target’s stat boosts, and then attacks.",
         "ultra_sun_ultra_moon": "The user hides in the target’s shadow, steals the target’s stat boosts, and then attacks.",

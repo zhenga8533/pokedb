@@ -2,17 +2,38 @@
     "id": 552,
     "name": "fiery-dance",
     "source_url": "https://pokeapi.co/api/v2/move/552/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 80,
+        "black_2_white_2": 80
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fire",
+    "type": {
+        "black_white": "fire",
+        "black_2_white_2": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to raise the user’s Special Attack by one stage.",
-    "short_effect": "Has a 50% chance to raise the user’s Special Attack by one stage.",
+    "effect_chance": {
+        "black_white": 50,
+        "black_2_white_2": 50
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 50% chance to raise the user’s Special Attack by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 50% chance to raise the user’s Special Attack by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 50% chance to raise the user’s Special Attack by one stage.",
+        "black_2_white_2": "Has a 50% chance to raise the user’s Special Attack by one stage."
+    },
     "flavor_text": {
         "black_white": "Cloaked in flames, the user dances and flaps its wings. It may also raise the user’s Sp. Atk stat.",
         "black_2_white_2": "Cloaked in flames, the user dances and flaps its wings. It may also raise the user’s Sp. Atk stat."

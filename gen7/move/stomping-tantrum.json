@@ -2,17 +2,45 @@
     "id": 707,
     "name": "stomping-tantrum",
     "source_url": "https://pokeapi.co/api/v2/move/707/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 75,
+        "ultra_sun_ultra_moon": 75,
+        "lets_go_pikachu_lets_go_eevee": 75
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ground",
+    "type": {
+        "sun_moon": "ground",
+        "ultra_sun_ultra_moon": "ground",
+        "lets_go_pikachu_lets_go_eevee": "ground"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power is doubled if the user’s last move failed for any reason (i.e., produced the message \"But it failed!\") or was ineffective due to types.",
-    "short_effect": "Has double power if the user’s last move failed.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Power is doubled if the user’s last move failed for any reason (i.e., produced the message \"But it failed!\") or was ineffective due to types.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Power is doubled if the user’s last move failed for any reason (i.e., produced the message \"But it failed!\") or was ineffective due to types.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Power is doubled if the user’s last move failed for any reason (i.e., produced the message \"But it failed!\") or was ineffective due to types."
+    },
+    "short_effect": {
+        "sun_moon": "Has double power if the user’s last move failed.",
+        "ultra_sun_ultra_moon": "Has double power if the user’s last move failed.",
+        "lets_go_pikachu_lets_go_eevee": "Has double power if the user’s last move failed."
+    },
     "flavor_text": {
         "sun_moon": "Driven by frustration, the user attacks the target. If the user’s previous move has failed, the power of this move doubles.",
         "ultra_sun_ultra_moon": "Driven by frustration, the user attacks the target. If the user’s previous move has failed, the power of this move doubles.",

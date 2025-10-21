@@ -2,17 +2,45 @@
     "id": 552,
     "name": "fiery-dance",
     "source_url": "https://pokeapi.co/api/v2/move/552/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 80,
+        "the_teal_mask": 80,
+        "the_indigo_disk": 80
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fire",
+    "type": {
+        "scarlet_violet": "fire",
+        "the_teal_mask": "fire",
+        "the_indigo_disk": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to raise the user’s Special Attack by one stage.",
-    "short_effect": "Has a 50% chance to raise the user’s Special Attack by one stage.",
+    "effect_chance": {
+        "scarlet_violet": 50,
+        "the_teal_mask": 50,
+        "the_indigo_disk": 50
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 50% chance to raise the user’s Special Attack by one stage.",
+        "the_teal_mask": "Inflicts regular damage. Has a 50% chance to raise the user’s Special Attack by one stage.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 50% chance to raise the user’s Special Attack by one stage."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 50% chance to raise the user’s Special Attack by one stage.",
+        "the_teal_mask": "Has a 50% chance to raise the user’s Special Attack by one stage.",
+        "the_indigo_disk": "Has a 50% chance to raise the user’s Special Attack by one stage."
+    },
     "flavor_text": {
         "scarlet_violet": "Cloaked in flames, the user attacks the target by dancing and flapping its wings. This may also boost the user's Sp. Atk stat."
     },

@@ -2,17 +2,38 @@
     "id": 231,
     "name": "iron-tail",
     "source_url": "https://pokeapi.co/api/v2/move/231/",
-    "accuracy": 75,
-    "power": 100,
-    "pp": 15,
+    "accuracy": {
+        "gold_silver": 75,
+        "crystal": 75
+    },
+    "power": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "pp": {
+        "gold_silver": 15,
+        "crystal": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "gold_silver": "steel",
+        "crystal": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to lower the target’s Defense by one stage.",
-    "short_effect": "Has a 30% chance to lower the target’s Defense by one stage.",
+    "effect_chance": {
+        "gold_silver": 30,
+        "crystal": 30
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 30% chance to lower the target’s Defense by one stage.",
+        "crystal": "Inflicts regular damage. Has a 30% chance to lower the target’s Defense by one stage."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 30% chance to lower the target’s Defense by one stage.",
+        "crystal": "Has a 30% chance to lower the target’s Defense by one stage."
+    },
     "flavor_text": {
         "gold_silver": "An attack that may reduce DEFENSE.",
         "crystal": "An attack that may reduce DEFENSE."

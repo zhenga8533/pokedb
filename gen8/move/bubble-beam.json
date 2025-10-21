@@ -2,17 +2,59 @@
     "id": 61,
     "name": "bubble-beam",
     "source_url": "https://pokeapi.co/api/v2/move/61/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 65,
+        "the_isle_of_armor": 65,
+        "the_crown_tundra": 65,
+        "brilliant_diamond_and_shining_pearl": 65,
+        "legends_arceus": 65
+    },
+    "pp": {
+        "sword_shield": 20,
+        "the_isle_of_armor": 20,
+        "the_crown_tundra": 20,
+        "brilliant_diamond_and_shining_pearl": 20,
+        "legends_arceus": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "sword_shield": "water",
+        "the_isle_of_armor": "water",
+        "the_crown_tundra": "water",
+        "brilliant_diamond_and_shining_pearl": "water",
+        "legends_arceus": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Speed by one stage.",
+    "effect_chance": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "legends_arceus": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "the_isle_of_armor": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "the_crown_tundra": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "legends_arceus": "Has a 10% chance to lower the target’s Speed by one stage."
+    },
     "flavor_text": {
         "sword_shield": "A spray of bubbles is forcefully ejected at the target. This may also lower the target’s Speed stat.",
         "legends_arceus": "A spray of bubbles is forcefully ejected at the target. This may also lower the target's Speed stat."

@@ -2,17 +2,38 @@
     "id": 252,
     "name": "fake-out",
     "source_url": "https://pokeapi.co/api/v2/move/252/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 10,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 40,
+        "omega_ruby_alpha_sapphire": 40
+    },
+    "pp": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
     "priority": 3,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "x_y": "normal",
+        "omega_ruby_alpha_sapphire": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
-    "short_effect": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+    "effect_chance": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field."
+    },
+    "short_effect": {
+        "x_y": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+        "omega_ruby_alpha_sapphire": "Can only be used as the first move after the user enters battle. Causes the target to flinch."
+    },
     "flavor_text": {
         "x_y": "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
         "omega_ruby_alpha_sapphire": "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle."

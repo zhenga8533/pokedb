@@ -2,17 +2,38 @@
     "id": 132,
     "name": "constrict",
     "source_url": "https://pokeapi.co/api/v2/move/132/",
-    "accuracy": 100,
-    "power": 10,
-    "pp": 35,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
+    "pp": {
+        "gold_silver": 35,
+        "crystal": 35
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "gold_silver": "normal",
+        "crystal": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Speed by one stage.",
+    "effect_chance": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
+        "crystal": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 10% chance to lower the target’s Speed by one stage.",
+        "crystal": "Has a 10% chance to lower the target’s Speed by one stage."
+    },
     "flavor_text": {
         "gold_silver": "An attack that may lower SPEED.",
         "crystal": "An attack that may lower SPEED."

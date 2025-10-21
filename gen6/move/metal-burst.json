@@ -2,17 +2,38 @@
     "id": 368,
     "name": "metal-burst",
     "source_url": "https://pokeapi.co/api/v2/move/368/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "pp": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "x_y": "steel",
+        "omega_ruby_alpha_sapphire": "steel"
+    },
     "target": "specific-move",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
-    "short_effect": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+    "effect_chance": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "effect": {
+        "x_y": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
+        "omega_ruby_alpha_sapphire": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored."
+    },
+    "short_effect": {
+        "x_y": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+        "omega_ruby_alpha_sapphire": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage."
+    },
     "flavor_text": {
         "x_y": "The user retaliates with much greater power against the target that last inflicted damage on it.",
         "omega_ruby_alpha_sapphire": "The user retaliates with much greater power against the opponent that last inflicted damage on it."

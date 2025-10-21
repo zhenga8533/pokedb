@@ -2,17 +2,45 @@
     "id": 717,
     "name": "natures-madness",
     "source_url": "https://pokeapi.co/api/v2/move/717/",
-    "accuracy": 90,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fairy",
+    "type": {
+        "scarlet_violet": "fairy",
+        "the_teal_mask": "fairy",
+        "the_indigo_disk": "fairy"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "Inflicts typeless damage equal to half the target’s remaining HP.",
-    "short_effect": "Inflicts damage equal to half the target’s HP.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts typeless damage equal to half the target’s remaining HP.",
+        "the_teal_mask": "Inflicts typeless damage equal to half the target’s remaining HP.",
+        "the_indigo_disk": "Inflicts typeless damage equal to half the target’s remaining HP."
+    },
+    "short_effect": {
+        "scarlet_violet": "Inflicts damage equal to half the target’s HP.",
+        "the_teal_mask": "Inflicts damage equal to half the target’s HP.",
+        "the_indigo_disk": "Inflicts damage equal to half the target’s HP."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

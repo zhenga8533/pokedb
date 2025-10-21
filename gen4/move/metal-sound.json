@@ -2,17 +2,45 @@
     "id": 319,
     "name": "metal-sound",
     "source_url": "https://pokeapi.co/api/v2/move/319/",
-    "accuracy": 85,
-    "power": null,
-    "pp": 40,
+    "accuracy": {
+        "diamond_pearl": 85,
+        "platinum": 85,
+        "heartgold_soulsilver": 85
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 40,
+        "platinum": 40,
+        "heartgold_soulsilver": 40
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "steel",
+    "type": {
+        "diamond_pearl": "steel",
+        "platinum": "steel",
+        "heartgold_soulsilver": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Lowers the target’s Special Defense by two stages.",
-    "short_effect": "Lowers the target’s Special Defense by two stages.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Lowers the target’s Special Defense by two stages.",
+        "platinum": "Lowers the target’s Special Defense by two stages.",
+        "heartgold_soulsilver": "Lowers the target’s Special Defense by two stages."
+    },
+    "short_effect": {
+        "diamond_pearl": "Lowers the target’s Special Defense by two stages.",
+        "platinum": "Lowers the target’s Special Defense by two stages.",
+        "heartgold_soulsilver": "Lowers the target’s Special Defense by two stages."
+    },
     "flavor_text": {
         "diamond_pearl": "A horrible sound like scraping metal is emitted to sharply reduce the foe’s Sp. Def stat.",
         "platinum": "A horrible sound like scraping metal is emitted to sharply reduce the foe’s Sp. Def stat.",

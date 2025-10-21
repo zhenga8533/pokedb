@@ -2,17 +2,45 @@
     "id": 109,
     "name": "confuse-ray",
     "source_url": "https://pokeapi.co/api/v2/move/109/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "ghost",
+    "type": {
+        "diamond_pearl": "ghost",
+        "platinum": "ghost",
+        "heartgold_soulsilver": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Confuses the target.",
-    "short_effect": "Confuses the target.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Confuses the target.",
+        "platinum": "Confuses the target.",
+        "heartgold_soulsilver": "Confuses the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Confuses the target.",
+        "platinum": "Confuses the target.",
+        "heartgold_soulsilver": "Confuses the target."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is exposed to a sinister ray that triggers confusion.",
         "platinum": "The foe is exposed to a sinister ray that triggers confusion.",

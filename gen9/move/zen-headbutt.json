@@ -2,17 +2,45 @@
     "id": 428,
     "name": "zen-headbutt",
     "source_url": "https://pokeapi.co/api/v2/move/428/",
-    "accuracy": 90,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "power": {
+        "scarlet_violet": 80,
+        "the_teal_mask": 80,
+        "the_indigo_disk": 80
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "psychic",
+    "type": {
+        "scarlet_violet": "psychic",
+        "the_teal_mask": "psychic",
+        "the_indigo_disk": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
-    "short_effect": "Has a 20% chance to make the target flinch.",
+    "effect_chance": {
+        "scarlet_violet": 20,
+        "the_teal_mask": 20,
+        "the_indigo_disk": 20
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "the_teal_mask": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 20% chance to make the target flinch."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 20% chance to make the target flinch.",
+        "the_teal_mask": "Has a 20% chance to make the target flinch.",
+        "the_indigo_disk": "Has a 20% chance to make the target flinch."
+    },
     "flavor_text": {
         "scarlet_violet": "The user focuses its willpower to its head and attacks the target. This may also make the target flinch."
     },

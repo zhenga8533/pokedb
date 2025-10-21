@@ -2,17 +2,45 @@
     "id": 598,
     "name": "eerie-impulse",
     "source_url": "https://pokeapi.co/api/v2/move/598/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "electric",
+    "type": {
+        "sun_moon": "electric",
+        "ultra_sun_ultra_moon": "electric",
+        "lets_go_pikachu_lets_go_eevee": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": null,
-    "effect": "Lowers the target’s Special Attack by two stages.",
-    "short_effect": "Lowers the target’s Special Attack by two stages.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Lowers the target’s Special Attack by two stages.",
+        "ultra_sun_ultra_moon": "Lowers the target’s Special Attack by two stages.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s Special Attack by two stages."
+    },
+    "short_effect": {
+        "sun_moon": "Lowers the target’s Special Attack by two stages.",
+        "ultra_sun_ultra_moon": "Lowers the target’s Special Attack by two stages.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s Special Attack by two stages."
+    },
     "flavor_text": {
         "sun_moon": "The user’s body generates an eerie impulse. Exposing the target to it harshly lowers the target’s Sp. Atk stat.",
         "ultra_sun_ultra_moon": "The user’s body generates an eerie impulse. Exposing the target to it harshly lowers the target’s Sp. Atk stat.",

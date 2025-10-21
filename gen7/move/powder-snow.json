@@ -2,17 +2,45 @@
     "id": 181,
     "name": "powder-snow",
     "source_url": "https://pokeapi.co/api/v2/move/181/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 25,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 40,
+        "ultra_sun_ultra_moon": 40,
+        "lets_go_pikachu_lets_go_eevee": 40
+    },
+    "pp": {
+        "sun_moon": 25,
+        "ultra_sun_ultra_moon": 25,
+        "lets_go_pikachu_lets_go_eevee": 25
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ice",
+    "type": {
+        "sun_moon": "ice",
+        "ultra_sun_ultra_moon": "ice",
+        "lets_go_pikachu_lets_go_eevee": "ice"
+    },
     "target": "all-opponents",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to freeze the target.",
-    "short_effect": "Has a 10% chance to freeze the target.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 10% chance to freeze the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 10% chance to freeze the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 10% chance to freeze the target."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 10% chance to freeze the target.",
+        "ultra_sun_ultra_moon": "Has a 10% chance to freeze the target.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 10% chance to freeze the target."
+    },
     "flavor_text": {
         "sun_moon": "The user attacks with a chilling gust of powdery snow. This may also freeze the opposing Pokémon.",
         "ultra_sun_ultra_moon": "The user attacks with a chilling gust of powdery snow. This may also freeze the opposing Pokémon.",

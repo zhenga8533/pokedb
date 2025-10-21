@@ -2,17 +2,59 @@
     "id": 411,
     "name": "focus-blast",
     "source_url": "https://pokeapi.co/api/v2/move/411/",
-    "accuracy": 70,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "sword_shield": 70,
+        "the_isle_of_armor": 70,
+        "the_crown_tundra": 70,
+        "brilliant_diamond_and_shining_pearl": 70,
+        "legends_arceus": 70
+    },
+    "power": {
+        "sword_shield": 120,
+        "the_isle_of_armor": 120,
+        "the_crown_tundra": 120,
+        "brilliant_diamond_and_shining_pearl": 120,
+        "legends_arceus": 120
+    },
+    "pp": {
+        "sword_shield": 5,
+        "the_isle_of_armor": 5,
+        "the_crown_tundra": 5,
+        "brilliant_diamond_and_shining_pearl": 5,
+        "legends_arceus": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fighting",
+    "type": {
+        "sword_shield": "fighting",
+        "the_isle_of_armor": "fighting",
+        "the_crown_tundra": "fighting",
+        "brilliant_diamond_and_shining_pearl": "fighting",
+        "legends_arceus": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+    "effect_chance": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "legends_arceus": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_isle_of_armor": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_crown_tundra": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "legends_arceus": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
     "flavor_text": {
         "sword_shield": "The user heightens its mental focus and unleashes its power. This may also lower the target’s Sp. Def stat.",
         "legends_arceus": "The user heightens its mental focus and unleashes its power. This may also lower the target's Sp. Def stat."

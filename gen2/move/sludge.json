@@ -2,17 +2,38 @@
     "id": 124,
     "name": "sludge",
     "source_url": "https://pokeapi.co/api/v2/move/124/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 20,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": 65,
+        "crystal": 65
+    },
+    "pp": {
+        "gold_silver": 20,
+        "crystal": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "poison",
+    "type": {
+        "gold_silver": "poison",
+        "crystal": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to poison the target.",
-    "short_effect": "Has a 30% chance to poison the target.",
+    "effect_chance": {
+        "gold_silver": 30,
+        "crystal": 30
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 30% chance to poison the target.",
+        "crystal": "Inflicts regular damage. Has a 30% chance to poison the target."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 30% chance to poison the target.",
+        "crystal": "Has a 30% chance to poison the target."
+    },
     "flavor_text": {
         "gold_silver": "An attack that may poison the foe.",
         "crystal": "An attack that may poison the foe."

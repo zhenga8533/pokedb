@@ -2,17 +2,45 @@
     "id": 669,
     "name": "solar-blade",
     "source_url": "https://pokeapi.co/api/v2/move/669/",
-    "accuracy": 100,
-    "power": 125,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 125,
+        "ultra_sun_ultra_moon": 125,
+        "lets_go_pikachu_lets_go_eevee": 125
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "grass",
+    "type": {
+        "sun_moon": "grass",
+        "ultra_sun_ultra_moon": "grass",
+        "lets_go_pikachu_lets_go_eevee": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User charges for one turn before attacking. During sunny day, the charge turn is skipped. During hail, rain dance, or sandstorm, power is halved. This move cannot be selected by sleep talk.",
-    "short_effect": "Requires a turn to charge before attacking.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. User charges for one turn before attacking. During sunny day, the charge turn is skipped. During hail, rain dance, or sandstorm, power is halved. This move cannot be selected by sleep talk.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. User charges for one turn before attacking. During sunny day, the charge turn is skipped. During hail, rain dance, or sandstorm, power is halved. This move cannot be selected by sleep talk.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. User charges for one turn before attacking. During sunny day, the charge turn is skipped. During hail, rain dance, or sandstorm, power is halved. This move cannot be selected by sleep talk."
+    },
+    "short_effect": {
+        "sun_moon": "Requires a turn to charge before attacking.",
+        "ultra_sun_ultra_moon": "Requires a turn to charge before attacking.",
+        "lets_go_pikachu_lets_go_eevee": "Requires a turn to charge before attacking."
+    },
     "flavor_text": {
         "sun_moon": "In this two-turn attack, the user gathers light and fills a blade with the light’s energy, attacking the target on the next turn.",
         "ultra_sun_ultra_moon": "In this two-turn attack, the user gathers light and fills a blade with the light’s energy, attacking the target on the next turn.",

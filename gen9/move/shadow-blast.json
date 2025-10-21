@@ -2,19 +2,60 @@
     "id": 10002,
     "name": "shadow-blast",
     "source_url": "https://pokeapi.co/api/v2/move/10002/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": null,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 80,
+        "the_teal_mask": 80,
+        "the_indigo_disk": 80
+    },
+    "pp": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "shadow",
+    "type": {
+        "scarlet_violet": "shadow",
+        "the_teal_mask": "shadow",
+        "the_indigo_disk": "shadow"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
-    "short_effect": "Has an increased chance for a critical hit.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
+        "the_teal_mask": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
+        "the_indigo_disk": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has an increased chance for a critical hit.",
+        "the_teal_mask": "Has an increased chance for a critical hit.",
+        "the_indigo_disk": "Has an increased chance for a critical hit."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,
-    "metadata": {}
+    "metadata": {
+        "ailment": null,
+        "category": null,
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    }
 }

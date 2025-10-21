@@ -2,17 +2,38 @@
     "id": 101,
     "name": "night-shade",
     "source_url": "https://pokeapi.co/api/v2/move/101/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "pp": {
+        "gold_silver": 15,
+        "crystal": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ghost",
+    "type": {
+        "gold_silver": "ghost",
+        "crystal": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts damage equal to the user’s level. Type immunity applies, but other type effects are ignored.",
-    "short_effect": "Inflicts damage equal to the user’s level.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Inflicts damage equal to the user’s level. Type immunity applies, but other type effects are ignored.",
+        "crystal": "Inflicts damage equal to the user’s level. Type immunity applies, but other type effects are ignored."
+    },
+    "short_effect": {
+        "gold_silver": "Inflicts damage equal to the user’s level.",
+        "crystal": "Inflicts damage equal to the user’s level."
+    },
     "flavor_text": {
         "gold_silver": "The user's level equals damage HP.",
         "crystal": "The user's level equals damage HP."

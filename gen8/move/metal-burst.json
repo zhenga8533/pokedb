@@ -2,17 +2,59 @@
     "id": 368,
     "name": "metal-burst",
     "source_url": "https://pokeapi.co/api/v2/move/368/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "sword_shield": "steel",
+        "the_isle_of_armor": "steel",
+        "the_crown_tundra": "steel",
+        "brilliant_diamond_and_shining_pearl": "steel",
+        "legends_arceus": "steel"
+    },
     "target": "specific-move",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
-    "short_effect": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
+        "the_isle_of_armor": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
+        "the_crown_tundra": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
+        "brilliant_diamond_and_shining_pearl": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
+        "legends_arceus": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored."
+    },
+    "short_effect": {
+        "sword_shield": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+        "the_isle_of_armor": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+        "the_crown_tundra": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+        "brilliant_diamond_and_shining_pearl": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+        "legends_arceus": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage."
+    },
     "flavor_text": {
         "sword_shield": "The user retaliates with much greater force against the opponent that last inflicted damage on it.",
         "legends_arceus": "The user retaliates with much greater force against the opponent that last inflicted damage on it."

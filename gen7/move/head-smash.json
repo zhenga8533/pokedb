@@ -2,17 +2,45 @@
     "id": 457,
     "name": "head-smash",
     "source_url": "https://pokeapi.co/api/v2/move/457/",
-    "accuracy": 80,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 80,
+        "ultra_sun_ultra_moon": 80,
+        "lets_go_pikachu_lets_go_eevee": 80
+    },
+    "power": {
+        "sun_moon": 150,
+        "ultra_sun_ultra_moon": 150,
+        "lets_go_pikachu_lets_go_eevee": 150
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "rock",
+    "type": {
+        "sun_moon": "rock",
+        "ultra_sun_ultra_moon": "rock",
+        "lets_go_pikachu_lets_go_eevee": "rock"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil.",
-    "short_effect": "User receives 1/2 the damage inflicted in recoil.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. User takes 1/2 the damage it inflicts in recoil."
+    },
+    "short_effect": {
+        "sun_moon": "User receives 1/2 the damage inflicted in recoil.",
+        "ultra_sun_ultra_moon": "User receives 1/2 the damage inflicted in recoil.",
+        "lets_go_pikachu_lets_go_eevee": "User receives 1/2 the damage inflicted in recoil."
+    },
     "flavor_text": {
         "sun_moon": "The user attacks the target with a hazardous, full-power headbutt. This also damages the user terribly.",
         "ultra_sun_ultra_moon": "The user attacks the target with a hazardous, full-power headbutt. This also damages the user terribly.",

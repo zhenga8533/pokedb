@@ -2,17 +2,45 @@
     "id": 479,
     "name": "smack-down",
     "source_url": "https://pokeapi.co/api/v2/move/479/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 50,
+        "ultra_sun_ultra_moon": 50,
+        "lets_go_pikachu_lets_go_eevee": 50
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "rock",
+    "type": {
+        "sun_moon": "rock",
+        "ultra_sun_ultra_moon": "rock",
+        "lets_go_pikachu_lets_go_eevee": "rock"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Removes the target’s immunity to ground-type damage. This effect removes any existing Ground immunity due to levitate, magnet rise, or telekinesis, and causes the target’s flying type to be ignored when it takes Ground damage. If the target isn’t immune to Ground damage, this move will fail. This move can hit Pokémon under the effect of bounce, fly, or sky drop, and ends the effect of Bounce or Fly.",
-    "short_effect": "Removes any immunity to Ground damage.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Removes the target’s immunity to ground-type damage. This effect removes any existing Ground immunity due to levitate, magnet rise, or telekinesis, and causes the target’s flying type to be ignored when it takes Ground damage. If the target isn’t immune to Ground damage, this move will fail. This move can hit Pokémon under the effect of bounce, fly, or sky drop, and ends the effect of Bounce or Fly.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Removes the target’s immunity to ground-type damage. This effect removes any existing Ground immunity due to levitate, magnet rise, or telekinesis, and causes the target’s flying type to be ignored when it takes Ground damage. If the target isn’t immune to Ground damage, this move will fail. This move can hit Pokémon under the effect of bounce, fly, or sky drop, and ends the effect of Bounce or Fly.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Removes the target’s immunity to ground-type damage. This effect removes any existing Ground immunity due to levitate, magnet rise, or telekinesis, and causes the target’s flying type to be ignored when it takes Ground damage. If the target isn’t immune to Ground damage, this move will fail. This move can hit Pokémon under the effect of bounce, fly, or sky drop, and ends the effect of Bounce or Fly."
+    },
+    "short_effect": {
+        "sun_moon": "Removes any immunity to Ground damage.",
+        "ultra_sun_ultra_moon": "Removes any immunity to Ground damage.",
+        "lets_go_pikachu_lets_go_eevee": "Removes any immunity to Ground damage."
+    },
     "flavor_text": {
         "sun_moon": "The user throws a stone or similar projectile to attack an opponent. A flying Pokémon will fall to the ground when it’s hit.",
         "ultra_sun_ultra_moon": "The user throws a stone or similar projectile to attack an opponent. A flying Pokémon will fall to the ground when it’s hit.",

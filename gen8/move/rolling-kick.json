@@ -2,17 +2,59 @@
     "id": 27,
     "name": "rolling-kick",
     "source_url": "https://pokeapi.co/api/v2/move/27/",
-    "accuracy": 85,
-    "power": 60,
-    "pp": 15,
+    "accuracy": {
+        "sword_shield": 85,
+        "the_isle_of_armor": 85,
+        "the_crown_tundra": 85,
+        "brilliant_diamond_and_shining_pearl": 85,
+        "legends_arceus": 85
+    },
+    "power": {
+        "sword_shield": 60,
+        "the_isle_of_armor": 60,
+        "the_crown_tundra": 60,
+        "brilliant_diamond_and_shining_pearl": 60,
+        "legends_arceus": 60
+    },
+    "pp": {
+        "sword_shield": 15,
+        "the_isle_of_armor": 15,
+        "the_crown_tundra": 15,
+        "brilliant_diamond_and_shining_pearl": 15,
+        "legends_arceus": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "sword_shield": "fighting",
+        "the_isle_of_armor": "fighting",
+        "the_crown_tundra": "fighting",
+        "brilliant_diamond_and_shining_pearl": "fighting",
+        "legends_arceus": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "sword_shield": 30,
+        "the_isle_of_armor": 30,
+        "the_crown_tundra": 30,
+        "brilliant_diamond_and_shining_pearl": 30,
+        "legends_arceus": 30
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "legends_arceus": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 30% chance to make the target flinch.",
+        "the_isle_of_armor": "Has a 30% chance to make the target flinch.",
+        "the_crown_tundra": "Has a 30% chance to make the target flinch.",
+        "brilliant_diamond_and_shining_pearl": "Has a 30% chance to make the target flinch.",
+        "legends_arceus": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {
         "sword_shield": "This move can’t be used. It’s recommended that this move is forgotten. Once forgotten, this move can’t be remembered."
     },

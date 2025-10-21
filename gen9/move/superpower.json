@@ -2,17 +2,45 @@
     "id": 276,
     "name": "superpower",
     "source_url": "https://pokeapi.co/api/v2/move/276/",
-    "accuracy": 100,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 120,
+        "the_teal_mask": 120,
+        "the_indigo_disk": 120
+    },
+    "pp": {
+        "scarlet_violet": 5,
+        "the_teal_mask": 5,
+        "the_indigo_disk": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "scarlet_violet": "fighting",
+        "the_teal_mask": "fighting",
+        "the_indigo_disk": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Attack and Defense by one stage each.",
-    "short_effect": "Lowers the user’s Attack and Defense by one stage after inflicting damage.",
+    "effect_chance": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage, then lowers the user’s Attack and Defense by one stage each.",
+        "the_teal_mask": "Inflicts regular damage, then lowers the user’s Attack and Defense by one stage each.",
+        "the_indigo_disk": "Inflicts regular damage, then lowers the user’s Attack and Defense by one stage each."
+    },
+    "short_effect": {
+        "scarlet_violet": "Lowers the user’s Attack and Defense by one stage after inflicting damage.",
+        "the_teal_mask": "Lowers the user’s Attack and Defense by one stage after inflicting damage.",
+        "the_indigo_disk": "Lowers the user’s Attack and Defense by one stage after inflicting damage."
+    },
     "flavor_text": {
         "scarlet_violet": "The user attacks the target with great power. This also lowers the user's Attack and Defense stats."
     },

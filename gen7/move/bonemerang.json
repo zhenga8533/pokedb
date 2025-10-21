@@ -2,17 +2,45 @@
     "id": 155,
     "name": "bonemerang",
     "source_url": "https://pokeapi.co/api/v2/move/155/",
-    "accuracy": 90,
-    "power": 50,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "power": {
+        "sun_moon": 50,
+        "ultra_sun_ultra_moon": 50,
+        "lets_go_pikachu_lets_go_eevee": 50
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ground",
+    "type": {
+        "sun_moon": "ground",
+        "ultra_sun_ultra_moon": "ground",
+        "lets_go_pikachu_lets_go_eevee": "ground"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Hits twice in one turn.",
-    "short_effect": "Hits twice in one turn.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Hits twice in one turn.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Hits twice in one turn.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Hits twice in one turn."
+    },
+    "short_effect": {
+        "sun_moon": "Hits twice in one turn.",
+        "ultra_sun_ultra_moon": "Hits twice in one turn.",
+        "lets_go_pikachu_lets_go_eevee": "Hits twice in one turn."
+    },
     "flavor_text": {
         "sun_moon": "The user throws the bone it holds. The bone loops around to hit the target twice—coming and going.",
         "ultra_sun_ultra_moon": "The user throws the bone it holds. The bone loops around to hit the target twice—coming and going.",

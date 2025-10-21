@@ -2,17 +2,45 @@
     "id": 73,
     "name": "leech-seed",
     "source_url": "https://pokeapi.co/api/v2/move/73/",
-    "accuracy": 90,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "grass",
+    "type": {
+        "scarlet_violet": "grass",
+        "the_teal_mask": "grass",
+        "the_indigo_disk": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
-    "short_effect": "Seeds the target, stealing HP from it every turn.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
+        "the_teal_mask": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
+        "the_indigo_disk": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass."
+    },
+    "short_effect": {
+        "scarlet_violet": "Seeds the target, stealing HP from it every turn.",
+        "the_teal_mask": "Seeds the target, stealing HP from it every turn.",
+        "the_indigo_disk": "Seeds the target, stealing HP from it every turn."
+    },
     "flavor_text": {
         "scarlet_violet": "A seed is planted on the target. It steals some HP from the target every turn."
     },

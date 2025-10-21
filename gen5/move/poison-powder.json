@@ -2,17 +2,38 @@
     "id": 77,
     "name": "poison-powder",
     "source_url": "https://pokeapi.co/api/v2/move/77/",
-    "accuracy": 75,
-    "power": null,
-    "pp": 35,
+    "accuracy": {
+        "black_white": 75,
+        "black_2_white_2": 75
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 35,
+        "black_2_white_2": 35
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "black_white": "poison",
+        "black_2_white_2": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Poisons the target.",
-    "short_effect": "Poisons the target.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Poisons the target.",
+        "black_2_white_2": "Poisons the target."
+    },
+    "short_effect": {
+        "black_white": "Poisons the target.",
+        "black_2_white_2": "Poisons the target."
+    },
     "flavor_text": {
         "black_white": "The user scatters a cloud of poisonous dust on the target. It may poison the target.",
         "black_2_white_2": "The user scatters a cloud of poisonous dust on the target. It may poison the target."

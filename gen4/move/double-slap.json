@@ -2,17 +2,45 @@
     "id": 3,
     "name": "double-slap",
     "source_url": "https://pokeapi.co/api/v2/move/3/",
-    "accuracy": 85,
-    "power": 15,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 85,
+        "platinum": 85,
+        "heartgold_soulsilver": 85
+    },
+    "power": {
+        "diamond_pearl": 15,
+        "platinum": 15,
+        "heartgold_soulsilver": 15
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "diamond_pearl": "normal",
+        "platinum": "normal",
+        "heartgold_soulsilver": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Hits 2–5 times in one turn. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use.",
-    "short_effect": "Hits 2-5 times in one turn.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Hits 2–5 times in one turn. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use.",
+        "platinum": "Inflicts regular damage. Hits 2–5 times in one turn. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use.",
+        "heartgold_soulsilver": "Inflicts regular damage. Hits 2–5 times in one turn. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use."
+    },
+    "short_effect": {
+        "diamond_pearl": "Hits 2-5 times in one turn.",
+        "platinum": "Hits 2-5 times in one turn.",
+        "heartgold_soulsilver": "Hits 2-5 times in one turn."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is slapped repeatedly, back and forth, two to five times in a row.",
         "platinum": "The foe is slapped repeatedly, back and forth, two to five times in a row.",

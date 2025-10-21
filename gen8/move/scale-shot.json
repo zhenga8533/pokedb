@@ -2,17 +2,59 @@
     "id": 799,
     "name": "scale-shot",
     "source_url": "https://pokeapi.co/api/v2/move/799/",
-    "accuracy": 90,
-    "power": 25,
-    "pp": 20,
+    "accuracy": {
+        "sword_shield": 90,
+        "the_isle_of_armor": 90,
+        "the_crown_tundra": 90,
+        "brilliant_diamond_and_shining_pearl": 90,
+        "legends_arceus": 90
+    },
+    "power": {
+        "sword_shield": 25,
+        "the_isle_of_armor": 25,
+        "the_crown_tundra": 25,
+        "brilliant_diamond_and_shining_pearl": 25,
+        "legends_arceus": 25
+    },
+    "pp": {
+        "sword_shield": 20,
+        "the_isle_of_armor": 20,
+        "the_crown_tundra": 20,
+        "brilliant_diamond_and_shining_pearl": 20,
+        "legends_arceus": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dragon",
+    "type": {
+        "sword_shield": "dragon",
+        "the_isle_of_armor": "dragon",
+        "the_crown_tundra": "dragon",
+        "brilliant_diamond_and_shining_pearl": "dragon",
+        "legends_arceus": "dragon"
+    },
     "target": "selected-pokemon",
     "generation": "generation-viii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage two to five times in a row, raising the user’s Speed and lowering the user’s Defense by one stage each upon last hit.",
-    "short_effect": "Boosts the user’s Speed and lowers their Defense by one stage after inflicting damage two to five times in a row.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage two to five times in a row, raising the user’s Speed and lowering the user’s Defense by one stage each upon last hit.",
+        "the_isle_of_armor": "Inflicts regular damage two to five times in a row, raising the user’s Speed and lowering the user’s Defense by one stage each upon last hit.",
+        "the_crown_tundra": "Inflicts regular damage two to five times in a row, raising the user’s Speed and lowering the user’s Defense by one stage each upon last hit.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage two to five times in a row, raising the user’s Speed and lowering the user’s Defense by one stage each upon last hit.",
+        "legends_arceus": "Inflicts regular damage two to five times in a row, raising the user’s Speed and lowering the user’s Defense by one stage each upon last hit."
+    },
+    "short_effect": {
+        "sword_shield": "Boosts the user’s Speed and lowers their Defense by one stage after inflicting damage two to five times in a row.",
+        "the_isle_of_armor": "Boosts the user’s Speed and lowers their Defense by one stage after inflicting damage two to five times in a row.",
+        "the_crown_tundra": "Boosts the user’s Speed and lowers their Defense by one stage after inflicting damage two to five times in a row.",
+        "brilliant_diamond_and_shining_pearl": "Boosts the user’s Speed and lowers their Defense by one stage after inflicting damage two to five times in a row.",
+        "legends_arceus": "Boosts the user’s Speed and lowers their Defense by one stage after inflicting damage two to five times in a row."
+    },
     "flavor_text": {
         "sword_shield": "The user attacks by shooting scales two to five times in a row. This move boosts the user’s Speed stat but lowers its Defense stat.",
         "legends_arceus": "The user attacks by shooting scales two to five times in a row. This move boosts the user's Speed stat but lowers its Defense stat."

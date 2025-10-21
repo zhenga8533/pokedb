@@ -2,17 +2,45 @@
     "id": 380,
     "name": "gastro-acid",
     "source_url": "https://pokeapi.co/api/v2/move/380/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "scarlet_violet": "poison",
+        "the_teal_mask": "poison",
+        "the_indigo_disk": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
-    "short_effect": "Nullifies target’s ability until it leaves battle.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
+        "the_teal_mask": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
+        "the_indigo_disk": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass."
+    },
+    "short_effect": {
+        "scarlet_violet": "Nullifies target’s ability until it leaves battle.",
+        "the_teal_mask": "Nullifies target’s ability until it leaves battle.",
+        "the_indigo_disk": "Nullifies target’s ability until it leaves battle."
+    },
     "flavor_text": {
         "scarlet_violet": "The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability."
     },

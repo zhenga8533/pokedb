@@ -2,17 +2,38 @@
     "id": 99,
     "name": "rage",
     "source_url": "https://pokeapi.co/api/v2/move/99/",
-    "accuracy": 100,
-    "power": 20,
-    "pp": 20,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 20,
+        "omega_ruby_alpha_sapphire": 20
+    },
+    "pp": {
+        "x_y": 20,
+        "omega_ruby_alpha_sapphire": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "x_y": "normal",
+        "omega_ruby_alpha_sapphire": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage.",
-    "short_effect": "If the user is hit after using this move, its Attack rises by one stage.",
+    "effect_chance": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage."
+    },
+    "short_effect": {
+        "x_y": "If the user is hit after using this move, its Attack rises by one stage.",
+        "omega_ruby_alpha_sapphire": "If the user is hit after using this move, its Attack rises by one stage."
+    },
     "flavor_text": {
         "x_y": "As long as this move is in use, the power of rage raises the Attack stat each time the user is hit in battle.",
         "omega_ruby_alpha_sapphire": "As long as this move is in use, the power of rage raises the Attack stat each time the user is hit in battle."

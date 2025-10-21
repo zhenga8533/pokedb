@@ -2,17 +2,38 @@
     "id": 380,
     "name": "gastro-acid",
     "source_url": "https://pokeapi.co/api/v2/move/380/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "black_white": "poison",
+        "black_2_white_2": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
-    "short_effect": "Nullifies target’s ability until it leaves battle.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
+        "black_2_white_2": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass."
+    },
+    "short_effect": {
+        "black_white": "Nullifies target’s ability until it leaves battle.",
+        "black_2_white_2": "Nullifies target’s ability until it leaves battle."
+    },
     "flavor_text": {
         "black_white": "The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target’s Ability.",
         "black_2_white_2": "The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target’s Ability."

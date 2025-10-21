@@ -2,17 +2,38 @@
     "id": 276,
     "name": "superpower",
     "source_url": "https://pokeapi.co/api/v2/move/276/",
-    "accuracy": 100,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 120,
+        "black_2_white_2": 120
+    },
+    "pp": {
+        "black_white": 5,
+        "black_2_white_2": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "black_white": "fighting",
+        "black_2_white_2": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Attack and Defense by one stage each.",
-    "short_effect": "Lowers the user’s Attack and Defense by one stage after inflicting damage.",
+    "effect_chance": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage, then lowers the user’s Attack and Defense by one stage each.",
+        "black_2_white_2": "Inflicts regular damage, then lowers the user’s Attack and Defense by one stage each."
+    },
+    "short_effect": {
+        "black_white": "Lowers the user’s Attack and Defense by one stage after inflicting damage.",
+        "black_2_white_2": "Lowers the user’s Attack and Defense by one stage after inflicting damage."
+    },
     "flavor_text": {
         "black_white": "The user attacks the target with great power. However, it also lowers the user’s Attack and Defense.",
         "black_2_white_2": "The user attacks the target with great power. However, it also lowers the user’s Attack and Defense."

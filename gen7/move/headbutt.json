@@ -2,17 +2,45 @@
     "id": 29,
     "name": "headbutt",
     "source_url": "https://pokeapi.co/api/v2/move/29/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 70,
+        "ultra_sun_ultra_moon": 70,
+        "lets_go_pikachu_lets_go_eevee": 70
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "sun_moon": "normal",
+        "ultra_sun_ultra_moon": "normal",
+        "lets_go_pikachu_lets_go_eevee": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 30% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Has a 30% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {
         "sun_moon": "The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch.",
         "ultra_sun_ultra_moon": "The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch.",

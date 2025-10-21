@@ -2,17 +2,45 @@
     "id": 352,
     "name": "water-pulse",
     "source_url": "https://pokeapi.co/api/v2/move/352/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 20,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 60,
+        "platinum": 60,
+        "heartgold_soulsilver": 60
+    },
+    "pp": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "diamond_pearl": "water",
+        "platinum": "water",
+        "heartgold_soulsilver": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to confuse the target.",
-    "short_effect": "Has a 20% chance to confuse the target.",
+    "effect_chance": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 20% chance to confuse the target.",
+        "platinum": "Inflicts regular damage. Has a 20% chance to confuse the target.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 20% chance to confuse the target."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 20% chance to confuse the target.",
+        "platinum": "Has a 20% chance to confuse the target.",
+        "heartgold_soulsilver": "Has a 20% chance to confuse the target."
+    },
     "flavor_text": {
         "diamond_pearl": "The user attacks the foe with a pulsing blast of water. It may also confuse the foe.",
         "platinum": "The user attacks the foe with a pulsing blast of water. It may also confuse the foe.",

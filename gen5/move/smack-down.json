@@ -2,17 +2,38 @@
     "id": 479,
     "name": "smack-down",
     "source_url": "https://pokeapi.co/api/v2/move/479/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 50,
+        "black_2_white_2": 50
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "rock",
+    "type": {
+        "black_white": "rock",
+        "black_2_white_2": "rock"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Removes the target’s immunity to ground-type damage. This effect removes any existing Ground immunity due to levitate, magnet rise, or telekinesis, and causes the target’s flying type to be ignored when it takes Ground damage. If the target isn’t immune to Ground damage, this move will fail. This move can hit Pokémon under the effect of bounce, fly, or sky drop, and ends the effect of Bounce or Fly.",
-    "short_effect": "Removes any immunity to Ground damage.",
+    "effect_chance": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Removes the target’s immunity to ground-type damage. This effect removes any existing Ground immunity due to levitate, magnet rise, or telekinesis, and causes the target’s flying type to be ignored when it takes Ground damage. If the target isn’t immune to Ground damage, this move will fail. This move can hit Pokémon under the effect of bounce, fly, or sky drop, and ends the effect of Bounce or Fly.",
+        "black_2_white_2": "Inflicts regular damage. Removes the target’s immunity to ground-type damage. This effect removes any existing Ground immunity due to levitate, magnet rise, or telekinesis, and causes the target’s flying type to be ignored when it takes Ground damage. If the target isn’t immune to Ground damage, this move will fail. This move can hit Pokémon under the effect of bounce, fly, or sky drop, and ends the effect of Bounce or Fly."
+    },
+    "short_effect": {
+        "black_white": "Removes any immunity to Ground damage.",
+        "black_2_white_2": "Removes any immunity to Ground damage."
+    },
     "flavor_text": {
         "black_white": "The user throws a stone or projectile to attack an opponent. A flying Pokémon will fall to the ground when hit.",
         "black_2_white_2": "The user throws a stone or projectile to attack an opponent. A flying Pokémon will fall to the ground when hit."

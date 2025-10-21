@@ -2,17 +2,38 @@
     "id": 93,
     "name": "confusion",
     "source_url": "https://pokeapi.co/api/v2/move/93/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 25,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": 50,
+        "crystal": 50
+    },
+    "pp": {
+        "gold_silver": 25,
+        "crystal": 25
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "gold_silver": "psychic",
+        "crystal": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to confuse the target.",
-    "short_effect": "Has a 10% chance to confuse the target.",
+    "effect_chance": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 10% chance to confuse the target.",
+        "crystal": "Inflicts regular damage. Has a 10% chance to confuse the target."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 10% chance to confuse the target.",
+        "crystal": "Has a 10% chance to confuse the target."
+    },
     "flavor_text": {
         "gold_silver": "An attack that may cause confusion.",
         "crystal": "An attack that may cause confusion."

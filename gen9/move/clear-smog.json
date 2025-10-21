@@ -2,17 +2,45 @@
     "id": 499,
     "name": "clear-smog",
     "source_url": "https://pokeapi.co/api/v2/move/499/",
-    "accuracy": null,
-    "power": 50,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "power": {
+        "scarlet_violet": 50,
+        "the_teal_mask": 50,
+        "the_indigo_disk": 50
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "poison",
+    "type": {
+        "scarlet_violet": "poison",
+        "the_teal_mask": "poison",
+        "the_indigo_disk": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. All of the target’s stat modifiers are reset to zero.",
-    "short_effect": "Removes all of the target’s stat modifiers.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. All of the target’s stat modifiers are reset to zero.",
+        "the_teal_mask": "Inflicts regular damage. All of the target’s stat modifiers are reset to zero.",
+        "the_indigo_disk": "Inflicts regular damage. All of the target’s stat modifiers are reset to zero."
+    },
+    "short_effect": {
+        "scarlet_violet": "Removes all of the target’s stat modifiers.",
+        "the_teal_mask": "Removes all of the target’s stat modifiers.",
+        "the_indigo_disk": "Removes all of the target’s stat modifiers."
+    },
     "flavor_text": {
         "scarlet_violet": "The user attacks the target by throwing a clump of special mud. All stat changes are eliminated."
     },

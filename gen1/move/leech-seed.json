@@ -2,17 +2,52 @@
     "id": 73,
     "name": "leech-seed",
     "source_url": "https://pokeapi.co/api/v2/move/73/",
-    "accuracy": 90,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "red_blue": 90,
+        "yellow": 90,
+        "red_green_japan": 90,
+        "blue_japan": 90
+    },
+    "power": {
+        "red_blue": null,
+        "yellow": null,
+        "red_green_japan": null,
+        "blue_japan": null
+    },
+    "pp": {
+        "red_blue": 10,
+        "yellow": 10,
+        "red_green_japan": 10,
+        "blue_japan": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "grass",
+    "type": {
+        "red_blue": "grass",
+        "yellow": "grass",
+        "red_green_japan": "grass",
+        "blue_japan": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
-    "short_effect": "Seeds the target, stealing HP from it every turn.",
+    "effect_chance": {
+        "red_blue": null,
+        "yellow": null,
+        "red_green_japan": null,
+        "blue_japan": null
+    },
+    "effect": {
+        "red_blue": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
+        "yellow": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
+        "red_green_japan": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass.",
+        "blue_japan": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken. Has no effect on grass Pokémon. The seed remains until the target leaves the field. The user takes damage instead of being healed if the target has liquid ooze. rapid spin will remove this effect. This effect is passed on by baton pass."
+    },
+    "short_effect": {
+        "red_blue": "Seeds the target, stealing HP from it every turn.",
+        "yellow": "Seeds the target, stealing HP from it every turn.",
+        "red_green_japan": "Seeds the target, stealing HP from it every turn.",
+        "blue_japan": "Seeds the target, stealing HP from it every turn."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

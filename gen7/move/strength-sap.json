@@ -2,17 +2,45 @@
     "id": 668,
     "name": "strength-sap",
     "source_url": "https://pokeapi.co/api/v2/move/668/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "grass",
+    "type": {
+        "sun_moon": "grass",
+        "ultra_sun_ultra_moon": "grass",
+        "lets_go_pikachu_lets_go_eevee": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 100,
-    "effect": "Lowers the target’s Attack by one stage. Heals the user by the target’s current Attack, including modifiers, but not including this move’s Attack-lowering effect. If the target’s Attack is already at -6, this move will fail. In any other situation that would prevent a stat modification, the healing will still succeed.",
-    "short_effect": "Heals the user by the target’s current Attack stat and lowers the target’s Attack by one stage.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Lowers the target’s Attack by one stage. Heals the user by the target’s current Attack, including modifiers, but not including this move’s Attack-lowering effect. If the target’s Attack is already at -6, this move will fail. In any other situation that would prevent a stat modification, the healing will still succeed.",
+        "ultra_sun_ultra_moon": "Lowers the target’s Attack by one stage. Heals the user by the target’s current Attack, including modifiers, but not including this move’s Attack-lowering effect. If the target’s Attack is already at -6, this move will fail. In any other situation that would prevent a stat modification, the healing will still succeed.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the target’s Attack by one stage. Heals the user by the target’s current Attack, including modifiers, but not including this move’s Attack-lowering effect. If the target’s Attack is already at -6, this move will fail. In any other situation that would prevent a stat modification, the healing will still succeed."
+    },
+    "short_effect": {
+        "sun_moon": "Heals the user by the target’s current Attack stat and lowers the target’s Attack by one stage.",
+        "ultra_sun_ultra_moon": "Heals the user by the target’s current Attack stat and lowers the target’s Attack by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Heals the user by the target’s current Attack stat and lowers the target’s Attack by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The user restores its HP by the same amount as the target’s Attack stat. It also lowers the target’s Attack stat.",
         "ultra_sun_ultra_moon": "The user restores its HP by the same amount as the target’s Attack stat. It also lowers the target’s Attack stat.",

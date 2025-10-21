@@ -2,17 +2,59 @@
     "id": 370,
     "name": "close-combat",
     "source_url": "https://pokeapi.co/api/v2/move/370/",
-    "accuracy": 100,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 120,
+        "the_isle_of_armor": 120,
+        "the_crown_tundra": 120,
+        "brilliant_diamond_and_shining_pearl": 120,
+        "legends_arceus": 120
+    },
+    "pp": {
+        "sword_shield": 5,
+        "the_isle_of_armor": 5,
+        "the_crown_tundra": 5,
+        "brilliant_diamond_and_shining_pearl": 5,
+        "legends_arceus": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "sword_shield": "fighting",
+        "the_isle_of_armor": "fighting",
+        "the_crown_tundra": "fighting",
+        "brilliant_diamond_and_shining_pearl": "fighting",
+        "legends_arceus": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each.",
-    "short_effect": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage.",
+    "effect_chance": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each.",
+        "the_isle_of_armor": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each.",
+        "the_crown_tundra": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each.",
+        "legends_arceus": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each."
+    },
+    "short_effect": {
+        "sword_shield": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage.",
+        "the_isle_of_armor": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage.",
+        "the_crown_tundra": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage.",
+        "brilliant_diamond_and_shining_pearl": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage.",
+        "legends_arceus": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage."
+    },
     "flavor_text": {
         "sword_shield": "The user fights the target up close without guarding itself. This also lowers the user’s Defense and Sp. Def stats.",
         "legends_arceus": "The user fights the target up close, inflicting damage without guarding itself. This also lowers the user's defensive stats."

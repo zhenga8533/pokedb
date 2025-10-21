@@ -2,17 +2,45 @@
     "id": 190,
     "name": "octazooka",
     "source_url": "https://pokeapi.co/api/v2/move/190/",
-    "accuracy": 85,
-    "power": 65,
-    "pp": 10,
+    "accuracy": {
+        "diamond_pearl": 85,
+        "platinum": 85,
+        "heartgold_soulsilver": 85
+    },
+    "power": {
+        "diamond_pearl": 65,
+        "platinum": 65,
+        "heartgold_soulsilver": 65
+    },
+    "pp": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "water",
+    "type": {
+        "diamond_pearl": "water",
+        "platinum": "water",
+        "heartgold_soulsilver": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 50,
-    "effect": "Inflicts regular damage. Has a 50% chance to lower the target’s accuracy by one stage.",
-    "short_effect": "Has a 50% chance to lower the target’s accuracy by one stage.",
+    "effect_chance": {
+        "diamond_pearl": 50,
+        "platinum": 50,
+        "heartgold_soulsilver": 50
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 50% chance to lower the target’s accuracy by one stage.",
+        "platinum": "Inflicts regular damage. Has a 50% chance to lower the target’s accuracy by one stage.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 50% chance to lower the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 50% chance to lower the target’s accuracy by one stage.",
+        "platinum": "Has a 50% chance to lower the target’s accuracy by one stage.",
+        "heartgold_soulsilver": "Has a 50% chance to lower the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "The user attacks by spraying ink in the foe’s face or eyes. It may also lower the target’s accuracy.",
         "platinum": "The user attacks by spraying ink in the foe’s face or eyes. It may also lower the target’s accuracy.",

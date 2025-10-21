@@ -2,17 +2,38 @@
     "id": 6,
     "name": "pay-day",
     "source_url": "https://pokeapi.co/api/v2/move/6/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 20,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": 40,
+        "crystal": 40
+    },
+    "pp": {
+        "gold_silver": 20,
+        "crystal": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "gold_silver": "normal",
+        "crystal": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. After the battle ends, the winner receives five times the user’s level in extra money for each time this move was used.",
-    "short_effect": "Scatters money on the ground worth five times the user’s level.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. After the battle ends, the winner receives five times the user’s level in extra money for each time this move was used.",
+        "crystal": "Inflicts regular damage. After the battle ends, the winner receives five times the user’s level in extra money for each time this move was used."
+    },
+    "short_effect": {
+        "gold_silver": "Scatters money on the ground worth five times the user’s level.",
+        "crystal": "Scatters money on the ground worth five times the user’s level."
+    },
     "flavor_text": {
         "gold_silver": "Throws coins. Gets them back later.",
         "crystal": "Throws coins. Gets them back later."

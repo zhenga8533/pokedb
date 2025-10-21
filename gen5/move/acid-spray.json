@@ -2,17 +2,38 @@
     "id": 491,
     "name": "acid-spray",
     "source_url": "https://pokeapi.co/api/v2/move/491/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 20,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 40,
+        "black_2_white_2": 40
+    },
+    "pp": {
+        "black_white": 20,
+        "black_2_white_2": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "poison",
+    "type": {
+        "black_white": "poison",
+        "black_2_white_2": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Lowers the target’s Special Defense by two stages.",
-    "short_effect": "Lowers the target’s Special Defense by two stages.",
+    "effect_chance": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Lowers the target’s Special Defense by two stages.",
+        "black_2_white_2": "Inflicts regular damage. Lowers the target’s Special Defense by two stages."
+    },
+    "short_effect": {
+        "black_white": "Lowers the target’s Special Defense by two stages.",
+        "black_2_white_2": "Lowers the target’s Special Defense by two stages."
+    },
     "flavor_text": {
         "black_white": "The user spits fluid that works to melt the target. This harshly reduces the target’s Sp. Def stat.",
         "black_2_white_2": "The user spits fluid that works to melt the target. This harshly reduces the target’s Sp. Def stat."

@@ -2,17 +2,45 @@
     "id": 402,
     "name": "seed-bomb",
     "source_url": "https://pokeapi.co/api/v2/move/402/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "diamond_pearl": 100,
+        "platinum": 100,
+        "heartgold_soulsilver": 100
+    },
+    "power": {
+        "diamond_pearl": 80,
+        "platinum": 80,
+        "heartgold_soulsilver": 80
+    },
+    "pp": {
+        "diamond_pearl": 15,
+        "platinum": 15,
+        "heartgold_soulsilver": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "grass",
+    "type": {
+        "diamond_pearl": "grass",
+        "platinum": "grass",
+        "heartgold_soulsilver": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage.",
-    "short_effect": "Inflicts regular damage with no additional effect.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage.",
+        "platinum": "Inflicts regular damage.",
+        "heartgold_soulsilver": "Inflicts regular damage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Inflicts regular damage with no additional effect.",
+        "platinum": "Inflicts regular damage with no additional effect.",
+        "heartgold_soulsilver": "Inflicts regular damage with no additional effect."
+    },
     "flavor_text": {
         "diamond_pearl": "The user slams a barrage of hard- shelled seeds down on the foe from above.",
         "platinum": "The user slams a barrage of hard- shelled seeds down on the foe from above.",

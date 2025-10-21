@@ -2,17 +2,45 @@
     "id": 311,
     "name": "weather-ball",
     "source_url": "https://pokeapi.co/api/v2/move/311/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 50,
+        "ultra_sun_ultra_moon": 50,
+        "lets_go_pikachu_lets_go_eevee": 50
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "normal",
+    "type": {
+        "sun_moon": "normal",
+        "ultra_sun_ultra_moon": "normal",
+        "lets_go_pikachu_lets_go_eevee": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If a weather move is active, this move has double power, and its type becomes the type of the weather move. shadow sky is typeless for the purposes of this move.",
-    "short_effect": "If there be weather, this move has doubled power and the weather’s type.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. If a weather move is active, this move has double power, and its type becomes the type of the weather move. shadow sky is typeless for the purposes of this move.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. If a weather move is active, this move has double power, and its type becomes the type of the weather move. shadow sky is typeless for the purposes of this move.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. If a weather move is active, this move has double power, and its type becomes the type of the weather move. shadow sky is typeless for the purposes of this move."
+    },
+    "short_effect": {
+        "sun_moon": "If there be weather, this move has doubled power and the weather’s type.",
+        "ultra_sun_ultra_moon": "If there be weather, this move has doubled power and the weather’s type.",
+        "lets_go_pikachu_lets_go_eevee": "If there be weather, this move has doubled power and the weather’s type."
+    },
     "flavor_text": {
         "sun_moon": "This attack move varies in power and type depending on the weather.",
         "ultra_sun_ultra_moon": "This attack move varies in power and type depending on the weather.",

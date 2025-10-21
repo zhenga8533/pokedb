@@ -2,17 +2,38 @@
     "id": 29,
     "name": "headbutt",
     "source_url": "https://pokeapi.co/api/v2/move/29/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 70,
+        "black_2_white_2": 70
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "black_white": 30,
+        "black_2_white_2": 30
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "black_2_white_2": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "black_white": "Has a 30% chance to make the target flinch.",
+        "black_2_white_2": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {
         "black_white": "The user sticks out its head and attacks by charging straight into the target. It may also make the target flinch.",
         "black_2_white_2": "The user sticks out its head and attacks by charging straight into the target. It may also make the target flinch."

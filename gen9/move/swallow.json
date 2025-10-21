@@ -2,17 +2,45 @@
     "id": 256,
     "name": "swallow",
     "source_url": "https://pokeapi.co/api/v2/move/256/",
-    "accuracy": null,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "scarlet_violet": "normal",
+        "the_teal_mask": "normal",
+        "the_indigo_disk": "normal"
+    },
     "target": "user",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Heals the user depending on the amount of energy stored by stockpile: 1/4 its max HP after one use, 1/2 its max HP after two uses, or fully after three uses. Stored energy is consumed, and the user’s Defense and Special Defense are reset to what they would be if stockpile had not been used. If the user has no energy stored, this move will fail.",
-    "short_effect": "Recovers 1/4 HP after one Stockpile, 1/2 HP after two Stockpiles, or full HP after three Stockpiles.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Heals the user depending on the amount of energy stored by stockpile: 1/4 its max HP after one use, 1/2 its max HP after two uses, or fully after three uses. Stored energy is consumed, and the user’s Defense and Special Defense are reset to what they would be if stockpile had not been used. If the user has no energy stored, this move will fail.",
+        "the_teal_mask": "Heals the user depending on the amount of energy stored by stockpile: 1/4 its max HP after one use, 1/2 its max HP after two uses, or fully after three uses. Stored energy is consumed, and the user’s Defense and Special Defense are reset to what they would be if stockpile had not been used. If the user has no energy stored, this move will fail.",
+        "the_indigo_disk": "Heals the user depending on the amount of energy stored by stockpile: 1/4 its max HP after one use, 1/2 its max HP after two uses, or fully after three uses. Stored energy is consumed, and the user’s Defense and Special Defense are reset to what they would be if stockpile had not been used. If the user has no energy stored, this move will fail."
+    },
+    "short_effect": {
+        "scarlet_violet": "Recovers 1/4 HP after one Stockpile, 1/2 HP after two Stockpiles, or full HP after three Stockpiles.",
+        "the_teal_mask": "Recovers 1/4 HP after one Stockpile, 1/2 HP after two Stockpiles, or full HP after three Stockpiles.",
+        "the_indigo_disk": "Recovers 1/4 HP after one Stockpile, 1/2 HP after two Stockpiles, or full HP after three Stockpiles."
+    },
     "flavor_text": {
         "scarlet_violet": "The power stored using the move Stockpile is absorbed by the user to restore its own HP. The more power is stored, the more HP is restored."
     },

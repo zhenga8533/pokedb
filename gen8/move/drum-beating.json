@@ -2,17 +2,59 @@
     "id": 778,
     "name": "drum-beating",
     "source_url": "https://pokeapi.co/api/v2/move/778/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 80,
+        "the_isle_of_armor": 80,
+        "the_crown_tundra": 80,
+        "brilliant_diamond_and_shining_pearl": 80,
+        "legends_arceus": 80
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "grass",
+    "type": {
+        "sword_shield": "grass",
+        "the_isle_of_armor": "grass",
+        "the_crown_tundra": "grass",
+        "brilliant_diamond_and_shining_pearl": "grass",
+        "legends_arceus": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-viii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s Speed by one stage.",
+    "effect_chance": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
+        "legends_arceus": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 100% chance to lower the target’s Speed by one stage.",
+        "the_isle_of_armor": "Has a 100% chance to lower the target’s Speed by one stage.",
+        "the_crown_tundra": "Has a 100% chance to lower the target’s Speed by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Has a 100% chance to lower the target’s Speed by one stage.",
+        "legends_arceus": "Has a 100% chance to lower the target’s Speed by one stage."
+    },
     "flavor_text": {
         "sword_shield": "The user plays its drum, controlling the drum’s roots to attack the target. This also lowers the target’s Speed stat.",
         "legends_arceus": "The user plays its drum, controlling the drum's roots to attack the target. This also lowers the target's Speed stat."

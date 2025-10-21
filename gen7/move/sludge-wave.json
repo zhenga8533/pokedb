@@ -2,17 +2,45 @@
     "id": 482,
     "name": "sludge-wave",
     "source_url": "https://pokeapi.co/api/v2/move/482/",
-    "accuracy": 100,
-    "power": 95,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 95,
+        "ultra_sun_ultra_moon": 95,
+        "lets_go_pikachu_lets_go_eevee": 95
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "poison",
+    "type": {
+        "sun_moon": "poison",
+        "ultra_sun_ultra_moon": "poison",
+        "lets_go_pikachu_lets_go_eevee": "poison"
+    },
     "target": "all-other-pokemon",
     "generation": "generation-v",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to poison the target.",
-    "short_effect": "Has a 10% chance to poison the target.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 10% chance to poison the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 10% chance to poison the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 10% chance to poison the target."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 10% chance to poison the target.",
+        "ultra_sun_ultra_moon": "Has a 10% chance to poison the target.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 10% chance to poison the target."
+    },
     "flavor_text": {
         "sun_moon": "The user strikes everything around it by swamping the area with a giant sludge wave. This may also poison those hit.",
         "ultra_sun_ultra_moon": "The user strikes everything around it by swamping the area with a giant sludge wave. This may also poison those hit.",

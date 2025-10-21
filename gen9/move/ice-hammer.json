@@ -2,17 +2,45 @@
     "id": 665,
     "name": "ice-hammer",
     "source_url": "https://pokeapi.co/api/v2/move/665/",
-    "accuracy": 90,
-    "power": 100,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "power": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ice",
+    "type": {
+        "scarlet_violet": "ice",
+        "the_teal_mask": "ice",
+        "the_indigo_disk": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Speed by one stage.",
-    "short_effect": "Lowers user’s Speed by one stage.",
+    "effect_chance": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage, then lowers the user’s Speed by one stage.",
+        "the_teal_mask": "Inflicts regular damage, then lowers the user’s Speed by one stage.",
+        "the_indigo_disk": "Inflicts regular damage, then lowers the user’s Speed by one stage."
+    },
+    "short_effect": {
+        "scarlet_violet": "Lowers user’s Speed by one stage.",
+        "the_teal_mask": "Lowers user’s Speed by one stage.",
+        "the_indigo_disk": "Lowers user’s Speed by one stage."
+    },
     "flavor_text": {
         "scarlet_violet": "The user swings its strong, heavy fist at the target to inflict damage. This also lowers the user's Speed stat."
     },

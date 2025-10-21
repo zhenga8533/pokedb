@@ -2,17 +2,38 @@
     "id": 256,
     "name": "swallow",
     "source_url": "https://pokeapi.co/api/v2/move/256/",
-    "accuracy": null,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "user",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Heals the user depending on the amount of energy stored by stockpile: 1/4 its max HP after one use, 1/2 its max HP after two uses, or fully after three uses. Stored energy is consumed, and the user’s Defense and Special Defense are reset to what they would be if stockpile had not been used. If the user has no energy stored, this move will fail.",
-    "short_effect": "Recovers 1/4 HP after one Stockpile, 1/2 HP after two Stockpiles, or full HP after three Stockpiles.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Heals the user depending on the amount of energy stored by stockpile: 1/4 its max HP after one use, 1/2 its max HP after two uses, or fully after three uses. Stored energy is consumed, and the user’s Defense and Special Defense are reset to what they would be if stockpile had not been used. If the user has no energy stored, this move will fail.",
+        "black_2_white_2": "Heals the user depending on the amount of energy stored by stockpile: 1/4 its max HP after one use, 1/2 its max HP after two uses, or fully after three uses. Stored energy is consumed, and the user’s Defense and Special Defense are reset to what they would be if stockpile had not been used. If the user has no energy stored, this move will fail."
+    },
+    "short_effect": {
+        "black_white": "Recovers 1/4 HP after one Stockpile, 1/2 HP after two Stockpiles, or full HP after three Stockpiles.",
+        "black_2_white_2": "Recovers 1/4 HP after one Stockpile, 1/2 HP after two Stockpiles, or full HP after three Stockpiles."
+    },
     "flavor_text": {
         "black_white": "The power stored using the move Stockpile is absorbed by the user to heal its HP. Storing more power heals more HP.",
         "black_2_white_2": "The power stored using the move Stockpile is absorbed by the user to heal its HP. Storing more power heals more HP."

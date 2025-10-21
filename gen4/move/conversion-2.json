@@ -2,17 +2,45 @@
     "id": 176,
     "name": "conversion-2",
     "source_url": "https://pokeapi.co/api/v2/move/176/",
-    "accuracy": null,
-    "power": null,
-    "pp": 30,
+    "accuracy": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 30,
+        "platinum": 30,
+        "heartgold_soulsilver": 30
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "diamond_pearl": "normal",
+        "platinum": "normal",
+        "heartgold_soulsilver": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Changes the user’s type to a type either resistant or immune to the last damaging move that hit it. The new type is selected at random and cannot be a type the user already is. If there is no eligible new type, this move will fail.",
-    "short_effect": "Changes the user’s type to a random type either resistant or immune to the last move used against it.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Changes the user’s type to a type either resistant or immune to the last damaging move that hit it. The new type is selected at random and cannot be a type the user already is. If there is no eligible new type, this move will fail.",
+        "platinum": "Changes the user’s type to a type either resistant or immune to the last damaging move that hit it. The new type is selected at random and cannot be a type the user already is. If there is no eligible new type, this move will fail.",
+        "heartgold_soulsilver": "Changes the user’s type to a type either resistant or immune to the last damaging move that hit it. The new type is selected at random and cannot be a type the user already is. If there is no eligible new type, this move will fail."
+    },
+    "short_effect": {
+        "diamond_pearl": "Changes the user’s type to a random type either resistant or immune to the last move used against it.",
+        "platinum": "Changes the user’s type to a random type either resistant or immune to the last move used against it.",
+        "heartgold_soulsilver": "Changes the user’s type to a random type either resistant or immune to the last move used against it."
+    },
     "flavor_text": {
         "diamond_pearl": "The user changes its type to make itself resistant to the type of the attack it last took.",
         "platinum": "The user changes its type to make itself resistant to the type of the attack it last took.",

@@ -2,17 +2,38 @@
     "id": 144,
     "name": "transform",
     "source_url": "https://pokeapi.co/api/v2/move/144/",
-    "accuracy": null,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "User copies the target’s species, weight, type, ability, calculated stats (except HP), and moves. Copied moves will all have 5 PP remaining. IVs are copied for the purposes of hidden power, but stats are not recalculated. choice band, choice scarf, and choice specs stay in effect, and the user must select a new move. This move cannot be copied by mirror move, nor forced by encore.",
-    "short_effect": "User becomes a copy of the target until it leaves battle.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "User copies the target’s species, weight, type, ability, calculated stats (except HP), and moves. Copied moves will all have 5 PP remaining. IVs are copied for the purposes of hidden power, but stats are not recalculated. choice band, choice scarf, and choice specs stay in effect, and the user must select a new move. This move cannot be copied by mirror move, nor forced by encore.",
+        "black_2_white_2": "User copies the target’s species, weight, type, ability, calculated stats (except HP), and moves. Copied moves will all have 5 PP remaining. IVs are copied for the purposes of hidden power, but stats are not recalculated. choice band, choice scarf, and choice specs stay in effect, and the user must select a new move. This move cannot be copied by mirror move, nor forced by encore."
+    },
+    "short_effect": {
+        "black_white": "User becomes a copy of the target until it leaves battle.",
+        "black_2_white_2": "User becomes a copy of the target until it leaves battle."
+    },
     "flavor_text": {
         "black_white": "The user transforms into a copy of the target right down to having the same move set.",
         "black_2_white_2": "The user transforms into a copy of the target right down to having the same move set."

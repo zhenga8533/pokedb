@@ -2,17 +2,59 @@
     "id": 559,
     "name": "fusion-bolt",
     "source_url": "https://pokeapi.co/api/v2/move/559/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "pp": {
+        "sword_shield": 5,
+        "the_isle_of_armor": 5,
+        "the_crown_tundra": 5,
+        "brilliant_diamond_and_shining_pearl": 5,
+        "legends_arceus": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "sword_shield": "electric",
+        "the_isle_of_armor": "electric",
+        "the_crown_tundra": "electric",
+        "brilliant_diamond_and_shining_pearl": "electric",
+        "legends_arceus": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If a friendly Pokémon used fusion flare earlier this turn, this move has double power.",
-    "short_effect": "With Fusion Flare, inflicts double damage.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. If a friendly Pokémon used fusion flare earlier this turn, this move has double power.",
+        "the_isle_of_armor": "Inflicts regular damage. If a friendly Pokémon used fusion flare earlier this turn, this move has double power.",
+        "the_crown_tundra": "Inflicts regular damage. If a friendly Pokémon used fusion flare earlier this turn, this move has double power.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. If a friendly Pokémon used fusion flare earlier this turn, this move has double power.",
+        "legends_arceus": "Inflicts regular damage. If a friendly Pokémon used fusion flare earlier this turn, this move has double power."
+    },
+    "short_effect": {
+        "sword_shield": "With Fusion Flare, inflicts double damage.",
+        "the_isle_of_armor": "With Fusion Flare, inflicts double damage.",
+        "the_crown_tundra": "With Fusion Flare, inflicts double damage.",
+        "brilliant_diamond_and_shining_pearl": "With Fusion Flare, inflicts double damage.",
+        "legends_arceus": "With Fusion Flare, inflicts double damage."
+    },
     "flavor_text": {
         "sword_shield": "The user throws down a giant lightning bolt. This move’s power is increased when influenced by an enormous flame.",
         "legends_arceus": "The user throws down a giant lightning bolt. This move's power is increased when influenced by an enormous flame."

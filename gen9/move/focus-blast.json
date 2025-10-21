@@ -2,17 +2,45 @@
     "id": 411,
     "name": "focus-blast",
     "source_url": "https://pokeapi.co/api/v2/move/411/",
-    "accuracy": 70,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "scarlet_violet": 70,
+        "the_teal_mask": 70,
+        "the_indigo_disk": 70
+    },
+    "power": {
+        "scarlet_violet": 120,
+        "the_teal_mask": 120,
+        "the_indigo_disk": 120
+    },
+    "pp": {
+        "scarlet_violet": 5,
+        "the_teal_mask": 5,
+        "the_indigo_disk": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fighting",
+    "type": {
+        "scarlet_violet": "fighting",
+        "the_teal_mask": "fighting",
+        "the_indigo_disk": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+    "effect_chance": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_teal_mask": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_teal_mask": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "the_indigo_disk": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
     "flavor_text": {
         "scarlet_violet": "The user heightens its mental focus and unleashes its power. This may also lower the target's Sp. Def stat."
     },

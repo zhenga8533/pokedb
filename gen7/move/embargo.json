@@ -2,17 +2,45 @@
     "id": 373,
     "name": "embargo",
     "source_url": "https://pokeapi.co/api/v2/move/373/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "dark",
+    "type": {
+        "sun_moon": "dark",
+        "ultra_sun_ultra_moon": "dark",
+        "lets_go_pikachu_lets_go_eevee": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Target cannot use its held item for five turns. If the target leaves the field, this effect ends. If a Pokémon under this effect uses bug bite or pluck on a Pokémon holding a berry, the berry is destroyed but not used. If a Pokémon under this effect uses fling, it will fail. This effect is passed by baton pass.",
-    "short_effect": "Target cannot use held items.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Target cannot use its held item for five turns. If the target leaves the field, this effect ends. If a Pokémon under this effect uses bug bite or pluck on a Pokémon holding a berry, the berry is destroyed but not used. If a Pokémon under this effect uses fling, it will fail. This effect is passed by baton pass.",
+        "ultra_sun_ultra_moon": "Target cannot use its held item for five turns. If the target leaves the field, this effect ends. If a Pokémon under this effect uses bug bite or pluck on a Pokémon holding a berry, the berry is destroyed but not used. If a Pokémon under this effect uses fling, it will fail. This effect is passed by baton pass.",
+        "lets_go_pikachu_lets_go_eevee": "Target cannot use its held item for five turns. If the target leaves the field, this effect ends. If a Pokémon under this effect uses bug bite or pluck on a Pokémon holding a berry, the berry is destroyed but not used. If a Pokémon under this effect uses fling, it will fail. This effect is passed by baton pass."
+    },
+    "short_effect": {
+        "sun_moon": "Target cannot use held items.",
+        "ultra_sun_ultra_moon": "Target cannot use held items.",
+        "lets_go_pikachu_lets_go_eevee": "Target cannot use held items."
+    },
     "flavor_text": {
         "sun_moon": "This move prevents the target from using its held item for five turns. Its Trainer is also prevented from using items on it.",
         "ultra_sun_ultra_moon": "This move prevents the target from using its held item for five turns. Its Trainer is also prevented from using items on it.",

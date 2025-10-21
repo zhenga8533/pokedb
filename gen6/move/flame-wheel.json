@@ -2,17 +2,38 @@
     "id": 172,
     "name": "flame-wheel",
     "source_url": "https://pokeapi.co/api/v2/move/172/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 25,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 60,
+        "omega_ruby_alpha_sapphire": 60
+    },
+    "pp": {
+        "x_y": 25,
+        "omega_ruby_alpha_sapphire": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "x_y": "fire",
+        "omega_ruby_alpha_sapphire": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
-    "short_effect": "Has a 10% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+    "effect_chance": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Has a 10% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Has a 10% chance to burn the target. Frozen Pokémon may use this move, in which case they will thaw."
+    },
+    "short_effect": {
+        "x_y": "Has a 10% chance to burn the target. Lets frozen Pokémon thaw themselves.",
+        "omega_ruby_alpha_sapphire": "Has a 10% chance to burn the target. Lets frozen Pokémon thaw themselves."
+    },
     "flavor_text": {
         "x_y": "The user cloaks itself in fire and charges at the target. This may also leave the target with a burn.",
         "omega_ruby_alpha_sapphire": "The user cloaks itself in fire and charges at the target. This may also leave the target with a burn."

@@ -2,17 +2,52 @@
     "id": 30,
     "name": "horn-attack",
     "source_url": "https://pokeapi.co/api/v2/move/30/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 25,
+    "accuracy": {
+        "red_blue": 100,
+        "yellow": 100,
+        "red_green_japan": 100,
+        "blue_japan": 100
+    },
+    "power": {
+        "red_blue": 65,
+        "yellow": 65,
+        "red_green_japan": 65,
+        "blue_japan": 65
+    },
+    "pp": {
+        "red_blue": 25,
+        "yellow": 25,
+        "red_green_japan": 25,
+        "blue_japan": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "red_blue": "normal",
+        "yellow": "normal",
+        "red_green_japan": "normal",
+        "blue_japan": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage.",
-    "short_effect": "Inflicts regular damage with no additional effect.",
+    "effect_chance": {
+        "red_blue": null,
+        "yellow": null,
+        "red_green_japan": null,
+        "blue_japan": null
+    },
+    "effect": {
+        "red_blue": "Inflicts regular damage.",
+        "yellow": "Inflicts regular damage.",
+        "red_green_japan": "Inflicts regular damage.",
+        "blue_japan": "Inflicts regular damage."
+    },
+    "short_effect": {
+        "red_blue": "Inflicts regular damage with no additional effect.",
+        "yellow": "Inflicts regular damage with no additional effect.",
+        "red_green_japan": "Inflicts regular damage with no additional effect.",
+        "blue_japan": "Inflicts regular damage with no additional effect."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

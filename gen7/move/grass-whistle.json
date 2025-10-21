@@ -2,17 +2,45 @@
     "id": 320,
     "name": "grass-whistle",
     "source_url": "https://pokeapi.co/api/v2/move/320/",
-    "accuracy": 55,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 55,
+        "ultra_sun_ultra_moon": 55,
+        "lets_go_pikachu_lets_go_eevee": 55
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "grass",
+    "type": {
+        "sun_moon": "grass",
+        "ultra_sun_ultra_moon": "grass",
+        "lets_go_pikachu_lets_go_eevee": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Puts the target to sleep.",
-    "short_effect": "Puts the target to sleep.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Puts the target to sleep.",
+        "ultra_sun_ultra_moon": "Puts the target to sleep.",
+        "lets_go_pikachu_lets_go_eevee": "Puts the target to sleep."
+    },
+    "short_effect": {
+        "sun_moon": "Puts the target to sleep.",
+        "ultra_sun_ultra_moon": "Puts the target to sleep.",
+        "lets_go_pikachu_lets_go_eevee": "Puts the target to sleep."
+    },
     "flavor_text": {
         "sun_moon": "The user plays a pleasant melody that lulls the target into a deep sleep.",
         "ultra_sun_ultra_moon": "The user plays a pleasant melody that lulls the target into a deep sleep.",

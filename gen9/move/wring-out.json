@@ -2,17 +2,45 @@
     "id": 378,
     "name": "wring-out",
     "source_url": "https://pokeapi.co/api/v2/move/378/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 5,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "pp": {
+        "scarlet_violet": 5,
+        "the_teal_mask": 5,
+        "the_indigo_disk": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "normal",
+    "type": {
+        "scarlet_violet": "normal",
+        "the_teal_mask": "normal",
+        "the_indigo_disk": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power directly relates to the target’s relative remaining HP, given by `1 + 120 * current HP / max HP`, to a maximum of 121.",
-    "short_effect": "Power increases against targets with more HP remaining, up to a maximum of 121 power.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Power directly relates to the target’s relative remaining HP, given by `1 + 120 * current HP / max HP`, to a maximum of 121.",
+        "the_teal_mask": "Inflicts regular damage. Power directly relates to the target’s relative remaining HP, given by `1 + 120 * current HP / max HP`, to a maximum of 121.",
+        "the_indigo_disk": "Inflicts regular damage. Power directly relates to the target’s relative remaining HP, given by `1 + 120 * current HP / max HP`, to a maximum of 121."
+    },
+    "short_effect": {
+        "scarlet_violet": "Power increases against targets with more HP remaining, up to a maximum of 121 power.",
+        "the_teal_mask": "Power increases against targets with more HP remaining, up to a maximum of 121 power.",
+        "the_indigo_disk": "Power increases against targets with more HP remaining, up to a maximum of 121 power."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

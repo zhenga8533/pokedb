@@ -2,17 +2,38 @@
     "id": 484,
     "name": "heavy-slam",
     "source_url": "https://pokeapi.co/api/v2/move/484/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "black_white": "steel",
+        "black_2_white_2": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. The greater the user’s weight compared to the target’s, the higher power this move has, to a maximum of 120. User’s weight | Power -------------------------------- | ----: Up to 2× the target’s weight | 40 Up to 3× the target’s weight | 60 Up to 4× the target’s weight | 80 Up to 5× the target’s weight | 100 More than 5× the target’s weight | 120",
-    "short_effect": "Power is higher when the user weighs more than the target, up to a maximum of 120.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. The greater the user’s weight compared to the target’s, the higher power this move has, to a maximum of 120. User’s weight | Power -------------------------------- | ----: Up to 2× the target’s weight | 40 Up to 3× the target’s weight | 60 Up to 4× the target’s weight | 80 Up to 5× the target’s weight | 100 More than 5× the target’s weight | 120",
+        "black_2_white_2": "Inflicts regular damage. The greater the user’s weight compared to the target’s, the higher power this move has, to a maximum of 120. User’s weight | Power -------------------------------- | ----: Up to 2× the target’s weight | 40 Up to 3× the target’s weight | 60 Up to 4× the target’s weight | 80 Up to 5× the target’s weight | 100 More than 5× the target’s weight | 120"
+    },
+    "short_effect": {
+        "black_white": "Power is higher when the user weighs more than the target, up to a maximum of 120.",
+        "black_2_white_2": "Power is higher when the user weighs more than the target, up to a maximum of 120."
+    },
     "flavor_text": {
         "black_white": "The user slams into the target with its heavy body. The more the user outweighs the target, the greater its damage.",
         "black_2_white_2": "The user slams into the target with its heavy body. The more the user outweighs the target, the greater its damage."

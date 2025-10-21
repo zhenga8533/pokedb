@@ -2,17 +2,45 @@
     "id": 451,
     "name": "charge-beam",
     "source_url": "https://pokeapi.co/api/v2/move/451/",
-    "accuracy": 90,
-    "power": 50,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "power": {
+        "sun_moon": 50,
+        "ultra_sun_ultra_moon": 50,
+        "lets_go_pikachu_lets_go_eevee": 50
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "electric",
+    "type": {
+        "sun_moon": "electric",
+        "ultra_sun_ultra_moon": "electric",
+        "lets_go_pikachu_lets_go_eevee": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 70,
-    "effect": "Inflicts regular damage. Has a 70% chance to raise the user’s Special Attack by one stage.",
-    "short_effect": "Has a 70% chance to raise the user’s Special Attack by one stage.",
+    "effect_chance": {
+        "sun_moon": 70,
+        "ultra_sun_ultra_moon": 70,
+        "lets_go_pikachu_lets_go_eevee": 70
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 70% chance to raise the user’s Special Attack by one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 70% chance to raise the user’s Special Attack by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 70% chance to raise the user’s Special Attack by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 70% chance to raise the user’s Special Attack by one stage.",
+        "ultra_sun_ultra_moon": "Has a 70% chance to raise the user’s Special Attack by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 70% chance to raise the user’s Special Attack by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat.",
         "ultra_sun_ultra_moon": "The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat.",

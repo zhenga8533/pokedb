@@ -2,17 +2,38 @@
     "id": 99,
     "name": "rage",
     "source_url": "https://pokeapi.co/api/v2/move/99/",
-    "accuracy": 100,
-    "power": 20,
-    "pp": 20,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 20,
+        "black_2_white_2": 20
+    },
+    "pp": {
+        "black_white": 20,
+        "black_2_white_2": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage.",
-    "short_effect": "If the user is hit after using this move, its Attack rises by one stage.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage."
+    },
+    "short_effect": {
+        "black_white": "If the user is hit after using this move, its Attack rises by one stage.",
+        "black_2_white_2": "If the user is hit after using this move, its Attack rises by one stage."
+    },
     "flavor_text": {
         "black_white": "As long as this move is in use, the power of rage raises the Attack stat each time the user is hit in battle.",
         "black_2_white_2": "As long as this move is in use, the power of rage raises the Attack stat each time the user is hit in battle."

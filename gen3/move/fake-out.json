@@ -2,17 +2,59 @@
     "id": 252,
     "name": "fake-out",
     "source_url": "https://pokeapi.co/api/v2/move/252/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 10,
+    "accuracy": {
+        "ruby_sapphire": 100,
+        "emerald": 100,
+        "firered_leafgreen": 100,
+        "colosseum": 100,
+        "xd": 100
+    },
+    "power": {
+        "ruby_sapphire": 40,
+        "emerald": 40,
+        "firered_leafgreen": 40,
+        "colosseum": 40,
+        "xd": 40
+    },
+    "pp": {
+        "ruby_sapphire": 10,
+        "emerald": 10,
+        "firered_leafgreen": 10,
+        "colosseum": 10,
+        "xd": 10
+    },
     "priority": 3,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "ruby_sapphire": "normal",
+        "emerald": "normal",
+        "firered_leafgreen": "normal",
+        "colosseum": "normal",
+        "xd": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
-    "short_effect": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+    "effect_chance": {
+        "ruby_sapphire": 100,
+        "emerald": 100,
+        "firered_leafgreen": 100,
+        "colosseum": 100,
+        "xd": 100
+    },
+    "effect": {
+        "ruby_sapphire": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
+        "emerald": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
+        "firered_leafgreen": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
+        "colosseum": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
+        "xd": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field."
+    },
+    "short_effect": {
+        "ruby_sapphire": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+        "emerald": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+        "firered_leafgreen": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+        "colosseum": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+        "xd": "Can only be used as the first move after the user enters battle. Causes the target to flinch."
+    },
     "flavor_text": {
         "ruby_sapphire": "A 1st-turn, 1st-strike move that causes flinching.",
         "emerald": "A 1st-turn, 1st-strike move that causes flinching.",

@@ -2,17 +2,59 @@
     "id": 342,
     "name": "poison-tail",
     "source_url": "https://pokeapi.co/api/v2/move/342/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 25,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 50,
+        "the_isle_of_armor": 50,
+        "the_crown_tundra": 50,
+        "brilliant_diamond_and_shining_pearl": 50,
+        "legends_arceus": 50
+    },
+    "pp": {
+        "sword_shield": 25,
+        "the_isle_of_armor": 25,
+        "the_crown_tundra": 25,
+        "brilliant_diamond_and_shining_pearl": 25,
+        "legends_arceus": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "poison",
+    "type": {
+        "sword_shield": "poison",
+        "the_isle_of_armor": "poison",
+        "the_crown_tundra": "poison",
+        "brilliant_diamond_and_shining_pearl": "poison",
+        "legends_arceus": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
-    "short_effect": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+    "effect_chance": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
+        "the_isle_of_armor": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
+        "the_crown_tundra": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target.",
+        "legends_arceus": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to poison the target."
+    },
+    "short_effect": {
+        "sword_shield": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+        "the_isle_of_armor": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+        "the_crown_tundra": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+        "brilliant_diamond_and_shining_pearl": "Has an increased chance for a critical hit and a 10% chance to poison the target.",
+        "legends_arceus": "Has an increased chance for a critical hit and a 10% chance to poison the target."
+    },
     "flavor_text": {
         "sword_shield": "The user hits the target with its tail. This may also poison the target. Critical hits land more easily.",
         "legends_arceus": "The user hits the target with its tail. This may also poison the target. Critical hits land more easily."

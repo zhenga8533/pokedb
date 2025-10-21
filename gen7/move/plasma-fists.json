@@ -2,17 +2,45 @@
     "id": 721,
     "name": "plasma-fists",
     "source_url": "https://pokeapi.co/api/v2/move/721/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "sun_moon": "electric",
+        "ultra_sun_ultra_moon": "electric",
+        "lets_go_pikachu_lets_go_eevee": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "After inflicting damage, all Normal-type moves become Electric-type for the remainder of the turn, including status moves. This effect is applied after move type-changing abilities, such as Pixilate and Normalize.",
-    "short_effect": "After inflicting damage, causes all Normal-type moves to become Electric-type for the remainder of the turn.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "After inflicting damage, all Normal-type moves become Electric-type for the remainder of the turn, including status moves. This effect is applied after move type-changing abilities, such as Pixilate and Normalize.",
+        "ultra_sun_ultra_moon": "After inflicting damage, all Normal-type moves become Electric-type for the remainder of the turn, including status moves. This effect is applied after move type-changing abilities, such as Pixilate and Normalize.",
+        "lets_go_pikachu_lets_go_eevee": "After inflicting damage, all Normal-type moves become Electric-type for the remainder of the turn, including status moves. This effect is applied after move type-changing abilities, such as Pixilate and Normalize."
+    },
+    "short_effect": {
+        "sun_moon": "After inflicting damage, causes all Normal-type moves to become Electric-type for the remainder of the turn.",
+        "ultra_sun_ultra_moon": "After inflicting damage, causes all Normal-type moves to become Electric-type for the remainder of the turn.",
+        "lets_go_pikachu_lets_go_eevee": "After inflicting damage, causes all Normal-type moves to become Electric-type for the remainder of the turn."
+    },
     "flavor_text": {
         "ultra_sun_ultra_moon": "The user attacks with electrically charged fists. This move changes Normal-type moves to Electric-type moves.",
         "lets_go_pikachu_lets_go_eevee": "The user attacks with electrically charged fists. This move changes Normal-type moves to Electric-type moves."

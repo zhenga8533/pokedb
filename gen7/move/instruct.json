@@ -2,17 +2,45 @@
     "id": 689,
     "name": "instruct",
     "source_url": "https://pokeapi.co/api/v2/move/689/",
-    "accuracy": null,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "psychic",
+    "type": {
+        "sun_moon": "psychic",
+        "ultra_sun_ultra_moon": "psychic",
+        "lets_go_pikachu_lets_go_eevee": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "The target immediately uses its most recently-used move. This is independent of the target’s normal action for the turn (i.e., it may end up moving twice), but otherwise functions as usual, including deduction of PP. This effect works for disabled moves and ignores torment.",
-    "short_effect": "Forces the target to repeat its last used move.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "The target immediately uses its most recently-used move. This is independent of the target’s normal action for the turn (i.e., it may end up moving twice), but otherwise functions as usual, including deduction of PP. This effect works for disabled moves and ignores torment.",
+        "ultra_sun_ultra_moon": "The target immediately uses its most recently-used move. This is independent of the target’s normal action for the turn (i.e., it may end up moving twice), but otherwise functions as usual, including deduction of PP. This effect works for disabled moves and ignores torment.",
+        "lets_go_pikachu_lets_go_eevee": "The target immediately uses its most recently-used move. This is independent of the target’s normal action for the turn (i.e., it may end up moving twice), but otherwise functions as usual, including deduction of PP. This effect works for disabled moves and ignores torment."
+    },
+    "short_effect": {
+        "sun_moon": "Forces the target to repeat its last used move.",
+        "ultra_sun_ultra_moon": "Forces the target to repeat its last used move.",
+        "lets_go_pikachu_lets_go_eevee": "Forces the target to repeat its last used move."
+    },
     "flavor_text": {
         "sun_moon": "The user instructs the target to use the target’s last move again.",
         "ultra_sun_ultra_moon": "The user instructs the target to use the target’s last move again.",

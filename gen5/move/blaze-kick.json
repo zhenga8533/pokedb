@@ -2,17 +2,38 @@
     "id": 299,
     "name": "blaze-kick",
     "source_url": "https://pokeapi.co/api/v2/move/299/",
-    "accuracy": 90,
-    "power": 85,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 90,
+        "black_2_white_2": 90
+    },
+    "power": {
+        "black_white": 85,
+        "black_2_white_2": 85
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fire",
+    "type": {
+        "black_white": "fire",
+        "black_2_white_2": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
-    "short_effect": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target.",
+        "black_2_white_2": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move. Has a 10% chance to burn the target."
+    },
+    "short_effect": {
+        "black_white": "Has an increased chance for a critical hit and a 10% chance to burn the target.",
+        "black_2_white_2": "Has an increased chance for a critical hit and a 10% chance to burn the target."
+    },
     "flavor_text": {
         "black_white": "The user launches a kick that lands a critical hit more easily. It may also leave the target with a burn.",
         "black_2_white_2": "The user launches a kick that lands a critical hit more easily. It may also leave the target with a burn."

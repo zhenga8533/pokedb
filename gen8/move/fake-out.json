@@ -2,17 +2,59 @@
     "id": 252,
     "name": "fake-out",
     "source_url": "https://pokeapi.co/api/v2/move/252/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 40,
+        "the_isle_of_armor": 40,
+        "the_crown_tundra": 40,
+        "brilliant_diamond_and_shining_pearl": 40,
+        "legends_arceus": 40
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 3,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "sword_shield": "normal",
+        "the_isle_of_armor": "normal",
+        "the_crown_tundra": "normal",
+        "brilliant_diamond_and_shining_pearl": "normal",
+        "legends_arceus": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
-    "short_effect": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+    "effect_chance": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
+        "the_isle_of_armor": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
+        "the_crown_tundra": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field.",
+        "legends_arceus": "Inflicts regular damage. Causes the target to flinch. Can only be used on the user’s first turn after entering the field."
+    },
+    "short_effect": {
+        "sword_shield": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+        "the_isle_of_armor": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+        "the_crown_tundra": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+        "brilliant_diamond_and_shining_pearl": "Can only be used as the first move after the user enters battle. Causes the target to flinch.",
+        "legends_arceus": "Can only be used as the first move after the user enters battle. Causes the target to flinch."
+    },
     "flavor_text": {
         "sword_shield": "This attack hits first and makes the target flinch. It only works the first turn each time the user enters battle.",
         "legends_arceus": "This attack hits first and makes the target flinch. It only works the first turn each time the user enters battle."

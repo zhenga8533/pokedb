@@ -2,17 +2,38 @@
     "id": 102,
     "name": "mimic",
     "source_url": "https://pokeapi.co/api/v2/move/102/",
-    "accuracy": null,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "power": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "pp": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "x_y": "normal",
+        "omega_ruby_alpha_sapphire": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "This move is replaced by the target’s last successfully used move, and its PP changes to 5. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if the user already knows the targeted move, this move will fail. This effect vanishes when the user leaves the field. If chatter, metronome, mimic, sketch, or struggle is selected, this move will fail. This move cannot be copied by mirror move, nor selected by assist or metronome, nor forced by encore.",
-    "short_effect": "Copies the target’s last used move.",
+    "effect_chance": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "effect": {
+        "x_y": "This move is replaced by the target’s last successfully used move, and its PP changes to 5. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if the user already knows the targeted move, this move will fail. This effect vanishes when the user leaves the field. If chatter, metronome, mimic, sketch, or struggle is selected, this move will fail. This move cannot be copied by mirror move, nor selected by assist or metronome, nor forced by encore.",
+        "omega_ruby_alpha_sapphire": "This move is replaced by the target’s last successfully used move, and its PP changes to 5. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if the user already knows the targeted move, this move will fail. This effect vanishes when the user leaves the field. If chatter, metronome, mimic, sketch, or struggle is selected, this move will fail. This move cannot be copied by mirror move, nor selected by assist or metronome, nor forced by encore."
+    },
+    "short_effect": {
+        "x_y": "Copies the target’s last used move.",
+        "omega_ruby_alpha_sapphire": "Copies the target’s last used move."
+    },
     "flavor_text": {
         "x_y": "The user copies the target’s last move. The move can be used during battle until the Pokémon is switched out.",
         "omega_ruby_alpha_sapphire": "The user copies the target’s last move. The move can be used during battle until the Pokémon is switched out."

@@ -2,17 +2,38 @@
     "id": 474,
     "name": "venoshock",
     "source_url": "https://pokeapi.co/api/v2/move/474/",
-    "accuracy": 100,
-    "power": 65,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 65,
+        "black_2_white_2": 65
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "poison",
+    "type": {
+        "black_white": "poison",
+        "black_2_white_2": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the target is poisoned, this move has double power.",
-    "short_effect": "Inflicts double damage if the target is Poisoned.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. If the target is poisoned, this move has double power.",
+        "black_2_white_2": "Inflicts regular damage. If the target is poisoned, this move has double power."
+    },
+    "short_effect": {
+        "black_white": "Inflicts double damage if the target is Poisoned.",
+        "black_2_white_2": "Inflicts double damage if the target is Poisoned."
+    },
     "flavor_text": {
         "black_white": "The user drenches the target in a special poisonous liquid. Its power is doubled if the target is poisoned.",
         "black_2_white_2": "The user drenches the target in a special poisonous liquid. Its power is doubled if the target is poisoned."

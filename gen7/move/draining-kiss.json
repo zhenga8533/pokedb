@@ -2,17 +2,45 @@
     "id": 577,
     "name": "draining-kiss",
     "source_url": "https://pokeapi.co/api/v2/move/577/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 50,
+        "ultra_sun_ultra_moon": 50,
+        "lets_go_pikachu_lets_go_eevee": 50
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fairy",
+    "type": {
+        "sun_moon": "fairy",
+        "ultra_sun_ultra_moon": "fairy",
+        "lets_go_pikachu_lets_go_eevee": "fairy"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": null,
-    "effect": "Deals regular damage. Drains 75% of the damage inflicted to heal the user.",
-    "short_effect": "Drains 75% of the damage inflicted to heal the user.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Deals regular damage. Drains 75% of the damage inflicted to heal the user.",
+        "ultra_sun_ultra_moon": "Deals regular damage. Drains 75% of the damage inflicted to heal the user.",
+        "lets_go_pikachu_lets_go_eevee": "Deals regular damage. Drains 75% of the damage inflicted to heal the user."
+    },
+    "short_effect": {
+        "sun_moon": "Drains 75% of the damage inflicted to heal the user.",
+        "ultra_sun_ultra_moon": "Drains 75% of the damage inflicted to heal the user.",
+        "lets_go_pikachu_lets_go_eevee": "Drains 75% of the damage inflicted to heal the user."
+    },
     "flavor_text": {
         "sun_moon": "The user steals the target’s HP with a kiss. The user’s HP is restored by over half of the damage taken by the target.",
         "ultra_sun_ultra_moon": "The user steals the target’s HP with a kiss. The user’s HP is restored by over half of the damage taken by the target.",

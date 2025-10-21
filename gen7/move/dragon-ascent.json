@@ -2,17 +2,45 @@
     "id": 620,
     "name": "dragon-ascent",
     "source_url": "https://pokeapi.co/api/v2/move/620/",
-    "accuracy": 100,
-    "power": 120,
-    "pp": 5,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 120,
+        "ultra_sun_ultra_moon": 120,
+        "lets_go_pikachu_lets_go_eevee": 120
+    },
+    "pp": {
+        "sun_moon": 5,
+        "ultra_sun_ultra_moon": 5,
+        "lets_go_pikachu_lets_go_eevee": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "flying",
+    "type": {
+        "sun_moon": "flying",
+        "ultra_sun_ultra_moon": "flying",
+        "lets_go_pikachu_lets_go_eevee": "flying"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each.",
-    "short_effect": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage, then lowers the user’s Defense and Special Defense by one stage each."
+    },
+    "short_effect": {
+        "sun_moon": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage.",
+        "ultra_sun_ultra_moon": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage.",
+        "lets_go_pikachu_lets_go_eevee": "Lowers the user’s Defense and Special Defense by one stage after inflicting damage."
+    },
     "flavor_text": {
         "sun_moon": "After soaring upward, the user attacks its target by dropping out of the sky at high speeds. But it lowers its own Defense and Sp. Def stats in the process.",
         "ultra_sun_ultra_moon": "After soaring upward, the user attacks its target by dropping out of the sky at high speeds. But it lowers its own Defense and Sp. Def stats in the process.",

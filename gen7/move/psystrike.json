@@ -2,17 +2,45 @@
     "id": 540,
     "name": "psystrike",
     "source_url": "https://pokeapi.co/api/v2/move/540/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "sun_moon": "psychic",
+        "ultra_sun_ultra_moon": "psychic",
+        "lets_go_pikachu_lets_go_eevee": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Damage calculation always uses the target’s Defense, regardless of this move’s damage class.",
-    "short_effect": "Inflicts damage based on the target’s Defense, not Special Defense.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Damage calculation always uses the target’s Defense, regardless of this move’s damage class.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Damage calculation always uses the target’s Defense, regardless of this move’s damage class.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Damage calculation always uses the target’s Defense, regardless of this move’s damage class."
+    },
+    "short_effect": {
+        "sun_moon": "Inflicts damage based on the target’s Defense, not Special Defense.",
+        "ultra_sun_ultra_moon": "Inflicts damage based on the target’s Defense, not Special Defense.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts damage based on the target’s Defense, not Special Defense."
+    },
     "flavor_text": {
         "sun_moon": "The user materializes an odd psychic wave to attack the target. This attack does physical damage.",
         "ultra_sun_ultra_moon": "The user materializes an odd psychic wave to attack the target. This attack does physical damage.",

@@ -2,17 +2,45 @@
     "id": 232,
     "name": "metal-claw",
     "source_url": "https://pokeapi.co/api/v2/move/232/",
-    "accuracy": 95,
-    "power": 50,
-    "pp": 35,
+    "accuracy": {
+        "diamond_pearl": 95,
+        "platinum": 95,
+        "heartgold_soulsilver": 95
+    },
+    "power": {
+        "diamond_pearl": 50,
+        "platinum": 50,
+        "heartgold_soulsilver": 50
+    },
+    "pp": {
+        "diamond_pearl": 35,
+        "platinum": 35,
+        "heartgold_soulsilver": 35
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "diamond_pearl": "steel",
+        "platinum": "steel",
+        "heartgold_soulsilver": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
-    "short_effect": "Has a 10% chance to raise the user’s Attack by one stage.",
+    "effect_chance": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
+        "platinum": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 10% chance to raise the user’s Attack by one stage.",
+        "platinum": "Has a 10% chance to raise the user’s Attack by one stage.",
+        "heartgold_soulsilver": "Has a 10% chance to raise the user’s Attack by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is raked with steel claws. It may also raise the user’s Attack stat.",
         "platinum": "The foe is raked with steel claws. It may also raise the user’s Attack stat.",

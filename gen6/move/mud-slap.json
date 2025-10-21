@@ -2,17 +2,38 @@
     "id": 189,
     "name": "mud-slap",
     "source_url": "https://pokeapi.co/api/v2/move/189/",
-    "accuracy": 100,
-    "power": 20,
-    "pp": 10,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 20,
+        "omega_ruby_alpha_sapphire": 20
+    },
+    "pp": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ground",
+    "type": {
+        "x_y": "ground",
+        "omega_ruby_alpha_sapphire": "ground"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s accuracy by one stage.",
+    "effect_chance": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "x_y": "Has a 100% chance to lower the target’s accuracy by one stage.",
+        "omega_ruby_alpha_sapphire": "Has a 100% chance to lower the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "x_y": "The user hurls mud in the target’s face to inflict damage and lower its accuracy.",
         "omega_ruby_alpha_sapphire": "The user hurls mud in the target’s face to inflict damage and lower its accuracy."

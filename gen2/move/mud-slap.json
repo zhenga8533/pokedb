@@ -2,17 +2,38 @@
     "id": 189,
     "name": "mud-slap",
     "source_url": "https://pokeapi.co/api/v2/move/189/",
-    "accuracy": 100,
-    "power": 20,
-    "pp": 10,
+    "accuracy": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "power": {
+        "gold_silver": 20,
+        "crystal": 20
+    },
+    "pp": {
+        "gold_silver": 10,
+        "crystal": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ground",
+    "type": {
+        "gold_silver": "ground",
+        "crystal": "ground"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
-    "short_effect": "Has a 100% chance to lower the target’s accuracy by one stage.",
+    "effect_chance": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
+        "crystal": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 100% chance to lower the target’s accuracy by one stage.",
+        "crystal": "Has a 100% chance to lower the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "gold_silver": "Reduces the foe's accuracy.",
         "crystal": "Reduces the foe's accuracy."

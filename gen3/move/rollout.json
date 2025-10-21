@@ -2,17 +2,59 @@
     "id": 205,
     "name": "rollout",
     "source_url": "https://pokeapi.co/api/v2/move/205/",
-    "accuracy": 90,
-    "power": 30,
-    "pp": 20,
+    "accuracy": {
+        "ruby_sapphire": 90,
+        "emerald": 90,
+        "firered_leafgreen": 90,
+        "colosseum": 90,
+        "xd": 90
+    },
+    "power": {
+        "ruby_sapphire": 30,
+        "emerald": 30,
+        "firered_leafgreen": 30,
+        "colosseum": 30,
+        "xd": 30
+    },
+    "pp": {
+        "ruby_sapphire": 20,
+        "emerald": 20,
+        "firered_leafgreen": 20,
+        "colosseum": 20,
+        "xd": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "rock",
+    "type": {
+        "ruby_sapphire": "rock",
+        "emerald": "rock",
+        "firered_leafgreen": "rock",
+        "colosseum": "rock",
+        "xd": "rock"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
-    "short_effect": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+    "effect_chance": {
+        "ruby_sapphire": null,
+        "emerald": null,
+        "firered_leafgreen": null,
+        "colosseum": null,
+        "xd": null
+    },
+    "effect": {
+        "ruby_sapphire": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
+        "emerald": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
+        "firered_leafgreen": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
+        "colosseum": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power.",
+        "xd": "Inflicts regular damage. User is forced to use this move for five turns. Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends. If this move misses or becomes unusable, the lock-in ends. If the user has used defense curl since entering the field, this move has double power."
+    },
+    "short_effect": {
+        "ruby_sapphire": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+        "emerald": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+        "firered_leafgreen": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+        "colosseum": "Power doubles every turn this move is used in succession after the first, resetting after five turns.",
+        "xd": "Power doubles every turn this move is used in succession after the first, resetting after five turns."
+    },
     "flavor_text": {
         "ruby_sapphire": "An attack lasting 5 turns with rising intensity.",
         "emerald": "An attack lasting 5 turns with rising intensity.",

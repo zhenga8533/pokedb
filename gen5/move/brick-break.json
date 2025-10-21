@@ -2,17 +2,38 @@
     "id": 280,
     "name": "brick-break",
     "source_url": "https://pokeapi.co/api/v2/move/280/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 75,
+        "black_2_white_2": 75
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "black_white": "fighting",
+        "black_2_white_2": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
-    "short_effect": "Destroys Reflect and Light Screen.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage.",
+        "black_2_white_2": "Destroys any light screen or reflect on the target’s side of the field, then inflicts regular damage."
+    },
+    "short_effect": {
+        "black_white": "Destroys Reflect and Light Screen.",
+        "black_2_white_2": "Destroys Reflect and Light Screen."
+    },
     "flavor_text": {
         "black_white": "The user attacks with a swift chop. It can also break any barrier such as Light Screen and Reflect.",
         "black_2_white_2": "The user attacks with a swift chop. It can also break any barrier such as Light Screen and Reflect."

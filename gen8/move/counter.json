@@ -2,17 +2,59 @@
     "id": 68,
     "name": "counter",
     "source_url": "https://pokeapi.co/api/v2/move/68/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "pp": {
+        "sword_shield": 20,
+        "the_isle_of_armor": 20,
+        "the_crown_tundra": 20,
+        "brilliant_diamond_and_shining_pearl": 20,
+        "legends_arceus": 20
+    },
     "priority": -5,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "sword_shield": "fighting",
+        "the_isle_of_armor": "fighting",
+        "the_crown_tundra": "fighting",
+        "brilliant_diamond_and_shining_pearl": "fighting",
+        "legends_arceus": "fighting"
+    },
     "target": "specific-move",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Targets the last opposing Pokémon to hit the user with a physical move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
-    "short_effect": "Inflicts twice the damage the user received from the last physical hit it took.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Targets the last opposing Pokémon to hit the user with a physical move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
+        "the_isle_of_armor": "Targets the last opposing Pokémon to hit the user with a physical move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
+        "the_crown_tundra": "Targets the last opposing Pokémon to hit the user with a physical move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
+        "brilliant_diamond_and_shining_pearl": "Targets the last opposing Pokémon to hit the user with a physical move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome.",
+        "legends_arceus": "Targets the last opposing Pokémon to hit the user with a physical move this turn. Inflicts twice the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored. This move cannot be copied by mirror move, nor selected by assist or metronome."
+    },
+    "short_effect": {
+        "sword_shield": "Inflicts twice the damage the user received from the last physical hit it took.",
+        "the_isle_of_armor": "Inflicts twice the damage the user received from the last physical hit it took.",
+        "the_crown_tundra": "Inflicts twice the damage the user received from the last physical hit it took.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts twice the damage the user received from the last physical hit it took.",
+        "legends_arceus": "Inflicts twice the damage the user received from the last physical hit it took."
+    },
     "flavor_text": {
         "sword_shield": "A retaliation move that counters any physical attack, inflicting double the damage taken.",
         "legends_arceus": "A retaliation move that counters any physical attack, inflicting double the damage taken."

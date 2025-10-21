@@ -2,17 +2,45 @@
     "id": 395,
     "name": "force-palm",
     "source_url": "https://pokeapi.co/api/v2/move/395/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 60,
+        "ultra_sun_ultra_moon": 60,
+        "lets_go_pikachu_lets_go_eevee": 60
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "sun_moon": "fighting",
+        "ultra_sun_ultra_moon": "fighting",
+        "lets_go_pikachu_lets_go_eevee": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
-    "short_effect": "Has a 30% chance to paralyze the target.",
+    "effect_chance": {
+        "sun_moon": 30,
+        "ultra_sun_ultra_moon": 30,
+        "lets_go_pikachu_lets_go_eevee": 30
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 30% chance to paralyze the target."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 30% chance to paralyze the target.",
+        "ultra_sun_ultra_moon": "Has a 30% chance to paralyze the target.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 30% chance to paralyze the target."
+    },
     "flavor_text": {
         "sun_moon": "The target is attacked with a shock wave. This may also leave the target with paralysis.",
         "ultra_sun_ultra_moon": "The target is attacked with a shock wave. This may also leave the target with paralysis.",

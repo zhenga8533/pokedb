@@ -2,17 +2,59 @@
     "id": 539,
     "name": "night-daze",
     "source_url": "https://pokeapi.co/api/v2/move/539/",
-    "accuracy": 95,
-    "power": 85,
-    "pp": 10,
+    "accuracy": {
+        "sword_shield": 95,
+        "the_isle_of_armor": 95,
+        "the_crown_tundra": 95,
+        "brilliant_diamond_and_shining_pearl": 95,
+        "legends_arceus": 95
+    },
+    "power": {
+        "sword_shield": 85,
+        "the_isle_of_armor": 85,
+        "the_crown_tundra": 85,
+        "brilliant_diamond_and_shining_pearl": 85,
+        "legends_arceus": 85
+    },
+    "pp": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dark",
+    "type": {
+        "sword_shield": "dark",
+        "the_isle_of_armor": "dark",
+        "the_crown_tundra": "dark",
+        "brilliant_diamond_and_shining_pearl": "dark",
+        "legends_arceus": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": 40,
-    "effect": "Inflicts regular damage. Has a 40% chance to lower the target’s accuracy by one stage.",
-    "short_effect": "Has a 40% chance to lower the target’s accuracy by one stage.",
+    "effect_chance": {
+        "sword_shield": 40,
+        "the_isle_of_armor": 40,
+        "the_crown_tundra": 40,
+        "brilliant_diamond_and_shining_pearl": 40,
+        "legends_arceus": 40
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 40% chance to lower the target’s accuracy by one stage.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 40% chance to lower the target’s accuracy by one stage.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 40% chance to lower the target’s accuracy by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 40% chance to lower the target’s accuracy by one stage.",
+        "legends_arceus": "Inflicts regular damage. Has a 40% chance to lower the target’s accuracy by one stage."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 40% chance to lower the target’s accuracy by one stage.",
+        "the_isle_of_armor": "Has a 40% chance to lower the target’s accuracy by one stage.",
+        "the_crown_tundra": "Has a 40% chance to lower the target’s accuracy by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Has a 40% chance to lower the target’s accuracy by one stage.",
+        "legends_arceus": "Has a 40% chance to lower the target’s accuracy by one stage."
+    },
     "flavor_text": {
         "sword_shield": "The user lets loose a pitch-black shock wave at its target. This may also lower the target’s accuracy.",
         "legends_arceus": "The user lets loose a pitch-black shock wave at its target. This may also lower the target's accuracy."

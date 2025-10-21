@@ -2,17 +2,45 @@
     "id": 90,
     "name": "fissure",
     "source_url": "https://pokeapi.co/api/v2/move/90/",
-    "accuracy": 30,
-    "power": null,
-    "pp": 5,
+    "accuracy": {
+        "diamond_pearl": 30,
+        "platinum": 30,
+        "heartgold_soulsilver": 30
+    },
+    "power": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "pp": {
+        "diamond_pearl": 5,
+        "platinum": 5,
+        "heartgold_soulsilver": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ground",
+    "type": {
+        "diamond_pearl": "ground",
+        "platinum": "ground",
+        "heartgold_soulsilver": "ground"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts damage equal to the target’s max HP. Ignores accuracy and evasion modifiers. This move’s accuracy is 30% plus 1% for each level the user is higher than the target. If the user is a lower level than the target, this move will fail. Because this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting. The effects of lock on, mind reader, and no guard still apply, as long as the user is equal or higher level than the target. However, they will not give this move a chance to break through detect or protect.",
-    "short_effect": "Causes a one-hit KO.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts damage equal to the target’s max HP. Ignores accuracy and evasion modifiers. This move’s accuracy is 30% plus 1% for each level the user is higher than the target. If the user is a lower level than the target, this move will fail. Because this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting. The effects of lock on, mind reader, and no guard still apply, as long as the user is equal or higher level than the target. However, they will not give this move a chance to break through detect or protect.",
+        "platinum": "Inflicts damage equal to the target’s max HP. Ignores accuracy and evasion modifiers. This move’s accuracy is 30% plus 1% for each level the user is higher than the target. If the user is a lower level than the target, this move will fail. Because this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting. The effects of lock on, mind reader, and no guard still apply, as long as the user is equal or higher level than the target. However, they will not give this move a chance to break through detect or protect.",
+        "heartgold_soulsilver": "Inflicts damage equal to the target’s max HP. Ignores accuracy and evasion modifiers. This move’s accuracy is 30% plus 1% for each level the user is higher than the target. If the user is a lower level than the target, this move will fail. Because this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting. The effects of lock on, mind reader, and no guard still apply, as long as the user is equal or higher level than the target. However, they will not give this move a chance to break through detect or protect."
+    },
+    "short_effect": {
+        "diamond_pearl": "Causes a one-hit KO.",
+        "platinum": "Causes a one-hit KO.",
+        "heartgold_soulsilver": "Causes a one-hit KO."
+    },
     "flavor_text": {
         "diamond_pearl": "The user opens up a fissure in the ground and drops the foe in. The target instantly faints if it hits.",
         "platinum": "The user opens up a fissure in the ground and drops the foe in. The target instantly faints if it hits.",

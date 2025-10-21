@@ -2,17 +2,59 @@
     "id": 573,
     "name": "freeze-dry",
     "source_url": "https://pokeapi.co/api/v2/move/573/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 20,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 70,
+        "the_isle_of_armor": 70,
+        "the_crown_tundra": 70,
+        "brilliant_diamond_and_shining_pearl": 70,
+        "legends_arceus": 70
+    },
+    "pp": {
+        "sword_shield": 20,
+        "the_isle_of_armor": 20,
+        "the_crown_tundra": 20,
+        "brilliant_diamond_and_shining_pearl": 20,
+        "legends_arceus": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ice",
+    "type": {
+        "sword_shield": "ice",
+        "the_isle_of_armor": "ice",
+        "the_crown_tundra": "ice",
+        "brilliant_diamond_and_shining_pearl": "ice",
+        "legends_arceus": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vi",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. This move is super-effective against the water type. The target’s other type will affect damage as usual. If this move’s type is changed, it remains super-effective against Water regardless of its type.",
-    "short_effect": "Super-effective against water.",
+    "effect_chance": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. This move is super-effective against the water type. The target’s other type will affect damage as usual. If this move’s type is changed, it remains super-effective against Water regardless of its type.",
+        "the_isle_of_armor": "Inflicts regular damage. This move is super-effective against the water type. The target’s other type will affect damage as usual. If this move’s type is changed, it remains super-effective against Water regardless of its type.",
+        "the_crown_tundra": "Inflicts regular damage. This move is super-effective against the water type. The target’s other type will affect damage as usual. If this move’s type is changed, it remains super-effective against Water regardless of its type.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. This move is super-effective against the water type. The target’s other type will affect damage as usual. If this move’s type is changed, it remains super-effective against Water regardless of its type.",
+        "legends_arceus": "Inflicts regular damage. This move is super-effective against the water type. The target’s other type will affect damage as usual. If this move’s type is changed, it remains super-effective against Water regardless of its type."
+    },
+    "short_effect": {
+        "sword_shield": "Super-effective against water.",
+        "the_isle_of_armor": "Super-effective against water.",
+        "the_crown_tundra": "Super-effective against water.",
+        "brilliant_diamond_and_shining_pearl": "Super-effective against water.",
+        "legends_arceus": "Super-effective against water."
+    },
     "flavor_text": {
         "sword_shield": "The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types.",
         "legends_arceus": "The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types."

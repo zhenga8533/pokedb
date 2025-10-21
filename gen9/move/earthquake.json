@@ -2,17 +2,45 @@
     "id": 89,
     "name": "earthquake",
     "source_url": "https://pokeapi.co/api/v2/move/89/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ground",
+    "type": {
+        "scarlet_violet": "ground",
+        "the_teal_mask": "ground",
+        "the_indigo_disk": "ground"
+    },
     "target": "all-other-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the target is in the first turn of dig, this move will hit with double power.",
-    "short_effect": "Inflicts regular damage and can hit Dig users.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. If the target is in the first turn of dig, this move will hit with double power.",
+        "the_teal_mask": "Inflicts regular damage. If the target is in the first turn of dig, this move will hit with double power.",
+        "the_indigo_disk": "Inflicts regular damage. If the target is in the first turn of dig, this move will hit with double power."
+    },
+    "short_effect": {
+        "scarlet_violet": "Inflicts regular damage and can hit Dig users.",
+        "the_teal_mask": "Inflicts regular damage and can hit Dig users.",
+        "the_indigo_disk": "Inflicts regular damage and can hit Dig users."
+    },
     "flavor_text": {
         "scarlet_violet": "The user sets off an earthquake that strikes every Pokémon around it."
     },

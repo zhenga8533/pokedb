@@ -2,17 +2,45 @@
     "id": 717,
     "name": "natures-madness",
     "source_url": "https://pokeapi.co/api/v2/move/717/",
-    "accuracy": 90,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fairy",
+    "type": {
+        "sun_moon": "fairy",
+        "ultra_sun_ultra_moon": "fairy",
+        "lets_go_pikachu_lets_go_eevee": "fairy"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "Inflicts typeless damage equal to half the target’s remaining HP.",
-    "short_effect": "Inflicts damage equal to half the target’s HP.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts typeless damage equal to half the target’s remaining HP.",
+        "ultra_sun_ultra_moon": "Inflicts typeless damage equal to half the target’s remaining HP.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts typeless damage equal to half the target’s remaining HP."
+    },
+    "short_effect": {
+        "sun_moon": "Inflicts damage equal to half the target’s HP.",
+        "ultra_sun_ultra_moon": "Inflicts damage equal to half the target’s HP.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts damage equal to half the target’s HP."
+    },
     "flavor_text": {
         "sun_moon": "The user hits the target with the force of nature. It halves the target’s HP.",
         "ultra_sun_ultra_moon": "The user hits the target with the force of nature. It halves the target’s HP.",

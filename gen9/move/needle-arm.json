@@ -2,17 +2,45 @@
     "id": 302,
     "name": "needle-arm",
     "source_url": "https://pokeapi.co/api/v2/move/302/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 60,
+        "the_teal_mask": 60,
+        "the_indigo_disk": 60
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "grass",
+    "type": {
+        "scarlet_violet": "grass",
+        "the_teal_mask": "grass",
+        "the_indigo_disk": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "scarlet_violet": 30,
+        "the_teal_mask": 30,
+        "the_indigo_disk": 30
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "the_teal_mask": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 30% chance to make the target flinch.",
+        "the_teal_mask": "Has a 30% chance to make the target flinch.",
+        "the_indigo_disk": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

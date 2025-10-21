@@ -2,17 +2,45 @@
     "id": 138,
     "name": "dream-eater",
     "source_url": "https://pokeapi.co/api/v2/move/138/",
-    "accuracy": 100,
-    "power": 100,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "sun_moon": "psychic",
+        "ultra_sun_ultra_moon": "psychic",
+        "lets_go_pikachu_lets_go_eevee": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
-    "short_effect": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "ultra_sun_ultra_moon": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "lets_go_pikachu_lets_go_eevee": "Fails if not used on a sleeping Pokémon. Inflicts regular damage. Drains half the damage inflicted to heal the user."
+    },
+    "short_effect": {
+        "sun_moon": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+        "ultra_sun_ultra_moon": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+        "lets_go_pikachu_lets_go_eevee": "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user."
+    },
     "flavor_text": {
         "sun_moon": "The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal its own HP.",
         "ultra_sun_ultra_moon": "The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal its own HP.",

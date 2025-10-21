@@ -2,17 +2,38 @@
     "id": 259,
     "name": "torment",
     "source_url": "https://pokeapi.co/api/v2/move/259/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "dark",
+    "type": {
+        "black_white": "dark",
+        "black_2_white_2": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Prevents the target from attempting to use the same move twice in a row. When the target leaves the field, this effect ends. If the target is forced to attempt a repeated move due to choice band, choice scarf, choice specs, disable, encore, taunt, only having PP remaining for one move, or any other effect, the target will use struggle instead. The target is then free to use the forced move next turn, as it didn’t use that move this turn.",
-    "short_effect": "Prevents the target from using the same move twice in a row.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Prevents the target from attempting to use the same move twice in a row. When the target leaves the field, this effect ends. If the target is forced to attempt a repeated move due to choice band, choice scarf, choice specs, disable, encore, taunt, only having PP remaining for one move, or any other effect, the target will use struggle instead. The target is then free to use the forced move next turn, as it didn’t use that move this turn.",
+        "black_2_white_2": "Prevents the target from attempting to use the same move twice in a row. When the target leaves the field, this effect ends. If the target is forced to attempt a repeated move due to choice band, choice scarf, choice specs, disable, encore, taunt, only having PP remaining for one move, or any other effect, the target will use struggle instead. The target is then free to use the forced move next turn, as it didn’t use that move this turn."
+    },
+    "short_effect": {
+        "black_white": "Prevents the target from using the same move twice in a row.",
+        "black_2_white_2": "Prevents the target from using the same move twice in a row."
+    },
     "flavor_text": {
         "black_white": "The user torments and enrages the target, making it incapable of using the same move twice in a row.",
         "black_2_white_2": "The user torments and enrages the target, making it incapable of using the same move twice in a row."

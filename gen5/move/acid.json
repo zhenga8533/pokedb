@@ -2,17 +2,38 @@
     "id": 51,
     "name": "acid",
     "source_url": "https://pokeapi.co/api/v2/move/51/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 30,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 40,
+        "black_2_white_2": 40
+    },
+    "pp": {
+        "black_white": 30,
+        "black_2_white_2": 30
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "poison",
+    "type": {
+        "black_white": "poison",
+        "black_2_white_2": "poison"
+    },
     "target": "all-opponents",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "black_2_white_2": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "black_white": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "black_2_white_2": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
     "flavor_text": {
         "black_white": "The opposing team is attacked with a spray of harsh acid. The acid may also lower the targets’ Sp. Def stats.",
         "black_2_white_2": "The opposing team is attacked with a spray of harsh acid. The acid may also lower the targets’ Sp. Def stats."

@@ -2,17 +2,45 @@
     "id": 431,
     "name": "rock-climb",
     "source_url": "https://pokeapi.co/api/v2/move/431/",
-    "accuracy": 85,
-    "power": 90,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 85,
+        "ultra_sun_ultra_moon": 85,
+        "lets_go_pikachu_lets_go_eevee": 85
+    },
+    "power": {
+        "sun_moon": 90,
+        "ultra_sun_ultra_moon": 90,
+        "lets_go_pikachu_lets_go_eevee": 90
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "sun_moon": "normal",
+        "ultra_sun_ultra_moon": "normal",
+        "lets_go_pikachu_lets_go_eevee": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to confuse the target.",
-    "short_effect": "Has a 20% chance to confuse the target.",
+    "effect_chance": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 20% chance to confuse the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 20% chance to confuse the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 20% chance to confuse the target."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 20% chance to confuse the target.",
+        "ultra_sun_ultra_moon": "Has a 20% chance to confuse the target.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 20% chance to confuse the target."
+    },
     "flavor_text": {
         "sun_moon": "The user attacks the target by smashing into it with incredible force. This may also confuse the target.",
         "ultra_sun_ultra_moon": "The user attacks the target by smashing into it with incredible force. This may also confuse the target.",

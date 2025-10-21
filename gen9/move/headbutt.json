@@ -2,17 +2,45 @@
     "id": 29,
     "name": "headbutt",
     "source_url": "https://pokeapi.co/api/v2/move/29/",
-    "accuracy": 100,
-    "power": 70,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 70,
+        "the_teal_mask": 70,
+        "the_indigo_disk": 70
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "scarlet_violet": "normal",
+        "the_teal_mask": "normal",
+        "the_indigo_disk": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
-    "short_effect": "Has a 30% chance to make the target flinch.",
+    "effect_chance": {
+        "scarlet_violet": 30,
+        "the_teal_mask": 30,
+        "the_indigo_disk": 30
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "the_teal_mask": "Inflicts regular damage. Has a 30% chance to make the target flinch.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 30% chance to make the target flinch."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 30% chance to make the target flinch.",
+        "the_teal_mask": "Has a 30% chance to make the target flinch.",
+        "the_indigo_disk": "Has a 30% chance to make the target flinch."
+    },
     "flavor_text": {
         "scarlet_violet": "The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch."
     },

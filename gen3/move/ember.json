@@ -2,17 +2,59 @@
     "id": 52,
     "name": "ember",
     "source_url": "https://pokeapi.co/api/v2/move/52/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 25,
+    "accuracy": {
+        "ruby_sapphire": 100,
+        "emerald": 100,
+        "firered_leafgreen": 100,
+        "colosseum": 100,
+        "xd": 100
+    },
+    "power": {
+        "ruby_sapphire": 40,
+        "emerald": 40,
+        "firered_leafgreen": 40,
+        "colosseum": 40,
+        "xd": 40
+    },
+    "pp": {
+        "ruby_sapphire": 25,
+        "emerald": 25,
+        "firered_leafgreen": 25,
+        "colosseum": 25,
+        "xd": 25
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fire",
+    "type": {
+        "ruby_sapphire": "fire",
+        "emerald": "fire",
+        "firered_leafgreen": "fire",
+        "colosseum": "fire",
+        "xd": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to burn the target.",
-    "short_effect": "Has a 10% chance to burn the target.",
+    "effect_chance": {
+        "ruby_sapphire": 10,
+        "emerald": 10,
+        "firered_leafgreen": 10,
+        "colosseum": 10,
+        "xd": 10
+    },
+    "effect": {
+        "ruby_sapphire": "Inflicts regular damage. Has a 10% chance to burn the target.",
+        "emerald": "Inflicts regular damage. Has a 10% chance to burn the target.",
+        "firered_leafgreen": "Inflicts regular damage. Has a 10% chance to burn the target.",
+        "colosseum": "Inflicts regular damage. Has a 10% chance to burn the target.",
+        "xd": "Inflicts regular damage. Has a 10% chance to burn the target."
+    },
+    "short_effect": {
+        "ruby_sapphire": "Has a 10% chance to burn the target.",
+        "emerald": "Has a 10% chance to burn the target.",
+        "firered_leafgreen": "Has a 10% chance to burn the target.",
+        "colosseum": "Has a 10% chance to burn the target.",
+        "xd": "Has a 10% chance to burn the target."
+    },
     "flavor_text": {
         "firered_leafgreen": "The foe is attacked with small flames. The foe may suffer a burn.",
         "ruby_sapphire": "A weak fire attack that may inflict a burn.",

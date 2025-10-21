@@ -2,17 +2,45 @@
     "id": 380,
     "name": "gastro-acid",
     "source_url": "https://pokeapi.co/api/v2/move/380/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "sun_moon": "poison",
+        "ultra_sun_ultra_moon": "poison",
+        "lets_go_pikachu_lets_go_eevee": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
-    "short_effect": "Nullifies target’s ability until it leaves battle.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
+        "ultra_sun_ultra_moon": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass.",
+        "lets_go_pikachu_lets_go_eevee": "The target’s ability is disabled as long as it remains on the field. This effect is passed on by baton pass."
+    },
+    "short_effect": {
+        "sun_moon": "Nullifies target’s ability until it leaves battle.",
+        "ultra_sun_ultra_moon": "Nullifies target’s ability until it leaves battle.",
+        "lets_go_pikachu_lets_go_eevee": "Nullifies target’s ability until it leaves battle."
+    },
     "flavor_text": {
         "sun_moon": "The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target’s Ability.",
         "ultra_sun_ultra_moon": "The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target’s Ability.",

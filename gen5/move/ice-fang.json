@@ -2,17 +2,38 @@
     "id": 423,
     "name": "ice-fang",
     "source_url": "https://pokeapi.co/api/v2/move/423/",
-    "accuracy": 95,
-    "power": 65,
-    "pp": 15,
+    "accuracy": {
+        "black_white": 95,
+        "black_2_white_2": 95
+    },
+    "power": {
+        "black_white": 65,
+        "black_2_white_2": 65
+    },
+    "pp": {
+        "black_white": 15,
+        "black_2_white_2": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "ice",
+    "type": {
+        "black_white": "ice",
+        "black_2_white_2": "ice"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to freeze the target and a separate 10% chance to make the target flinch.",
-    "short_effect": "Has a 10% chance to freeze the target and a 10% chance to make the target flinch.",
+    "effect_chance": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 10% chance to freeze the target and a separate 10% chance to make the target flinch.",
+        "black_2_white_2": "Inflicts regular damage. Has a 10% chance to freeze the target and a separate 10% chance to make the target flinch."
+    },
+    "short_effect": {
+        "black_white": "Has a 10% chance to freeze the target and a 10% chance to make the target flinch.",
+        "black_2_white_2": "Has a 10% chance to freeze the target and a 10% chance to make the target flinch."
+    },
     "flavor_text": {
         "black_white": "The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen.",
         "black_2_white_2": "The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen."

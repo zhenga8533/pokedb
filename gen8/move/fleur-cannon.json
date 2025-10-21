@@ -2,17 +2,59 @@
     "id": 705,
     "name": "fleur-cannon",
     "source_url": "https://pokeapi.co/api/v2/move/705/",
-    "accuracy": 90,
-    "power": 130,
-    "pp": 5,
+    "accuracy": {
+        "sword_shield": 90,
+        "the_isle_of_armor": 90,
+        "the_crown_tundra": 90,
+        "brilliant_diamond_and_shining_pearl": 90,
+        "legends_arceus": 90
+    },
+    "power": {
+        "sword_shield": 130,
+        "the_isle_of_armor": 130,
+        "the_crown_tundra": 130,
+        "brilliant_diamond_and_shining_pearl": 130,
+        "legends_arceus": 130
+    },
+    "pp": {
+        "sword_shield": 5,
+        "the_isle_of_armor": 5,
+        "the_crown_tundra": 5,
+        "brilliant_diamond_and_shining_pearl": 5,
+        "legends_arceus": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fairy",
+    "type": {
+        "sword_shield": "fairy",
+        "the_isle_of_armor": "fairy",
+        "the_crown_tundra": "fairy",
+        "brilliant_diamond_and_shining_pearl": "fairy",
+        "legends_arceus": "fairy"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
-    "short_effect": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+    "effect_chance": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
+        "the_isle_of_armor": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
+        "the_crown_tundra": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage, then lowers the user’s Special Attack by two stages.",
+        "legends_arceus": "Inflicts regular damage, then lowers the user’s Special Attack by two stages."
+    },
+    "short_effect": {
+        "sword_shield": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+        "the_isle_of_armor": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+        "the_crown_tundra": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+        "brilliant_diamond_and_shining_pearl": "Lowers the user’s Special Attack by two stages after inflicting damage.",
+        "legends_arceus": "Lowers the user’s Special Attack by two stages after inflicting damage."
+    },
     "flavor_text": {
         "sword_shield": "The user unleashes a strong beam. The attack’s recoil harshly lowers the user’s Sp. Atk stat.",
         "legends_arceus": "The user unleashes a strong beam. The attack's recoil harshly lowers the user's Sp. Atk stat."

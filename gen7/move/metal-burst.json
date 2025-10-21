@@ -2,17 +2,45 @@
     "id": 368,
     "name": "metal-burst",
     "source_url": "https://pokeapi.co/api/v2/move/368/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "sun_moon": "steel",
+        "ultra_sun_ultra_moon": "steel",
+        "lets_go_pikachu_lets_go_eevee": "steel"
+    },
     "target": "specific-move",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
-    "short_effect": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
+        "ultra_sun_ultra_moon": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored.",
+        "lets_go_pikachu_lets_go_eevee": "Targets the last opposing Pokémon to hit the user with a damaging move this turn. Inflicts 1.5× the damage that move did to the user. If there is no eligible target, this move will fail. Type immunity applies, but other type effects are ignored."
+    },
+    "short_effect": {
+        "sun_moon": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+        "ultra_sun_ultra_moon": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.",
+        "lets_go_pikachu_lets_go_eevee": "Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage."
+    },
     "flavor_text": {
         "sun_moon": "The user retaliates with much greater force against the opponent that last inflicted damage on it.",
         "ultra_sun_ultra_moon": "The user retaliates with much greater force against the opponent that last inflicted damage on it.",

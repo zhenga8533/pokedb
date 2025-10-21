@@ -2,17 +2,38 @@
     "id": 460,
     "name": "spacial-rend",
     "source_url": "https://pokeapi.co/api/v2/move/460/",
-    "accuracy": 95,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "black_white": 95,
+        "black_2_white_2": 95
+    },
+    "power": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "pp": {
+        "black_white": 5,
+        "black_2_white_2": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dragon",
+    "type": {
+        "black_white": "dragon",
+        "black_2_white_2": "dragon"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
-    "short_effect": "Has an increased chance for a critical hit.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move.",
+        "black_2_white_2": "Inflicts regular damage. User’s critical hit rate is one level higher when using this move."
+    },
+    "short_effect": {
+        "black_white": "Has an increased chance for a critical hit.",
+        "black_2_white_2": "Has an increased chance for a critical hit."
+    },
     "flavor_text": {
         "black_white": "The user tears the target along with the space around it. Critical hits land more easily.",
         "black_2_white_2": "The user tears the target along with the space around it. Critical hits land more easily."

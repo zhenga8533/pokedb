@@ -2,17 +2,38 @@
     "id": 430,
     "name": "flash-cannon",
     "source_url": "https://pokeapi.co/api/v2/move/430/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 10,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": 80,
+        "omega_ruby_alpha_sapphire": 80
+    },
+    "pp": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "steel",
+    "type": {
+        "x_y": "steel",
+        "omega_ruby_alpha_sapphire": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-    "short_effect": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+    "effect_chance": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
+    "effect": {
+        "x_y": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "omega_ruby_alpha_sapphire": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
+    "short_effect": {
+        "x_y": "Has a 10% chance to lower the target’s Special Defense by one stage.",
+        "omega_ruby_alpha_sapphire": "Has a 10% chance to lower the target’s Special Defense by one stage."
+    },
     "flavor_text": {
         "x_y": "The user gathers all its light energy and releases it at once. This may also lower the target’s Sp. Def stat.",
         "omega_ruby_alpha_sapphire": "The user gathers all its light energy and releases it at once. This may also lower the target’s Sp. Def stat."

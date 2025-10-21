@@ -2,17 +2,45 @@
     "id": 677,
     "name": "anchor-shot",
     "source_url": "https://pokeapi.co/api/v2/move/677/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 80,
+        "ultra_sun_ultra_moon": 80,
+        "lets_go_pikachu_lets_go_eevee": 80
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "sun_moon": "steel",
+        "ultra_sun_ultra_moon": "steel",
+        "lets_go_pikachu_lets_go_eevee": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Traps the target.",
-    "short_effect": "Traps the target.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Traps the target.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Traps the target.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Traps the target."
+    },
+    "short_effect": {
+        "sun_moon": "Traps the target.",
+        "ultra_sun_ultra_moon": "Traps the target.",
+        "lets_go_pikachu_lets_go_eevee": "Traps the target."
+    },
     "flavor_text": {
         "sun_moon": "The user entangles the target with its anchor chain while attacking. The target becomes unable to flee.",
         "ultra_sun_ultra_moon": "The user entangles the target with its anchor chain while attacking. The target becomes unable to flee.",

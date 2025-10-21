@@ -2,17 +2,45 @@
     "id": 127,
     "name": "waterfall",
     "source_url": "https://pokeapi.co/api/v2/move/127/",
-    "accuracy": 100,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 80,
+        "the_teal_mask": 80,
+        "the_indigo_disk": 80
+    },
+    "pp": {
+        "scarlet_violet": 15,
+        "the_teal_mask": 15,
+        "the_indigo_disk": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "water",
+    "type": {
+        "scarlet_violet": "water",
+        "the_teal_mask": "water",
+        "the_indigo_disk": "water"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
-    "short_effect": "Has a 20% chance to make the target flinch.",
+    "effect_chance": {
+        "scarlet_violet": 20,
+        "the_teal_mask": 20,
+        "the_indigo_disk": 20
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "the_teal_mask": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 20% chance to make the target flinch."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 20% chance to make the target flinch.",
+        "the_teal_mask": "Has a 20% chance to make the target flinch.",
+        "the_indigo_disk": "Has a 20% chance to make the target flinch."
+    },
     "flavor_text": {
         "scarlet_violet": "The user charges at the target and may make it flinch."
     },

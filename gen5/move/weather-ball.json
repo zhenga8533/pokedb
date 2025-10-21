@@ -2,17 +2,38 @@
     "id": 311,
     "name": "weather-ball",
     "source_url": "https://pokeapi.co/api/v2/move/311/",
-    "accuracy": 100,
-    "power": 50,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 50,
+        "black_2_white_2": 50
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "normal",
+    "type": {
+        "black_white": "normal",
+        "black_2_white_2": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If a weather move is active, this move has double power, and its type becomes the type of the weather move. shadow sky is typeless for the purposes of this move.",
-    "short_effect": "If there be weather, this move has doubled power and the weather’s type.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. If a weather move is active, this move has double power, and its type becomes the type of the weather move. shadow sky is typeless for the purposes of this move.",
+        "black_2_white_2": "Inflicts regular damage. If a weather move is active, this move has double power, and its type becomes the type of the weather move. shadow sky is typeless for the purposes of this move."
+    },
+    "short_effect": {
+        "black_white": "If there be weather, this move has doubled power and the weather’s type.",
+        "black_2_white_2": "If there be weather, this move has doubled power and the weather’s type."
+    },
     "flavor_text": {
         "black_white": "An attack move that varies in power and type depending on the weather.",
         "black_2_white_2": "An attack move that varies in power and type depending on the weather."

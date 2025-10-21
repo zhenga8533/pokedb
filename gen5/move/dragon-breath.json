@@ -2,17 +2,38 @@
     "id": 225,
     "name": "dragon-breath",
     "source_url": "https://pokeapi.co/api/v2/move/225/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 20,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 60,
+        "black_2_white_2": 60
+    },
+    "pp": {
+        "black_white": 20,
+        "black_2_white_2": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dragon",
+    "type": {
+        "black_white": "dragon",
+        "black_2_white_2": "dragon"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
-    "short_effect": "Has a 30% chance to paralyze the target.",
+    "effect_chance": {
+        "black_white": 30,
+        "black_2_white_2": 30
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "black_2_white_2": "Inflicts regular damage. Has a 30% chance to paralyze the target."
+    },
+    "short_effect": {
+        "black_white": "Has a 30% chance to paralyze the target.",
+        "black_2_white_2": "Has a 30% chance to paralyze the target."
+    },
     "flavor_text": {
         "black_white": "The user exhales a mighty gust that inflicts damage. It may also leave the target with paralysis.",
         "black_2_white_2": "The user exhales a mighty gust that inflicts damage. It may also leave the target with paralysis."

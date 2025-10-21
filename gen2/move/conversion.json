@@ -2,17 +2,38 @@
     "id": 160,
     "name": "conversion",
     "source_url": "https://pokeapi.co/api/v2/move/160/",
-    "accuracy": null,
-    "power": null,
-    "pp": 30,
+    "accuracy": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "power": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "pp": {
+        "gold_silver": 30,
+        "crystal": 30
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "normal",
+    "type": {
+        "gold_silver": "normal",
+        "crystal": "normal"
+    },
     "target": "user",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "User’s type changes to the type of one of its moves, selected at random. hidden power and weather ball are treated as normal. Only moves with a different type are eligible, and curse is never eligible. If the user has no suitable moves, this move will fail.",
-    "short_effect": "User’s type changes to the type of one of its moves at random.",
+    "effect_chance": {
+        "gold_silver": null,
+        "crystal": null
+    },
+    "effect": {
+        "gold_silver": "User’s type changes to the type of one of its moves, selected at random. hidden power and weather ball are treated as normal. Only moves with a different type are eligible, and curse is never eligible. If the user has no suitable moves, this move will fail.",
+        "crystal": "User’s type changes to the type of one of its moves, selected at random. hidden power and weather ball are treated as normal. Only moves with a different type are eligible, and curse is never eligible. If the user has no suitable moves, this move will fail."
+    },
+    "short_effect": {
+        "gold_silver": "User’s type changes to the type of one of its moves at random.",
+        "crystal": "User’s type changes to the type of one of its moves at random."
+    },
     "flavor_text": {
         "gold_silver": "Change user's type to a move's type.",
         "crystal": "Change user's type to a move's type."

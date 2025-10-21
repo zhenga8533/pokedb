@@ -2,17 +2,38 @@
     "id": 500,
     "name": "stored-power",
     "source_url": "https://pokeapi.co/api/v2/move/500/",
-    "accuracy": 100,
-    "power": 20,
-    "pp": 10,
+    "accuracy": {
+        "black_white": 100,
+        "black_2_white_2": 100
+    },
+    "power": {
+        "black_white": 20,
+        "black_2_white_2": 20
+    },
+    "pp": {
+        "black_white": 10,
+        "black_2_white_2": 10
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "psychic",
+    "type": {
+        "black_white": "psychic",
+        "black_2_white_2": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Power is increased by 100% its original value for every stage any of the user’s stats have been raised. Accuracy, evasion, and lowered stats do not affect this move’s power. For a Pokémon with all five stats modified to +6, this move’s power is 31×.",
-    "short_effect": "Power is higher the more the user’s stats have been raised, to a maximum of 31×.",
+    "effect_chance": {
+        "black_white": null,
+        "black_2_white_2": null
+    },
+    "effect": {
+        "black_white": "Inflicts regular damage. Power is increased by 100% its original value for every stage any of the user’s stats have been raised. Accuracy, evasion, and lowered stats do not affect this move’s power. For a Pokémon with all five stats modified to +6, this move’s power is 31×.",
+        "black_2_white_2": "Inflicts regular damage. Power is increased by 100% its original value for every stage any of the user’s stats have been raised. Accuracy, evasion, and lowered stats do not affect this move’s power. For a Pokémon with all five stats modified to +6, this move’s power is 31×."
+    },
+    "short_effect": {
+        "black_white": "Power is higher the more the user’s stats have been raised, to a maximum of 31×.",
+        "black_2_white_2": "Power is higher the more the user’s stats have been raised, to a maximum of 31×."
+    },
     "flavor_text": {
         "black_white": "The user attacks the target with stored power. The more the user’s stats are raised, the greater the damage.",
         "black_2_white_2": "The user attacks the target with stored power. The more the user’s stats are raised, the greater the damage."

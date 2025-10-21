@@ -2,17 +2,59 @@
     "id": 77,
     "name": "poison-powder",
     "source_url": "https://pokeapi.co/api/v2/move/77/",
-    "accuracy": 75,
-    "power": null,
-    "pp": 35,
+    "accuracy": {
+        "sword_shield": 75,
+        "the_isle_of_armor": 75,
+        "the_crown_tundra": 75,
+        "brilliant_diamond_and_shining_pearl": 75,
+        "legends_arceus": 75
+    },
+    "power": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "pp": {
+        "sword_shield": 35,
+        "the_isle_of_armor": 35,
+        "the_crown_tundra": 35,
+        "brilliant_diamond_and_shining_pearl": 35,
+        "legends_arceus": 35
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "sword_shield": "poison",
+        "the_isle_of_armor": "poison",
+        "the_crown_tundra": "poison",
+        "brilliant_diamond_and_shining_pearl": "poison",
+        "legends_arceus": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-i",
-    "effect_chance": null,
-    "effect": "Poisons the target.",
-    "short_effect": "Poisons the target.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Poisons the target.",
+        "the_isle_of_armor": "Poisons the target.",
+        "the_crown_tundra": "Poisons the target.",
+        "brilliant_diamond_and_shining_pearl": "Poisons the target.",
+        "legends_arceus": "Poisons the target."
+    },
+    "short_effect": {
+        "sword_shield": "Poisons the target.",
+        "the_isle_of_armor": "Poisons the target.",
+        "the_crown_tundra": "Poisons the target.",
+        "brilliant_diamond_and_shining_pearl": "Poisons the target.",
+        "legends_arceus": "Poisons the target."
+    },
     "flavor_text": {
         "sword_shield": "The user scatters a cloud of poisonous dust that poisons the target.",
         "legends_arceus": "The user scatters a cloud of toxic powder that poisons the target."

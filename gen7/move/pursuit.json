@@ -2,17 +2,45 @@
     "id": 228,
     "name": "pursuit",
     "source_url": "https://pokeapi.co/api/v2/move/228/",
-    "accuracy": 100,
-    "power": 40,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": 40,
+        "ultra_sun_ultra_moon": 40,
+        "lets_go_pikachu_lets_go_eevee": 40
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "dark",
+    "type": {
+        "sun_moon": "dark",
+        "ultra_sun_ultra_moon": "dark",
+        "lets_go_pikachu_lets_go_eevee": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. If the target attempts to switch out this turn before the user acts, this move hits the target before it leaves and has double power. This effect can still hit a Pokémon that switches out when it has a substitute up or when an ally has used follow me.",
-    "short_effect": "Has double power against, and can hit, Pokémon attempting to switch out.",
+    "effect_chance": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. If the target attempts to switch out this turn before the user acts, this move hits the target before it leaves and has double power. This effect can still hit a Pokémon that switches out when it has a substitute up or when an ally has used follow me.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. If the target attempts to switch out this turn before the user acts, this move hits the target before it leaves and has double power. This effect can still hit a Pokémon that switches out when it has a substitute up or when an ally has used follow me.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. If the target attempts to switch out this turn before the user acts, this move hits the target before it leaves and has double power. This effect can still hit a Pokémon that switches out when it has a substitute up or when an ally has used follow me."
+    },
+    "short_effect": {
+        "sun_moon": "Has double power against, and can hit, Pokémon attempting to switch out.",
+        "ultra_sun_ultra_moon": "Has double power against, and can hit, Pokémon attempting to switch out.",
+        "lets_go_pikachu_lets_go_eevee": "Has double power against, and can hit, Pokémon attempting to switch out."
+    },
     "flavor_text": {
         "sun_moon": "The power of this attack move is doubled if it’s used on a target that’s switching out of battle.",
         "ultra_sun_ultra_moon": "The power of this attack move is doubled if it’s used on a target that’s switching out of battle.",

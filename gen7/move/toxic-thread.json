@@ -2,17 +2,45 @@
     "id": 672,
     "name": "toxic-thread",
     "source_url": "https://pokeapi.co/api/v2/move/672/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "power": {
+        "sun_moon": null,
+        "ultra_sun_ultra_moon": null,
+        "lets_go_pikachu_lets_go_eevee": null
+    },
+    "pp": {
+        "sun_moon": 20,
+        "ultra_sun_ultra_moon": 20,
+        "lets_go_pikachu_lets_go_eevee": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "poison",
+    "type": {
+        "sun_moon": "poison",
+        "ultra_sun_ultra_moon": "poison",
+        "lets_go_pikachu_lets_go_eevee": "poison"
+    },
     "target": "selected-pokemon",
     "generation": "generation-vii",
-    "effect_chance": 100,
-    "effect": "Poisons the target and lowers its Speed by one stage.",
-    "short_effect": "Poisons the target and lowers its Speed by one stage.",
+    "effect_chance": {
+        "sun_moon": 100,
+        "ultra_sun_ultra_moon": 100,
+        "lets_go_pikachu_lets_go_eevee": 100
+    },
+    "effect": {
+        "sun_moon": "Poisons the target and lowers its Speed by one stage.",
+        "ultra_sun_ultra_moon": "Poisons the target and lowers its Speed by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Poisons the target and lowers its Speed by one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Poisons the target and lowers its Speed by one stage.",
+        "ultra_sun_ultra_moon": "Poisons the target and lowers its Speed by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Poisons the target and lowers its Speed by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The user shoots poisonous threads to poison the target and lower the target’s Speed stat.",
         "ultra_sun_ultra_moon": "The user shoots poisonous threads to poison the target and lower the target’s Speed stat.",

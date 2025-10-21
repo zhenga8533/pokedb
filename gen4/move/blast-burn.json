@@ -2,17 +2,45 @@
     "id": 307,
     "name": "blast-burn",
     "source_url": "https://pokeapi.co/api/v2/move/307/",
-    "accuracy": 90,
-    "power": 150,
-    "pp": 5,
+    "accuracy": {
+        "diamond_pearl": 90,
+        "platinum": 90,
+        "heartgold_soulsilver": 90
+    },
+    "power": {
+        "diamond_pearl": 150,
+        "platinum": 150,
+        "heartgold_soulsilver": 150
+    },
+    "pp": {
+        "diamond_pearl": 5,
+        "platinum": 5,
+        "heartgold_soulsilver": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "fire",
+    "type": {
+        "diamond_pearl": "fire",
+        "platinum": "fire",
+        "heartgold_soulsilver": "fire"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
-    "short_effect": "User foregoes its next turn to recharge.",
+    "effect_chance": {
+        "diamond_pearl": null,
+        "platinum": null,
+        "heartgold_soulsilver": null
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+        "platinum": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+        "heartgold_soulsilver": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn."
+    },
+    "short_effect": {
+        "diamond_pearl": "User foregoes its next turn to recharge.",
+        "platinum": "User foregoes its next turn to recharge.",
+        "heartgold_soulsilver": "User foregoes its next turn to recharge."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is razed by a fiery explosion. The user must rest on the next turn, however.",
         "platinum": "The foe is razed by a fiery explosion. The user must rest on the next turn, however.",

@@ -2,17 +2,45 @@
     "id": 532,
     "name": "horn-leech",
     "source_url": "https://pokeapi.co/api/v2/move/532/",
-    "accuracy": 100,
-    "power": 75,
-    "pp": 10,
+    "accuracy": {
+        "scarlet_violet": 100,
+        "the_teal_mask": 100,
+        "the_indigo_disk": 100
+    },
+    "power": {
+        "scarlet_violet": 75,
+        "the_teal_mask": 75,
+        "the_indigo_disk": 75
+    },
+    "pp": {
+        "scarlet_violet": 10,
+        "the_teal_mask": 10,
+        "the_indigo_disk": 10
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "grass",
+    "type": {
+        "scarlet_violet": "grass",
+        "the_teal_mask": "grass",
+        "the_indigo_disk": "grass"
+    },
     "target": "selected-pokemon",
     "generation": "generation-v",
-    "effect_chance": null,
-    "effect": "Inflicts regular damage. Drains half the damage inflicted to heal the user.",
-    "short_effect": "Drains half the damage inflicted to heal the user.",
+    "effect_chance": {
+        "scarlet_violet": null,
+        "the_teal_mask": null,
+        "the_indigo_disk": null
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "the_teal_mask": "Inflicts regular damage. Drains half the damage inflicted to heal the user.",
+        "the_indigo_disk": "Inflicts regular damage. Drains half the damage inflicted to heal the user."
+    },
+    "short_effect": {
+        "scarlet_violet": "Drains half the damage inflicted to heal the user.",
+        "the_teal_mask": "Drains half the damage inflicted to heal the user.",
+        "the_indigo_disk": "Drains half the damage inflicted to heal the user."
+    },
     "flavor_text": {
         "scarlet_violet": "The user drains the target's energy with its horns. The user's HP is restored by up to half the damage taken by the target."
     },

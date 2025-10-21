@@ -2,17 +2,38 @@
     "id": 180,
     "name": "spite",
     "source_url": "https://pokeapi.co/api/v2/move/180/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 10,
+    "accuracy": {
+        "x_y": 100,
+        "omega_ruby_alpha_sapphire": 100
+    },
+    "power": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "pp": {
+        "x_y": 10,
+        "omega_ruby_alpha_sapphire": 10
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "ghost",
+    "type": {
+        "x_y": "ghost",
+        "omega_ruby_alpha_sapphire": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": null,
-    "effect": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
-    "short_effect": "Lowers the PP of the target’s last used move by 4.",
+    "effect_chance": {
+        "x_y": null,
+        "omega_ruby_alpha_sapphire": null
+    },
+    "effect": {
+        "x_y": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail.",
+        "omega_ruby_alpha_sapphire": "Lowers the PP of the target’s last used move by 4. If the target hasn’t used a move since entering the field, if it tried to use a move this turn and failed, or if its last used move has 0 PP remaining, this move will fail."
+    },
+    "short_effect": {
+        "x_y": "Lowers the PP of the target’s last used move by 4.",
+        "omega_ruby_alpha_sapphire": "Lowers the PP of the target’s last used move by 4."
+    },
     "flavor_text": {
         "x_y": "The user unleashes its grudge on the move last used by the target by cutting 4 PP from it.",
         "omega_ruby_alpha_sapphire": "The user unleashes its grudge on the move last used by the target by cutting 4 PP from it."

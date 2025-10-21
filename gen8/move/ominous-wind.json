@@ -2,17 +2,59 @@
     "id": 466,
     "name": "ominous-wind",
     "source_url": "https://pokeapi.co/api/v2/move/466/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 5,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 60,
+        "the_isle_of_armor": 60,
+        "the_crown_tundra": 60,
+        "brilliant_diamond_and_shining_pearl": 60,
+        "legends_arceus": 60
+    },
+    "pp": {
+        "sword_shield": 5,
+        "the_isle_of_armor": 5,
+        "the_crown_tundra": 5,
+        "brilliant_diamond_and_shining_pearl": 5,
+        "legends_arceus": 5
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "ghost",
+    "type": {
+        "sword_shield": "ghost",
+        "the_isle_of_armor": "ghost",
+        "the_crown_tundra": "ghost",
+        "brilliant_diamond_and_shining_pearl": "ghost",
+        "legends_arceus": "ghost"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
-    "short_effect": "Has a 10% chance to raise all of the user’s stats by one stage.",
+    "effect_chance": {
+        "sword_shield": 10,
+        "the_isle_of_armor": 10,
+        "the_crown_tundra": 10,
+        "brilliant_diamond_and_shining_pearl": 10,
+        "legends_arceus": 10
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
+        "legends_arceus": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 10% chance to raise all of the user’s stats by one stage.",
+        "the_isle_of_armor": "Has a 10% chance to raise all of the user’s stats by one stage.",
+        "the_crown_tundra": "Has a 10% chance to raise all of the user’s stats by one stage.",
+        "brilliant_diamond_and_shining_pearl": "Has a 10% chance to raise all of the user’s stats by one stage.",
+        "legends_arceus": "Has a 10% chance to raise all of the user’s stats by one stage."
+    },
     "flavor_text": {
         "sword_shield": "This move can’t be used. It’s recommended that this move is forgotten. Once forgotten, this move can’t be remembered."
     },

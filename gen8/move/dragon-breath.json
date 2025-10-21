@@ -2,17 +2,59 @@
     "id": 225,
     "name": "dragon-breath",
     "source_url": "https://pokeapi.co/api/v2/move/225/",
-    "accuracy": 100,
-    "power": 60,
-    "pp": 20,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": 60,
+        "the_isle_of_armor": 60,
+        "the_crown_tundra": 60,
+        "brilliant_diamond_and_shining_pearl": 60,
+        "legends_arceus": 60
+    },
+    "pp": {
+        "sword_shield": 20,
+        "the_isle_of_armor": 20,
+        "the_crown_tundra": 20,
+        "brilliant_diamond_and_shining_pearl": 20,
+        "legends_arceus": 20
+    },
     "priority": 0,
     "damage_class": "special",
-    "type": "dragon",
+    "type": {
+        "sword_shield": "dragon",
+        "the_isle_of_armor": "dragon",
+        "the_crown_tundra": "dragon",
+        "brilliant_diamond_and_shining_pearl": "dragon",
+        "legends_arceus": "dragon"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 30,
-    "effect": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
-    "short_effect": "Has a 30% chance to paralyze the target.",
+    "effect_chance": {
+        "sword_shield": 30,
+        "the_isle_of_armor": 30,
+        "the_crown_tundra": 30,
+        "brilliant_diamond_and_shining_pearl": 30,
+        "legends_arceus": 30
+    },
+    "effect": {
+        "sword_shield": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "the_isle_of_armor": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "the_crown_tundra": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "brilliant_diamond_and_shining_pearl": "Inflicts regular damage. Has a 30% chance to paralyze the target.",
+        "legends_arceus": "Inflicts regular damage. Has a 30% chance to paralyze the target."
+    },
+    "short_effect": {
+        "sword_shield": "Has a 30% chance to paralyze the target.",
+        "the_isle_of_armor": "Has a 30% chance to paralyze the target.",
+        "the_crown_tundra": "Has a 30% chance to paralyze the target.",
+        "brilliant_diamond_and_shining_pearl": "Has a 30% chance to paralyze the target.",
+        "legends_arceus": "Has a 30% chance to paralyze the target."
+    },
     "flavor_text": {
         "sword_shield": "The user exhales a mighty gust that inflicts damage. This may also leave the target with paralysis.",
         "legends_arceus": "The user exhales a mighty gust that inflicts damage. This may also leave the target with paralysis."

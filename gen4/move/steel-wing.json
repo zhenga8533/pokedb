@@ -2,17 +2,45 @@
     "id": 211,
     "name": "steel-wing",
     "source_url": "https://pokeapi.co/api/v2/move/211/",
-    "accuracy": 90,
-    "power": 70,
-    "pp": 25,
+    "accuracy": {
+        "diamond_pearl": 90,
+        "platinum": 90,
+        "heartgold_soulsilver": 90
+    },
+    "power": {
+        "diamond_pearl": 70,
+        "platinum": 70,
+        "heartgold_soulsilver": 70
+    },
+    "pp": {
+        "diamond_pearl": 25,
+        "platinum": 25,
+        "heartgold_soulsilver": 25
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "diamond_pearl": "steel",
+        "platinum": "steel",
+        "heartgold_soulsilver": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to raise the user’s Defense one stage.",
-    "short_effect": "Has a 10% chance to raise the user’s Defense by one stage.",
+    "effect_chance": {
+        "diamond_pearl": 10,
+        "platinum": 10,
+        "heartgold_soulsilver": 10
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 10% chance to raise the user’s Defense one stage.",
+        "platinum": "Inflicts regular damage. Has a 10% chance to raise the user’s Defense one stage.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 10% chance to raise the user’s Defense one stage."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 10% chance to raise the user’s Defense by one stage.",
+        "platinum": "Has a 10% chance to raise the user’s Defense by one stage.",
+        "heartgold_soulsilver": "Has a 10% chance to raise the user’s Defense by one stage."
+    },
     "flavor_text": {
         "diamond_pearl": "The foe is hit with wings of steel. It may also raise the user’s Defense stat.",
         "platinum": "The foe is hit with wings of steel. It may also raise the user’s Defense stat.",

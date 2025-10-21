@@ -2,17 +2,45 @@
     "id": 431,
     "name": "rock-climb",
     "source_url": "https://pokeapi.co/api/v2/move/431/",
-    "accuracy": 85,
-    "power": 90,
-    "pp": 20,
+    "accuracy": {
+        "scarlet_violet": 85,
+        "the_teal_mask": 85,
+        "the_indigo_disk": 85
+    },
+    "power": {
+        "scarlet_violet": 90,
+        "the_teal_mask": 90,
+        "the_indigo_disk": 90
+    },
+    "pp": {
+        "scarlet_violet": 20,
+        "the_teal_mask": 20,
+        "the_indigo_disk": 20
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "normal",
+    "type": {
+        "scarlet_violet": "normal",
+        "the_teal_mask": "normal",
+        "the_indigo_disk": "normal"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to confuse the target.",
-    "short_effect": "Has a 20% chance to confuse the target.",
+    "effect_chance": {
+        "scarlet_violet": 20,
+        "the_teal_mask": 20,
+        "the_indigo_disk": 20
+    },
+    "effect": {
+        "scarlet_violet": "Inflicts regular damage. Has a 20% chance to confuse the target.",
+        "the_teal_mask": "Inflicts regular damage. Has a 20% chance to confuse the target.",
+        "the_indigo_disk": "Inflicts regular damage. Has a 20% chance to confuse the target."
+    },
+    "short_effect": {
+        "scarlet_violet": "Has a 20% chance to confuse the target.",
+        "the_teal_mask": "Has a 20% chance to confuse the target.",
+        "the_indigo_disk": "Has a 20% chance to confuse the target."
+    },
     "flavor_text": {},
     "stat_changes": [],
     "machine": null,

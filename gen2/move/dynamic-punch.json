@@ -2,17 +2,38 @@
     "id": 223,
     "name": "dynamic-punch",
     "source_url": "https://pokeapi.co/api/v2/move/223/",
-    "accuracy": 50,
-    "power": 100,
-    "pp": 5,
+    "accuracy": {
+        "gold_silver": 50,
+        "crystal": 50
+    },
+    "power": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "pp": {
+        "gold_silver": 5,
+        "crystal": 5
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "fighting",
+    "type": {
+        "gold_silver": "fighting",
+        "crystal": "fighting"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 100,
-    "effect": "Inflicts regular damage. Has a 100% chance to confuse the target.",
-    "short_effect": "Has a 100% chance to confuse the target.",
+    "effect_chance": {
+        "gold_silver": 100,
+        "crystal": 100
+    },
+    "effect": {
+        "gold_silver": "Inflicts regular damage. Has a 100% chance to confuse the target.",
+        "crystal": "Inflicts regular damage. Has a 100% chance to confuse the target."
+    },
+    "short_effect": {
+        "gold_silver": "Has a 100% chance to confuse the target.",
+        "crystal": "Has a 100% chance to confuse the target."
+    },
     "flavor_text": {
         "gold_silver": "An attack that always confuses.",
         "crystal": "An attack that always confuses."

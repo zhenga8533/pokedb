@@ -2,17 +2,45 @@
     "id": 422,
     "name": "thunder-fang",
     "source_url": "https://pokeapi.co/api/v2/move/422/",
-    "accuracy": 95,
-    "power": 65,
-    "pp": 15,
+    "accuracy": {
+        "sun_moon": 95,
+        "ultra_sun_ultra_moon": 95,
+        "lets_go_pikachu_lets_go_eevee": 95
+    },
+    "power": {
+        "sun_moon": 65,
+        "ultra_sun_ultra_moon": 65,
+        "lets_go_pikachu_lets_go_eevee": 65
+    },
+    "pp": {
+        "sun_moon": 15,
+        "ultra_sun_ultra_moon": 15,
+        "lets_go_pikachu_lets_go_eevee": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "electric",
+    "type": {
+        "sun_moon": "electric",
+        "ultra_sun_ultra_moon": "electric",
+        "lets_go_pikachu_lets_go_eevee": "electric"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to paralyze the target and a separate 10% chance to make the target flinch.",
-    "short_effect": "Has a 10% chance to paralyze the target and a 10% chance to make the target flinch.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 10% chance to paralyze the target and a separate 10% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 10% chance to paralyze the target and a separate 10% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 10% chance to paralyze the target and a separate 10% chance to make the target flinch."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 10% chance to paralyze the target and a 10% chance to make the target flinch.",
+        "ultra_sun_ultra_moon": "Has a 10% chance to paralyze the target and a 10% chance to make the target flinch.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 10% chance to paralyze the target and a 10% chance to make the target flinch."
+    },
     "flavor_text": {
         "sun_moon": "The user bites with electrified fangs. This may also make the target flinch or leave it with paralysis.",
         "ultra_sun_ultra_moon": "The user bites with electrified fangs. This may also make the target flinch or leave it with paralysis.",

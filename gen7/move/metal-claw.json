@@ -2,17 +2,45 @@
     "id": 232,
     "name": "metal-claw",
     "source_url": "https://pokeapi.co/api/v2/move/232/",
-    "accuracy": 95,
-    "power": 50,
-    "pp": 35,
+    "accuracy": {
+        "sun_moon": 95,
+        "ultra_sun_ultra_moon": 95,
+        "lets_go_pikachu_lets_go_eevee": 95
+    },
+    "power": {
+        "sun_moon": 50,
+        "ultra_sun_ultra_moon": 50,
+        "lets_go_pikachu_lets_go_eevee": 50
+    },
+    "pp": {
+        "sun_moon": 35,
+        "ultra_sun_ultra_moon": 35,
+        "lets_go_pikachu_lets_go_eevee": 35
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "steel",
+    "type": {
+        "sun_moon": "steel",
+        "ultra_sun_ultra_moon": "steel",
+        "lets_go_pikachu_lets_go_eevee": "steel"
+    },
     "target": "selected-pokemon",
     "generation": "generation-ii",
-    "effect_chance": 10,
-    "effect": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
-    "short_effect": "Has a 10% chance to raise the user’s Attack by one stage.",
+    "effect_chance": {
+        "sun_moon": 10,
+        "ultra_sun_ultra_moon": 10,
+        "lets_go_pikachu_lets_go_eevee": 10
+    },
+    "effect": {
+        "sun_moon": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
+        "ultra_sun_ultra_moon": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Inflicts regular damage. Has a 10% chance to raise the user’s Attack one stage."
+    },
+    "short_effect": {
+        "sun_moon": "Has a 10% chance to raise the user’s Attack by one stage.",
+        "ultra_sun_ultra_moon": "Has a 10% chance to raise the user’s Attack by one stage.",
+        "lets_go_pikachu_lets_go_eevee": "Has a 10% chance to raise the user’s Attack by one stage."
+    },
     "flavor_text": {
         "sun_moon": "The target is raked with steel claws. This may also raise the user’s Attack stat.",
         "ultra_sun_ultra_moon": "The target is raked with steel claws. This may also raise the user’s Attack stat.",

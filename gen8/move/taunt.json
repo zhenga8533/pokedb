@@ -2,17 +2,59 @@
     "id": 269,
     "name": "taunt",
     "source_url": "https://pokeapi.co/api/v2/move/269/",
-    "accuracy": 100,
-    "power": null,
-    "pp": 20,
+    "accuracy": {
+        "sword_shield": 100,
+        "the_isle_of_armor": 100,
+        "the_crown_tundra": 100,
+        "brilliant_diamond_and_shining_pearl": 100,
+        "legends_arceus": 100
+    },
+    "power": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "pp": {
+        "sword_shield": 20,
+        "the_isle_of_armor": 20,
+        "the_crown_tundra": 20,
+        "brilliant_diamond_and_shining_pearl": 20,
+        "legends_arceus": 20
+    },
     "priority": 0,
     "damage_class": "status",
-    "type": "dark",
+    "type": {
+        "sword_shield": "dark",
+        "the_isle_of_armor": "dark",
+        "the_crown_tundra": "dark",
+        "brilliant_diamond_and_shining_pearl": "dark",
+        "legends_arceus": "dark"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iii",
-    "effect_chance": null,
-    "effect": "Target is forced to only use damaging moves for the next 3–5 turns, selected at random. Moves that select other moves not known in advance do not count as damaging. assist, copycat, me first, metronome, mirror move, and sleep talk do not directly inflict damage and thus may not be used. bide, counter, endeavor, metal burst, and mirror coat are allowed.",
-    "short_effect": "For the next few turns, the target can only use damaging moves.",
+    "effect_chance": {
+        "sword_shield": null,
+        "the_isle_of_armor": null,
+        "the_crown_tundra": null,
+        "brilliant_diamond_and_shining_pearl": null,
+        "legends_arceus": null
+    },
+    "effect": {
+        "sword_shield": "Target is forced to only use damaging moves for the next 3–5 turns, selected at random. Moves that select other moves not known in advance do not count as damaging. assist, copycat, me first, metronome, mirror move, and sleep talk do not directly inflict damage and thus may not be used. bide, counter, endeavor, metal burst, and mirror coat are allowed.",
+        "the_isle_of_armor": "Target is forced to only use damaging moves for the next 3–5 turns, selected at random. Moves that select other moves not known in advance do not count as damaging. assist, copycat, me first, metronome, mirror move, and sleep talk do not directly inflict damage and thus may not be used. bide, counter, endeavor, metal burst, and mirror coat are allowed.",
+        "the_crown_tundra": "Target is forced to only use damaging moves for the next 3–5 turns, selected at random. Moves that select other moves not known in advance do not count as damaging. assist, copycat, me first, metronome, mirror move, and sleep talk do not directly inflict damage and thus may not be used. bide, counter, endeavor, metal burst, and mirror coat are allowed.",
+        "brilliant_diamond_and_shining_pearl": "Target is forced to only use damaging moves for the next 3–5 turns, selected at random. Moves that select other moves not known in advance do not count as damaging. assist, copycat, me first, metronome, mirror move, and sleep talk do not directly inflict damage and thus may not be used. bide, counter, endeavor, metal burst, and mirror coat are allowed.",
+        "legends_arceus": "Target is forced to only use damaging moves for the next 3–5 turns, selected at random. Moves that select other moves not known in advance do not count as damaging. assist, copycat, me first, metronome, mirror move, and sleep talk do not directly inflict damage and thus may not be used. bide, counter, endeavor, metal burst, and mirror coat are allowed."
+    },
+    "short_effect": {
+        "sword_shield": "For the next few turns, the target can only use damaging moves.",
+        "the_isle_of_armor": "For the next few turns, the target can only use damaging moves.",
+        "the_crown_tundra": "For the next few turns, the target can only use damaging moves.",
+        "brilliant_diamond_and_shining_pearl": "For the next few turns, the target can only use damaging moves.",
+        "legends_arceus": "For the next few turns, the target can only use damaging moves."
+    },
     "flavor_text": {
         "sword_shield": "The target is taunted into a rage that allows it to use only attack moves for three turns.",
         "legends_arceus": "The target is taunted into a rage that allows it to use only attack moves for three turns."

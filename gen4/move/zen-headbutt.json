@@ -2,17 +2,45 @@
     "id": 428,
     "name": "zen-headbutt",
     "source_url": "https://pokeapi.co/api/v2/move/428/",
-    "accuracy": 90,
-    "power": 80,
-    "pp": 15,
+    "accuracy": {
+        "diamond_pearl": 90,
+        "platinum": 90,
+        "heartgold_soulsilver": 90
+    },
+    "power": {
+        "diamond_pearl": 80,
+        "platinum": 80,
+        "heartgold_soulsilver": 80
+    },
+    "pp": {
+        "diamond_pearl": 15,
+        "platinum": 15,
+        "heartgold_soulsilver": 15
+    },
     "priority": 0,
     "damage_class": "physical",
-    "type": "psychic",
+    "type": {
+        "diamond_pearl": "psychic",
+        "platinum": "psychic",
+        "heartgold_soulsilver": "psychic"
+    },
     "target": "selected-pokemon",
     "generation": "generation-iv",
-    "effect_chance": 20,
-    "effect": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
-    "short_effect": "Has a 20% chance to make the target flinch.",
+    "effect_chance": {
+        "diamond_pearl": 20,
+        "platinum": 20,
+        "heartgold_soulsilver": 20
+    },
+    "effect": {
+        "diamond_pearl": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "platinum": "Inflicts regular damage. Has a 20% chance to make the target flinch.",
+        "heartgold_soulsilver": "Inflicts regular damage. Has a 20% chance to make the target flinch."
+    },
+    "short_effect": {
+        "diamond_pearl": "Has a 20% chance to make the target flinch.",
+        "platinum": "Has a 20% chance to make the target flinch.",
+        "heartgold_soulsilver": "Has a 20% chance to make the target flinch."
+    },
     "flavor_text": {
         "diamond_pearl": "The user focuses its willpower to its head and rams the foe. It may also make the target flinch.",
         "platinum": "The user focuses its willpower to its head and rams the foe. It may also make the target flinch.",
