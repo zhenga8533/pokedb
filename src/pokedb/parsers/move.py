@@ -41,7 +41,20 @@ class MoveParser(GenerationParser):
     def _clean_metadata(self, metadata: Optional[Dict[str, Any]]) -> Dict[str, Any]:
         """Cleans the metadata object from the API."""
         if not metadata:
-            return {}
+            return {
+                "ailment": None,
+                "category": None,
+                "min_hits": None,
+                "max_hits": None,
+                "min_turns": None,
+                "max_turns": None,
+                "drain": 0,
+                "healing": 0,
+                "crit_rate": 0,
+                "ailment_chance": 0,
+                "flinch_chance": 0,
+                "stat_chance": 0,
+            }
         ailment = metadata.get("ailment")
         category = metadata.get("category")
         return {
@@ -144,8 +157,7 @@ class MoveParser(GenerationParser):
             }
 
             past_values = data.get("past_values", [])
-            if past_values:
-                self._apply_past_values(cleaned_data, past_values)
+            self._apply_past_values(cleaned_data, past_values)
 
             output_path = self.config[self.output_dir_key]
             os.makedirs(output_path, exist_ok=True)
