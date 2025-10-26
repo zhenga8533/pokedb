@@ -5,41 +5,48 @@
     "accuracy": {
         "scarlet_violet": 100,
         "the_teal_mask": 100,
-        "the_indigo_disk": 100
+        "the_indigo_disk": 100,
+        "legends_za": 100
     },
     "power": {
         "scarlet_violet": 1,
         "the_teal_mask": 1,
-        "the_indigo_disk": 1
+        "the_indigo_disk": 1,
+        "legends_za": 1
     },
     "pp": {
         "scarlet_violet": 15,
         "the_teal_mask": 15,
-        "the_indigo_disk": 15
+        "the_indigo_disk": 15,
+        "legends_za": 15
     },
     "priority": 0,
     "damage_class": "special",
     "type": {
         "scarlet_violet": "normal",
         "the_teal_mask": "normal",
-        "the_indigo_disk": "normal"
+        "the_indigo_disk": "normal",
+        "legends_za": "normal"
     },
     "target": "selected-pokemon",
     "generation": "generation-ii",
     "effect_chance": {
         "scarlet_violet": null,
         "the_teal_mask": null,
-        "the_indigo_disk": null
+        "the_indigo_disk": null,
+        "legends_za": null
     },
     "effect": {
         "scarlet_violet": "Inflicts regular damage. Power and type are determined by the user’s IVs. Power is given by `x * 40 / 63 + 30`. `x` is obtained by arranging bit 1 from the IV for each of Special Defense, Special Attack, Speed, Defense, Attack, and HP in that order. (Bit 1 is 1 if the IV is of the form `4n + 2` or `4n + 3`. `x` is then 64 * Special Defense IV bit 1, plus 32 * Special Attack IV bit 1, etc.) Power is always between 30 and 70, inclusive. Average power is 49.5. Type is given by `y * 15 / 63`, where `y` is similar to `x` above, except constructed from bit 0. (Bit 0 is 1 if the IV is odd.) The result is looked up in the following table. Value | Type ----: | -------- 0 | fighting 1 | flying 2 | poison 3 | ground 4 | rock 5 | bug 6 | ghost 7 | steel 8 | fire 9 | water 10 | grass 11 | electric 12 | psychic 13 | ice 14 | dragon 15 | dark This move thus cannot be normal. Most other types have an equal 1/16 chance to be selected, given random IVs. However, due to the flooring used here, bug, fighting, and grass appear 5/64 of the time, and dark only 1/64 of the time.",
         "the_teal_mask": "Inflicts regular damage. Power and type are determined by the user’s IVs. Power is given by `x * 40 / 63 + 30`. `x` is obtained by arranging bit 1 from the IV for each of Special Defense, Special Attack, Speed, Defense, Attack, and HP in that order. (Bit 1 is 1 if the IV is of the form `4n + 2` or `4n + 3`. `x` is then 64 * Special Defense IV bit 1, plus 32 * Special Attack IV bit 1, etc.) Power is always between 30 and 70, inclusive. Average power is 49.5. Type is given by `y * 15 / 63`, where `y` is similar to `x` above, except constructed from bit 0. (Bit 0 is 1 if the IV is odd.) The result is looked up in the following table. Value | Type ----: | -------- 0 | fighting 1 | flying 2 | poison 3 | ground 4 | rock 5 | bug 6 | ghost 7 | steel 8 | fire 9 | water 10 | grass 11 | electric 12 | psychic 13 | ice 14 | dragon 15 | dark This move thus cannot be normal. Most other types have an equal 1/16 chance to be selected, given random IVs. However, due to the flooring used here, bug, fighting, and grass appear 5/64 of the time, and dark only 1/64 of the time.",
-        "the_indigo_disk": "Inflicts regular damage. Power and type are determined by the user’s IVs. Power is given by `x * 40 / 63 + 30`. `x` is obtained by arranging bit 1 from the IV for each of Special Defense, Special Attack, Speed, Defense, Attack, and HP in that order. (Bit 1 is 1 if the IV is of the form `4n + 2` or `4n + 3`. `x` is then 64 * Special Defense IV bit 1, plus 32 * Special Attack IV bit 1, etc.) Power is always between 30 and 70, inclusive. Average power is 49.5. Type is given by `y * 15 / 63`, where `y` is similar to `x` above, except constructed from bit 0. (Bit 0 is 1 if the IV is odd.) The result is looked up in the following table. Value | Type ----: | -------- 0 | fighting 1 | flying 2 | poison 3 | ground 4 | rock 5 | bug 6 | ghost 7 | steel 8 | fire 9 | water 10 | grass 11 | electric 12 | psychic 13 | ice 14 | dragon 15 | dark This move thus cannot be normal. Most other types have an equal 1/16 chance to be selected, given random IVs. However, due to the flooring used here, bug, fighting, and grass appear 5/64 of the time, and dark only 1/64 of the time."
+        "the_indigo_disk": "Inflicts regular damage. Power and type are determined by the user’s IVs. Power is given by `x * 40 / 63 + 30`. `x` is obtained by arranging bit 1 from the IV for each of Special Defense, Special Attack, Speed, Defense, Attack, and HP in that order. (Bit 1 is 1 if the IV is of the form `4n + 2` or `4n + 3`. `x` is then 64 * Special Defense IV bit 1, plus 32 * Special Attack IV bit 1, etc.) Power is always between 30 and 70, inclusive. Average power is 49.5. Type is given by `y * 15 / 63`, where `y` is similar to `x` above, except constructed from bit 0. (Bit 0 is 1 if the IV is odd.) The result is looked up in the following table. Value | Type ----: | -------- 0 | fighting 1 | flying 2 | poison 3 | ground 4 | rock 5 | bug 6 | ghost 7 | steel 8 | fire 9 | water 10 | grass 11 | electric 12 | psychic 13 | ice 14 | dragon 15 | dark This move thus cannot be normal. Most other types have an equal 1/16 chance to be selected, given random IVs. However, due to the flooring used here, bug, fighting, and grass appear 5/64 of the time, and dark only 1/64 of the time.",
+        "legends_za": "Inflicts regular damage. Power and type are determined by the user’s IVs. Power is given by `x * 40 / 63 + 30`. `x` is obtained by arranging bit 1 from the IV for each of Special Defense, Special Attack, Speed, Defense, Attack, and HP in that order. (Bit 1 is 1 if the IV is of the form `4n + 2` or `4n + 3`. `x` is then 64 * Special Defense IV bit 1, plus 32 * Special Attack IV bit 1, etc.) Power is always between 30 and 70, inclusive. Average power is 49.5. Type is given by `y * 15 / 63`, where `y` is similar to `x` above, except constructed from bit 0. (Bit 0 is 1 if the IV is odd.) The result is looked up in the following table. Value | Type ----: | -------- 0 | fighting 1 | flying 2 | poison 3 | ground 4 | rock 5 | bug 6 | ghost 7 | steel 8 | fire 9 | water 10 | grass 11 | electric 12 | psychic 13 | ice 14 | dragon 15 | dark This move thus cannot be normal. Most other types have an equal 1/16 chance to be selected, given random IVs. However, due to the flooring used here, bug, fighting, and grass appear 5/64 of the time, and dark only 1/64 of the time."
     },
     "short_effect": {
         "scarlet_violet": "Power and type depend upon user’s IVs. Power can range from 30 to 70.",
         "the_teal_mask": "Power and type depend upon user’s IVs. Power can range from 30 to 70.",
-        "the_indigo_disk": "Power and type depend upon user’s IVs. Power can range from 30 to 70."
+        "the_indigo_disk": "Power and type depend upon user’s IVs. Power can range from 30 to 70.",
+        "legends_za": "Power and type depend upon user’s IVs. Power can range from 30 to 70."
     },
     "flavor_text": {},
     "stat_changes": [],
