@@ -1,14 +1,31 @@
-import json
-import os
+from logging import getLogger
 from typing import Any, Dict, List, Optional, Union
 
 from ..api_client import ApiClient
-from ..utils import get_all_english_entries_for_gen_by_game, get_english_entry, transform_keys_to_snake_case
+from ..utils import (
+    build_version_group_to_generation_map,
+    get_all_english_entries_for_gen_by_game,
+    get_english_entry,
+    write_json_file,
+)
 from .generation import GenerationParser
+
+logger = getLogger(__name__)
 
 
 class MoveParser(GenerationParser):
-    """A parser for Pokémon moves."""
+    """
+    A parser for Pokémon moves.
+
+    This parser fetches move data from the PokéAPI, processes generation-specific
+    changes, and writes individual JSON files for each move.
+
+    Features:
+    - Handles generation-specific stat changes (power, PP, accuracy, etc.)
+    - Processes move metadata (ailments, categories, hit/turn ranges)
+    - Tracks TM/HM machine assignments per generation
+    - Applies historical values for older generations
+    """
 
     def __init__(
         self,
@@ -18,28 +35,60 @@ class MoveParser(GenerationParser):
         target_gen: int,
         generation_dex_map: Optional[Dict[int, str]] = None,
     ):
-        super().__init__(config, api_client, generation_version_groups, target_gen, generation_dex_map)
-        self.item_name = "Move"
+        super().__init__(
+            config,
+            api_client,
+            generation_version_groups,
+            target_gen,
+            generation_dex_map,
+        )
+        self.entity_type = "Move"
         self.api_endpoint = "moves"
         self.output_dir_key = "output_dir_move"
 
-    def _get_machine_for_generation(self, machine_entries: List[Dict[str, Any]]) -> Optional[str]:
-        """Finds the machine name for the target generation, if it exists."""
+    def _get_machine_for_generation(
+        self, machine_entries: List[Dict[str, Any]]
+    ) -> Optional[str]:
+        """
+        Finds the TM/HM machine item name for the target generation.
+
+        Args:
+            machine_entries: List of machine entry dicts from the move API data
+
+        Returns:
+            The machine item name (e.g., 'tm01', 'hm05') or None if not a machine move
+        """
         if not self.generation_version_groups or self.target_gen is None:
             return None
+
         target_version_groups = self.generation_version_groups.get(self.target_gen, [])
+
         for machine_entry in machine_entries:
             if machine_entry["version_group"]["name"] in target_version_groups:
                 try:
                     machine_data = self.api_client.get(machine_entry["machine"]["url"])
                     return machine_data["item"]["name"]
                 except Exception as e:
-                    print(f"Warning: Could not fetch machine data from {machine_entry['machine']['url']}. Error: {e}")
+                    logger.warning(
+                        f"Could not fetch machine data from {machine_entry['machine']['url']}: {e}"
+                    )
                     return None
         return None
 
     def _clean_metadata(self, metadata: Optional[Dict[str, Any]]) -> Dict[str, Any]:
-        """Cleans the metadata object from the API."""
+        """
+        Cleans and normalizes move metadata from the API.
+
+        Move metadata includes information about ailments, hit/turn ranges,
+        drain/healing percentages, and various probability chances.
+
+        Args:
+            metadata: The 'meta' dictionary from move API data, or None
+
+        Returns:
+            A cleaned metadata dictionary with consistent default values
+        """
+        # Provide default values if metadata is missing
         if not metadata:
             return {
                 "ailment": None,
@@ -55,8 +104,10 @@ class MoveParser(GenerationParser):
                 "flinch_chance": 0,
                 "stat_chance": 0,
             }
+
         ailment = metadata.get("ailment")
         category = metadata.get("category")
+
         return {
             "ailment": ailment.get("name") if ailment else None,
             "category": category.get("name") if category else None,
@@ -72,20 +123,51 @@ class MoveParser(GenerationParser):
             "stat_chance": metadata.get("stat_chance"),
         }
 
-    def _apply_past_values(self, cleaned_data: Dict[str, Any], past_values: List[Dict[str, Any]]):
-        """Applies historical values to the data if applicable for the target generation."""
+    def _apply_past_values(
+        self, cleaned_data: Dict[str, Any], past_values: List[Dict[str, Any]]
+    ):
+        """
+        Applies historical stat changes to move data for the target generation.
+
+        Many moves have had their stats changed across generations (e.g., Gust
+        became Flying-type in Gen 2, many moves had power/accuracy adjusted).
+        This method creates generation-specific values for each version group.
+
+        Args:
+            cleaned_data: The move data dictionary to modify in-place
+            past_values: List of past value changes from the API
+
+        Modifies:
+            cleaned_data: Converts single values to version-group-specific dicts
+        """
         if not self.target_gen or not self.generation_version_groups:
             return
 
-        vg_to_gen_map = {
-            vg_name: gen_num for gen_num, vg_list in self.generation_version_groups.items() for vg_name in vg_list
+        version_group_to_gen_map = build_version_group_to_generation_map(
+            self.generation_version_groups
+        )
+
+        target_gen_version_groups = self.generation_version_groups.get(
+            self.target_gen, []
+        )
+
+        # Fields that can change across generations
+        change_fields = [
+            "accuracy",
+            "power",
+            "pp",
+            "effect_chance",
+            "type",
+            "effect",
+            "short_effect",
+        ]
+        generation_specific_values: Dict[str, Dict[str, Any]] = {
+            field: {} for field in change_fields
         }
 
-        target_gen_vgs = self.generation_version_groups.get(self.target_gen, [])
-        change_fields = ["accuracy", "power", "pp", "effect_chance", "type", "effect", "short_effect"]
-        gen_specific_values: Dict[str, Dict[str, Any]] = {field: {} for field in change_fields}
-
-        for vg_name in target_gen_vgs:
+        # For each version group in the target generation
+        for version_group_name in target_gen_version_groups:
+            # Start with current values
             temp_data = {
                 "accuracy": cleaned_data.get("accuracy"),
                 "power": cleaned_data.get("power"),
@@ -95,45 +177,87 @@ class MoveParser(GenerationParser):
                 "effect": cleaned_data.get("effect"),
                 "short_effect": cleaned_data.get("short_effect"),
             }
+
+            # Get all past values up to target generation, sorted chronologically
             sorted_past_values = sorted(
-                [pv for pv in past_values if vg_to_gen_map.get(pv["version_group"]["name"], 999) <= self.target_gen],
-                key=lambda x: vg_to_gen_map.get(x["version_group"]["name"], 999),
+                [
+                    past_value
+                    for past_value in past_values
+                    if version_group_to_gen_map.get(
+                        past_value["version_group"]["name"], 999
+                    )
+                    <= self.target_gen
+                ],
+                key=lambda x: version_group_to_gen_map.get(
+                    x["version_group"]["name"], 999
+                ),
             )
-            for pv in sorted_past_values:
-                if vg_to_gen_map.get(pv["version_group"]["name"], 999) > vg_to_gen_map.get(vg_name, 0):
+
+            # Apply past values chronologically up to this version group
+            for past_value in sorted_past_values:
+                past_value_gen = version_group_to_gen_map.get(
+                    past_value["version_group"]["name"], 999
+                )
+                current_version_group_gen = version_group_to_gen_map.get(
+                    version_group_name, 0
+                )
+
+                # Stop if this change happened after the current version group
+                if past_value_gen > current_version_group_gen:
                     break
-                if pv.get("accuracy") is not None:
-                    temp_data["accuracy"] = pv["accuracy"]
-                if pv.get("power") is not None:
-                    temp_data["power"] = pv["power"]
-                if pv.get("pp") is not None:
-                    temp_data["pp"] = pv["pp"]
-                if pv.get("effect_chance") is not None:
-                    temp_data["effect_chance"] = pv["effect_chance"]
-                if pv.get("type"):
-                    temp_data["type"] = pv["type"]["name"]
-                if pv.get("effect_entries"):
-                    effect = get_english_entry(pv["effect_entries"], "effect")
-                    short_effect = get_english_entry(pv["effect_entries"], "short_effect")
+
+                # Apply each changed field
+                if past_value.get("accuracy") is not None:
+                    temp_data["accuracy"] = past_value["accuracy"]
+                if past_value.get("power") is not None:
+                    temp_data["power"] = past_value["power"]
+                if past_value.get("pp") is not None:
+                    temp_data["pp"] = past_value["pp"]
+                if past_value.get("effect_chance") is not None:
+                    temp_data["effect_chance"] = past_value["effect_chance"]
+                if past_value.get("type"):
+                    temp_data["type"] = past_value["type"]["name"]
+                if past_value.get("effect_entries"):
+                    effect = get_english_entry(past_value["effect_entries"], "effect")
+                    short_effect = get_english_entry(
+                        past_value["effect_entries"], "short_effect"
+                    )
                     if effect:
                         temp_data["effect"] = effect
                     if short_effect:
                         temp_data["short_effect"] = short_effect
 
+            # Store the final values for this version group
             for field in change_fields:
-                gen_specific_values[field][vg_name] = temp_data[field]
+                generation_specific_values[field][version_group_name] = temp_data[field]
 
-        for field, values_map in gen_specific_values.items():
+        # Replace single values with version-group-specific dictionaries
+        for field, values_map in generation_specific_values.items():
             cleaned_data[field] = values_map
 
-    def process(self, item_ref: Dict[str, str]) -> Optional[Union[Dict[str, Any], str]]:
-        """Processes a single move from its API reference."""
+    def process(
+        self, resource_ref: Dict[str, str]
+    ) -> Optional[Union[Dict[str, Any], str]]:
+        """
+        Processes a single move from its API reference.
+
+        This method fetches the full move data, processes generation-specific changes,
+        and writes the result to a JSON file.
+
+        Args:
+            resource_ref: Dictionary containing 'name' and 'url' for the move
+
+        Returns:
+            A summary dict with name and id, or an error string if processing fails
+        """
         try:
-            data = self.api_client.get(item_ref["url"])
+            data = self.api_client.get(resource_ref["url"])
+
+            # Build the basic move data structure
             cleaned_data = {
                 "id": data["id"],
                 "name": data["name"],
-                "source_url": item_ref["url"],
+                "source_url": resource_ref["url"],
                 "accuracy": data.get("accuracy"),
                 "power": data.get("power"),
                 "pp": data.get("pp"),
@@ -144,27 +268,41 @@ class MoveParser(GenerationParser):
                 "generation": data.get("generation", {}).get("name"),
                 "effect_chance": data.get("effect_chance"),
                 "effect": get_english_entry(data.get("effect_entries", []), "effect"),
-                "short_effect": get_english_entry(data.get("effect_entries", []), "short_effect"),
+                "short_effect": get_english_entry(
+                    data.get("effect_entries", []), "short_effect"
+                ),
                 "flavor_text": get_all_english_entries_for_gen_by_game(
-                    data.get("flavor_text_entries", []), "flavor_text", self.generation_version_groups, self.target_gen
+                    data.get("flavor_text_entries", []),
+                    "flavor_text",
+                    self.generation_version_groups,
+                    self.target_gen,
                 ),
                 "stat_changes": [
-                    {"change": sc["change"], "stat": sc.get("stat", {}).get("name")}
-                    for sc in data.get("stat_changes", [])
+                    {
+                        "change": stat_change["change"],
+                        "stat": stat_change.get("stat", {}).get("name"),
+                    }
+                    for stat_change in data.get("stat_changes", [])
                 ],
                 "machine": self._get_machine_for_generation(data.get("machines", [])),
                 "metadata": self._clean_metadata(data.get("meta")),
             }
 
+            # Apply historical stat changes for the target generation
             past_values = data.get("past_values", [])
-            self._apply_past_values(cleaned_data, past_values)
+            if past_values:
+                self._apply_past_values(cleaned_data, past_values)
 
+            # Write to file
             output_path = self.config[self.output_dir_key]
-            os.makedirs(output_path, exist_ok=True)
-            file_path = os.path.join(output_path, f"{cleaned_data['name']}.json")
-            with open(file_path, "w", encoding="utf-8") as f:
-                json.dump(transform_keys_to_snake_case(cleaned_data), f, indent=4, ensure_ascii=False)
+            write_json_file(output_path, cleaned_data["name"], cleaned_data)
 
             return {"name": cleaned_data["name"], "id": cleaned_data["id"]}
+
+        except (KeyError, ValueError) as e:
+            return f"Parsing failed for {resource_ref.get('name', 'unknown')}: {type(e).__name__} - {e}"
         except Exception as e:
-            return f"Parsing failed for {item_ref['name']}: {e}"
+            logger.error(
+                f"Unexpected error processing {resource_ref.get('name', 'unknown')}: {e}"
+            )
+            return f"Parsing failed for {resource_ref.get('name', 'unknown')}: {e}"

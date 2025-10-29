@@ -1,6 +1,5 @@
 import copy
-import json
-import os
+from logging import getLogger
 from typing import Any, Dict, List, Optional, Set, Union
 
 from ..api_client import ApiClient
@@ -9,14 +8,28 @@ from ..utils import (
     get_all_english_entries_by_version,
     get_english_entry,
     int_to_roman,
-    transform_keys_to_snake_case,
+    write_json_file,
 )
+from .base import PokemonCategory
 from .generation import GenerationParser
+
+logger = getLogger(__name__)
 
 
 class PokemonParser(GenerationParser):
     """
     A comprehensive parser for Pokémon species and all their forms/varieties.
+
+    This is the most complex parser as it handles:
+    - Default/primary Pokémon forms
+    - Regional variants (e.g., Alolan, Galarian forms)
+    - Battle-only transformations (e.g., Mega Evolution, Gigantamax)
+    - Cosmetic forms (e.g., Unown letters, Spinda patterns)
+    - Historical stat changes via web scraping
+    - Evolution chains with generation filtering
+    - Moves, held items, and sprites per generation
+
+    The parser organizes output into four categories defined by PokemonCategory.
     """
 
     def __init__(
@@ -36,7 +49,7 @@ class PokemonParser(GenerationParser):
             target_gen,
             generation_dex_map,
         )
-        self.item_name = "Species"
+        self.entity_type = "Species"
         self.api_endpoint = "pokemon_species"
         self.output_dir_key_pokemon = "output_dir_pokemon"
         self.output_dir_key_variant = "output_dir_variant"
@@ -46,28 +59,52 @@ class PokemonParser(GenerationParser):
         self.target_versions = target_versions or set()
 
     def _apply_historical_changes(self, cleaned_data: Dict[str, Any]):
-        """Applies scraped historical changes to the cleaned data for the target generation."""
+        """
+        Applies scraped historical changes to Pokémon data for the target generation.
+
+        The PokéAPI doesn't track all historical changes (especially Gen 1 stats),
+        so this method uses web scraping from PokemonDB to get generation-specific
+        data for abilities, stats, types, and other attributes.
+
+        Args:
+            cleaned_data: The Pokémon data dictionary to modify in-place
+
+        Modifies:
+            cleaned_data: Updates stats, abilities, types, and other fields based
+                         on historical changes for the target generation
+        """
         if not self.target_gen:
             return
 
+        logger.debug(f"Scraping historical changes for {cleaned_data['species']}")
         scraper_data = scrape_pokemon_changes(cleaned_data["species"])
         all_changes = scraper_data.get("changes", [])
+
         if not all_changes:
             return
 
+        # Apply changes that occurred in the target generation
         for change_item in all_changes:
             generations = change_item.get("generations", [])
             change = change_item.get("change", {})
+
             if self.target_gen in generations:
+                # Update non-hidden ability
                 if "ability" in change:
                     for i, ability in enumerate(cleaned_data.get("abilities", [])):
                         if not ability.get("is_hidden"):
                             cleaned_data["abilities"][i]["name"] = change["ability"]
                             break
+
+                # Update base stats
                 if "stats" in change:
                     cleaned_data["stats"].update(change["stats"])
+
+                # Update types
                 if "types" in change:
                     cleaned_data["types"] = change["types"]
+
+                # Update other attributes
                 if "base_experience" in change:
                     cleaned_data["base_experience"] = change["base_experience"]
                 if "base_happiness" in change:
@@ -78,13 +115,35 @@ class PokemonParser(GenerationParser):
                     cleaned_data["ev_yield"] = change["ev_yield"]
 
     def _get_evolution_chain(self, chain_url: str) -> Optional[Dict[str, Any]]:
-        """Recursively fetches and processes an evolution chain."""
+        """
+        Recursively fetches and processes an evolution chain, filtering future generations.
+
+        Evolution chains are nested structures showing species → evolutions → further evolutions.
+        This method filters out evolutions that don't exist in the target generation.
+
+        Args:
+            chain_url: API URL for the evolution chain endpoint
+
+        Returns:
+            A nested dictionary representing the evolution chain, or None if fetch fails.
+            Structure: {
+                "species_name": str,
+                "evolves_to": [
+                    {
+                        "species_name": str,
+                        "evolution_details": {...},
+                        "evolves_to": [...]
+                    }
+                ]
+            }
+        """
         try:
             chain_data = self.api_client.get(chain_url)["chain"]
 
             def recurse_chain(chain: Dict[str, Any]) -> Dict[str, Any]:
                 species_name = chain["species"]["name"]
                 evolves_to: List[Dict[str, Any]] = []
+
                 for evolution in chain.get("evolves_to", []):
                     # Check if this evolution is from a future generation
                     species_url = evolution["species"]["url"]
@@ -95,6 +154,9 @@ class PokemonParser(GenerationParser):
 
                     # Skip evolutions from future generations
                     if self.target_gen is not None and evolution_gen > self.target_gen:
+                        logger.debug(
+                            f"Skipping future evolution: {evolution['species']['name']} (Gen {evolution_gen})"
+                        )
                         continue
 
                     details_list = evolution.get("evolution_details", [])
@@ -309,6 +371,11 @@ class PokemonParser(GenerationParser):
                 "is_baby": species_data.get("is_baby"),
                 "is_legendary": species_data.get("is_legendary"),
                 "is_mythical": species_data.get("is_mythical"),
+                "forms_switchable": species_data.get("forms_switchable"),
+                "order": species_data.get("order"),
+                "growth_rate": species_data.get("growth_rate", {}).get("name"),
+                "habitat": species_data.get("habitat", {}).get("name") if species_data.get("habitat") else None,
+                "evolves_from_species": species_data.get("evolves_from_species", {}).get("name") if species_data.get("evolves_from_species") else None,
                 "pokedex_numbers": self._get_generation_pokedex_numbers(
                     species_data.get("pokedex_numbers", [])
                 ),
@@ -339,12 +406,27 @@ class PokemonParser(GenerationParser):
         )
 
     def process(
-        self, item_ref: Dict[str, str]
+        self, resource_ref: Dict[str, str]
     ) -> Optional[Union[Dict[str, List[Dict[str, Any]]], str]]:
-        """Processes a Pokémon species and all its varieties and forms."""
+        """
+        Processes a Pokémon species and all its varieties and forms.
+
+        This is the most complex processing method, handling:
+        - Default Pokémon form with full species data
+        - All regional variants and their differences
+        - Battle-only transformations (Megas, Gigantamax, etc.)
+        - Cosmetic forms (Unown, Spinda, etc.)
+
+        Args:
+            resource_ref: Dictionary with 'name' and 'url' for the species
+
+        Returns:
+            A dict with category keys mapping to lists of summary dicts,
+            or an error string if processing fails
+        """
         species_name = ""
         try:
-            species_data = self.api_client.get(item_ref["url"])
+            species_data = self.api_client.get(resource_ref["url"])
             species_name = species_data["name"]
             evolution_chain_url = species_data.get("evolution_chain", {}).get("url")
             evolution_chain = (
@@ -424,15 +506,7 @@ class PokemonParser(GenerationParser):
                 self._apply_historical_changes(default_template)
 
             output_dir = self.config[self.output_dir_key_pokemon]
-            os.makedirs(output_dir, exist_ok=True)
-            file_path = os.path.join(output_dir, f"{default_template['name']}.json")
-            with open(file_path, "w", encoding="utf-8") as f:
-                json.dump(
-                    transform_keys_to_snake_case(default_template),
-                    f,
-                    indent=4,
-                    ensure_ascii=False,
-                )
+            write_json_file(output_dir, default_template["name"], default_template)
             summaries["pokemon"].append(
                 {
                     "name": default_template["name"],
@@ -471,15 +545,7 @@ class PokemonParser(GenerationParser):
                     output_key, summary_key = self.output_dir_key_variant, "variant"
 
                 output_dir = self.config[output_key]
-                os.makedirs(output_dir, exist_ok=True)
-                file_path = os.path.join(output_dir, f"{variant_data['name']}.json")
-                with open(file_path, "w", encoding="utf-8") as f:
-                    json.dump(
-                        transform_keys_to_snake_case(variant_data),
-                        f,
-                        indent=4,
-                        ensure_ascii=False,
-                    )
+                write_json_file(output_dir, variant_data["name"], variant_data)
                 summaries[summary_key].append(
                     {
                         "name": variant_data["name"],
@@ -515,15 +581,7 @@ class PokemonParser(GenerationParser):
                     )
 
                 output_dir = self.config[self.output_dir_key_cosmetic]
-                os.makedirs(output_dir, exist_ok=True)
-                file_path = os.path.join(output_dir, f"{cosmetic_data['name']}.json")
-                with open(file_path, "w", encoding="utf-8") as f:
-                    json.dump(
-                        transform_keys_to_snake_case(cosmetic_data),
-                        f,
-                        indent=4,
-                        ensure_ascii=False,
-                    )
+                write_json_file(output_dir, cosmetic_data["name"], cosmetic_data)
 
                 summaries["cosmetic"].append(
                     {
@@ -536,5 +594,6 @@ class PokemonParser(GenerationParser):
             return summaries
         except Exception as e:
             if not species_name:
-                species_name = item_ref.get("name", "unknown")
+                species_name = resource_ref.get("name", "unknown")
+            logger.error(f"Unexpected error processing {species_name}: {e}")
             return f"Parsing failed for {species_name}: {e}"

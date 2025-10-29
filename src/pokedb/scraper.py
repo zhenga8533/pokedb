@@ -1,80 +1,122 @@
-import hashlib
 import json
-import os
+import logging
 import re
 import time
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import requests
 from bs4 import BeautifulSoup, Tag
 
-from .utils import load_config, parse_gen_range
+from .utils import get_cache_path, load_config, parse_gen_range
 
-config = load_config()
-SCRAPER_CACHE_DIR = config.get("scraper_cache_dir")
-CACHE_EXPIRES = config.get("cache_expires")
+logger = logging.getLogger(__name__)
 
-if SCRAPER_CACHE_DIR:
-    os.makedirs(SCRAPER_CACHE_DIR, exist_ok=True)
-
-
-def _get_cache_path(url: str) -> str:
-    """Generates a file path for a given URL."""
-    hashed_url = hashlib.md5(url.encode("utf-8")).hexdigest()
-    if SCRAPER_CACHE_DIR:
-        return os.path.join(SCRAPER_CACHE_DIR, f"{hashed_url}.json")
-    raise ValueError("SCRAPER_CACHE_DIR is not set.")
+# Constants
+MAX_RETRIES = 3
+RETRY_DELAY_SECONDS = 5
+REQUEST_TIMEOUT_SECONDS = 10
 
 
 def scrape_pokemon_changes(pokemon_name: str) -> Dict[str, Any]:
     """
-    Scrapes Pokémon DB for all historical changes for a specific Pokémon
-    and returns a dictionary containing metadata and a list of changes.
+    Scrapes Pokémon DB for all historical changes for a specific Pokémon.
+
+    This function fetches generation-specific stat and ability changes from PokemonDB.net,
+    which are not available through the PokéAPI. It includes file-based caching.
+
+    Args:
+        pokemon_name: The name of the Pokémon to scrape changes for
+
+    Returns:
+        A dictionary containing:
+        - metadata: Dict with 'name' and 'source' keys
+        - changes: List of change dictionaries with 'generations' and 'change' keys
+
+    Examples:
+        >>> scrape_pokemon_changes("pikachu")
+        {'metadata': {'name': 'pikachu', 'source': '...'}, 'changes': [...]}
     """
+    config = load_config()
+    cache_dir = config.get("scraper_cache_dir")
+    cache_expires = config.get("cache_expires")
+
+    if cache_dir:
+        Path(cache_dir).mkdir(parents=True, exist_ok=True)
+
     url = f"https://pokemondb.net/pokedex/{pokemon_name.lower()}"
-    json_cache_path = None
-    if SCRAPER_CACHE_DIR and CACHE_EXPIRES is not None:
-        json_cache_path = _get_cache_path(url)
-        if os.path.exists(json_cache_path):
-            file_mod_time = os.path.getmtime(json_cache_path)
-            if time.time() - file_mod_time < CACHE_EXPIRES:
-                with open(json_cache_path, "r", encoding="utf-8") as f:
+    cache_file_path: Optional[Path] = None
+
+    # Check cache
+    if cache_dir and cache_expires is not None:
+        cache_file_path = get_cache_path(url, cache_dir)
+        if cache_file_path.exists():
+            file_mod_time = cache_file_path.stat().st_mtime
+            if time.time() - file_mod_time < cache_expires:
+                logger.debug(f"Cache hit for {pokemon_name}")
+                with open(cache_file_path, "r", encoding="utf-8") as f:
                     return json.load(f)
 
+    # Fetch HTML from PokemonDB
     all_changes: List[Dict[str, Any]] = []
     soup: Optional[BeautifulSoup] = None
-    max_retries = 3
-    retry_delay = 5
-    for attempt in range(max_retries):
+
+    for attempt in range(MAX_RETRIES):
         try:
-            response = requests.get(url, timeout=10)
+            logger.debug(
+                f"Scraping {pokemon_name} (attempt {attempt + 1}/{MAX_RETRIES})"
+            )
+            response = requests.get(url, timeout=REQUEST_TIMEOUT_SECONDS)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, "lxml")
             break
         except requests.RequestException as e:
-            if attempt < max_retries - 1:
-                time.sleep(retry_delay)
+            if attempt < MAX_RETRIES - 1:
+                logger.warning(
+                    f"Scraping attempt {attempt + 1} failed for {pokemon_name}, retrying..."
+                )
+                time.sleep(RETRY_DELAY_SECONDS)
             else:
-                print(f"Warning: Failed to scrape {url} after {max_retries} attempts. Error: {e}")
+                logger.error(
+                    f"Failed to scrape {url} after {MAX_RETRIES} attempts: {e}"
+                )
                 return {}
 
     if not soup:
         return {}
 
+    # Parse the changes section
     try:
-        changes_header = soup.find("h2", string=re.compile(f"{pokemon_name.capitalize()} changes"))
+        changes_header = next(
+            (
+                h
+                for h in soup.find_all("h2")
+                if isinstance(h, Tag)
+                and re.search(f"{pokemon_name.capitalize()} changes", h.get_text())
+            ),
+            None,
+        )
         if not changes_header:
-            if json_cache_path:
-                with open(json_cache_path, "w", encoding="utf-8") as f:
-                    json.dump({"metadata": {"name": pokemon_name, "source": url}, "changes": []}, f)
-            return {"metadata": {"name": pokemon_name, "source": url}, "changes": []}
+            logger.debug(f"No changes section found for {pokemon_name}")
+            empty_result = {
+                "metadata": {"name": pokemon_name, "source": url},
+                "changes": [],
+            }
+            if cache_file_path:
+                with open(cache_file_path, "w", encoding="utf-8") as f:
+                    json.dump(empty_result, f, indent=4, ensure_ascii=False)
+            return empty_result
 
         changes_list = changes_header.find_next_sibling("ul")
         if not isinstance(changes_list, Tag):
-            if json_cache_path:
-                with open(json_cache_path, "w", encoding="utf-8") as f:
-                    json.dump({"metadata": {"name": pokemon_name, "source": url}, "changes": []}, f)
-            return {"metadata": {"name": pokemon_name, "source": url}, "changes": []}
+            empty_result = {
+                "metadata": {"name": pokemon_name, "source": url},
+                "changes": [],
+            }
+            if cache_file_path:
+                with open(cache_file_path, "w", encoding="utf-8") as f:
+                    json.dump(empty_result, f, indent=4, ensure_ascii=False)
+            return empty_result
 
         rules = [
             ("ability", _parse_ability),
@@ -109,20 +151,25 @@ def scrape_pokemon_changes(pokemon_name: str) -> Dict[str, Any]:
                 if pattern in text:
                     change = handler(li, text)
                     if change and isinstance(change, dict):
-                        all_changes.append({"generations": generations, "change": change})
+                        all_changes.append(
+                            {"generations": generations, "change": change}
+                        )
                         break
     except Exception as e:
-        print(f"Warning: Failed to parse scraped data for {pokemon_name}. Error: {e}")
+        logger.warning(f"Failed to parse scraped data for {pokemon_name}: {e}")
 
+    # Build and cache the result
     output = {"metadata": {"name": pokemon_name, "source": url}, "changes": all_changes}
-    if json_cache_path:
-        with open(json_cache_path, "w", encoding="utf-8") as f:
-            json.dump(output, f, indent=4)
+    if cache_file_path:
+        with open(cache_file_path, "w", encoding="utf-8") as f:
+            json.dump(output, f, indent=4, ensure_ascii=False)
 
+    logger.info(f"Scraped {len(all_changes)} changes for {pokemon_name}")
     return output
 
 
 def _parse_ability(li: Tag, text: str) -> Optional[Dict[str, str]]:
+    """Extracts ability changes from a list item."""
     ability_tag = li.find("a", href=re.compile("/ability/"))
     if ability_tag:
         return {"ability": ability_tag.get_text(strip=True).lower()}
@@ -130,6 +177,7 @@ def _parse_ability(li: Tag, text: str) -> Optional[Dict[str, str]]:
 
 
 def _parse_types(li: Tag, text: str) -> Optional[Dict[str, List[str]]]:
+    """Extracts type changes from a list item."""
     types = [a.get_text(strip=True).lower() for a in li.find_all("a", class_="itype")]
     if types:
         return {"types": types}
@@ -137,6 +185,16 @@ def _parse_types(li: Tag, text: str) -> Optional[Dict[str, List[str]]]:
 
 
 def _parse_simple_stat(stat_name: str):
+    """
+    Creates a parser function for simple stat changes (e.g., base_experience, capture_rate).
+
+    Args:
+        stat_name: The name of the stat to parse
+
+    Returns:
+        A function that parses the stat value from HTML
+    """
+
     def handler(li: Tag, text: str) -> Optional[Dict[str, int]]:
         match = re.search(r"of (\d+)", text)
         if match:
@@ -147,6 +205,16 @@ def _parse_simple_stat(stat_name: str):
 
 
 def _parse_base_stat(stat_name: str):
+    """
+    Creates a parser function for base stat changes (e.g., HP, Attack, Defense).
+
+    Args:
+        stat_name: The name of the stat to parse (e.g., 'hp', 'attack')
+
+    Returns:
+        A function that parses the base stat value from HTML
+    """
+
     def handler(li: Tag, text: str) -> Optional[Dict[str, Dict[str, int]]]:
         match = re.search(r"of (\d+)", text)
         if match:
@@ -157,6 +225,12 @@ def _parse_base_stat(stat_name: str):
 
 
 def _parse_special_stat(li: Tag, text: str) -> Optional[Dict[str, Any]]:
+    """
+    Parses Gen 1 Special stat changes (affects both Special Attack and Special Defense).
+
+    In Generation 1, there was only a "Special" stat which later split into
+    Special Attack and Special Defense in Generation 2.
+    """
     match = re.search(r"base Special stat of (\d+)", text)
     if match:
         value = int(match.group(1))
@@ -165,11 +239,17 @@ def _parse_special_stat(li: Tag, text: str) -> Optional[Dict[str, Any]]:
 
 
 def _parse_ev_yield(li: Tag, text: str) -> Optional[Dict[str, List[Dict[str, Any]]]]:
-    """Parses EV yield changes, which can be complex."""
+    """
+    Parses EV (Effort Value) yield changes from a list item.
+
+    EV yields determine which stats gain effort points when defeating this Pokémon.
+    """
     match = re.search(r"has (\d+) ([\w\s]+) EV", text)
     if match:
         effort = int(match.group(1))
         stat_name_raw = match.group(2).strip().lower()
+
+        # Map readable stat names to internal API names
         stat_name_map = {
             "hp": "hp",
             "attack": "attack",

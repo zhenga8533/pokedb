@@ -8,6 +8,31 @@ A Python-based tool designed to create a comprehensive and generation-accurate P
 
 The parsed generation data is automatically saved to the **`data` branch** weekly, ensuring that you always have access to the latest information.
 
+## Architecture
+
+The project follows modern Python best practices with a clean, modular architecture:
+
+```
+pokedb/
+├── src/
+│   └── pokedb/
+│       ├── __init__.py
+│       ├── __main__.py      # Entry point
+│       ├── api_client.py    # API client with caching
+│       ├── scraper.py       # Historical data scraper
+│       ├── parsers/         # Resource parsers (ability, item, move, pokemon)
+│       └── utils/           # Organized utility modules
+│           ├── exceptions.py
+│           ├── constants.py
+│           ├── file_ops.py
+│           ├── config.py
+│           ├── api_helpers.py
+│           └── text_utils.py
+├── pyproject.toml           # Package configuration
+├── config.json              # Configuration file
+└── requirements.txt         # Dependencies
+```
+
 ## Documentation
 
 For detailed information about the project's architecture, configuration, data structures, and API usage, please visit the **[Official Wiki](https://github.com/zhenga8533/pokedb/wiki)**.
@@ -26,11 +51,18 @@ For detailed information about the project's architecture, configuration, data s
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/zhenga8533/pokedb.git](https://github.com/zhenga8533/pokedb.git)
+    git clone https://github.com/zhenga8533/pokedb.git
     cd pokedb
     ```
 
-2.  **Install dependencies:**
+2.  **Install the package:**
+
+    ```bash
+    # Install in editable mode with dependencies
+    pip install -e .
+    ```
+
+    Alternatively, you can install just the dependencies:
 
     ```bash
     pip install -r requirements.txt
@@ -39,11 +71,17 @@ For detailed information about the project's architecture, configuration, data s
 3.  **Run the collector:**
 
     ```bash
-    # For the latest generation
-    python main.py --all
+    # For the latest generation (all parsers)
+    python -m pokedb --all
+
+    # For specific parsers only
+    python -m pokedb ability move item pokemon
 
     # For a specific historical generation (e.g., Gen 3)
-    python main.py --all --gen 3
+    python -m pokedb --all --gen 3
+
+    # Disable caching for a fresh parse
+    python -m pokedb --all --no-cache
     ```
 
     For more detailed instructions, see the [**Getting Started**](https://github.com/zhenga8533/pokedb/wiki/Getting-Started) page on the wiki.
