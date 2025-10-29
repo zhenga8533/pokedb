@@ -51,6 +51,7 @@ def gather_initial_data(
                 version_groups = [vg["name"] for vg in gen_details.get("version_groups", [])]
                 generation_version_groups[gen_num] = version_groups
 
+                # Only collect versions from the target generation (to match other parsers)
                 if gen_num == target_gen:
                     for vg_name in version_groups:
                         vg_data = api_client.get(f"{config['api_base_url']}version-group/{vg_name}")

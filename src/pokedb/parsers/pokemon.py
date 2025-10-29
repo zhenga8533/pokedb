@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional, Set, Union
 from ..api_client import ApiClient
 from ..scraper import scrape_pokemon_changes
 from ..utils import (
-    get_all_english_entries_for_gen_by_game,
+    get_all_english_entries_by_version,
     get_english_entry,
     int_to_roman,
     transform_keys_to_snake_case,
@@ -317,11 +317,10 @@ class PokemonParser(GenerationParser):
                 "egg_groups": [
                     group["name"] for group in species_data.get("egg_groups", [])
                 ],
-                "flavor_text": get_all_english_entries_for_gen_by_game(
+                "flavor_text": get_all_english_entries_by_version(
                     species_data.get("flavor_text_entries", []),
                     "flavor_text",
-                    self.generation_version_groups,
-                    self.target_gen,
+                    self.target_versions,
                 ),
                 "genus": get_english_entry(species_data.get("genera", []), "genus"),
                 "generation": species_data.get("generation", {}).get("name"),
@@ -385,7 +384,8 @@ class PokemonParser(GenerationParser):
 
             for variety in varieties:
                 pokemon_data = self.api_client.get(variety["pokemon"]["url"])
-                form_ref_url = pokemon_data.get("forms", [{}])[0].get("url")
+                forms = pokemon_data.get("forms", [])
+                form_ref_url = forms[0].get("url") if forms else None
                 if form_ref_url:
                     variety_form_urls.add(form_ref_url)
                     form_data = self.api_client.get(form_ref_url)
@@ -427,7 +427,12 @@ class PokemonParser(GenerationParser):
             os.makedirs(output_dir, exist_ok=True)
             file_path = os.path.join(output_dir, f"{default_template['name']}.json")
             with open(file_path, "w", encoding="utf-8") as f:
-                json.dump(transform_keys_to_snake_case(default_template), f, indent=4, ensure_ascii=False)
+                json.dump(
+                    transform_keys_to_snake_case(default_template),
+                    f,
+                    indent=4,
+                    ensure_ascii=False,
+                )
             summaries["pokemon"].append(
                 {
                     "name": default_template["name"],
@@ -443,7 +448,8 @@ class PokemonParser(GenerationParser):
                     continue
 
                 pokemon_data = self.api_client.get(variety["pokemon"]["url"])
-                form_ref_url = pokemon_data.get("forms", [{}])[0].get("url")
+                forms = pokemon_data.get("forms", [])
+                form_ref_url = forms[0].get("url") if forms else None
 
                 form_data = self.api_client.get(form_ref_url) if form_ref_url else {}
                 if self._should_skip_form(form_data):
@@ -468,7 +474,12 @@ class PokemonParser(GenerationParser):
                 os.makedirs(output_dir, exist_ok=True)
                 file_path = os.path.join(output_dir, f"{variant_data['name']}.json")
                 with open(file_path, "w", encoding="utf-8") as f:
-                    json.dump(transform_keys_to_snake_case(variant_data), f, indent=4, ensure_ascii=False)
+                    json.dump(
+                        transform_keys_to_snake_case(variant_data),
+                        f,
+                        indent=4,
+                        ensure_ascii=False,
+                    )
                 summaries[summary_key].append(
                     {
                         "name": variant_data["name"],
@@ -507,7 +518,12 @@ class PokemonParser(GenerationParser):
                 os.makedirs(output_dir, exist_ok=True)
                 file_path = os.path.join(output_dir, f"{cosmetic_data['name']}.json")
                 with open(file_path, "w", encoding="utf-8") as f:
-                    json.dump(transform_keys_to_snake_case(cosmetic_data), f, indent=4, ensure_ascii=False)
+                    json.dump(
+                        transform_keys_to_snake_case(cosmetic_data),
+                        f,
+                        indent=4,
+                        ensure_ascii=False,
+                    )
 
                 summaries["cosmetic"].append(
                     {

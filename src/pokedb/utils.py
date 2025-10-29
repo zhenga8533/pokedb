@@ -93,6 +93,26 @@ def get_generation_dex_map(api_client: ApiClient, config: Dict[str, Any]) -> Dic
         sys.exit(1)
 
 
+def _get_all_english_entries_generic(
+    entries: List[Dict[str, Any]],
+    key_name: str,
+    field_name: str,
+    target_set: set,
+) -> Dict[str, str]:
+    """
+    Generic helper to find and clean all unique English entries,
+    mapping them to their field value (version_group or version).
+    """
+    texts: Dict[str, str] = {}
+    for entry in entries:
+        field_value = entry.get(field_name, {}).get("name")
+        if entry.get("language", {}).get("name") == "en" and field_value in target_set:
+            cleaned_text = " ".join(entry.get(key_name, "").split())
+            if cleaned_text and field_value not in texts:
+                texts[field_value] = cleaned_text
+    return texts
+
+
 def get_all_english_entries_for_gen_by_game(
     entries: List[Dict[str, Any]],
     key_name: str,
@@ -110,15 +130,27 @@ def get_all_english_entries_for_gen_by_game(
     if not target_version_groups:
         return {}
 
-    texts: Dict[str, str] = {}
-    for entry in entries:
-        version_group_name = entry.get("version_group", {}).get("name")
-        if entry.get("language", {}).get("name") == "en" and version_group_name in target_version_groups:
-            cleaned_text = " ".join(entry.get(key_name, "").split())
-            if cleaned_text and version_group_name not in texts:
-                texts[version_group_name] = cleaned_text
+    return _get_all_english_entries_generic(
+        entries, key_name, "version_group", set(target_version_groups)
+    )
 
-    return texts
+
+def get_all_english_entries_by_version(
+    entries: List[Dict[str, Any]],
+    key_name: str,
+    target_versions: Optional[set] = None,
+) -> Dict[str, str]:
+    """
+    Finds and cleans all unique English entries for specific game versions,
+    mapping them to their version name.
+
+    This function is designed for flavor_text_entries which use 'version'
+    instead of 'version_group'.
+    """
+    if not entries or not target_versions:
+        return {}
+
+    return _get_all_english_entries_generic(entries, key_name, "version", target_versions)
 
 
 def get_english_entry(
