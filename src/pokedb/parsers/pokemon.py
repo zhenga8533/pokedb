@@ -71,7 +71,7 @@ class PokemonParser(GenerationParser):
 
         Modifies:
             cleaned_data: Updates stats, abilities, types, and other fields based
-                         on historical changes for the target generation
+                          on historical changes for the target generation
         """
         if not self.target_gen:
             return
@@ -374,8 +374,16 @@ class PokemonParser(GenerationParser):
                 "forms_switchable": species_data.get("forms_switchable"),
                 "order": species_data.get("order"),
                 "growth_rate": species_data.get("growth_rate", {}).get("name"),
-                "habitat": species_data.get("habitat", {}).get("name") if species_data.get("habitat") else None,
-                "evolves_from_species": species_data.get("evolves_from_species", {}).get("name") if species_data.get("evolves_from_species") else None,
+                "habitat": (
+                    species_data.get("habitat", {}).get("name")
+                    if species_data.get("habitat")
+                    else None
+                ),
+                "evolves_from_species": (
+                    species_data.get("evolves_from_species", {}).get("name")
+                    if species_data.get("evolves_from_species")
+                    else None
+                ),
                 "pokedex_numbers": self._get_generation_pokedex_numbers(
                     species_data.get("pokedex_numbers", [])
                 ),
@@ -461,11 +469,26 @@ class PokemonParser(GenerationParser):
                 default_variety["pokemon"]["url"]
             )
 
+            # Skip species with no game indices (e.g., placeholder entries)
+            if not default_pokemon_data.get("game_indices"):
+                logger.info(
+                    f"Skipping {species_name}: No game indices found in default pokemon data."
+                )
+                return None  # Skip processing this species
+
             all_forms_in_gen: List[Dict[str, str]] = []
             variety_form_urls: Set[str] = set()
 
             for variety in varieties:
                 pokemon_data = self.api_client.get(variety["pokemon"]["url"])
+
+                # Also skip varieties with no game indices
+                if not pokemon_data.get("game_indices"):
+                    logger.info(
+                        f"Skipping variety {pokemon_data['name']}: No game indices found."
+                    )
+                    continue
+
                 forms = pokemon_data.get("forms", [])
                 form_ref_url = forms[0].get("url") if forms else None
                 if form_ref_url:
@@ -522,6 +545,14 @@ class PokemonParser(GenerationParser):
                     continue
 
                 pokemon_data = self.api_client.get(variety["pokemon"]["url"])
+
+                # Add the check again here for safety, in case variety list was modified
+                if not pokemon_data.get("game_indices"):
+                    logger.info(
+                        f"Skipping variety {pokemon_data['name']}: No game indices found."
+                    )
+                    continue
+
                 forms = pokemon_data.get("forms", [])
                 form_ref_url = forms[0].get("url") if forms else None
 
