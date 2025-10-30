@@ -23,6 +23,7 @@ from pokedb.parsers import (
     MoveParser,
     PokemonParser,
 )
+from pokedb.scraper import scrape_pokemon_changes
 from pokedb.utils import (
     ConfigurationError,
     GenerationNotFoundError,
@@ -181,6 +182,9 @@ def run_parsers(
             if parser_name == "pokemon":
                 parser_kwargs["is_historical"] = is_historical
                 parser_kwargs["target_versions"] = target_versions
+                # Inject scraper function for historical changes
+                if is_historical:
+                    parser_kwargs["scraper_func"] = scrape_pokemon_changes
 
             parser_instance = ParserClass(**parser_kwargs)
             summary_data = parser_instance.run()

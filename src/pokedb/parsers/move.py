@@ -290,8 +290,7 @@ class MoveParser(GenerationParser):
 
             # Apply historical stat changes for the target generation
             past_values = data.get("past_values", [])
-            if past_values:
-                self._apply_past_values(cleaned_data, past_values)
+            self._apply_past_values(cleaned_data, past_values)
 
             # Write to file
             output_path = self.config[self.output_dir_key]
