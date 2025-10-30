@@ -453,14 +453,14 @@ class PokemonParser(GenerationParser):
         for variety in varieties:
             pokemon_data = self.api_client.get(variety["pokemon"]["url"])
 
-            # Skip varieties with no game indices
-            if not pokemon_data.get("game_indices"):
+            # Skip varieties with no forms
+            forms = pokemon_data.get("forms", [])
+            if not forms:
                 logger.info(
-                    f"Skipping variety {pokemon_data['name']}: No game indices found."
+                    f"Skipping variety {pokemon_data['name']}: No forms found."
                 )
                 continue
 
-            forms = pokemon_data.get("forms", [])
             form_ref_url = forms[0].get("url") if forms else None
             if form_ref_url:
                 variety_form_urls.add(form_ref_url)
