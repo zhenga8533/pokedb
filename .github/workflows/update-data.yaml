@@ -3,7 +3,7 @@ name: Update PokéAPI Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * 0"
+    - cron: '0 0 * * 0'
 
 jobs:
   build-and-push-data:
@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: '3.12'
 
       # 3. Cache and install dependencies
       - name: Cache dependencies
@@ -33,7 +33,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          pip install -e .
 
       # 4. Run all the parsers (this creates the local '.output' folder)
       - name: Run Parsers

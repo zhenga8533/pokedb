@@ -31,7 +31,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          pip install -e .
 
       # 4. Run parsers for all generations (this creates the local '.output' folder)
       - name: Run Parsers for All Generations
