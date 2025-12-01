@@ -176,11 +176,19 @@ def _parse_ability(li: Tag, text: str) -> Optional[Dict[str, str]]:
     return None
 
 
-def _parse_types(li: Tag, text: str) -> Optional[Dict[str, List[str]]]:
-    """Extracts type changes from a list item."""
+def _parse_types(li: Tag, text: str) -> Optional[Dict[str, Any]]:
+    """Extracts type changes from a list item, including form information if present."""
     types = [a.get_text(strip=True).lower() for a in li.find_all("a", class_="itype")]
     if types:
-        return {"types": types}
+        result: Dict[str, Any] = {"types": types}
+
+        # Check for form information in parentheses
+        form_match = re.search(r'\(([^)]+)\)', text)
+        if form_match:
+            form_name = form_match.group(1).strip()
+            result["form"] = form_name
+
+        return result
     return None
 
 
