@@ -37,16 +37,7 @@ jobs:
 
       # 4. Run parsers for all generations (this creates the local '.output' folder)
       - name: Run Parsers for All Generations
-        run: |
-          python -m pokedb --gen 1 --historical --no-cache
-          python -m pokedb --gen 2 --historical --no-cache
-          python -m pokedb --gen 3 --historical --no-cache
-          python -m pokedb --gen 4 --historical --no-cache
-          python -m pokedb --gen 5 --historical --no-cache
-          python -m pokedb --gen 6 --historical --no-cache
-          python -m pokedb --gen 7 --historical --no-cache
-          python -m pokedb --gen 8 --historical --no-cache
-          python -m pokedb --gen 9 --historical --no-cache
+        run: python -m pokedb --all --gen all --no-cache --force
 
       # 5. Switch to the data branch, replace old data, and commit all new results
       - name: Commit and Push All Data

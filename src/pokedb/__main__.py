@@ -57,8 +57,14 @@ Examples:
   # Parse all data for a specific historical generation
   python -m pokedb --all --gen 3
 
+  # Parse all data for all generations
+  python -m pokedb --all --gen all
+
   # Disable caching for a fresh parse
   python -m pokedb --all --no-cache
+
+  # Skip confirmation prompts (useful for CI/CD)
+  python -m pokedb --all --force
         """,
     )
     parser.add_argument(
@@ -69,13 +75,17 @@ Examples:
     parser.add_argument("--all", action="store_true", help="Run all available parsers.")
     parser.add_argument(
         "--gen",
-        type=int,
-        help="Parse data for a specific generation (e.g., 3 for Generation III).",
+        help="Parse data for a specific generation (e.g., 3 for Generation III) or 'all' for all generations.",
     )
     parser.add_argument(
         "--no-cache",
         action="store_true",
         help="Disable caching for the run (slower but ensures fresh data).",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Skip confirmation prompts and overwrite existing directories.",
     )
     return parser.parse_args()
 
@@ -273,63 +283,76 @@ def main() -> None:
 
         api_client = ApiClient(config)
 
-        # Determine target generation
+        # Determine target generation(s)
         latest_gen_num = get_latest_generation(api_client, config)
-        target_gen = (
-            args.gen if args.gen and args.gen <= latest_gen_num else latest_gen_num
-        )
-        is_historical = target_gen < latest_gen_num
 
-        if is_historical:
-            logger.info(
-                f"Performing a historical parse for Generation {target_gen}. Scraping for changes..."
+        # Check if we should run all generations
+        if args.gen and str(args.gen).lower() == "all":
+            generations_to_parse = list(range(1, latest_gen_num + 1))
+        else:
+            target_gen = int(args.gen) if args.gen else latest_gen_num
+            if target_gen > latest_gen_num:
+                target_gen = latest_gen_num
+            generations_to_parse = [target_gen]
+
+        # Process each generation
+        for target_gen in generations_to_parse:
+            is_historical = target_gen < latest_gen_num
+
+            if is_historical:
+                logger.info(
+                    f"Performing a historical parse for Generation {target_gen}. Scraping for changes..."
+                )
+
+            # Gather initial data
+            generation_version_groups, generation_dex_map, target_versions = (
+                gather_initial_data(api_client, config, target_gen)
             )
 
-        # Gather initial data
-        generation_version_groups, generation_dex_map, target_versions = (
-            gather_initial_data(api_client, config, target_gen)
-        )
+            logger.info(f"\n{'='*10} PARSING ALL DATA FOR GENERATION {target_gen} {'='*10}")
 
-        logger.info(f"\n{'='*10} PARSING ALL DATA FOR GENERATION {target_gen} {'='*10}")
+            # Format output directory paths with generation number
+            final_config = config.copy()
+            for key in final_config:
+                if key.startswith("output_dir_"):
+                    final_config[key] = final_config[key].format(gen_num=target_gen)
 
-        # Format output directory paths with generation number
-        final_config = config.copy()
-        for key in final_config:
-            if key.startswith("output_dir_"):
-                final_config[key] = final_config[key].format(gen_num=target_gen)
+            # Check if output directory exists
+            top_level_output_dir = Path(final_config["output_dir_ability"]).parent
+            if top_level_output_dir.exists():
+                if args.force:
+                    logger.info(f"Deleting existing directory: '{top_level_output_dir}'")
+                    shutil.rmtree(top_level_output_dir)
+                else:
+                    response = input(
+                        f"Directory '{top_level_output_dir}' already exists. Delete it? (y/n): "
+                    )
+                    if response.lower() == "y":
+                        logger.info(f"Deleting existing directory: '{top_level_output_dir}'")
+                        shutil.rmtree(top_level_output_dir)
+                    else:
+                        logger.info("Operation cancelled.")
+                        return
 
-        # Check if output directory exists
-        top_level_output_dir = Path(final_config["output_dir_ability"]).parent
-        if top_level_output_dir.exists():
-            response = input(
-                f"Directory '{top_level_output_dir}' already exists. Delete it? (y/n): "
+            # Run parsers
+            all_summaries = run_parsers(
+                args,
+                final_config,
+                api_client,
+                generation_version_groups,
+                target_gen,
+                generation_dex_map,
+                is_historical,
+                target_versions,
             )
-            if response.lower() == "y":
-                logger.info(f"Deleting existing directory: '{top_level_output_dir}'")
-                shutil.rmtree(top_level_output_dir)
-            else:
-                logger.info("Operation cancelled.")
-                return
 
-        # Run parsers
-        all_summaries = run_parsers(
-            args,
-            final_config,
-            api_client,
-            generation_version_groups,
-            target_gen,
-            generation_dex_map,
-            is_historical,
-            target_versions,
-        )
-
-        # Write index file
-        write_index_file(
-            all_summaries,
-            target_gen,
-            str(top_level_output_dir),
-            generation_version_groups,
-        )
+            # Write index file
+            write_index_file(
+                all_summaries,
+                target_gen,
+                str(top_level_output_dir),
+                generation_version_groups,
+            )
 
     except (ConfigurationError, GenerationNotFoundError, PokedexMappingError) as e:
         logger.error(f"Fatal error: {e}")
