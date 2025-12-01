@@ -137,19 +137,49 @@ class PokemonParser(GenerationParser):
 
                 # Remove ability (for "does not have X ability" changes)
                 if "remove_ability" in change:
-                    ability_to_remove = change["remove_ability"]
+                    ability_to_remove = change["remove_ability"].replace(" ", "-")
                     cleaned_data["abilities"] = [
                         ability
                         for ability in cleaned_data.get("abilities", [])
                         if ability.get("name") != ability_to_remove
                     ]
 
-                # Update non-hidden ability
+                # Remove multiple abilities (for "does not have X or Y ability" changes)
+                if "remove_abilities" in change:
+                    abilities_to_remove = [a.replace(" ", "-") for a in change["remove_abilities"]]
+                    cleaned_data["abilities"] = [
+                        ability
+                        for ability in cleaned_data.get("abilities", [])
+                        if ability.get("name") not in abilities_to_remove
+                    ]
+
+                # Update non-hidden ability (slot 1)
                 if "ability" in change:
                     for i, ability in enumerate(cleaned_data.get("abilities", [])):
                         if not ability.get("is_hidden"):
                             cleaned_data["abilities"][i]["name"] = change["ability"]
                             break
+
+                # Update second ability (slot 2)
+                if "ability_slot_2" in change:
+                    new_ability = change["ability_slot_2"].replace(" ", "-")
+                    abilities = cleaned_data.get("abilities", [])
+                    # Find slot 2 (non-hidden abilities with slot 2)
+                    slot_2_found = False
+                    for i, ability in enumerate(abilities):
+                        if not ability.get("is_hidden") and ability.get("slot") == 2:
+                            abilities[i]["name"] = new_ability
+                            slot_2_found = True
+                            break
+
+                    # If no slot 2 exists, add it
+                    if not slot_2_found:
+                        abilities.append({
+                            "name": new_ability,
+                            "is_hidden": False,
+                            "slot": 2
+                        })
+                        cleaned_data["abilities"] = abilities
 
                 # Update base stats
                 if "stats" in change:

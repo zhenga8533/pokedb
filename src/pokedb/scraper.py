@@ -120,6 +120,7 @@ def scrape_pokemon_changes(pokemon_name: str) -> Dict[str, Any]:
 
         rules = [
             ("does not have", _parse_ability_removal),  # Check negative ability changes first
+            ("has the", _parse_second_ability),  # Check for second ability changes
             ("ability", _parse_ability),
             ("type", _parse_types),
             ("base experience yield", _parse_simple_stat("base_experience")),
@@ -177,12 +178,26 @@ def _parse_ability(li: Tag, text: str) -> Optional[Dict[str, str]]:
     return None
 
 
-def _parse_ability_removal(li: Tag, text: str) -> Optional[Dict[str, str]]:
+def _parse_ability_removal(li: Tag, text: str) -> Optional[Dict[str, Any]]:
     """Extracts ability removals (does not have X ability) from a list item."""
     if "does not have" in text.lower():
+        ability_tags = li.find_all("a", href=re.compile("/ability/"))
+        if ability_tags:
+            abilities_to_remove = [tag.get_text(strip=True).lower() for tag in ability_tags]
+            if len(abilities_to_remove) == 1:
+                return {"remove_ability": abilities_to_remove[0]}
+            else:
+                return {"remove_abilities": abilities_to_remove}
+    return None
+
+
+def _parse_second_ability(li: Tag, text: str) -> Optional[Dict[str, str]]:
+    """Extracts second ability changes (has the X ability) from a list item."""
+    # Match pattern like "has the X ability" (not "does not have")
+    if "has the" in text.lower() and "does not have" not in text.lower():
         ability_tag = li.find("a", href=re.compile("/ability/"))
         if ability_tag:
-            return {"remove_ability": ability_tag.get_text(strip=True).lower()}
+            return {"ability_slot_2": ability_tag.get_text(strip=True).lower()}
     return None
 
 
