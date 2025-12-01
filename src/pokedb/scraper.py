@@ -119,6 +119,7 @@ def scrape_pokemon_changes(pokemon_name: str) -> Dict[str, Any]:
             return empty_result
 
         rules = [
+            ("does not have", _parse_ability_removal),  # Check negative ability changes first
             ("ability", _parse_ability),
             ("type", _parse_types),
             ("base experience yield", _parse_simple_stat("base_experience")),
@@ -173,6 +174,15 @@ def _parse_ability(li: Tag, text: str) -> Optional[Dict[str, str]]:
     ability_tag = li.find("a", href=re.compile("/ability/"))
     if ability_tag:
         return {"ability": ability_tag.get_text(strip=True).lower()}
+    return None
+
+
+def _parse_ability_removal(li: Tag, text: str) -> Optional[Dict[str, str]]:
+    """Extracts ability removals (does not have X ability) from a list item."""
+    if "does not have" in text.lower():
+        ability_tag = li.find("a", href=re.compile("/ability/"))
+        if ability_tag:
+            return {"remove_ability": ability_tag.get_text(strip=True).lower()}
     return None
 
 

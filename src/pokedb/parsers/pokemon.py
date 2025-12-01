@@ -135,6 +135,15 @@ class PokemonParser(GenerationParser):
                     # This is a general change that applies to all forms
                     pass
 
+                # Remove ability (for "does not have X ability" changes)
+                if "remove_ability" in change:
+                    ability_to_remove = change["remove_ability"]
+                    cleaned_data["abilities"] = [
+                        ability
+                        for ability in cleaned_data.get("abilities", [])
+                        if ability.get("name") != ability_to_remove
+                    ]
+
                 # Update non-hidden ability
                 if "ability" in change:
                     for i, ability in enumerate(cleaned_data.get("abilities", [])):
