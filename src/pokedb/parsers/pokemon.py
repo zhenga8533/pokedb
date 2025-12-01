@@ -58,7 +58,35 @@ class PokemonParser(GenerationParser):
         self.target_versions = target_versions or set()
         self.scraper_func = scraper_func
 
-    def _apply_historical_changes(self, cleaned_data: Dict[str, Any]):
+    def _convert_to_scraper_form_name(
+        self, form_data: Dict[str, Any], species_name: str
+    ) -> str:
+        """
+        Converts a form name from API format to the format used in scraped data.
+
+        Args:
+            form_data: The form data from the API containing form names
+            species_name: The species name (e.g., "rotom", "deoxys")
+
+        Returns:
+            The form name as it appears in scraped data (e.g., "Wash Rotom", "Attack Forme")
+        """
+        # Try to get the English form name from the API
+        form_names = form_data.get("names", [])
+        for name_entry in form_names:
+            if name_entry.get("language", {}).get("name") == "en":
+                # Return the English form name as-is from the API
+                return name_entry.get("name", "")
+
+        # Fallback: construct from the form's identifier
+        form_name = form_data.get("form_name", "")
+        if form_name:
+            return form_name
+
+        # Last resort: use the form's name field
+        return form_data.get("name", "")
+
+    def _apply_historical_changes(self, cleaned_data: Dict[str, Any], form_name: Optional[str] = None):
         """
         Applies scraped historical changes to Pokémon data for the target generation.
 
@@ -68,6 +96,7 @@ class PokemonParser(GenerationParser):
 
         Args:
             cleaned_data: The Pokémon data dictionary to modify in-place
+            form_name: Optional form name to match against changes (e.g., "Heat Rotom")
 
         Modifies:
             cleaned_data: Updates stats, abilities, types, and other fields based
@@ -89,6 +118,23 @@ class PokemonParser(GenerationParser):
             change = change_item.get("change", {})
 
             if self.target_gen in generations:
+                # Check if this change is form-specific
+                change_form = change.get("form")
+
+                # Skip if this change is for a different form
+                if change_form and form_name and change_form != form_name:
+                    continue
+
+                # Skip if this change is form-specific but we're applying to default
+                if change_form and not form_name:
+                    continue
+
+                # Skip if this change is for default but we're applying to a form
+                # (unless the change doesn't specify a form)
+                if form_name and not change_form:
+                    # This is a general change that applies to all forms
+                    pass
+
                 # Update non-hidden ability
                 if "ability" in change:
                     for i, ability in enumerate(cleaned_data.get("abilities", [])):
@@ -394,6 +440,29 @@ class PokemonParser(GenerationParser):
         source_url: str,
     ) -> Dict[str, Any]:
         """Builds the common data dictionary for any Pokémon form or variety."""
+        # Filter abilities based on generation (hidden abilities introduced in Gen 5)
+        all_abilities = pokemon_data.get("abilities", [])
+        if self.target_gen is not None and self.target_gen < 5:
+            # Remove hidden abilities for generations before Gen 5
+            abilities = [
+                {
+                    "name": a["ability"]["name"],
+                    "is_hidden": a["is_hidden"],
+                    "slot": a["slot"],
+                }
+                for a in all_abilities
+                if not a["is_hidden"]
+            ]
+        else:
+            abilities = [
+                {
+                    "name": a["ability"]["name"],
+                    "is_hidden": a["is_hidden"],
+                    "slot": a["slot"],
+                }
+                for a in all_abilities
+            ]
+
         return {
             "id": pokemon_data["id"],
             "name": pokemon_data["name"],
@@ -401,14 +470,7 @@ class PokemonParser(GenerationParser):
             "is_default": pokemon_data.get("is_default", False),
             "source_url": source_url,
             "types": [t["type"]["name"] for t in pokemon_data.get("types", [])],
-            "abilities": [
-                {
-                    "name": a["ability"]["name"],
-                    "is_hidden": a["is_hidden"],
-                    "slot": a["slot"],
-                }
-                for a in pokemon_data.get("abilities", [])
-            ],
+            "abilities": abilities,
             "stats": {
                 s["stat"]["name"]: s["base_stat"] for s in pokemon_data.get("stats", [])
             },
@@ -671,6 +733,15 @@ class PokemonParser(GenerationParser):
             pokemon_data, species_data, variety["pokemon"]["url"]
         )
         variant_data.update(variant_base_data)
+
+        # Apply historical changes for this specific form
+        if self.is_historical:
+            # Get the form name from the API form data
+            # This will use the official English name (e.g., "Wash Rotom", "Attack Forme")
+            form_name = self._convert_to_scraper_form_name(
+                form_data, species_data["name"]
+            )
+            self._apply_historical_changes(variant_data, form_name)
 
         # Determine category and output directory
         is_battle_only = form_data.get("is_battle_only", False)
