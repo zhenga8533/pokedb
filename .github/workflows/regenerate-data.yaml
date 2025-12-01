@@ -1,0 +1,77 @@
+name: Regenerate PokéAPI Data
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push-all-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      # 1. Check out the repository and fetch all branch history
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. Set up Python 3.12
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 3. Cache and install dependencies
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 4. Run parsers for all generations (this creates the local '.output' folder)
+      - name: Run Parsers for All Generations
+        run: |
+          python -m pokedb --gen 1 --historical --no-cache
+          python -m pokedb --gen 2 --historical --no-cache
+          python -m pokedb --gen 3 --historical --no-cache
+          python -m pokedb --gen 4 --historical --no-cache
+          python -m pokedb --gen 5 --historical --no-cache
+          python -m pokedb --gen 6 --historical --no-cache
+          python -m pokedb --gen 7 --historical --no-cache
+          python -m pokedb --gen 8 --historical --no-cache
+          python -m pokedb --gen 9 --historical --no-cache
+
+      # 5. Switch to the data branch, replace old data, and commit all new results
+      - name: Commit and Push All Data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout data
+
+          # Remove all existing generation directories
+          echo "Removing old generation directories..."
+          rm -rf gen*
+
+          # Move all newly generated directories into the root
+          echo "Moving new data into place..."
+          mv .output/* .
+
+          # Clean up the now-empty output folder
+          rm -rf .output
+
+          # Add all generation directories to the commit
+          echo "Staging all new generation data..."
+          git add gen*
+
+          if git diff --staged --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "Full regeneration of all generation data: $(date -u)"
+            git push origin data
+            echo "All data pushed successfully."
+          fi
