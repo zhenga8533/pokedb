@@ -86,7 +86,9 @@ class PokemonParser(GenerationParser):
         # Last resort: use the form's name field
         return form_data.get("name", "")
 
-    def _apply_historical_changes(self, cleaned_data: Dict[str, Any], form_name: Optional[str] = None):
+    def _apply_historical_changes(
+        self, cleaned_data: Dict[str, Any], form_name: Optional[str] = None
+    ):
         """
         Applies scraped historical changes to Pokémon data for the target generation.
 
@@ -146,7 +148,9 @@ class PokemonParser(GenerationParser):
 
                 # Remove multiple abilities (for "does not have X or Y ability" changes)
                 if "remove_abilities" in change:
-                    abilities_to_remove = [a.replace(" ", "-") for a in change["remove_abilities"]]
+                    abilities_to_remove = [
+                        a.replace(" ", "-") for a in change["remove_abilities"]
+                    ]
                     cleaned_data["abilities"] = [
                         ability
                         for ability in cleaned_data.get("abilities", [])
@@ -174,11 +178,9 @@ class PokemonParser(GenerationParser):
 
                     # If no slot 2 exists, add it
                     if not slot_2_found:
-                        abilities.append({
-                            "name": new_ability,
-                            "is_hidden": False,
-                            "slot": 2
-                        })
+                        abilities.append(
+                            {"name": new_ability, "is_hidden": False, "slot": 2}
+                        )
                         cleaned_data["abilities"] = abilities
 
                 # Update base stats
@@ -465,7 +467,9 @@ class PokemonParser(GenerationParser):
                 return False
 
             form_introduction_gen = int(generation_url.split("/")[-2])
-            return self.target_gen is not None and form_introduction_gen > self.target_gen
+            return (
+                self.target_gen is not None and form_introduction_gen > self.target_gen
+            )
         except (ValueError, IndexError, KeyError) as e:
             logger.warning(
                 f"Error determining form generation from {version_group_url}: {e}"
@@ -545,34 +549,16 @@ class PokemonParser(GenerationParser):
                 "is_mythical": species_data.get("is_mythical"),
                 "forms_switchable": species_data.get("forms_switchable"),
                 "order": species_data.get("order"),
-                "growth_rate": (
-                    species_data.get("growth_rate").get("name")
-                    if species_data.get("growth_rate")
-                    else None
-                ),
-                "habitat": (
-                    species_data.get("habitat").get("name")
-                    if species_data.get("habitat")
-                    else None
-                ),
+                "growth_rate": (species_data.get("growth_rate", {}).get("name")),
+                "habitat": (species_data.get("habitat", {}).get("name")),
                 "evolves_from_species": (
-                    species_data.get("evolves_from_species").get("name")
-                    if species_data.get("evolves_from_species")
-                    else None
+                    species_data.get("evolves_from_species", {}).get("name")
                 ),
                 "pokedex_numbers": self._get_generation_pokedex_numbers(
                     species_data.get("pokedex_numbers", [])
                 ),
-                "color": (
-                    species_data.get("color").get("name")
-                    if species_data.get("color")
-                    else None
-                ),
-                "shape": (
-                    species_data.get("shape").get("name")
-                    if species_data.get("shape")
-                    else None
-                ),
+                "color": (species_data.get("color", {}).get("name")),
+                "shape": (species_data.get("shape", {}).get("name")),
                 "egg_groups": [
                     group["name"] for group in species_data.get("egg_groups", [])
                 ],
@@ -601,7 +587,9 @@ class PokemonParser(GenerationParser):
         self,
         species_data: Dict[str, Any],
         default_pokemon_data: Dict[str, Any],
-    ) -> Tuple[List[Dict[str, Any]], List[Dict[str, str]], Set[str], Dict[str, Dict[str, Any]]]:
+    ) -> Tuple[
+        List[Dict[str, Any]], List[Dict[str, str]], Set[str], Dict[str, Dict[str, Any]]
+    ]:
         """
         Collects and categorizes all varieties and forms for a species.
 
@@ -674,11 +662,11 @@ class PokemonParser(GenerationParser):
                 ):
                     form_name = form_data.get("name")
                     if not form_name:
-                        logger.warning(f"Cosmetic form at {form_url} has no name, skipping")
+                        logger.warning(
+                            f"Cosmetic form at {form_url} has no name, skipping"
+                        )
                         continue
-                    all_forms_in_gen.append(
-                        {"name": form_name, "category": "cosmetic"}
-                    )
+                    all_forms_in_gen.append({"name": form_name, "category": "cosmetic"})
             except Exception as e:
                 logger.error(f"Failed to fetch cosmetic form data from {form_url}: {e}")
 
@@ -752,9 +740,7 @@ class PokemonParser(GenerationParser):
 
         # Skip varieties with no forms
         if not pokemon_data.get("forms"):
-            logger.debug(
-                f"Skipping variety {pokemon_data['name']}: No forms found."
-            )
+            logger.debug(f"Skipping variety {pokemon_data['name']}: No forms found.")
             return None
 
         forms = pokemon_data.get("forms", [])
