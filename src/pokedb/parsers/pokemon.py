@@ -549,16 +549,34 @@ class PokemonParser(GenerationParser):
                 "is_mythical": species_data.get("is_mythical"),
                 "forms_switchable": species_data.get("forms_switchable"),
                 "order": species_data.get("order"),
-                "growth_rate": (species_data.get("growth_rate", {}).get("name")),
-                "habitat": (species_data.get("habitat", {}).get("name")),
+                "growth_rate": (
+                    species_data.get("growth_rate", {}).get("name")
+                    if species_data.get("growth_rate")
+                    else None
+                ),
+                "habitat": (
+                    species_data.get("habitat", {}).get("name")
+                    if species_data.get("habitat")
+                    else None
+                ),
                 "evolves_from_species": (
                     species_data.get("evolves_from_species", {}).get("name")
+                    if species_data.get("evolves_from_species")
+                    else None
                 ),
                 "pokedex_numbers": self._get_generation_pokedex_numbers(
                     species_data.get("pokedex_numbers", [])
                 ),
-                "color": (species_data.get("color", {}).get("name")),
-                "shape": (species_data.get("shape", {}).get("name")),
+                "color": (
+                    species_data.get("color", {}).get("name")
+                    if species_data.get("color")
+                    else None
+                ),
+                "shape": (
+                    species_data.get("shape", {}).get("name")
+                    if species_data.get("shape")
+                    else None
+                ),
                 "egg_groups": [
                     group["name"] for group in species_data.get("egg_groups", [])
                 ],
