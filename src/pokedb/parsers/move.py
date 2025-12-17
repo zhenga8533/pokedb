@@ -178,22 +178,18 @@ class MoveParser(GenerationParser):
                 "short_effect": cleaned_data.get("short_effect"),
             }
 
-            # Get all past values up to target generation, sorted chronologically
+            # Get all past values, sorted chronologically
+            # We need all past values (even those after target_gen) to determine
+            # what the value was in earlier generations
             sorted_past_values = sorted(
-                [
-                    past_value
-                    for past_value in past_values
-                    if version_group_to_gen_map.get(
-                        past_value["version_group"]["name"], 999
-                    )
-                    <= self.target_gen
-                ],
+                past_values,
                 key=lambda x: version_group_to_gen_map.get(
                     x["version_group"]["name"], 999
                 ),
             )
 
-            # Apply past values chronologically up to this version group
+            # Apply past values only for generations prior to the listed version group
+            # past_values represent what the value WAS before the change in that version group
             for past_value in sorted_past_values:
                 past_value_gen = version_group_to_gen_map.get(
                     past_value["version_group"]["name"], 999
@@ -202,9 +198,10 @@ class MoveParser(GenerationParser):
                     version_group_name, 0
                 )
 
-                # Stop if this change happened after the current version group
-                if past_value_gen > current_version_group_gen:
-                    break
+                # Only apply if current generation is BEFORE the change
+                # (past_value represents what it was prior to past_value_gen)
+                if past_value_gen <= current_version_group_gen:
+                    continue
 
                 # Apply each changed field
                 if past_value.get("accuracy") is not None:
