@@ -58,7 +58,16 @@
     "flavor_text": {
         "scarlet_violet": "The user emits an incredibly spicy extract, sharply boosting the target's Attack stat and harshly lowering the target's Defense stat."
     },
-    "stat_changes": [],
+    "stat_changes": [
+        {
+            "change": 2,
+            "stat": "attack"
+        },
+        {
+            "change": -2,
+            "stat": "defense"
+        }
+    ],
     "machine": null,
     "metadata": {
         "ailment": null,

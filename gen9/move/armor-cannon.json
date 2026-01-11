@@ -58,7 +58,16 @@
     "flavor_text": {
         "scarlet_violet": "The user shoots its own armor out as blazing projectiles. This also lowers the user’s Defense and Sp. Def stats."
     },
-    "stat_changes": [],
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "defense"
+        },
+        {
+            "change": -1,
+            "stat": "special-defense"
+        }
+    ],
     "machine": null,
     "metadata": {
         "ailment": null,

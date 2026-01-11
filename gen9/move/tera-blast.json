@@ -58,7 +58,16 @@
     "flavor_text": {
         "scarlet_violet": "If the user has Terastallized, it unleashes energy of its Tera Type. This move inflicts damage using the Attack or Sp. Atk stat—whichever is higher for the user."
     },
-    "stat_changes": [],
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "attack"
+        },
+        {
+            "change": -1,
+            "stat": "special-attack"
+        }
+    ],
     "machine": "tm171",
     "metadata": {
         "ailment": null,
