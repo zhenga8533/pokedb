@@ -1,62 +1,89 @@
 {
-    "id": 10295,
-    "name": "pyroar-mega",
+    "id": 668,
+    "name": "pyroar-female",
     "species": "pyroar",
     "is_default": false,
-    "source_url": "https://pokeapi.co/api/v2/pokemon/10295/",
+    "source_url": "https://pokeapi.co/api/v2/pokemon/668/",
     "types": [
         "fire",
         "normal"
     ],
-    "abilities": [],
+    "abilities": [
+        {
+            "name": "rivalry",
+            "is_hidden": false,
+            "slot": 1
+        },
+        {
+            "name": "unnerve",
+            "is_hidden": false,
+            "slot": 2
+        },
+        {
+            "name": "moxie",
+            "is_hidden": true,
+            "slot": 3
+        }
+    ],
     "stats": {
         "hp": 86,
-        "attack": 88,
-        "defense": 92,
-        "special_attack": 129,
-        "special_defense": 86,
-        "speed": 126
+        "attack": 68,
+        "defense": 72,
+        "special_attack": 109,
+        "special_defense": 66,
+        "speed": 106
     },
-    "ev_yield": [],
+    "ev_yield": [
+        {
+            "stat": "special-attack",
+            "effort": 2
+        }
+    ],
     "height": 15,
-    "weight": 933,
+    "weight": 815,
     "cries": {
-        "latest": null,
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/668.ogg",
         "legacy": null
     },
     "sprites": {
+        "front_default": null,
+        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/668.png",
+        "front_shiny": null,
+        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/668.png",
         "other": {
             "dream_world": {
-                "front_default": null,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/668.svg",
                 "front_female": null
             },
             "home": {
-                "front_default": null,
-                "front_female": null,
-                "front_shiny": null,
-                "front_shiny_female": null
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/668.png",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/668.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/668.png",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/668.png"
             },
             "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10295.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10295.png"
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/668.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/668.png"
             },
             "showdown": {
-                "back_default": null,
-                "back_female": null,
-                "back_shiny": null,
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/668.gif",
+                "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/female/668.gif",
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/668.gif",
                 "back_shiny_female": null,
-                "front_default": null,
-                "front_female": null,
-                "front_shiny": null,
-                "front_shiny_female": null
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/668.gif",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/female/668.gif",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/668.gif",
+                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/female/668.gif"
             }
         },
         "versions": {
             "scarlet_violet": {
-                "front_default": null,
-                "front_female": null
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/668.png",
+                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/female/668.png"
             }
-        }
+        },
+        "back_default": null,
+        "back_shiny": null
     },
     "base_experience": 177,
     "base_happiness": 70,
