@@ -1,6 +1,7 @@
 from logging import getLogger
 from typing import Dict, List
 
+from ..utils.exceptions import ParserExecutionError
 from .base import BaseParser
 
 logger = getLogger(__name__)
@@ -30,6 +31,7 @@ class GenerationParser(BaseParser):
             A list of resource reference dictionaries with 'name' and 'url' keys
         """
         all_references: List[Dict[str, str]] = []
+        errors: List[str] = []
 
         if self.target_gen:
             logger.info(
@@ -39,7 +41,7 @@ class GenerationParser(BaseParser):
             for generation_num in range(1, self.target_gen + 1):
                 try:
                     generation_url = (
-                        f"{self.config['api_base_url']}generation/{generation_num}"
+                        f"{self.config.api_base_url}generation/{generation_num}"
                     )
                     generation_data = self.api_client.get(generation_url)
 
@@ -54,5 +56,12 @@ class GenerationParser(BaseParser):
                     logger.error(
                         f"Failed to fetch {self.entity_type} data for Generation {generation_num}: {e}"
                     )
+                    errors.append(f"Generation {generation_num}: {e}")
+
+        if errors:
+            raise ParserExecutionError(
+                f"Could not collect complete {self.entity_type} references: "
+                + "; ".join(errors)
+            )
 
         return all_references

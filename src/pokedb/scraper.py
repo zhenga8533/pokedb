@@ -8,17 +8,23 @@ from typing import Any, Dict, List, Optional
 import requests
 from bs4 import BeautifulSoup, Tag
 
-from .utils import get_cache_path, load_config, parse_gen_range
+from .config import Config, load_config
+from .utils import (
+    ScraperError,
+    get_cache_path,
+    parse_gen_range,
+    write_json_atomic,
+)
 
 logger = logging.getLogger(__name__)
 
-# Constants
-MAX_RETRIES = 3
 RETRY_DELAY_SECONDS = 5
-REQUEST_TIMEOUT_SECONDS = 10
+SCRAPER_CACHE_VERSION = 2
 
 
-def scrape_pokemon_changes(pokemon_name: str) -> Dict[str, Any]:
+def scrape_pokemon_changes(
+    pokemon_name: str, config: Optional[Config] = None
+) -> Dict[str, Any]:
     """
     Scrapes Pokémon DB for all historical changes for a specific Pokémon.
 
@@ -37,9 +43,11 @@ def scrape_pokemon_changes(pokemon_name: str) -> Dict[str, Any]:
         >>> scrape_pokemon_changes("pikachu")
         {'metadata': {'name': 'pikachu', 'source': '...'}, 'changes': [...]}
     """
-    config = load_config()
-    cache_dir = config.get("scraper_cache_dir")
-    cache_expires = config.get("cache_expires")
+    active_config = config if config is not None else load_config()
+    cache_dir = active_config.scraper_cache_dir
+    cache_expires = active_config.cache_expires
+    max_retries = active_config.max_retries
+    request_timeout = active_config.timeout
 
     if cache_dir:
         Path(cache_dir).mkdir(parents=True, exist_ok=True)
@@ -48,42 +56,54 @@ def scrape_pokemon_changes(pokemon_name: str) -> Dict[str, Any]:
     cache_file_path: Optional[Path] = None
 
     # Check cache
-    if cache_dir and cache_expires is not None:
+    if cache_dir:
         cache_file_path = get_cache_path(url, cache_dir)
         if cache_file_path.exists():
             file_mod_time = cache_file_path.stat().st_mtime
-            if time.time() - file_mod_time < cache_expires:
+            if cache_expires is None or time.time() - file_mod_time < cache_expires:
                 logger.debug(f"Cache hit for {pokemon_name}")
-                with open(cache_file_path, "r", encoding="utf-8") as f:
-                    return json.load(f)
+                try:
+                    with cache_file_path.open("r", encoding="utf-8") as cache_file:
+                        cached_data = json.load(cache_file)
+                    if isinstance(cached_data, dict) and (
+                        cached_data.get("metadata", {}).get("schema_version")
+                        == SCRAPER_CACHE_VERSION
+                    ):
+                        return cached_data
+                    logger.info("Refreshing outdated scraper cache for %s", pokemon_name)
+                except (OSError, json.JSONDecodeError) as error:
+                    logger.warning(
+                        f"Ignoring unreadable cache entry {cache_file_path}: {error}"
+                    )
 
     # Fetch HTML from PokemonDB
     all_changes: List[Dict[str, Any]] = []
+    unsupported_changes: List[str] = []
     soup: Optional[BeautifulSoup] = None
 
-    for attempt in range(MAX_RETRIES):
+    for attempt in range(max_retries + 1):
         try:
             logger.debug(
-                f"Scraping {pokemon_name} (attempt {attempt + 1}/{MAX_RETRIES})"
+                f"Scraping {pokemon_name} (attempt {attempt + 1}/{max_retries + 1})"
             )
-            response = requests.get(url, timeout=REQUEST_TIMEOUT_SECONDS)
+            response = requests.get(url, timeout=request_timeout)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, "lxml")
             break
         except requests.RequestException as e:
-            if attempt < MAX_RETRIES - 1:
+            if attempt < max_retries:
                 logger.warning(
                     f"Scraping attempt {attempt + 1} failed for {pokemon_name}, retrying..."
                 )
                 time.sleep(RETRY_DELAY_SECONDS)
             else:
                 logger.error(
-                    f"Failed to scrape {url} after {MAX_RETRIES} attempts: {e}"
+                    f"Failed to scrape {url} after {max_retries + 1} attempts: {e}"
                 )
-                return {}
+                raise ScraperError(f"Failed to scrape {url}") from e
 
     if not soup:
-        return {}
+        raise ScraperError(f"No HTML was returned for {url}")
 
     # Parse the changes section
     try:
@@ -92,48 +112,44 @@ def scrape_pokemon_changes(pokemon_name: str) -> Dict[str, Any]:
                 h
                 for h in soup.find_all("h2")
                 if isinstance(h, Tag)
-                and re.search(f"{pokemon_name.capitalize()} changes", h.get_text())
+                and h.get_text(" ", strip=True).lower().endswith(" changes")
             ),
             None,
         )
         if not changes_header:
             logger.debug(f"No changes section found for {pokemon_name}")
             empty_result = {
-                "metadata": {"name": pokemon_name, "source": url},
+                "metadata": {
+                    "name": pokemon_name,
+                    "source": url,
+                    "schema_version": SCRAPER_CACHE_VERSION,
+                },
                 "changes": [],
+                "unsupported_changes": [],
             }
             if cache_file_path:
-                with open(cache_file_path, "w", encoding="utf-8") as f:
-                    json.dump(empty_result, f, indent=4, ensure_ascii=False)
+                write_json_atomic(cache_file_path, empty_result)
             return empty_result
 
         changes_list = changes_header.find_next_sibling("ul")
         if not isinstance(changes_list, Tag):
-            empty_result = {
-                "metadata": {"name": pokemon_name, "source": url},
-                "changes": [],
-            }
-            if cache_file_path:
-                with open(cache_file_path, "w", encoding="utf-8") as f:
-                    json.dump(empty_result, f, indent=4, ensure_ascii=False)
-            return empty_result
+            raise ScraperError(f"Changes section has an unexpected format at {url}")
 
         rules = [
             ("does not have", _parse_ability_removal),  # Check negative ability changes first
-            ("has the", _parse_second_ability),  # Check for second ability changes
             ("ability", _parse_ability),
             ("type", _parse_types),
             ("base experience yield", _parse_simple_stat("base_experience")),
-            ("base Friendship value", _parse_simple_stat("base_happiness")),
+            ("base friendship value", _parse_simple_stat("base_happiness")),
             ("catch rate", _parse_simple_stat("capture_rate")),
-            ("EVs", _parse_ev_yield),
-            ("base Special stat", _parse_special_stat),
-            ("base HP", _parse_base_stat("hp")),
-            ("base Attack", _parse_base_stat("attack")),
-            ("base Defense", _parse_base_stat("defense")),
-            ("base Special Attack", _parse_base_stat("special-attack")),
-            ("base Special Defense", _parse_base_stat("special-defense")),
-            ("base Speed", _parse_base_stat("speed")),
+            ("evs", _parse_ev_yield),
+            ("base special stat", _parse_special_stat),
+            ("base hp", _parse_base_stat("hp")),
+            ("base attack", _parse_base_stat("attack")),
+            ("base defense", _parse_base_stat("defense")),
+            ("base special attack", _parse_base_stat("special-attack")),
+            ("base special defense", _parse_base_stat("special-defense")),
+            ("base speed", _parse_base_stat("speed")),
         ]
 
         for li in changes_list.find_all("li"):
@@ -143,38 +159,63 @@ def scrape_pokemon_changes(pokemon_name: str) -> Dict[str, Any]:
             text = li.get_text()
             gen_abbr = li.find("abbr")
             if not gen_abbr:
+                unsupported_changes.append(" ".join(text.split()))
                 continue
 
             generations = parse_gen_range(gen_abbr.get_text())
             if not generations:
+                unsupported_changes.append(" ".join(text.split()))
                 continue
 
+            parsed = False
             for pattern, handler in rules:
-                if pattern in text:
+                if pattern in text.lower():
                     change = handler(li, text)
                     if change and isinstance(change, dict):
                         all_changes.append(
                             {"generations": generations, "change": change}
                         )
+                        parsed = True
                         break
+            if not parsed:
+                unsupported_changes.append(" ".join(text.split()))
     except Exception as e:
-        logger.warning(f"Failed to parse scraped data for {pokemon_name}: {e}")
+        if isinstance(e, ScraperError):
+            raise
+        raise ScraperError(f"Failed to parse scraped data for {pokemon_name}") from e
 
     # Build and cache the result
-    output = {"metadata": {"name": pokemon_name, "source": url}, "changes": all_changes}
+    output = {
+        "metadata": {
+            "name": pokemon_name,
+            "source": url,
+            "schema_version": SCRAPER_CACHE_VERSION,
+        },
+        "changes": all_changes,
+        "unsupported_changes": unsupported_changes,
+    }
     if cache_file_path:
-        with open(cache_file_path, "w", encoding="utf-8") as f:
-            json.dump(output, f, indent=4, ensure_ascii=False)
+        write_json_atomic(cache_file_path, output)
 
     logger.info(f"Scraped {len(all_changes)} changes for {pokemon_name}")
+    if unsupported_changes:
+        logger.warning(
+            "Could not translate %s Pokémon DB change(s) for %s",
+            len(unsupported_changes),
+            pokemon_name,
+        )
     return output
 
 
-def _parse_ability(li: Tag, text: str) -> Optional[Dict[str, str]]:
+def _parse_ability(li: Tag, text: str) -> Optional[Dict[str, Any]]:
     """Extracts ability changes from a list item."""
     ability_tag = li.find("a", href=re.compile("/ability/"))
     if ability_tag:
-        return {"ability": ability_tag.get_text(strip=True).lower()}
+        result = {"ability": _linked_resource_name(ability_tag)}
+        form_name = _extract_form_name(text)
+        if form_name:
+            result["form"] = form_name
+        return result
     return None
 
 
@@ -183,21 +224,17 @@ def _parse_ability_removal(li: Tag, text: str) -> Optional[Dict[str, Any]]:
     if "does not have" in text.lower():
         ability_tags = li.find_all("a", href=re.compile("/ability/"))
         if ability_tags:
-            abilities_to_remove = [tag.get_text(strip=True).lower() for tag in ability_tags]
+            abilities_to_remove = [
+                _linked_resource_name(tag) for tag in ability_tags
+            ]
             if len(abilities_to_remove) == 1:
-                return {"remove_ability": abilities_to_remove[0]}
+                result = {"remove_ability": abilities_to_remove[0]}
             else:
-                return {"remove_abilities": abilities_to_remove}
-    return None
-
-
-def _parse_second_ability(li: Tag, text: str) -> Optional[Dict[str, str]]:
-    """Extracts second ability changes (has the X ability) from a list item."""
-    # Match pattern like "has the X ability" (not "does not have")
-    if "has the" in text.lower() and "does not have" not in text.lower():
-        ability_tag = li.find("a", href=re.compile("/ability/"))
-        if ability_tag:
-            return {"ability_slot_2": ability_tag.get_text(strip=True).lower()}
+                result = {"remove_abilities": abilities_to_remove}
+            form_name = _extract_form_name(text)
+            if form_name:
+                result["form"] = form_name
+            return result
     return None
 
 
@@ -208,9 +245,8 @@ def _parse_types(li: Tag, text: str) -> Optional[Dict[str, Any]]:
         result: Dict[str, Any] = {"types": types}
 
         # Check for form information in parentheses
-        form_match = re.search(r'\(([^)]+)\)', text)
-        if form_match:
-            form_name = form_match.group(1).strip()
+        form_name = _extract_form_name(text)
+        if form_name:
             result["form"] = form_name
 
         return result
@@ -228,10 +264,14 @@ def _parse_simple_stat(stat_name: str):
         A function that parses the stat value from HTML
     """
 
-    def handler(li: Tag, text: str) -> Optional[Dict[str, int]]:
+    def handler(li: Tag, text: str) -> Optional[Dict[str, Any]]:
         match = re.search(r"of (\d+)", text)
         if match:
-            return {stat_name: int(match.group(1))}
+            result: Dict[str, Any] = {stat_name: int(match.group(1))}
+            form_name = _extract_form_name(text)
+            if form_name:
+                result["form"] = form_name
+            return result
         return None
 
     return handler
@@ -248,10 +288,16 @@ def _parse_base_stat(stat_name: str):
         A function that parses the base stat value from HTML
     """
 
-    def handler(li: Tag, text: str) -> Optional[Dict[str, Dict[str, int]]]:
+    def handler(li: Tag, text: str) -> Optional[Dict[str, Any]]:
         match = re.search(r"of (\d+)", text)
         if match:
-            return {"stats": {stat_name: int(match.group(1))}}
+            result: Dict[str, Any] = {
+                "stats": {stat_name: int(match.group(1))}
+            }
+            form_name = _extract_form_name(text)
+            if form_name:
+                result["form"] = form_name
+            return result
         return None
 
     return handler
@@ -259,7 +305,7 @@ def _parse_base_stat(stat_name: str):
 
 def _parse_special_stat(li: Tag, text: str) -> Optional[Dict[str, Any]]:
     """
-    Parses Gen 1 Special stat changes (affects both Special Attack and Special Defense).
+    Parses the single Special stat used by Generation 1.
 
     In Generation 1, there was only a "Special" stat which later split into
     Special Attack and Special Defense in Generation 2.
@@ -267,11 +313,15 @@ def _parse_special_stat(li: Tag, text: str) -> Optional[Dict[str, Any]]:
     match = re.search(r"base Special stat of (\d+)", text)
     if match:
         value = int(match.group(1))
-        return {"stats": {"special-attack": value, "special-defense": value}}
+        result: Dict[str, Any] = {"stats": {"special": value}}
+        form_name = _extract_form_name(text)
+        if form_name:
+            result["form"] = form_name
+        return result
     return None
 
 
-def _parse_ev_yield(li: Tag, text: str) -> Optional[Dict[str, List[Dict[str, Any]]]]:
+def _parse_ev_yield(li: Tag, text: str) -> Optional[Dict[str, Any]]:
     """
     Parses EV (Effort Value) yield changes from a list item.
 
@@ -293,5 +343,23 @@ def _parse_ev_yield(li: Tag, text: str) -> Optional[Dict[str, List[Dict[str, Any
         }
         stat = stat_name_map.get(stat_name_raw)
         if stat:
-            return {"ev_yield": [{"effort": effort, "stat": stat}]}
+            result: Dict[str, Any] = {
+                "ev_yield": [{"effort": effort, "stat": stat}]
+            }
+            form_name = _extract_form_name(text)
+            if form_name:
+                result["form"] = form_name
+            return result
     return None
+
+
+def _linked_resource_name(tag: Tag) -> str:
+    """Returns the canonical slug from a Pokémon DB resource link."""
+    href = str(tag.get("href", ""))
+    return href.rstrip("/").rsplit("/", 1)[-1]
+
+
+def _extract_form_name(text: str) -> Optional[str]:
+    """Extracts a form qualifier such as ``(Heat Rotom)`` from change text."""
+    form_match = re.search(r"\(([^)]+)\)", text)
+    return form_match.group(1).strip() if form_match else None

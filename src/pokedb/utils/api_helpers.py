@@ -3,17 +3,18 @@
 from __future__ import annotations
 
 import logging
-from typing import TYPE_CHECKING, Any, Dict
+from typing import TYPE_CHECKING, Dict
 
 if TYPE_CHECKING:
     from ..api_client import ApiClient
+    from ..config import Config
 
 from .exceptions import GenerationNotFoundError, PokedexMappingError
 
 logger = logging.getLogger(__name__)
 
 
-def get_latest_generation(api_client: ApiClient, config: Dict[str, Any]) -> int:
+def get_latest_generation(api_client: ApiClient, config: Config) -> int:
     """
     Finds the latest Pokémon generation number by querying the API.
 
@@ -29,7 +30,7 @@ def get_latest_generation(api_client: ApiClient, config: Dict[str, Any]) -> int:
     """
     logger.info("Determining the latest Pokémon generation...")
     try:
-        data = api_client.get(f"{config['api_base_url']}generation/")
+        data = api_client.get(f"{config.api_base_url}generation/")
         generations = data.get("results", [])
 
         if not generations:
@@ -48,7 +49,7 @@ def get_latest_generation(api_client: ApiClient, config: Dict[str, Any]) -> int:
 
 
 def get_generation_dex_map(
-    api_client: ApiClient, config: Dict[str, Any]
+    api_client: ApiClient, config: Config
 ) -> Dict[int, str]:
     """
     Fetches all Pokédexes and creates a map of generation number to regional dex name.
@@ -67,7 +68,7 @@ def get_generation_dex_map(
     dex_map: Dict[int, str] = {}
 
     try:
-        pokedex_list = api_client.get(f"{config['api_base_url']}pokedex?limit=100").get(
+        pokedex_list = api_client.get(f"{config.api_base_url}pokedex?limit=100").get(
             "results", []
         )
 

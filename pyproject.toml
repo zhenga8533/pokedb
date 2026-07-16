@@ -23,10 +23,15 @@ classifiers = [
 ]
 
 dependencies = [
-    "requests",
-    "tqdm",
-    "beautifulsoup4",
-    "lxml",
+    "requests>=2.32",
+    "tqdm>=4.66",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
 ]
 
 [project.urls]
@@ -40,3 +45,9 @@ pokedb = "pokedb.__main__:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+pokedb = ["default_config.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

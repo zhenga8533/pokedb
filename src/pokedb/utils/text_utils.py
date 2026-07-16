@@ -158,25 +158,6 @@ def get_all_english_entries_by_version(
     )
 
 
-def build_version_group_to_generation_map(
-    generation_version_groups: Dict[int, List[str]],
-) -> Dict[str, int]:
-    """
-    Creates a mapping from version group names to their generation numbers.
-
-    Args:
-        generation_version_groups: Dict mapping generation numbers to lists of version groups
-
-    Returns:
-        Dict mapping version group names to generation numbers
-    """
-    return {
-        version_group_name: gen_num
-        for gen_num, version_group_list in generation_version_groups.items()
-        for version_group_name in version_group_list
-    }
-
-
 def get_english_entry(
     entries: List[Dict[str, Any]],
     key_name: str,
@@ -235,53 +216,3 @@ def get_english_entry(
             return " ".join(entry[key_name].split())
 
     return None
-
-
-def kebab_to_snake(text: str) -> str:
-    """
-    Converts a kebab-case string to snake_case.
-
-    Args:
-        text: A string in kebab-case format (e.g., 'some-variable-name')
-
-    Returns:
-        The same string in snake_case format (e.g., 'some_variable_name')
-
-    Examples:
-        >>> kebab_to_snake('base-experience')
-        'base_experience'
-        >>> kebab_to_snake('special-attack')
-        'special_attack'
-    """
-    return text.replace("-", "_")
-
-
-def transform_keys_to_snake_case(data: Any) -> Any:
-    """
-    Recursively transforms all dictionary keys from kebab-case to snake_case.
-
-    This function traverses nested data structures (dicts and lists) and converts
-    all dictionary keys from kebab-case to snake_case for Python naming conventions.
-
-    Args:
-        data: Can be a dict, list, or any other type. Dicts and lists are traversed
-              recursively, other types are returned unchanged.
-
-    Returns:
-        The transformed data structure with all dict keys converted to snake_case
-
-    Examples:
-        >>> transform_keys_to_snake_case({'some-key': 'value'})
-        {'some_key': 'value'}
-        >>> transform_keys_to_snake_case([{'nested-key': 'value'}])
-        [{'nested_key': 'value'}]
-    """
-    if isinstance(data, dict):
-        return {
-            kebab_to_snake(key): transform_keys_to_snake_case(value)
-            for key, value in data.items()
-        }
-    elif isinstance(data, list):
-        return [transform_keys_to_snake_case(item) for item in data]
-    else:
-        return data

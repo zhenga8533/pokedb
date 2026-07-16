@@ -2,8 +2,8 @@ from logging import getLogger
 from typing import Any, Dict, List, Optional, Union
 
 from ..api_client import ApiClient
+from ..config import Config
 from ..utils import (
-    build_version_group_to_generation_map,
     get_all_english_entries_for_gen_by_game,
     get_english_entry,
     write_json_file,
@@ -28,7 +28,7 @@ class AbilityParser(GenerationParser):
 
     def __init__(
         self,
-        config: Dict[str, Any],
+        config: Config,
         api_client: ApiClient,
         generation_version_groups: Dict[int, List[str]],
         target_gen: int,
@@ -62,6 +62,7 @@ class AbilityParser(GenerationParser):
         """
         try:
             data = self.api_client.get(resource_ref["url"])
+            effect, short_effect = self._get_effects_for_target_generation(data)
 
             # Build the basic ability data structure
             cleaned_data = {
@@ -70,10 +71,8 @@ class AbilityParser(GenerationParser):
                 "source_url": resource_ref["url"],
                 "is_main_series": data.get("is_main_series"),
                 "generation": data.get("generation", {}).get("name"),
-                "effect": get_english_entry(data.get("effect_entries", []), "effect"),
-                "short_effect": get_english_entry(
-                    data.get("effect_entries", []), "short_effect"
-                ),
+                "effect": effect,
+                "short_effect": short_effect,
                 "flavor_text": get_all_english_entries_for_gen_by_game(
                     data.get("flavor_text_entries", []),
                     "flavor_text",
@@ -82,76 +81,76 @@ class AbilityParser(GenerationParser):
                 ),
             }
 
-            # Process generation-specific effect changes
-            effect_changes = data.get("effect_changes", [])
-            if self.target_gen and self.generation_version_groups and effect_changes:
-                version_group_to_gen_map = build_version_group_to_generation_map(
-                    self.generation_version_groups
-                )
-                target_gen_version_groups = self.generation_version_groups.get(
-                    self.target_gen, []
-                )
-                effect_map = {}
-
-                # short_effect is not tracked in effect_changes, so use the latest version
-                latest_short_effect = get_english_entry(
-                    data.get("effect_entries", []), "short_effect"
-                )
-
-                # Build effect map for each version group in the target generation
-                for version_group_name in target_gen_version_groups:
-                    current_effect = get_english_entry(
-                        data.get("effect_entries", []), "effect"
-                    )
-
-                    # Get all effect changes up to and including the target generation, sorted chronologically
-                    sorted_effect_changes = sorted(
-                        [
-                            change
-                            for change in effect_changes
-                            if version_group_to_gen_map.get(
-                                change["version_group"]["name"], 999
-                            )
-                            <= self.target_gen
-                        ],
-                        key=lambda x: version_group_to_gen_map.get(
-                            x["version_group"]["name"], 999
-                        ),
-                    )
-
-                    # Apply effect changes up to this version group
-                    for change in sorted_effect_changes:
-                        change_gen = version_group_to_gen_map.get(
-                            change["version_group"]["name"], 999
-                        )
-                        current_gen = version_group_to_gen_map.get(
-                            version_group_name, 0
-                        )
-
-                        if change_gen > current_gen:
-                            break
-
-                        effect = get_english_entry(
-                            change.get("effect_entries", []), "effect"
-                        )
-                        if effect:
-                            current_effect = effect
-
-                    effect_map[version_group_name] = current_effect
-
-                cleaned_data["effect"] = effect_map
-                cleaned_data["short_effect"] = latest_short_effect
-
             # Write to file
-            output_path = self.config[self.output_dir_key]
+            output_path = str(self.config.output_path(self.output_dir_key))
             write_json_file(output_path, cleaned_data["name"], cleaned_data)
 
             return {"name": cleaned_data["name"], "id": cleaned_data["id"]}
 
         except (KeyError, ValueError) as e:
-            return f"Parsing failed for {resource_ref.get('name', 'unknown')}: {type(e).__name__} - {e}"
-        except Exception as e:
-            logger.error(
-                f"Unexpected error processing {resource_ref.get('name', 'unknown')}: {e}"
+            resource_name = resource_ref.get("name", "unknown")
+            return (
+                f"Parsing failed for {resource_name}: {type(e).__name__} - {e}"
             )
-            return f"Parsing failed for {resource_ref.get('name', 'unknown')}: {e}"
+        except Exception as e:
+            resource_name = resource_ref.get("name", "unknown")
+            logger.error(
+                f"Unexpected error processing {resource_name}: {e}"
+            )
+            return f"Parsing failed for {resource_name}: {e}"
+
+    def _get_effects_for_target_generation(
+        self, data: Dict[str, Any]
+    ) -> tuple[Dict[str, Optional[str]], Dict[str, Optional[str]]]:
+        """Reconstructs effects using the nearest change after each target game."""
+        target_groups = self.generation_version_groups.get(self.target_gen, [])
+        current_effect = get_english_entry(data.get("effect_entries", []), "effect")
+        current_short_effect = get_english_entry(
+            data.get("effect_entries", []), "short_effect"
+        )
+        effects = {group: current_effect for group in target_groups}
+        short_effects = {group: current_short_effect for group in target_groups}
+
+        group_order = {
+            group: (generation, position)
+            for generation, groups in self.generation_version_groups.items()
+            for position, group in enumerate(groups)
+        }
+        changes = sorted(
+            data.get("effect_changes", []),
+            key=lambda change: group_order.get(
+                change.get("version_group", {}).get("name"), (999, 999)
+            ),
+        )
+        for target_group in target_groups:
+            target_order = group_order.get(target_group, (0, 0))
+            effect_reconstructed = False
+            short_effect_reconstructed = False
+            for change in changes:
+                change_order = group_order.get(
+                    change.get("version_group", {}).get("name"), (999, 999)
+                )
+                if change_order <= target_order:
+                    continue
+                previous_effect = get_english_entry(
+                    change.get("effect_entries", []), "effect"
+                )
+                change_entries = change.get("effect_entries", [])
+                previous_short_effect = (
+                    get_english_entry(change_entries, "short_effect")
+                    if any("short_effect" in entry for entry in change_entries)
+                    else None
+                )
+                if previous_effect is not None and not effect_reconstructed:
+                    effects[target_group] = previous_effect
+                    effect_reconstructed = True
+                if (
+                    previous_short_effect is not None
+                    and not short_effect_reconstructed
+                ):
+                    short_effects[target_group] = previous_short_effect
+                    short_effect_reconstructed = True
+                if effect_reconstructed and short_effect_reconstructed:
+                    break
+
+        return effects, short_effects

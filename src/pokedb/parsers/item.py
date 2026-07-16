@@ -2,6 +2,7 @@ from logging import getLogger
 from typing import Any, Dict, List, Optional, Union
 
 from ..api_client import ApiClient
+from ..config import Config
 from ..utils import (
     DEFAULT_API_LIMIT,
     get_all_english_entries_for_gen_by_game,
@@ -29,7 +30,7 @@ class ItemParser(BaseParser):
 
     def __init__(
         self,
-        config: Dict[str, Any],
+        config: Config,
         api_client: ApiClient,
         generation_version_groups: Dict[int, List[str]],
         target_gen: int,
@@ -56,7 +57,7 @@ class ItemParser(BaseParser):
         Returns:
             A list of item reference dictionaries with 'name' and 'url' keys
         """
-        endpoint_url = f"{self.config['api_base_url']}{self.api_endpoint}?limit={DEFAULT_API_LIMIT}"
+        endpoint_url = f"{self.config.api_base_url}{self.api_endpoint}?limit={DEFAULT_API_LIMIT}"
         return self.api_client.get(endpoint_url).get("results", [])
 
     def process(
@@ -122,7 +123,7 @@ class ItemParser(BaseParser):
                 }
 
                 # Write to file
-                output_path = self.config[self.output_dir_key]
+                output_path = str(self.config.output_path(self.output_dir_key))
                 write_json_file(output_path, cleaned_data["name"], cleaned_data)
 
                 return {

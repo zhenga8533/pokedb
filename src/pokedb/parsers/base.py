@@ -7,6 +7,8 @@ from typing import Any, Dict, List, Optional, Union
 from tqdm import tqdm
 
 from ..api_client import ApiClient
+from ..config import Config
+from ..utils.exceptions import ParserExecutionError
 
 logger = getLogger(__name__)
 
@@ -36,7 +38,7 @@ class BaseParser(ABC):
 
     def __init__(
         self,
-        config: Dict[str, Any],
+        config: Config,
         api_client: ApiClient,
         generation_version_groups: Optional[Dict[int, List[str]]] = None,
         target_gen: Optional[int] = None,
@@ -71,7 +73,7 @@ class BaseParser(ABC):
         Returns:
             A list of dictionaries containing 'name' and 'url' keys for each resource
         """
-        pass
+        raise NotImplementedError
 
     @abstractmethod
     def process(
@@ -93,7 +95,7 @@ class BaseParser(ABC):
             - On error: A string describing the error
             - None to skip this resource
         """
-        pass
+        raise NotImplementedError
 
     def run(self) -> Union[List[Dict[str, Any]], Dict[str, List[Dict[str, Any]]]]:
         """
@@ -128,7 +130,7 @@ class BaseParser(ABC):
             category.value: [] for category in PokemonCategory
         }
 
-        with ThreadPoolExecutor(max_workers=self.config["max_workers"]) as executor:
+        with ThreadPoolExecutor(max_workers=self.config.max_workers) as executor:
             # Submit all processing tasks
             future_map = {
                 executor.submit(self.process, ref): ref for ref in all_references
@@ -140,7 +142,13 @@ class BaseParser(ABC):
                 total=len(all_references),
                 desc=f"Processing {self.entity_type}",
             ):
-                result = future.result()
+                resource_ref = future_map[future]
+                try:
+                    result = future.result()
+                except Exception as error:
+                    resource_name = resource_ref.get("name", "unknown")
+                    errors.append(f"{resource_name}: {error}")
+                    continue
 
                 # Handle Pokemon-specific results (dict with category keys)
                 if isinstance(result, dict) and any(
@@ -167,6 +175,9 @@ class BaseParser(ABC):
             logger.warning(f"\n{len(errors)} error(s) occurred during processing:")
             for error in errors:
                 logger.error(f"  - {error}")
+            raise ParserExecutionError(
+                f"{self.entity_type} parser failed for {len(errors)} resource(s)."
+            )
 
         # Return Pokemon-specific results if any were found
         if any(pokemon_summaries.values()):

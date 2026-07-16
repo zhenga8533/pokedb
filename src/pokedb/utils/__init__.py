@@ -1,21 +1,24 @@
-"""
-Utility functions and helpers for the PokemonDB parser.
+"""Utility functions and helpers for the PokemonDB parser.
 
 This package contains:
 - exceptions: Custom exception classes
 - constants: Constants used throughout the application
 - file_ops: File and cache operations
-- config: Configuration management
 - api_helpers: API interaction helpers
 - text_utils: Text parsing and transformation utilities
 """
 
+from typing import Any
+
 # Exceptions
 from .exceptions import (
     ConfigurationError,
+    DataValidationError,
     GenerationNotFoundError,
+    ParserExecutionError,
     PokedexMappingError,
     PokemonDBError,
+    ScraperError,
 )
 
 # Constants
@@ -27,24 +30,18 @@ from .constants import (
 )
 
 # File operations
-from .file_ops import get_cache_path, write_json_file
-
-# Configuration
-from .config import load_config
+from .file_ops import get_cache_path, write_json_atomic, write_json_file
 
 # API helpers
 from .api_helpers import get_generation_dex_map, get_latest_generation
 
 # Text utilities
 from .text_utils import (
-    build_version_group_to_generation_map,
     get_all_english_entries_by_version,
     get_all_english_entries_for_gen_by_game,
     get_english_entry,
     int_to_roman,
-    kebab_to_snake,
     parse_gen_range,
-    transform_keys_to_snake_case,
 )
 
 __all__ = [
@@ -53,6 +50,9 @@ __all__ = [
     "GenerationNotFoundError",
     "PokedexMappingError",
     "ConfigurationError",
+    "DataValidationError",
+    "ParserExecutionError",
+    "ScraperError",
     # Constants
     "MAX_ROMAN_NUMERAL",
     "DEFAULT_API_LIMIT",
@@ -61,7 +61,9 @@ __all__ = [
     # File operations
     "get_cache_path",
     "write_json_file",
-    # Configuration
+    "write_json_atomic",
+    # Backward-compatible configuration access
+    "Config",
     "load_config",
     # API helpers
     "get_latest_generation",
@@ -71,8 +73,14 @@ __all__ = [
     "int_to_roman",
     "get_all_english_entries_for_gen_by_game",
     "get_all_english_entries_by_version",
-    "build_version_group_to_generation_map",
     "get_english_entry",
-    "kebab_to_snake",
-    "transform_keys_to_snake_case",
 ]
+
+
+def __getattr__(name: str) -> Any:
+    """Loads the former utility-level configuration exports on demand."""
+    if name in {"Config", "load_config"}:
+        from ..config import Config, load_config
+
+        return {"Config": Config, "load_config": load_config}[name]
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

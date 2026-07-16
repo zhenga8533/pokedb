@@ -2,11 +2,35 @@
 
 import hashlib
 import json
+import os
+import tempfile
 from pathlib import Path
 from typing import Any, Dict
 
 
-def get_cache_path(url: str, cache_dir: str) -> Path:
+def write_json_atomic(file_path: Path, data: Any) -> None:
+    """Writes JSON through a temporary file and atomically replaces the target."""
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    temporary_path: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            "w",
+            encoding="utf-8",
+            dir=file_path.parent,
+            prefix=f".{file_path.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as temporary_file:
+            temporary_path = Path(temporary_file.name)
+            json.dump(data, temporary_file, indent=4, ensure_ascii=False)
+            temporary_file.flush()
+        os.replace(temporary_path, file_path)
+    finally:
+        if temporary_path is not None and temporary_path.exists():
+            temporary_path.unlink()
+
+
+def get_cache_path(url: str, cache_dir: str | Path) -> Path:
     """
     Generates a cache file path for a given URL using MD5 hashing.
 
@@ -27,9 +51,10 @@ def get_cache_path(url: str, cache_dir: str) -> Path:
     return Path(cache_dir) / f"{hashed_url}.json"
 
 
-def write_json_file(output_dir: str, filename: str, data: Dict[str, Any]) -> Path:
-    """
-    Writes data to a JSON file with proper formatting and snake_case key transformation.
+def write_json_file(
+    output_dir: str | Path, filename: str, data: Dict[str, Any]
+) -> Path:
+    """Writes one parsed resource without rewriting dynamic identifier keys.
 
     Args:
         output_dir: The directory where the file should be written
@@ -39,13 +64,8 @@ def write_json_file(output_dir: str, filename: str, data: Dict[str, Any]) -> Pat
     Returns:
         Path to the written file
     """
-    from .text_utils import transform_keys_to_snake_case
-
     output_path = Path(output_dir)
-    output_path.mkdir(parents=True, exist_ok=True)
-
     file_path = output_path / f"{filename}.json"
-    with open(file_path, "w", encoding="utf-8") as f:
-        json.dump(transform_keys_to_snake_case(data), f, indent=4, ensure_ascii=False)
+    write_json_atomic(file_path, data)
 
     return file_path

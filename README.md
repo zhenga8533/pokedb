@@ -4,88 +4,151 @@
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A Python-based tool designed to create a comprehensive and generation-accurate Pokémon database. It intelligently combines data from the official [PokéAPI](https://pokeapi.co/) with historical changes scraped from [Pokémon DB](https://pokemondb.net/) to provide the most precise data for any Pokémon generation.
+A Python tool for creating a comprehensive, generation-accurate Pokémon database. It combines data from [PokéAPI](https://pokeapi.co/) with historical changes from [Pokémon DB](https://pokemondb.net/).
 
-The parsed generation data is automatically saved to the **`data` branch** weekly, ensuring that you always have access to the latest information.
+Parsed generation data is automatically saved to the `data` branch weekly.
 
 ## Architecture
 
-The project follows modern Python best practices with a clean, modular architecture:
-
-```
+```text
 pokedb/
-├── src/
-│   └── pokedb/
-│       ├── __init__.py
-│       ├── __main__.py      # Entry point
-│       ├── api_client.py    # API client with caching
-│       ├── scraper.py       # Historical data scraper
-│       ├── parsers/         # Resource parsers (ability, item, move, pokemon)
-│       └── utils/           # Organized utility modules
-│           ├── exceptions.py
-│           ├── constants.py
-│           ├── file_ops.py
-│           ├── config.py
-│           ├── api_helpers.py
-│           └── text_utils.py
-├── pyproject.toml           # Package configuration
-├── config.json              # Configuration file
-└── requirements.txt         # Dependencies
+|-- src/
+|   `-- pokedb/
+|       |-- __main__.py          # CLI and generation workflow
+|       |-- api_client.py        # API client and caching
+|       |-- config.py            # Typed configuration and validation
+|       |-- default_config.json  # Packaged default values
+|       |-- output.py            # Transactional output publishing
+|       |-- runner.py            # Parser orchestration and metadata
+|       |-- scraper.py           # Historical data scraper
+|       |-- validation.py        # Runtime output schema and integrity checks
+|       |-- parsers/             # Ability, item, move, and Pokémon parsers
+|       `-- utils/               # Focused shared helpers
+|-- tests/
+`-- pyproject.toml               # Package metadata and dependencies
 ```
-
-## Documentation
-
-For detailed information about the project's architecture, configuration, data structures, and API usage, please visit the **[Official Wiki](https://github.com/zhenga8533/pokedb/wiki)**.
 
 ## Core Features
 
-- **Dual-Source Data Aggregation**: Combines the structured, modern data from PokéAPI with historical data scraped from Pokémon DB.
-- **Historical Accuracy**: When parsing older generations, the tool automatically scrapes for and applies historical changes to a Pokémon's types, abilities, stats, EV yields, and more.
-- **Concurrent Processing**: Utilizes a thread pool to fetch and process data concurrently.
-- **Generation-Specific Data**: Allows you to parse data for a specific Pokémon generation.
-- **Automated Data Updates**: Includes a GitHub Actions workflow to automatically update the data on a weekly basis.
-- **Structured JSON Output**: Saves the parsed data in a well-structured and easy-to-navigate JSON format.
+- Combines structured PokéAPI data with historical Pokémon DB data.
+- Reconstructs generation-specific types, abilities, stats, EV yields, and more.
+- Processes resources concurrently.
+- Builds output in staging and publishes only complete successful runs.
+- Generates data for the latest, a specific, or every generation.
+- Writes structured JSON with a generation-level index.
 
 ## Quick Start
 
-1.  **Clone the repository:**
+```bash
+git clone https://github.com/zhenga8533/pokedb.git
+cd pokedb
+pip install -e .
 
-    ```bash
-    git clone https://github.com/zhenga8533/pokedb.git
-    cd pokedb
-    ```
+# Parse every resource for the latest generation
+python -m pokedb --all
 
-2.  **Install the package:**
+# Parse selected resources
+python -m pokedb ability move item pokemon
 
-    ```bash
-    # Install in editable mode with dependencies
-    pip install -e .
-    ```
+# Parse a historical generation
+python -m pokedb --all --gen 3
 
-    Alternatively, you can install just the dependencies:
+# Parse without persistent caches
+python -m pokedb --all --no-cache
+```
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+## Configuration
 
-3.  **Run the collector:**
+PokéDB includes validated defaults and does not require a configuration file. Settings are selected in this order:
 
-    ```bash
-    # For the latest generation (all parsers)
-    python -m pokedb --all
+1. `--config path/to/config.json`
+2. The `POKEDB_CONFIG` environment variable
+3. Packaged defaults in `src/pokedb/default_config.json`
 
-    # For specific parsers only
-    python -m pokedb ability move item pokemon
+Custom files are partial overrides, so they only need values that differ from the defaults:
 
-    # For a specific historical generation (e.g., Gen 3)
-    python -m pokedb --all --gen 3
+```json
+{
+  "max_workers": 4,
+  "output_root": "./generated"
+}
+```
 
-    # Disable caching for a fresh parse
-    python -m pokedb --all --no-cache
-    ```
+Relative paths in a custom file are resolved relative to that file. Without a custom file, default paths are resolved relative to the current working directory.
 
-    For more detailed instructions, see the [**Getting Started**](https://github.com/zhenga8533/pokedb/wiki/Getting-Started) page on the wiki.
+| Setting | Default | Description |
+| --- | --- | --- |
+| `api_base_url` | `https://pokeapi.co/api/v2/` | PokéAPI base URL; must be HTTP(S) and end in `/`. |
+| `timeout` | `15` | Request timeout in seconds. |
+| `max_retries` | `3` | Maximum HTTP retry count. |
+| `max_workers` | `10` | Parser worker-thread count. |
+| `parser_cache_dir` | `./.cache/parser` | API cache directory, or `null` to disable it. |
+| `scraper_cache_dir` | `./.cache/scraper` | Scraper cache directory, or `null` to disable it. |
+| `cache_expires` | `3600` | Cache lifetime in seconds, or `null` to keep entries indefinitely. |
+| `output_root` | `./.output` | Root containing generated `gen1`, `gen2`, and other generation directories. |
+
+`--no-cache` disables both caches for the current run without changing the configuration file.
+
+Older complete configurations containing every `output_dir_*` setting remain supported and are converted to `output_root` when loaded. New configurations should use `output_root`.
+
+Python callers should import `Config` and `load_config` from `pokedb` or `pokedb.config`. The previous `pokedb.utils.config` import path remains available for compatibility.
+
+## Documentation
+
+See the [project wiki](https://github.com/zhenga8533/pokedb/wiki) for data structures and API usage.
+
+## Data contract and validation
+
+Each generation is written below `output_root/genN`. Its `index.json` contains
+generation metadata, resource summaries, and counts; individual resource files live
+in the corresponding `ability`, `item`, `move`, or `pokemon` subdirectory.
+
+Generated data is validated before the staging tree is published. Validation checks:
+
+- index counts, unique names, and exact agreement between summaries and files;
+- required scalar and collection types for each resource;
+- version-group maps for generation-specific ability and move fields;
+- Pokémon stat names and ranges, type counts, ability and EV entries, learnsets,
+  and references to generated abilities when ability data is present.
+
+Identifiers originating in PokéAPI retain their canonical kebab-case spelling, such
+as `scarlet-violet` and `special-attack`. Structural field names remain snake_case.
+Ability `effect` and `short_effect` are always objects keyed by every version group
+in the generated generation, with string or `null` values. This keeps their types
+stable even when an ability has no historical changes.
+
+Evolution conditions are reconstructed for the target generation instead of copying
+every historical condition from PokéAPI. Each condition includes
+`introduced_in_version_group` and the target `version_groups` for which it was
+selected. This means, for example, Gen 9 Glaceon uses the Ice Stone condition rather
+than retaining the obsolete Ice Rock locations from Generations 4–7.
+
+For historical Pokémon data, structured PokéAPI `past_types`, `past_abilities`, and
+`past_stats` are applied first. Pokémon DB's changes section supplements fields that
+PokéAPI does not track. Generation 1 uses its original single `special` stat, and
+abilities and modern EV yields are empty before Generation 3.
+
+Pokémon DB occasionally describes a change for one game rather than an entire
+generation (for example, Pikachu's friendship in Pokémon Yellow). The current output
+model does not flatten such a game-specific exception into a generation-wide scalar.
+The scraper records these lines as `unsupported_changes` in its cache and emits a
+warning instead of silently mistranslating them.
+
+Outputs generated before this data-contract validation was introduced may contain
+underscore-normalized identifier keys or stale form-specific fields. Regenerate them
+with `python -m pokedb --all --gen <generation> --force` rather than mixing old and
+new resource files in a partial run.
+
+Python callers can validate an existing generation explicitly:
+
+```python
+from pathlib import Path
+
+from pokedb import validate_generation_output
+
+validate_generation_output(Path(".output/gen9"))
+```
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE).

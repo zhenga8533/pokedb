@@ -1,367 +1,272 @@
-"""
-PokéDB Main Entry Point
-
-This script orchestrates the parsing process for Pokémon data from PokéAPI
-and Pokémon DB, supporting generation-specific data extraction and historical
-accuracy through web scraping.
-"""
+"""Command-line entry point for PokéDB data collection."""
 
 import argparse
 import json
 import logging
 import shutil
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Set, Tuple, Type
+from typing import Any, Dict, Optional, Union
 
-from pokedb.api_client import ApiClient
-from pokedb.parsers import (
-    AbilityParser,
-    BaseParser,
-    ItemParser,
-    MoveParser,
-    PokemonParser,
+from .api_client import ApiClient
+from .config import Config, load_config
+from .output import (
+    PARSER_OUTPUT_KEYS,
+    PARSER_SUMMARY_KEYS,
+    build_staging_config,
+    publish_staged_output,
+    write_index_file,
 )
-from pokedb.scraper import scrape_pokemon_changes
-from pokedb.utils import (
+from .runner import gather_initial_data, run_parsers
+from .validation import validate_generation_output
+from .utils import (
     ConfigurationError,
     GenerationNotFoundError,
-    PokedexMappingError,
-    get_generation_dex_map,
+    PokemonDBError,
     get_latest_generation,
-    load_config,
 )
 
 logger = logging.getLogger(__name__)
 
 
-def parse_arguments() -> argparse.Namespace:
-    """
-    Parses command-line arguments for the PokéDB parser.
+def _parse_generation(value: str) -> Union[int, str]:
+    """Parses a positive generation number or the special value 'all'."""
+    if value.lower() == "all":
+        return "all"
+    try:
+        generation = int(value)
+    except ValueError as error:
+        raise argparse.ArgumentTypeError(
+            "generation must be a positive integer or 'all'"
+        ) from error
+    if generation < 1:
+        raise argparse.ArgumentTypeError("generation must be at least 1")
+    return generation
 
-    Returns:
-        Parsed command-line arguments
-    """
+
+def parse_arguments() -> argparse.Namespace:
+    """Parses and validates command-line arguments."""
     parser = argparse.ArgumentParser(
-        description="PokéDB - Parse Pokémon data from PokéAPI with historical accuracy",
+        description="PokéDB - Parse Pokémon data with historical accuracy",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Parse all data for the latest generation
   python -m pokedb --all
-
-  # Parse specific resources for the latest generation
   python -m pokedb ability move item
-
-  # Parse all data for a specific historical generation
   python -m pokedb --all --gen 3
-
-  # Parse all data for all generations
   python -m pokedb --all --gen all
-
-  # Disable caching for a fresh parse
   python -m pokedb --all --no-cache
-
-  # Skip confirmation prompts (useful for CI/CD)
   python -m pokedb --all --force
         """,
     )
     parser.add_argument(
         "parsers",
         nargs="*",
-        help="The name(s) of the parser to run (ability, item, move, pokemon).",
+        choices=tuple(PARSER_OUTPUT_KEYS),
+        help="Parser(s) to run: ability, item, move, or pokemon.",
     )
-    parser.add_argument("--all", action="store_true", help="Run all available parsers.")
+    parser.add_argument("--all", action="store_true", help="Run every parser.")
     parser.add_argument(
         "--gen",
-        help="Parse data for a specific generation (e.g., 3 for Generation III) or 'all' for all generations.",
+        type=_parse_generation,
+        help="Generation number to parse, or 'all'.",
     )
     parser.add_argument(
         "--no-cache",
         action="store_true",
-        help="Disable caching for the run (slower but ensures fresh data).",
+        help="Disable caching for this run.",
     )
     parser.add_argument(
         "--force",
         action="store_true",
-        help="Skip confirmation prompts and overwrite existing directories.",
+        help="Replace existing output without confirmation.",
     )
-    return parser.parse_args()
+    parser.add_argument(
+        "--config",
+        type=Path,
+        help="Custom JSON configuration path (or set POKEDB_CONFIG).",
+    )
+    parser.add_argument(
+        "--verbose",
+        action="store_true",
+        help="Enable debug logging.",
+    )
+
+    args = parser.parse_args()
+    if not args.parsers and not args.all:
+        parser.error("specify at least one parser or use --all")
+    return args
 
 
-def gather_initial_data(
-    api_client: ApiClient, config: Dict[str, Any], target_gen: int
-) -> Tuple[Dict[int, List[str]], Dict[int, str], Set[str]]:
-    """
-    Gathers the initial data needed by the parsers.
-
-    This includes version groups per generation, version names, and Pokédex mappings.
-
-    Args:
-        api_client: The API client instance
-        config: Configuration dictionary
-        target_gen: The target generation number
-
-    Returns:
-        A tuple of (generation_version_groups, generation_dex_map, target_versions)
-
-    Raises:
-        GenerationNotFoundError: If generation data cannot be retrieved
-        PokedexMappingError: If Pokédex mapping fails
-    """
-    logger.info(f"Gathering all data up to Generation {target_gen}...")
-    generation_version_groups: Dict[int, List[str]] = {}
-    target_versions: Set[str] = set()
-
-    try:
-        gen_data = api_client.get(f"{config['api_base_url']}generation/")
-
-        for gen_ref in gen_data.get("results", []):
-            gen_num = int(gen_ref["url"].split("/")[-2])
-
-            if gen_num <= target_gen:
-                gen_details = api_client.get(gen_ref["url"])
-                version_groups = [
-                    vg["name"] for vg in gen_details.get("version_groups", [])
-                ]
-                generation_version_groups[gen_num] = version_groups
-
-                # Only collect versions from the target generation
-                if gen_num == target_gen:
-                    for version_group_name in version_groups:
-                        version_group_url = f"{config['api_base_url']}version-group/{version_group_name}"
-                        version_group_data = api_client.get(version_group_url)
-
-                        for version in version_group_data.get("versions", []):
-                            target_versions.add(version["name"])
-
-    except Exception as e:
-        raise GenerationNotFoundError(f"Could not fetch generation data: {e}")
-
-    generation_dex_map = get_generation_dex_map(api_client, config)
-    logger.info("Finished gathering data")
-    return generation_version_groups, generation_dex_map, target_versions
+def _requested_parser_names(args: argparse.Namespace) -> set[str]:
+    return set(PARSER_OUTPUT_KEYS if args.all else args.parsers)
 
 
-def run_parsers(
-    args: argparse.Namespace,
-    final_config: Dict[str, Any],
-    api_client: ApiClient,
-    generation_version_groups: Dict[int, List[str]],
-    target_gen: int,
-    generation_dex_map: Dict[int, str],
-    is_historical: bool,
-    target_versions: Set[str],
-) -> Dict[str, List[Dict[str, Any]]]:
-    """
-    Initializes and runs the requested parsers.
-
-    Args:
-        args: Command-line arguments
-        final_config: Configuration with formatted output directories
-        api_client: The API client instance
-        generation_version_groups: Mapping of generations to version groups
-        target_gen: The target generation number
-        generation_dex_map: Mapping of generations to regional dexes
-        is_historical: Whether to scrape historical changes
-        target_versions: Set of version names in the target generation
-
-    Returns:
-        A dictionary mapping parser names to their summary data lists
-    """
-    all_summaries: Dict[str, List[Dict[str, Any]]] = {}
-    parser_classes: Dict[str, Type[BaseParser]] = {
-        "ability": AbilityParser,
-        "move": MoveParser,
-        "item": ItemParser,
-        "pokemon": PokemonParser,
-    }
-
-    for parser_name, ParserClass in parser_classes.items():
-        if args.all or parser_name in args.parsers:
-            parser_kwargs = {
-                "config": final_config,
-                "api_client": api_client,
-                "generation_version_groups": generation_version_groups,
-                "target_gen": target_gen,
-                "generation_dex_map": generation_dex_map,
-            }
-
-            # Pokemon parser requires additional parameters
-            if parser_name == "pokemon":
-                parser_kwargs["is_historical"] = is_historical
-                parser_kwargs["target_versions"] = target_versions
-                # Inject scraper function for historical changes
-                if is_historical:
-                    parser_kwargs["scraper_func"] = scrape_pokemon_changes
-
-            parser_instance = ParserClass(**parser_kwargs)
-            summary_data = parser_instance.run()
-
-            if isinstance(summary_data, list):
-                all_summaries[parser_name] = summary_data
-            elif isinstance(summary_data, dict):
-                all_summaries.update(summary_data)
-
-            logger.info("-" * 20)
-
-    return all_summaries
+def _confirm_replacement(args: argparse.Namespace, target_generation: int) -> bool:
+    if args.force:
+        return True
+    response = input(
+        f"Output for Generation {target_generation} already exists. "
+        "Replace the requested data? (y/n): "
+    )
+    return response.lower() == "y"
 
 
-def write_index_file(
-    all_summaries: Dict[str, List[Dict[str, Any]]],
-    target_gen: int,
-    top_level_output_dir: str,
-    generation_version_groups: Dict[int, List[str]],
+def _load_existing_index(
+    staging_output_dir: Path, preserve_existing: bool
+) -> Optional[Dict[str, Any]]:
+    index_path = staging_output_dir / "index.json"
+    if not preserve_existing or not index_path.exists():
+        return None
+    with index_path.open("r", encoding="utf-8") as index_file:
+        return json.load(index_file)
+
+
+def _prepare_staging_tree(
+    final_output_dir: Path, staging_output_dir: Path, preserve_existing: bool
 ) -> None:
-    """
-    Writes the final top-level index.json file.
+    if staging_output_dir.exists():
+        shutil.rmtree(staging_output_dir)
+    if final_output_dir.exists() and preserve_existing:
+        shutil.copytree(final_output_dir, staging_output_dir)
+    else:
+        staging_output_dir.mkdir(parents=True)
 
-    This index contains metadata and summary information for all parsed resources.
 
-    Args:
-        all_summaries: Dictionary mapping resource types to their summary lists
-        target_gen: The target generation number
-        top_level_output_dir: The output directory path
-        generation_version_groups: Mapping of generations to version groups
-    """
-    if not all_summaries:
-        logger.warning("No summary data was generated. Skipping index file.")
+def _clear_requested_outputs(
+    staging_config: Config,
+    staging_output_dir: Path,
+    requested_parsers: set[str],
+) -> None:
+    for parser_name in requested_parsers:
+        for output_key in PARSER_OUTPUT_KEYS[parser_name]:
+            parser_output_dir = staging_config.output_path(output_key)
+            if parser_output_dir == staging_output_dir:
+                raise ConfigurationError(
+                    f"{output_key} cannot point to the generation root"
+                )
+            if parser_output_dir.exists():
+                shutil.rmtree(parser_output_dir)
+
+
+def _process_generation(
+    args: argparse.Namespace,
+    config: Config,
+    api_client: ApiClient,
+    target_generation: int,
+    latest_generation: int,
+) -> None:
+    is_historical = target_generation < latest_generation
+    if is_historical:
+        logger.info(
+            "Performing a historical parse for Generation %s.", target_generation
+        )
+
+    version_groups, dex_map, target_versions = gather_initial_data(
+        api_client, config, target_generation
+    )
+    requested_parsers = _requested_parser_names(args)
+    logger.info(
+        "Parsing %s for Generation %s",
+        ", ".join(sorted(requested_parsers)),
+        target_generation,
+    )
+
+    final_config = config.for_generation(target_generation)
+    final_output_dir = final_config.generation_output_root
+    if final_output_dir.exists() and not _confirm_replacement(args, target_generation):
+        logger.info("Operation cancelled.")
         return
 
-    logger.info("Creating top-level index.json...")
+    preserve_existing = final_output_dir.exists() and not args.all
+    staging_output_dir = final_output_dir.with_name(
+        f".{final_output_dir.name}.staging"
+    )
+    _prepare_staging_tree(
+        final_output_dir, staging_output_dir, preserve_existing
+    )
 
-    final_index: Dict[str, Any] = {
-        "metadata": {
-            "generation": target_gen,
-            "version_groups": generation_version_groups.get(target_gen, []),
-            "createdAt": datetime.now(timezone.utc).isoformat(),
-            "counts": {
-                key: len(value) for key, value in all_summaries.items() if value
-            },
+    try:
+        staging_config = build_staging_config(final_config, staging_output_dir)
+        _clear_requested_outputs(
+            staging_config, staging_output_dir, requested_parsers
+        )
+        existing_index = _load_existing_index(
+            staging_output_dir, preserve_existing
+        )
+        summaries = run_parsers(
+            args,
+            staging_config,
+            api_client,
+            version_groups,
+            target_generation,
+            dex_map,
+            is_historical,
+            target_versions,
+        )
+        replaced_keys = {
+            summary_key
+            for parser_name in requested_parsers
+            for summary_key in PARSER_SUMMARY_KEYS[parser_name]
         }
-    }
-    final_index.update({key: value for key, value in all_summaries.items() if value})
-
-    output_path = Path(top_level_output_dir)
-    output_path.mkdir(parents=True, exist_ok=True)
-
-    index_file_path = output_path / "index.json"
-    with open(index_file_path, "w", encoding="utf-8") as f:
-        json.dump(final_index, f, indent=4, ensure_ascii=False)
-
-    logger.info(f"Top-level index.json created successfully at '{index_file_path}'")
+        write_index_file(
+            summaries,
+            target_generation,
+            staging_output_dir,
+            version_groups,
+            existing_index=existing_index,
+            replaced_keys=replaced_keys,
+        )
+        validate_generation_output(staging_output_dir)
+        publish_staged_output(staging_output_dir, final_output_dir)
+    finally:
+        if staging_output_dir.exists():
+            shutil.rmtree(staging_output_dir)
 
 
 def main() -> None:
-    """
-    Main entry point to run the specified parsers.
-
-    This orchestrates the entire parsing process:
-    1. Parses command-line arguments
-    2. Loads configuration
-    3. Gathers initial generation data
-    4. Runs requested parsers concurrently
-    5. Writes summary index file
-    """
+    """Runs the requested parsers and publishes complete generation output."""
     try:
         args = parse_arguments()
-        if not args.parsers and not args.all:
-            logger.error(
-                "No parsers specified. Use --all to run all parsers or provide a list of parsers."
-            )
-            return
-
-        # Load and configure
-        config = load_config()
+        logging.basicConfig(
+            level=logging.DEBUG if args.verbose else logging.INFO,
+            format="%(levelname)s: %(message)s",
+        )
+        config = load_config(args.config)
         if args.no_cache:
-            logger.info("Caching is disabled for this run.")
-            config["parser_cache_dir"] = None
-            config["scraper_cache_dir"] = None
-            config["cache_expires"] = None
+            config = config.without_cache()
 
         api_client = ApiClient(config)
-
-        # Determine target generation(s)
-        latest_gen_num = get_latest_generation(api_client, config)
-
-        # Check if we should run all generations
-        if args.gen and str(args.gen).lower() == "all":
-            generations_to_parse = list(range(1, latest_gen_num + 1))
+        latest_generation = get_latest_generation(api_client, config)
+        if args.gen == "all":
+            generations = range(1, latest_generation + 1)
         else:
-            target_gen = int(args.gen) if args.gen else latest_gen_num
-            if target_gen > latest_gen_num:
-                target_gen = latest_gen_num
-            generations_to_parse = [target_gen]
-
-        # Process each generation
-        for target_gen in generations_to_parse:
-            is_historical = target_gen < latest_gen_num
-
-            if is_historical:
-                logger.info(
-                    f"Performing a historical parse for Generation {target_gen}. Scraping for changes..."
+            target_generation = (
+                args.gen if isinstance(args.gen, int) else latest_generation
+            )
+            if target_generation > latest_generation:
+                raise GenerationNotFoundError(
+                    f"Generation {target_generation} is newer than the latest "
+                    f"available generation ({latest_generation})."
                 )
+            generations = (target_generation,)
 
-            # Gather initial data
-            generation_version_groups, generation_dex_map, target_versions = (
-                gather_initial_data(api_client, config, target_gen)
-            )
-
-            logger.info(f"\n{'='*10} PARSING ALL DATA FOR GENERATION {target_gen} {'='*10}")
-
-            # Format output directory paths with generation number
-            final_config = config.copy()
-            for key in final_config:
-                if key.startswith("output_dir_"):
-                    final_config[key] = final_config[key].format(gen_num=target_gen)
-
-            # Check if output directory exists
-            top_level_output_dir = Path(final_config["output_dir_ability"]).parent
-            if top_level_output_dir.exists():
-                if args.force:
-                    logger.info(f"Deleting existing directory: '{top_level_output_dir}'")
-                    shutil.rmtree(top_level_output_dir)
-                else:
-                    response = input(
-                        f"Directory '{top_level_output_dir}' already exists. Delete it? (y/n): "
-                    )
-                    if response.lower() == "y":
-                        logger.info(f"Deleting existing directory: '{top_level_output_dir}'")
-                        shutil.rmtree(top_level_output_dir)
-                    else:
-                        logger.info("Operation cancelled.")
-                        return
-
-            # Run parsers
-            all_summaries = run_parsers(
+        for target_generation in generations:
+            _process_generation(
                 args,
-                final_config,
+                config,
                 api_client,
-                generation_version_groups,
-                target_gen,
-                generation_dex_map,
-                is_historical,
-                target_versions,
+                target_generation,
+                latest_generation,
             )
-
-            # Write index file
-            write_index_file(
-                all_summaries,
-                target_gen,
-                str(top_level_output_dir),
-                generation_version_groups,
-            )
-
-    except (ConfigurationError, GenerationNotFoundError, PokedexMappingError) as e:
-        logger.error(f"Fatal error: {e}")
+    except PokemonDBError as error:
+        logger.error("Fatal error: %s", error)
         sys.exit(1)
     except KeyboardInterrupt:
-        logger.warning("\nOperation cancelled by user")
+        logger.warning("Operation cancelled by user")
         sys.exit(130)
-    except Exception as e:
-        logger.exception(f"Unexpected error: {e}")
+    except Exception as error:
+        logger.exception("Unexpected error: %s", error)
         sys.exit(1)
 
 

@@ -2,8 +2,8 @@ from logging import getLogger
 from typing import Any, Dict, List, Optional, Union
 
 from ..api_client import ApiClient
+from ..config import Config
 from ..utils import (
-    build_version_group_to_generation_map,
     get_all_english_entries_for_gen_by_game,
     get_english_entry,
     write_json_file,
@@ -29,7 +29,7 @@ class MoveParser(GenerationParser):
 
     def __init__(
         self,
-        config: Dict[str, Any],
+        config: Config,
         api_client: ApiClient,
         generation_version_groups: Dict[int, List[str]],
         target_gen: int,
@@ -143,9 +143,11 @@ class MoveParser(GenerationParser):
         if not self.target_gen or not self.generation_version_groups:
             return
 
-        version_group_to_gen_map = build_version_group_to_generation_map(
-            self.generation_version_groups
-        )
+        version_group_order = {
+            version_group_name: (generation, position)
+            for generation, version_groups in self.generation_version_groups.items()
+            for position, version_group_name in enumerate(version_groups)
+        }
 
         target_gen_version_groups = self.generation_version_groups.get(
             self.target_gen, []
@@ -178,51 +180,46 @@ class MoveParser(GenerationParser):
                 "short_effect": cleaned_data.get("short_effect"),
             }
 
-            # Get all past values, sorted chronologically
-            # We need all past values (even those after target_gen) to determine
-            # what the value was in earlier generations
             sorted_past_values = sorted(
                 past_values,
-                key=lambda x: version_group_to_gen_map.get(
-                    x["version_group"]["name"], 999
+                key=lambda value: version_group_order.get(
+                    value["version_group"]["name"], (999, 999)
                 ),
             )
+            current_version_group_order = version_group_order.get(
+                version_group_name, (0, 0)
+            )
+            applied_fields = set()
 
-            # Apply past values only for generations prior to the listed version group
-            # past_values represent what the value WAS before the change in that version group
             for past_value in sorted_past_values:
-                past_value_gen = version_group_to_gen_map.get(
-                    past_value["version_group"]["name"], 999
-                )
-                current_version_group_gen = version_group_to_gen_map.get(
-                    version_group_name, 0
+                past_value_order = version_group_order.get(
+                    past_value["version_group"]["name"], (999, 999)
                 )
 
-                # Only apply if current generation is BEFORE the change
-                # (past_value represents what it was prior to past_value_gen)
-                if past_value_gen <= current_version_group_gen:
+                if past_value_order <= current_version_group_order:
                     continue
 
-                # Apply each changed field
-                if past_value.get("accuracy") is not None:
-                    temp_data["accuracy"] = past_value["accuracy"]
-                if past_value.get("power") is not None:
-                    temp_data["power"] = past_value["power"]
-                if past_value.get("pp") is not None:
-                    temp_data["pp"] = past_value["pp"]
-                if past_value.get("effect_chance") is not None:
-                    temp_data["effect_chance"] = past_value["effect_chance"]
-                if past_value.get("type"):
+                for field in ("accuracy", "power", "pp", "effect_chance"):
+                    if field not in applied_fields and past_value.get(field) is not None:
+                        temp_data[field] = past_value[field]
+                        applied_fields.add(field)
+                if "type" not in applied_fields and past_value.get("type"):
                     temp_data["type"] = past_value["type"]["name"]
-                if past_value.get("effect_entries"):
+                    applied_fields.add("type")
+                if (
+                    not {"effect", "short_effect"}.issubset(applied_fields)
+                    and past_value.get("effect_entries")
+                ):
                     effect = get_english_entry(past_value["effect_entries"], "effect")
                     short_effect = get_english_entry(
                         past_value["effect_entries"], "short_effect"
                     )
-                    if effect:
+                    if effect and "effect" not in applied_fields:
                         temp_data["effect"] = effect
-                    if short_effect:
+                        applied_fields.add("effect")
+                    if short_effect and "short_effect" not in applied_fields:
                         temp_data["short_effect"] = short_effect
+                        applied_fields.add("short_effect")
 
             # Store the final values for this version group
             for field in change_fields:
@@ -290,7 +287,7 @@ class MoveParser(GenerationParser):
             self._apply_past_values(cleaned_data, past_values)
 
             # Write to file
-            output_path = self.config[self.output_dir_key]
+            output_path = str(self.config.output_path(self.output_dir_key))
             write_json_file(output_path, cleaned_data["name"], cleaned_data)
 
             return {"name": cleaned_data["name"], "id": cleaned_data["id"]}
