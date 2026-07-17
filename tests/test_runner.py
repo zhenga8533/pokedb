@@ -43,7 +43,6 @@ def test_gather_initial_data_collects_all_groups_and_target_versions(monkeypatch
         max_retries=0,
         max_workers=1,
         parser_cache_dir=None,
-        scraper_cache_dir=None,
         cache_expires=None,
         output_root=Path(".output"),
     )

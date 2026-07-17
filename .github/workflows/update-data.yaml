@@ -1,78 +1,55 @@
-name: Update PokéAPI Data
+name: Update PokéDB Data
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: "0 0 * * 0"
+
+concurrency:
+  group: update-pokedb-data
+  cancel-in-progress: false
 
 jobs:
   build-and-push-data:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     permissions:
       contents: write
 
     steps:
-      # 1. Check out the repository and fetch all branch history
       - name: Check out repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # 2. Set up Python 3.12
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
+          cache: pip
 
-      # 3. Cache and install dependencies
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-      - name: Install dependencies
+      - name: Install package
         run: pip install -e .
 
-      # 4. Run all the parsers (this creates the local '.output' folder)
-      - name: Run Parsers
-        run: python -m pokedb --all --no-cache --force
+      - name: Generate and validate every generation
+        run: python -m pokedb --all --gen all --no-cache --force
 
-      # 5. Switch to the data branch, replace old data, and commit new results
-      - name: Commit and Push Data
+      - name: Prepare data branch
+        run: |
+          git worktree add --detach data-branch origin/data
+          find data-branch -maxdepth 1 -type d -name 'gen*' -exec rm -rf {} +
+          cp -R .output/gen* data-branch/
+          cp .github/data-branch-README.md data-branch/README.md
+
+      - name: Commit and push data
+        working-directory: data-branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout data
-
-          # Find the new generation directory name (e.g., "gen9")
-          new_gen_dir=$(find .output -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | head -n 1)
-
-          if [ -z "$new_gen_dir" ]; then
-            echo "No generation directory found in .output. Nothing to commit."
-            exit 0
-          fi
-
-          # Remove the old directory from the branch to handle deleted files
-          echo "Removing old directory: $new_gen_dir"
-          rm -rf "./$new_gen_dir"
-
-          # Move the newly generated directory into the root
-          echo "Moving new data into place..."
-          mv ".output/$new_gen_dir" .
-
-          # Clean up the now-empty output folder
-          rm -rf .output
-
-          # Add ONLY the new generation directory to the commit
-          echo "Staging new data from: $new_gen_dir"
-          git add "$new_gen_dir"
-
+          git add README.md gen*
           if git diff --staged --quiet; then
             echo "No data changes to commit."
-          else
-            git commit -m "Data update: $(date -u)"
-            git push origin data
-            echo "Data pushed successfully."
+            exit 0
           fi
+          git commit -m "Regenerate schema v3 data: $(date -u +'%Y-%m-%d')"
+          git push origin HEAD:data

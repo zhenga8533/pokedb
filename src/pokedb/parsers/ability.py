@@ -33,6 +33,7 @@ class AbilityParser(GenerationParser):
         generation_version_groups: Dict[int, List[str]],
         target_gen: int,
         generation_dex_map: Optional[Dict[int, str]] = None,
+        is_historical: bool = False,
     ):
         super().__init__(
             config,
@@ -40,6 +41,7 @@ class AbilityParser(GenerationParser):
             generation_version_groups,
             target_gen,
             generation_dex_map,
+            is_historical,
         )
         self.entity_type = "Ability"
         self.api_endpoint = "abilities"

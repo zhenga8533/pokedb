@@ -2,13 +2,11 @@
 
 import argparse
 import logging
-from functools import partial
 from typing import Any, Dict, List, Set, Tuple, Type
 
 from .api_client import ApiClient
 from .config import Config
 from .parsers import AbilityParser, BaseParser, ItemParser, MoveParser, PokemonParser
-from .scraper import scrape_pokemon_changes
 from .utils import GenerationNotFoundError, get_generation_dex_map
 
 logger = logging.getLogger(__name__)
@@ -16,8 +14,10 @@ logger = logging.getLogger(__name__)
 PARSER_CLASSES: Dict[str, Type[BaseParser]] = {
     "ability": AbilityParser,
     "move": MoveParser,
-    "item": ItemParser,
     "pokemon": PokemonParser,
+    # Items run last so their catalog can include references emitted by moves
+    # and Pokemon when PokeAPI does not provide a game index.
+    "item": ItemParser,
 }
 
 
@@ -79,14 +79,10 @@ def run_parsers(
             "generation_version_groups": generation_version_groups,
             "target_gen": target_gen,
             "generation_dex_map": generation_dex_map,
+            "is_historical": is_historical,
         }
         if parser_name == "pokemon":
-            parser_kwargs["is_historical"] = is_historical
             parser_kwargs["target_versions"] = target_versions
-            if is_historical:
-                parser_kwargs["scraper_func"] = partial(
-                    scrape_pokemon_changes, config=config
-                )
 
         result = parser_class(**parser_kwargs).run()
         if isinstance(result, list):

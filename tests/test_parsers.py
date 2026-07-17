@@ -1,8 +1,11 @@
+from dataclasses import replace
+
 import pytest
 
 from pokedb.config import load_config
 from pokedb.parsers.ability import AbilityParser
 from pokedb.parsers.base import BaseParser
+from pokedb.parsers.item import ItemParser
 from pokedb.parsers.move import MoveParser
 from pokedb.parsers.pokemon import PokemonParser
 from pokedb.utils.exceptions import ParserExecutionError
@@ -59,6 +62,92 @@ def test_move_history_uses_nearest_future_change_per_field():
 
     assert cleaned_data["power"]["black-white"] == 80
     assert cleaned_data["pp"]["black-white"] == 10
+
+
+def test_pre_generation_four_damage_class_is_derived_from_type():
+    parser = MoveParser(
+        config=load_config(),
+        api_client=None,
+        generation_version_groups={3: ["ruby-sapphire"]},
+        target_gen=3,
+        is_historical=True,
+    )
+    cleaned_data = {
+        "priority": 0,
+        "damage_class": "physical",
+        "target": "selected-pokemon",
+        "metadata": {},
+        "stat_changes": [],
+        "type": {"ruby-sapphire": "dark"},
+    }
+
+    parser._apply_generation_policy(cleaned_data)
+
+    assert cleaned_data["damage_class"] == "special"
+    assert cleaned_data["priority"] is None
+    assert cleaned_data["target"] is None
+    assert cleaned_data["metadata"] is None
+    assert cleaned_data["stat_changes"] is None
+
+
+def test_historical_item_current_only_fields_are_null():
+    parser = ItemParser(
+        config=load_config(),
+        api_client=None,
+        generation_version_groups={4: ["diamond-pearl"]},
+        target_gen=4,
+        is_historical=True,
+    )
+    cleaned_data = {
+        "cost": 100,
+        "fling_power": 30,
+        "fling_effect": "damage",
+        "attributes": ["holdable"],
+        "category": "medicine",
+        "effect": "Current effect",
+        "short_effect": "Current effect",
+        "sprite": "https://example.test/item.png",
+    }
+
+    parser._apply_generation_policy(cleaned_data)
+
+    assert all(value is None for value in cleaned_data.values())
+
+
+def test_referenced_item_without_game_indices_is_included(tmp_path):
+    item_url = "https://example.test/item/fire-stone"
+    item_data = {
+        "id": 82,
+        "name": "fire-stone",
+        "game_indices": [],
+        "cost": 3000,
+        "fling_power": 30,
+        "fling_effect": None,
+        "attributes": [],
+        "category": {"name": "evolution"},
+        "effect_entries": [],
+        "flavor_text_entries": [],
+        "sprites": {"default": None},
+    }
+
+    class FakeApiClient:
+        def get(self, url):
+            assert url == item_url
+            return item_data
+
+    config = replace(load_config(), output_root=tmp_path).for_generation(1)
+    parser = ItemParser(
+        config=config,
+        api_client=FakeApiClient(),
+        generation_version_groups={1: ["red-blue"]},
+        target_gen=1,
+    )
+    parser.referenced_item_names = {"fire-stone"}
+
+    result = parser.process({"name": "fire-stone", "url": item_url})
+
+    assert result["name"] == "fire-stone"
+    assert (tmp_path / "gen1/item/fire-stone.json").exists()
 
 
 def test_ability_history_uses_nearest_future_change():
@@ -158,7 +247,24 @@ def test_pokemon_specific_data_comes_from_each_variety():
     assert result["moves"]["level-up"][0]["name"] == "hydro-pump"
 
 
-def test_structured_pokeapi_history_is_applied_before_scraped_history():
+def test_historical_pokemon_does_not_publish_current_base_experience():
+    parser = PokemonParser(
+        config=load_config(),
+        api_client=None,
+        generation_version_groups={8: ["sword-shield"]},
+        target_gen=8,
+        generation_dex_map={},
+        is_historical=True,
+    )
+
+    result = parser._get_pokemon_specific_data(
+        {"base_experience": 182, "held_items": [], "moves": []}
+    )
+
+    assert result["base_experience"] is None
+
+
+def test_structured_pokeapi_history_is_applied():
     parser = PokemonParser(
         config=load_config(),
         api_client=None,
@@ -215,7 +321,7 @@ def test_structured_pokeapi_history_is_applied_before_scraped_history():
 
     assert cleaned_data["types"] == ["electric"]
     assert cleaned_data["abilities"] == []
-    assert cleaned_data["ev_yield"] == []
+    assert cleaned_data["ev_yield"] is None
     assert cleaned_data["stats"] == {
         "hp": 25,
         "attack": 35,
@@ -263,56 +369,6 @@ def test_structured_pokeapi_past_ability_replaces_current_ability():
     assert cleaned_data["abilities"][0]["name"] == "levitate"
 
 
-def test_scraped_single_ability_does_not_create_a_second_slot():
-    parser = PokemonParser(
-        config=load_config(),
-        api_client=None,
-        generation_version_groups={6: ["x-y"]},
-        target_gen=6,
-        generation_dex_map={},
-        scraper_func=lambda name: {
-            "changes": [
-                {"generations": [3, 4, 5, 6], "change": {"ability": "levitate"}}
-            ]
-        },
-    )
-    cleaned_data = {
-        "species": "gengar",
-        "abilities": [
-            {"name": "cursed-body", "is_hidden": False, "slot": 1}
-        ],
-        "stats": {},
-        "types": ["ghost", "poison"],
-    }
-
-    parser._apply_historical_changes(cleaned_data)
-
-    assert cleaned_data["abilities"] == [
-        {"name": "levitate", "is_hidden": False, "slot": 1}
-    ]
-
-
-def test_form_names_are_matched_across_source_naming_conventions():
-    parser = PokemonParser(
-        config=load_config(),
-        api_client=None,
-        generation_version_groups={7: ["sun-moon"]},
-        target_gen=7,
-        generation_dex_map={},
-    )
-
-    assert parser._form_names_match(
-        "Red-Striped Form", "Red-Striped Basculin", "basculin"
-    )
-    assert parser._form_names_match(
-        "Average Size", "Average Gourgeist", "gourgeist"
-    )
-    assert parser._form_names_match("Heat Rotom", "Heat Rotom", "rotom")
-    assert not parser._form_names_match(
-        "Blue-Striped Form", "Red-Striped Basculin", "basculin"
-    )
-
-
 def test_evolution_details_preserve_each_condition():
     chain_url = "https://example.test/evolution-chain/1"
     species_url = "https://example.test/pokemon-species/vaporeon"
@@ -356,8 +412,84 @@ def test_evolution_details_preserve_each_condition():
     details = chain["evolves_to"][0]["evolution_details"]
 
     assert len(details) == 2
+    assert chain["evolves_to"][0]["availability"] == "available"
     assert details[0]["item"] == "water-stone"
     assert details[1]["location"] == "special-location"
+
+
+def test_evolution_chain_promotes_a_future_baby_root():
+    chain_url = "https://example.test/evolution-chain/chansey"
+    happiny_url = "https://example.test/species/happiny"
+    chansey_url = "https://example.test/species/chansey"
+    responses = {
+        chain_url: {
+            "chain": {
+                "species": {"name": "happiny", "url": happiny_url},
+                "evolution_details": [],
+                "evolves_to": [
+                    {
+                        "species": {"name": "chansey", "url": chansey_url},
+                        "evolution_details": [{"trigger": {"name": "level-up"}}],
+                        "evolves_to": [],
+                    }
+                ],
+            }
+        },
+        happiny_url: {"generation": {"url": "https://example.test/generation/4/"}},
+        chansey_url: {"generation": {"url": "https://example.test/generation/1/"}},
+    }
+
+    class FakeApiClient:
+        def get(self, url):
+            return responses[url]
+
+    parser = PokemonParser(
+        config=load_config(),
+        api_client=FakeApiClient(),
+        generation_version_groups={1: ["red-blue"]},
+        target_gen=1,
+        generation_dex_map={},
+    )
+
+    chain = parser._get_evolution_chain(chain_url)
+
+    assert chain == {"species_name": "chansey", "evolves_to": []}
+
+
+def test_empty_special_relationship_is_not_reported_as_evolution():
+    chain_url = "https://example.test/evolution-chain/manaphy"
+    phione_url = "https://example.test/species/phione"
+    manaphy_url = "https://example.test/species/manaphy"
+    responses = {
+        chain_url: {
+            "chain": {
+                "species": {"name": "phione", "url": phione_url},
+                "evolves_to": [
+                    {
+                        "species": {"name": "manaphy", "url": manaphy_url},
+                        "evolution_details": [],
+                        "evolves_to": [],
+                    }
+                ],
+            }
+        },
+        phione_url: {"generation": {"url": "https://example.test/generation/4/"}},
+        manaphy_url: {"generation": {"url": "https://example.test/generation/4/"}},
+    }
+
+    class FakeApiClient:
+        def get(self, url):
+            return responses[url]
+
+    parser = PokemonParser(
+        config=load_config(),
+        api_client=FakeApiClient(),
+        generation_version_groups={4: ["diamond-pearl"]},
+        target_gen=4,
+        generation_dex_map={},
+    )
+
+    assert parser._get_evolution_chain(chain_url)["evolves_to"] == []
 
 
 def test_evolution_details_use_latest_method_for_target_generation():

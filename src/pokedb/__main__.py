@@ -11,6 +11,7 @@ from typing import Any, Dict, Optional, Union
 from .api_client import ApiClient
 from .config import Config, load_config
 from .output import (
+    DATA_SCHEMA_VERSION,
     PARSER_OUTPUT_KEYS,
     PARSER_SUMMARY_KEYS,
     build_staging_config,
@@ -22,7 +23,7 @@ from .validation import validate_generation_output
 from .utils import (
     ConfigurationError,
     GenerationNotFoundError,
-    PokemonDBError,
+    PokeDBError,
     get_latest_generation,
 )
 
@@ -119,7 +120,14 @@ def _load_existing_index(
     if not preserve_existing or not index_path.exists():
         return None
     with index_path.open("r", encoding="utf-8") as index_file:
-        return json.load(index_file)
+        index = json.load(index_file)
+    if index.get("metadata", {}).get("schema_version") != DATA_SCHEMA_VERSION:
+        raise ConfigurationError(
+            "Partial regeneration requires schema version "
+            f"{DATA_SCHEMA_VERSION} output; "
+            "regenerate the complete generation with --all"
+        )
+    return index
 
 
 def _prepare_staging_tree(
@@ -147,6 +155,7 @@ def _clear_requested_outputs(
                 )
             if parser_output_dir.exists():
                 shutil.rmtree(parser_output_dir)
+            parser_output_dir.mkdir(parents=True, exist_ok=True)
 
 
 def _process_generation(
@@ -214,6 +223,8 @@ def _process_generation(
             target_generation,
             staging_output_dir,
             version_groups,
+            config.api_base_url,
+            is_historical,
             existing_index=existing_index,
             replaced_keys=replaced_keys,
         )
@@ -259,7 +270,7 @@ def main() -> None:
                 target_generation,
                 latest_generation,
             )
-    except PokemonDBError as error:
+    except PokeDBError as error:
         logger.error("Fatal error: %s", error)
         sys.exit(1)
     except KeyboardInterrupt:

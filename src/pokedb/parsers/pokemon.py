@@ -1,7 +1,6 @@
 import copy
-import re
 from logging import getLogger
-from typing import Any, Callable, Dict, List, Optional, Set, Tuple, Union
+from typing import Any, Dict, List, Optional, Set, Tuple, Union
 
 from ..api_client import ApiClient
 from ..config import Config
@@ -25,7 +24,7 @@ class PokemonParser(GenerationParser):
     - Regional variants (e.g., Alolan, Galarian forms)
     - Battle-only transformations (e.g., Mega Evolution, Gigantamax)
     - Cosmetic forms (e.g., Unown letters, Spinda patterns)
-    - Historical stat changes via web scraping
+    - Historical types, abilities, and stats from structured PokéAPI data
     - Evolution chains with generation filtering
     - Moves, held items, and sprites per generation
 
@@ -41,7 +40,6 @@ class PokemonParser(GenerationParser):
         generation_dex_map: Dict[int, str],
         is_historical: bool = False,
         target_versions: Optional[Set[str]] = None,
-        scraper_func: Optional[Callable[[str], Dict[str, Any]]] = None,
     ):
         super().__init__(
             config,
@@ -49,6 +47,7 @@ class PokemonParser(GenerationParser):
             generation_version_groups,
             target_gen,
             generation_dex_map,
+            is_historical,
         )
         self.entity_type = "Species"
         self.api_endpoint = "pokemon_species"
@@ -56,165 +55,10 @@ class PokemonParser(GenerationParser):
         self.output_dir_key_variant = "output_dir_variant"
         self.output_dir_key_transformation = "output_dir_transformation"
         self.output_dir_key_cosmetic = "output_dir_cosmetic"
-        self.is_historical = is_historical
         self.target_versions = target_versions or set()
-        self.scraper_func = scraper_func
         self._version_group_regions: Dict[str, Set[str]] = {}
         self._location_regions: Dict[str, Optional[str]] = {}
-
-    def _convert_to_scraper_form_name(self, form_data: Dict[str, Any]) -> str:
-        """
-        Converts a form name from API format to the format used in scraped data.
-
-        Args:
-            form_data: The form data from the API containing form names
-        Returns:
-            The form name as it appears in scraped data (e.g., "Wash Rotom", "Attack Forme")
-        """
-        # Try to get the English form name from the API
-        form_names = form_data.get("names", [])
-        for name_entry in form_names:
-            if name_entry.get("language", {}).get("name") == "en":
-                # Return the English form name as-is from the API
-                return name_entry.get("name", "")
-
-        # Fallback: construct from the form's identifier
-        form_name = form_data.get("form_name", "")
-        if form_name:
-            return form_name
-
-        # Last resort: use the form's name field
-        return form_data.get("name", "")
-
-    @staticmethod
-    def _normalize_form_name(name: str, species_name: str) -> Tuple[str, ...]:
-        """Normalizes PokéAPI and Pokémon DB form labels for comparison."""
-        ignored_tokens = {
-            "cloak",
-            "form",
-            "forme",
-            "size",
-            *re.findall(r"[a-z0-9]+", species_name.lower()),
-        }
-        return tuple(
-            token
-            for token in re.findall(r"[a-z0-9]+", name.lower())
-            if token not in ignored_tokens
-        )
-
-    def _form_names_match(
-        self, change_form: str, api_form: str, species_name: str
-    ) -> bool:
-        """Returns whether two source-specific labels identify the same form."""
-        return self._normalize_form_name(
-            change_form, species_name
-        ) == self._normalize_form_name(api_form, species_name)
-
-    def _apply_historical_changes(
-        self, cleaned_data: Dict[str, Any], form_name: Optional[str] = None
-    ):
-        """
-        Applies scraped historical changes to Pokémon data for the target generation.
-
-        The PokéAPI doesn't track all historical changes (especially Gen 1 stats),
-        so this method uses web scraping from PokemonDB to get generation-specific
-        data for abilities, stats, types, and other attributes.
-
-        Args:
-            cleaned_data: The Pokémon data dictionary to modify in-place
-            form_name: Optional form name to match against changes (e.g., "Heat Rotom")
-
-        Modifies:
-            cleaned_data: Updates stats, abilities, types, and other fields based
-                          on historical changes for the target generation
-        """
-        if not self.target_gen or not self.scraper_func:
-            return
-
-        logger.debug(f"Scraping historical changes for {cleaned_data['species']}")
-        scraper_data = self.scraper_func(cleaned_data["species"])
-        all_changes = scraper_data.get("changes", [])
-        unsupported_changes = scraper_data.get("unsupported_changes", [])
-        if unsupported_changes:
-            logger.warning(
-                "Historical data for %s has %s untranslated Pokémon DB change(s)",
-                cleaned_data["species"],
-                len(unsupported_changes),
-            )
-
-        if not all_changes:
-            return
-
-        # Apply changes that occurred in the target generation
-        for change_item in all_changes:
-            generations = change_item.get("generations", [])
-            change = change_item.get("change", {})
-
-            if self.target_gen in generations:
-                # Check if this change is form-specific
-                change_form = change.get("form")
-
-                # Skip if this change is for a different form
-                if (
-                    change_form
-                    and form_name
-                    and not self._form_names_match(
-                        change_form, form_name, cleaned_data["species"]
-                    )
-                ):
-                    continue
-
-                # Skip if this change is form-specific but we're applying to default
-                if change_form and not form_name:
-                    continue
-
-                # Remove ability (for "does not have X ability" changes)
-                if "remove_ability" in change:
-                    ability_to_remove = change["remove_ability"].replace(" ", "-")
-                    cleaned_data["abilities"] = [
-                        ability
-                        for ability in cleaned_data.get("abilities", [])
-                        if ability.get("name") != ability_to_remove
-                    ]
-
-                # Remove multiple abilities (for "does not have X or Y ability" changes)
-                if "remove_abilities" in change:
-                    abilities_to_remove = [
-                        a.replace(" ", "-") for a in change["remove_abilities"]
-                    ]
-                    cleaned_data["abilities"] = [
-                        ability
-                        for ability in cleaned_data.get("abilities", [])
-                        if ability.get("name") not in abilities_to_remove
-                    ]
-
-                # Update non-hidden ability (slot 1)
-                if "ability" in change:
-                    for i, ability in enumerate(cleaned_data.get("abilities", [])):
-                        if not ability.get("is_hidden"):
-                            cleaned_data["abilities"][i]["name"] = change["ability"]
-                            break
-
-                # Update base stats
-                if "stats" in change:
-                    if "special" in change["stats"]:
-                        cleaned_data["stats"].pop("special-attack", None)
-                        cleaned_data["stats"].pop("special-defense", None)
-                    cleaned_data["stats"].update(change["stats"])
-
-                # Update types
-                if "types" in change:
-                    cleaned_data["types"] = change["types"]
-
-                # Update other attributes
-                if "base_experience" in change:
-                    cleaned_data["base_experience"] = change["base_experience"]
-                if "base_happiness" in change:
-                    cleaned_data["base_happiness"] = change["base_happiness"]
-                if "capture_rate" in change:
-                    cleaned_data["capture_rate"] = change["capture_rate"]
-                if "ev_yield" in change and self.target_gen >= 3:
-                    cleaned_data["ev_yield"] = change["ev_yield"]
+        self._species_generations: Dict[str, int] = {}
 
     @staticmethod
     def _clean_evolution_detail(
@@ -249,7 +93,7 @@ class PokemonParser(GenerationParser):
             "party_type": (details.get("party_type") or {}).get("name"),
             "relative_physical_stats": details.get("relative_physical_stats"),
             "region": (details.get("region") or {}).get("name"),
-            "time_of_day": details.get("time_of_day"),
+            "time_of_day": details.get("time_of_day") or None,
             "trade_species": (details.get("trade_species") or {}).get("name"),
             "turn_upside_down": details.get("turn_upside_down"),
             "used_move": (details.get("used_move") or {}).get("name"),
@@ -344,7 +188,9 @@ class PokemonParser(GenerationParser):
         target_regions = self._version_group_regions[target_group]
         return not location_region or not target_regions or location_region in target_regions
 
-    def _get_evolution_chain(self, chain_url: str) -> Optional[Dict[str, Any]]:
+    def _get_evolution_chain(
+        self, chain_url: str, target_species: Optional[str] = None
+    ) -> Optional[Dict[str, Any]]:
         """
         Recursively fetches and processes an evolution chain, filtering future generations.
 
@@ -383,38 +229,72 @@ class PokemonParser(GenerationParser):
 
             chain_data = response["chain"]
 
-            def recurse_chain(chain: Dict[str, Any]) -> Dict[str, Any]:
-                species_name = chain["species"]["name"]
+            def species_generation(species: Dict[str, Any]) -> int:
+                species_url = species.get("url")
+                if not species_url or self.target_gen is None:
+                    return self.target_gen or 1
+                if species_url not in self._species_generations:
+                    species_data = self.api_client.get(species_url)
+                    self._species_generations[species_url] = int(
+                        species_data["generation"]["url"].split("/")[-2]
+                    )
+                return self._species_generations[species_url]
+
+            def recurse_chain(chain: Dict[str, Any]) -> List[Dict[str, Any]]:
+                species = chain["species"]
+                species_name = species["name"]
+                is_future = (
+                    self.target_gen is not None
+                    and species_generation(species) > self.target_gen
+                )
+                if is_future:
+                    promoted: List[Dict[str, Any]] = []
+                    for evolution in chain.get("evolves_to", []):
+                        promoted.extend(recurse_chain(evolution))
+                    return promoted
+
                 evolves_to: List[Dict[str, Any]] = []
 
                 for evolution in chain.get("evolves_to", []):
-                    # Check if this evolution is from a future generation
-                    species_url = evolution["species"]["url"]
-                    species_data = self.api_client.get(species_url)
-                    evolution_gen = int(
-                        species_data["generation"]["url"].split("/")[-2]
-                    )
-
-                    # Skip evolutions from future generations
-                    if self.target_gen is not None and evolution_gen > self.target_gen:
-                        logger.debug(
-                            f"Skipping future evolution: {evolution['species']['name']} (Gen {evolution_gen})"
-                        )
+                    if (
+                        self.target_gen is not None
+                        and species_generation(evolution["species"]) > self.target_gen
+                    ):
                         continue
-
-                    next_evolution = recurse_chain(evolution)
+                    raw_details = evolution.get("evolution_details", [])
+                    # Empty details in PokeAPI represent special relationships
+                    # such as Phione/Manaphy, not an evolution method.
+                    if not raw_details:
+                        continue
+                    next_nodes = recurse_chain(evolution)
+                    if not next_nodes:
+                        continue
+                    active_details = self._get_evolution_details_for_target(raw_details)
+                    next_evolution = next_nodes[0]
                     evolves_to.append(
                         {
                             "species_name": next_evolution["species_name"],
-                            "evolution_details": self._get_evolution_details_for_target(
-                                evolution.get("evolution_details", [])
+                            "availability": (
+                                "available" if active_details else "unavailable"
                             ),
+                            "evolution_details": active_details,
                             "evolves_to": next_evolution["evolves_to"],
                         }
                     )
-                return {"species_name": species_name, "evolves_to": evolves_to}
+                return [{"species_name": species_name, "evolves_to": evolves_to}]
 
-            return recurse_chain(chain_data)
+            roots = recurse_chain(chain_data)
+            if not roots:
+                return None
+            if len(roots) == 1 or target_species is None:
+                return roots[0]
+
+            def contains_species(node: Dict[str, Any]) -> bool:
+                return node["species_name"] == target_species or any(
+                    contains_species(child) for child in node["evolves_to"]
+                )
+
+            return next((root for root in roots if contains_species(root)), roots[0])
         except Exception as e:
             logger.warning(
                 f"Could not process evolution chain from {chain_url}. Error: {e}"
@@ -485,7 +365,11 @@ class PokemonParser(GenerationParser):
         if not sprites:
             return {}
 
-        processed_sprites = {k: v for k, v in sprites.items() if k != "versions"}
+        processed_sprites = (
+            {}
+            if self.is_historical
+            else {k: v for k, v in sprites.items() if k != "versions"}
+        )
 
         if "versions" in sprites and self.target_gen is not None:
             gen_roman = int_to_roman(self.target_gen)
@@ -631,11 +515,11 @@ class PokemonParser(GenerationParser):
             ],
             "height": pokemon_data["height"],
             "weight": pokemon_data["weight"],
-            "cries": pokemon_data.get("cries", {}),
+            "cries": None if self.is_historical else pokemon_data.get("cries", {}),
             "sprites": self._process_sprites(pokemon_data.get("sprites", {})),
         }
         if self.target_gen is not None and self.target_gen < 3:
-            cleaned_data["ev_yield"] = []
+            cleaned_data["ev_yield"] = None
         self._apply_pokeapi_past_values(cleaned_data, pokemon_data)
         return cleaned_data
 
@@ -701,7 +585,8 @@ class PokemonParser(GenerationParser):
 
         stats = cleaned_data["stats"]
         effort_by_stat = {
-            entry["stat"]: entry["effort"] for entry in cleaned_data["ev_yield"]
+            entry["stat"]: entry["effort"]
+            for entry in (cleaned_data["ev_yield"] or [])
         }
         applied_stats: Set[str] = set()
         for past in sorted(pokemon_data.get("past_stats", []), key=ending_generation):
@@ -732,7 +617,7 @@ class PokemonParser(GenerationParser):
             for stat, effort in effort_by_stat.items()
         ]
         if self.target_gen < 3:
-            cleaned_data["ev_yield"] = []
+            cleaned_data["ev_yield"] = None
 
     def _add_default_species_data(
         self,
@@ -796,13 +681,24 @@ class PokemonParser(GenerationParser):
                 "evolution_chain": evolution_chain,
             }
         )
+        if self.is_historical:
+            for field in (
+                "base_happiness",
+                "capture_rate",
+                "hatch_counter",
+                "gender_rate",
+                "egg_groups",
+                "growth_rate",
+                "forms_switchable",
+            ):
+                cleaned_data[field] = None
         if self.target_gen is not None and self.target_gen < 2:
             cleaned_data.update(
                 {
                     "base_happiness": None,
                     "hatch_counter": None,
                     "gender_rate": None,
-                    "egg_groups": [],
+                    "egg_groups": None,
                 }
             )
 
@@ -811,7 +707,9 @@ class PokemonParser(GenerationParser):
     ) -> Dict[str, Any]:
         """Returns fields that belong to a Pokémon variety rather than its species."""
         return {
-            "base_experience": pokemon_data.get("base_experience"),
+            "base_experience": (
+                None if self.is_historical else pokemon_data.get("base_experience")
+            ),
             "held_items": self._get_generation_data(
                 pokemon_data, "held_items", "item", "version_details", "version"
             ),
@@ -943,16 +841,6 @@ class PokemonParser(GenerationParser):
         )
         default_template["forms"] = all_forms_in_gen
 
-        if self.is_historical:
-            default_form_name = None
-            default_forms = default_pokemon_data.get("forms", [])
-            if default_forms:
-                default_form_data = self.api_client.get(default_forms[0]["url"])
-                default_form_name = self._convert_to_scraper_form_name(
-                    default_form_data
-                )
-            self._apply_historical_changes(default_template, default_form_name)
-
         output_dir = str(self.config.output_path(self.output_dir_key_pokemon))
         write_json_file(output_dir, default_template["name"], default_template)
 
@@ -1007,13 +895,6 @@ class PokemonParser(GenerationParser):
         )
         variant_data.update(variant_base_data)
         variant_data.update(self._get_pokemon_specific_data(pokemon_data))
-
-        # Apply historical changes for this specific form
-        if self.is_historical:
-            # Get the form name from the API form data
-            # This will use the official English name (e.g., "Wash Rotom", "Attack Forme")
-            form_name = self._convert_to_scraper_form_name(form_data)
-            self._apply_historical_changes(variant_data, form_name)
 
         # Determine category and output directory
         is_battle_only = form_data.get("is_battle_only", False)
@@ -1112,7 +993,7 @@ class PokemonParser(GenerationParser):
             species_name = species_data["name"]
             evolution_chain_url = species_data.get("evolution_chain", {}).get("url")
             evolution_chain = (
-                self._get_evolution_chain(evolution_chain_url)
+                self._get_evolution_chain(evolution_chain_url, species_data["name"])
                 if evolution_chain_url
                 else None
             )

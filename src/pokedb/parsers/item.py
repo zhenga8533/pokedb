@@ -1,3 +1,4 @@
+import json
 from logging import getLogger
 from typing import Any, Dict, List, Optional, Union
 
@@ -35,6 +36,7 @@ class ItemParser(BaseParser):
         generation_version_groups: Dict[int, List[str]],
         target_gen: int,
         generation_dex_map: Optional[Dict[int, str]] = None,
+        is_historical: bool = False,
     ):
         super().__init__(
             config,
@@ -42,10 +44,58 @@ class ItemParser(BaseParser):
             generation_version_groups,
             target_gen,
             generation_dex_map,
+            is_historical,
         )
         self.entity_type = "Item"
         self.api_endpoint = "item"
         self.output_dir_key = "output_dir_item"
+        self.referenced_item_names = self._get_referenced_item_names()
+
+    def _get_referenced_item_names(self) -> set[str]:
+        """Collects item identifiers referenced by already-generated resources."""
+        names: set[str] = set()
+        if self.config.generation is None:
+            return names
+
+        def visit_evolution(node: Any) -> None:
+            if not isinstance(node, dict):
+                return
+            for evolution in node.get("evolves_to", []):
+                for detail in evolution.get("evolution_details", []):
+                    for field in ("item", "held_item"):
+                        value = detail.get(field)
+                        if isinstance(value, str):
+                            names.add(value)
+                visit_evolution(evolution)
+
+        output_keys = (
+            "output_dir_move",
+            "output_dir_pokemon",
+            "output_dir_variant",
+            "output_dir_transformation",
+            "output_dir_cosmetic",
+        )
+        for output_key in output_keys:
+            directory = self.config.output_path(output_key)
+            if not directory.exists():
+                continue
+            for path in directory.glob("*.json"):
+                try:
+                    with path.open(encoding="utf-8") as file:
+                        data = json.load(file)
+                except (OSError, json.JSONDecodeError) as error:
+                    logger.warning(
+                        "Could not inspect item references in %s: %s", path, error
+                    )
+                    continue
+                machine = data.get("machine")
+                if isinstance(machine, str):
+                    names.add(machine)
+                held_items = data.get("held_items")
+                if isinstance(held_items, dict):
+                    names.update(held_items)
+                visit_evolution(data.get("evolution_chain"))
+        return names
 
     def _get_all_item_refs(self) -> List[Dict[str, str]]:
         """
@@ -59,6 +109,22 @@ class ItemParser(BaseParser):
         """
         endpoint_url = f"{self.config.api_base_url}{self.api_endpoint}?limit={DEFAULT_API_LIMIT}"
         return self.api_client.get(endpoint_url).get("results", [])
+
+    def _apply_generation_policy(self, cleaned_data: Dict[str, Any]) -> None:
+        """Clears item fields for which PokéAPI provides only current values."""
+        if not self.is_historical:
+            return
+        for field in (
+            "cost",
+            "fling_power",
+            "fling_effect",
+            "attributes",
+            "category",
+            "effect",
+            "short_effect",
+            "sprite",
+        ):
+            cleaned_data[field] = None
 
     def process(
         self, resource_ref: Dict[str, str]
@@ -80,18 +146,19 @@ class ItemParser(BaseParser):
             data = self.api_client.get(resource_ref["url"])
             game_indices = data.get("game_indices", [])
 
-            # Skip items with no game indices
-            if not game_indices:
-                return None
-
             # Determine which generations this item appears in
             item_generations = {
                 int(game_index["generation"]["url"].split("/")[-2])
                 for game_index in game_indices
             }
 
-            # Only process if item exists in the target generation
-            if self.target_gen is not None and self.target_gen in item_generations:
+            # Generation outputs are cumulative catalogs, so retain every item
+            # introduced by or before the target generation.
+            has_generation_evidence = bool(item_generations) and (
+                self.target_gen is None or min(item_generations) <= self.target_gen
+            )
+            is_referenced = data.get("name") in self.referenced_item_names
+            if has_generation_evidence or is_referenced:
                 # Extract fling effect name if it exists
                 fling_effect_obj = data.get("fling_effect")
                 fling_effect_name = (
@@ -121,6 +188,7 @@ class ItemParser(BaseParser):
                     ),
                     "sprite": data.get("sprites", {}).get("default"),
                 }
+                self._apply_generation_policy(cleaned_data)
 
                 # Write to file
                 output_path = str(self.config.output_path(self.output_dir_key))

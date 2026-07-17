@@ -12,6 +12,28 @@ from .generation import GenerationParser
 
 logger = getLogger(__name__)
 
+PHYSICAL_TYPES_BEFORE_GENERATION_FOUR = {
+    "normal",
+    "fighting",
+    "flying",
+    "poison",
+    "ground",
+    "rock",
+    "bug",
+    "ghost",
+    "steel",
+}
+SPECIAL_TYPES_BEFORE_GENERATION_FOUR = {
+    "fire",
+    "water",
+    "grass",
+    "electric",
+    "psychic",
+    "ice",
+    "dragon",
+    "dark",
+}
+
 
 class MoveParser(GenerationParser):
     """
@@ -34,6 +56,7 @@ class MoveParser(GenerationParser):
         generation_version_groups: Dict[int, List[str]],
         target_gen: int,
         generation_dex_map: Optional[Dict[int, str]] = None,
+        is_historical: bool = False,
     ):
         super().__init__(
             config,
@@ -41,6 +64,7 @@ class MoveParser(GenerationParser):
             generation_version_groups,
             target_gen,
             generation_dex_map,
+            is_historical,
         )
         self.entity_type = "Move"
         self.api_endpoint = "moves"
@@ -229,6 +253,34 @@ class MoveParser(GenerationParser):
         for field, values_map in generation_specific_values.items():
             cleaned_data[field] = values_map
 
+    def _apply_generation_policy(self, cleaned_data: Dict[str, Any]) -> None:
+        """Marks unversioned history unknown and derives pre-split move classes."""
+        if not self.is_historical:
+            return
+
+        cleaned_data["priority"] = None
+        cleaned_data["target"] = None
+        cleaned_data["metadata"] = None
+        cleaned_data["stat_changes"] = None
+
+        if self.target_gen is None or self.target_gen >= 4:
+            cleaned_data["damage_class"] = None
+            return
+        if cleaned_data["damage_class"] == "status":
+            return
+
+        types = {
+            value
+            for value in cleaned_data.get("type", {}).values()
+            if value is not None
+        }
+        if types and types <= PHYSICAL_TYPES_BEFORE_GENERATION_FOUR:
+            cleaned_data["damage_class"] = "physical"
+        elif types and types <= SPECIAL_TYPES_BEFORE_GENERATION_FOUR:
+            cleaned_data["damage_class"] = "special"
+        else:
+            cleaned_data["damage_class"] = None
+
     def process(
         self, resource_ref: Dict[str, str]
     ) -> Optional[Union[Dict[str, Any], str]]:
@@ -285,6 +337,7 @@ class MoveParser(GenerationParser):
             # Apply historical stat changes for the target generation
             past_values = data.get("past_values", [])
             self._apply_past_values(cleaned_data, past_values)
+            self._apply_generation_policy(cleaned_data)
 
             # Write to file
             output_path = str(self.config.output_path(self.output_dir_key))

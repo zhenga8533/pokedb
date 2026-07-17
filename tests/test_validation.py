@@ -3,7 +3,7 @@ import json
 import pytest
 
 from pokedb.utils.exceptions import DataValidationError
-from pokedb.validation import validate_generation_output
+from pokedb.validation import RESOURCE_PATHS, validate_generation_output
 
 
 def _write_json(path, data):
@@ -12,15 +12,25 @@ def _write_json(path, data):
 
 
 def _write_ability_dataset(tmp_path, version_group_key):
+    resources = {resource: [] for resource in RESOURCE_PATHS}
+    resources["ability"] = [{"name": "stench", "id": 1}]
     _write_json(
         tmp_path / "index.json",
         {
             "metadata": {
+                "schema_version": 3,
+                "source": "pokeapi",
+                "api_base_url": "https://example.test/",
+                "is_historical": False,
                 "generation": 9,
                 "version_groups": ["scarlet-violet"],
-                "counts": {"ability": 1},
+                "created_at": "2026-01-01T00:00:00+00:00",
+                "counts": {
+                    resource: (1 if resource == "ability" else 0)
+                    for resource in RESOURCE_PATHS
+                },
             },
-            "ability": [{"name": "stench", "id": 1}],
+            **resources,
         },
     )
     _write_json(

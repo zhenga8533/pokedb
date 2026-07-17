@@ -1,6 +1,10 @@
 import json
 
-from pokedb.output import publish_staged_output, write_index_file
+from pokedb.output import (
+    RESOURCE_INDEX_KEYS,
+    publish_staged_output,
+    write_index_file,
+)
 from pokedb.utils.file_ops import write_json_file
 
 
@@ -16,6 +20,8 @@ def test_partial_index_update_preserves_unrequested_resources(tmp_path):
         target_gen=9,
         output_dir=tmp_path,
         generation_version_groups={9: ["scarlet-violet"]},
+        api_base_url="https://pokeapi.co/api/v2/",
+        is_historical=False,
         existing_index=existing_index,
         replaced_keys={"move"},
     )
@@ -23,7 +29,13 @@ def test_partial_index_update_preserves_unrequested_resources(tmp_path):
     index = json.loads((tmp_path / "index.json").read_text(encoding="utf-8"))
     assert index["ability"] == existing_index["ability"]
     assert index["move"] == [{"id": 2, "name": "karate-chop"}]
-    assert index["metadata"]["counts"] == {"ability": 1, "move": 1}
+    assert index["metadata"]["counts"] == {
+        key: (1 if key in {"ability", "move"} else 0)
+        for key in RESOURCE_INDEX_KEYS
+    }
+    assert index["metadata"]["schema_version"] == 3
+    assert index["metadata"]["source"] == "pokeapi"
+    assert set(index) == {"metadata", *RESOURCE_INDEX_KEYS}
 
 
 def test_publish_staged_output_replaces_complete_tree(tmp_path):

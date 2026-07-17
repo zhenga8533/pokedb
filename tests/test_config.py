@@ -25,14 +25,6 @@ def test_load_config_uses_packaged_defaults(monkeypatch, tmp_path):
     assert config.parser_cache_dir == tmp_path / ".cache/parser"
 
 
-def test_previous_import_path_remains_compatible():
-    from pokedb.utils.config import load_config as compatibility_loader
-    from pokedb.utils import load_config as utility_loader
-
-    assert compatibility_loader is load_config
-    assert utility_loader is load_config
-
-
 def test_custom_config_is_a_partial_override_relative_to_its_directory(tmp_path):
     config_path = write_config(
         tmp_path / "config.json",
@@ -91,13 +83,12 @@ def test_malformed_json_is_rejected(tmp_path):
 def test_nullable_cache_paths_disable_caching(tmp_path):
     config_path = write_config(
         tmp_path / "config.json",
-        {"parser_cache_dir": None, "scraper_cache_dir": None},
+        {"parser_cache_dir": None},
     )
 
     config = load_config(config_path)
 
     assert config.parser_cache_dir is None
-    assert config.scraper_cache_dir is None
 
 
 def test_config_is_immutable():
@@ -128,27 +119,13 @@ def test_no_cache_returns_a_new_config():
 
     assert uncached is not config
     assert uncached.parser_cache_dir is None
-    assert uncached.scraper_cache_dir is None
     assert uncached.cache_expires is None
 
 
-def test_legacy_output_paths_are_migrated(tmp_path):
-    legacy = load_config().to_dict()
-    legacy.pop("output_root")
-    root = tmp_path / "legacy-output"
-    legacy.update(
-        {
-            "output_dir_ability": str(root / "gen{gen_num}/ability"),
-            "output_dir_item": str(root / "gen{gen_num}/item"),
-            "output_dir_move": str(root / "gen{gen_num}/move"),
-            "output_dir_pokemon": str(root / "gen{gen_num}/pokemon/default"),
-            "output_dir_variant": str(root / "gen{gen_num}/pokemon/variant"),
-            "output_dir_transformation": str(
-                root / "gen{gen_num}/pokemon/transformation"
-            ),
-            "output_dir_cosmetic": str(root / "gen{gen_num}/pokemon/cosmetic"),
-        }
+def test_removed_scraper_config_is_rejected(tmp_path):
+    config_path = write_config(
+        tmp_path / "config.json", {"scraper_cache_dir": ".cache/scraper"}
     )
-    config_path = write_config(tmp_path / "legacy.json", legacy)
 
-    assert load_config(config_path).output_root == root
+    with pytest.raises(ConfigurationError, match="Invalid configuration schema"):
+        load_config(config_path)

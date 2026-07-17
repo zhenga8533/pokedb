@@ -1,4 +1,4 @@
-"""Utility functions and helpers for the PokemonDB parser.
+"""Utility functions and helpers for the PokéDB parser.
 
 This package contains:
 - exceptions: Custom exception classes
@@ -8,8 +8,6 @@ This package contains:
 - text_utils: Text parsing and transformation utilities
 """
 
-from typing import Any
-
 # Exceptions
 from .exceptions import (
     ConfigurationError,
@@ -17,8 +15,7 @@ from .exceptions import (
     GenerationNotFoundError,
     ParserExecutionError,
     PokedexMappingError,
-    PokemonDBError,
-    ScraperError,
+    PokeDBError,
 )
 
 # Constants
@@ -41,18 +38,16 @@ from .text_utils import (
     get_all_english_entries_for_gen_by_game,
     get_english_entry,
     int_to_roman,
-    parse_gen_range,
 )
 
 __all__ = [
     # Exceptions
-    "PokemonDBError",
+    "PokeDBError",
     "GenerationNotFoundError",
     "PokedexMappingError",
     "ConfigurationError",
     "DataValidationError",
     "ParserExecutionError",
-    "ScraperError",
     # Constants
     "MAX_ROMAN_NUMERAL",
     "DEFAULT_API_LIMIT",
@@ -62,25 +57,12 @@ __all__ = [
     "get_cache_path",
     "write_json_file",
     "write_json_atomic",
-    # Backward-compatible configuration access
-    "Config",
-    "load_config",
     # API helpers
     "get_latest_generation",
     "get_generation_dex_map",
     # Text utilities
-    "parse_gen_range",
     "int_to_roman",
     "get_all_english_entries_for_gen_by_game",
     "get_all_english_entries_by_version",
     "get_english_entry",
 ]
-
-
-def __getattr__(name: str) -> Any:
-    """Loads the former utility-level configuration exports on demand."""
-    if name in {"Config", "load_config"}:
-        from ..config import Config, load_config
-
-        return {"Config": Config, "load_config": load_config}[name]
-    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

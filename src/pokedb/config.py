@@ -30,7 +30,6 @@ class Config:
     max_retries: int
     max_workers: int
     parser_cache_dir: Path | None
-    scraper_cache_dir: Path | None
     cache_expires: int | None
     output_root: Path
     generation: int | None = field(default=None, repr=False)
@@ -62,10 +61,10 @@ class Config:
                 raise ConfigurationError("cache_expires must be an integer or null")
             if self.cache_expires < 0:
                 raise ConfigurationError("cache_expires cannot be negative")
-        for name in ("parser_cache_dir", "scraper_cache_dir"):
-            value = getattr(self, name)
-            if value is not None and not isinstance(value, Path):
-                raise ConfigurationError(f"{name} must be a path or null")
+        if self.parser_cache_dir is not None and not isinstance(
+            self.parser_cache_dir, Path
+        ):
+            raise ConfigurationError("parser_cache_dir must be a path or null")
         if not isinstance(self.output_root, Path):
             raise ConfigurationError("output_root must be a path")
         if self._generation_root_override is not None and not isinstance(
@@ -102,11 +101,10 @@ class Config:
         return replace(self, _generation_root_override=generation_root)
 
     def without_cache(self) -> Config:
-        """Returns settings with all persistent caches disabled."""
+        """Returns settings with the persistent API cache disabled."""
         return replace(
             self,
             parser_cache_dir=None,
-            scraper_cache_dir=None,
             cache_expires=None,
         )
 
@@ -123,7 +121,7 @@ class Config:
         values = asdict(self)
         values.pop("generation")
         values.pop("_generation_root_override")
-        for key in ("parser_cache_dir", "scraper_cache_dir", "output_root"):
+        for key in ("parser_cache_dir", "output_root"):
             if values[key] is not None:
                 values[key] = str(values[key])
         return values
@@ -145,42 +143,6 @@ def _read_json(path: Path) -> dict[str, Any]:
     if not isinstance(value, dict):
         raise ConfigurationError("Configuration must be a JSON object")
     return value
-
-
-def _normalize_legacy_output_paths(overrides: dict[str, Any]) -> dict[str, Any]:
-    """Converts the previous full output-path schema to ``output_root``."""
-    legacy_keys = set(OUTPUT_PATHS).intersection(overrides)
-    if not legacy_keys:
-        return overrides
-    if legacy_keys != set(OUTPUT_PATHS):
-        raise ConfigurationError(
-            "Legacy output configuration must include every output_dir_* setting; "
-            "prefer the new output_root setting"
-        )
-    if "output_root" in overrides:
-        raise ConfigurationError(
-            "Use output_root or legacy output_dir_* settings, not both"
-        )
-
-    legacy_paths = {key: Path(str(overrides[key])) for key in OUTPUT_PATHS}
-    generation_dir = legacy_paths["output_dir_ability"].parent
-    if generation_dir.name != "gen{gen_num}":
-        raise ConfigurationError(
-            "Legacy output paths must use the gen{gen_num} directory convention"
-        )
-    output_root = generation_dir.parent
-    for key, relative_path in OUTPUT_PATHS.items():
-        expected = output_root / "gen{gen_num}" / relative_path
-        if legacy_paths[key] != expected:
-            raise ConfigurationError(
-                "Legacy output directories must share one generation output root"
-            )
-
-    normalized = {
-        key: value for key, value in overrides.items() if key not in OUTPUT_PATHS
-    }
-    normalized["output_root"] = str(output_root)
-    return normalized
 
 
 def _resolve_path(value: Any, name: str, base_dir: Path, nullable: bool) -> Path | None:
@@ -212,16 +174,13 @@ def load_config(config_path: str | Path | None = None) -> Config:
         base_dir = Path.cwd()
     else:
         resolved_path = Path(configured_path).expanduser().resolve()
-        overrides = _normalize_legacy_output_paths(_read_json(resolved_path))
+        overrides = _read_json(resolved_path)
         raw_config = defaults | overrides
         base_dir = resolved_path.parent
 
     raw_config = dict(raw_config)
     raw_config["parser_cache_dir"] = _resolve_path(
         raw_config.get("parser_cache_dir"), "parser_cache_dir", base_dir, True
-    )
-    raw_config["scraper_cache_dir"] = _resolve_path(
-        raw_config.get("scraper_cache_dir"), "scraper_cache_dir", base_dir, True
     )
     raw_config["output_root"] = _resolve_path(
         raw_config.get("output_root"), "output_root", base_dir, False

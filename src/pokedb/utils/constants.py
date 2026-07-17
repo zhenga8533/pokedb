@@ -1,4 +1,4 @@
-"""Constants used throughout the PokemonDB parser."""
+"""Constants used throughout the PokéDB parser."""
 
 # Roman numeral conversion limits
 MAX_ROMAN_NUMERAL = 3999

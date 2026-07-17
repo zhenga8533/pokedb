@@ -43,6 +43,7 @@ class BaseParser(ABC):
         generation_version_groups: Optional[Dict[int, List[str]]] = None,
         target_gen: Optional[int] = None,
         generation_dex_map: Optional[Dict[int, str]] = None,
+        is_historical: bool = False,
     ):
         """
         Initializes the BaseParser with configuration and dependencies.
@@ -53,12 +54,14 @@ class BaseParser(ABC):
             generation_version_groups: Optional mapping of generation numbers to version groups
             target_gen: Optional target generation number to filter data
             generation_dex_map: Optional mapping of generation to regional Pokédex name
+            is_historical: Whether unversioned current values must be suppressed
         """
         self.config = config
         self.api_client = api_client
         self.generation_version_groups = generation_version_groups
         self.target_gen = target_gen
         self.generation_dex_map = generation_dex_map
+        self.is_historical = is_historical
 
         # These must be set by subclasses
         self.entity_type: str = ""  # Human-readable type name (e.g., "Ability", "Move")
@@ -184,8 +187,7 @@ class BaseParser(ABC):
             # Sort each category by ID
             for category_key in pokemon_summaries:
                 pokemon_summaries[category_key].sort(key=lambda x: x.get("id", 0))
-            # Return only non-empty categories
-            return {key: value for key, value in pokemon_summaries.items() if value}
+            return pokemon_summaries
 
         # Return regular summary results
         summary_data.sort(key=lambda x: x.get("id", 0))

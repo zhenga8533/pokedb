@@ -4,7 +4,7 @@
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A Python tool for creating a comprehensive, generation-accurate Pokémon database. It combines data from [PokéAPI](https://pokeapi.co/) with historical changes from [Pokémon DB](https://pokemondb.net/).
+A Python tool for creating a comprehensive, generation-aware Pokémon database from the structured [PokéAPI](https://pokeapi.co/).
 
 Parsed generation data is automatically saved to the `data` branch weekly.
 
@@ -20,18 +20,18 @@ pokedb/
 |       |-- default_config.json  # Packaged default values
 |       |-- output.py            # Transactional output publishing
 |       |-- runner.py            # Parser orchestration and metadata
-|       |-- scraper.py           # Historical data scraper
 |       |-- validation.py        # Runtime output schema and integrity checks
 |       |-- parsers/             # Ability, item, move, and Pokémon parsers
 |       `-- utils/               # Focused shared helpers
+|-- .github/                     # Workflows and data-branch documentation
 |-- tests/
 `-- pyproject.toml               # Package metadata and dependencies
 ```
 
 ## Core Features
 
-- Combines structured PokéAPI data with historical Pokémon DB data.
-- Reconstructs generation-specific types, abilities, stats, EV yields, and more.
+- Uses PokéAPI as its sole runtime data source.
+- Reconstructs generation-specific types, abilities, stats, EV yields, moves, and evolutions.
 - Processes resources concurrently.
 - Builds output in staging and publishes only complete successful runs.
 - Generates data for the latest, a specific, or every generation.
@@ -83,25 +83,30 @@ Relative paths in a custom file are resolved relative to that file. Without a cu
 | `max_retries` | `3` | Maximum HTTP retry count. |
 | `max_workers` | `10` | Parser worker-thread count. |
 | `parser_cache_dir` | `./.cache/parser` | API cache directory, or `null` to disable it. |
-| `scraper_cache_dir` | `./.cache/scraper` | Scraper cache directory, or `null` to disable it. |
 | `cache_expires` | `3600` | Cache lifetime in seconds, or `null` to keep entries indefinitely. |
 | `output_root` | `./.output` | Root containing generated `gen1`, `gen2`, and other generation directories. |
 
-`--no-cache` disables both caches for the current run without changing the configuration file.
+`--no-cache` disables the API cache for the current run without changing the configuration file.
 
-Older complete configurations containing every `output_dir_*` setting remain supported and are converted to `output_root` when loaded. New configurations should use `output_root`.
-
-Python callers should import `Config` and `load_config` from `pokedb` or `pokedb.config`. The previous `pokedb.utils.config` import path remains available for compatibility.
+Python callers should import `Config` and `load_config` from `pokedb` or `pokedb.config`.
 
 ## Documentation
 
-See the [project wiki](https://github.com/zhenga8533/pokedb/wiki) for data structures and API usage.
+See the [project wiki](https://github.com/zhenga8533/pokedb/wiki) for API usage,
+the data model, generation semantics, and configuration details. The wiki is
+maintained in its dedicated Git repository.
 
 ## Data contract and validation
 
-Each generation is written below `output_root/genN`. Its `index.json` contains
-generation metadata, resource summaries, and counts; individual resource files live
-in the corresponding `ability`, `item`, `move`, or `pokemon` subdirectory.
+Each generation is written below `output_root/genN`. A generation is a cumulative
+catalog: it includes resources introduced by or before that generation, but does not
+imply that every resource is available in every game. Version-specific maps are used
+where PokéAPI supplies that detail.
+
+The generation `index.json` contains schema version `3`, PokéAPI source metadata,
+version groups, resource summaries, and counts. All resource keys are always present,
+including empty lists for mechanics or categories with no entries. Individual files
+live in the corresponding `ability`, `item`, `move`, or `pokemon` subdirectory.
 
 Generated data is validated before the staging tree is published. Validation checks:
 
@@ -109,7 +114,8 @@ Generated data is validated before the staging tree is published. Validation che
 - required scalar and collection types for each resource;
 - version-group maps for generation-specific ability and move fields;
 - Pokémon stat names and ranges, type counts, ability and EV entries, learnsets,
-  and references to generated abilities when ability data is present.
+  and references to generated abilities, moves, items, and evolution species when
+  the corresponding catalogs are present.
 
 Identifiers originating in PokéAPI retain their canonical kebab-case spelling, such
 as `scarlet-violet` and `special-attack`. Structural field names remain snake_case.
@@ -122,22 +128,42 @@ every historical condition from PokéAPI. Each condition includes
 `introduced_in_version_group` and the target `version_groups` for which it was
 selected. This means, for example, Gen 9 Glaceon uses the Ice Stone condition rather
 than retaining the obsolete Ice Rock locations from Generations 4–7.
+Each evolution edge has an `availability` value. `available` edges contain one or
+more applicable conditions; `unavailable` means both species existed but PokéAPI has
+no applicable method for the target generation. Future baby species are removed and
+their historical descendant is promoted to the chain root. Empty special relationships
+such as Phione and Manaphy are not represented as evolutions.
 
-For historical Pokémon data, structured PokéAPI `past_types`, `past_abilities`, and
-`past_stats` are applied first. Pokémon DB's changes section supplements fields that
-PokéAPI does not track. Generation 1 uses its original single `special` stat, and
-abilities and modern EV yields are empty before Generation 3.
+For historical Pokémon data, PokéAPI `past_types`, `past_abilities`, and `past_stats`
+reconstruct the supported values. Generation 1 uses its original single `special`
+stat. Abilities are empty before Generation 3, while `ev_yield` is `null` because
+Generations 1–2 used Stat Experience rather than modern EV yields.
 
-Pokémon DB occasionally describes a change for one game rather than an entire
-generation (for example, Pikachu's friendship in Pokémon Yellow). The current output
-model does not flatten such a game-specific exception into a generation-wide scalar.
-The scraper records these lines as `unsupported_changes` in its cache and emits a
-warning instead of silently mistranslating them.
+The schema distinguishes an empty collection (the mechanic applies but has no
+entries) from `null` (the mechanic is unavailable, inapplicable, or not versioned by
+PokéAPI). For historical output, current-only Pokémon values such as base experience,
+friendship, capture rate, breeding fields, growth rate, and form switching are
+`null`. Current-only move and item mechanics are also `null`; pre-Generation 4 move
+damage class is derived from the reconstructed move type. Historical sprites contain
+only the target generation's version assets, and historical cries are `null`.
 
-Outputs generated before this data-contract validation was introduced may contain
-underscore-normalized identifier keys or stale form-specific fields. Regenerate them
-with `python -m pokedb --all --gen <generation> --force` rather than mixing old and
-new resource files in a partial run.
+PokéAPI does not expose exact history for every scalar or every same-generation game
+difference. PokéDB records these cases as unknown instead of copying a modern value
+or inferring unsupported data.
+
+PokéAPI `game_indices` are also not a complete item-introduction history: many
+Generation 1–2 items only have later indices, and some current items have none.
+The item catalog therefore combines structured game-index evidence with item
+references from generated machines, held items, and evolution conditions. This
+guarantees referentially complete output without scraping a secondary source, but it
+does not claim to enumerate every unreferenced item available in each historical game.
+When generating all resources, items run after moves and Pokémon so these references
+are available. For the same guarantee in a partial run, regenerate `item` together
+with or after the resources that reference it.
+
+Outputs generated with schema versions 1–2 are incompatible. Regenerate the complete
+dataset with `python -m pokedb --all --gen all --force`; do not mix old and new
+resource files in a partial run.
 
 Python callers can validate an existing generation explicitly:
 

@@ -11,6 +11,8 @@ from .utils import write_json_atomic
 
 logger = logging.getLogger(__name__)
 
+DATA_SCHEMA_VERSION = 3
+
 PARSER_OUTPUT_KEYS = {
     "ability": ("output_dir_ability",),
     "item": ("output_dir_item",),
@@ -28,6 +30,9 @@ PARSER_SUMMARY_KEYS = {
     "move": ("move",),
     "pokemon": ("pokemon", "variant", "transformation", "cosmetic"),
 }
+RESOURCE_INDEX_KEYS = tuple(
+    key for keys in PARSER_SUMMARY_KEYS.values() for key in keys
+)
 
 
 def write_index_file(
@@ -35,6 +40,8 @@ def write_index_file(
     target_gen: int,
     output_dir: Path,
     generation_version_groups: Dict[int, List[str]],
+    api_base_url: str,
+    is_historical: bool,
     existing_index: Optional[Dict[str, Any]] = None,
     replaced_keys: Optional[Set[str]] = None,
 ) -> None:
@@ -43,21 +50,27 @@ def write_index_file(
     resource_index.pop("metadata", None)
     for key in replaced_keys or set():
         resource_index.pop(key, None)
-    resource_index.update(
-        {key: value for key, value in all_summaries.items() if value}
-    )
+    resource_index.update(all_summaries)
+    for key in RESOURCE_INDEX_KEYS:
+        resource_index.setdefault(key, [])
 
     metadata = {
+        "schema_version": DATA_SCHEMA_VERSION,
+        "source": "pokeapi",
+        "api_base_url": api_base_url,
+        "is_historical": is_historical,
         "generation": target_gen,
         "version_groups": generation_version_groups.get(target_gen, []),
-        "createdAt": datetime.now(timezone.utc).isoformat(),
+        "created_at": datetime.now(timezone.utc).isoformat(),
         "counts": {
             key: len(value)
             for key, value in resource_index.items()
             if isinstance(value, list)
         },
     }
-    write_json_atomic(output_dir / "index.json", {"metadata": metadata, **resource_index})
+    write_json_atomic(
+        output_dir / "index.json", {"metadata": metadata, **resource_index}
+    )
     logger.info("Top-level index.json created at '%s'", output_dir / "index.json")
 
 

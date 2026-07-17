@@ -1,35 +1,8 @@
 """Text parsing and transformation utilities."""
 
-import re
 from typing import Any, Dict, List, Optional
 
 from .constants import MAX_ROMAN_NUMERAL, ROMAN_NUMERAL_MAP
-
-
-def parse_gen_range(generation_text: str) -> Optional[List[int]]:
-    """
-    Parses a generation string like 'Generations 3-6' into a list of generation numbers.
-
-    Args:
-        generation_text: A string containing generation information (e.g., "Generation 5", "Generations 3-6")
-
-    Returns:
-        A list of generation numbers, or None if the text cannot be parsed
-
-    Examples:
-        >>> parse_gen_range("Generation 5")
-        [5]
-        >>> parse_gen_range("Generations 3-6")
-        [3, 4, 5, 6]
-    """
-    normalized_text = generation_text.lower()
-    if "generation" in normalized_text:
-        numbers = re.findall(r"\d+", normalized_text)
-        if len(numbers) == 1:
-            return [int(numbers[0])]
-        if len(numbers) == 2:
-            return list(range(int(numbers[0]), int(numbers[1]) + 1))
-    return None
 
 
 def int_to_roman(num: int) -> str:
@@ -208,11 +181,13 @@ def get_english_entry(
         # Return the first match in priority order
         for version_group_name in all_version_groups:
             if version_group_name in entry_map:
-                return " ".join(entry_map[version_group_name][key_name].split())
+                cleaned = " ".join(entry_map[version_group_name][key_name].split())
+                return cleaned or None
 
     # Fallback: return the first English entry found
     for entry in entries:
         if entry.get("language", {}).get("name") == "en":
-            return " ".join(entry[key_name].split())
+            cleaned = " ".join(entry[key_name].split())
+            return cleaned or None
 
     return None
