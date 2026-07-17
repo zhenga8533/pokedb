@@ -29,8 +29,8 @@
         "hp": 40,
         "attack": 30,
         "defense": 30,
-        "special_attack": 40,
-        "special_defense": 50,
+        "special-attack": 40,
+        "special-defense": 50,
         "speed": 30
     },
     "ev_yield": [
@@ -41,43 +41,10 @@
     ],
     "height": 5,
     "weight": 26,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/270.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/270.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/270.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/270.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/270.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/270.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/270.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/270.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/270.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/270.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/270.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/270.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/270.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/270.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/270.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "black_white": {
+            "black-white": {
                 "animated": {
                     "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/270.gif",
                     "back_female": null,
@@ -99,91 +66,7 @@
             }
         }
     },
-    "base_experience": 44,
-    "base_happiness": 70,
-    "capture_rate": 255,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 295,
-    "growth_rate": "medium-slow",
-    "habitat": "waters-edge",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 270
-    },
-    "color": "green",
-    "shape": "armor",
-    "egg_groups": [
-        "water1",
-        "plant"
-    ],
-    "flavor_text": {
-        "black": "It looks like an aquatic plant and serves as a ferry to Pokémon that can’t swim.",
-        "white": "It looks like an aquatic plant and serves as a ferry to Pokémon that can’t swim.",
-        "black_2": "It looks like an aquatic plant and serves as a ferry to Pokémon that can’t swim.",
-        "white_2": "It looks like an aquatic plant and serves as a ferry to Pokémon that can’t swim."
-    },
-    "genus": "Water Weed Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "lotad",
-        "evolves_to": [
-            {
-                "species_name": "lombre",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 14,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "ludicolo",
-                        "evolution_details": {
-                            "item": "water-stone",
-                            "trigger": "use-item",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": null,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -396,7 +279,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "growl",
                 "level_learned_at": 3,
@@ -623,6 +506,121 @@
                 "level_learned_at": 0,
                 "version_groups": [
                     "black-2-white-2"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 295,
+    "growth_rate": null,
+    "habitat": "waters-edge",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 270
+    },
+    "color": "green",
+    "shape": "armor",
+    "egg_groups": null,
+    "flavor_text": {
+        "black": "It looks like an aquatic plant and serves as a ferry to Pokémon that can’t swim.",
+        "white": "It looks like an aquatic plant and serves as a ferry to Pokémon that can’t swim.",
+        "black-2": "It looks like an aquatic plant and serves as a ferry to Pokémon that can’t swim.",
+        "white-2": "It looks like an aquatic plant and serves as a ferry to Pokémon that can’t swim."
+    },
+    "genus": "Water Weed Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "lotad",
+        "evolves_to": [
+            {
+                "species_name": "lombre",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "ruby-sapphire",
+                        "version_groups": [
+                            "black-white",
+                            "black-2-white-2"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 14,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "ludicolo",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "ruby-sapphire",
+                                "version_groups": [
+                                    "black-white",
+                                    "black-2-white-2"
+                                ],
+                                "base_form": null,
+                                "evolved_form": null,
+                                "item": "water-stone",
+                                "trigger": "use-item",
+                                "gender": null,
+                                "held_item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": null,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": null,
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

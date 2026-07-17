@@ -28,8 +28,8 @@
         "hp": 85,
         "attack": 115,
         "defense": 75,
-        "special_attack": 55,
-        "special_defense": 75,
+        "special-attack": 55,
+        "special-defense": 75,
         "speed": 82
     },
     "ev_yield": [
@@ -40,108 +40,44 @@
     ],
     "height": 11,
     "weight": 250,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10126.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10126.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10126.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10126.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10126.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10126.svg",
+        "versions": {
+            "brilliant-diamond-shining-pearl": {
+                "front_default": null,
                 "front_female": null
             },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10126.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10126.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10126.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10126.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10126.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10126.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10126.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10126.gif",
-                "front_shiny_female": null
-            }
-        },
-        "versions": {
             "icons": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/745-midnight.png",
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/10126.png",
                 "front_female": null
             }
         }
     },
-    "base_experience": 170,
-    "base_happiness": 70,
-    "capture_rate": 90,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 745,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "rockruff",
-    "pokedex_numbers": {
-        "national": 745
-    },
-    "color": "brown",
-    "shape": "quadruped",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {
-        "sword": "This Lycanroc is calm and cautious. The rocks jutting from its mane are razor sharp.",
-        "shield": "With swift movements, this Pokémon gradually backs its prey into a corner. Lycanroc’s fangs are always aimed toward opponents’ weak spots."
-    },
-    "genus": "Wolf Pokémon",
-    "generation": "generation-vii",
-    "evolution_chain": {
-        "species_name": "rockruff",
-        "evolves_to": [
-            {
-                "species_name": "lycanroc",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 25,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "day",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
+            {
+                "name": "mega-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "fire-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
             {
                 "name": "swords-dance",
                 "level_learned_at": 0,
@@ -150,14 +86,7 @@
                 ]
             },
             {
-                "name": "agility",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "swift",
+                "name": "mega-kick",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -192,6 +121,13 @@
                 ]
             },
             {
+                "name": "reversal",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
                 "name": "protect",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -200,6 +136,13 @@
             },
             {
                 "name": "scary-face",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "outrage",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -248,6 +191,13 @@
                 ]
             },
             {
+                "name": "uproar",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
                 "name": "facade",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -256,6 +206,13 @@
             },
             {
                 "name": "taunt",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "revenge",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -311,7 +268,7 @@
                 ]
             },
             {
-                "name": "assurance",
+                "name": "payback",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -374,21 +331,21 @@
                 ]
             },
             {
+                "name": "low-sweep",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
                 "name": "round",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "drill-run",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "tail-slap",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -409,6 +366,13 @@
                 ]
             },
             {
+                "name": "throat-chop",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
                 "name": "psychic-fangs",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -423,7 +387,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "sand-attack",
                 "level_learned_at": 1,
@@ -460,15 +424,22 @@
                 ]
             },
             {
-                "name": "rock-throw",
-                "level_learned_at": 12,
+                "name": "counter",
+                "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
                 ]
             },
             {
-                "name": "quick-attack",
+                "name": "counter",
                 "level_learned_at": 1,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "rock-throw",
+                "level_learned_at": 12,
                 "version_groups": [
                     "sword-shield"
                 ]
@@ -488,6 +459,13 @@
                 ]
             },
             {
+                "name": "reversal",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
                 "name": "scary-face",
                 "level_learned_at": 48,
                 "version_groups": [
@@ -495,8 +473,22 @@
                 ]
             },
             {
+                "name": "endure",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
                 "name": "crunch",
                 "level_learned_at": 42,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 1,
                 "version_groups": [
                     "sword-shield"
                 ]
@@ -516,20 +508,6 @@
                 ]
             },
             {
-                "name": "sucker-punch",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "sucker-punch",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
                 "name": "stone-edge",
                 "level_learned_at": 60,
                 "version_groups": [
@@ -542,20 +520,163 @@
                 "version_groups": [
                     "sword-shield"
                 ]
-            },
+            }
+        ],
+        "tutor": [
             {
-                "name": "quick-guard",
-                "level_learned_at": 1,
+                "name": "lash-out",
+                "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
                 ]
-            },
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 745,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": "rockruff",
+    "pokedex_numbers": {
+        "national": 745
+    },
+    "color": "brown",
+    "shape": "quadruped",
+    "egg_groups": null,
+    "flavor_text": {
+        "sword": "This Lycanroc is calm and cautious. The rocks jutting from its mane are razor sharp.",
+        "shield": "With swift movements, this Pokémon gradually backs its prey into a corner. Lycanroc’s fangs are always aimed toward opponents’ weak spots."
+    },
+    "genus": "Wolf Pokémon",
+    "generation": "generation-vii",
+    "evolution_chain": {
+        "species_name": "rockruff",
+        "evolves_to": [
             {
-                "name": "accelerock",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "sword-shield"
-                ]
+                "species_name": "lycanroc",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "sword-shield",
+                            "the-isle-of-armor",
+                            "the-crown-tundra",
+                            "brilliant-diamond-shining-pearl",
+                            "legends-arceus"
+                        ],
+                        "base_form": null,
+                        "evolved_form": "lycanroc-midday",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 25,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": "day",
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    },
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "sword-shield",
+                            "the-isle-of-armor",
+                            "the-crown-tundra",
+                            "brilliant-diamond-shining-pearl",
+                            "legends-arceus"
+                        ],
+                        "base_form": null,
+                        "evolved_form": "lycanroc-midnight",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 25,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": "night",
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    },
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "sword-shield",
+                            "the-isle-of-armor",
+                            "the-crown-tundra",
+                            "brilliant-diamond-shining-pearl",
+                            "legends-arceus"
+                        ],
+                        "base_form": null,
+                        "evolved_form": "lycanroc-dusk",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 25,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": "dusk",
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

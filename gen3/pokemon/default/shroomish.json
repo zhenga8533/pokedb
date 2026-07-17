@@ -18,8 +18,8 @@
         "hp": 60,
         "attack": 40,
         "defense": 60,
-        "special_attack": 40,
-        "special_defense": 60,
+        "special-attack": 40,
+        "special-defense": 60,
         "speed": 35
     },
     "ev_yield": [
@@ -30,53 +30,20 @@
     ],
     "height": 4,
     "weight": 45,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/285.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/285.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/285.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/285.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/285.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/285.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/285.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/285.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/285.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/285.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/285.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/285.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/285.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/285.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/285.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/285.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/285.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": null,
                 "back_shiny": null,
                 "front_default": null,
                 "front_shiny": null
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/285.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/285.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/285.png",
@@ -84,68 +51,7 @@
             }
         }
     },
-    "base_experience": 65,
-    "base_happiness": 70,
-    "capture_rate": 255,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 311,
-    "growth_rate": "fast-then-very-slow",
-    "habitat": "forest",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 285,
-        "hoenn": 34
-    },
-    "color": "brown",
-    "shape": "legs",
-    "egg_groups": [
-        "fairy",
-        "plant"
-    ],
-    "flavor_text": {
-        "ruby": "SHROOMISH live in damp soil in the dark depths of forests. They are often found keeping still under fallen leaves. This POKéMON feeds on compost that is made up of fallen, rotted leaves.",
-        "sapphire": "If SHROOMISH senses danger, it shakes its body and scatters spores from the top of its head. This POKéMON’s spores are so toxic, they make trees and weeds wilt.",
-        "emerald": "It loves to eat damp, composted soil in forests. If you enter a forest after a long rain, you can see many SHROOMISH feasting on composted soil.",
-        "firered": "It prefers damp places. By day it remains still in the forest shade. It releases toxic powder from its head.",
-        "leafgreen": "It prefers damp places. By day it remains still in the forest shade. It releases toxic powder from its head."
-    },
-    "genus": "Mushroom Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "shroomish",
-        "evolves_to": [
-            {
-                "species_name": "breloom",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 23,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -223,7 +129,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "headbutt",
                 "level_learned_at": 22,
@@ -331,6 +237,36 @@
                     "emerald",
                     "firered-leafgreen",
                     "ruby-sapphire",
+                    "xd"
+                ]
+            }
+        ],
+        "xd-purification": [
+            {
+                "name": "mega-drain",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "stun-spore",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "false-swipe",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "refresh",
+                "level_learned_at": 0,
+                "version_groups": [
                     "xd"
                 ]
             }
@@ -580,6 +516,84 @@
                     "firered-leafgreen",
                     "ruby-sapphire"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 311,
+    "growth_rate": null,
+    "habitat": "forest",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 285,
+        "hoenn": 34
+    },
+    "color": "brown",
+    "shape": "legs",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "SHROOMISH live in damp soil in the dark depths of forests. They are often found keeping still under fallen leaves. This POKéMON feeds on compost that is made up of fallen, rotted leaves.",
+        "sapphire": "If SHROOMISH senses danger, it shakes its body and scatters spores from the top of its head. This POKéMON’s spores are so toxic, they make trees and weeds wilt.",
+        "emerald": "It loves to eat damp, composted soil in forests. If you enter a forest after a long rain, you can see many SHROOMISH feasting on composted soil.",
+        "firered": "It prefers damp places. By day it remains still in the forest shade. It releases toxic powder from its head.",
+        "leafgreen": "It prefers damp places. By day it remains still in the forest shade. It releases toxic powder from its head."
+    },
+    "genus": "Mushroom Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "shroomish",
+        "evolves_to": [
+            {
+                "species_name": "breloom",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "ruby-sapphire",
+                        "version_groups": [
+                            "ruby-sapphire",
+                            "emerald",
+                            "firered-leafgreen",
+                            "colosseum",
+                            "xd"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 23,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

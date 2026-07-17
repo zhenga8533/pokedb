@@ -28,8 +28,8 @@
         "hp": 54,
         "attack": 45,
         "defense": 40,
-        "special_attack": 35,
-        "special_defense": 45,
+        "special-attack": 35,
+        "special-defense": 45,
         "speed": 35
     },
     "ev_yield": [
@@ -60,7 +60,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/915.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/915.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/915.png"
             },
@@ -76,73 +76,16 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/915.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 51,
-    "base_happiness": 50,
-    "capture_rate": 255,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 915,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 915,
-        "paldea": 10
-    },
-    "color": "gray",
-    "shape": "quadruped",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {
-        "scarlet": "It searches for food all day. It possesses a keen sense of smell but doesn’t use it for anything other than foraging.",
-        "violet": "This Pokémon spurns all but the finest of foods. Its body gives off an herblike scent that bug Pokémon detest."
-    },
-    "genus": "Hog Pokémon",
-    "generation": "generation-ix",
-    "evolution_chain": {
-        "species_name": "lechonk",
-        "evolves_to": [
-            {
-                "species_name": "oinkologne",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 18,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "headbutt",
                 "level_learned_at": 21,
@@ -489,6 +432,84 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 50,
+    "capture_rate": 255,
+    "hatch_counter": 15,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 915,
+    "growth_rate": "medium",
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 915,
+        "paldea": 10
+    },
+    "color": "gray",
+    "shape": "quadruped",
+    "egg_groups": [
+        "ground"
+    ],
+    "flavor_text": {
+        "scarlet": "It searches for food all day. It possesses a keen sense of smell but doesn’t use it for anything other than foraging.",
+        "violet": "This Pokémon spurns all but the finest of foods. Its body gives off an herblike scent that bug Pokémon detest."
+    },
+    "genus": "Hog Pokémon",
+    "generation": "generation-ix",
+    "evolution_chain": {
+        "species_name": "lechonk",
+        "evolves_to": [
+            {
+                "species_name": "oinkologne",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "scarlet-violet",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 18,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

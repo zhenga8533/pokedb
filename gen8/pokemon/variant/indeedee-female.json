@@ -29,8 +29,8 @@
         "hp": 70,
         "attack": 55,
         "defense": 65,
-        "special_attack": 95,
-        "special_defense": 105,
+        "special-attack": 95,
+        "special-defense": 105,
         "speed": 85
     },
     "ev_yield": [
@@ -41,81 +41,20 @@
     ],
     "height": 9,
     "weight": 280,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10186.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10186.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10186.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10186.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10186.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10186.svg",
+        "versions": {
+            "brilliant-diamond-shining-pearl": {
+                "front_default": null,
                 "front_female": null
             },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10186.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10186.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10186.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10186.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10186.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10186.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10186.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10186.gif",
-                "front_shiny_female": null
-            }
-        },
-        "versions": {
             "icons": {
                 "front_default": null,
                 "front_female": null
             }
         }
     },
-    "base_experience": 166,
-    "base_happiness": 140,
-    "capture_rate": 30,
-    "hatch_counter": 40,
-    "gender_rate": 4,
-    "has_gender_differences": true,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 876,
-    "growth_rate": "fast",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 876,
-        "galar": 337
-    },
-    "color": "purple",
-    "shape": "upright",
-    "egg_groups": [
-        "fairy"
-    ],
-    "flavor_text": {
-        "sword": "It uses the horns on its head to sense the emotions of others. Males will act as valets for those they serve, looking after their every need.",
-        "shield": "Through its horns, it can pick up on the emotions of creatures around it. Positive emotions are the source of its strength."
-    },
-    "genus": "Emotion Pokémon",
-    "generation": "generation-viii",
-    "evolution_chain": {
-        "species_name": "indeedee",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -128,6 +67,20 @@
             },
             {
                 "name": "psychic",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "reflect",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -149,13 +102,6 @@
             },
             {
                 "name": "rest",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "tri-attack",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -204,7 +150,14 @@
                 ]
             },
             {
-                "name": "encore",
+                "name": "safeguard",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "baton-pass",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -274,7 +227,7 @@
                 ]
             },
             {
-                "name": "power-swap",
+                "name": "guard-swap",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -302,28 +255,7 @@
                 ]
             },
             {
-                "name": "trick-room",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "wonder-room",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
                 "name": "psyshock",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "magic-room",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -386,7 +318,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "psybeam",
                 "level_learned_at": 15,
@@ -402,8 +334,15 @@
                 ]
             },
             {
-                "name": "encore",
+                "name": "baton-pass",
                 "level_learned_at": 5,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "follow-me",
+                "level_learned_at": 25,
                 "version_groups": [
                     "sword-shield"
                 ]
@@ -430,22 +369,15 @@
                 ]
             },
             {
-                "name": "last-resort",
+                "name": "healing-wish",
                 "level_learned_at": 55,
                 "version_groups": [
                     "sword-shield"
                 ]
             },
             {
-                "name": "power-split",
+                "name": "guard-split",
                 "level_learned_at": 45,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "after-you",
-                "level_learned_at": 25,
                 "version_groups": [
                     "sword-shield"
                 ]
@@ -495,7 +427,14 @@
                 ]
             },
             {
-                "name": "extrasensory",
+                "name": "psycho-shift",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "heal-pulse",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -518,6 +457,36 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 876,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 876,
+        "galar": 337
+    },
+    "color": "purple",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "sword": "It uses the horns on its head to sense the emotions of others. Males will act as valets for those they serve, looking after their every need.",
+        "shield": "Through its horns, it can pick up on the emotions of creatures around it. Positive emotions are the source of its strength."
+    },
+    "genus": "Emotion Pokémon",
+    "generation": "generation-viii",
+    "evolution_chain": {
+        "species_name": "indeedee",
+        "evolves_to": []
     },
     "forms": [
         {

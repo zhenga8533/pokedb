@@ -29,8 +29,8 @@
         "hp": 80,
         "attack": 100,
         "defense": 100,
-        "special_attack": 110,
-        "special_defense": 150,
+        "special-attack": 110,
+        "special-defense": 150,
         "speed": 60
     },
     "ev_yield": [
@@ -61,7 +61,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10242.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10242.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10242.png"
             },
@@ -77,92 +77,13 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/10242.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 270,
-    "base_happiness": 35,
-    "capture_rate": 45,
-    "hatch_counter": 40,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 706,
-    "growth_rate": "slow",
-    "habitat": null,
-    "evolves_from_species": "sliggoo",
-    "pokedex_numbers": {
-        "national": 706,
-        "paldea": 174
-    },
-    "color": "purple",
-    "shape": "upright",
-    "egg_groups": [
-        "dragon"
-    ],
-    "flavor_text": {},
-    "genus": "Dragon Pokémon",
-    "generation": "generation-vi",
-    "evolution_chain": {
-        "species_name": "goomy",
-        "evolves_to": [
-            {
-                "species_name": "sliggoo",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 40,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "goodra",
-                        "evolution_details": {
-                            "item": null,
-                            "trigger": "level-up",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": 50,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": true,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
         "machine": [
@@ -258,13 +179,6 @@
                 ]
             },
             {
-                "name": "toxic",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "fire-blast",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -307,6 +221,13 @@
                 ]
             },
             {
+                "name": "scary-face",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "sludge-bomb",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -315,6 +236,13 @@
             },
             {
                 "name": "outrage",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "sandstorm",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -363,13 +291,6 @@
                 ]
             },
             {
-                "name": "focus-punch",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "knock-off",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -378,6 +299,13 @@
             },
             {
                 "name": "weather-ball",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "rock-tomb",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -405,14 +333,14 @@
                 ]
             },
             {
-                "name": "poison-tail",
+                "name": "water-pulse",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "water-pulse",
+                "name": "gyro-ball",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -426,14 +354,14 @@
                 ]
             },
             {
-                "name": "focus-blast",
+                "name": "giga-impact",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "giga-impact",
+                "name": "flash-cannon",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -447,6 +375,13 @@
                 ]
             },
             {
+                "name": "iron-head",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "sludge-wave",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -454,14 +389,14 @@
                 ]
             },
             {
-                "name": "acid-spray",
+                "name": "heavy-slam",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "scald",
+                "name": "acid-spray",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -503,6 +438,13 @@
                 ]
             },
             {
+                "name": "steel-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "skitter-smack",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -510,7 +452,21 @@
                 ]
             },
             {
+                "name": "lash-out",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "tera-blast",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "ice-spinner",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -541,13 +497,6 @@
             },
             {
                 "name": "thunder-punch",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "mega-kick",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -631,21 +580,7 @@
                 ]
             },
             {
-                "name": "toxic",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "fire-blast",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "acid-armor",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -673,13 +608,6 @@
                 ]
             },
             {
-                "name": "snore",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "curse",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -701,6 +629,13 @@
                 ]
             },
             {
+                "name": "scary-face",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "sludge-bomb",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -715,7 +650,7 @@
                 ]
             },
             {
-                "name": "giga-drain",
+                "name": "sandstorm",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -764,21 +699,14 @@
                 ]
             },
             {
+                "name": "ancient-power",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "facade",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "focus-punch",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "superpower",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -793,6 +721,13 @@
             },
             {
                 "name": "weather-ball",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "rock-tomb",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -827,21 +762,14 @@
                 ]
             },
             {
+                "name": "gyro-ball",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "feint",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "assurance",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "aqua-tail",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -855,14 +783,14 @@
                 ]
             },
             {
-                "name": "focus-blast",
+                "name": "giga-impact",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
                 ]
             },
             {
-                "name": "giga-impact",
+                "name": "flash-cannon",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -876,7 +804,7 @@
                 ]
             },
             {
-                "name": "power-whip",
+                "name": "iron-head",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -890,21 +818,14 @@
                 ]
             },
             {
+                "name": "heavy-slam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "acid-spray",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "round",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "scald",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -919,13 +840,6 @@
             },
             {
                 "name": "dragon-tail",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "brutal-swing",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -967,7 +881,35 @@
                 ]
             },
             {
+                "name": "steel-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "skitter-smack",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "lash-out",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "shelter",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "ice-spinner",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -988,7 +930,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -1046,6 +988,13 @@
                 ]
             },
             {
+                "name": "iron-tail",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "rain-dance",
                 "level_learned_at": 30,
                 "version_groups": [
@@ -1055,13 +1004,6 @@
             {
                 "name": "muddy-water",
                 "level_learned_at": 58,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "poison-tail",
-                "level_learned_at": 1,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -1081,14 +1023,21 @@
                 ]
             },
             {
-                "name": "aqua-tail",
-                "level_learned_at": 0,
+                "name": "dragon-pulse",
+                "level_learned_at": 35,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "power-whip",
+                "name": "iron-head",
+                "level_learned_at": 49,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "heavy-slam",
                 "level_learned_at": 67,
                 "version_groups": [
                     "scarlet-violet"
@@ -1106,6 +1055,134 @@
                 "level_learned_at": 1,
                 "version_groups": [
                     "scarlet-violet"
+                ]
+            },
+            {
+                "name": "shelter",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            }
+        ]
+    },
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 40,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 706,
+    "growth_rate": "slow",
+    "habitat": null,
+    "evolves_from_species": "sliggoo",
+    "pokedex_numbers": {
+        "national": 706,
+        "paldea": 174
+    },
+    "color": "purple",
+    "shape": "upright",
+    "egg_groups": [
+        "dragon"
+    ],
+    "flavor_text": {},
+    "genus": "Dragon Pokémon",
+    "generation": "generation-vi",
+    "evolution_chain": {
+        "species_name": "goomy",
+        "evolves_to": [
+            {
+                "species_name": "sliggoo",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "legends-arceus",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": "sliggoo-hisui",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 40,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": "hisui",
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "goodra",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "legends-arceus",
+                                "version_groups": [
+                                    "scarlet-violet",
+                                    "the-teal-mask",
+                                    "the-indigo-disk",
+                                    "legends-za",
+                                    "mega-dimension",
+                                    "champions"
+                                ],
+                                "base_form": "sliggoo-hisui",
+                                "evolved_form": "goodra-hisui",
+                                "item": null,
+                                "trigger": "level-up",
+                                "gender": null,
+                                "held_item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": 50,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": true,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": null,
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

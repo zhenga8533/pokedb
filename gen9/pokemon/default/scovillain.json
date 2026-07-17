@@ -29,8 +29,8 @@
         "hp": 65,
         "attack": 108,
         "defense": 65,
-        "special_attack": 108,
-        "special_defense": 65,
+        "special-attack": 108,
+        "special-defense": 65,
         "speed": 75
     },
     "ev_yield": [
@@ -61,7 +61,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/952.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/952.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/952.png"
             },
@@ -77,73 +77,16 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/952.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 170,
-    "base_happiness": 50,
-    "capture_rate": 75,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 939,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "capsakid",
-    "pokedex_numbers": {
-        "national": 952,
-        "paldea": 251
-    },
-    "color": "green",
-    "shape": "upright",
-    "egg_groups": [
-        "plant"
-    ],
-    "flavor_text": {
-        "scarlet": "The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame.",
-        "violet": "The green head has turned vicious due to the spicy chemicals stimulating its brain. Once it goes on a rampage, there is no stopping it."
-    },
-    "genus": "Spicy Pepper Pokémon",
-    "generation": "generation-ix",
-    "evolution_chain": {
-        "species_name": "capsakid",
-        "evolves_to": [
-            {
-                "species_name": "scovillain",
-                "evolution_details": {
-                    "item": "fire-stone",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "headbutt",
                 "level_learned_at": 24,
@@ -875,6 +818,84 @@
                 "version_groups": [
                     "champions"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 50,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 939,
+    "growth_rate": "medium",
+    "habitat": null,
+    "evolves_from_species": "capsakid",
+    "pokedex_numbers": {
+        "national": 952,
+        "paldea": 251
+    },
+    "color": "green",
+    "shape": "upright",
+    "egg_groups": [
+        "plant"
+    ],
+    "flavor_text": {
+        "scarlet": "The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame.",
+        "violet": "The green head has turned vicious due to the spicy chemicals stimulating its brain. Once it goes on a rampage, there is no stopping it."
+    },
+    "genus": "Spicy Pepper Pokémon",
+    "generation": "generation-ix",
+    "evolution_chain": {
+        "species_name": "capsakid",
+        "evolves_to": [
+            {
+                "species_name": "scovillain",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "scarlet-violet",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "fire-stone",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

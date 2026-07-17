@@ -8,69 +8,20 @@
         "normal",
         "flying"
     ],
-    "abilities": [
-        {
-            "name": "hustle",
-            "is_hidden": false,
-            "slot": 1
-        },
-        {
-            "name": "serene-grace",
-            "is_hidden": false,
-            "slot": 2
-        }
-    ],
+    "abilities": [],
     "stats": {
         "hp": 55,
         "attack": 40,
         "defense": 85,
-        "special_attack": 80,
-        "special_defense": 105,
+        "special-attack": 80,
+        "special-defense": 105,
         "speed": 40
     },
-    "ev_yield": [
-        {
-            "stat": "special-defense",
-            "effort": 2
-        }
-    ],
+    "ev_yield": null,
     "height": 6,
     "weight": 32,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/176.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/176.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/176.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/176.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/176.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/176.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/176.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/176.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/176.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/176.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/176.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/176.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/176.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/176.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/176.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "crystal": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/back/176.png",
@@ -98,66 +49,7 @@
             }
         }
     },
-    "base_experience": 114,
-    "base_happiness": 70,
-    "capture_rate": 75,
-    "hatch_counter": 10,
-    "gender_rate": 1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 204,
-    "growth_rate": "fast",
-    "habitat": "forest",
-    "evolves_from_species": "togepi",
-    "pokedex_numbers": {
-        "national": 176,
-        "original_johto": 47
-    },
-    "color": "white",
-    "shape": "humanoid",
-    "egg_groups": [
-        "flying",
-        "fairy"
-    ],
-    "flavor_text": {
-        "gold": "They say that it will appear before kindhearted, car­ ing people and shower them with happiness.",
-        "silver": "It grows dispirit­ ed if it is not with kind people. It can float in midair without moving its wings.",
-        "crystal": "Although it does not flap its wings very much, it can stay up in the air as it tags along after its trainer."
-    },
-    "genus": "Happiness Pokémon",
-    "generation": "generation-ii",
-    "evolution_chain": {
-        "species_name": "togepi",
-        "evolves_to": [
-            {
-                "species_name": "togetic",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": 160,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -426,7 +318,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "double-edge",
                 "level_learned_at": 38,
@@ -491,6 +383,79 @@
                 "version_groups": [
                     "crystal"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 204,
+    "growth_rate": null,
+    "habitat": "forest",
+    "evolves_from_species": "togepi",
+    "pokedex_numbers": {
+        "national": 176,
+        "original-johto": 47
+    },
+    "color": "white",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "gold": "They say that it will appear before kindhearted, car­ ing people and shower them with happiness.",
+        "silver": "It grows dispirit­ ed if it is not with kind people. It can float in midair without moving its wings.",
+        "crystal": "Although it does not flap its wings very much, it can stay up in the air as it tags along after its trainer."
+    },
+    "genus": "Happiness Pokémon",
+    "generation": "generation-ii",
+    "evolution_chain": {
+        "species_name": "togepi",
+        "evolves_to": [
+            {
+                "species_name": "togetic",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "gold-silver",
+                        "version_groups": [
+                            "gold-silver",
+                            "crystal"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": 160,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

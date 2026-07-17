@@ -28,8 +28,8 @@
         "hp": 75,
         "attack": 75,
         "defense": 75,
-        "special_attack": 125,
-        "special_defense": 95,
+        "special-attack": 125,
+        "special-defense": 95,
         "speed": 40
     },
     "ev_yield": [
@@ -40,43 +40,10 @@
     ],
     "height": 10,
     "weight": 345,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/606.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/606.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/606.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/606.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/606.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/606.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/606.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/606.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/606.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/606.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/606.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/606.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/606.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/606.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/606.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "black_white": {
+            "black-white": {
                 "animated": {
                     "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/606.gif",
                     "back_female": null,
@@ -98,69 +65,10 @@
             }
         }
     },
-    "base_experience": 170,
-    "base_happiness": 70,
-    "capture_rate": 90,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 607,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "elgyem",
-    "pokedex_numbers": {
-        "national": 606,
-        "original_unova": 112
-    },
-    "color": "brown",
-    "shape": "humanoid",
-    "egg_groups": [
-        "humanshape"
-    ],
-    "flavor_text": {
-        "black": "It can manipulate an opponent’s memory. Apparently, it communicates by flashing its three different-colored fingers.",
-        "white": "It uses psychic power to control an opponent’s brain and tamper with its memories.",
-        "black_2": "Apparently, it communicates by flashing its three fingers, but those patterns haven’t been decoded.",
-        "white_2": "Apparently, it communicates by flashing its three fingers, but those patterns haven’t been decoded."
-    },
-    "genus": "Cerebral Pokémon",
-    "generation": "generation-v",
-    "evolution_chain": {
-        "species_name": "elgyem",
-        "evolves_to": [
-            {
-                "species_name": "beheeyem",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 42,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "headbutt",
                 "level_learned_at": 18,
@@ -740,6 +648,80 @@
                 "version_groups": [
                     "black-2-white-2"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 607,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": "elgyem",
+    "pokedex_numbers": {
+        "national": 606,
+        "original-unova": 112
+    },
+    "color": "brown",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "black": "It can manipulate an opponent’s memory. Apparently, it communicates by flashing its three different-colored fingers.",
+        "white": "It uses psychic power to control an opponent’s brain and tamper with its memories.",
+        "black-2": "Apparently, it communicates by flashing its three fingers, but those patterns haven’t been decoded.",
+        "white-2": "Apparently, it communicates by flashing its three fingers, but those patterns haven’t been decoded."
+    },
+    "genus": "Cerebral Pokémon",
+    "generation": "generation-v",
+    "evolution_chain": {
+        "species_name": "elgyem",
+        "evolves_to": [
+            {
+                "species_name": "beheeyem",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "black-white",
+                        "version_groups": [
+                            "black-white",
+                            "black-2-white-2"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 42,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

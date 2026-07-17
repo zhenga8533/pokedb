@@ -4,11 +4,19 @@
     "source_url": "https://pokeapi.co/api/v2/ability/11/",
     "is_main_series": true,
     "generation": "generation-iii",
-    "effect": "Whenever a water-type move hits this Pokémon, it heals for 1/4 of its maximum HP, negating any other effect on it. Water moves will ignore this Pokémon's substitute.",
-    "short_effect": "Absorbs water moves, healing for 1/4 max HP.",
+    "effect": {
+        "diamond-pearl": "Whenever a Water-type move hits this Pokémon, it heals for 1/4 of its maximum HP, negating any other effect on it. Water moves will ignore this Pokémon's Substitute.",
+        "platinum": "Whenever a Water-type move hits this Pokémon, it heals for 1/4 of its maximum HP, negating any other effect on it. Water moves will ignore this Pokémon's Substitute.",
+        "heartgold-soulsilver": "Whenever a Water-type move hits this Pokémon, it heals for 1/4 of its maximum HP, negating any other effect on it. Water moves will ignore this Pokémon's Substitute."
+    },
+    "short_effect": {
+        "diamond-pearl": "Absorbs Water moves, healing for 1/4 max HP.",
+        "platinum": "Absorbs Water moves, healing for 1/4 max HP.",
+        "heartgold-soulsilver": "Absorbs Water moves, healing for 1/4 max HP."
+    },
     "flavor_text": {
-        "diamond_pearl": "Restores HP if hit by a Water-type move.",
+        "diamond-pearl": "Restores HP if hit by a Water-type move.",
         "platinum": "Restores HP if hit by a Water-type move.",
-        "heartgold_soulsilver": "Restores HP if hit by a Water-type move."
+        "heartgold-soulsilver": "Restores HP if hit by a Water-type move."
     }
 }

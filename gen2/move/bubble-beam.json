@@ -3,60 +3,42 @@
     "name": "bubble-beam",
     "source_url": "https://pokeapi.co/api/v2/move/61/",
     "accuracy": {
-        "gold_silver": 100,
+        "gold-silver": 100,
         "crystal": 100
     },
     "power": {
-        "gold_silver": 65,
+        "gold-silver": 65,
         "crystal": 65
     },
     "pp": {
-        "gold_silver": 20,
+        "gold-silver": 20,
         "crystal": 20
     },
-    "priority": 0,
+    "priority": null,
     "damage_class": "special",
     "type": {
-        "gold_silver": "water",
+        "gold-silver": "water",
         "crystal": "water"
     },
-    "target": "selected-pokemon",
+    "target": null,
     "generation": "generation-i",
     "effect_chance": {
-        "gold_silver": 10,
+        "gold-silver": 10,
         "crystal": 10
     },
     "effect": {
-        "gold_silver": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
-        "crystal": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage."
+        "gold-silver": "Inflicts regular damage. Has a chance to lower the target’s Speed by one stage.",
+        "crystal": "Inflicts regular damage. Has a chance to lower the target’s Speed by one stage."
     },
     "short_effect": {
-        "gold_silver": "Has a 10% chance to lower the target’s Speed by one stage.",
-        "crystal": "Has a 10% chance to lower the target’s Speed by one stage."
+        "gold-silver": "Has a chance to lower the target’s Speed by one stage.",
+        "crystal": "Has a chance to lower the target’s Speed by one stage."
     },
     "flavor_text": {
-        "gold_silver": "An attack that may lower SPEED.",
+        "gold-silver": "An attack that may lower SPEED.",
         "crystal": "An attack that may lower SPEED."
     },
-    "stat_changes": [
-        {
-            "change": -1,
-            "stat": "speed"
-        }
-    ],
+    "stat_changes": null,
     "machine": null,
-    "metadata": {
-        "ailment": "none",
-        "category": "damage+lower",
-        "min_hits": null,
-        "max_hits": null,
-        "min_turns": null,
-        "max_turns": null,
-        "drain": 0,
-        "healing": 0,
-        "crit_rate": 0,
-        "ailment_chance": 0,
-        "flinch_chance": 0,
-        "stat_chance": 10
-    }
+    "metadata": null
 }

@@ -3,82 +3,64 @@
     "name": "psychic",
     "source_url": "https://pokeapi.co/api/v2/move/94/",
     "accuracy": {
-        "ruby_sapphire": 100,
+        "ruby-sapphire": 100,
         "emerald": 100,
-        "firered_leafgreen": 100,
+        "firered-leafgreen": 100,
         "colosseum": 100,
         "xd": 100
     },
     "power": {
-        "ruby_sapphire": 90,
+        "ruby-sapphire": 90,
         "emerald": 90,
-        "firered_leafgreen": 90,
+        "firered-leafgreen": 90,
         "colosseum": 90,
         "xd": 90
     },
     "pp": {
-        "ruby_sapphire": 10,
+        "ruby-sapphire": 10,
         "emerald": 10,
-        "firered_leafgreen": 10,
+        "firered-leafgreen": 10,
         "colosseum": 10,
         "xd": 10
     },
-    "priority": 0,
+    "priority": null,
     "damage_class": "special",
     "type": {
-        "ruby_sapphire": "psychic",
+        "ruby-sapphire": "psychic",
         "emerald": "psychic",
-        "firered_leafgreen": "psychic",
+        "firered-leafgreen": "psychic",
         "colosseum": "psychic",
         "xd": "psychic"
     },
-    "target": "selected-pokemon",
+    "target": null,
     "generation": "generation-i",
     "effect_chance": {
-        "ruby_sapphire": 10,
+        "ruby-sapphire": 10,
         "emerald": 10,
-        "firered_leafgreen": 10,
+        "firered-leafgreen": 10,
         "colosseum": 10,
         "xd": 10
     },
     "effect": {
-        "ruby_sapphire": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-        "emerald": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-        "firered_leafgreen": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-        "colosseum": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage.",
-        "xd": "Inflicts regular damage. Has a 10% chance to lower the target’s Special Defense by one stage."
+        "ruby-sapphire": "Inflicts regular damage. Has a chance to lower the target’s Special Defense by one stage.",
+        "emerald": "Inflicts regular damage. Has a chance to lower the target’s Special Defense by one stage.",
+        "firered-leafgreen": "Inflicts regular damage. Has a chance to lower the target’s Special Defense by one stage.",
+        "colosseum": "Inflicts regular damage. Has a chance to lower the target’s Special Defense by one stage.",
+        "xd": "Inflicts regular damage. Has a chance to lower the target’s Special Defense by one stage."
     },
     "short_effect": {
-        "ruby_sapphire": "Has a 10% chance to lower the target’s Special Defense by one stage.",
-        "emerald": "Has a 10% chance to lower the target’s Special Defense by one stage.",
-        "firered_leafgreen": "Has a 10% chance to lower the target’s Special Defense by one stage.",
-        "colosseum": "Has a 10% chance to lower the target’s Special Defense by one stage.",
-        "xd": "Has a 10% chance to lower the target’s Special Defense by one stage."
+        "ruby-sapphire": "Has a chance to lower the target’s Special Defense by one stage.",
+        "emerald": "Has a chance to lower the target’s Special Defense by one stage.",
+        "firered-leafgreen": "Has a chance to lower the target’s Special Defense by one stage.",
+        "colosseum": "Has a chance to lower the target’s Special Defense by one stage.",
+        "xd": "Has a chance to lower the target’s Special Defense by one stage."
     },
     "flavor_text": {
-        "ruby_sapphire": "A powerful psychic attack that may lower SP. DEF.",
+        "ruby-sapphire": "A powerful psychic attack that may lower SP. DEF.",
         "emerald": "A powerful psychic attack that may lower SP. DEF.",
-        "firered_leafgreen": "A strong telekinetic attack. It may also lower the foe’s SP. DEF stat."
+        "firered-leafgreen": "A strong telekinetic attack. It may also lower the foe’s SP. DEF stat."
     },
-    "stat_changes": [
-        {
-            "change": -1,
-            "stat": "special-defense"
-        }
-    ],
+    "stat_changes": null,
     "machine": "tm29",
-    "metadata": {
-        "ailment": "none",
-        "category": "damage+lower",
-        "min_hits": null,
-        "max_hits": null,
-        "min_turns": null,
-        "max_turns": null,
-        "drain": 0,
-        "healing": 0,
-        "crit_rate": 0,
-        "ailment_chance": 0,
-        "flinch_chance": 0,
-        "stat_chance": 10
-    }
+    "metadata": null
 }

@@ -24,8 +24,8 @@
         "hp": 73,
         "attack": 67,
         "defense": 75,
-        "special_attack": 81,
-        "special_defense": 100,
+        "special-attack": 81,
+        "special-defense": 100,
         "speed": 109
     },
     "ev_yield": [
@@ -56,7 +56,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10104.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10104.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10104.png"
             },
@@ -72,66 +72,13 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/10104.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 177,
-    "base_happiness": 70,
-    "capture_rate": 75,
-    "hatch_counter": 20,
-    "gender_rate": 6,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 40,
-    "growth_rate": "medium",
-    "habitat": "grassland",
-    "evolves_from_species": "vulpix",
-    "pokedex_numbers": {
-        "national": 38
-    },
-    "color": "yellow",
-    "shape": "quadruped",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {},
-    "genus": "Fox Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "vulpix",
-        "evolves_to": [
-            {
-                "species_name": "ninetales",
-                "evolution_details": {
-                    "item": "fire-stone",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
         "machine": [
@@ -164,7 +111,14 @@
                 ]
             },
             {
-                "name": "flamethrower",
+                "name": "ice-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "blizzard",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -172,20 +126,6 @@
             },
             {
                 "name": "hyper-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "solar-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "fire-spin",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -206,21 +146,7 @@
                 ]
             },
             {
-                "name": "night-shade",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "confuse-ray",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "fire-blast",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -256,6 +182,13 @@
             },
             {
                 "name": "protect",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "icy-wind",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -304,7 +237,7 @@
                 ]
             },
             {
-                "name": "sunny-day",
+                "name": "rain-dance",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -312,27 +245,6 @@
             },
             {
                 "name": "psych-up",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "shadow-ball",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "heat-wave",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "will-o-wisp",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -374,7 +286,7 @@
                 ]
             },
             {
-                "name": "overheat",
+                "name": "icicle-spear",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -388,21 +300,7 @@
                 ]
             },
             {
-                "name": "flare-blitz",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "dark-pulse",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "energy-ball",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -423,6 +321,13 @@
                 ]
             },
             {
+                "name": "avalanche",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "zen-headbutt",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -431,13 +336,6 @@
             },
             {
                 "name": "psyshock",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "flame-charge",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -465,21 +363,42 @@
                 ]
             },
             {
-                "name": "snarl",
+                "name": "disarming-voice",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "burning-jealousy",
+                "name": "draining-kiss",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "scorching-sands",
+                "name": "misty-terrain",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "triple-axel",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -487,6 +406,20 @@
             },
             {
                 "name": "tera-blast",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "chilling-water",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -523,7 +456,14 @@
                 ]
             },
             {
-                "name": "flamethrower",
+                "name": "ice-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "blizzard",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -531,20 +471,6 @@
             },
             {
                 "name": "hyper-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "solar-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "fire-spin",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -572,28 +498,7 @@
                 ]
             },
             {
-                "name": "quick-attack",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "night-shade",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "confuse-ray",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "fire-blast",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -636,6 +541,13 @@
             },
             {
                 "name": "protect",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "icy-wind",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -705,7 +617,7 @@
                 ]
             },
             {
-                "name": "sunny-day",
+                "name": "rain-dance",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -713,34 +625,6 @@
             },
             {
                 "name": "psych-up",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "shadow-ball",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "heat-wave",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "will-o-wisp",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "memento",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -782,14 +666,14 @@
                 ]
             },
             {
-                "name": "overheat",
+                "name": "extrasensory",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
                 ]
             },
             {
-                "name": "extrasensory",
+                "name": "icicle-spear",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -810,13 +694,6 @@
                 ]
             },
             {
-                "name": "healing-wish",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "payback",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -831,21 +708,7 @@
                 ]
             },
             {
-                "name": "flare-blitz",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "dark-pulse",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "energy-ball",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -866,6 +729,20 @@
                 ]
             },
             {
+                "name": "avalanche",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "ice-shard",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "zen-headbutt",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -873,14 +750,14 @@
                 ]
             },
             {
-                "name": "psyshock",
+                "name": "wonder-room",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
                 ]
             },
             {
-                "name": "flame-charge",
+                "name": "psyshock",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -915,13 +792,6 @@
                 ]
             },
             {
-                "name": "inferno",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "tail-slap",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -929,14 +799,42 @@
                 ]
             },
             {
-                "name": "snarl",
+                "name": "freeze-dry",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
                 ]
             },
             {
-                "name": "mystical-fire",
+                "name": "draining-kiss",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "misty-terrain",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "play-rough",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "moonblast",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "dazzling-gleam",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -950,21 +848,35 @@
                 ]
             },
             {
-                "name": "burning-jealousy",
+                "name": "aurora-veil",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
                 ]
             },
             {
-                "name": "scorching-sands",
+                "name": "triple-axel",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "chilling-water",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "tail-whip",
                 "level_learned_at": 1,
@@ -973,15 +885,29 @@
                 ]
             },
             {
-                "name": "flamethrower",
+                "name": "blizzard",
                 "level_learned_at": 1,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "quick-attack",
+                "name": "icy-wind",
                 "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "imprison",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "dazzling-gleam",
+                "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -1010,13 +936,6 @@
                 ]
             },
             {
-                "name": "memento",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "howl",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -1024,14 +943,7 @@
                 ]
             },
             {
-                "name": "healing-wish",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "flame-charge",
+                "name": "moonblast",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -1043,6 +955,80 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 6,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 40,
+    "growth_rate": "medium",
+    "habitat": "grassland",
+    "evolves_from_species": "vulpix",
+    "pokedex_numbers": {
+        "national": 38
+    },
+    "color": "yellow",
+    "shape": "quadruped",
+    "egg_groups": [
+        "ground"
+    ],
+    "flavor_text": {},
+    "genus": "Fox Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "vulpix",
+        "evolves_to": [
+            {
+                "species_name": "ninetales",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "the-isle-of-armor",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": "vulpix-alola",
+                        "evolved_form": "ninetales-alola",
+                        "item": "ice-stone",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

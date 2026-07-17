@@ -24,8 +24,8 @@
         "hp": 83,
         "attack": 55,
         "defense": 90,
-        "special_attack": 130,
-        "special_defense": 81,
+        "special-attack": 130,
+        "special-defense": 81,
         "speed": 86
     },
     "ev_yield": [
@@ -56,7 +56,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/970.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/970.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/970.png"
             },
@@ -72,70 +72,13 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/970.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 184,
-    "base_happiness": 50,
-    "capture_rate": 25,
-    "hatch_counter": 30,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 967,
-    "growth_rate": "medium-slow",
-    "habitat": null,
-    "evolves_from_species": "glimmet",
-    "pokedex_numbers": {
-        "national": 970,
-        "paldea": 309
-    },
-    "color": "blue",
-    "shape": "ball",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {
-        "scarlet": "When this Pokémon detects danger, it will open up its crystalline petals and fire beams from its conical body.",
-        "violet": "Glimmora’s petals are made of crystallized poison energy. It has recently become evident that these petals resemble Tera Jewels."
-    },
-    "genus": "Ore Pokémon",
-    "generation": "generation-ix",
-    "evolution_chain": {
-        "species_name": "glimmet",
-        "evolves_to": [
-            {
-                "species_name": "glimmora",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 35,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
         "machine": [
@@ -737,7 +680,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "rock-throw",
                 "level_learned_at": 1,
@@ -856,6 +799,84 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 50,
+    "capture_rate": 25,
+    "hatch_counter": 30,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 967,
+    "growth_rate": "medium-slow",
+    "habitat": null,
+    "evolves_from_species": "glimmet",
+    "pokedex_numbers": {
+        "national": 970,
+        "paldea": 309
+    },
+    "color": "blue",
+    "shape": "ball",
+    "egg_groups": [
+        "mineral"
+    ],
+    "flavor_text": {
+        "scarlet": "When this Pokémon detects danger, it will open up its crystalline petals and fire beams from its conical body.",
+        "violet": "Glimmora’s petals are made of crystallized poison energy. It has recently become evident that these petals resemble Tera Jewels."
+    },
+    "genus": "Ore Pokémon",
+    "generation": "generation-ix",
+    "evolution_chain": {
+        "species_name": "glimmet",
+        "evolves_to": [
+            {
+                "species_name": "glimmora",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "scarlet-violet",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 35,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

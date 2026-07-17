@@ -19,8 +19,8 @@
         "hp": 55,
         "attack": 100,
         "defense": 60,
-        "special_attack": 125,
-        "special_defense": 60,
+        "special-attack": 125,
+        "special-defense": 60,
         "speed": 110
     },
     "ev_yield": [
@@ -51,7 +51,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10239.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10239.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10239.png"
             },
@@ -67,70 +67,16 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/10239.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 179,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 572,
-    "growth_rate": "medium-slow",
-    "habitat": null,
-    "evolves_from_species": "zorua",
-    "pokedex_numbers": {
-        "national": 571,
-        "paldea": 229
-    },
-    "color": "gray",
-    "shape": "upright",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {},
-    "genus": "Illusion Fox Pokémon",
-    "generation": "generation-v",
-    "evolution_chain": {
-        "species_name": "zorua",
-        "evolves_to": [
-            {
-                "species_name": "zoroark",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 30,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "scratch",
                 "level_learned_at": 1,
@@ -153,8 +99,22 @@
                 ]
             },
             {
-                "name": "fury-swipes",
-                "level_learned_at": 12,
+                "name": "curse",
+                "level_learned_at": 16,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 28,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 40,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -181,20 +141,6 @@
                 ]
             },
             {
-                "name": "imprison",
-                "level_learned_at": 40,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "fake-tears",
-                "level_learned_at": 28,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "u-turn",
                 "level_learned_at": 1,
                 "version_groups": [
@@ -202,15 +148,22 @@
                 ]
             },
             {
-                "name": "night-slash",
+                "name": "nasty-plot",
+                "level_learned_at": 52,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "shadow-claw",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "nasty-plot",
-                "level_learned_at": 52,
+                "name": "shadow-sneak",
+                "level_learned_at": 12,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -230,7 +183,7 @@
                 ]
             },
             {
-                "name": "night-daze",
+                "name": "bitter-malice",
                 "level_learned_at": 46,
                 "version_groups": [
                     "scarlet-violet"
@@ -295,13 +248,6 @@
                 ]
             },
             {
-                "name": "toxic",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "psychic",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -358,6 +304,13 @@
                 ]
             },
             {
+                "name": "curse",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "spite",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -380,6 +333,13 @@
             },
             {
                 "name": "sludge-bomb",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "icy-wind",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -414,13 +374,6 @@
                 ]
             },
             {
-                "name": "sunny-day",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "crunch",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -442,7 +395,21 @@
                 ]
             },
             {
+                "name": "will-o-wisp",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "facade",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "focus-punch",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -603,6 +570,13 @@
                 ]
             },
             {
+                "name": "phantom-force",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "throat-chop",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -631,7 +605,21 @@
                 ]
             },
             {
+                "name": "poltergeist",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "tera-blast",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "snowscape",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -689,21 +677,7 @@
                 ]
             },
             {
-                "name": "counter",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "dig",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "toxic",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -766,6 +740,13 @@
                 ]
             },
             {
+                "name": "curse",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "spite",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -788,6 +769,13 @@
             },
             {
                 "name": "sludge-bomb",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "icy-wind",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -822,21 +810,7 @@
                 ]
             },
             {
-                "name": "encore",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "rain-dance",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "sunny-day",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -878,6 +852,13 @@
                 ]
             },
             {
+                "name": "will-o-wisp",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "memento",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -886,6 +867,13 @@
             },
             {
                 "name": "facade",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "focus-punch",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -1004,21 +992,7 @@
                 ]
             },
             {
-                "name": "sucker-punch",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "dark-pulse",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "night-slash",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -1047,6 +1021,13 @@
             },
             {
                 "name": "shadow-claw",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "shadow-sneak",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -1088,14 +1069,14 @@
                 ]
             },
             {
-                "name": "night-daze",
+                "name": "snarl",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
                 ]
             },
             {
-                "name": "snarl",
+                "name": "phantom-force",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -1128,6 +1109,109 @@
                 "version_groups": [
                     "champions"
                 ]
+            },
+            {
+                "name": "poltergeist",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "bitter-malice",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "snowscape",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "comeuppance",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            }
+        ]
+    },
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 572,
+    "growth_rate": "medium-slow",
+    "habitat": null,
+    "evolves_from_species": "zorua",
+    "pokedex_numbers": {
+        "national": 571,
+        "paldea": 229
+    },
+    "color": "gray",
+    "shape": "upright",
+    "egg_groups": [
+        "ground"
+    ],
+    "flavor_text": {},
+    "genus": "Illusion Fox Pokémon",
+    "generation": "generation-v",
+    "evolution_chain": {
+        "species_name": "zorua",
+        "evolves_to": [
+            {
+                "species_name": "zoroark",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "legends-arceus",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": "zorua-hisui",
+                        "evolved_form": "zoroark-hisui",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 30,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

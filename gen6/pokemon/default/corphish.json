@@ -28,8 +28,8 @@
         "hp": 43,
         "attack": 80,
         "defense": 65,
-        "special_attack": 50,
-        "special_defense": 35,
+        "special-attack": 50,
+        "special-defense": 35,
         "speed": 35
     },
     "ev_yield": [
@@ -40,49 +40,16 @@
     ],
     "height": 6,
     "weight": 115,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/341.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/341.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/341.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/341.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/341.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/341.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/341.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/341.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/341.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/341.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/341.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/341.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/341.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/341.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/341.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
+            "omegaruby-alphasapphire": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/341.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/341.png",
                 "front_shiny_female": null
             },
-            "x_y": {
+            "x-y": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/341.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/341.png",
@@ -90,70 +57,10 @@
             }
         }
     },
-    "base_experience": 62,
-    "base_happiness": 70,
-    "capture_rate": 205,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 369,
-    "growth_rate": "fast-then-very-slow",
-    "habitat": "waters-edge",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 341,
-        "kalos_central": 51
-    },
-    "color": "red",
-    "shape": "armor",
-    "egg_groups": [
-        "water1",
-        "water3"
-    ],
-    "flavor_text": {
-        "x": "No matter how dirty the water in the river, it will adapt and thrive. It has a strong will to survive.",
-        "y": "Its hardy vitality enables it to adapt to any environment. Its pincers will never release prey.",
-        "omega_ruby": "Corphish were originally foreign Pokémon that were imported as pets. They eventually turned up in the wild. This Pokémon is very hardy and has greatly increased its population.",
-        "alpha_sapphire": "Corphish catches prey with its sharp claws. It has no likes or dislikes when it comes to food—it will eat anything. This Pokémon has no trouble living in filthy water."
-    },
-    "genus": "Ruffian Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "corphish",
-        "evolves_to": [
-            {
-                "species_name": "crawdaunt",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 30,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "vice-grip",
                 "level_learned_at": 10,
@@ -812,6 +719,80 @@
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 369,
+    "growth_rate": null,
+    "habitat": "waters-edge",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 341,
+        "kalos-central": 51
+    },
+    "color": "red",
+    "shape": "armor",
+    "egg_groups": null,
+    "flavor_text": {
+        "x": "No matter how dirty the water in the river, it will adapt and thrive. It has a strong will to survive.",
+        "y": "Its hardy vitality enables it to adapt to any environment. Its pincers will never release prey.",
+        "omega-ruby": "Corphish were originally foreign Pokémon that were imported as pets. They eventually turned up in the wild. This Pokémon is very hardy and has greatly increased its population.",
+        "alpha-sapphire": "Corphish catches prey with its sharp claws. It has no likes or dislikes when it comes to food—it will eat anything. This Pokémon has no trouble living in filthy water."
+    },
+    "genus": "Ruffian Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "corphish",
+        "evolves_to": [
+            {
+                "species_name": "crawdaunt",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "ruby-sapphire",
+                        "version_groups": [
+                            "x-y",
+                            "omega-ruby-alpha-sapphire"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 30,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

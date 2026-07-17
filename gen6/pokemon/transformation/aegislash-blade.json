@@ -18,155 +18,44 @@
     "stats": {
         "hp": 60,
         "attack": 150,
-        "defense": 150,
-        "special_attack": 150,
-        "special_defense": 150,
+        "defense": 50,
+        "special-attack": 150,
+        "special-defense": 50,
         "speed": 60
     },
     "ev_yield": [
         {
-            "effort": 2,
-            "stat": "defense"
+            "stat": "attack",
+            "effort": 2
+        },
+        {
+            "stat": "special-attack",
+            "effort": 1
         }
     ],
     "height": 17,
     "weight": 530,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10026.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10026.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10026.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10026.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10026.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10026.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10026.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10026.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10026.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10026.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10026.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10026.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/681-blade.png",
+            "omegaruby-alphasapphire": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/10026.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/681-blade.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/10026.png",
                 "front_shiny_female": null
             },
-            "x_y": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/681-blade.png",
+            "x-y": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/10026.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/681-blade.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/10026.png",
                 "front_shiny_female": null
             }
         }
     },
-    "base_experience": 234,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": true,
-    "order": 682,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "doublade",
-    "pokedex_numbers": {
-        "national": 681,
-        "kalos_central": 119
-    },
-    "color": "brown",
-    "shape": "blob",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {
-        "x": "Generations of kings were attended by these Pokémon, which used their spectral power to manipulate and control people and Pokémon.",
-        "y": "Apparently, it can detect the innate qualities of leadership. According to legend, whoever it recognizes is destined to become king.",
-        "omega_ruby": "Generations of kings were attended by these Pokémon, which used their spectral power to manipulate and control people and Pokémon.",
-        "alpha_sapphire": "Apparently, it can detect the innate qualities of leadership. According to legend, whoever it recognizes is destined to become king."
-    },
-    "genus": "Royal Sword Pokémon",
-    "generation": "generation-vi",
-    "evolution_chain": {
-        "species_name": "honedge",
-        "evolves_to": [
-            {
-                "species_name": "doublade",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 35,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "aegislash",
-                        "evolution_details": {
-                            "item": "dusk-stone",
-                            "trigger": "use-item",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": null,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "swords-dance",
                 "level_learned_at": 1,
@@ -592,6 +481,122 @@
                 "level_learned_at": 0,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 682,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": "doublade",
+    "pokedex_numbers": {
+        "national": 681,
+        "kalos-central": 119
+    },
+    "color": "brown",
+    "shape": "blob",
+    "egg_groups": null,
+    "flavor_text": {
+        "x": "Generations of kings were attended by these Pokémon, which used their spectral power to manipulate and control people and Pokémon.",
+        "y": "Apparently, it can detect the innate qualities of leadership. According to legend, whoever it recognizes is destined to become king.",
+        "omega-ruby": "Generations of kings were attended by these Pokémon, which used their spectral power to manipulate and control people and Pokémon.",
+        "alpha-sapphire": "Apparently, it can detect the innate qualities of leadership. According to legend, whoever it recognizes is destined to become king."
+    },
+    "genus": "Royal Sword Pokémon",
+    "generation": "generation-vi",
+    "evolution_chain": {
+        "species_name": "honedge",
+        "evolves_to": [
+            {
+                "species_name": "doublade",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "x-y",
+                        "version_groups": [
+                            "x-y",
+                            "omega-ruby-alpha-sapphire"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 35,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "aegislash",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "x-y",
+                                "version_groups": [
+                                    "x-y",
+                                    "omega-ruby-alpha-sapphire"
+                                ],
+                                "base_form": null,
+                                "evolved_form": null,
+                                "item": "dusk-stone",
+                                "trigger": "use-item",
+                                "gender": null,
+                                "held_item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": null,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": null,
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

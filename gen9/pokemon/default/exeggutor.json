@@ -24,8 +24,8 @@
         "hp": 95,
         "attack": 95,
         "defense": 85,
-        "special_attack": 125,
-        "special_defense": 75,
+        "special-attack": 125,
+        "special-defense": 75,
         "speed": 55
     },
     "ev_yield": [
@@ -56,7 +56,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/103.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/103.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/103.png"
             },
@@ -72,66 +72,13 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/103.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 186,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 112,
-    "growth_rate": "slow",
-    "habitat": "forest",
-    "evolves_from_species": "exeggcute",
-    "pokedex_numbers": {
-        "national": 103
-    },
-    "color": "yellow",
-    "shape": "legs",
-    "egg_groups": [
-        "plant"
-    ],
-    "flavor_text": {},
-    "genus": "Coconut Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "exeggcute",
-        "evolves_to": [
-            {
-                "species_name": "exeggutor",
-                "evolution_details": {
-                    "item": "leaf-stone",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
         "machine": [
@@ -493,7 +440,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "stomp",
                 "level_learned_at": 0,
@@ -619,6 +566,80 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 112,
+    "growth_rate": "slow",
+    "habitat": "forest",
+    "evolves_from_species": "exeggcute",
+    "pokedex_numbers": {
+        "national": 103
+    },
+    "color": "yellow",
+    "shape": "legs",
+    "egg_groups": [
+        "plant"
+    ],
+    "flavor_text": {},
+    "genus": "Coconut Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "exeggcute",
+        "evolves_to": [
+            {
+                "species_name": "exeggutor",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": "exeggutor-alola",
+                        "item": "leaf-stone",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": "alola",
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

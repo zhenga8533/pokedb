@@ -29,8 +29,8 @@
         "hp": 80,
         "attack": 120,
         "defense": 130,
-        "special_attack": 55,
-        "special_defense": 65,
+        "special-attack": 55,
+        "special-defense": 65,
         "speed": 45
     },
     "ev_yield": [
@@ -41,47 +41,14 @@
     ],
     "height": 14,
     "weight": 3000,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/76.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/76.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/76.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/76.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/76.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/76.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/76.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/76.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/76.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/76.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/76.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/76.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/76.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/76.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/76.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/76.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/76.png",
@@ -89,103 +56,17 @@
             }
         }
     },
-    "base_experience": 223,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 82,
-    "growth_rate": "medium-slow",
-    "habitat": "mountain",
-    "evolves_from_species": "graveler",
-    "pokedex_numbers": {
-        "national": 76,
-        "original_alola": 231
-    },
-    "color": "brown",
-    "shape": "humanoid",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {
-        "sun": "Its body can survive dynamite blasts without a single scratch, but it hates rain and humidity.",
-        "moon": "Once a year, this Pokémon molts, and its shed shell returns to the soil. This process creates enriched soil, so farmers collect the shells.",
-        "ultra_sun": "When Golem grow old, they stop shedding their shells. Those that have lived a long, long time have shells green with moss.",
-        "ultra_moon": "It detonates its own body. The power from that explosion can propel it up steep mountain paths with amazing speed.",
-        "lets_go_pikachu": "Once it sheds its skin, its body turns tender and whitish. Its hide hardens when it’s exposed to air.",
-        "lets_go_eevee": "Once it sheds its skin, its body turns tender and whitish. Its hide hardens when it’s exposed to air."
-    },
-    "genus": "Megaton Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "geodude",
-        "evolves_to": [
-            {
-                "species_name": "graveler",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 25,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "golem",
-                        "evolution_details": {
-                            "item": null,
-                            "trigger": "trade",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": null,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
         "everstone": {
             "sun": 5,
             "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
+            "ultra-sun": 5,
+            "ultra-moon": 5
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "mega-punch",
                 "level_learned_at": 1,
@@ -857,6 +738,126 @@
                 "version_groups": [
                     "sun-moon",
                     "ultra-sun-ultra-moon"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 82,
+    "growth_rate": null,
+    "habitat": "mountain",
+    "evolves_from_species": "graveler",
+    "pokedex_numbers": {
+        "national": 76,
+        "original-alola": 231
+    },
+    "color": "brown",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "Its body can survive dynamite blasts without a single scratch, but it hates rain and humidity.",
+        "moon": "Once a year, this Pokémon molts, and its shed shell returns to the soil. This process creates enriched soil, so farmers collect the shells.",
+        "ultra-sun": "When Golem grow old, they stop shedding their shells. Those that have lived a long, long time have shells green with moss.",
+        "ultra-moon": "It detonates its own body. The power from that explosion can propel it up steep mountain paths with amazing speed.",
+        "lets-go-pikachu": "Once it sheds its skin, its body turns tender and whitish. Its hide hardens when it’s exposed to air.",
+        "lets-go-eevee": "Once it sheds its skin, its body turns tender and whitish. Its hide hardens when it’s exposed to air."
+    },
+    "genus": "Megaton Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "geodude",
+        "evolves_to": [
+            {
+                "species_name": "graveler",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "sun-moon",
+                            "ultra-sun-ultra-moon",
+                            "lets-go-pikachu-lets-go-eevee"
+                        ],
+                        "base_form": "geodude-alola",
+                        "evolved_form": "graveler-alola",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 25,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "golem",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "sun-moon",
+                                "version_groups": [
+                                    "sun-moon",
+                                    "ultra-sun-ultra-moon",
+                                    "lets-go-pikachu-lets-go-eevee"
+                                ],
+                                "base_form": "graveler-alola",
+                                "evolved_form": "golem-alola",
+                                "item": null,
+                                "trigger": "trade",
+                                "gender": null,
+                                "held_item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": null,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": null,
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

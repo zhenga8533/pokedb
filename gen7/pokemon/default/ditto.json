@@ -23,8 +23,8 @@
         "hp": 48,
         "attack": 48,
         "defense": 48,
-        "special_attack": 48,
-        "special_defense": 48,
+        "special-attack": 48,
+        "special-defense": 48,
         "speed": 48
     },
     "ev_yield": [
@@ -35,47 +35,14 @@
     ],
     "height": 3,
     "weight": 40,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/132.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/132.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/132.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/132.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/132.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/132.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/132.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/132.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/132.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/132.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/132.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/132.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/132.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/132.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/132.png",
@@ -83,59 +50,23 @@
             }
         }
     },
-    "base_experience": 101,
-    "base_happiness": 70,
-    "capture_rate": 35,
-    "hatch_counter": 20,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 156,
-    "growth_rate": "medium",
-    "habitat": "urban",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 132,
-        "original_alola": 209
-    },
-    "color": "purple",
-    "shape": "ball",
-    "egg_groups": [
-        "ditto"
-    ],
-    "flavor_text": {
-        "sun": "It can reorganize its cells to make itself into a duplicate of anything it sees. The quality of the duplicate depends on the individual.",
-        "moon": "With its astonishing capacity for metamorphosis, it can get along with anything. It does not get along well with its fellow Ditto.",
-        "ultra_sun": "While it can transform into anything, each Ditto apparently has its own strengths and weaknesses when it comes to transformations.",
-        "ultra_moon": "It transforms into whatever it sees. If the thing it’s transforming into isn’t right in front of it, Ditto relies on its memory—so sometimes it fails.",
-        "lets_go_pikachu": "When it spots an enemy, its body transfigures into an almost-perfect copy of its opponent.",
-        "lets_go_eevee": "When it spots an enemy, its body transfigures into an almost-perfect copy of its opponent."
-    },
-    "genus": "Transform Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "ditto",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {
-        "metal_powder": {
+        "metal-powder": {
             "sun": 5,
             "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
+            "ultra-sun": 5,
+            "ultra-moon": 5
         },
-        "quick_powder": {
+        "quick-powder": {
             "sun": 50,
             "moon": 50,
-            "ultra_sun": 50,
-            "ultra_moon": 50
+            "ultra-sun": 50,
+            "ultra-moon": 50
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "transform",
                 "level_learned_at": 1,
@@ -146,6 +77,40 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 156,
+    "growth_rate": null,
+    "habitat": "urban",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 132,
+        "original-alola": 209
+    },
+    "color": "purple",
+    "shape": "ball",
+    "egg_groups": null,
+    "flavor_text": {
+        "lets-go-pikachu": "When it spots an enemy, its body transfigures into an almost-perfect copy of its opponent.",
+        "sun": "It can reorganize its cells to make itself into a duplicate of anything it sees. The quality of the duplicate depends on the individual.",
+        "moon": "With its astonishing capacity for metamorphosis, it can get along with anything. It does not get along well with its fellow Ditto.",
+        "ultra-sun": "While it can transform into anything, each Ditto apparently has its own strengths and weaknesses when it comes to transformations.",
+        "ultra-moon": "It transforms into whatever it sees. If the thing it’s transforming into isn’t right in front of it, Ditto relies on its memory—so sometimes it fails.",
+        "lets-go-eevee": "When it spots an enemy, its body transfigures into an almost-perfect copy of its opponent."
+    },
+    "genus": "Transform Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "ditto",
+        "evolves_to": []
     },
     "forms": [
         {

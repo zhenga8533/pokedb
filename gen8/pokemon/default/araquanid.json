@@ -24,8 +24,8 @@
         "hp": 68,
         "attack": 70,
         "defense": 92,
-        "special_attack": 50,
-        "special_defense": 132,
+        "special-attack": 50,
+        "special-defense": 132,
         "speed": 42
     },
     "ev_yield": [
@@ -36,43 +36,10 @@
     ],
     "height": 18,
     "weight": 820,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/752.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/752.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/752.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/752.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/752.png",
-        "other": {
-            "dream_world": {
-                "front_default": null,
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/752.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/752.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/752.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/752.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/752.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/752.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/752.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/752.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "brilliant_diamond_shining_pearl": {
+            "brilliant-diamond-shining-pearl": {
                 "front_default": null,
                 "front_female": null
             },
@@ -82,68 +49,10 @@
             }
         }
     },
-    "base_experience": 159,
-    "base_happiness": 70,
-    "capture_rate": 100,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 752,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "dewpider",
-    "pokedex_numbers": {
-        "national": 752,
-        "galar": 215
-    },
-    "color": "green",
-    "shape": "armor",
-    "egg_groups": [
-        "water1",
-        "bug"
-    ],
-    "flavor_text": {
-        "sword": "It launches water bubbles with its legs, drowning prey within the bubbles. This Pokémon can then take its time to savor its meal.",
-        "shield": "It acts as a caretaker for Dewpider, putting them inside its bubble and letting them eat any leftover food."
-    },
-    "genus": "Water Bubble Pokémon",
-    "generation": "generation-vii",
-    "evolution_chain": {
-        "species_name": "dewpider",
-        "evolves_to": [
-            {
-                "species_name": "araquanid",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 22,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "headbutt",
                 "level_learned_at": 20,
@@ -469,6 +378,81 @@
                 "version_groups": [
                     "sword-shield"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 752,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": "dewpider",
+    "pokedex_numbers": {
+        "national": 752,
+        "galar": 215
+    },
+    "color": "green",
+    "shape": "armor",
+    "egg_groups": null,
+    "flavor_text": {
+        "sword": "It launches water bubbles with its legs, drowning prey within the bubbles. This Pokémon can then take its time to savor its meal.",
+        "shield": "It acts as a caretaker for Dewpider, putting them inside its bubble and letting them eat any leftover food."
+    },
+    "genus": "Water Bubble Pokémon",
+    "generation": "generation-vii",
+    "evolution_chain": {
+        "species_name": "dewpider",
+        "evolves_to": [
+            {
+                "species_name": "araquanid",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "sword-shield",
+                            "the-isle-of-armor",
+                            "the-crown-tundra",
+                            "brilliant-diamond-shining-pearl",
+                            "legends-arceus"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 22,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

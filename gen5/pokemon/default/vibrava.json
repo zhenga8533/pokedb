@@ -19,8 +19,8 @@
         "hp": 50,
         "attack": 70,
         "defense": 50,
-        "special_attack": 50,
-        "special_defense": 50,
+        "special-attack": 50,
+        "special-defense": 50,
         "speed": 70
     },
     "ev_yield": [
@@ -35,43 +35,10 @@
     ],
     "height": 11,
     "weight": 153,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/329.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/329.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/329.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/329.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/329.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/329.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/329.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/329.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/329.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/329.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/329.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/329.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/329.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/329.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/329.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "black_white": {
+            "black-white": {
                 "animated": {
                     "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/329.gif",
                     "back_female": null,
@@ -93,91 +60,7 @@
             }
         }
     },
-    "base_experience": 119,
-    "base_happiness": 70,
-    "capture_rate": 120,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 357,
-    "growth_rate": "medium-slow",
-    "habitat": "rough-terrain",
-    "evolves_from_species": "trapinch",
-    "pokedex_numbers": {
-        "national": 329
-    },
-    "color": "green",
-    "shape": "bug-wings",
-    "egg_groups": [
-        "bug",
-        "dragon"
-    ],
-    "flavor_text": {
-        "black": "It violently shudders its wings, generating ultrasonic waves to induce headaches in people.",
-        "white": "It violently shudders its wings, generating ultrasonic waves to induce headaches in people.",
-        "black_2": "The ultrasonic waves it generates by rubbing its two wings together cause severe headaches.",
-        "white_2": "The ultrasonic waves it generates by rubbing its two wings together cause severe headaches."
-    },
-    "genus": "Vibration Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "trapinch",
-        "evolves_to": [
-            {
-                "species_name": "vibrava",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 35,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "flygon",
-                        "evolution_details": {
-                            "item": null,
-                            "trigger": "level-up",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": 45,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -390,7 +273,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "sand-attack",
                 "level_learned_at": 1,
@@ -656,6 +539,121 @@
                 "level_learned_at": 0,
                 "version_groups": [
                     "black-2-white-2"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 357,
+    "growth_rate": null,
+    "habitat": "rough-terrain",
+    "evolves_from_species": "trapinch",
+    "pokedex_numbers": {
+        "national": 329
+    },
+    "color": "green",
+    "shape": "bug-wings",
+    "egg_groups": null,
+    "flavor_text": {
+        "black": "It violently shudders its wings, generating ultrasonic waves to induce headaches in people.",
+        "white": "It violently shudders its wings, generating ultrasonic waves to induce headaches in people.",
+        "black-2": "The ultrasonic waves it generates by rubbing its two wings together cause severe headaches.",
+        "white-2": "The ultrasonic waves it generates by rubbing its two wings together cause severe headaches."
+    },
+    "genus": "Vibration Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "trapinch",
+        "evolves_to": [
+            {
+                "species_name": "vibrava",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "ruby-sapphire",
+                        "version_groups": [
+                            "black-white",
+                            "black-2-white-2"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 35,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "flygon",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "ruby-sapphire",
+                                "version_groups": [
+                                    "black-white",
+                                    "black-2-white-2"
+                                ],
+                                "base_form": null,
+                                "evolved_form": null,
+                                "item": null,
+                                "trigger": "level-up",
+                                "gender": null,
+                                "held_item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": 45,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": null,
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

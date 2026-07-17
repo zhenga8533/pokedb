@@ -24,8 +24,8 @@
         "hp": 71,
         "attack": 60,
         "defense": 106,
-        "special_attack": 121,
-        "special_defense": 80,
+        "special-attack": 121,
+        "special-defense": 80,
         "speed": 70
     },
     "ev_yield": [
@@ -56,7 +56,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/1013.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1013.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1013.png"
             },
@@ -72,70 +72,13 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/1013.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 178,
-    "base_happiness": 50,
-    "capture_rate": 60,
-    "hatch_counter": 50,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 1015,
-    "growth_rate": "slow",
-    "habitat": null,
-    "evolves_from_species": "poltchageist",
-    "pokedex_numbers": {
-        "national": 1013
-    },
-    "color": "green",
-    "shape": "ball",
-    "egg_groups": [
-        "mineral",
-        "indeterminate"
-    ],
-    "flavor_text": {
-        "scarlet": "It pretends to be tea, trying to fool people into drinking it so it can drain their life-force. Its ruse is generally unsuccessful.",
-        "violet": "It prefers cool, dark places, such as the back of a shelf or the space beneath a home's floorboards. It wanders in search of prey after sunset."
-    },
-    "genus": "Matcha Pokémon",
-    "generation": "generation-ix",
-    "evolution_chain": {
-        "species_name": "poltchageist",
-        "evolves_to": [
-            {
-                "species_name": "sinistcha",
-                "evolution_details": {
-                    "item": "unremarkable-teacup",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
         "machine": [
@@ -604,7 +547,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "absorb",
                 "level_learned_at": 6,
@@ -702,6 +645,120 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 50,
+    "capture_rate": 60,
+    "hatch_counter": 50,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 1015,
+    "growth_rate": "slow",
+    "habitat": null,
+    "evolves_from_species": "poltchageist",
+    "pokedex_numbers": {
+        "national": 1013
+    },
+    "color": "green",
+    "shape": "ball",
+    "egg_groups": [
+        "mineral",
+        "indeterminate"
+    ],
+    "flavor_text": {
+        "scarlet": "It pretends to be tea, trying to fool people into drinking it so it can drain their life-force. Its ruse is generally unsuccessful.",
+        "violet": "It prefers cool, dark places, such as the back of a shelf or the space beneath a home's floorboards. It wanders in search of prey after sunset."
+    },
+    "genus": "Matcha Pokémon",
+    "generation": "generation-ix",
+    "evolution_chain": {
+        "species_name": "poltchageist",
+        "evolves_to": [
+            {
+                "species_name": "sinistcha",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "the-teal-mask",
+                        "version_groups": [
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "unremarkable-teacup",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    },
+                    {
+                        "introduced_in_version_group": "the-teal-mask",
+                        "version_groups": [
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "masterpiece-teacup",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

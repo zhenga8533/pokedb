@@ -23,8 +23,8 @@
         "hp": 190,
         "attack": 33,
         "defense": 58,
-        "special_attack": 33,
-        "special_defense": 58,
+        "special-attack": 33,
+        "special-defense": 58,
         "speed": 33
     },
     "ev_yield": [
@@ -35,116 +35,28 @@
     ],
     "height": 13,
     "weight": 285,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/202.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/202.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/202.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/202.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/202.png",
-        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/202.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/202.png",
-        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/202.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/202.svg",
+        "versions": {
+            "brilliant-diamond-shining-pearl": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/202.png",
                 "front_female": null
             },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/202.png",
-                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/202.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/202.png",
-                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/202.png"
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/202.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/202.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/202.gif",
-                "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/female/202.gif",
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/202.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/202.gif",
-                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/female/202.gif",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/202.gif",
-                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/female/202.gif"
-            }
-        },
-        "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/202.png",
                 "front_female": null
             }
         }
     },
-    "base_experience": 142,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": true,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 233,
-    "growth_rate": "medium",
-    "habitat": "cave",
-    "evolves_from_species": "wynaut",
-    "pokedex_numbers": {
-        "national": 202,
-        "galar": 217
-    },
-    "color": "blue",
-    "shape": "blob",
-    "egg_groups": [
-        "indeterminate"
-    ],
-    "flavor_text": {
-        "sword": "It hates light and shock. If attacked, it inflates its body to pump up its counterstrike.",
-        "shield": "To keep its pitch-black tail hidden, it lives quietly in the darkness. It is never first to attack."
-    },
-    "genus": "Patient Pokémon",
-    "generation": "generation-ii",
-    "evolution_chain": {
-        "species_name": "wynaut",
-        "evolves_to": [
-            {
-                "species_name": "wobbuffet",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 15,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "counter",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -152,7 +64,7 @@
                 "name": "counter",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -160,7 +72,7 @@
                 "name": "amnesia",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -168,7 +80,7 @@
                 "name": "splash",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -176,7 +88,7 @@
                 "name": "destiny-bond",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -184,7 +96,7 @@
                 "name": "destiny-bond",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -192,7 +104,7 @@
                 "name": "charm",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -200,7 +112,7 @@
                 "name": "safeguard",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -208,7 +120,7 @@
                 "name": "safeguard",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -216,7 +128,7 @@
                 "name": "encore",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -224,7 +136,7 @@
                 "name": "mirror-coat",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -232,7 +144,7 @@
                 "name": "mirror-coat",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             }
@@ -256,7 +168,7 @@
                 "name": "safeguard",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -266,6 +178,81 @@
                 "version_groups": [
                     "sword-shield"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 233,
+    "growth_rate": null,
+    "habitat": "cave",
+    "evolves_from_species": "wynaut",
+    "pokedex_numbers": {
+        "national": 202,
+        "galar": 217
+    },
+    "color": "blue",
+    "shape": "blob",
+    "egg_groups": null,
+    "flavor_text": {
+        "sword": "It hates light and shock. If attacked, it inflates its body to pump up its counterstrike.",
+        "shield": "To keep its pitch-black tail hidden, it lives quietly in the darkness. It is never first to attack."
+    },
+    "genus": "Patient Pokémon",
+    "generation": "generation-ii",
+    "evolution_chain": {
+        "species_name": "wynaut",
+        "evolves_to": [
+            {
+                "species_name": "wobbuffet",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "ruby-sapphire",
+                        "version_groups": [
+                            "sword-shield",
+                            "the-isle-of-armor",
+                            "the-crown-tundra",
+                            "brilliant-diamond-shining-pearl",
+                            "legends-arceus"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 15,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

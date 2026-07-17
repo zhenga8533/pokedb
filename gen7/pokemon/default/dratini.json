@@ -23,8 +23,8 @@
         "hp": 41,
         "attack": 64,
         "defense": 45,
-        "special_attack": 50,
-        "special_defense": 50,
+        "special-attack": 50,
+        "special-defense": 50,
         "speed": 50
     },
     "ev_yield": [
@@ -35,47 +35,14 @@
     ],
     "height": 18,
     "weight": 33,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/147.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/147.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/147.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/147.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/147.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/147.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/147.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/147.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/147.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/147.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/147.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/147.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/147.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/147.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/147.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/147.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/147.png",
@@ -83,100 +50,13 @@
             }
         }
     },
-    "base_experience": 60,
-    "base_happiness": 35,
-    "capture_rate": 45,
-    "hatch_counter": 40,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 179,
-    "growth_rate": "slow",
-    "habitat": "waters-edge",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 147,
-        "original_alola": 281
-    },
-    "color": "blue",
-    "shape": "squiggle",
-    "egg_groups": [
-        "water1",
-        "dragon"
-    ],
-    "flavor_text": {
-        "sun": "It grows by molting repeatedly. Boots made from the tanned cast-off skin are a super luxury item.",
-        "moon": "After a 10-hour struggle, a fisherman was able to pull one up and confirm its existence.",
-        "ultra_sun": "It’s still weak, so it lurks on the floor of bodies of water, eating whatever food sinks down and living a quiet life.",
-        "ultra_moon": "It sheds its skin—almost on a daily basis—and grows larger. Its skin is soft just after it’s been shed.",
-        "lets_go_pikachu": "Long thought to be a myth, this Pokémon’s existence was only recently confirmed by a fisherman who caught one.",
-        "lets_go_eevee": "Long thought to be a myth, this Pokémon’s existence was only recently confirmed by a fisherman who caught one."
-    },
-    "genus": "Dragon Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "dratini",
-        "evolves_to": [
-            {
-                "species_name": "dragonair",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 30,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "dragonite",
-                        "evolution_details": {
-                            "item": null,
-                            "trigger": "level-up",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": 55,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "dragon_scale": {
+        "dragon-scale": {
             "sun": 5,
             "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
+            "ultra-sun": 5,
+            "ultra-moon": 5
         }
     },
     "moves": {
@@ -253,7 +133,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "slam",
                 "level_learned_at": 21,
@@ -807,6 +687,126 @@
                 "version_groups": [
                     "sun-moon",
                     "ultra-sun-ultra-moon"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 179,
+    "growth_rate": null,
+    "habitat": "waters-edge",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 147,
+        "original-alola": 281
+    },
+    "color": "blue",
+    "shape": "squiggle",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "It grows by molting repeatedly. Boots made from the tanned cast-off skin are a super luxury item.",
+        "moon": "After a 10-hour struggle, a fisherman was able to pull one up and confirm its existence.",
+        "ultra-sun": "It’s still weak, so it lurks on the floor of bodies of water, eating whatever food sinks down and living a quiet life.",
+        "ultra-moon": "It sheds its skin—almost on a daily basis—and grows larger. Its skin is soft just after it’s been shed.",
+        "lets-go-pikachu": "Long thought to be a myth, this Pokémon’s existence was only recently confirmed by a fisherman who caught one.",
+        "lets-go-eevee": "Long thought to be a myth, this Pokémon’s existence was only recently confirmed by a fisherman who caught one."
+    },
+    "genus": "Dragon Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "dratini",
+        "evolves_to": [
+            {
+                "species_name": "dragonair",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "sun-moon",
+                            "ultra-sun-ultra-moon",
+                            "lets-go-pikachu-lets-go-eevee"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 30,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "dragonite",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "red-blue",
+                                "version_groups": [
+                                    "sun-moon",
+                                    "ultra-sun-ultra-moon",
+                                    "lets-go-pikachu-lets-go-eevee"
+                                ],
+                                "base_form": null,
+                                "evolved_form": null,
+                                "item": null,
+                                "trigger": "level-up",
+                                "gender": null,
+                                "held_item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": 55,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": null,
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

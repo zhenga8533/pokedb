@@ -28,8 +28,8 @@
         "hp": 160,
         "attack": 110,
         "defense": 65,
-        "special_attack": 65,
-        "special_defense": 110,
+        "special-attack": 65,
+        "special-defense": 110,
         "speed": 30
     },
     "ev_yield": [
@@ -40,47 +40,14 @@
     ],
     "height": 21,
     "weight": 4600,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/143.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/143.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/143.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/143.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/143.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/143.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/143.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/143.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/143.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/143.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/143.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/143.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/143.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/143.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/143.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/143.png",
@@ -88,74 +55,13 @@
             }
         }
     },
-    "base_experience": 189,
-    "base_happiness": 70,
-    "capture_rate": 25,
-    "hatch_counter": 40,
-    "gender_rate": 1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 175,
-    "growth_rate": "slow",
-    "habitat": "mountain",
-    "evolves_from_species": "munchlax",
-    "pokedex_numbers": {
-        "national": 143,
-        "original_alola": 36
-    },
-    "color": "black",
-    "shape": "humanoid",
-    "egg_groups": [
-        "monster"
-    ],
-    "flavor_text": {
-        "sun": "Its stomach is said to be incomparably strong. Even Muk’s poison is nothing more than a hint of spice on Snorlax’s tongue.",
-        "moon": "It eats nearly 900 pounds of food every day. It starts nodding off while eating—and continues to eat even while it’s asleep.",
-        "ultra_sun": "It doesn’t do anything other than eat and sleep. When prompted to make a serious effort, though, it apparently displays awesome power.",
-        "ultra_moon": "It has no interest in anything other than eating. Even if you climb up on its stomach while it’s napping, it doesn’t seem to mind at all!",
-        "lets_go_pikachu": "Will eat anything, even if the food happens to be a little moldy. It never gets an upset stomach.",
-        "lets_go_eevee": "Will eat anything, even if the food happens to be a little moldy. It never gets an upset stomach."
-    },
-    "genus": "Sleeping Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "munchlax",
-        "evolves_to": [
-            {
-                "species_name": "snorlax",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": 160,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
         "leftovers": {
             "sun": 5,
             "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
+            "ultra-sun": 5,
+            "ultra-moon": 5
         }
     },
     "moves": {
@@ -815,7 +721,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "headbutt",
                 "level_learned_at": 26,
@@ -1022,6 +928,83 @@
                     "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 175,
+    "growth_rate": null,
+    "habitat": "mountain",
+    "evolves_from_species": "munchlax",
+    "pokedex_numbers": {
+        "national": 143,
+        "original-alola": 36
+    },
+    "color": "black",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "Its stomach is said to be incomparably strong. Even Muk’s poison is nothing more than a hint of spice on Snorlax’s tongue.",
+        "moon": "It eats nearly 900 pounds of food every day. It starts nodding off while eating—and continues to eat even while it’s asleep.",
+        "ultra-sun": "It doesn’t do anything other than eat and sleep. When prompted to make a serious effort, though, it apparently displays awesome power.",
+        "ultra-moon": "It has no interest in anything other than eating. Even if you climb up on its stomach while it’s napping, it doesn’t seem to mind at all!",
+        "lets-go-pikachu": "Will eat anything, even if the food happens to be a little moldy. It never gets an upset stomach.",
+        "lets-go-eevee": "Will eat anything, even if the food happens to be a little moldy. It never gets an upset stomach."
+    },
+    "genus": "Sleeping Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "munchlax",
+        "evolves_to": [
+            {
+                "species_name": "snorlax",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "diamond-pearl",
+                        "version_groups": [
+                            "sun-moon",
+                            "ultra-sun-ultra-moon",
+                            "lets-go-pikachu-lets-go-eevee"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": 160,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

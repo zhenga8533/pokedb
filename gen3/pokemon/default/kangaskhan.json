@@ -18,8 +18,8 @@
         "hp": 105,
         "attack": 95,
         "defense": 80,
-        "special_attack": 40,
-        "special_defense": 80,
+        "special-attack": 40,
+        "special-defense": 80,
         "speed": 90
     },
     "ev_yield": [
@@ -30,53 +30,20 @@
     ],
     "height": 22,
     "weight": 800,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/115.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/115.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/115.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/115.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/115.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/115.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/115.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/115.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/115.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/115.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/115.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/115.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/115.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/115.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/115.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/115.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/115.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/shiny/115.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/115.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/shiny/115.png"
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/115.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/115.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/115.png",
@@ -84,44 +51,10 @@
             }
         }
     },
-    "base_experience": 175,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 8,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": true,
-    "order": 131,
-    "growth_rate": "medium",
-    "habitat": "grassland",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 115
-    },
-    "color": "brown",
-    "shape": "upright",
-    "egg_groups": [
-        "monster"
-    ],
-    "flavor_text": {
-        "ruby": "If you come across a young KANGASKHAN playing by itself, you must never disturb it or attempt to catch it. The baby POKéMON’s parent is sure to be in the area, and it will become violently enraged at you.",
-        "sapphire": "If you come across a young KANGASKHAN playing by itself, you must never disturb it or attempt to catch it. The baby POKéMON’s parent is sure to be in the area, and it will become violently enraged at you.",
-        "emerald": "If you come across a young KANGASKHAN playing by itself, never try to catch it. The baby’s parent is sure to be in the area, and it will become violently enraged.",
-        "firered": "The female raises its offspring in a pouch on its belly. It is skilled at attacking using COMET PUNCH.",
-        "leafgreen": "The infant rarely ventures out of its mother’s protective pouch until it is three years old."
-    },
-    "genus": "Parent Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "kangaskhan",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "comet-punch",
                 "level_learned_at": 1,
@@ -884,7 +817,69 @@
                     "ruby-sapphire"
                 ]
             }
+        ],
+        "xd-purification": [
+            {
+                "name": "tail-whip",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "sing",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "earthquake",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "dizzy-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 131,
+    "growth_rate": null,
+    "habitat": "grassland",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 115
+    },
+    "color": "brown",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "If you come across a young KANGASKHAN playing by itself, you must never disturb it or attempt to catch it. The baby POKéMON’s parent is sure to be in the area, and it will become violently enraged at you.",
+        "sapphire": "If you come across a young KANGASKHAN playing by itself, you must never disturb it or attempt to catch it. The baby POKéMON’s parent is sure to be in the area, and it will become violently enraged at you.",
+        "emerald": "If you come across a young KANGASKHAN playing by itself, never try to catch it. The baby’s parent is sure to be in the area, and it will become violently enraged.",
+        "firered": "The female raises its offspring in a pouch on its belly. It is skilled at attacking using COMET PUNCH.",
+        "leafgreen": "The infant rarely ventures out of its mother’s protective pouch until it is three years old."
+    },
+    "genus": "Parent Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "kangaskhan",
+        "evolves_to": []
     },
     "forms": [
         {

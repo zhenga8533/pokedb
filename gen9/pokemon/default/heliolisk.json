@@ -29,8 +29,8 @@
         "hp": 62,
         "attack": 55,
         "defense": 52,
-        "special_attack": 109,
-        "special_defense": 94,
+        "special-attack": 109,
+        "special-defense": 94,
         "speed": 109
     },
     "ev_yield": [
@@ -65,7 +65,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/695.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/695.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/695.png"
             },
@@ -81,67 +81,13 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": null,
                 "front_female": null
             }
         }
     },
     "base_experience": 168,
-    "base_happiness": 70,
-    "capture_rate": 75,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 696,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "helioptile",
-    "pokedex_numbers": {
-        "national": 695
-    },
-    "color": "yellow",
-    "shape": "upright",
-    "egg_groups": [
-        "monster",
-        "dragon"
-    ],
-    "flavor_text": {},
-    "genus": "Generator Pokémon",
-    "generation": "generation-vi",
-    "evolution_chain": {
-        "species_name": "helioptile",
-        "evolves_to": [
-            {
-                "species_name": "heliolisk",
-                "evolution_details": {
-                    "item": "sun-stone",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
         "train": [
@@ -585,6 +531,81 @@
                 "version_groups": [
                     "champions"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 696,
+    "growth_rate": "medium",
+    "habitat": null,
+    "evolves_from_species": "helioptile",
+    "pokedex_numbers": {
+        "national": 695
+    },
+    "color": "yellow",
+    "shape": "upright",
+    "egg_groups": [
+        "monster",
+        "dragon"
+    ],
+    "flavor_text": {},
+    "genus": "Generator Pokémon",
+    "generation": "generation-vi",
+    "evolution_chain": {
+        "species_name": "helioptile",
+        "evolves_to": [
+            {
+                "species_name": "heliolisk",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "x-y",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "sun-stone",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

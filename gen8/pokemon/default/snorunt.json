@@ -28,8 +28,8 @@
         "hp": 50,
         "attack": 50,
         "defense": 50,
-        "special_attack": 50,
-        "special_defense": 50,
+        "special-attack": 50,
+        "special-defense": 50,
         "speed": 50
     },
     "ev_yield": [
@@ -40,43 +40,10 @@
     ],
     "height": 7,
     "weight": 168,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/361.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/361.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/361.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/361.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/361.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/361.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/361.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/361.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/361.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/361.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/361.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/361.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/361.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/361.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/361.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "brilliant_diamond_shining_pearl": {
+            "brilliant-diamond-shining-pearl": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/361.png",
                 "front_female": null
             },
@@ -86,98 +53,15 @@
             }
         }
     },
-    "base_experience": 60,
-    "base_happiness": 70,
-    "capture_rate": 190,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 390,
-    "growth_rate": "medium",
-    "habitat": "cave",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 361,
-        "galar": 79
-    },
-    "color": "gray",
-    "shape": "humanoid",
-    "egg_groups": [
-        "fairy",
-        "mineral"
-    ],
-    "flavor_text": {
-        "sword": "It’s said that if they are seen at midnight, they’ll cause heavy snow. They eat snow and ice to survive.",
-        "shield": "It can only survive in cold areas. It bounces happily around, even in environments as cold as −150 degrees Fahrenheit.",
-        "legends_arceus": "Arrives alongside the first snow. It's thought that homes Snorunt visit will prosper for many generations. By tradition, one might offer a lump of ice made from pure water at one's front door."
-    },
-    "genus": "Snow Hat Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "snorunt",
-        "evolves_to": [
-            {
-                "species_name": "glalie",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 42,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            },
-            {
-                "species_name": "froslass",
-                "evolution_details": {
-                    "item": "dawn-stone",
-                    "trigger": "use-item",
-                    "gender": 1,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "headbutt",
                 "level_learned_at": 50,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -185,7 +69,7 @@
                 "name": "leer",
                 "level_learned_at": 5,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -193,7 +77,7 @@
                 "name": "bite",
                 "level_learned_at": 35,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -208,7 +92,7 @@
                 "name": "blizzard",
                 "level_learned_at": 60,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -223,7 +107,7 @@
                 "name": "double-team",
                 "level_learned_at": 10,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -231,7 +115,7 @@
                 "name": "powder-snow",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "legends-arceus",
                     "sword-shield"
                 ]
@@ -240,7 +124,7 @@
                 "name": "protect",
                 "level_learned_at": 20,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -248,7 +132,7 @@
                 "name": "icy-wind",
                 "level_learned_at": 25,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -256,7 +140,7 @@
                 "name": "crunch",
                 "level_learned_at": 55,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -271,7 +155,7 @@
                 "name": "hail",
                 "level_learned_at": 45,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -279,7 +163,7 @@
                 "name": "astonish",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -287,7 +171,7 @@
                 "name": "ice-shard",
                 "level_learned_at": 15,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -302,7 +186,7 @@
                 "name": "ice-fang",
                 "level_learned_at": 40,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -317,7 +201,7 @@
                 "name": "frost-breath",
                 "level_learned_at": 30,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -341,7 +225,7 @@
                 "name": "ice-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -349,7 +233,7 @@
                 "name": "blizzard",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -357,14 +241,14 @@
                 "name": "double-team",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "brilliant-diamond-shining-pearl"
                 ]
             },
             {
                 "name": "light-screen",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -372,14 +256,14 @@
                 "name": "flash",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "brilliant-diamond-shining-pearl"
                 ]
             },
             {
                 "name": "rest",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -387,7 +271,7 @@
                 "name": "substitute",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -402,7 +286,7 @@
                 "name": "protect",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -424,7 +308,7 @@
                 "name": "endure",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -432,14 +316,14 @@
                 "name": "swagger",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "brilliant-diamond-shining-pearl"
                 ]
             },
             {
                 "name": "attract",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -447,7 +331,7 @@
                 "name": "sleep-talk",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -455,7 +339,7 @@
                 "name": "safeguard",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -463,7 +347,7 @@
                 "name": "rain-dance",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -478,7 +362,7 @@
                 "name": "shadow-ball",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -486,7 +370,7 @@
                 "name": "hail",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -494,7 +378,7 @@
                 "name": "facade",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -516,14 +400,14 @@
                 "name": "water-pulse",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "brilliant-diamond-shining-pearl"
                 ]
             },
             {
                 "name": "avalanche",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -554,7 +438,7 @@
                 "name": "disable",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -562,14 +446,14 @@
                 "name": "spikes",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "brilliant-diamond-shining-pearl"
                 ]
             },
             {
                 "name": "rollout",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -577,21 +461,21 @@
                 "name": "weather-ball",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "brilliant-diamond-shining-pearl"
                 ]
             },
             {
                 "name": "fake-tears",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "brilliant-diamond-shining-pearl"
                 ]
             },
             {
                 "name": "block",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -599,7 +483,7 @@
                 "name": "switcheroo",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -607,16 +491,136 @@
                 "name": "hex",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "brilliant-diamond-shining-pearl"
                 ]
             },
             {
                 "name": "icicle-crash",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "brilliant-diamond-shining-pearl",
                     "sword-shield"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 390,
+    "growth_rate": null,
+    "habitat": "cave",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 361,
+        "galar": 79
+    },
+    "color": "gray",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "sword": "It’s said that if they are seen at midnight, they’ll cause heavy snow. They eat snow and ice to survive.",
+        "shield": "It can only survive in cold areas. It bounces happily around, even in environments as cold as −150 degrees Fahrenheit.",
+        "legends-arceus": "Arrives alongside the first snow. It's thought that homes Snorunt visit will prosper for many generations. By tradition, one might offer a lump of ice made from pure water at one's front door."
+    },
+    "genus": "Snow Hat Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "snorunt",
+        "evolves_to": [
+            {
+                "species_name": "glalie",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "ruby-sapphire",
+                        "version_groups": [
+                            "sword-shield",
+                            "the-isle-of-armor",
+                            "the-crown-tundra",
+                            "brilliant-diamond-shining-pearl",
+                            "legends-arceus"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 42,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
+            },
+            {
+                "species_name": "froslass",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "diamond-pearl",
+                        "version_groups": [
+                            "sword-shield",
+                            "the-isle-of-armor",
+                            "the-crown-tundra",
+                            "brilliant-diamond-shining-pearl",
+                            "legends-arceus"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "dawn-stone",
+                        "trigger": "use-item",
+                        "gender": 1,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

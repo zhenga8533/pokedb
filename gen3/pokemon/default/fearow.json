@@ -19,8 +19,8 @@
         "hp": 65,
         "attack": 90,
         "defense": 65,
-        "special_attack": 61,
-        "special_defense": 61,
+        "special-attack": 61,
+        "special-defense": 61,
         "speed": 100
     },
     "ev_yield": [
@@ -31,53 +31,20 @@
     ],
     "height": 12,
     "weight": 380,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/22.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/22.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/22.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/22.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/22.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/22.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/22.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/22.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/22.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/22.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/22.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/22.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/22.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/22.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/22.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/22.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/22.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/shiny/22.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/22.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/shiny/22.png"
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/22.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/22.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/22.png",
@@ -85,68 +52,9 @@
             }
         }
     },
-    "base_experience": 162,
-    "base_happiness": 70,
-    "capture_rate": 90,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 22,
-    "growth_rate": "medium",
-    "habitat": "rough-terrain",
-    "evolves_from_species": "spearow",
-    "pokedex_numbers": {
-        "national": 22
-    },
-    "color": "brown",
-    "shape": "wings",
-    "egg_groups": [
-        "flying"
-    ],
-    "flavor_text": {
-        "ruby": "FEAROW is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey.",
-        "sapphire": "FEAROW is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey.",
-        "emerald": "Its long neck and elongated beak are ideal for catching prey in soil or water. It deftly moves this extended and skinny beak to pluck prey.",
-        "firered": "Its huge and magnificent wings can keep it aloft in the sky. It can remain flying a whole day without landing.",
-        "leafgreen": "With its huge and magnificent wings, it can keep aloft without ever having to land for rest."
-    },
-    "genus": "Beak Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "spearow",
-        "evolves_to": [
-            {
-                "species_name": "fearow",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 20,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "sharp_beak": {
+        "sharp-beak": {
             "ruby": 5,
             "sapphire": 5,
             "emerald": 5,
@@ -344,7 +252,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "fury-attack",
                 "level_learned_at": 1,
@@ -533,6 +441,83 @@
                 "version_groups": [
                     "emerald"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 22,
+    "growth_rate": null,
+    "habitat": "rough-terrain",
+    "evolves_from_species": "spearow",
+    "pokedex_numbers": {
+        "national": 22
+    },
+    "color": "brown",
+    "shape": "wings",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "FEAROW is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey.",
+        "sapphire": "FEAROW is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey.",
+        "emerald": "Its long neck and elongated beak are ideal for catching prey in soil or water. It deftly moves this extended and skinny beak to pluck prey.",
+        "firered": "Its huge and magnificent wings can keep it aloft in the sky. It can remain flying a whole day without landing.",
+        "leafgreen": "With its huge and magnificent wings, it can keep aloft without ever having to land for rest."
+    },
+    "genus": "Beak Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "spearow",
+        "evolves_to": [
+            {
+                "species_name": "fearow",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "ruby-sapphire",
+                            "emerald",
+                            "firered-leafgreen",
+                            "colosseum",
+                            "xd"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 20,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

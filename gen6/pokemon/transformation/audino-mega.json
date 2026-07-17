@@ -19,8 +19,8 @@
         "hp": 103,
         "attack": 60,
         "defense": 126,
-        "special_attack": 80,
-        "special_defense": 126,
+        "special-attack": 80,
+        "special-defense": 126,
         "speed": 50
     },
     "ev_yield": [
@@ -31,47 +31,16 @@
     ],
     "height": 15,
     "weight": 320,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10069.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10069.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10069.png",
-        "other": {
-            "dream_world": {
-                "front_default": null,
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10069.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10069.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10069.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10069.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10069.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10069.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10069.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10069.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/531-mega.png",
+            "omegaruby-alphasapphire": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/10069.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/531-mega.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/10069.png",
                 "front_shiny_female": null
             },
-            "x_y": {
+            "x-y": {
                 "front_default": null,
                 "front_female": null,
                 "front_shiny": null,
@@ -79,70 +48,24 @@
             }
         }
     },
-    "base_experience": 390,
-    "base_happiness": 70,
-    "capture_rate": 255,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": true,
-    "order": 532,
-    "growth_rate": "fast",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 531,
-        "kalos_central": 123
-    },
-    "color": "pink",
-    "shape": "upright",
-    "egg_groups": [
-        "fairy"
-    ],
-    "flavor_text": {
-        "x": "Using the feelers on its ears, it can tell how someone is feeling or when an egg might hatch.",
-        "y": "It touches others with the feelers on its ears, using the sound of their heartbeats to tell how they are feeling.",
-        "omega_ruby": "Using the feelers on its ears, it can tell how someone is feeling or when an egg might hatch.",
-        "alpha_sapphire": "It touches others with the feelers on its ears, using the sound of their heartbeats to tell how they are feeling."
-    },
-    "genus": "Hearing Pokémon",
-    "generation": "generation-v",
-    "evolution_chain": {
-        "species_name": "audino",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {
-        "oran_berry": {
-            "x": 50,
-            "y": 50,
-            "omega_ruby": 50,
-            "alpha_sapphire": 50
+        "oran-berry": {
+            "omega-ruby": 50,
+            "alpha-sapphire": 50
         },
-        "sitrus_berry": {
-            "x": 5,
-            "y": 5,
-            "omega_ruby": 5,
-            "alpha_sapphire": 5
+        "sitrus-berry": {
+            "omega-ruby": 5,
+            "alpha-sapphire": 5
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "pound",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "double-slap",
-                "level_learned_at": 10,
-                "version_groups": [
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -154,23 +77,9 @@
             },
             {
                 "name": "take-down",
-                "level_learned_at": 30,
-                "version_groups": [
-                    "x-y"
-                ]
-            },
-            {
-                "name": "take-down",
                 "level_learned_at": 33,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "double-edge",
-                "level_learned_at": 50,
-                "version_groups": [
-                    "x-y"
                 ]
             },
             {
@@ -184,15 +93,7 @@
                 "name": "growl",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "attract",
-                "level_learned_at": 15,
-                "version_groups": [
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -206,15 +107,7 @@
                 "name": "helping-hand",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "refresh",
-                "level_learned_at": 5,
-                "version_groups": [
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -222,13 +115,6 @@
                 "level_learned_at": 9,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "secret-power",
-                "level_learned_at": 20,
-                "version_groups": [
-                    "x-y"
                 ]
             },
             {
@@ -242,15 +128,7 @@
                 "name": "last-resort",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "last-resort",
-                "level_learned_at": 55,
-                "version_groups": [
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -264,15 +142,7 @@
                 "name": "simple-beam",
                 "level_learned_at": 45,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "entrainment",
-                "level_learned_at": 25,
-                "version_groups": [
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -284,23 +154,9 @@
             },
             {
                 "name": "after-you",
-                "level_learned_at": 40,
-                "version_groups": [
-                    "x-y"
-                ]
-            },
-            {
-                "name": "after-you",
                 "level_learned_at": 41,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "heal-pulse",
-                "level_learned_at": 35,
-                "version_groups": [
-                    "x-y"
                 ]
             },
             {
@@ -328,8 +184,7 @@
                 "name": "play-nice",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -522,264 +377,231 @@
                 "name": "flamethrower",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "surf",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "ice-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "blizzard",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "hyper-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "solar-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "thunderbolt",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "thunder-wave",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "thunder",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "dig",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "toxic",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "psychic",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "double-team",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "light-screen",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "reflect",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "fire-blast",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "dream-eater",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "flash",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rest",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "substitute",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "protect",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "swagger",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "attract",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sleep-talk",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "return",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "frustration",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "safeguard",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "hidden-power",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rain-dance",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sunny-day",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "psych-up",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "shadow-ball",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "facade",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -793,112 +615,98 @@
                 "name": "calm-mind",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "fling",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "trick-room",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "grass-knot",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "charge-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "psyshock",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "round",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "echoed-voice",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "incinerate",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "retaliate",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "wild-charge",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "confide",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "dazzling-gleam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "power-up-punch",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             }
         ],
@@ -907,91 +715,112 @@
                 "name": "amnesia",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sweet-kiss",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sleep-talk",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "heal-bell",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "encore",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "wish",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "yawn",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "healing-wish",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "lucky-chant",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "bestow",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "draining-kiss",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 532,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 531,
+        "kalos-central": 123
+    },
+    "color": "pink",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "x": "Using the feelers on its ears, it can tell how someone is feeling or when an egg might hatch.",
+        "y": "It touches others with the feelers on its ears, using the sound of their heartbeats to tell how they are feeling.",
+        "omega-ruby": "Using the feelers on its ears, it can tell how someone is feeling or when an egg might hatch.",
+        "alpha-sapphire": "It touches others with the feelers on its ears, using the sound of their heartbeats to tell how they are feeling."
+    },
+    "genus": "Hearing Pokémon",
+    "generation": "generation-v",
+    "evolution_chain": {
+        "species_name": "audino",
+        "evolves_to": []
     },
     "forms": [
         {

@@ -29,8 +29,8 @@
         "hp": 40,
         "attack": 35,
         "defense": 55,
-        "special_attack": 65,
-        "special_defense": 75,
+        "special-attack": 65,
+        "special-defense": 75,
         "speed": 15
     },
     "ev_yield": [
@@ -41,47 +41,14 @@
     ],
     "height": 2,
     "weight": 15,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/755.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/755.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/755.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/755.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/755.png",
-        "other": {
-            "dream_world": {
-                "front_default": null,
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/755.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/755.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/755.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/755.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/755.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/755.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/755.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/755.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/755.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/755.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/755.png",
@@ -89,82 +56,23 @@
             }
         }
     },
-    "base_experience": 57,
-    "base_happiness": 70,
-    "capture_rate": 190,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 755,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 755,
-        "original_alola": 145
-    },
-    "color": "purple",
-    "shape": "blob",
-    "egg_groups": [
-        "plant"
-    ],
-    "flavor_text": {
-        "sun": "It scatters spores that flicker and glow. Anyone seeing these lights falls into a deep slumber.",
-        "moon": "As it drowses the day away, it nourishes itself by sucking from tree roots. It wakens at the fall of night, wandering off in search of a new tree.",
-        "ultra_sun": "It scatters its shining spores around itself. Even though they’re dangerous, nighttime tours of forests where Morelull live are popular.",
-        "ultra_moon": "It likes damp dark places. When night falls, the spores filling the caps of its mushrooms glow."
-    },
-    "genus": "Illuminating Pokémon",
-    "generation": "generation-vii",
-    "evolution_chain": {
-        "species_name": "morelull",
-        "evolves_to": [
-            {
-                "species_name": "shiinotic",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 24,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "tiny_mushroom": {
+        "tiny-mushroom": {
             "sun": 50,
             "moon": 50,
-            "ultra_sun": 50,
-            "ultra_moon": 50
+            "ultra-sun": 50,
+            "ultra-moon": 50
         },
-        "big_mushroom": {
+        "big-mushroom": {
             "sun": 5,
             "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
+            "ultra-sun": 5,
+            "ultra-moon": 5
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "absorb",
                 "level_learned_at": 1,
@@ -591,6 +499,81 @@
                 "version_groups": [
                     "ultra-sun-ultra-moon"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 755,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 755,
+        "original-alola": 145
+    },
+    "color": "purple",
+    "shape": "blob",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "It scatters spores that flicker and glow. Anyone seeing these lights falls into a deep slumber.",
+        "moon": "As it drowses the day away, it nourishes itself by sucking from tree roots. It wakens at the fall of night, wandering off in search of a new tree.",
+        "ultra-sun": "It scatters its shining spores around itself. Even though they’re dangerous, nighttime tours of forests where Morelull live are popular.",
+        "ultra-moon": "It likes damp dark places. When night falls, the spores filling the caps of its mushrooms glow."
+    },
+    "genus": "Illuminating Pokémon",
+    "generation": "generation-vii",
+    "evolution_chain": {
+        "species_name": "morelull",
+        "evolves_to": [
+            {
+                "species_name": "shiinotic",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "sun-moon",
+                            "ultra-sun-ultra-moon",
+                            "lets-go-pikachu-lets-go-eevee"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 24,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

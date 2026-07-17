@@ -23,8 +23,8 @@
         "hp": 101,
         "attack": 72,
         "defense": 72,
-        "special_attack": 99,
-        "special_defense": 89,
+        "special-attack": 99,
+        "special-defense": 89,
         "speed": 29
     },
     "ev_yield": [
@@ -35,49 +35,16 @@
     ],
     "height": 8,
     "weight": 155,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/683.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/683.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/683.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/683.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/683.png",
-        "other": {
-            "dream_world": {
-                "front_default": null,
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/683.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/683.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/683.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/683.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/683.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/683.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/683.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/683.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
+            "omegaruby-alphasapphire": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/683.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/683.png",
                 "front_shiny_female": null
             },
-            "x_y": {
+            "x-y": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/683.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/683.png",
@@ -85,66 +52,7 @@
             }
         }
     },
-    "base_experience": 162,
-    "base_happiness": 70,
-    "capture_rate": 140,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 684,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "spritzee",
-    "pokedex_numbers": {
-        "national": 683,
-        "kalos_central": 130
-    },
-    "color": "pink",
-    "shape": "humanoid",
-    "egg_groups": [
-        "fairy"
-    ],
-    "flavor_text": {
-        "x": "It devises various scents, pleasant and unpleasant, and emits scents that its enemies dislike in order to gain an edge in battle.",
-        "y": "Its scent is so overpowering that, unless a Trainer happens to really enjoy the smell, he or she will have a hard time walking alongside it.",
-        "omega_ruby": "It devises various scents, pleasant and unpleasant, and emits scents that its enemies dislike in order to gain an edge in battle.",
-        "alpha_sapphire": "Its scent is so overpowering that, unless a Trainer happens to really enjoy the smell, he or she will have a hard time walking alongside it."
-    },
-    "genus": "Fragrance Pokémon",
-    "generation": "generation-vi",
-    "evolution_chain": {
-        "species_name": "spritzee",
-        "evolves_to": [
-            {
-                "species_name": "aromatisse",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "trade",
-                    "gender": null,
-                    "held_item": "sachet",
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -444,7 +352,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "psychic",
                 "level_learned_at": 48,
@@ -669,6 +577,80 @@
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 684,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": "spritzee",
+    "pokedex_numbers": {
+        "national": 683,
+        "kalos-central": 130
+    },
+    "color": "pink",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "x": "It devises various scents, pleasant and unpleasant, and emits scents that its enemies dislike in order to gain an edge in battle.",
+        "y": "Its scent is so overpowering that, unless a Trainer happens to really enjoy the smell, he or she will have a hard time walking alongside it.",
+        "omega-ruby": "It devises various scents, pleasant and unpleasant, and emits scents that its enemies dislike in order to gain an edge in battle.",
+        "alpha-sapphire": "Its scent is so overpowering that, unless a Trainer happens to really enjoy the smell, he or she will have a hard time walking alongside it."
+    },
+    "genus": "Fragrance Pokémon",
+    "generation": "generation-vi",
+    "evolution_chain": {
+        "species_name": "spritzee",
+        "evolves_to": [
+            {
+                "species_name": "aromatisse",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "black-white",
+                        "version_groups": [
+                            "x-y",
+                            "omega-ruby-alpha-sapphire"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "trade",
+                        "gender": null,
+                        "held_item": "sachet",
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

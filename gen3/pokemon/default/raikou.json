@@ -12,14 +12,19 @@
             "name": "pressure",
             "is_hidden": false,
             "slot": 1
+        },
+        {
+            "name": "volt-absorb",
+            "is_hidden": true,
+            "slot": 3
         }
     ],
     "stats": {
         "hp": 90,
         "attack": 85,
         "defense": 75,
-        "special_attack": 115,
-        "special_defense": 100,
+        "special-attack": 115,
+        "special-defense": 100,
         "speed": 115
     },
     "ev_yield": [
@@ -34,53 +39,20 @@
     ],
     "height": 19,
     "weight": 1780,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/243.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/243.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/243.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/243.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/243.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/243.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/243.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/243.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/243.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/243.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/243.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/243.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/243.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/243.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/243.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/243.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/243.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": null,
                 "back_shiny": null,
                 "front_default": null,
                 "front_shiny": null
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/243.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/243.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/243.png",
@@ -88,41 +60,7 @@
             }
         }
     },
-    "base_experience": 216,
-    "base_happiness": 35,
-    "capture_rate": 3,
-    "hatch_counter": 80,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": true,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 268,
-    "growth_rate": "slow",
-    "habitat": "grassland",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 243
-    },
-    "color": "yellow",
-    "shape": "quadruped",
-    "egg_groups": [
-        "no-eggs"
-    ],
-    "flavor_text": {
-        "ruby": "RAIKOU embodies the speed of lightning. The roars of this POKéMON send shock waves shuddering through the air and shake the ground as if lightning bolts had come crashing down.",
-        "sapphire": "RAIKOU embodies the speed of lightning. The roars of this POKéMON send shock waves shuddering through the air and shake the ground as if lightning bolts had come crashing down.",
-        "emerald": "RAIKOU embodies the speed of lightning. Its roars send shock waves shuddering through the air and ground as if lightning bolts were crashing down.",
-        "firered": "This POKéMON races across the land while barking a cry that sounds like crashing thunder.",
-        "leafgreen": "The rain clouds it carries let it fire thunderbolts at will. They say that it descended with lightning."
-    },
-    "genus": "Thunder Pokémon",
-    "generation": "generation-ii",
-    "evolution_chain": {
-        "species_name": "raikou",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -499,7 +437,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "leer",
                 "level_learned_at": 1,
@@ -611,6 +549,38 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 268,
+    "growth_rate": null,
+    "habitat": "grassland",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 243
+    },
+    "color": "yellow",
+    "shape": "quadruped",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "RAIKOU embodies the speed of lightning. The roars of this POKéMON send shock waves shuddering through the air and shake the ground as if lightning bolts had come crashing down.",
+        "sapphire": "RAIKOU embodies the speed of lightning. The roars of this POKéMON send shock waves shuddering through the air and shake the ground as if lightning bolts had come crashing down.",
+        "emerald": "RAIKOU embodies the speed of lightning. Its roars send shock waves shuddering through the air and ground as if lightning bolts were crashing down.",
+        "firered": "This POKéMON races across the land while barking a cry that sounds like crashing thunder.",
+        "leafgreen": "The rain clouds it carries let it fire thunderbolts at will. They say that it descended with lightning."
+    },
+    "genus": "Thunder Pokémon",
+    "generation": "generation-ii",
+    "evolution_chain": {
+        "species_name": "raikou",
+        "evolves_to": []
     },
     "forms": [
         {

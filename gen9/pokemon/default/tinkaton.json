@@ -29,8 +29,8 @@
         "hp": 85,
         "attack": 75,
         "defense": 77,
-        "special_attack": 70,
-        "special_defense": 105,
+        "special-attack": 70,
+        "special-defense": 105,
         "speed": 94
     },
     "ev_yield": [
@@ -61,7 +61,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/959.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/959.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/959.png"
             },
@@ -77,95 +77,13 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/959.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 253,
-    "base_happiness": 50,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 8,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 1002,
-    "growth_rate": "medium-slow",
-    "habitat": null,
-    "evolves_from_species": "tinkatuff",
-    "pokedex_numbers": {
-        "national": 959,
-        "paldea": 281
-    },
-    "color": "pink",
-    "shape": "humanoid",
-    "egg_groups": [
-        "fairy"
-    ],
-    "flavor_text": {
-        "scarlet": "This intelligent Pokémon has a very daring disposition. It knocks rocks into the sky with its hammer, aiming for flying Corviknight.",
-        "violet": "The hammer tops 220 pounds, yet it gets swung around easily by Tinkaton as it steals whatever it pleases and carries its plunder back home."
-    },
-    "genus": "Hammer Pokémon",
-    "generation": "generation-ix",
-    "evolution_chain": {
-        "species_name": "tinkatink",
-        "evolves_to": [
-            {
-                "species_name": "tinkatuff",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 24,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "tinkaton",
-                        "evolution_details": {
-                            "item": null,
-                            "trigger": "level-up",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": 38,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
         "machine": [
@@ -767,7 +685,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "slam",
                 "level_learned_at": 27,
@@ -885,6 +803,130 @@
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
+                ]
+            }
+        ]
+    },
+    "base_happiness": 50,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 8,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 1002,
+    "growth_rate": "medium-slow",
+    "habitat": null,
+    "evolves_from_species": "tinkatuff",
+    "pokedex_numbers": {
+        "national": 959,
+        "paldea": 281
+    },
+    "color": "pink",
+    "shape": "humanoid",
+    "egg_groups": [
+        "fairy"
+    ],
+    "flavor_text": {
+        "scarlet": "This intelligent Pokémon has a very daring disposition. It knocks rocks into the sky with its hammer, aiming for flying Corviknight.",
+        "violet": "The hammer tops 220 pounds, yet it gets swung around easily by Tinkaton as it steals whatever it pleases and carries its plunder back home."
+    },
+    "genus": "Hammer Pokémon",
+    "generation": "generation-ix",
+    "evolution_chain": {
+        "species_name": "tinkatink",
+        "evolves_to": [
+            {
+                "species_name": "tinkatuff",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "scarlet-violet",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 24,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "tinkaton",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "scarlet-violet",
+                                "version_groups": [
+                                    "scarlet-violet",
+                                    "the-teal-mask",
+                                    "the-indigo-disk",
+                                    "legends-za",
+                                    "mega-dimension",
+                                    "champions"
+                                ],
+                                "base_form": null,
+                                "evolved_form": null,
+                                "item": null,
+                                "trigger": "level-up",
+                                "gender": null,
+                                "held_item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": 38,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": null,
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

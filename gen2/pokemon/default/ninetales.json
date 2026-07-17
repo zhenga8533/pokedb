@@ -7,68 +7,20 @@
     "types": [
         "fire"
     ],
-    "abilities": [
-        {
-            "name": "flash-fire",
-            "is_hidden": false,
-            "slot": 1
-        }
-    ],
+    "abilities": [],
     "stats": {
         "hp": 73,
         "attack": 76,
         "defense": 75,
-        "special_attack": 81,
-        "special_defense": 100,
+        "special-attack": 81,
+        "special-defense": 100,
         "speed": 100
     },
-    "ev_yield": [
-        {
-            "stat": "special-defense",
-            "effort": 1
-        },
-        {
-            "stat": "speed",
-            "effort": 1
-        }
-    ],
+    "ev_yield": null,
     "height": 11,
     "weight": 199,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/38.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/38.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/38.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/38.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/38.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/38.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/38.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/38.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/38.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/38.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/38.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/38.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/38.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/38.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "crystal": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/back/38.png",
@@ -96,65 +48,7 @@
             }
         }
     },
-    "base_experience": 178,
-    "base_happiness": 70,
-    "capture_rate": 75,
-    "hatch_counter": 20,
-    "gender_rate": 6,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 40,
-    "growth_rate": "medium",
-    "habitat": "grassland",
-    "evolves_from_species": "vulpix",
-    "pokedex_numbers": {
-        "national": 38,
-        "original_johto": 126
-    },
-    "color": "yellow",
-    "shape": "quadruped",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {
-        "gold": "Some legends claim that each of its nine tails has its own unique type of special mystical power.",
-        "silver": "Its nine beautiful tails are filled with a wondrous energy that could keep it alive for 1,000 years.",
-        "crystal": "It is said to live a thousand years, and each of its tails is loaded with supernatural powers."
-    },
-    "genus": "Fox Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "vulpix",
-        "evolves_to": [
-            {
-                "species_name": "ninetales",
-                "evolution_details": {
-                    "item": "fire-stone",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -327,7 +221,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "ember",
                 "level_learned_at": 1,
@@ -376,6 +270,79 @@
                 "version_groups": [
                     "crystal"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 40,
+    "growth_rate": null,
+    "habitat": "grassland",
+    "evolves_from_species": "vulpix",
+    "pokedex_numbers": {
+        "national": 38,
+        "original-johto": 126
+    },
+    "color": "yellow",
+    "shape": "quadruped",
+    "egg_groups": null,
+    "flavor_text": {
+        "gold": "Some legends claim that each of its nine tails has its own unique type of special mystical power.",
+        "silver": "Its nine beautiful tails are filled with a wondrous energy that could keep it alive for 1,000 years.",
+        "crystal": "It is said to live a thousand years, and each of its tails is loaded with supernatural powers."
+    },
+    "genus": "Fox Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "vulpix",
+        "evolves_to": [
+            {
+                "species_name": "ninetales",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "gold-silver",
+                            "crystal"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "fire-stone",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

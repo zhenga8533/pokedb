@@ -28,8 +28,8 @@
         "hp": 95,
         "attack": 70,
         "defense": 73,
-        "special_attack": 95,
-        "special_defense": 90,
+        "special-attack": 95,
+        "special-defense": 90,
         "speed": 60
     },
     "ev_yield": [
@@ -40,47 +40,14 @@
     ],
     "height": 13,
     "weight": 400,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/36.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/36.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/36.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/36.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/36.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/36.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/36.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/36.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/36.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/36.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/36.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/36.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/36.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/36.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/36.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/36.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/36.png",
@@ -88,103 +55,17 @@
             }
         }
     },
-    "base_experience": 217,
-    "base_happiness": 140,
-    "capture_rate": 25,
-    "hatch_counter": 10,
-    "gender_rate": 6,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 38,
-    "growth_rate": "fast",
-    "habitat": "mountain",
-    "evolves_from_species": "clefairy",
-    "pokedex_numbers": {
-        "national": 36,
-        "original_alola": 212
-    },
-    "color": "pink",
-    "shape": "upright",
-    "egg_groups": [
-        "fairy"
-    ],
-    "flavor_text": {
-        "sun": "They don’t like to reveal themselves in front of people. They live quietly in packs deep in the mountains.",
-        "moon": "According to tradition, people who see a pair of Clefable skipping by can look forward to a happy marriage.",
-        "ultra_sun": "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.",
-        "ultra_moon": "Some scientists believe that it gazes intently at the sky on nights with a full moon because it’s homesick.",
-        "lets_go_pikachu": "They appear to be very protective of their own world. It is a kind of fairy, rarely seen by people.",
-        "lets_go_eevee": "They appear to be very protective of their own world. It is a kind of fairy, rarely seen by people."
-    },
-    "genus": "Fairy Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "cleffa",
-        "evolves_to": [
-            {
-                "species_name": "clefairy",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": 160,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "clefable",
-                        "evolution_details": {
-                            "item": "moon-stone",
-                            "trigger": "use-item",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": null,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "moon_stone": {
+        "moon-stone": {
             "sun": 5,
             "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
+            "ultra-sun": 5,
+            "ultra-moon": 5
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "pound",
                 "level_learned_at": 1,
@@ -932,6 +813,126 @@
                     "lets-go-pikachu-lets-go-eevee",
                     "sun-moon",
                     "ultra-sun-ultra-moon"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 38,
+    "growth_rate": null,
+    "habitat": "mountain",
+    "evolves_from_species": "clefairy",
+    "pokedex_numbers": {
+        "national": 36,
+        "original-alola": 212
+    },
+    "color": "pink",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "They don’t like to reveal themselves in front of people. They live quietly in packs deep in the mountains.",
+        "moon": "According to tradition, people who see a pair of Clefable skipping by can look forward to a happy marriage.",
+        "ultra-sun": "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.",
+        "ultra-moon": "Some scientists believe that it gazes intently at the sky on nights with a full moon because it’s homesick.",
+        "lets-go-pikachu": "They appear to be very protective of their own world. It is a kind of fairy, rarely seen by people.",
+        "lets-go-eevee": "They appear to be very protective of their own world. It is a kind of fairy, rarely seen by people."
+    },
+    "genus": "Fairy Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "cleffa",
+        "evolves_to": [
+            {
+                "species_name": "clefairy",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "sun-moon",
+                            "ultra-sun-ultra-moon",
+                            "lets-go-pikachu-lets-go-eevee"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": 160,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "clefable",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "red-blue",
+                                "version_groups": [
+                                    "sun-moon",
+                                    "ultra-sun-ultra-moon",
+                                    "lets-go-pikachu-lets-go-eevee"
+                                ],
+                                "base_form": null,
+                                "evolved_form": null,
+                                "item": "moon-stone",
+                                "trigger": "use-item",
+                                "gender": null,
+                                "held_item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": null,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": null,
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

@@ -23,8 +23,8 @@
         "hp": 122,
         "attack": 130,
         "defense": 69,
-        "special_attack": 80,
-        "special_defense": 69,
+        "special-attack": 80,
+        "special-defense": 69,
         "speed": 30
     },
     "ev_yield": [
@@ -55,7 +55,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10224.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10224.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10224.png"
             },
@@ -71,13 +71,15 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": null,
                 "front_female": null
             }
         }
     },
     "base_experience": 175,
+    "held_items": {},
+    "moves": {},
     "base_happiness": 50,
     "capture_rate": 90,
     "hatch_counter": 25,
@@ -109,447 +111,48 @@
         "evolves_to": [
             {
                 "species_name": "copperajah",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 34,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sword-shield",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 34,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
                 "evolves_to": []
-            }
-        ]
-    },
-    "held_items": {},
-    "moves": {
-        "level_up": [
-            {
-                "name": "stomp",
-                "level_learned_at": 20,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "tackle",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "growl",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "strength",
-                "level_learned_at": 37,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "dig",
-                "level_learned_at": 30,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "rollout",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "rock-smash",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "superpower",
-                "level_learned_at": 65,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "iron-defense",
-                "level_learned_at": 25,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "iron-head",
-                "level_learned_at": 44,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "heavy-slam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "bulldoze",
-                "level_learned_at": 15,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "play-rough",
-                "level_learned_at": 51,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "high-horsepower",
-                "level_learned_at": 58,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            }
-        ],
-        "machine": [
-            {
-                "name": "body-slam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "take-down",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "double-edge",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "hyper-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "earthquake",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "dig",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "rest",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "rock-slide",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "substitute",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "curse",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "protect",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "outrage",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "sandstorm",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "endure",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "sleep-talk",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "facade",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "taunt",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "brick-break",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "knock-off",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "endeavor",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "rock-tomb",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "iron-defense",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "mud-shot",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "rock-blast",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "fling",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "earth-power",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "giga-impact",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "zen-headbutt",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "flash-cannon",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "iron-head",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "stone-edge",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "stealth-rock",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "smack-down",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "heavy-slam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "bulldoze",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "heat-crash",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "snarl",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "play-rough",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "high-horsepower",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "stomping-tantrum",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "body-press",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "steel-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "tera-blast",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "hard-press",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "supercell-slam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
             }
         ]
     },

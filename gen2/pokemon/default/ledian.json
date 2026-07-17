@@ -8,73 +8,20 @@
         "bug",
         "flying"
     ],
-    "abilities": [
-        {
-            "name": "swarm",
-            "is_hidden": false,
-            "slot": 1
-        },
-        {
-            "name": "early-bird",
-            "is_hidden": false,
-            "slot": 2
-        }
-    ],
+    "abilities": [],
     "stats": {
         "hp": 55,
         "attack": 35,
         "defense": 50,
-        "special_attack": 55,
-        "special_defense": 110,
+        "special-attack": 55,
+        "special-defense": 110,
         "speed": 85
     },
-    "ev_yield": [
-        {
-            "stat": "special-defense",
-            "effort": 2
-        }
-    ],
+    "ev_yield": null,
     "height": 14,
     "weight": 356,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/166.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/166.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/166.png",
-        "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/166.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/166.png",
-        "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/166.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/166.png",
-        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/166.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/166.png",
-        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/166.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/166.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/166.png",
-                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/166.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/166.png",
-                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/166.png"
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/166.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/166.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/166.gif",
-                "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/female/166.gif",
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/166.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/166.gif",
-                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/female/166.gif",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/166.gif",
-                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/female/166.gif"
-            }
-        },
         "versions": {
             "crystal": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/back/166.png",
@@ -102,68 +49,10 @@
             }
         }
     },
-    "base_experience": 134,
-    "base_happiness": 70,
-    "capture_rate": 90,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": true,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 198,
-    "growth_rate": "fast",
-    "habitat": "forest",
-    "evolves_from_species": "ledyba",
-    "pokedex_numbers": {
-        "national": 166,
-        "original_johto": 31
-    },
-    "color": "red",
-    "shape": "wings",
-    "egg_groups": [
-        "bug"
-    ],
-    "flavor_text": {
-        "gold": "When the stars flicker in the night sky, it flutters about, scattering a glowing powder.",
-        "silver": "The star patterns on its back grow larger or smaller depending on the number of stars in the night sky.",
-        "crystal": "In the daytime when it gets warm, it curls up inside a big leaf and drifts off into a deep slumber."
-    },
-    "genus": "Five Star Pokémon",
-    "generation": "generation-ii",
-    "evolution_chain": {
-        "species_name": "ledyba",
-        "evolves_to": [
-            {
-                "species_name": "ledian",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 18,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "comet-punch",
                 "level_learned_at": 15,
@@ -469,6 +358,79 @@
                     "crystal",
                     "gold-silver"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 198,
+    "growth_rate": null,
+    "habitat": "forest",
+    "evolves_from_species": "ledyba",
+    "pokedex_numbers": {
+        "national": 166,
+        "original-johto": 31
+    },
+    "color": "red",
+    "shape": "wings",
+    "egg_groups": null,
+    "flavor_text": {
+        "gold": "When the stars flicker in the night sky, it flutters about, scattering a glowing powder.",
+        "silver": "The star patterns on its back grow larger or smaller depending on the number of stars in the night sky.",
+        "crystal": "In the daytime when it gets warm, it curls up inside a big leaf and drifts off into a deep slumber."
+    },
+    "genus": "Five Star Pokémon",
+    "generation": "generation-ii",
+    "evolution_chain": {
+        "species_name": "ledyba",
+        "evolves_to": [
+            {
+                "species_name": "ledian",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "gold-silver",
+                        "version_groups": [
+                            "gold-silver",
+                            "crystal"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 18,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

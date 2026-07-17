@@ -19,8 +19,8 @@
         "hp": 50,
         "attack": 65,
         "defense": 107,
-        "special_attack": 105,
-        "special_defense": 107,
+        "special-attack": 105,
+        "special-defense": 107,
         "speed": 86
     },
     "ev_yield": [
@@ -35,93 +35,37 @@
     ],
     "height": 3,
     "weight": 3,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10009.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/479-wash.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/479-wash.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10009.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/479-wash.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10009.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10009.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10009.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10009.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10009.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10009.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10009.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10009.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10009.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/479-wash.png",
+            "omegaruby-alphasapphire": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/10009.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/479-wash.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/10009.png",
                 "front_shiny_female": null
             },
-            "x_y": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/479-wash.png",
+            "x-y": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/10009.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/479-wash.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/10009.png",
                 "front_shiny_female": null
             }
         }
     },
-    "base_experience": 154,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": true,
-    "order": 480,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 479
-    },
-    "color": "red",
-    "shape": "ball",
-    "egg_groups": [
-        "indeterminate"
-    ],
-    "flavor_text": {
-        "x": "Research continues on this Pokémon, which could be the power source of a unique motor.",
-        "y": "Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc.",
-        "omega_ruby": "Research continues on this Pokémon, which could be the power source of a unique motor.",
-        "alpha_sapphire": "Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc."
-    },
-    "genus": "Plasma Pokémon",
-    "generation": "generation-iv",
-    "evolution_chain": {
-        "species_name": "rotom",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "form-change": [
+            {
+                "name": "hydro-pump",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "omega-ruby-alpha-sapphire",
+                    "x-y"
+                ]
+            }
+        ],
+        "level-up": [
             {
                 "name": "thunder-shock",
                 "level_learned_at": 1,
@@ -245,16 +189,6 @@
             {
                 "name": "hex",
                 "level_learned_at": 50,
-                "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            }
-        ],
-        "form_change": [
-            {
-                "name": "thunder-shock",
-                "level_learned_at": 0,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire",
                     "x-y"
@@ -574,6 +508,37 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 480,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 479
+    },
+    "color": "red",
+    "shape": "ball",
+    "egg_groups": null,
+    "flavor_text": {
+        "omega-ruby": "Research continues on this Pokémon, which could be the power source of a unique motor.",
+        "x": "Research continues on this Pokémon, which could be the power source of a unique motor.",
+        "y": "Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc.",
+        "alpha-sapphire": "Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc."
+    },
+    "genus": "Plasma Pokémon",
+    "generation": "generation-iv",
+    "evolution_chain": {
+        "species_name": "rotom",
+        "evolves_to": []
     },
     "forms": [
         {

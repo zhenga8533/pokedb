@@ -23,8 +23,8 @@
         "hp": 37,
         "attack": 25,
         "defense": 41,
-        "special_attack": 25,
-        "special_defense": 41,
+        "special-attack": 25,
+        "special-defense": 41,
         "speed": 25
     },
     "ev_yield": [
@@ -59,7 +59,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/401.png",
                 "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/401.png"
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/401.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/401.png"
             },
@@ -75,70 +75,16 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/401.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 39,
-    "base_happiness": 70,
-    "capture_rate": 255,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": true,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 431,
-    "growth_rate": "medium-slow",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 401,
-        "paldea": 33
-    },
-    "color": "red",
-    "shape": "humanoid",
-    "egg_groups": [
-        "bug"
-    ],
-    "flavor_text": {},
-    "genus": "Cricket Pokémon",
-    "generation": "generation-iv",
-    "evolution_chain": {
-        "species_name": "kricketot",
-        "evolves_to": [
-            {
-                "species_name": "kricketune",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 10,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -210,6 +156,81 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 15,
+    "gender_rate": 4,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 431,
+    "growth_rate": "medium-slow",
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 401,
+        "paldea": 33
+    },
+    "color": "red",
+    "shape": "humanoid",
+    "egg_groups": [
+        "bug"
+    ],
+    "flavor_text": {},
+    "genus": "Cricket Pokémon",
+    "generation": "generation-iv",
+    "evolution_chain": {
+        "species_name": "kricketot",
+        "evolves_to": [
+            {
+                "species_name": "kricketune",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "diamond-pearl",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 10,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

@@ -19,8 +19,8 @@
         "hp": 70,
         "attack": 55,
         "defense": 65,
-        "special_attack": 95,
-        "special_defense": 85,
+        "special-attack": 95,
+        "special-defense": 85,
         "speed": 70
     },
     "ev_yield": [
@@ -31,43 +31,10 @@
     ],
     "height": 10,
     "weight": 1680,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/337.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/337.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/337.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/337.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/337.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/337.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/337.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/337.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/337.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/337.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/337.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/337.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/337.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/337.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/337.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "black_white": {
+            "black-white": {
                 "animated": {
                     "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/337.gif",
                     "back_female": null,
@@ -89,56 +56,23 @@
             }
         }
     },
-    "base_experience": 154,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 25,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 365,
-    "growth_rate": "fast",
-    "habitat": "cave",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 337
-    },
-    "color": "yellow",
-    "shape": "ball",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {
-        "black": "Because it turns active on nights of the full moon, it is said to have some link to the lunar phases.",
-        "white": "Because it turns active on nights of the full moon, it is said to have some link to the lunar phases.",
-        "black_2": "The phase of the moon apparently has some effect on its power. It’s active on the night of a full moon.",
-        "white_2": "The phase of the moon apparently has some effect on its power. It’s active on the night of a full moon."
-    },
-    "genus": "Meteorite Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "lunatone",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {
-        "moon_stone": {
+        "moon-stone": {
             "black": 5,
             "white": 5,
-            "black_2": 5,
-            "white_2": 5
+            "black-2": 5,
+            "white-2": 5
         },
-        "comet_shard": {
+        "comet-shard": {
             "black": 1,
             "white": 1,
-            "black_2": 1,
-            "white_2": 1
+            "black-2": 1,
+            "white-2": 1
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -777,6 +711,37 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 365,
+    "growth_rate": null,
+    "habitat": "cave",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 337
+    },
+    "color": "yellow",
+    "shape": "ball",
+    "egg_groups": null,
+    "flavor_text": {
+        "black": "Because it turns active on nights of the full moon, it is said to have some link to the lunar phases.",
+        "white": "Because it turns active on nights of the full moon, it is said to have some link to the lunar phases.",
+        "black-2": "The phase of the moon apparently has some effect on its power. It’s active on the night of a full moon.",
+        "white-2": "The phase of the moon apparently has some effect on its power. It’s active on the night of a full moon."
+    },
+    "genus": "Meteorite Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "lunatone",
+        "evolves_to": []
     },
     "forms": [
         {

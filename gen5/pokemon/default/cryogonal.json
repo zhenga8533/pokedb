@@ -16,10 +16,10 @@
     ],
     "stats": {
         "hp": 70,
-        "attack": 50,
-        "defense": 30,
-        "special_attack": 95,
-        "special_defense": 135,
+        "attack": 30,
+        "defense": 50,
+        "special-attack": 95,
+        "special-defense": 135,
         "speed": 105
     },
     "ev_yield": [
@@ -30,43 +30,10 @@
     ],
     "height": 11,
     "weight": 1480,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/615.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/615.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/615.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/615.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/615.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/615.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/615.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/615.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/615.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/615.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/615.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/615.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/615.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/615.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/615.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "black_white": {
+            "black-white": {
                 "animated": {
                     "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/615.gif",
                     "back_female": null,
@@ -88,51 +55,17 @@
             }
         }
     },
-    "base_experience": 170,
-    "base_happiness": 70,
-    "capture_rate": 25,
-    "hatch_counter": 25,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 616,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 615,
-        "original_unova": 121
-    },
-    "color": "blue",
-    "shape": "ball",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {
-        "black": "When its body temperature goes up, it turns into steam and vanishes. When its temperature lowers, it returns to ice.",
-        "white": "They are born in snow clouds. They use chains made of ice crystals to capture prey.",
-        "black_2": "They are composed of ice crystals. They capture prey with chains of ice, freezing the prey at -148° F.",
-        "white_2": "They are composed of ice crystals. They capture prey with chains of ice, freezing the prey at -148° F."
-    },
-    "genus": "Crystallizing Pokémon",
-    "generation": "generation-v",
-    "evolution_chain": {
-        "species_name": "cryogonal",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {
-        "never_melt_ice": {
+        "never-melt-ice": {
             "black": 5,
             "white": 5,
-            "black_2": 5,
-            "white_2": 5
+            "black-2": 5,
+            "white-2": 5
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "bind",
                 "level_learned_at": 1,
@@ -538,6 +471,38 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 616,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 615,
+        "original-unova": 121
+    },
+    "color": "blue",
+    "shape": "ball",
+    "egg_groups": null,
+    "flavor_text": {
+        "black": "When its body temperature goes up, it turns into steam and vanishes. When its temperature lowers, it returns to ice.",
+        "white": "They are born in snow clouds. They use chains made of ice crystals to capture prey.",
+        "black-2": "They are composed of ice crystals. They capture prey with chains of ice, freezing the prey at -148° F.",
+        "white-2": "They are composed of ice crystals. They capture prey with chains of ice, freezing the prey at -148° F."
+    },
+    "genus": "Crystallizing Pokémon",
+    "generation": "generation-v",
+    "evolution_chain": {
+        "species_name": "cryogonal",
+        "evolves_to": []
     },
     "forms": [
         {

@@ -23,65 +23,32 @@
         "hp": 255,
         "attack": 10,
         "defense": 10,
-        "special_attack": 75,
-        "special_defense": 135,
+        "special-attack": 75,
+        "special-defense": 135,
         "speed": 55
     },
     "ev_yield": [
         {
             "stat": "hp",
-            "effort": 3
+            "effort": 2
         }
     ],
     "height": 15,
     "weight": 468,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/242.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/242.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/242.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/242.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/242.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/242.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/242.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/242.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/242.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/242.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/242.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/242.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/242.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/242.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/242.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/242.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": null,
                 "back_shiny": null,
                 "front_default": null,
                 "front_shiny": null
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/242.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/242.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/242.png",
@@ -89,93 +56,9 @@
             }
         }
     },
-    "base_experience": 255,
-    "base_happiness": 140,
-    "capture_rate": 30,
-    "hatch_counter": 40,
-    "gender_rate": 8,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 128,
-    "growth_rate": "fast",
-    "habitat": "urban",
-    "evolves_from_species": "chansey",
-    "pokedex_numbers": {
-        "national": 242
-    },
-    "color": "pink",
-    "shape": "humanoid",
-    "egg_groups": [
-        "fairy"
-    ],
-    "flavor_text": {
-        "ruby": "BLISSEY senses sadness with its fluffy coat of fur. If it does so, this POKéMON will rush over to the sad person, however far they may be, to share an egg of happiness that brings a smile to any face.",
-        "sapphire": "BLISSEY senses sadness with its fluffy coat of fur. If it does so, this POKéMON will rush over to the sad person, however far they may be, to share an egg of happiness that brings a smile to any face.",
-        "emerald": "If it senses sadness with its fluffy fur, a BLISSEY will rush over to the sad person, however far away, to share an egg of happiness that brings a smile to any face.",
-        "firered": "It has a very compassionate nature. If it sees a sick POKéMON, it will nurse the sufferer back to health.",
-        "leafgreen": "Anyone who takes even one bite of BLISSEY’s egg becomes unfailingly caring and pleasant to everyone."
-    },
-    "genus": "Happiness Pokémon",
-    "generation": "generation-ii",
-    "evolution_chain": {
-        "species_name": "happiny",
-        "evolves_to": [
-            {
-                "species_name": "chansey",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": "oval-stone",
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "day",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "blissey",
-                        "evolution_details": {
-                            "item": null,
-                            "trigger": "level-up",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": null,
-                            "min_happiness": 160,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "lucky_egg": {
+        "lucky-egg": {
             "ruby": 5,
             "sapphire": 5,
             "emerald": 5,
@@ -184,7 +67,7 @@
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "pound",
                 "level_learned_at": 1,
@@ -917,6 +800,83 @@
                     "ruby-sapphire",
                     "xd"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 128,
+    "growth_rate": null,
+    "habitat": "urban",
+    "evolves_from_species": "chansey",
+    "pokedex_numbers": {
+        "national": 242
+    },
+    "color": "pink",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "BLISSEY senses sadness with its fluffy coat of fur. If it does so, this POKéMON will rush over to the sad person, however far they may be, to share an egg of happiness that brings a smile to any face.",
+        "sapphire": "BLISSEY senses sadness with its fluffy coat of fur. If it does so, this POKéMON will rush over to the sad person, however far they may be, to share an egg of happiness that brings a smile to any face.",
+        "emerald": "If it senses sadness with its fluffy fur, a BLISSEY will rush over to the sad person, however far away, to share an egg of happiness that brings a smile to any face.",
+        "firered": "It has a very compassionate nature. If it sees a sick POKéMON, it will nurse the sufferer back to health.",
+        "leafgreen": "Anyone who takes even one bite of BLISSEY’s egg becomes unfailingly caring and pleasant to everyone."
+    },
+    "genus": "Happiness Pokémon",
+    "generation": "generation-ii",
+    "evolution_chain": {
+        "species_name": "chansey",
+        "evolves_to": [
+            {
+                "species_name": "blissey",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "gold-silver",
+                        "version_groups": [
+                            "ruby-sapphire",
+                            "emerald",
+                            "firered-leafgreen",
+                            "colosseum",
+                            "xd"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": 160,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

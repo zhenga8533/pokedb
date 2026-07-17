@@ -23,8 +23,8 @@
         "hp": 70,
         "attack": 105,
         "defense": 90,
-        "special_attack": 80,
-        "special_defense": 90,
+        "special-attack": 80,
+        "special-defense": 90,
         "speed": 45
     },
     "ev_yield": [
@@ -35,43 +35,10 @@
     ],
     "height": 9,
     "weight": 185,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/754.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/754.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/754.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/754.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/754.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/754.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/754.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/754.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/754.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/754.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/754.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/754.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/754.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/754.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "brilliant_diamond_shining_pearl": {
+            "brilliant-diamond-shining-pearl": {
                 "front_default": null,
                 "front_female": null
             },
@@ -81,63 +48,7 @@
             }
         }
     },
-    "base_experience": 168,
-    "base_happiness": 70,
-    "capture_rate": 75,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 754,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "fomantis",
-    "pokedex_numbers": {
-        "national": 754
-    },
-    "color": "pink",
-    "shape": "humanoid",
-    "egg_groups": [
-        "plant"
-    ],
-    "flavor_text": {
-        "sword": "This Pokémon resembles a beautiful flower. A properly raised Lurantis will have gorgeous, brilliant colors.",
-        "shield": "The petals on this Pokémon’s arms are thin and super sharp, and they can fire laser beams if Lurantis gathers light first."
-    },
-    "genus": "Bloom Sickle Pokémon",
-    "generation": "generation-vii",
-    "evolution_chain": {
-        "species_name": "fomantis",
-        "evolves_to": [
-            {
-                "species_name": "lurantis",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 34,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "day",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -401,7 +312,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "growth",
                 "level_learned_at": 1,
@@ -529,6 +440,80 @@
                 "version_groups": [
                     "sword-shield"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 754,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": "fomantis",
+    "pokedex_numbers": {
+        "national": 754
+    },
+    "color": "pink",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "sword": "This Pokémon resembles a beautiful flower. A properly raised Lurantis will have gorgeous, brilliant colors.",
+        "shield": "The petals on this Pokémon’s arms are thin and super sharp, and they can fire laser beams if Lurantis gathers light first."
+    },
+    "genus": "Bloom Sickle Pokémon",
+    "generation": "generation-vii",
+    "evolution_chain": {
+        "species_name": "fomantis",
+        "evolves_to": [
+            {
+                "species_name": "lurantis",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "sword-shield",
+                            "the-isle-of-armor",
+                            "the-crown-tundra",
+                            "brilliant-diamond-shining-pearl",
+                            "legends-arceus"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 34,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": "day",
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

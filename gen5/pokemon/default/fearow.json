@@ -24,8 +24,8 @@
         "hp": 65,
         "attack": 90,
         "defense": 65,
-        "special_attack": 61,
-        "special_defense": 61,
+        "special-attack": 61,
+        "special-defense": 61,
         "speed": 100
     },
     "ev_yield": [
@@ -36,43 +36,10 @@
     ],
     "height": 12,
     "weight": 380,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/22.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/22.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/22.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/22.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/22.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/22.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/22.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/22.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/22.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/22.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/22.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/22.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/22.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/22.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "black_white": {
+            "black-white": {
                 "animated": {
                     "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/22.gif",
                     "back_female": null,
@@ -94,71 +61,13 @@
             }
         }
     },
-    "base_experience": 155,
-    "base_happiness": 70,
-    "capture_rate": 90,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 22,
-    "growth_rate": "medium",
-    "habitat": "rough-terrain",
-    "evolves_from_species": "spearow",
-    "pokedex_numbers": {
-        "national": 22
-    },
-    "color": "brown",
-    "shape": "wings",
-    "egg_groups": [
-        "flying"
-    ],
-    "flavor_text": {
-        "black": "It has the stamina to fly all day on its broad wings. It fights by using its sharp beak.",
-        "white": "It has the stamina to fly all day on its broad wings. It fights by using its sharp beak.",
-        "black_2": "It has the stamina to fly all day on its broad wings. It fights by using its sharp beak.",
-        "white_2": "It has the stamina to fly all day on its broad wings. It fights by using its sharp beak."
-    },
-    "genus": "Beak Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "spearow",
-        "evolves_to": [
-            {
-                "species_name": "fearow",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 20,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "sharp_beak": {
+        "sharp-beak": {
             "black": 5,
             "white": 5,
-            "black_2": 5,
-            "white_2": 5
+            "black-2": 5,
+            "white-2": 5
         }
     },
     "moves": {
@@ -356,7 +265,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "fury-attack",
                 "level_learned_at": 1,
@@ -534,6 +443,79 @@
                 "version_groups": [
                     "black-2-white-2"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 22,
+    "growth_rate": null,
+    "habitat": "rough-terrain",
+    "evolves_from_species": "spearow",
+    "pokedex_numbers": {
+        "national": 22
+    },
+    "color": "brown",
+    "shape": "wings",
+    "egg_groups": null,
+    "flavor_text": {
+        "black": "It has the stamina to fly all day on its broad wings. It fights by using its sharp beak.",
+        "white": "It has the stamina to fly all day on its broad wings. It fights by using its sharp beak.",
+        "black-2": "It has the stamina to fly all day on its broad wings. It fights by using its sharp beak.",
+        "white-2": "It has the stamina to fly all day on its broad wings. It fights by using its sharp beak."
+    },
+    "genus": "Beak Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "spearow",
+        "evolves_to": [
+            {
+                "species_name": "fearow",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "black-white",
+                            "black-2-white-2"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 20,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

@@ -28,8 +28,8 @@
         "hp": 70,
         "attack": 80,
         "defense": 50,
-        "special_attack": 35,
-        "special_defense": 35,
+        "special-attack": 35,
+        "special-defense": 35,
         "speed": 35
     },
     "ev_yield": [
@@ -40,47 +40,14 @@
     ],
     "height": 8,
     "weight": 195,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/66.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/66.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/66.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/66.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/66.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/66.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/66.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/66.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/66.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/66.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/66.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/66.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/66.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/66.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/66.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/66.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/66.png",
@@ -88,103 +55,17 @@
             }
         }
     },
-    "base_experience": 61,
-    "base_happiness": 70,
-    "capture_rate": 180,
-    "hatch_counter": 20,
-    "gender_rate": 2,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 72,
-    "growth_rate": "medium-slow",
-    "habitat": "mountain",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 66,
-        "original_alola": 95
-    },
-    "color": "gray",
-    "shape": "upright",
-    "egg_groups": [
-        "humanshape"
-    ],
-    "flavor_text": {
-        "sun": "It loves working out. As it gazes at its muscles, which continue to swell day by day, it becomes more and more dedicated to its training.",
-        "moon": "With its superhuman strength, it’s able to throw a hundred people all at the same time. Its strength comes from lifting Graveler every day.",
-        "ultra_sun": "Once this Pokémon has gained enough confidence and muscle from training with its friends, it challenges Makuhita to a battle.",
-        "ultra_moon": "It likes food that’s highly nutritious because its instincts drive it to build muscle efficiently.",
-        "lets_go_pikachu": "Very powerful in spite of its small size. Its mastery of many types of martial arts makes it very tough.",
-        "lets_go_eevee": "Very powerful in spite of its small size. Its mastery of many types of martial arts makes it very tough."
-    },
-    "genus": "Superpower Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "machop",
-        "evolves_to": [
-            {
-                "species_name": "machoke",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 28,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "machamp",
-                        "evolution_details": {
-                            "item": null,
-                            "trigger": "trade",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": null,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "focus_band": {
+        "focus-band": {
             "sun": 5,
             "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
+            "ultra-sun": 5,
+            "ultra-moon": 5
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "karate-chop",
                 "level_learned_at": 7,
@@ -913,6 +794,126 @@
                 "version_groups": [
                     "sun-moon",
                     "ultra-sun-ultra-moon"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 72,
+    "growth_rate": null,
+    "habitat": "mountain",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 66,
+        "original-alola": 95
+    },
+    "color": "gray",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "It loves working out. As it gazes at its muscles, which continue to swell day by day, it becomes more and more dedicated to its training.",
+        "moon": "With its superhuman strength, it’s able to throw a hundred people all at the same time. Its strength comes from lifting Graveler every day.",
+        "ultra-sun": "Once this Pokémon has gained enough confidence and muscle from training with its friends, it challenges Makuhita to a battle.",
+        "ultra-moon": "It likes food that’s highly nutritious because its instincts drive it to build muscle efficiently.",
+        "lets-go-pikachu": "Very powerful in spite of its small size. Its mastery of many types of martial arts makes it very tough.",
+        "lets-go-eevee": "Very powerful in spite of its small size. Its mastery of many types of martial arts makes it very tough."
+    },
+    "genus": "Superpower Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "machop",
+        "evolves_to": [
+            {
+                "species_name": "machoke",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "sun-moon",
+                            "ultra-sun-ultra-moon",
+                            "lets-go-pikachu-lets-go-eevee"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 28,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "machamp",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "red-blue",
+                                "version_groups": [
+                                    "sun-moon",
+                                    "ultra-sun-ultra-moon",
+                                    "lets-go-pikachu-lets-go-eevee"
+                                ],
+                                "base_form": null,
+                                "evolved_form": null,
+                                "item": null,
+                                "trigger": "trade",
+                                "gender": null,
+                                "held_item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": null,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": null,
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

@@ -19,8 +19,8 @@
         "hp": 125,
         "attack": 170,
         "defense": 100,
-        "special_attack": 120,
-        "special_defense": 90,
+        "special-attack": 120,
+        "special-defense": 90,
         "speed": 95
     },
     "ev_yield": [
@@ -31,80 +31,20 @@
     ],
     "height": 33,
     "weight": 3250,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10022.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/646-black.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/646-black.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10022.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/646-black.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10022.svg",
+        "versions": {
+            "brilliant-diamond-shining-pearl": {
+                "front_default": null,
                 "front_female": null
             },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10022.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10022.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10022.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10022.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10022.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10022.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10022.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10022.gif",
-                "front_shiny_female": null
-            }
-        },
-        "versions": {
             "icons": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/646-black.png",
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/10022.png",
                 "front_female": null
             }
         }
     },
-    "base_experience": 297,
-    "base_happiness": 0,
-    "capture_rate": 3,
-    "hatch_counter": 120,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": true,
-    "is_mythical": false,
-    "forms_switchable": true,
-    "order": 647,
-    "growth_rate": "slow",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 646
-    },
-    "color": "gray",
-    "shape": "upright",
-    "egg_groups": [
-        "no-eggs"
-    ],
-    "flavor_text": {
-        "sword": "Dwelling within it is a power even greater than that of Reshiram or Zekrom, but the extreme cold keeps that power bound.",
-        "shield": "It appears that this Pokémon uses its powers over ice to freeze its own body in order to stabilize its cellular structure."
-    },
-    "genus": "Boundary Pokémon",
-    "generation": "generation-v",
-    "evolution_chain": {
-        "species_name": "kyurem",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -445,7 +385,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "ice-beam",
                 "level_learned_at": 32,
@@ -463,13 +403,6 @@
             {
                 "name": "slash",
                 "level_learned_at": 8,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "scary-face",
-                "level_learned_at": 48,
                 "version_groups": [
                     "sword-shield"
                 ]
@@ -531,8 +464,15 @@
                 ]
             },
             {
-                "name": "glaciate",
+                "name": "freeze-shock",
                 "level_learned_at": 80,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "fusion-bolt",
+                "level_learned_at": 48,
                 "version_groups": [
                     "sword-shield"
                 ]
@@ -575,6 +515,35 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 647,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 646
+    },
+    "color": "gray",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "sword": "Dwelling within it is a power even greater than that of Reshiram or Zekrom, but the extreme cold keeps that power bound.",
+        "shield": "It appears that this Pokémon uses its powers over ice to freeze its own body in order to stabilize its cellular structure."
+    },
+    "genus": "Boundary Pokémon",
+    "generation": "generation-v",
+    "evolution_chain": {
+        "species_name": "kyurem",
+        "evolves_to": []
     },
     "forms": [
         {

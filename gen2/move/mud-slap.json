@@ -3,60 +3,42 @@
     "name": "mud-slap",
     "source_url": "https://pokeapi.co/api/v2/move/189/",
     "accuracy": {
-        "gold_silver": 100,
+        "gold-silver": 100,
         "crystal": 100
     },
     "power": {
-        "gold_silver": 20,
+        "gold-silver": 20,
         "crystal": 20
     },
     "pp": {
-        "gold_silver": 10,
+        "gold-silver": 10,
         "crystal": 10
     },
-    "priority": 0,
-    "damage_class": "special",
+    "priority": null,
+    "damage_class": "physical",
     "type": {
-        "gold_silver": "ground",
+        "gold-silver": "ground",
         "crystal": "ground"
     },
-    "target": "selected-pokemon",
+    "target": null,
     "generation": "generation-ii",
     "effect_chance": {
-        "gold_silver": 100,
+        "gold-silver": 100,
         "crystal": 100
     },
     "effect": {
-        "gold_silver": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
-        "crystal": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage."
+        "gold-silver": "Inflicts regular damage. Has a chance to lower the target’s accuracy by one stage.",
+        "crystal": "Inflicts regular damage. Has a chance to lower the target’s accuracy by one stage."
     },
     "short_effect": {
-        "gold_silver": "Has a 100% chance to lower the target’s accuracy by one stage.",
-        "crystal": "Has a 100% chance to lower the target’s accuracy by one stage."
+        "gold-silver": "Has a chance to lower the target’s accuracy by one stage.",
+        "crystal": "Has a chance to lower the target’s accuracy by one stage."
     },
     "flavor_text": {
-        "gold_silver": "Reduces the foe's accuracy.",
+        "gold-silver": "Reduces the foe's accuracy.",
         "crystal": "Reduces the foe's accuracy."
     },
-    "stat_changes": [
-        {
-            "change": -1,
-            "stat": "accuracy"
-        }
-    ],
+    "stat_changes": null,
     "machine": "tm31",
-    "metadata": {
-        "ailment": "none",
-        "category": "damage+lower",
-        "min_hits": null,
-        "max_hits": null,
-        "min_turns": null,
-        "max_turns": null,
-        "drain": 0,
-        "healing": 0,
-        "crit_rate": 0,
-        "ailment_chance": 0,
-        "flinch_chance": 0,
-        "stat_chance": 100
-    }
+    "metadata": null
 }

@@ -3,82 +3,64 @@
     "name": "mud-slap",
     "source_url": "https://pokeapi.co/api/v2/move/189/",
     "accuracy": {
-        "ruby_sapphire": 100,
+        "ruby-sapphire": 100,
         "emerald": 100,
-        "firered_leafgreen": 100,
+        "firered-leafgreen": 100,
         "colosseum": 100,
         "xd": 100
     },
     "power": {
-        "ruby_sapphire": 20,
+        "ruby-sapphire": 20,
         "emerald": 20,
-        "firered_leafgreen": 20,
+        "firered-leafgreen": 20,
         "colosseum": 20,
         "xd": 20
     },
     "pp": {
-        "ruby_sapphire": 10,
+        "ruby-sapphire": 10,
         "emerald": 10,
-        "firered_leafgreen": 10,
+        "firered-leafgreen": 10,
         "colosseum": 10,
         "xd": 10
     },
-    "priority": 0,
-    "damage_class": "special",
+    "priority": null,
+    "damage_class": "physical",
     "type": {
-        "ruby_sapphire": "ground",
+        "ruby-sapphire": "ground",
         "emerald": "ground",
-        "firered_leafgreen": "ground",
+        "firered-leafgreen": "ground",
         "colosseum": "ground",
         "xd": "ground"
     },
-    "target": "selected-pokemon",
+    "target": null,
     "generation": "generation-ii",
     "effect_chance": {
-        "ruby_sapphire": 100,
+        "ruby-sapphire": 100,
         "emerald": 100,
-        "firered_leafgreen": 100,
+        "firered-leafgreen": 100,
         "colosseum": 100,
         "xd": 100
     },
     "effect": {
-        "ruby_sapphire": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
-        "emerald": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
-        "firered_leafgreen": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
-        "colosseum": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage.",
-        "xd": "Inflicts regular damage. Has a 100% chance to lower the target’s accuracy by one stage."
+        "ruby-sapphire": "Inflicts regular damage. Has a chance to lower the target’s accuracy by one stage.",
+        "emerald": "Inflicts regular damage. Has a chance to lower the target’s accuracy by one stage.",
+        "firered-leafgreen": "Inflicts regular damage. Has a chance to lower the target’s accuracy by one stage.",
+        "colosseum": "Inflicts regular damage. Has a chance to lower the target’s accuracy by one stage.",
+        "xd": "Inflicts regular damage. Has a chance to lower the target’s accuracy by one stage."
     },
     "short_effect": {
-        "ruby_sapphire": "Has a 100% chance to lower the target’s accuracy by one stage.",
-        "emerald": "Has a 100% chance to lower the target’s accuracy by one stage.",
-        "firered_leafgreen": "Has a 100% chance to lower the target’s accuracy by one stage.",
-        "colosseum": "Has a 100% chance to lower the target’s accuracy by one stage.",
-        "xd": "Has a 100% chance to lower the target’s accuracy by one stage."
+        "ruby-sapphire": "Has a chance to lower the target’s accuracy by one stage.",
+        "emerald": "Has a chance to lower the target’s accuracy by one stage.",
+        "firered-leafgreen": "Has a chance to lower the target’s accuracy by one stage.",
+        "colosseum": "Has a chance to lower the target’s accuracy by one stage.",
+        "xd": "Has a chance to lower the target’s accuracy by one stage."
     },
     "flavor_text": {
-        "ruby_sapphire": "Hurls mud in the foe’s face to reduce its accuracy.",
+        "ruby-sapphire": "Hurls mud in the foe’s face to reduce its accuracy.",
         "emerald": "Hurls mud in the foe’s face to reduce its accuracy.",
-        "firered_leafgreen": "Mud is hurled in the foe’s face to inflict damage and lower its accuracy."
+        "firered-leafgreen": "Mud is hurled in the foe’s face to inflict damage and lower its accuracy."
     },
-    "stat_changes": [
-        {
-            "change": -1,
-            "stat": "accuracy"
-        }
-    ],
+    "stat_changes": null,
     "machine": null,
-    "metadata": {
-        "ailment": "none",
-        "category": "damage+lower",
-        "min_hits": null,
-        "max_hits": null,
-        "min_turns": null,
-        "max_turns": null,
-        "drain": 0,
-        "healing": 0,
-        "crit_rate": 0,
-        "ailment_chance": 0,
-        "flinch_chance": 0,
-        "stat_chance": 100
-    }
+    "metadata": null
 }

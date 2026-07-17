@@ -29,8 +29,8 @@
         "hp": 60,
         "attack": 55,
         "defense": 60,
-        "special_attack": 95,
-        "special_defense": 70,
+        "special-attack": 95,
+        "special-defense": 70,
         "speed": 124
     },
     "ev_yield": [
@@ -41,128 +41,34 @@
     ],
     "height": 4,
     "weight": 20,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10150.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10150.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/743-totem.png",
-        "other": {
-            "dream_world": {
-                "front_default": null,
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10150.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10150.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10150.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10150.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10150.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10150.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10150.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10150.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/743-totem.png",
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/10150.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/743-totem.png",
+            "ultra-sun-ultra-moon": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/10150.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/743-totem.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/10150.png",
                 "front_shiny_female": null
             }
         }
     },
-    "base_experience": 162,
-    "base_happiness": 70,
-    "capture_rate": 75,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 743,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "cutiefly",
-    "pokedex_numbers": {
-        "national": 743,
-        "original_alola": 84
-    },
-    "color": "yellow",
-    "shape": "bug-wings",
-    "egg_groups": [
-        "bug",
-        "fairy"
-    ],
-    "flavor_text": {
-        "sun": "It rolls up pollen into puffs. It makes many different varieties, some used as food and others used in battle.",
-        "moon": "Some of Ribombee’s pollen puffs are highly nutritious. They are sometimes sold as supplements.",
-        "ultra_sun": "Rain makes pollen damp, so Ribombee hates rain. When it sees ominous clouds, it finds a hollow in a tree, where it waits stock-still.",
-        "ultra_moon": "It can predict the weather from moisture levels and wind direction. Ribombee only reveals itself when there are a few clear days in a row."
-    },
-    "genus": "Bee Fly Pokémon",
-    "generation": "generation-vii",
-    "evolution_chain": {
-        "species_name": "cutiefly",
-        "evolves_to": [
-            {
-                "species_name": "ribombee",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 25,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
         "honey": {
-            "sun": 5,
-            "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
+            "ultra-sun": 5,
+            "ultra-moon": 5
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "absorb",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -170,7 +76,6 @@
                 "name": "stun-spore",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -178,7 +83,6 @@
                 "name": "stun-spore",
                 "level_learned_at": 7,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -186,7 +90,6 @@
                 "name": "sweet-scent",
                 "level_learned_at": 21,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -194,7 +97,6 @@
                 "name": "aromatherapy",
                 "level_learned_at": 42,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -202,7 +104,6 @@
                 "name": "silver-wind",
                 "level_learned_at": 13,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -210,7 +111,6 @@
                 "name": "bug-buzz",
                 "level_learned_at": 28,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -218,7 +118,6 @@
                 "name": "quiver-dance",
                 "level_learned_at": 49,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -226,7 +125,6 @@
                 "name": "struggle-bug",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -234,7 +132,6 @@
                 "name": "struggle-bug",
                 "level_learned_at": 10,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -242,7 +139,6 @@
                 "name": "draining-kiss",
                 "level_learned_at": 16,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -250,7 +146,6 @@
                 "name": "fairy-wind",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -258,7 +153,6 @@
                 "name": "fairy-wind",
                 "level_learned_at": 4,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -266,7 +160,6 @@
                 "name": "dazzling-gleam",
                 "level_learned_at": 35,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -274,7 +167,6 @@
                 "name": "pollen-puff",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -282,7 +174,6 @@
                 "name": "pollen-puff",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             }
@@ -292,7 +183,6 @@
                 "name": "solar-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -300,7 +190,6 @@
                 "name": "toxic",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -308,7 +197,6 @@
                 "name": "psychic",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -316,7 +204,6 @@
                 "name": "double-team",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -324,7 +211,6 @@
                 "name": "light-screen",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -332,7 +218,6 @@
                 "name": "reflect",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -340,7 +225,6 @@
                 "name": "dream-eater",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -348,7 +232,6 @@
                 "name": "leech-life",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -356,7 +239,6 @@
                 "name": "rest",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -364,7 +246,6 @@
                 "name": "substitute",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -372,7 +253,6 @@
                 "name": "thief",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -380,7 +260,6 @@
                 "name": "protect",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -388,7 +267,6 @@
                 "name": "swagger",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -396,7 +274,6 @@
                 "name": "attract",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -404,7 +281,6 @@
                 "name": "sleep-talk",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -412,7 +288,6 @@
                 "name": "return",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -420,7 +295,6 @@
                 "name": "frustration",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -428,7 +302,6 @@
                 "name": "safeguard",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -436,7 +309,6 @@
                 "name": "hidden-power",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -444,7 +316,6 @@
                 "name": "sunny-day",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -452,7 +323,6 @@
                 "name": "psych-up",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -460,7 +330,6 @@
                 "name": "facade",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -468,7 +337,6 @@
                 "name": "nature-power",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -476,7 +344,6 @@
                 "name": "aerial-ace",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -484,7 +351,6 @@
                 "name": "calm-mind",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -492,7 +358,6 @@
                 "name": "roost",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -500,7 +365,6 @@
                 "name": "u-turn",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -508,7 +372,6 @@
                 "name": "energy-ball",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -516,7 +379,6 @@
                 "name": "round",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -524,7 +386,6 @@
                 "name": "acrobatics",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -532,7 +393,6 @@
                 "name": "confide",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -540,7 +400,6 @@
                 "name": "dazzling-gleam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             },
@@ -548,7 +407,6 @@
                 "name": "infestation",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
             }
@@ -658,6 +516,81 @@
                 "version_groups": [
                     "ultra-sun-ultra-moon"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 743,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": "cutiefly",
+    "pokedex_numbers": {
+        "national": 743,
+        "original-alola": 84
+    },
+    "color": "yellow",
+    "shape": "bug-wings",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "It rolls up pollen into puffs. It makes many different varieties, some used as food and others used in battle.",
+        "moon": "Some of Ribombee’s pollen puffs are highly nutritious. They are sometimes sold as supplements.",
+        "ultra-sun": "Rain makes pollen damp, so Ribombee hates rain. When it sees ominous clouds, it finds a hollow in a tree, where it waits stock-still.",
+        "ultra-moon": "It can predict the weather from moisture levels and wind direction. Ribombee only reveals itself when there are a few clear days in a row."
+    },
+    "genus": "Bee Fly Pokémon",
+    "generation": "generation-vii",
+    "evolution_chain": {
+        "species_name": "cutiefly",
+        "evolves_to": [
+            {
+                "species_name": "ribombee",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "sun-moon",
+                            "ultra-sun-ultra-moon",
+                            "lets-go-pikachu-lets-go-eevee"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 25,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

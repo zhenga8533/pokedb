@@ -18,8 +18,8 @@
         "hp": 120,
         "attack": 120,
         "defense": 120,
-        "special_attack": 120,
-        "special_defense": 120,
+        "special-attack": 120,
+        "special-defense": 120,
         "speed": 120
     },
     "ev_yield": [
@@ -30,43 +30,10 @@
     ],
     "height": 32,
     "weight": 3200,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/493.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/493.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/493-unknown.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/493-unknown.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493-unknown.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/493-unknown.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/493.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/493.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/493.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/493.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/493.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/493.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/493.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/493.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/493.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "diamond_pearl": {
+            "diamond-pearl": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/diamond-pearl/back/493.png",
                 "back_female": null,
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/diamond-pearl/back/shiny/493.png",
@@ -76,7 +43,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/diamond-pearl/shiny/493.png",
                 "front_shiny_female": null
             },
-            "heartgold_soulsilver": {
+            "heartgold-soulsilver": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/back/493.png",
                 "back_female": null,
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/back/shiny/493.png",
@@ -96,43 +63,13 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/shiny/493.png",
                 "front_shiny_female": null
             }
-        }
+        },
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493-unknown.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/493-unknown.png",
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/493-unknown.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/493-unknown.png"
     },
-    "base_experience": 255,
-    "base_happiness": 0,
-    "capture_rate": 3,
-    "hatch_counter": 120,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": true,
-    "forms_switchable": true,
-    "order": 494,
-    "growth_rate": "slow",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 493
-    },
-    "color": "white",
-    "shape": "quadruped",
-    "egg_groups": [
-        "no-eggs"
-    ],
-    "flavor_text": {
-        "diamond": "It is described in mythology as the Pokémon that shaped the universe with its 1,000 arms.",
-        "pearl": "It is told in mythology that this Pokémon was born before the universe even existed.",
-        "platinum": "It is said to have emerged from an egg in a place where there was nothing, then shaped the world.",
-        "heartgold": "According to the legends of Sinnoh, this Pokémon emerged from an egg and shaped all there is in this world.",
-        "soulsilver": "According to the legends of Sinnoh, this Pokémon emerged from an egg and shaped all there is in this world."
-    },
-    "genus": "Alpha Pokémon",
-    "generation": "generation-iv",
-    "evolution_chain": {
-        "species_name": "arceus",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -1045,7 +982,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "hyper-beam",
                 "level_learned_at": 80,
@@ -1173,6 +1110,38 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": true,
+    "forms_switchable": null,
+    "order": 494,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 493
+    },
+    "color": "white",
+    "shape": "quadruped",
+    "egg_groups": null,
+    "flavor_text": {
+        "platinum": "It is said to have emerged from an egg in a place where there was nothing, then shaped the world.",
+        "diamond": "It is described in mythology as the Pokémon that shaped the universe with its 1,000 arms.",
+        "pearl": "It is told in mythology that this Pokémon was born before the universe even existed.",
+        "heartgold": "According to the legends of Sinnoh, this Pokémon emerged from an egg and shaped all there is in this world.",
+        "soulsilver": "According to the legends of Sinnoh, this Pokémon emerged from an egg and shaped all there is in this world."
+    },
+    "genus": "Alpha Pokémon",
+    "generation": "generation-iv",
+    "evolution_chain": {
+        "species_name": "arceus",
+        "evolves_to": []
     },
     "forms": [
         {

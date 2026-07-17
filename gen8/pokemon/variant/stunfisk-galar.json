@@ -19,8 +19,8 @@
         "hp": 109,
         "attack": 81,
         "defense": 99,
-        "special_attack": 66,
-        "special_defense": 84,
+        "special-attack": 66,
+        "special-defense": 84,
         "speed": 32
     },
     "ev_yield": [
@@ -31,85 +31,81 @@
     ],
     "height": 7,
     "weight": 205,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10180.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10180.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10180.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10180.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10180.png",
-        "other": {
-            "dream_world": {
+        "versions": {
+            "brilliant-diamond-shining-pearl": {
                 "front_default": null,
                 "front_female": null
             },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10180.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10180.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10180.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10180.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10180.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10180.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10180.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10180.gif",
-                "front_shiny_female": null
-            }
-        },
-        "versions": {
             "icons": {
                 "front_default": null,
                 "front_female": null
             }
         }
     },
-    "base_experience": 165,
-    "base_happiness": 70,
-    "capture_rate": 75,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 619,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 618,
-        "galar": 226
-    },
-    "color": "brown",
-    "shape": "fish",
-    "egg_groups": [
-        "water1",
-        "indeterminate"
-    ],
-    "flavor_text": {
-        "sword": "Thanks to bacteria that lived in the mud flats with it, this Pokémon developed the organs it uses to generate electricity.",
-        "shield": "For some reason, this Pokémon smiles slightly when it emits a strong electric current from the yellow markings on its body."
-    },
-    "genus": "Trap Pokémon",
-    "generation": "generation-v",
-    "evolution_chain": {
-        "species_name": "stunfisk",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "egg": [
+            {
+                "name": "bind",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "counter",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "curse",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "spite",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "pain-split",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "yawn",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "astonish",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "reflect-type",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            }
+        ],
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -119,13 +115,6 @@
             },
             {
                 "name": "water-gun",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "thunder-shock",
                 "level_learned_at": 1,
                 "version_groups": [
                     "sword-shield"
@@ -160,8 +149,8 @@
                 ]
             },
             {
-                "name": "charge",
-                "level_learned_at": 20,
+                "name": "metal-claw",
+                "level_learned_at": 1,
                 "version_groups": [
                     "sword-shield"
                 ]
@@ -174,8 +163,22 @@
                 ]
             },
             {
+                "name": "metal-sound",
+                "level_learned_at": 20,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
                 "name": "muddy-water",
                 "level_learned_at": 40,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 30,
                 "version_groups": [
                     "sword-shield"
                 ]
@@ -202,15 +205,8 @@
                 ]
             },
             {
-                "name": "discharge",
+                "name": "snap-trap",
                 "level_learned_at": 45,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "electric-terrain",
-                "level_learned_at": 30,
                 "version_groups": [
                     "sword-shield"
                 ]
@@ -225,21 +221,7 @@
                 ]
             },
             {
-                "name": "thunderbolt",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
                 "name": "thunder-wave",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "thunder",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -254,6 +236,13 @@
             },
             {
                 "name": "dig",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "screech",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -337,6 +326,13 @@
                 ]
             },
             {
+                "name": "crunch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
                 "name": "uproar",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -372,6 +368,13 @@
                 ]
             },
             {
+                "name": "iron-defense",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
                 "name": "bounce",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -394,6 +397,20 @@
             },
             {
                 "name": "earth-power",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "ice-fang",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "flash-cannon",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -449,79 +466,7 @@
                 ]
             },
             {
-                "name": "electroweb",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "eerie-impulse",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "electric-terrain",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
                 "name": "stomping-tantrum",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            }
-        ],
-        "egg": [
-            {
-                "name": "curse",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "spite",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "spark",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "pain-split",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "yawn",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "astonish",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "reflect-type",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -530,6 +475,20 @@
         ],
         "tutor": [
             {
+                "name": "steel-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "terrain-pulse",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
                 "name": "lash-out",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -537,6 +496,36 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 619,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 618,
+        "galar": 226
+    },
+    "color": "brown",
+    "shape": "fish",
+    "egg_groups": null,
+    "flavor_text": {
+        "sword": "Thanks to bacteria that lived in the mud flats with it, this Pokémon developed the organs it uses to generate electricity.",
+        "shield": "For some reason, this Pokémon smiles slightly when it emits a strong electric current from the yellow markings on its body."
+    },
+    "genus": "Trap Pokémon",
+    "generation": "generation-v",
+    "evolution_chain": {
+        "species_name": "stunfisk",
+        "evolves_to": []
     },
     "forms": [
         {

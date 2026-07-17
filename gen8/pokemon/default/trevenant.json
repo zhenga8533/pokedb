@@ -29,8 +29,8 @@
         "hp": 85,
         "attack": 110,
         "defense": 76,
-        "special_attack": 65,
-        "special_defense": 82,
+        "special-attack": 65,
+        "special-defense": 82,
         "speed": 56
     },
     "ev_yield": [
@@ -41,108 +41,23 @@
     ],
     "height": 15,
     "weight": 710,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/709.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/709.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/709.png",
-        "other": {
-            "dream_world": {
+        "versions": {
+            "brilliant-diamond-shining-pearl": {
                 "front_default": null,
                 "front_female": null
             },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/709.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/709.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/709.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/709.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/709.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/709.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/709.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/709.gif",
-                "front_shiny_female": null
-            }
-        },
-        "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/709.png",
                 "front_female": null
             }
         }
     },
-    "base_experience": 166,
-    "base_happiness": 70,
-    "capture_rate": 60,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 709,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "phantump",
-    "pokedex_numbers": {
-        "national": 709,
-        "galar": 339
-    },
-    "color": "brown",
-    "shape": "tentacles",
-    "egg_groups": [
-        "plant",
-        "indeterminate"
-    ],
-    "flavor_text": {
-        "sword": "People fear it due to a belief that it devours any who try to cut down trees in its forest, but to the Pokémon it shares its woods with, it’s kind.",
-        "shield": "Small roots that extend from the tips of this Pokémon’s feet can tie into the trees of the forest and give Trevenant control over them."
-    },
-    "genus": "Elder Tree Pokémon",
-    "generation": "generation-vi",
-    "evolution_chain": {
-        "species_name": "phantump",
-        "evolves_to": [
-            {
-                "species_name": "trevenant",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "trade",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -608,6 +523,81 @@
                 "version_groups": [
                     "sword-shield"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 709,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": "phantump",
+    "pokedex_numbers": {
+        "national": 709,
+        "galar": 339
+    },
+    "color": "brown",
+    "shape": "tentacles",
+    "egg_groups": null,
+    "flavor_text": {
+        "sword": "People fear it due to a belief that it devours any who try to cut down trees in its forest, but to the Pokémon it shares its woods with, it’s kind.",
+        "shield": "Small roots that extend from the tips of this Pokémon’s feet can tie into the trees of the forest and give Trevenant control over them."
+    },
+    "genus": "Elder Tree Pokémon",
+    "generation": "generation-vi",
+    "evolution_chain": {
+        "species_name": "phantump",
+        "evolves_to": [
+            {
+                "species_name": "trevenant",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "x-y",
+                        "version_groups": [
+                            "sword-shield",
+                            "the-isle-of-armor",
+                            "the-crown-tundra",
+                            "brilliant-diamond-shining-pearl",
+                            "legends-arceus"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "trade",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

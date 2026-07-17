@@ -18,8 +18,8 @@
         "hp": 50,
         "attack": 95,
         "defense": 90,
-        "special_attack": 95,
-        "special_defense": 90,
+        "special-attack": 95,
+        "special-defense": 90,
         "speed": 180
     },
     "ev_yield": [
@@ -30,90 +30,24 @@
     ],
     "height": 17,
     "weight": 608,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10003.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/386-speed.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/386-speed.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10003.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/386-speed.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10003.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10003.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10003.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10003.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10003.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10003.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10003.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10003.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10003.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/386-speed.png",
+            "omegaruby-alphasapphire": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/10003.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/386-speed.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/10003.png",
                 "front_shiny_female": null
             },
-            "x_y": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/386-speed.png",
+            "x-y": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/10003.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/386-speed.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/10003.png",
                 "front_shiny_female": null
             }
         }
     },
-    "base_experience": 270,
-    "base_happiness": 0,
-    "capture_rate": 3,
-    "hatch_counter": 120,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": true,
-    "forms_switchable": true,
-    "order": 416,
-    "growth_rate": "slow",
-    "habitat": "rare",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 386
-    },
-    "color": "red",
-    "shape": "humanoid",
-    "egg_groups": [
-        "no-eggs"
-    ],
-    "flavor_text": {
-        "x": "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon.",
-        "y": "DNA from a space virus mutated and became a Pokémon. It appears where auroras are seen.",
-        "omega_ruby": "The DNA of a space virus underwent a sudden mutation upon exposure to a laser beam and resulted in Deoxys. The crystalline organ on this Pokémon’s chest appears to be its brain.",
-        "alpha_sapphire": "Deoxys emerged from a virus that came from space. It is highly intelligent and wields psychokinetic powers. This Pokémon shoots lasers from the crystalline organ on its chest."
-    },
-    "genus": "DNA Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "deoxys",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -154,13 +88,6 @@
             },
             {
                 "name": "snore",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "icy-wind",
                 "level_learned_at": 0,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
@@ -704,7 +631,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "wrap",
                 "level_learned_at": 1,
@@ -722,20 +649,6 @@
                 ]
             },
             {
-                "name": "hyper-beam",
-                "level_learned_at": 97,
-                "version_groups": [
-                    "x-y"
-                ]
-            },
-            {
-                "name": "hyper-beam",
-                "level_learned_at": 73,
-                "version_groups": [
-                    "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
                 "name": "psychic",
                 "level_learned_at": 41,
                 "version_groups": [
@@ -750,15 +663,15 @@
                 ]
             },
             {
-                "name": "teleport",
-                "level_learned_at": 17,
+                "name": "agility",
+                "level_learned_at": 73,
                 "version_groups": [
                     "x-y"
                 ]
             },
             {
-                "name": "teleport",
-                "level_learned_at": 13,
+                "name": "agility",
+                "level_learned_at": 55,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
                 ]
@@ -778,6 +691,20 @@
                 ]
             },
             {
+                "name": "double-team",
+                "level_learned_at": 17,
+                "version_groups": [
+                    "x-y"
+                ]
+            },
+            {
+                "name": "double-team",
+                "level_learned_at": 13,
+                "version_groups": [
+                    "omega-ruby-alpha-sapphire"
+                ]
+            },
+            {
                 "name": "recover",
                 "level_learned_at": 81,
                 "version_groups": [
@@ -787,6 +714,20 @@
             {
                 "name": "recover",
                 "level_learned_at": 61,
+                "version_groups": [
+                    "omega-ruby-alpha-sapphire"
+                ]
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 49,
+                "version_groups": [
+                    "x-y"
+                ]
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 37,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
                 ]
@@ -806,6 +747,20 @@
                 ]
             },
             {
+                "name": "extreme-speed",
+                "level_learned_at": 97,
+                "version_groups": [
+                    "x-y"
+                ]
+            },
+            {
+                "name": "extreme-speed",
+                "level_learned_at": 73,
+                "version_groups": [
+                    "omega-ruby-alpha-sapphire"
+                ]
+            },
+            {
                 "name": "knock-off",
                 "level_learned_at": 25,
                 "version_groups": [
@@ -815,34 +770,6 @@
             {
                 "name": "knock-off",
                 "level_learned_at": 19,
-                "version_groups": [
-                    "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "snatch",
-                "level_learned_at": 49,
-                "version_groups": [
-                    "x-y"
-                ]
-            },
-            {
-                "name": "snatch",
-                "level_learned_at": 37,
-                "version_groups": [
-                    "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "cosmic-power",
-                "level_learned_at": 73,
-                "version_groups": [
-                    "x-y"
-                ]
-            },
-            {
-                "name": "cosmic-power",
-                "level_learned_at": 55,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
                 ]
@@ -890,6 +817,37 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": true,
+    "forms_switchable": null,
+    "order": 416,
+    "growth_rate": null,
+    "habitat": "rare",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 386
+    },
+    "color": "red",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "x": "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon.",
+        "y": "DNA from a space virus mutated and became a Pokémon. It appears where auroras are seen.",
+        "omega-ruby": "The DNA of a space virus underwent a sudden mutation upon exposure to a laser beam and resulted in Deoxys. The crystalline organ on this Pokémon’s chest appears to be its brain.",
+        "alpha-sapphire": "Deoxys emerged from a virus that came from space. It is highly intelligent and wields psychokinetic powers. This Pokémon shoots lasers from the crystalline organ on its chest."
+    },
+    "genus": "DNA Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "deoxys",
+        "evolves_to": []
     },
     "forms": [
         {

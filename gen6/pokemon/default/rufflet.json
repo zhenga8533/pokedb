@@ -29,8 +29,8 @@
         "hp": 70,
         "attack": 83,
         "defense": 50,
-        "special_attack": 37,
-        "special_defense": 50,
+        "special-attack": 37,
+        "special-defense": 50,
         "speed": 60
     },
     "ev_yield": [
@@ -41,49 +41,16 @@
     ],
     "height": 5,
     "weight": 105,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/627.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/627.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/627.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/627.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/627.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/627.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/627.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/627.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/627.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/627.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/627.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/627.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/627.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/627.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/627.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
+            "omegaruby-alphasapphire": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/627.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/627.png",
                 "front_shiny_female": null
             },
-            "x_y": {
+            "x-y": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/627.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/627.png",
@@ -91,65 +58,7 @@
             }
         }
     },
-    "base_experience": 70,
-    "base_happiness": 70,
-    "capture_rate": 190,
-    "hatch_counter": 20,
-    "gender_rate": 0,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 628,
-    "growth_rate": "slow",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 627
-    },
-    "color": "white",
-    "shape": "wings",
-    "egg_groups": [
-        "flying"
-    ],
-    "flavor_text": {
-        "omega_ruby": "They crush berries with their talons. They bravely stand up to any opponent, no matter how strong it is.",
-        "x": "They crush berries with their talons. They bravely stand up to any opponent, no matter how strong it is.",
-        "y": "They will challenge anything, even strong opponents, without fear. Their frequent fights help them become stronger.",
-        "alpha_sapphire": "They will challenge anything, even strong opponents, without fear. Their frequent fights help them become stronger."
-    },
-    "genus": "Eaglet Pokémon",
-    "generation": "generation-v",
-    "evolution_chain": {
-        "species_name": "rufflet",
-        "evolves_to": [
-            {
-                "species_name": "braviary",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 54,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -409,7 +318,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "wing-attack",
                 "level_learned_at": 10,
@@ -567,6 +476,79 @@
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 628,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 627
+    },
+    "color": "white",
+    "shape": "wings",
+    "egg_groups": null,
+    "flavor_text": {
+        "x": "They crush berries with their talons. They bravely stand up to any opponent, no matter how strong it is.",
+        "y": "They will challenge anything, even strong opponents, without fear. Their frequent fights help them become stronger.",
+        "omega-ruby": "They crush berries with their talons. They bravely stand up to any opponent, no matter how strong it is.",
+        "alpha-sapphire": "They will challenge anything, even strong opponents, without fear. Their frequent fights help them become stronger."
+    },
+    "genus": "Eaglet Pokémon",
+    "generation": "generation-v",
+    "evolution_chain": {
+        "species_name": "rufflet",
+        "evolves_to": [
+            {
+                "species_name": "braviary",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "black-white",
+                        "version_groups": [
+                            "x-y",
+                            "omega-ruby-alpha-sapphire"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 54,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

@@ -28,8 +28,8 @@
         "hp": 103,
         "attack": 60,
         "defense": 86,
-        "special_attack": 60,
-        "special_defense": 86,
+        "special-attack": 60,
+        "special-defense": 86,
         "speed": 50
     },
     "ev_yield": [
@@ -40,43 +40,10 @@
     ],
     "height": 11,
     "weight": 310,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/531.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/531.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/531.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/531.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/531.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/531.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/531.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/531.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/531.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/531.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/531.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/531.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/531.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/531.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/531.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "black_white": {
+            "black-white": {
                 "animated": {
                     "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/531.gif",
                     "back_female": null,
@@ -98,57 +65,23 @@
             }
         }
     },
-    "base_experience": 390,
-    "base_happiness": 70,
-    "capture_rate": 255,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": true,
-    "order": 532,
-    "growth_rate": "fast",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 531,
-        "original_unova": 37
-    },
-    "color": "pink",
-    "shape": "upright",
-    "egg_groups": [
-        "fairy"
-    ],
-    "flavor_text": {
-        "black": "It touches others with the feelers on its ears, using the sound of their heartbeats to tell how they are feeling.",
-        "white": "Its auditory sense is astounding. It has a radarlike ability to understand its surroundings through slight sounds.",
-        "black_2": "Using the feelers on its ears, it can tell how someone is feeling or when an egg might hatch.",
-        "white_2": "Using the feelers on its ears, it can tell how someone is feeling or when an egg might hatch."
-    },
-    "genus": "Hearing Pokémon",
-    "generation": "generation-v",
-    "evolution_chain": {
-        "species_name": "audino",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {
-        "oran_berry": {
+        "oran-berry": {
             "black": 50,
             "white": 50,
-            "black_2": 50,
-            "white_2": 50
+            "black-2": 50,
+            "white-2": 50
         },
-        "sitrus_berry": {
+        "sitrus-berry": {
             "black": 5,
             "white": 5,
-            "black_2": 5,
-            "white_2": 5
+            "black-2": 5,
+            "white-2": 5
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "pound",
                 "level_learned_at": 1,
@@ -883,6 +816,38 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 532,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 531,
+        "original-unova": 37
+    },
+    "color": "pink",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "black": "It touches others with the feelers on its ears, using the sound of their heartbeats to tell how they are feeling.",
+        "white": "Its auditory sense is astounding. It has a radarlike ability to understand its surroundings through slight sounds.",
+        "black-2": "Using the feelers on its ears, it can tell how someone is feeling or when an egg might hatch.",
+        "white-2": "Using the feelers on its ears, it can tell how someone is feeling or when an egg might hatch."
+    },
+    "genus": "Hearing Pokémon",
+    "generation": "generation-v",
+    "evolution_chain": {
+        "species_name": "audino",
+        "evolves_to": []
     },
     "forms": [
         {

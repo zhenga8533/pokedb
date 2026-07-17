@@ -28,8 +28,8 @@
         "hp": 38,
         "attack": 36,
         "defense": 38,
-        "special_attack": 32,
-        "special_defense": 36,
+        "special-attack": 32,
+        "special-defense": 36,
         "speed": 57
     },
     "ev_yield": [
@@ -40,49 +40,16 @@
     ],
     "height": 4,
     "weight": 50,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/659.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/659.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/659.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/659.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/659.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/659.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/659.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/659.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/659.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/659.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/659.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/659.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/659.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/659.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
+            "omegaruby-alphasapphire": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/659.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/659.png",
                 "front_shiny_female": null
             },
-            "x_y": {
+            "x-y": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/659.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/659.png",
@@ -90,69 +57,10 @@
             }
         }
     },
-    "base_experience": 47,
-    "base_happiness": 70,
-    "capture_rate": 255,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 660,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 659,
-        "kalos_central": 10
-    },
-    "color": "brown",
-    "shape": "upright",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {
-        "x": "They use their large ears to dig burrows. They will dig the whole night through.",
-        "y": "It has ears like shovels. Digging holes strengthens its ears so much that they can sever thick roots effortlessly.",
-        "omega_ruby": "They use their large ears to dig burrows. They will dig the whole night through.",
-        "alpha_sapphire": "It has ears like shovels. Digging holes strengthens its ears so much that they can sever thick roots effortlessly."
-    },
-    "genus": "Digging Pokémon",
-    "generation": "generation-vi",
-    "evolution_chain": {
-        "species_name": "bunnelby",
-        "evolves_to": [
-            {
-                "species_name": "diggersby",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 20,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "double-slap",
                 "level_learned_at": 10,
@@ -677,6 +585,80 @@
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 660,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 659,
+        "kalos-central": 10
+    },
+    "color": "brown",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "x": "They use their large ears to dig burrows. They will dig the whole night through.",
+        "y": "It has ears like shovels. Digging holes strengthens its ears so much that they can sever thick roots effortlessly.",
+        "omega-ruby": "They use their large ears to dig burrows. They will dig the whole night through.",
+        "alpha-sapphire": "It has ears like shovels. Digging holes strengthens its ears so much that they can sever thick roots effortlessly."
+    },
+    "genus": "Digging Pokémon",
+    "generation": "generation-vi",
+    "evolution_chain": {
+        "species_name": "bunnelby",
+        "evolves_to": [
+            {
+                "species_name": "diggersby",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "x-y",
+                        "version_groups": [
+                            "x-y",
+                            "omega-ruby-alpha-sapphire"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 20,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

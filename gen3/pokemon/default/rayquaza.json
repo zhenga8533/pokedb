@@ -19,8 +19,8 @@
         "hp": 105,
         "attack": 150,
         "defense": 90,
-        "special_attack": 150,
-        "special_defense": 90,
+        "special-attack": 150,
+        "special-defense": 90,
         "speed": 95
     },
     "ev_yield": [
@@ -35,53 +35,20 @@
     ],
     "height": 70,
     "weight": 2065,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/384.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/384.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/384.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/384.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/384.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/384.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/384.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/384.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/384.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/384.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/384.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/384.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/384.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/384.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/384.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/384.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": null,
                 "back_shiny": null,
                 "front_default": null,
                 "front_shiny": null
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/384.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/384.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/384.png",
@@ -89,45 +56,10 @@
             }
         }
     },
-    "base_experience": 220,
-    "base_happiness": 0,
-    "capture_rate": 45,
-    "hatch_counter": 120,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": true,
-    "is_mythical": false,
-    "forms_switchable": true,
-    "order": 414,
-    "growth_rate": "slow",
-    "habitat": "rare",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 384,
-        "hoenn": 200
-    },
-    "color": "green",
-    "shape": "squiggle",
-    "egg_groups": [
-        "no-eggs"
-    ],
-    "flavor_text": {
-        "ruby": "RAYQUAZA lived for hundreds of millions of years in the earth’s ozone layer, never descending to the ground. This POKéMON appears to feed on water and particles in the atmosphere.",
-        "sapphire": "RAYQUAZA is said to have lived for hundreds of millions of years in the earth’s ozone layer, above the clouds. Its existence had been completely unknown because it lived so high in the sky.",
-        "emerald": "A POKéMON that flies endlessly in the ozone layer. It is said it would descend to the ground if KYOGRE and GROUDON were to fight.",
-        "firered": "It has lived for hundreds of millions of years in the ozone layer. Its flying form looks like a meteor.",
-        "leafgreen": "It has lived for hundreds of millions of years in the ozone layer. Its flying form looks like a meteor."
-    },
-    "genus": "Sky High Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "rayquaza",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "fly",
                 "level_learned_at": 45,
@@ -768,6 +700,39 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 414,
+    "growth_rate": null,
+    "habitat": "rare",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 384,
+        "hoenn": 200
+    },
+    "color": "green",
+    "shape": "squiggle",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "RAYQUAZA lived for hundreds of millions of years in the earth’s ozone layer, never descending to the ground. This POKéMON appears to feed on water and particles in the atmosphere.",
+        "sapphire": "RAYQUAZA is said to have lived for hundreds of millions of years in the earth’s ozone layer, above the clouds. Its existence had been completely unknown because it lived so high in the sky.",
+        "emerald": "A POKéMON that flies endlessly in the ozone layer. It is said it would descend to the ground if KYOGRE and GROUDON were to fight.",
+        "firered": "It has lived for hundreds of millions of years in the ozone layer. Its flying form looks like a meteor.",
+        "leafgreen": "It has lived for hundreds of millions of years in the ozone layer. Its flying form looks like a meteor."
+    },
+    "genus": "Sky High Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "rayquaza",
+        "evolves_to": []
     },
     "forms": [
         {

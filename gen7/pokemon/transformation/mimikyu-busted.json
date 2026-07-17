@@ -19,8 +19,8 @@
         "hp": 55,
         "attack": 90,
         "defense": 80,
-        "special_attack": 50,
-        "special_defense": 105,
+        "special-attack": 50,
+        "special-defense": 105,
         "speed": 96
     },
     "ev_yield": [
@@ -31,99 +31,25 @@
     ],
     "height": 2,
     "weight": 7,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10143.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10143.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10143.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10143.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10143.png",
-        "other": {
-            "dream_world": {
-                "front_default": null,
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10143.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10143.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10143.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10143.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10143.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10143.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10143.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/778-busted.png",
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/10143.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/778-busted.png",
+            "ultra-sun-ultra-moon": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/10143.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/778-busted.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/10143.png",
                 "front_shiny_female": null
             }
         }
     },
-    "base_experience": 167,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 778,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 778,
-        "original_alola": 242
-    },
-    "color": "yellow",
-    "shape": "squiggle",
-    "egg_groups": [
-        "indeterminate"
-    ],
-    "flavor_text": {
-        "sun": "Its actual appearance is unknown. A scholar who saw what was under its rag was overwhelmed by terror and died from the shock.",
-        "moon": "A lonely Pokémon, it conceals its terrifying appearance beneath an old rag so it can get closer to people and other Pokémon.",
-        "ultra_sun": "Although it’s a quiet, lonely Pokémon, if you try to look at what’s under its rag, it will become agitated and resist violently.",
-        "ultra_moon": "A gust of wind revealed what hides under this Pokémon’s rag to a passing Trainer, who went home and died painfully that very night."
-    },
-    "genus": "Disguise Pokémon",
-    "generation": "generation-vii",
-    "evolution_chain": {
-        "species_name": "mimikyu",
-        "evolves_to": []
-    },
-    "held_items": {
-        "chesto_berry": {
-            "sun": 5,
-            "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
-        }
-    },
+    "base_experience": null,
+    "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "scratch",
                 "level_learned_at": 1,
@@ -260,6 +186,13 @@
                 "version_groups": [
                     "sun-moon",
                     "ultra-sun-ultra-moon"
+                ]
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sun-moon"
                 ]
             },
             {
@@ -703,6 +636,38 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 778,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 778,
+        "original-alola": 242
+    },
+    "color": "yellow",
+    "shape": "squiggle",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "Its actual appearance is unknown. A scholar who saw what was under its rag was overwhelmed by terror and died from the shock.",
+        "moon": "A lonely Pokémon, it conceals its terrifying appearance beneath an old rag so it can get closer to people and other Pokémon.",
+        "ultra-sun": "Although it’s a quiet, lonely Pokémon, if you try to look at what’s under its rag, it will become agitated and resist violently.",
+        "ultra-moon": "A gust of wind revealed what hides under this Pokémon’s rag to a passing Trainer, who went home and died painfully that very night."
+    },
+    "genus": "Disguise Pokémon",
+    "generation": "generation-vii",
+    "evolution_chain": {
+        "species_name": "mimikyu",
+        "evolves_to": []
     },
     "forms": [
         {

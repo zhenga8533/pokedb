@@ -29,8 +29,8 @@
         "hp": 90,
         "attack": 105,
         "defense": 130,
-        "special_attack": 125,
-        "special_defense": 65,
+        "special-attack": 125,
+        "special-defense": 65,
         "speed": 85
     },
     "ev_yield": [
@@ -61,7 +61,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/1018.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1018.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1018.png"
             },
@@ -77,70 +77,13 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/1018.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 300,
-    "base_happiness": 50,
-    "capture_rate": 10,
-    "hatch_counter": 30,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 1020,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "duraludon",
-    "pokedex_numbers": {
-        "national": 1018
-    },
-    "color": "white",
-    "shape": "upright",
-    "egg_groups": [
-        "mineral",
-        "dragon"
-    ],
-    "flavor_text": {
-        "scarlet": "It gathers static electricity from its surroundings. The beams it launches when down on all fours are tremendously powerful.",
-        "violet": "It digs holes on mountains, searching for food. It’s so durable that being caught in a cave-in won’t faze it."
-    },
-    "genus": "Alloy Pokémon",
-    "generation": "generation-ix",
-    "evolution_chain": {
-        "species_name": "duraludon",
-        "evolves_to": [
-            {
-                "species_name": "archaludon",
-                "evolution_details": {
-                    "item": "metal-alloy",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
         "machine": [
@@ -854,7 +797,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "leer",
                 "level_learned_at": 1,
@@ -975,6 +918,82 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 50,
+    "capture_rate": 10,
+    "hatch_counter": 30,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 1020,
+    "growth_rate": "medium",
+    "habitat": null,
+    "evolves_from_species": "duraludon",
+    "pokedex_numbers": {
+        "national": 1018
+    },
+    "color": "white",
+    "shape": "upright",
+    "egg_groups": [
+        "mineral",
+        "dragon"
+    ],
+    "flavor_text": {
+        "scarlet": "It gathers static electricity from its surroundings. The beams it launches when down on all fours are tremendously powerful.",
+        "violet": "It digs holes on mountains, searching for food. It’s so durable that being caught in a cave-in won’t faze it."
+    },
+    "genus": "Alloy Pokémon",
+    "generation": "generation-ix",
+    "evolution_chain": {
+        "species_name": "duraludon",
+        "evolves_to": [
+            {
+                "species_name": "archaludon",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "the-indigo-disk",
+                        "version_groups": [
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "metal-alloy",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

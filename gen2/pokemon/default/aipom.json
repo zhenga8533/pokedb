@@ -7,73 +7,20 @@
     "types": [
         "normal"
     ],
-    "abilities": [
-        {
-            "name": "run-away",
-            "is_hidden": false,
-            "slot": 1
-        },
-        {
-            "name": "pickup",
-            "is_hidden": false,
-            "slot": 2
-        }
-    ],
+    "abilities": [],
     "stats": {
         "hp": 55,
         "attack": 70,
         "defense": 55,
-        "special_attack": 40,
-        "special_defense": 55,
+        "special-attack": 40,
+        "special-defense": 55,
         "speed": 85
     },
-    "ev_yield": [
-        {
-            "stat": "speed",
-            "effort": 1
-        }
-    ],
+    "ev_yield": null,
     "height": 8,
     "weight": 115,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/190.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/190.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/190.png",
-        "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/190.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/190.png",
-        "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/190.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/190.png",
-        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/190.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/190.png",
-        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/190.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/190.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/190.png",
-                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/190.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/190.png",
-                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/190.png"
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/190.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/190.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/190.gif",
-                "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/female/190.gif",
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/190.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/190.gif",
-                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/female/190.gif",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/190.gif",
-                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/female/190.gif"
-            }
-        },
         "versions": {
             "crystal": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/back/190.png",
@@ -101,40 +48,7 @@
             }
         }
     },
-    "base_experience": 94,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": true,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 219,
-    "growth_rate": "fast",
-    "habitat": "forest",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 190,
-        "original_johto": 122
-    },
-    "color": "purple",
-    "shape": "upright",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {
-        "gold": "Its tail is so powerful that it can use it to grab a tree branch and hold itself up in the air.",
-        "silver": "It lives atop tall trees. When leap­ ing from branch to branch, it deftly uses its tail for balance.",
-        "crystal": "It uses its tail to hang on to tree branches. It uses its momentum to swing from one branch to another."
-    },
-    "genus": "Long Tail Pokémon",
-    "generation": "generation-ii",
-    "evolution_chain": {
-        "species_name": "aipom",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "egg": [
@@ -477,7 +391,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "scratch",
                 "level_learned_at": 1,
@@ -552,6 +466,37 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 219,
+    "growth_rate": null,
+    "habitat": "forest",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 190,
+        "original-johto": 122
+    },
+    "color": "purple",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "gold": "Its tail is so powerful that it can use it to grab a tree branch and hold itself up in the air.",
+        "silver": "It lives atop tall trees. When leap­ ing from branch to branch, it deftly uses its tail for balance.",
+        "crystal": "It uses its tail to hang on to tree branches. It uses its momentum to swing from one branch to another."
+    },
+    "genus": "Long Tail Pokémon",
+    "generation": "generation-ii",
+    "evolution_chain": {
+        "species_name": "aipom",
+        "evolves_to": []
     },
     "forms": [
         {

@@ -28,8 +28,8 @@
         "hp": 50,
         "attack": 65,
         "defense": 55,
-        "special_attack": 40,
-        "special_defense": 40,
+        "special-attack": 40,
+        "special-defense": 40,
         "speed": 40
     },
     "ev_yield": [
@@ -60,7 +60,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10161.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10161.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10161.png"
             },
@@ -76,94 +76,16 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/10161.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 58,
-    "base_happiness": 70,
-    "capture_rate": 255,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 57,
-    "growth_rate": "medium",
-    "habitat": "urban",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 52,
-        "paldea": 141
-    },
-    "color": "yellow",
-    "shape": "quadruped",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {},
-    "genus": "Scratch Cat Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "meowth",
-        "evolves_to": [
-            {
-                "species_name": "persian",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 28,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            },
-            {
-                "species_name": "perrserker",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 28,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "pay-day",
                 "level_learned_at": 12,
@@ -179,8 +101,8 @@
                 ]
             },
             {
-                "name": "bite",
-                "level_learned_at": 16,
+                "name": "thrash",
+                "level_learned_at": 44,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -214,6 +136,20 @@
                 ]
             },
             {
+                "name": "swagger",
+                "level_learned_at": 24,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "metal-claw",
+                "level_learned_at": 16,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "fake-out",
                 "level_learned_at": 1,
                 "version_groups": [
@@ -228,35 +164,28 @@
                 ]
             },
             {
-                "name": "feint",
-                "level_learned_at": 4,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "assurance",
-                "level_learned_at": 24,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "nasty-plot",
+                "name": "metal-sound",
                 "level_learned_at": 40,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "play-rough",
-                "level_learned_at": 44,
+                "name": "hone-claws",
+                "level_learned_at": 4,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             }
         ],
         "machine": [
+            {
+                "name": "swords-dance",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
             {
                 "name": "body-slam",
                 "level_learned_at": 0,
@@ -286,13 +215,6 @@
                 ]
             },
             {
-                "name": "thunder-wave",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "thunder",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -307,14 +229,7 @@
                 ]
             },
             {
-                "name": "agility",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "swift",
+                "name": "metronome",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -349,6 +264,13 @@
                 ]
             },
             {
+                "name": "curse",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "spite",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -357,13 +279,6 @@
             },
             {
                 "name": "protect",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "icy-wind",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -398,13 +313,6 @@
                 ]
             },
             {
-                "name": "pain-split",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "metal-claw",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -426,7 +334,7 @@
                 ]
             },
             {
-                "name": "psych-up",
+                "name": "crunch",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -461,6 +369,13 @@
                 ]
             },
             {
+                "name": "brick-break",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "knock-off",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -489,6 +404,13 @@
                 ]
             },
             {
+                "name": "metal-sound",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "aerial-ace",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -496,7 +418,28 @@
                 ]
             },
             {
+                "name": "iron-defense",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "gyro-ball",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "u-turn",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "fling",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -517,7 +460,7 @@
                 ]
             },
             {
-                "name": "power-gem",
+                "name": "x-scissor",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -538,6 +481,13 @@
                 ]
             },
             {
+                "name": "flash-cannon",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "gunk-shot",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -545,14 +495,21 @@
                 ]
             },
             {
-                "name": "foul-play",
+                "name": "iron-head",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "snarl",
+                "name": "stealth-rock",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "foul-play",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -567,6 +524,13 @@
             },
             {
                 "name": "throat-chop",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "steel-beam",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -592,25 +556,18 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
-            },
-            {
-                "name": "chilling-water",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
             }
         ],
         "egg": [
             {
-                "name": "tail-whip",
+                "name": "double-edge",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "hypnosis",
+                "name": "curse",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -638,11 +595,131 @@
                 ]
             },
             {
-                "name": "last-resort",
+                "name": "night-slash",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 57,
+    "growth_rate": "medium",
+    "habitat": "urban",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 52,
+        "paldea": 141
+    },
+    "color": "yellow",
+    "shape": "quadruped",
+    "egg_groups": [
+        "ground"
+    ],
+    "flavor_text": {},
+    "genus": "Scratch Cat Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "meowth",
+        "evolves_to": [
+            {
+                "species_name": "persian",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": "meowth-alola",
+                        "evolved_form": "persian-alola",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": 160,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
+            },
+            {
+                "species_name": "perrserker",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sword-shield",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": "meowth-galar",
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 28,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

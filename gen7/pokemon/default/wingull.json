@@ -29,8 +29,8 @@
         "hp": 40,
         "attack": 30,
         "defense": 30,
-        "special_attack": 55,
-        "special_defense": 30,
+        "special-attack": 55,
+        "special-defense": 30,
         "speed": 85
     },
     "ev_yield": [
@@ -41,47 +41,14 @@
     ],
     "height": 6,
     "weight": 95,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/278.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/278.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/278.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/278.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/278.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/278.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/278.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/278.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/278.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/278.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/278.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/278.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/278.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/278.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/278.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/278.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/278.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/278.png",
@@ -89,73 +56,13 @@
             }
         }
     },
-    "base_experience": 54,
-    "base_happiness": 70,
-    "capture_rate": 190,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 303,
-    "growth_rate": "medium",
-    "habitat": "sea",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 278,
-        "original_alola": 40
-    },
-    "color": "white",
-    "shape": "wings",
-    "egg_groups": [
-        "water1",
-        "flying"
-    ],
-    "flavor_text": {
-        "sun": "Its hollow bones enhance its lightness. It spreads its wings to the wind and soars away into the sky.",
-        "moon": "Fishermen keep an eye out for Wingull in the sky, because wherever they’re circling, the ocean is sure to be teeming with fish Pokémon.",
-        "ultra_sun": "With its long, thin wings, it catches updrafts and flies like a glider high up into the sky.",
-        "ultra_moon": "It builds nests in cliffs by the sea. It circles the skies above the ocean looking for its favorite food—Wishiwashi."
-    },
-    "genus": "Seagull Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "wingull",
-        "evolves_to": [
-            {
-                "species_name": "pelipper",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 25,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "pretty_wing": {
+        "pretty-wing": {
             "sun": 50,
             "moon": 50,
-            "ultra_sun": 50,
-            "ultra_moon": 50
+            "ultra-sun": 50,
+            "ultra-moon": 50
         }
     },
     "moves": {
@@ -249,7 +156,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "wing-attack",
                 "level_learned_at": 8,
@@ -643,6 +550,81 @@
                 "version_groups": [
                     "ultra-sun-ultra-moon"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 303,
+    "growth_rate": null,
+    "habitat": "sea",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 278,
+        "original-alola": 40
+    },
+    "color": "white",
+    "shape": "wings",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "Its hollow bones enhance its lightness. It spreads its wings to the wind and soars away into the sky.",
+        "moon": "Fishermen keep an eye out for Wingull in the sky, because wherever they’re circling, the ocean is sure to be teeming with fish Pokémon.",
+        "ultra-sun": "With its long, thin wings, it catches updrafts and flies like a glider high up into the sky.",
+        "ultra-moon": "It builds nests in cliffs by the sea. It circles the skies above the ocean looking for its favorite food—Wishiwashi."
+    },
+    "genus": "Seagull Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "wingull",
+        "evolves_to": [
+            {
+                "species_name": "pelipper",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "ruby-sapphire",
+                        "version_groups": [
+                            "sun-moon",
+                            "ultra-sun-ultra-moon",
+                            "lets-go-pikachu-lets-go-eevee"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 25,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

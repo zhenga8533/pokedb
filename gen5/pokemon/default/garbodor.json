@@ -28,8 +28,8 @@
         "hp": 80,
         "attack": 95,
         "defense": 82,
-        "special_attack": 60,
-        "special_defense": 82,
+        "special-attack": 60,
+        "special-defense": 82,
         "speed": 75
     },
     "ev_yield": [
@@ -40,43 +40,10 @@
     ],
     "height": 19,
     "weight": 1073,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/569.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/569.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/569.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/569.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/569.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/569.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/569.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/569.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/569.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/569.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/569.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/569.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/569.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/569.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/569.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "black_white": {
+            "black-white": {
                 "animated": {
                     "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/569.gif",
                     "back_female": null,
@@ -98,88 +65,29 @@
             }
         }
     },
-    "base_experience": 166,
-    "base_happiness": 70,
-    "capture_rate": 60,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 570,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "trubbish",
-    "pokedex_numbers": {
-        "national": 569,
-        "original_unova": 75
-    },
-    "color": "green",
-    "shape": "humanoid",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {
-        "black": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
-        "white": "They absorb garbage and make it part of their bodies. They shoot a poisonous liquid from their right-hand fingertips.",
-        "black_2": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
-        "white_2": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies."
-    },
-    "genus": "Trash Heap Pokémon",
-    "generation": "generation-v",
-    "evolution_chain": {
-        "species_name": "trubbish",
-        "evolves_to": [
-            {
-                "species_name": "garbodor",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 36,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
         "nugget": {
             "black": 5,
             "white": 5,
-            "black_2": 5,
-            "white_2": 5
+            "black-2": 5,
+            "white-2": 5
         },
-        "black_sludge": {
+        "black-sludge": {
             "black": 50,
             "white": 50,
-            "black_2": 50,
-            "white_2": 50
+            "black-2": 50,
+            "white-2": 50
         },
-        "big_nugget": {
+        "big-nugget": {
             "black": 1,
             "white": 1,
-            "black_2": 1,
-            "white_2": 1
+            "black-2": 1,
+            "white-2": 1
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "pound",
                 "level_learned_at": 1,
@@ -629,6 +537,80 @@
                 "version_groups": [
                     "black-2-white-2"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 570,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": "trubbish",
+    "pokedex_numbers": {
+        "national": 569,
+        "original-unova": 75
+    },
+    "color": "green",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "black": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+        "white": "They absorb garbage and make it part of their bodies. They shoot a poisonous liquid from their right-hand fingertips.",
+        "black-2": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+        "white-2": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies."
+    },
+    "genus": "Trash Heap Pokémon",
+    "generation": "generation-v",
+    "evolution_chain": {
+        "species_name": "trubbish",
+        "evolves_to": [
+            {
+                "species_name": "garbodor",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "black-white",
+                        "version_groups": [
+                            "black-white",
+                            "black-2-white-2"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 36,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

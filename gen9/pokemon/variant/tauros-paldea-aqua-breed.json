@@ -29,8 +29,8 @@
         "hp": 75,
         "attack": 110,
         "defense": 105,
-        "special_attack": 30,
-        "special_defense": 70,
+        "special-attack": 30,
+        "special-defense": 70,
         "speed": 100
     },
     "ev_yield": [
@@ -61,7 +61,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10252.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10252.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10252.png"
             },
@@ -77,47 +77,25 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/10252.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 172,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 0,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 152,
-    "growth_rate": "slow",
-    "habitat": "grassland",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 128,
-        "paldea": 223
-    },
-    "color": "brown",
-    "shape": "quadruped",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {},
-    "genus": "Wild Bull Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "tauros",
-        "evolves_to": []
-    },
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
-                "name": "horn-attack",
+                "name": "double-kick",
+                "level_learned_at": 10,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "headbutt",
                 "level_learned_at": 20,
                 "version_groups": [
                     "scarlet-violet"
@@ -133,13 +111,6 @@
             {
                 "name": "thrash",
                 "level_learned_at": 50,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "double-edge",
-                "level_learned_at": 55,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -173,21 +144,7 @@
                 ]
             },
             {
-                "name": "payback",
-                "level_learned_at": 10,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "assurance",
-                "level_learned_at": 15,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "giga-impact",
+                "name": "close-combat",
                 "level_learned_at": 60,
                 "version_groups": [
                     "scarlet-violet"
@@ -201,8 +158,22 @@
                 ]
             },
             {
+                "name": "aqua-jet",
+                "level_learned_at": 15,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "work-up",
                 "level_learned_at": 5,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "wave-crash",
+                "level_learned_at": 55,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -238,7 +209,7 @@
                 ]
             },
             {
-                "name": "flamethrower",
+                "name": "hydro-pump",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -252,42 +223,7 @@
                 ]
             },
             {
-                "name": "ice-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "blizzard",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "hyper-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "solar-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "thunderbolt",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "thunder",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -302,13 +238,6 @@
             },
             {
                 "name": "dig",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "fire-blast",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -371,13 +300,6 @@
                 ]
             },
             {
-                "name": "icy-wind",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "outrage",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -413,14 +335,7 @@
                 ]
             },
             {
-                "name": "sunny-day",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "shadow-ball",
+                "name": "whirlpool",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -428,13 +343,6 @@
             },
             {
                 "name": "facade",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "helping-hand",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -449,6 +357,20 @@
             },
             {
                 "name": "rock-tomb",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "bulk-up",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "water-pulse",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -504,14 +426,14 @@
                 ]
             },
             {
-                "name": "high-horsepower",
+                "name": "drill-run",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "throat-chop",
+                "name": "high-horsepower",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -526,6 +448,20 @@
             },
             {
                 "name": "stomping-tantrum",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "liquidation",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "body-press",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -547,6 +483,13 @@
             },
             {
                 "name": "trailblaze",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "chilling-water",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -576,7 +519,7 @@
                 ]
             },
             {
-                "name": "flamethrower",
+                "name": "hydro-pump",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -590,42 +533,7 @@
                 ]
             },
             {
-                "name": "ice-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "blizzard",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "hyper-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "solar-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "thunderbolt",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "thunder",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -640,13 +548,6 @@
             },
             {
                 "name": "dig",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "fire-blast",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -716,13 +617,6 @@
                 ]
             },
             {
-                "name": "icy-wind",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "outrage",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -779,20 +673,6 @@
                 ]
             },
             {
-                "name": "sunny-day",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "shadow-ball",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "whirlpool",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -814,13 +694,6 @@
                 ]
             },
             {
-                "name": "helping-hand",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "endeavor",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -835,21 +708,21 @@
                 ]
             },
             {
+                "name": "bulk-up",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "close-combat",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "payback",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "assurance",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -884,6 +757,13 @@
                 ]
             },
             {
+                "name": "aqua-jet",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "round",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -905,14 +785,14 @@
                 ]
             },
             {
-                "name": "high-horsepower",
+                "name": "drill-run",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
                 ]
             },
             {
-                "name": "throat-chop",
+                "name": "high-horsepower",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -933,7 +813,28 @@
                 ]
             },
             {
+                "name": "liquidation",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "body-press",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "lash-out",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "wave-crash",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -948,6 +849,13 @@
             },
             {
                 "name": "trailblaze",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "chilling-water",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -970,6 +878,35 @@
                 ]
             }
         ]
+    },
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 0,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 152,
+    "growth_rate": "slow",
+    "habitat": "grassland",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 128,
+        "paldea": 223
+    },
+    "color": "brown",
+    "shape": "quadruped",
+    "egg_groups": [
+        "ground"
+    ],
+    "flavor_text": {},
+    "genus": "Wild Bull Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "tauros",
+        "evolves_to": []
     },
     "forms": [
         {

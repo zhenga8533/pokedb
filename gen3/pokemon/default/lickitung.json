@@ -23,8 +23,8 @@
         "hp": 90,
         "attack": 55,
         "defense": 75,
-        "special_attack": 60,
-        "special_defense": 75,
+        "special-attack": 60,
+        "special-defense": 75,
         "speed": 30
     },
     "ev_yield": [
@@ -35,53 +35,20 @@
     ],
     "height": 12,
     "weight": 655,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/108.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/108.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/108.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/108.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/108.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/108.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/108.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/108.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/108.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/108.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/108.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/108.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/108.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/108.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/108.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/108.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/108.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/shiny/108.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/108.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/shiny/108.png"
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/108.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/108.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/108.png",
@@ -89,41 +56,7 @@
             }
         }
     },
-    "base_experience": 127,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 119,
-    "growth_rate": "medium",
-    "habitat": "grassland",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 108
-    },
-    "color": "pink",
-    "shape": "upright",
-    "egg_groups": [
-        "monster"
-    ],
-    "flavor_text": {
-        "ruby": "Whenever LICKITUNG comes across something new, it will unfailingly give it a lick. It does so because it memorizes things by texture and by taste. It is somewhat put off by sour things.",
-        "sapphire": "Whenever LICKITUNG comes across something new, it will unfailingly give it a lick. It does so because it memorizes things by texture and by taste. It is somewhat put off by sour things.",
-        "emerald": "Whenever it sees something unfamiliar, it always licks the object because it memorizes things by texture and taste. It is somewhat put off by sour things.",
-        "firered": "Its tongue is twice the length of its body. It can be moved like an arm for grabbing food and attacking.",
-        "leafgreen": "Its tongue can be extended like a chameleon’s. It leaves a tingling sensation when it licks enemies."
-    },
-    "genus": "Licking Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "lickitung",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -709,7 +642,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "slam",
                 "level_learned_at": 40,
@@ -894,7 +827,69 @@
                     "ruby-sapphire"
                 ]
             }
+        ],
+        "xd-purification": [
+            {
+                "name": "double-edge",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "defense-curl",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "rollout",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 119,
+    "growth_rate": null,
+    "habitat": "grassland",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 108
+    },
+    "color": "pink",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "Whenever LICKITUNG comes across something new, it will unfailingly give it a lick. It does so because it memorizes things by texture and by taste. It is somewhat put off by sour things.",
+        "sapphire": "Whenever LICKITUNG comes across something new, it will unfailingly give it a lick. It does so because it memorizes things by texture and by taste. It is somewhat put off by sour things.",
+        "emerald": "Whenever it sees something unfamiliar, it always licks the object because it memorizes things by texture and taste. It is somewhat put off by sour things.",
+        "firered": "Its tongue is twice the length of its body. It can be moved like an arm for grabbing food and attacking.",
+        "leafgreen": "Its tongue can be extended like a chameleon’s. It leaves a tingling sensation when it licks enemies."
+    },
+    "genus": "Licking Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "lickitung",
+        "evolves_to": []
     },
     "forms": [
         {

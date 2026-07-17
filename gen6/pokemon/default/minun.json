@@ -23,8 +23,8 @@
         "hp": 60,
         "attack": 40,
         "defense": 50,
-        "special_attack": 75,
-        "special_defense": 85,
+        "special-attack": 75,
+        "special-defense": 85,
         "speed": 95
     },
     "ev_yield": [
@@ -35,49 +35,16 @@
     ],
     "height": 4,
     "weight": 42,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/312.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/312.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/312.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/312.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/312.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/312.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/312.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/312.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/312.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/312.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/312.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/312.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/312.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/312.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/312.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
+            "omegaruby-alphasapphire": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/312.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/312.png",
                 "front_shiny_female": null
             },
-            "x_y": {
+            "x-y": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/312.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/312.png",
@@ -85,45 +52,11 @@
             }
         }
     },
-    "base_experience": 142,
-    "base_happiness": 70,
-    "capture_rate": 200,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 338,
-    "growth_rate": "medium",
-    "habitat": "grassland",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 312,
-        "kalos_central": 97
-    },
-    "color": "yellow",
-    "shape": "upright",
-    "egg_groups": [
-        "fairy"
-    ],
-    "flavor_text": {
-        "x": "Exposure to electricity from Minun and Plusle promotes blood circulation and relaxes muscles.",
-        "y": "It cheers on friends. If its friends are losing, its body lets off more and more sparks.",
-        "omega_ruby": "Minun is more concerned about cheering on its partners than its own safety. It shorts out the electricity in its body to create brilliant showers of sparks to cheer on its teammates.",
-        "alpha_sapphire": "Minun loves to cheer on its partner in battle. It gives off sparks from its body while it is doing so. If its partner is in trouble, this Pokémon gives off increasing amounts of sparks."
-    },
-    "genus": "Cheering Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "minun",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {
-        "cell_battery": {
-            "omega_ruby": 5,
-            "alpha_sapphire": 5
+        "cell-battery": {
+            "omega-ruby": 5,
+            "alpha-sapphire": 5
         }
     },
     "moves": {
@@ -199,7 +132,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "growl",
                 "level_learned_at": 1,
@@ -757,6 +690,38 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 338,
+    "growth_rate": null,
+    "habitat": "grassland",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 312,
+        "kalos-central": 97
+    },
+    "color": "yellow",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "x": "Exposure to electricity from Minun and Plusle promotes blood circulation and relaxes muscles.",
+        "y": "It cheers on friends. If its friends are losing, its body lets off more and more sparks.",
+        "omega-ruby": "Minun is more concerned about cheering on its partners than its own safety. It shorts out the electricity in its body to create brilliant showers of sparks to cheer on its teammates.",
+        "alpha-sapphire": "Minun loves to cheer on its partner in battle. It gives off sparks from its body while it is doing so. If its partner is in trouble, this Pokémon gives off increasing amounts of sparks."
+    },
+    "genus": "Cheering Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "minun",
+        "evolves_to": []
     },
     "forms": [
         {

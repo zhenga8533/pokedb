@@ -19,8 +19,8 @@
         "hp": 80,
         "attack": 160,
         "defense": 60,
-        "special_attack": 170,
-        "special_defense": 130,
+        "special-attack": 170,
+        "special-defense": 130,
         "speed": 80
     },
     "ev_yield": [
@@ -31,81 +31,22 @@
     ],
     "height": 65,
     "weight": 4900,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10086.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10086.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10086.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10086.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10086.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10086.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10086.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10086.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10086.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10086.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10086.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10086.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/720-unbound.png",
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/10086.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/720-unbound.png",
+            "ultra-sun-ultra-moon": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/10086.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/720-unbound.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/10086.png",
                 "front_shiny_female": null
             }
         }
     },
-    "base_experience": 306,
-    "base_happiness": 100,
-    "capture_rate": 3,
-    "hatch_counter": 120,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": true,
-    "forms_switchable": false,
-    "order": 720,
-    "growth_rate": "slow",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 720
-    },
-    "color": "purple",
-    "shape": "arms",
-    "egg_groups": [
-        "no-eggs"
-    ],
-    "flavor_text": {},
-    "genus": "Mischief Pokémon",
-    "generation": "generation-vi",
-    "evolution_chain": {
-        "species_name": "hoopa",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -320,7 +261,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "psybeam",
                 "level_learned_at": 19,
@@ -362,14 +303,6 @@
                 ]
             },
             {
-                "name": "shadow-ball",
-                "level_learned_at": 55,
-                "version_groups": [
-                    "sun-moon",
-                    "ultra-sun-ultra-moon"
-                ]
-            },
-            {
                 "name": "trick",
                 "level_learned_at": 1,
                 "version_groups": [
@@ -380,6 +313,14 @@
             {
                 "name": "magic-coat",
                 "level_learned_at": 10,
+                "version_groups": [
+                    "sun-moon",
+                    "ultra-sun-ultra-moon"
+                ]
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 46,
                 "version_groups": [
                     "sun-moon",
                     "ultra-sun-ultra-moon"
@@ -402,16 +343,8 @@
                 ]
             },
             {
-                "name": "nasty-plot",
-                "level_learned_at": 68,
-                "version_groups": [
-                    "sun-moon",
-                    "ultra-sun-ultra-moon"
-                ]
-            },
-            {
-                "name": "zen-headbutt",
-                "level_learned_at": 46,
+                "name": "dark-pulse",
+                "level_learned_at": 55,
                 "version_groups": [
                     "sun-moon",
                     "ultra-sun-ultra-moon"
@@ -458,15 +391,7 @@
                 ]
             },
             {
-                "name": "phantom-force",
-                "level_learned_at": 35,
-                "version_groups": [
-                    "sun-moon",
-                    "ultra-sun-ultra-moon"
-                ]
-            },
-            {
-                "name": "hyperspace-hole",
+                "name": "hyperspace-fury",
                 "level_learned_at": 1,
                 "version_groups": [
                     "sun-moon",
@@ -474,7 +399,7 @@
                 ]
             },
             {
-                "name": "hyperspace-hole",
+                "name": "hyperspace-fury",
                 "level_learned_at": 85,
                 "version_groups": [
                     "sun-moon",
@@ -812,6 +737,32 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": true,
+    "forms_switchable": null,
+    "order": 720,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 720
+    },
+    "color": "purple",
+    "shape": "arms",
+    "egg_groups": null,
+    "flavor_text": {},
+    "genus": "Mischief Pokémon",
+    "generation": "generation-vi",
+    "evolution_chain": {
+        "species_name": "hoopa",
+        "evolves_to": []
     },
     "forms": [
         {

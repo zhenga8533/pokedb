@@ -19,8 +19,8 @@
         "hp": 75,
         "attack": 125,
         "defense": 230,
-        "special_attack": 55,
-        "special_defense": 95,
+        "special-attack": 55,
+        "special-defense": 95,
         "speed": 30
     },
     "ev_yield": [
@@ -31,47 +31,16 @@
     ],
     "height": 105,
     "weight": 7400,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10072.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10072.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10072.png",
-        "other": {
-            "dream_world": {
-                "front_default": null,
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10072.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10072.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10072.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10072.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10072.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10072.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10072.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10072.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/208-mega.png",
+            "omegaruby-alphasapphire": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/10072.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/208-mega.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/10072.png",
                 "front_shiny_female": null
             },
-            "x_y": {
+            "x-y": {
                 "front_default": null,
                 "front_female": null,
                 "front_shiny": null,
@@ -79,71 +48,11 @@
             }
         }
     },
-    "base_experience": 179,
-    "base_happiness": 70,
-    "capture_rate": 25,
-    "hatch_counter": 25,
-    "gender_rate": 4,
-    "has_gender_differences": true,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": true,
-    "order": 104,
-    "growth_rate": "medium",
-    "habitat": "cave",
-    "evolves_from_species": "onix",
-    "pokedex_numbers": {
-        "national": 208
-    },
-    "color": "gray",
-    "shape": "squiggle",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {
-        "x": "Tempered underground under high pressure and heat, its body is harder than any metal.",
-        "y": "It chews its way through boulders with its sturdy jaws. Its eyes can see in the darkness underground.",
-        "omega_ruby": "Steelix lives even further underground than Onix. This Pokémon is known to dig toward the earth’s core. There are records of this Pokémon reaching a depth of over six-tenths of a mile underground.",
-        "alpha_sapphire": "Steelix lives even further underground than Onix. This Pokémon is known to dig toward the earth’s core. There are records of this Pokémon reaching a depth of over six-tenths of a mile underground."
-    },
-    "genus": "Iron Snake Pokémon",
-    "generation": "generation-ii",
-    "evolution_chain": {
-        "species_name": "onix",
-        "evolves_to": [
-            {
-                "species_name": "steelix",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "trade",
-                    "gender": null,
-                    "held_item": "metal-coat",
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "metal_coat": {
-            "x": 5,
-            "y": 5,
-            "omega_ruby": 5,
-            "alpha_sapphire": 5
+        "metal-coat": {
+            "omega-ruby": 5,
+            "alpha-sapphire": 5
         }
     },
     "moves": {
@@ -152,216 +61,189 @@
                 "name": "cut",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "roar",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "hyper-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "strength",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "earthquake",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "dig",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "toxic",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "double-team",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "explosion",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rest",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rock-slide",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "substitute",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "protect",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sandstorm",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "swagger",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "attract",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sleep-talk",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "return",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "frustration",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "hidden-power",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sunny-day",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "psych-up",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rock-smash",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "torment",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "facade",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "nature-power",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "taunt",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -375,306 +257,268 @@
                 "name": "rock-tomb",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "gyro-ball",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "payback",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rock-polish",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "dark-pulse",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "giga-impact",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "flash-cannon",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "stone-edge",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "smack-down",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "round",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "bulldoze",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "dragon-tail",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "confide",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "bind",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "slam",
                 "level_learned_at": 28,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "tackle",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "double-edge",
                 "level_learned_at": 49,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rock-throw",
                 "level_learned_at": 7,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "dig",
                 "level_learned_at": 43,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rage",
                 "level_learned_at": 13,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "screech",
                 "level_learned_at": 31,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "harden",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rock-slide",
                 "level_learned_at": 34,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "curse",
                 "level_learned_at": 4,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sandstorm",
                 "level_learned_at": 52,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "dragon-breath",
                 "level_learned_at": 25,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "iron-tail",
                 "level_learned_at": 40,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "crunch",
                 "level_learned_at": 37,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "mud-sport",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rock-tomb",
                 "level_learned_at": 10,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "gyro-ball",
                 "level_learned_at": 20,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "thunder-fang",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "ice-fang",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "fire-fang",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "stone-edge",
                 "level_learned_at": 46,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "stealth-rock",
                 "level_learned_at": 16,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "autotomize",
                 "level_learned_at": 19,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "smack-down",
                 "level_learned_at": 22,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             }
         ],
@@ -748,6 +592,79 @@
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 104,
+    "growth_rate": null,
+    "habitat": "cave",
+    "evolves_from_species": "onix",
+    "pokedex_numbers": {
+        "national": 208
+    },
+    "color": "gray",
+    "shape": "squiggle",
+    "egg_groups": null,
+    "flavor_text": {
+        "x": "Tempered underground under high pressure and heat, its body is harder than any metal.",
+        "y": "It chews its way through boulders with its sturdy jaws. Its eyes can see in the darkness underground.",
+        "omega-ruby": "Steelix lives even further underground than Onix. This Pokémon is known to dig toward the earth’s core. There are records of this Pokémon reaching a depth of over six-tenths of a mile underground.",
+        "alpha-sapphire": "Steelix lives even further underground than Onix. This Pokémon is known to dig toward the earth’s core. There are records of this Pokémon reaching a depth of over six-tenths of a mile underground."
+    },
+    "genus": "Iron Snake Pokémon",
+    "generation": "generation-ii",
+    "evolution_chain": {
+        "species_name": "onix",
+        "evolves_to": [
+            {
+                "species_name": "steelix",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "gold-silver",
+                        "version_groups": [
+                            "x-y",
+                            "omega-ruby-alpha-sapphire"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "trade",
+                        "gender": null,
+                        "held_item": "metal-coat",
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

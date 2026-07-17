@@ -7,71 +7,21 @@
     "types": [
         "fighting"
     ],
-    "abilities": [
-        {
-            "name": "limber",
-            "is_hidden": false,
-            "slot": 1
-        },
-        {
-            "name": "reckless",
-            "is_hidden": false,
-            "slot": 2
-        }
-    ],
+    "abilities": [],
     "stats": {
         "hp": 50,
         "attack": 120,
         "defense": 53,
-        "special_attack": 35,
-        "special_defense": 35,
-        "speed": 87
+        "speed": 87,
+        "special": 35
     },
-    "ev_yield": [
-        {
-            "stat": "attack",
-            "effort": 2
-        }
-    ],
+    "ev_yield": null,
     "height": 15,
     "weight": 498,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/106.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/106.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/106.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/106.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/106.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/106.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/106.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/106.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/106.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/106.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/106.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/106.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/106.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/106.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "red_blue": {
+            "red-blue": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/106.png",
                 "back_gray": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/gray/106.png",
                 "back_transparent": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/transparent/back/106.png",
@@ -89,18 +39,285 @@
             }
         }
     },
-    "base_experience": 139,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 25,
-    "gender_rate": 0,
+    "base_experience": null,
+    "held_items": {},
+    "moves": {
+        "machine": [
+            {
+                "name": "mega-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "mega-kick",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "submission",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "counter",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "seismic-toss",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "strength",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "rage",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "mimic",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "double-team",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "bide",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "metronome",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "skull-bash",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            }
+        ],
+        "level-up": [
+            {
+                "name": "double-kick",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "mega-kick",
+                "level_learned_at": 53,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "jump-kick",
+                "level_learned_at": 38,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "rolling-kick",
+                "level_learned_at": 33,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "meditate",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "focus-energy",
+                "level_learned_at": 43,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "high-jump-kick",
+                "level_learned_at": 48,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": false,
+    "forms_switchable": null,
     "order": 116,
-    "growth_rate": "medium",
+    "growth_rate": null,
     "habitat": "urban",
     "evolves_from_species": "tyrogue",
     "pokedex_numbers": {
@@ -109,9 +326,7 @@
     },
     "color": "brown",
     "shape": "humanoid",
-    "egg_groups": [
-        "humanshape"
-    ],
+    "egg_groups": null,
     "flavor_text": {
         "red": "When in a hurry, its legs lengthen progressively. It runs smoothly with extra long, loping strides.",
         "blue": "When in a hurry, its legs lengthen progressively. It runs smoothly with extra long, loping strides.",
@@ -120,272 +335,8 @@
     "genus": "Kicking Pokémon",
     "generation": "generation-i",
     "evolution_chain": {
-        "species_name": "tyrogue",
-        "evolves_to": [
-            {
-                "species_name": "hitmonlee",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 20,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": 1,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            },
-            {
-                "species_name": "hitmonchan",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 20,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": -1,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
-    "held_items": {},
-    "moves": {
-        "machine": [
-            {
-                "name": "mega-punch",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "mega-kick",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "body-slam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "take-down",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "double-edge",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "submission",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "counter",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "seismic-toss",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "strength",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "toxic",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "rage",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "mimic",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "double-team",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "bide",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "metronome",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "swift",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "skull-bash",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "rest",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "substitute",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            }
-        ],
-        "level_up": [
-            {
-                "name": "double-kick",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "mega-kick",
-                "level_learned_at": 53,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "jump-kick",
-                "level_learned_at": 38,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "rolling-kick",
-                "level_learned_at": 33,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "meditate",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "focus-energy",
-                "level_learned_at": 43,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "high-jump-kick",
-                "level_learned_at": 48,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            }
-        ]
+        "species_name": "hitmonlee",
+        "evolves_to": []
     },
     "forms": [
         {

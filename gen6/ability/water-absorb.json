@@ -4,10 +4,16 @@
     "source_url": "https://pokeapi.co/api/v2/ability/11/",
     "is_main_series": true,
     "generation": "generation-iii",
-    "effect": "Whenever a water-type move hits this Pokémon, it heals for 1/4 of its maximum HP, negating any other effect on it. Water moves will ignore this Pokémon's substitute.",
-    "short_effect": "Absorbs water moves, healing for 1/4 max HP.",
+    "effect": {
+        "x-y": "Whenever a Water-type move hits this Pokémon, it heals for 1/4 of its maximum HP, negating any other effect on it. Water moves will ignore this Pokémon's Substitute.",
+        "omega-ruby-alpha-sapphire": "Whenever a Water-type move hits this Pokémon, it heals for 1/4 of its maximum HP, negating any other effect on it. Water moves will ignore this Pokémon's Substitute."
+    },
+    "short_effect": {
+        "x-y": "Absorbs Water moves, healing for 1/4 max HP.",
+        "omega-ruby-alpha-sapphire": "Absorbs Water moves, healing for 1/4 max HP."
+    },
     "flavor_text": {
-        "omega_ruby_alpha_sapphire": "Restores HP if hit by a Water-type move.",
-        "x_y": "Restores HP if hit by a Water-type move."
+        "x-y": "Restores HP if hit by a Water-type move.",
+        "omega-ruby-alpha-sapphire": "Restores HP if hit by a Water-type move."
     }
 }

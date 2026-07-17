@@ -4,11 +4,19 @@
     "source_url": "https://pokeapi.co/api/v2/ability/123/",
     "is_main_series": true,
     "generation": "generation-iv",
-    "effect": "Opposing Pokémon take 1/8 of their maximum HP in damage after each turn while they are asleep.",
-    "short_effect": "Damages sleeping opponents for 1/8 their max HP after each turn.",
+    "effect": {
+        "diamond-pearl": "Opposing Pokémon take 1/8 of their maximum HP in damage after each turn while they are asleep.",
+        "platinum": "Opposing Pokémon take 1/8 of their maximum HP in damage after each turn while they are asleep.",
+        "heartgold-soulsilver": "Opposing Pokémon take 1/8 of their maximum HP in damage after each turn while they are asleep."
+    },
+    "short_effect": {
+        "diamond-pearl": "Damages sleeping opponents for 1/8 their max HP after each turn.",
+        "platinum": "Damages sleeping opponents for 1/8 their max HP after each turn.",
+        "heartgold-soulsilver": "Damages sleeping opponents for 1/8 their max HP after each turn."
+    },
     "flavor_text": {
-        "diamond_pearl": "Reduces a sleeping foe’s HP.",
+        "diamond-pearl": "Reduces a sleeping foe’s HP.",
         "platinum": "Reduces a sleeping foe’s HP.",
-        "heartgold_soulsilver": "Reduces a sleeping foe’s HP."
+        "heartgold-soulsilver": "Reduces a sleeping foe’s HP."
     }
 }

@@ -28,8 +28,8 @@
         "hp": 85,
         "attack": 80,
         "defense": 90,
-        "special_attack": 105,
-        "special_defense": 95,
+        "special-attack": 105,
+        "special-defense": 95,
         "speed": 60
     },
     "ev_yield": [
@@ -40,43 +40,10 @@
     ],
     "height": 6,
     "weight": 325,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/233.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/233.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/233.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/233.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/233.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/233.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/233.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/233.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/233.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/233.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/233.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/233.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/233.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/233.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/233.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "black_white": {
+            "black-white": {
                 "animated": {
                     "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/233.gif",
                     "back_female": null,
@@ -98,93 +65,10 @@
             }
         }
     },
-    "base_experience": 180,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 167,
-    "growth_rate": "medium",
-    "habitat": "urban",
-    "evolves_from_species": "porygon",
-    "pokedex_numbers": {
-        "national": 233
-    },
-    "color": "red",
-    "shape": "legs",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {
-        "black": "It was upgraded to enable the exploration of other planets. However, it failed to measure up.",
-        "white": "It was upgraded to enable the exploration of other planets. However, it failed to measure up.",
-        "black_2": "It was upgraded to enable the exploration of other planets. However, it failed to measure up.",
-        "white_2": "It was upgraded to enable the exploration of other planets. However, it failed to measure up."
-    },
-    "genus": "Virtual Pokémon",
-    "generation": "generation-ii",
-    "evolution_chain": {
-        "species_name": "porygon",
-        "evolves_to": [
-            {
-                "species_name": "porygon2",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "trade",
-                    "gender": null,
-                    "held_item": "up-grade",
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "porygon-z",
-                        "evolution_details": {
-                            "item": null,
-                            "trigger": "trade",
-                            "gender": null,
-                            "held_item": "dubious-disc",
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": null,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -675,6 +559,121 @@
                 "level_learned_at": 0,
                 "version_groups": [
                     "black-2-white-2"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 167,
+    "growth_rate": null,
+    "habitat": "urban",
+    "evolves_from_species": "porygon",
+    "pokedex_numbers": {
+        "national": 233
+    },
+    "color": "red",
+    "shape": "legs",
+    "egg_groups": null,
+    "flavor_text": {
+        "black": "It was upgraded to enable the exploration of other planets. However, it failed to measure up.",
+        "white": "It was upgraded to enable the exploration of other planets. However, it failed to measure up.",
+        "black-2": "It was upgraded to enable the exploration of other planets. However, it failed to measure up.",
+        "white-2": "It was upgraded to enable the exploration of other planets. However, it failed to measure up."
+    },
+    "genus": "Virtual Pokémon",
+    "generation": "generation-ii",
+    "evolution_chain": {
+        "species_name": "porygon",
+        "evolves_to": [
+            {
+                "species_name": "porygon2",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "gold-silver",
+                        "version_groups": [
+                            "black-white",
+                            "black-2-white-2"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "trade",
+                        "gender": null,
+                        "held_item": "up-grade",
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "porygon-z",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "diamond-pearl",
+                                "version_groups": [
+                                    "black-white",
+                                    "black-2-white-2"
+                                ],
+                                "base_form": null,
+                                "evolved_form": null,
+                                "item": null,
+                                "trigger": "trade",
+                                "gender": null,
+                                "held_item": "dubious-disc",
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": null,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": null,
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

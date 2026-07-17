@@ -7,71 +7,21 @@
     "types": [
         "normal"
     ],
-    "abilities": [
-        {
-            "name": "natural-cure",
-            "is_hidden": false,
-            "slot": 1
-        },
-        {
-            "name": "serene-grace",
-            "is_hidden": false,
-            "slot": 2
-        }
-    ],
+    "abilities": [],
     "stats": {
         "hp": 250,
         "attack": 5,
         "defense": 5,
-        "special_attack": 105,
-        "special_defense": 105,
-        "speed": 50
+        "speed": 50,
+        "special": 105
     },
-    "ev_yield": [
-        {
-            "stat": "hp",
-            "effort": 2
-        }
-    ],
+    "ev_yield": null,
     "height": 11,
     "weight": 346,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/113.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/113.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/113.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/113.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/113.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/113.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/113.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/113.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/113.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/113.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/113.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/113.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/113.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/113.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "red_blue": {
+            "red-blue": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/113.png",
                 "back_gray": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/gray/113.png",
                 "back_transparent": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/transparent/back/113.png",
@@ -89,73 +39,17 @@
             }
         }
     },
-    "base_experience": 255,
-    "base_happiness": 140,
-    "capture_rate": 30,
-    "hatch_counter": 40,
-    "gender_rate": 8,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 127,
-    "growth_rate": "fast",
-    "habitat": "urban",
-    "evolves_from_species": "happiny",
-    "pokedex_numbers": {
-        "national": 113,
-        "kanto": 113
-    },
-    "color": "pink",
-    "shape": "upright",
-    "egg_groups": [
-        "fairy"
-    ],
-    "flavor_text": {
-        "red": "A rare and elusive POKéMON that is said to bring happiness to those who manage to get it.",
-        "blue": "A rare and elusive POKéMON that is said to bring happiness to those who manage to get it.",
-        "yellow": "A gentle and kind­ hearted POKéMON that shares its nutritious eggs if it sees an injured POKéMON."
-    },
-    "genus": "Egg Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "happiny",
-        "evolves_to": [
-            {
-                "species_name": "chansey",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": "oval-stone",
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "day",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "pound",
                 "level_learned_at": 1,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -163,7 +57,9 @@
                 "name": "double-slap",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -177,7 +73,9 @@
                 "name": "double-edge",
                 "level_learned_at": 54,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -192,7 +90,9 @@
                 "name": "growl",
                 "level_learned_at": 30,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -200,7 +100,9 @@
                 "name": "sing",
                 "level_learned_at": 24,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -208,7 +110,9 @@
                 "name": "minimize",
                 "level_learned_at": 38,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -216,7 +120,9 @@
                 "name": "defense-curl",
                 "level_learned_at": 44,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -224,7 +130,9 @@
                 "name": "light-screen",
                 "level_learned_at": 48,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             }
@@ -234,7 +142,9 @@
                 "name": "mega-punch",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -242,7 +152,9 @@
                 "name": "mega-kick",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -250,7 +162,9 @@
                 "name": "body-slam",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -258,7 +172,9 @@
                 "name": "take-down",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -266,7 +182,9 @@
                 "name": "double-edge",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -274,7 +192,9 @@
                 "name": "water-gun",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -282,7 +202,9 @@
                 "name": "ice-beam",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -290,7 +212,9 @@
                 "name": "blizzard",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -298,7 +222,9 @@
                 "name": "bubble-beam",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -306,7 +232,9 @@
                 "name": "hyper-beam",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -314,7 +242,9 @@
                 "name": "submission",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -322,7 +252,9 @@
                 "name": "counter",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -330,7 +262,9 @@
                 "name": "seismic-toss",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -338,7 +272,9 @@
                 "name": "strength",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -346,7 +282,9 @@
                 "name": "solar-beam",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -354,7 +292,9 @@
                 "name": "thunderbolt",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -362,7 +302,9 @@
                 "name": "thunder-wave",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -370,7 +312,9 @@
                 "name": "thunder",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -378,7 +322,9 @@
                 "name": "toxic",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -386,7 +332,9 @@
                 "name": "psychic",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -394,7 +342,9 @@
                 "name": "rage",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -402,7 +352,9 @@
                 "name": "teleport",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -410,7 +362,9 @@
                 "name": "mimic",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -418,7 +372,9 @@
                 "name": "double-team",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -426,7 +382,9 @@
                 "name": "reflect",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -434,7 +392,9 @@
                 "name": "bide",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -442,7 +402,9 @@
                 "name": "metronome",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -450,7 +412,9 @@
                 "name": "egg-bomb",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -458,7 +422,9 @@
                 "name": "fire-blast",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -466,7 +432,9 @@
                 "name": "skull-bash",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -474,7 +442,9 @@
                 "name": "soft-boiled",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -482,7 +452,9 @@
                 "name": "flash",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -490,7 +462,9 @@
                 "name": "psywave",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -498,7 +472,9 @@
                 "name": "rest",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -506,7 +482,9 @@
                 "name": "tri-attack",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -514,11 +492,44 @@
                 "name": "substitute",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 127,
+    "growth_rate": null,
+    "habitat": "urban",
+    "evolves_from_species": "happiny",
+    "pokedex_numbers": {
+        "national": 113,
+        "kanto": 113
+    },
+    "color": "pink",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "red": "A rare and elusive POKéMON that is said to bring happiness to those who manage to get it.",
+        "blue": "A rare and elusive POKéMON that is said to bring happiness to those who manage to get it.",
+        "yellow": "A gentle and kind­ hearted POKéMON that shares its nutritious eggs if it sees an injured POKéMON."
+    },
+    "genus": "Egg Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "chansey",
+        "evolves_to": []
     },
     "forms": [
         {

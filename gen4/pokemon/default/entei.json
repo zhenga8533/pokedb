@@ -12,14 +12,19 @@
             "name": "pressure",
             "is_hidden": false,
             "slot": 1
+        },
+        {
+            "name": "flash-fire",
+            "is_hidden": true,
+            "slot": 3
         }
     ],
     "stats": {
         "hp": 115,
         "attack": 115,
         "defense": 85,
-        "special_attack": 90,
-        "special_defense": 75,
+        "special-attack": 90,
+        "special-defense": 75,
         "speed": 100
     },
     "ev_yield": [
@@ -34,43 +39,10 @@
     ],
     "height": 21,
     "weight": 1980,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/244.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/244.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/244.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/244.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/244.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/244.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/244.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/244.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/244.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/244.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/244.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/244.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/244.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/244.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/244.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "diamond_pearl": {
+            "diamond-pearl": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/diamond-pearl/back/244.png",
                 "back_female": null,
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/diamond-pearl/back/shiny/244.png",
@@ -80,7 +52,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/diamond-pearl/shiny/244.png",
                 "front_shiny_female": null
             },
-            "heartgold_soulsilver": {
+            "heartgold-soulsilver": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/back/244.png",
                 "back_female": null,
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/back/shiny/244.png",
@@ -102,41 +74,7 @@
             }
         }
     },
-    "base_experience": 217,
-    "base_happiness": 35,
-    "capture_rate": 3,
-    "hatch_counter": 80,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": true,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 269,
-    "growth_rate": "slow",
-    "habitat": "grassland",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 244
-    },
-    "color": "brown",
-    "shape": "quadruped",
-    "egg_groups": [
-        "no-eggs"
-    ],
-    "flavor_text": {
-        "diamond": "It is said that when it roars, a volcano erupts somewhere around the globe.",
-        "pearl": "It is said that when it roars, a volcano erupts somewhere around the globe.",
-        "platinum": "It is said that when it roars, a volcano erupts somewhere around the globe.",
-        "heartgold": "Volcanoes erupt when it barks. Unable to contain its sheer power, it races headlong around the land.",
-        "soulsilver": "A Pokémon that races across the land. It is said that one is born every time a new volcano appears."
-    },
-    "genus": "Volcano Pokémon",
-    "generation": "generation-ii",
-    "evolution_chain": {
-        "species_name": "entei",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -474,7 +412,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "stomp",
                 "level_learned_at": 29,
@@ -650,6 +588,38 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 269,
+    "growth_rate": null,
+    "habitat": "grassland",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 244
+    },
+    "color": "brown",
+    "shape": "quadruped",
+    "egg_groups": null,
+    "flavor_text": {
+        "diamond": "It is said that when it roars, a volcano erupts somewhere around the globe.",
+        "pearl": "It is said that when it roars, a volcano erupts somewhere around the globe.",
+        "platinum": "It is said that when it roars, a volcano erupts somewhere around the globe.",
+        "heartgold": "Volcanoes erupt when it barks. Unable to contain its sheer power, it races headlong around the land.",
+        "soulsilver": "A Pokémon that races across the land. It is said that one is born every time a new volcano appears."
+    },
+    "genus": "Volcano Pokémon",
+    "generation": "generation-ii",
+    "evolution_chain": {
+        "species_name": "entei",
+        "evolves_to": []
     },
     "forms": [
         {

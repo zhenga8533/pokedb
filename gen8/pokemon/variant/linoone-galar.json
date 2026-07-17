@@ -29,8 +29,8 @@
         "hp": 78,
         "attack": 70,
         "defense": 61,
-        "special_attack": 50,
-        "special_defense": 61,
+        "special-attack": 50,
+        "special-defense": 61,
         "speed": 100
     },
     "ev_yield": [
@@ -41,145 +41,158 @@
     ],
     "height": 5,
     "weight": 325,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10175.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10175.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10175.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10175.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10175.png",
-        "other": {
-            "dream_world": {
-                "front_default": null,
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10175.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10175.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10175.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10175.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10175.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10175.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10175.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10175.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "brilliant_diamond_shining_pearl": {
+            "brilliant-diamond-shining-pearl": {
                 "front_default": null,
                 "front_female": null
             },
             "icons": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/264-galar.png",
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/10175.png",
                 "front_female": null
             }
         }
     },
-    "base_experience": 147,
-    "base_happiness": 70,
-    "capture_rate": 90,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 289,
-    "growth_rate": "medium",
-    "habitat": "grassland",
-    "evolves_from_species": "zigzagoon",
-    "pokedex_numbers": {
-        "national": 264,
-        "galar": 32
-    },
-    "color": "white",
-    "shape": "quadruped",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {
-        "sword": "Its fur is strong and supple. Shaving brushes made with shed Linoone hairs are highly prized.",
-        "shield": "It uses its explosive speed and razor-sharp claws to bring down prey. Running along winding paths is not its strong suit."
-    },
-    "genus": "Rushing Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "zigzagoon",
-        "evolves_to": [
-            {
-                "species_name": "linoone",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 20,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "obstagoon",
-                        "evolution_details": {
-                            "item": null,
-                            "trigger": "level-up",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": 35,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "night",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "machine": [
+        "level-up": [
             {
-                "name": "cut",
-                "level_learned_at": 0,
+                "name": "sand-attack",
+                "level_learned_at": 1,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "sword-shield"
                 ]
             },
+            {
+                "name": "headbutt",
+                "level_learned_at": 12,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "tackle",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 28,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 48,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "pin-missile",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "leer",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "counter",
+                "level_learned_at": 38,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "lick",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "fury-swipes",
+                "level_learned_at": 18,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 23,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 33,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 43,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "night-slash",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "night-slash",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "switcheroo",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "hone-claws",
+                "level_learned_at": 15,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "snarl",
+                "level_learned_at": 9,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "baby-doll-eyes",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            }
+        ],
+        "machine": [
             {
                 "name": "body-slam",
                 "level_learned_at": 0,
@@ -195,17 +208,9 @@
                 ]
             },
             {
-                "name": "roar",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
-                ]
-            },
-            {
                 "name": "surf",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -213,7 +218,6 @@
                 "name": "ice-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -221,7 +225,6 @@
                 "name": "blizzard",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -229,22 +232,13 @@
                 "name": "hyper-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
-                ]
-            },
-            {
-                "name": "strength",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
                 ]
             },
             {
                 "name": "thunderbolt",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -252,7 +246,6 @@
                 "name": "thunder-wave",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -260,7 +253,6 @@
                 "name": "thunder",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -268,15 +260,14 @@
                 "name": "dig",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
             {
-                "name": "double-team",
+                "name": "screech",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "sword-shield"
                 ]
             },
             {
@@ -290,7 +281,6 @@
                 "name": "rest",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -298,7 +288,6 @@
                 "name": "substitute",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -306,7 +295,6 @@
                 "name": "thief",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -321,7 +309,13 @@
                 "name": "protect",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "scary-face",
+                "level_learned_at": 0,
+                "version_groups": [
                     "sword-shield"
                 ]
             },
@@ -336,29 +330,13 @@
                 "name": "endure",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
-                ]
-            },
-            {
-                "name": "charm",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "swagger",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
                 ]
             },
             {
                 "name": "attract",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -366,7 +344,6 @@
                 "name": "sleep-talk",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -374,7 +351,6 @@
                 "name": "iron-tail",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -382,7 +358,6 @@
                 "name": "rain-dance",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -390,7 +365,6 @@
                 "name": "sunny-day",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -398,15 +372,7 @@
                 "name": "shadow-ball",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
-                ]
-            },
-            {
-                "name": "rock-smash",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
                 ]
             },
             {
@@ -420,7 +386,13 @@
                 "name": "facade",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
+                    "sword-shield"
+                ]
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0,
+                "version_groups": [
                     "sword-shield"
                 ]
             },
@@ -446,6 +418,13 @@
                 ]
             },
             {
+                "name": "fake-tears",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "sword-shield"
+                ]
+            },
+            {
                 "name": "mud-shot",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -453,24 +432,23 @@
                 ]
             },
             {
-                "name": "shock-wave",
+                "name": "payback",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "sword-shield"
                 ]
             },
             {
-                "name": "water-pulse",
+                "name": "assurance",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
+                    "sword-shield"
                 ]
             },
             {
                 "name": "fling",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -485,7 +463,6 @@
                 "name": "giga-impact",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -493,7 +470,6 @@
                 "name": "shadow-claw",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
@@ -508,15 +484,7 @@
                 "name": "grass-knot",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
-                ]
-            },
-            {
-                "name": "charge-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl"
                 ]
             },
             {
@@ -537,19 +505,11 @@
                 "name": "work-up",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
             },
             {
-                "name": "tail-slap",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "play-rough",
+                "name": "snarl",
                 "level_learned_at": 0,
                 "version_groups": [
                     "sword-shield"
@@ -568,159 +528,141 @@
                 "version_groups": [
                     "sword-shield"
                 ]
-            }
-        ],
-        "level_up": [
-            {
-                "name": "sand-attack",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
             },
             {
-                "name": "headbutt",
-                "level_learned_at": 12,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "tackle",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "take-down",
-                "level_learned_at": 28,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "double-edge",
-                "level_learned_at": 48,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "tail-whip",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "pin-missile",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "growl",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "fury-swipes",
-                "level_learned_at": 18,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "rest",
-                "level_learned_at": 23,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "slash",
+                "name": "body-press",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
-            },
+            }
+        ],
+        "tutor": [
             {
-                "name": "slash",
-                "level_learned_at": 1,
+                "name": "lash-out",
+                "level_learned_at": 0,
                 "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
                     "sword-shield"
                 ]
-            },
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 289,
+    "growth_rate": null,
+    "habitat": "grassland",
+    "evolves_from_species": "zigzagoon",
+    "pokedex_numbers": {
+        "national": 264,
+        "galar": 32
+    },
+    "color": "white",
+    "shape": "quadruped",
+    "egg_groups": null,
+    "flavor_text": {
+        "sword": "Its fur is strong and supple. Shaving brushes made with shed Linoone hairs are highly prized.",
+        "shield": "It uses its explosive speed and razor-sharp claws to bring down prey. Running along winding paths is not its strong suit."
+    },
+    "genus": "Rushing Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "zigzagoon",
+        "evolves_to": [
             {
-                "name": "flail",
-                "level_learned_at": 38,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "belly-drum",
-                "level_learned_at": 43,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "covet",
-                "level_learned_at": 9,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "fling",
-                "level_learned_at": 33,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "switcheroo",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "hone-claws",
-                "level_learned_at": 15,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
-                ]
-            },
-            {
-                "name": "baby-doll-eyes",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "brilliant-diamond-and-shining-pearl",
-                    "sword-shield"
+                "species_name": "linoone",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sword-shield",
+                        "version_groups": [
+                            "sword-shield",
+                            "the-isle-of-armor",
+                            "the-crown-tundra",
+                            "brilliant-diamond-shining-pearl",
+                            "legends-arceus"
+                        ],
+                        "base_form": "zigzagoon-galar",
+                        "evolved_form": "linoone-galar",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 20,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "obstagoon",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "sword-shield",
+                                "version_groups": [
+                                    "sword-shield",
+                                    "the-isle-of-armor",
+                                    "the-crown-tundra",
+                                    "brilliant-diamond-shining-pearl",
+                                    "legends-arceus"
+                                ],
+                                "base_form": "linoone-galar",
+                                "evolved_form": null,
+                                "item": null,
+                                "trigger": "level-up",
+                                "gender": null,
+                                "held_item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": 35,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": "night",
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

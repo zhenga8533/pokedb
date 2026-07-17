@@ -24,8 +24,8 @@
         "hp": 68,
         "attack": 64,
         "defense": 60,
-        "special_attack": 111,
-        "special_defense": 60,
+        "special-attack": 111,
+        "special-defense": 60,
         "speed": 117
     },
     "ev_yield": [
@@ -36,47 +36,14 @@
     ],
     "height": 12,
     "weight": 222,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/758.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/758.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/758.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/758.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/758.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/758.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/758.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/758.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/758.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/758.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/758.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/758.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/758.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/758.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/758.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/758.png",
@@ -84,77 +51,17 @@
             }
         }
     },
-    "base_experience": 168,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 8,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 758,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "salandit",
-    "pokedex_numbers": {
-        "national": 758,
-        "original_alola": 162
-    },
-    "color": "black",
-    "shape": "quadruped",
-    "egg_groups": [
-        "monster",
-        "dragon"
-    ],
-    "flavor_text": {
-        "sun": "For some reason, only females have been found. It creates a reverse harem of male Salandit that it lives with.",
-        "moon": "Filled with pheromones, its poisonous gas can be diluted to use in the production of luscious perfumes.",
-        "ultra_sun": "Salazzle lives deep in caves and forces the Salandit it has attracted with its pheromones to serve it.",
-        "ultra_moon": "It punishes Salandit that couldn’t bring it food with a fierce slap of its flame-spewing palm."
-    },
-    "genus": "Toxic Lizard Pokémon",
-    "generation": "generation-vii",
-    "evolution_chain": {
-        "species_name": "salandit",
-        "evolves_to": [
-            {
-                "species_name": "salazzle",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": 1,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 33,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "smoke_ball": {
+        "smoke-ball": {
             "sun": 5,
             "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
+            "ultra-sun": 5,
+            "ultra-moon": 5
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "pound",
                 "level_learned_at": 1,
@@ -675,6 +582,81 @@
                 "version_groups": [
                     "ultra-sun-ultra-moon"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 758,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": "salandit",
+    "pokedex_numbers": {
+        "national": 758,
+        "original-alola": 162
+    },
+    "color": "black",
+    "shape": "quadruped",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "For some reason, only females have been found. It creates a reverse harem of male Salandit that it lives with.",
+        "moon": "Filled with pheromones, its poisonous gas can be diluted to use in the production of luscious perfumes.",
+        "ultra-sun": "Salazzle lives deep in caves and forces the Salandit it has attracted with its pheromones to serve it.",
+        "ultra-moon": "It punishes Salandit that couldn’t bring it food with a fierce slap of its flame-spewing palm."
+    },
+    "genus": "Toxic Lizard Pokémon",
+    "generation": "generation-vii",
+    "evolution_chain": {
+        "species_name": "salandit",
+        "evolves_to": [
+            {
+                "species_name": "salazzle",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "sun-moon",
+                            "ultra-sun-ultra-moon",
+                            "lets-go-pikachu-lets-go-eevee"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": 1,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 33,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

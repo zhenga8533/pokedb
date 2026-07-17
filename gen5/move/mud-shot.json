@@ -3,60 +3,42 @@
     "name": "mud-shot",
     "source_url": "https://pokeapi.co/api/v2/move/341/",
     "accuracy": {
-        "black_white": 95,
-        "black_2_white_2": 95
+        "black-white": 95,
+        "black-2-white-2": 95
     },
     "power": {
-        "black_white": 55,
-        "black_2_white_2": 55
+        "black-white": 55,
+        "black-2-white-2": 55
     },
     "pp": {
-        "black_white": 15,
-        "black_2_white_2": 15
+        "black-white": 15,
+        "black-2-white-2": 15
     },
-    "priority": 0,
-    "damage_class": "special",
+    "priority": null,
+    "damage_class": null,
     "type": {
-        "black_white": "ground",
-        "black_2_white_2": "ground"
+        "black-white": "ground",
+        "black-2-white-2": "ground"
     },
-    "target": "selected-pokemon",
+    "target": null,
     "generation": "generation-iii",
     "effect_chance": {
-        "black_white": 100,
-        "black_2_white_2": 100
+        "black-white": 100,
+        "black-2-white-2": 100
     },
     "effect": {
-        "black_white": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage.",
-        "black_2_white_2": "Inflicts regular damage. Has a 100% chance to lower the target’s Speed by one stage."
+        "black-white": "Inflicts regular damage. Has a chance to lower the target’s Speed by one stage.",
+        "black-2-white-2": "Inflicts regular damage. Has a chance to lower the target’s Speed by one stage."
     },
     "short_effect": {
-        "black_white": "Has a 100% chance to lower the target’s Speed by one stage.",
-        "black_2_white_2": "Has a 100% chance to lower the target’s Speed by one stage."
+        "black-white": "Has a chance to lower the target’s Speed by one stage.",
+        "black-2-white-2": "Has a chance to lower the target’s Speed by one stage."
     },
     "flavor_text": {
-        "black_white": "The user attacks by hurling a blob of mud at the target. It also reduces the target’s Speed.",
-        "black_2_white_2": "The user attacks by hurling a blob of mud at the target. It also reduces the target’s Speed."
+        "black-white": "The user attacks by hurling a blob of mud at the target. It also reduces the target’s Speed.",
+        "black-2-white-2": "The user attacks by hurling a blob of mud at the target. It also reduces the target’s Speed."
     },
-    "stat_changes": [
-        {
-            "change": -1,
-            "stat": "speed"
-        }
-    ],
+    "stat_changes": null,
     "machine": null,
-    "metadata": {
-        "ailment": "none",
-        "category": "damage+lower",
-        "min_hits": null,
-        "max_hits": null,
-        "min_turns": null,
-        "max_turns": null,
-        "drain": 0,
-        "healing": 0,
-        "crit_rate": 0,
-        "ailment_chance": 0,
-        "flinch_chance": 0,
-        "stat_chance": 100
-    }
+    "metadata": null
 }

@@ -18,65 +18,36 @@
         "hp": 20,
         "attack": 40,
         "defense": 90,
-        "special_attack": 30,
-        "special_defense": 90,
+        "special-attack": 30,
+        "special-defense": 90,
         "speed": 25
     },
     "ev_yield": [
         {
             "stat": "special-defense",
             "effort": 1
+        },
+        {
+            "stat": "defense",
+            "effort": 1
         }
     ],
     "height": 8,
     "weight": 150,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/355.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/355.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/355.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/355.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/355.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/355.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/355.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/355.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/355.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/355.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/355.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/355.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/355.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/355.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/355.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/355.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/355.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": null,
                 "back_shiny": null,
                 "front_default": null,
                 "front_shiny": null
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/355.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/355.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/355.png",
@@ -84,69 +55,9 @@
             }
         }
     },
-    "base_experience": 97,
-    "base_happiness": 35,
-    "capture_rate": 190,
-    "hatch_counter": 25,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 383,
-    "growth_rate": "fast",
-    "habitat": "forest",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 355,
-        "hoenn": 148
-    },
-    "color": "black",
-    "shape": "arms",
-    "egg_groups": [
-        "indeterminate"
-    ],
-    "flavor_text": {
-        "ruby": "DUSKULL can pass through any wall no matter how thick it may be. Once this POKéMON chooses a target, it will doggedly pursue the intended victim until the break of dawn.",
-        "sapphire": "DUSKULL wanders lost among the deep darkness of midnight. There is an oft- told admonishment given to misbehaving children that this POKéMON will spirit away bad children who earn scoldings from their mothers.",
-        "emerald": "A glare from its single scarlet eye makes even burly grown-ups freeze in utter fear. It is a nocturnal POKéMON that roams about under the cloak of darkness.",
-        "firered": "Making itself invisible, it silently sneaks up to prey. It has the ability to slip through thick walls.",
-        "leafgreen": "Making itself invisible, it silently sneaks up to prey. It has the ability to slip through thick walls."
-    },
-    "genus": "Requiem Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "duskull",
-        "evolves_to": [
-            {
-                "species_name": "dusclops",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 37,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "spell_tag": {
+        "spell-tag": {
             "ruby": 5,
             "sapphire": 5,
             "emerald": 5,
@@ -253,7 +164,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "leer",
                 "level_learned_at": 1,
@@ -631,6 +542,36 @@
                 ]
             }
         ],
+        "xd-purification": [
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "astonish",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            }
+        ],
         "egg": [
             {
                 "name": "feint-attack",
@@ -685,6 +626,84 @@
                     "firered-leafgreen",
                     "ruby-sapphire"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 383,
+    "growth_rate": null,
+    "habitat": "forest",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 355,
+        "hoenn": 148
+    },
+    "color": "black",
+    "shape": "arms",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "DUSKULL can pass through any wall no matter how thick it may be. Once this POKéMON chooses a target, it will doggedly pursue the intended victim until the break of dawn.",
+        "sapphire": "DUSKULL wanders lost among the deep darkness of midnight. There is an oft- told admonishment given to misbehaving children that this POKéMON will spirit away bad children who earn scoldings from their mothers.",
+        "emerald": "A glare from its single scarlet eye makes even burly grown-ups freeze in utter fear. It is a nocturnal POKéMON that roams about under the cloak of darkness.",
+        "firered": "Making itself invisible, it silently sneaks up to prey. It has the ability to slip through thick walls.",
+        "leafgreen": "Making itself invisible, it silently sneaks up to prey. It has the ability to slip through thick walls."
+    },
+    "genus": "Requiem Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "duskull",
+        "evolves_to": [
+            {
+                "species_name": "dusclops",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "ruby-sapphire",
+                        "version_groups": [
+                            "ruby-sapphire",
+                            "emerald",
+                            "firered-leafgreen",
+                            "colosseum",
+                            "xd"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 37,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

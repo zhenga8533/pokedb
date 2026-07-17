@@ -7,75 +7,21 @@
     "types": [
         "normal"
     ],
-    "abilities": [
-        {
-            "name": "run-away",
-            "is_hidden": false,
-            "slot": 1
-        },
-        {
-            "name": "adaptability",
-            "is_hidden": false,
-            "slot": 2
-        }
-    ],
+    "abilities": [],
     "stats": {
         "hp": 55,
         "attack": 55,
         "defense": 50,
-        "special_attack": 65,
-        "special_defense": 65,
-        "speed": 55
+        "speed": 55,
+        "special": 65
     },
-    "ev_yield": [
-        {
-            "stat": "special-defense",
-            "effort": 1
-        }
-    ],
+    "ev_yield": null,
     "height": 3,
     "weight": 65,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/133.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/133.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/133.png",
-        "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/133.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/133.png",
-        "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/133.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
-        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/133.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/133.png",
-        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/133.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/133.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/133.png",
-                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/133.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/133.png",
-                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/133.png"
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/133.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/133.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/133.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/133.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/133.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "red_blue": {
+            "red-blue": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/133.png",
                 "back_gray": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/gray/133.png",
                 "back_transparent": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/transparent/back/133.png",
@@ -93,121 +39,17 @@
             }
         }
     },
-    "base_experience": 92,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 35,
-    "gender_rate": 1,
-    "has_gender_differences": true,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 157,
-    "growth_rate": "medium",
-    "habitat": "urban",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 133,
-        "kanto": 133
-    },
-    "color": "brown",
-    "shape": "quadruped",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {
-        "red": "Its genetic code is irregular. It may mutate if it is exposed to radiation from element STONEs.",
-        "blue": "Its genetic code is irregular. It may mutate if it is exposed to radiation from element STONEs.",
-        "yellow": "Its genetic code is unstable, so it could evolve in a variety of ways. There are only a few alive."
-    },
-    "genus": "Evolution Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "eevee",
-        "evolves_to": [
-            {
-                "species_name": "vaporeon",
-                "evolution_details": {
-                    "item": "water-stone",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            },
-            {
-                "species_name": "jolteon",
-                "evolution_details": {
-                    "item": "thunder-stone",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            },
-            {
-                "species_name": "flareon",
-                "evolution_details": {
-                    "item": "fire-stone",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "sand-attack",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -221,7 +63,9 @@
                 "name": "tackle",
                 "level_learned_at": 1,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -229,7 +73,9 @@
                 "name": "take-down",
                 "level_learned_at": 45,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -243,7 +89,9 @@
                 "name": "tail-whip",
                 "level_learned_at": 31,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -257,7 +105,9 @@
                 "name": "bite",
                 "level_learned_at": 37,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -278,7 +128,9 @@
                 "name": "quick-attack",
                 "level_learned_at": 27,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -301,7 +153,9 @@
                 "name": "body-slam",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -309,7 +163,9 @@
                 "name": "take-down",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -317,7 +173,9 @@
                 "name": "double-edge",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -325,7 +183,9 @@
                 "name": "toxic",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -333,7 +193,9 @@
                 "name": "rage",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -341,7 +203,9 @@
                 "name": "mimic",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -349,7 +213,9 @@
                 "name": "double-team",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -357,7 +223,9 @@
                 "name": "reflect",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -365,7 +233,9 @@
                 "name": "bide",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -373,7 +243,9 @@
                 "name": "swift",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -381,7 +253,9 @@
                 "name": "skull-bash",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -389,7 +263,9 @@
                 "name": "rest",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -397,9 +273,172 @@
                 "name": "substitute",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 157,
+    "growth_rate": null,
+    "habitat": "urban",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 133,
+        "kanto": 133
+    },
+    "color": "brown",
+    "shape": "quadruped",
+    "egg_groups": null,
+    "flavor_text": {
+        "red": "Its genetic code is irregular. It may mutate if it is exposed to radiation from element STONEs.",
+        "blue": "Its genetic code is irregular. It may mutate if it is exposed to radiation from element STONEs.",
+        "yellow": "Its genetic code is unstable, so it could evolve in a variety of ways. There are only a few alive."
+    },
+    "genus": "Evolution Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "eevee",
+        "evolves_to": [
+            {
+                "species_name": "vaporeon",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "red-blue",
+                            "yellow",
+                            "red-green-japan",
+                            "blue-japan"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "water-stone",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
+            },
+            {
+                "species_name": "jolteon",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "red-blue",
+                            "yellow",
+                            "red-green-japan",
+                            "blue-japan"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "thunder-stone",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
+            },
+            {
+                "species_name": "flareon",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "red-blue",
+                            "yellow",
+                            "red-green-japan",
+                            "blue-japan"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "fire-stone",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

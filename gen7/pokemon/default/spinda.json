@@ -28,8 +28,8 @@
         "hp": 60,
         "attack": 60,
         "defense": 60,
-        "special_attack": 60,
-        "special_defense": 60,
+        "special-attack": 60,
+        "special-defense": 60,
         "speed": 60
     },
     "ev_yield": [
@@ -40,47 +40,14 @@
     ],
     "height": 11,
     "weight": 50,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/327.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/327.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/327.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/327.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/327.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/327.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/327.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/327.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/327.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/327.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/327.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/327.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/327.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/327.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/327.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/327.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/327.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/327.png",
@@ -88,42 +55,7 @@
             }
         }
     },
-    "base_experience": 126,
-    "base_happiness": 70,
-    "capture_rate": 255,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 355,
-    "growth_rate": "fast",
-    "habitat": "mountain",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 327,
-        "original_alola": 105
-    },
-    "color": "brown",
-    "shape": "upright",
-    "egg_groups": [
-        "ground",
-        "humanshape"
-    ],
-    "flavor_text": {
-        "sun": "Its steps are staggering and unsteady, but Spinda thinks it’s walking in a straight line.",
-        "moon": "Each and every Spinda has a slightly different configuration of spots. There are collectors who enjoy the tiny differences in their spot patterns.",
-        "ultra_sun": "Its steps are shaky and stumbling. Walking for a long time makes it feel sick.",
-        "ultra_moon": "Each Spinda’s spot pattern is different. With its stumbling movements, it evades opponents’ attacks brilliantly!"
-    },
-    "genus": "Spot Panda Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "spinda",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -282,7 +214,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -768,6 +700,38 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 355,
+    "growth_rate": null,
+    "habitat": "mountain",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 327,
+        "original-alola": 105
+    },
+    "color": "brown",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "ultra-moon": "Each Spinda’s spot pattern is different. With its stumbling movements, it evades opponents’ attacks brilliantly!",
+        "sun": "Its steps are staggering and unsteady, but Spinda thinks it’s walking in a straight line.",
+        "moon": "Each and every Spinda has a slightly different configuration of spots. There are collectors who enjoy the tiny differences in their spot patterns.",
+        "ultra-sun": "Its steps are shaky and stumbling. Walking for a long time makes it feel sick."
+    },
+    "genus": "Spot Panda Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "spinda",
+        "evolves_to": []
     },
     "forms": [
         {

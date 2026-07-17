@@ -28,8 +28,8 @@
         "hp": 74,
         "attack": 48,
         "defense": 76,
-        "special_attack": 83,
-        "special_defense": 81,
+        "special-attack": 83,
+        "special-defense": 81,
         "speed": 104
     },
     "ev_yield": [
@@ -40,119 +40,27 @@
     ],
     "height": 6,
     "weight": 85,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10025.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10025.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10025.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10025.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10025.png",
-        "other": {
-            "dream_world": {
-                "front_default": null,
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10025.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10025.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10025.png",
-                "front_shiny": null
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10025.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10025.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10025.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10025.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/678-female.png",
+            "omegaruby-alphasapphire": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/10025.png",
                 "front_female": null,
                 "front_shiny": null,
                 "front_shiny_female": null
             },
-            "x_y": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/678-female.png",
+            "x-y": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/10025.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/678-female.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/10025.png",
                 "front_shiny_female": null
             }
         }
     },
-    "base_experience": 163,
-    "base_happiness": 70,
-    "capture_rate": 75,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": true,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 679,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "espurr",
-    "pokedex_numbers": {
-        "national": 678,
-        "kalos_central": 115
-    },
-    "color": "blue",
-    "shape": "upright",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {
-        "x": "When in danger, it raises its ears and releases enough psychic power to grind a 10-ton truck into dust.",
-        "y": "The eyeball patterns on the interior of its ears emit psychic energy. It keeps the patterns tightly covered because that power is too immense.",
-        "omega_ruby": "When in danger, it raises its ears and releases enough psychic power to grind a 10-ton truck into dust.",
-        "alpha_sapphire": "The eyeball patterns on the interior of its ears emit psychic energy. It keeps the patterns tightly covered because that power is too immense."
-    },
-    "genus": "Constraint Pokémon",
-    "generation": "generation-vi",
-    "evolution_chain": {
-        "species_name": "espurr",
-        "evolves_to": [
-            {
-                "species_name": "meowstic",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 25,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "scratch",
                 "level_learned_at": 1,
@@ -202,24 +110,16 @@
                 ]
             },
             {
-                "name": "reflect",
-                "level_learned_at": 35,
+                "name": "shadow-ball",
+                "level_learned_at": 31,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire",
                     "x-y"
                 ]
             },
             {
-                "name": "charm",
-                "level_learned_at": 28,
-                "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "mean-look",
-                "level_learned_at": 1,
+                "name": "future-sight",
+                "level_learned_at": 50,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire",
                     "x-y"
@@ -234,14 +134,6 @@
                 ]
             },
             {
-                "name": "helping-hand",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
                 "name": "role-play",
                 "level_learned_at": 43,
                 "version_groups": [
@@ -250,8 +142,16 @@
                 ]
             },
             {
-                "name": "imprison",
+                "name": "signal-beam",
                 "level_learned_at": 45,
+                "version_groups": [
+                    "omega-ruby-alpha-sapphire",
+                    "x-y"
+                ]
+            },
+            {
+                "name": "extrasensory",
+                "level_learned_at": 35,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire",
                     "x-y"
@@ -266,8 +166,16 @@
                 ]
             },
             {
-                "name": "miracle-eye",
-                "level_learned_at": 31,
+                "name": "magical-leaf",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "omega-ruby-alpha-sapphire",
+                    "x-y"
+                ]
+            },
+            {
+                "name": "me-first",
+                "level_learned_at": 1,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire",
                     "x-y"
@@ -282,6 +190,14 @@
                 ]
             },
             {
+                "name": "charge-beam",
+                "level_learned_at": 28,
+                "version_groups": [
+                    "omega-ruby-alpha-sapphire",
+                    "x-y"
+                ]
+            },
+            {
                 "name": "psyshock",
                 "level_learned_at": 25,
                 "version_groups": [
@@ -290,7 +206,7 @@
                 ]
             },
             {
-                "name": "quick-guard",
+                "name": "stored-power",
                 "level_learned_at": 1,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire",
@@ -298,7 +214,7 @@
                 ]
             },
             {
-                "name": "quick-guard",
+                "name": "stored-power",
                 "level_learned_at": 53,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire",
@@ -308,14 +224,6 @@
             {
                 "name": "disarming-voice",
                 "level_learned_at": 22,
-                "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "misty-terrain",
-                "level_learned_at": 50,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire",
                     "x-y"
@@ -674,13 +582,6 @@
                 ]
             },
             {
-                "name": "helping-hand",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
                 "name": "trick",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -763,6 +664,80 @@
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 679,
+    "growth_rate": null,
+    "habitat": null,
+    "evolves_from_species": "espurr",
+    "pokedex_numbers": {
+        "national": 678,
+        "kalos-central": 115
+    },
+    "color": "blue",
+    "shape": "upright",
+    "egg_groups": null,
+    "flavor_text": {
+        "x": "When in danger, it raises its ears and releases enough psychic power to grind a 10-ton truck into dust.",
+        "y": "The eyeball patterns on the interior of its ears emit psychic energy. It keeps the patterns tightly covered because that power is too immense.",
+        "omega-ruby": "When in danger, it raises its ears and releases enough psychic power to grind a 10-ton truck into dust.",
+        "alpha-sapphire": "The eyeball patterns on the interior of its ears emit psychic energy. It keeps the patterns tightly covered because that power is too immense."
+    },
+    "genus": "Constraint Pokémon",
+    "generation": "generation-vi",
+    "evolution_chain": {
+        "species_name": "espurr",
+        "evolves_to": [
+            {
+                "species_name": "meowstic",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "x-y",
+                        "version_groups": [
+                            "x-y",
+                            "omega-ruby-alpha-sapphire"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 25,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

@@ -28,8 +28,8 @@
         "hp": 72,
         "attack": 60,
         "defense": 30,
-        "special_attack": 20,
-        "special_defense": 30,
+        "special-attack": 20,
+        "special-defense": 30,
         "speed": 25
     },
     "ev_yield": [
@@ -40,47 +40,14 @@
     ],
     "height": 10,
     "weight": 864,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/296.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/296.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/296.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/296.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/296.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/296.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/296.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/296.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/296.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/296.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/296.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/296.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/296.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/296.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/296.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/296.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/296.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/296.png",
@@ -88,72 +55,13 @@
             }
         }
     },
-    "base_experience": 47,
-    "base_happiness": 70,
-    "capture_rate": 180,
-    "hatch_counter": 20,
-    "gender_rate": 2,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 322,
-    "growth_rate": "fast-then-very-slow",
-    "habitat": "mountain",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 296,
-        "original_alola": 56
-    },
-    "color": "yellow",
-    "shape": "humanoid",
-    "egg_groups": [
-        "humanshape"
-    ],
-    "flavor_text": {
-        "sun": "It was originally brought in from another region, but now Makuhita from Alola are more famous.",
-        "moon": "Their daily routine consists of training together first thing in the morning, eating and napping in the afternoon, and then more training afterward.",
-        "ultra_sun": "It practices its slaps by repeatedly slapping tree trunks. It has been known to slap an Exeggutor and get flung away.",
-        "ultra_moon": "There’s a rumor of a traditional recipe for stew that Trainers can use to raise strong Makuhita."
-    },
-    "genus": "Guts Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "makuhita",
-        "evolves_to": [
-            {
-                "species_name": "hariyama",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 24,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "black_belt": {
+        "black-belt": {
             "sun": 5,
             "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
+            "ultra-sun": 5,
+            "ultra-moon": 5
         }
     },
     "moves": {
@@ -229,7 +137,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "whirlwind",
                 "level_learned_at": 16,
@@ -713,6 +621,81 @@
                     "sun-moon",
                     "ultra-sun-ultra-moon"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 322,
+    "growth_rate": null,
+    "habitat": "mountain",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 296,
+        "original-alola": 56
+    },
+    "color": "yellow",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "It was originally brought in from another region, but now Makuhita from Alola are more famous.",
+        "moon": "Their daily routine consists of training together first thing in the morning, eating and napping in the afternoon, and then more training afterward.",
+        "ultra-sun": "It practices its slaps by repeatedly slapping tree trunks. It has been known to slap an Exeggutor and get flung away.",
+        "ultra-moon": "There’s a rumor of a traditional recipe for stew that Trainers can use to raise strong Makuhita."
+    },
+    "genus": "Guts Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "makuhita",
+        "evolves_to": [
+            {
+                "species_name": "hariyama",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "ruby-sapphire",
+                        "version_groups": [
+                            "sun-moon",
+                            "ultra-sun-ultra-moon",
+                            "lets-go-pikachu-lets-go-eevee"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 24,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

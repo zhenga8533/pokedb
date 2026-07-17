@@ -28,8 +28,8 @@
         "hp": 85,
         "attack": 115,
         "defense": 75,
-        "special_attack": 55,
-        "special_defense": 75,
+        "special-attack": 55,
+        "special-defense": 75,
         "speed": 82
     },
     "ev_yield": [
@@ -60,7 +60,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10126.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10126.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10126.png"
             },
@@ -76,70 +76,30 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/10126.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 170,
-    "base_happiness": 70,
-    "capture_rate": 90,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 745,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "rockruff",
-    "pokedex_numbers": {
-        "national": 745,
-        "paldea": 90
-    },
-    "color": "brown",
-    "shape": "quadruped",
-    "egg_groups": [
-        "ground"
-    ],
-    "flavor_text": {},
-    "genus": "Wolf Pokémon",
-    "generation": "generation-vii",
-    "evolution_chain": {
-        "species_name": "rockruff",
-        "evolves_to": [
-            {
-                "species_name": "lycanroc",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 25,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "day",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
         "machine": [
+            {
+                "name": "fire-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
             {
                 "name": "swords-dance",
                 "level_learned_at": 0,
@@ -183,20 +143,6 @@
                 ]
             },
             {
-                "name": "agility",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "swift",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "rest",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -218,6 +164,13 @@
                 ]
             },
             {
+                "name": "reversal",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "protect",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -233,6 +186,13 @@
             },
             {
                 "name": "mud-slap",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "outrage",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -288,6 +248,13 @@
                 ]
             },
             {
+                "name": "focus-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "taunt",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -303,6 +270,13 @@
             },
             {
                 "name": "brick-break",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "knock-off",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -358,6 +332,13 @@
                 ]
             },
             {
+                "name": "fling",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "earth-power",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -366,6 +347,13 @@
             },
             {
                 "name": "giga-impact",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "shadow-claw",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -414,14 +402,21 @@
                 ]
             },
             {
-                "name": "bulldoze",
+                "name": "low-sweep",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "drill-run",
+                "name": "foul-play",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "bulldoze",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -442,6 +437,13 @@
                 ]
             },
             {
+                "name": "throat-chop",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "psychic-fangs",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -450,6 +452,13 @@
             },
             {
                 "name": "stomping-tantrum",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "lash-out",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -468,11 +477,39 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            },
+            {
+                "name": "upper-hand",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
             }
         ],
         "train": [
             {
+                "name": "fire-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "thunder-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "swords-dance",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "mega-kick",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -514,21 +551,14 @@
                 ]
             },
             {
+                "name": "counter",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "dig",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "agility",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "quick-attack",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -570,6 +600,13 @@
                 ]
             },
             {
+                "name": "reversal",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "protect",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -585,6 +622,13 @@
             },
             {
                 "name": "mud-slap",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "outrage",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -640,7 +684,21 @@
                 ]
             },
             {
+                "name": "uproar",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "facade",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "focus-punch",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -662,6 +720,13 @@
             },
             {
                 "name": "brick-break",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "knock-off",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -724,7 +789,14 @@
                 ]
             },
             {
-                "name": "assurance",
+                "name": "payback",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "fling",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -753,6 +825,13 @@
             },
             {
                 "name": "giga-impact",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "shadow-claw",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -801,6 +880,20 @@
                 ]
             },
             {
+                "name": "low-sweep",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "foul-play",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "round",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -808,28 +901,7 @@
                 ]
             },
             {
-                "name": "quick-guard",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "bulldoze",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "drill-run",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "tail-slap",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -850,6 +922,13 @@
                 ]
             },
             {
+                "name": "throat-chop",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "psychic-fangs",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -864,7 +943,7 @@
                 ]
             },
             {
-                "name": "accelerock",
+                "name": "lash-out",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -876,9 +955,16 @@
                 "version_groups": [
                     "champions"
                 ]
+            },
+            {
+                "name": "upper-hand",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "sand-attack",
                 "level_learned_at": 1,
@@ -915,15 +1001,15 @@
                 ]
             },
             {
-                "name": "rock-throw",
-                "level_learned_at": 12,
+                "name": "counter",
+                "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "quick-attack",
-                "level_learned_at": 1,
+                "name": "rock-throw",
+                "level_learned_at": 12,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -943,6 +1029,13 @@
                 ]
             },
             {
+                "name": "reversal",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "scary-face",
                 "level_learned_at": 48,
                 "version_groups": [
@@ -950,8 +1043,22 @@
                 ]
             },
             {
+                "name": "endure",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "crunch",
                 "level_learned_at": 42,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 1,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -971,13 +1078,6 @@
                 ]
             },
             {
-                "name": "sucker-punch",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "stone-edge",
                 "level_learned_at": 60,
                 "version_groups": [
@@ -990,20 +1090,157 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
-            },
+            }
+        ]
+    },
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 15,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 745,
+    "growth_rate": "medium",
+    "habitat": null,
+    "evolves_from_species": "rockruff",
+    "pokedex_numbers": {
+        "national": 745,
+        "paldea": 90
+    },
+    "color": "brown",
+    "shape": "quadruped",
+    "egg_groups": [
+        "ground"
+    ],
+    "flavor_text": {},
+    "genus": "Wolf Pokémon",
+    "generation": "generation-vii",
+    "evolution_chain": {
+        "species_name": "rockruff",
+        "evolves_to": [
             {
-                "name": "quick-guard",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "accelerock",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
+                "species_name": "lycanroc",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": "lycanroc-midday",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 25,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": "day",
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    },
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": "lycanroc-midnight",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 25,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": "night",
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    },
+                    {
+                        "introduced_in_version_group": "sun-moon",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": "lycanroc-dusk",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 25,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": "dusk",
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

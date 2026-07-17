@@ -28,8 +28,8 @@
         "hp": 55,
         "attack": 20,
         "defense": 35,
-        "special_attack": 20,
-        "special_defense": 45,
+        "special-attack": 20,
+        "special-defense": 45,
         "speed": 75
     },
     "ev_yield": [
@@ -60,7 +60,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/235.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/235.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/235.png"
             },
@@ -76,13 +76,25 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/235.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 88,
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "sketch",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            }
+        ]
+    },
     "base_happiness": 70,
     "capture_rate": 45,
     "hatch_counter": 20,
@@ -110,18 +122,6 @@
     "evolution_chain": {
         "species_name": "smeargle",
         "evolves_to": []
-    },
-    "held_items": {},
-    "moves": {
-        "level_up": [
-            {
-                "name": "sketch",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            }
-        ]
     },
     "forms": [
         {

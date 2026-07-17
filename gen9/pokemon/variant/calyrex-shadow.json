@@ -19,8 +19,8 @@
         "hp": 100,
         "attack": 85,
         "defense": 80,
-        "special_attack": 165,
-        "special_defense": 100,
+        "special-attack": 165,
+        "special-defense": 100,
         "speed": 150
     },
     "ev_yield": [
@@ -51,7 +51,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10194.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10194.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10194.png"
             },
@@ -67,46 +67,74 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/10194.png",
                 "front_female": null
             }
         }
     },
-    "base_experience": 250,
-    "base_happiness": 100,
-    "capture_rate": 3,
-    "hatch_counter": 120,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": true,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 898,
-    "growth_rate": "slow",
-    "habitat": null,
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 898
-    },
-    "color": "green",
-    "shape": "humanoid",
-    "egg_groups": [
-        "no-eggs"
-    ],
-    "flavor_text": {},
-    "genus": "King Pokémon",
-    "generation": "generation-viii",
-    "evolution_chain": {
-        "species_name": "calyrex",
-        "evolves_to": []
-    },
+    "base_experience": 340,
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "pound",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "stomp",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "double-kick",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "tackle",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "take-down",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "thrash",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "tail-whip",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "disable",
                 "level_learned_at": 1,
                 "version_groups": [
                     "scarlet-violet"
@@ -155,8 +183,36 @@
                 ]
             },
             {
+                "name": "agility",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "confuse-ray",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "haze",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "giga-drain",
                 "level_learned_at": 16,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 1,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -183,6 +239,13 @@
                 ]
             },
             {
+                "name": "nasty-plot",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "psyshock",
                 "level_learned_at": 24,
                 "version_groups": [
@@ -192,6 +255,13 @@
             {
                 "name": "heal-pulse",
                 "level_learned_at": 72,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "hex",
+                "level_learned_at": 1,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -216,9 +286,23 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            },
+            {
+                "name": "astral-barrage",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
             }
         ],
         "machine": [
+            {
+                "name": "body-slam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
             {
                 "name": "take-down",
                 "level_learned_at": 0,
@@ -256,6 +340,20 @@
             },
             {
                 "name": "agility",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "night-shade",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "confuse-ray",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -360,14 +458,21 @@
                 ]
             },
             {
-                "name": "psych-up",
+                "name": "crunch",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "future-sight",
+                "name": "shadow-ball",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "will-o-wisp",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -375,6 +480,13 @@
             },
             {
                 "name": "facade",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "taunt",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -437,7 +549,7 @@
                 ]
             },
             {
-                "name": "gravity",
+                "name": "dark-pulse",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -459,6 +571,13 @@
             },
             {
                 "name": "giga-impact",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "nasty-plot",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -500,6 +619,13 @@
                 ]
             },
             {
+                "name": "foul-play",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "stored-power",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -507,7 +633,28 @@
                 ]
             },
             {
+                "name": "hex",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "bulldoze",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "snarl",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "phantom-force",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -528,13 +675,6 @@
                 ]
             },
             {
-                "name": "solar-blade",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "pollen-puff",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -549,14 +689,7 @@
                 ]
             },
             {
-                "name": "body-press",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "expanding-force",
+                "name": "stomping-tantrum",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -570,6 +703,34 @@
                 ]
             }
         ]
+    },
+    "base_happiness": 100,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 898,
+    "growth_rate": "slow",
+    "habitat": null,
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 898
+    },
+    "color": "green",
+    "shape": "humanoid",
+    "egg_groups": [
+        "no-eggs"
+    ],
+    "flavor_text": {},
+    "genus": "King Pokémon",
+    "generation": "generation-viii",
+    "evolution_chain": {
+        "species_name": "calyrex",
+        "evolves_to": []
     },
     "forms": [
         {

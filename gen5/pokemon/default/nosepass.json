@@ -28,8 +28,8 @@
         "hp": 30,
         "attack": 45,
         "defense": 135,
-        "special_attack": 45,
-        "special_defense": 90,
+        "special-attack": 45,
+        "special-defense": 90,
         "speed": 30
     },
     "ev_yield": [
@@ -40,43 +40,10 @@
     ],
     "height": 10,
     "weight": 970,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/299.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/299.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/299.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/299.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/299.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/299.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/299.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/299.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/299.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/299.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/299.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/299.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/299.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/299.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/299.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "black_white": {
+            "black-white": {
                 "animated": {
                     "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/299.gif",
                     "back_female": null,
@@ -98,71 +65,13 @@
             }
         }
     },
-    "base_experience": 75,
-    "base_happiness": 70,
-    "capture_rate": 255,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 324,
-    "growth_rate": "medium",
-    "habitat": "cave",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 299
-    },
-    "color": "gray",
-    "shape": "humanoid",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {
-        "black": "When endangered, it may protect itself by raising its magnetism and drawing iron objects to its body.",
-        "white": "When endangered, it may protect itself by raising its magnetism and drawing iron objects to its body.",
-        "black_2": "Its magnetic nose always faces north and draws iron objects to its body to protect itself better.",
-        "white_2": "Its magnetic nose always faces north and draws iron objects to its body to protect itself better."
-    },
-    "genus": "Compass Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "nosepass",
-        "evolves_to": [
-            {
-                "species_name": "probopass",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": "mt-coronet",
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
-        "hard_stone": {
+        "hard-stone": {
             "black": 5,
             "white": 5,
-            "black_2": 5,
-            "white_2": 5
+            "black-2": 5,
+            "white-2": 5
         }
     },
     "moves": {
@@ -259,7 +168,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -755,6 +664,79 @@
                     "black-2-white-2",
                     "black-white"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 324,
+    "growth_rate": null,
+    "habitat": "cave",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 299
+    },
+    "color": "gray",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "black": "When endangered, it may protect itself by raising its magnetism and drawing iron objects to its body.",
+        "white": "When endangered, it may protect itself by raising its magnetism and drawing iron objects to its body.",
+        "black-2": "Its magnetic nose always faces north and draws iron objects to its body to protect itself better.",
+        "white-2": "Its magnetic nose always faces north and draws iron objects to its body to protect itself better."
+    },
+    "genus": "Compass Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "nosepass",
+        "evolves_to": [
+            {
+                "species_name": "probopass",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "black-white",
+                        "version_groups": [
+                            "black-white",
+                            "black-2-white-2"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": "chargestone-cave",
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

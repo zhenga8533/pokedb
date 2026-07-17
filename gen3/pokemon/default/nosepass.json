@@ -23,8 +23,8 @@
         "hp": 30,
         "attack": 45,
         "defense": 135,
-        "special_attack": 45,
-        "special_defense": 90,
+        "special-attack": 45,
+        "special-defense": 90,
         "speed": 30
     },
     "ev_yield": [
@@ -35,53 +35,20 @@
     ],
     "height": 10,
     "weight": 970,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/299.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/299.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/299.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/299.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/299.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/299.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/299.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/299.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/299.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/299.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/299.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/299.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/299.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/299.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/299.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/299.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/299.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": null,
                 "back_shiny": null,
                 "front_default": null,
                 "front_shiny": null
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/299.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/299.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/299.png",
@@ -89,42 +56,7 @@
             }
         }
     },
-    "base_experience": 108,
-    "base_happiness": 70,
-    "capture_rate": 255,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 324,
-    "growth_rate": "medium",
-    "habitat": "cave",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 299,
-        "hoenn": 60
-    },
-    "color": "gray",
-    "shape": "humanoid",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {
-        "ruby": "NOSEPASS’s magnetic nose is always pointed to the north. If two of these POKéMON meet, they cannot turn their faces to each other when they are close because their magnetic noses repel one another.",
-        "sapphire": "NOSEPASS had been said to be completely unmoving, with its magnetic nose pointed due north. However, close observation has revealed that the POKéMON actually moves by a little over 3/8 of an inch every year.",
-        "emerald": "Its body emits a powerful magnetism. It feeds on prey that is pulled in by the force. Its magnetism is stronger in cold seasons.",
-        "firered": "Its magnetic nose consistently faces north. Travelers check NOSEPASS to get their bearings.",
-        "leafgreen": "Its magnetic nose consistently faces north. Travelers check NOSEPASS to get their bearings."
-    },
-    "genus": "Compass Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "nosepass",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -275,7 +207,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -620,6 +552,36 @@
                 ]
             }
         ],
+        "xd-purification": [
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "helping-hand",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            }
+        ],
         "egg": [
             {
                 "name": "explosion",
@@ -649,6 +611,39 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 324,
+    "growth_rate": null,
+    "habitat": "cave",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 299,
+        "hoenn": 60
+    },
+    "color": "gray",
+    "shape": "humanoid",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "NOSEPASS’s magnetic nose is always pointed to the north. If two of these POKéMON meet, they cannot turn their faces to each other when they are close because their magnetic noses repel one another.",
+        "sapphire": "NOSEPASS had been said to be completely unmoving, with its magnetic nose pointed due north. However, close observation has revealed that the POKéMON actually moves by a little over 3/8 of an inch every year.",
+        "emerald": "Its body emits a powerful magnetism. It feeds on prey that is pulled in by the force. Its magnetism is stronger in cold seasons.",
+        "firered": "Its magnetic nose consistently faces north. Travelers check NOSEPASS to get their bearings.",
+        "leafgreen": "Its magnetic nose consistently faces north. Travelers check NOSEPASS to get their bearings."
+    },
+    "genus": "Compass Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "nosepass",
+        "evolves_to": []
     },
     "forms": [
         {

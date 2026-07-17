@@ -7,71 +7,21 @@
     "types": [
         "electric"
     ],
-    "abilities": [
-        {
-            "name": "soundproof",
-            "is_hidden": false,
-            "slot": 1
-        },
-        {
-            "name": "static",
-            "is_hidden": false,
-            "slot": 2
-        }
-    ],
+    "abilities": [],
     "stats": {
         "hp": 40,
         "attack": 30,
         "defense": 50,
-        "special_attack": 55,
-        "special_defense": 55,
-        "speed": 100
+        "speed": 100,
+        "special": 55
     },
-    "ev_yield": [
-        {
-            "stat": "speed",
-            "effort": 1
-        }
-    ],
+    "ev_yield": null,
     "height": 5,
     "weight": 104,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/100.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/100.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/100.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/100.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/100.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/100.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/100.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/100.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/100.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/100.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/100.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/100.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/100.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/100.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "red_blue": {
+            "red-blue": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/100.png",
                 "back_gray": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/gray/100.png",
                 "back_transparent": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/transparent/back/100.png",
@@ -89,18 +39,265 @@
             }
         }
     },
-    "base_experience": 103,
-    "base_happiness": 70,
-    "capture_rate": 190,
-    "hatch_counter": 20,
-    "gender_rate": -1,
+    "base_experience": null,
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "tackle",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "sonic-boom",
+                "level_learned_at": 17,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "screech",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 29,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "self-destruct",
+                "level_learned_at": 22,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 36,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "explosion",
+                "level_learned_at": 43,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            }
+        ],
+        "machine": [
+            {
+                "name": "take-down",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "rage",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "teleport",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "mimic",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "double-team",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "bide",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "self-destruct",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "swift",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "flash",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "explosion",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan",
+                    "yellow"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": false,
+    "forms_switchable": null,
     "order": 109,
-    "growth_rate": "medium",
+    "growth_rate": null,
     "habitat": "urban",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -109,9 +306,7 @@
     },
     "color": "red",
     "shape": "ball",
-    "egg_groups": [
-        "mineral"
-    ],
+    "egg_groups": null,
     "flavor_text": {
         "red": "Usually found in power plants. Easily mistaken for a POKé BALL, they have zapped many people.",
         "blue": "Usually found in power plants. Easily mistaken for a POKé BALL, they have zapped many people.",
@@ -124,226 +319,46 @@
         "evolves_to": [
             {
                 "species_name": "electrode",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 30,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "red-blue",
+                            "yellow",
+                            "red-green-japan",
+                            "blue-japan"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 30,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
                 "evolves_to": []
-            }
-        ]
-    },
-    "held_items": {},
-    "moves": {
-        "level_up": [
-            {
-                "name": "tackle",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "sonic-boom",
-                "level_learned_at": 17,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "screech",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "light-screen",
-                "level_learned_at": 29,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "self-destruct",
-                "level_learned_at": 22,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "swift",
-                "level_learned_at": 36,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "explosion",
-                "level_learned_at": 43,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            }
-        ],
-        "machine": [
-            {
-                "name": "take-down",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "thunderbolt",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "thunder-wave",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "thunder",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "toxic",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "rage",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "teleport",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "mimic",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "double-team",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "reflect",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "bide",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "self-destruct",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "swift",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "flash",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "explosion",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "rest",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
-            },
-            {
-                "name": "substitute",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "red-blue",
-                    "yellow"
-                ]
             }
         ]
     },

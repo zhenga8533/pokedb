@@ -19,8 +19,8 @@
         "hp": 75,
         "attack": 110,
         "defense": 110,
-        "special_attack": 110,
-        "special_defense": 105,
+        "special-attack": 110,
+        "special-defense": 105,
         "speed": 80
     },
     "ev_yield": [
@@ -31,49 +31,16 @@
     ],
     "height": 15,
     "weight": 206,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10067.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10067.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10067.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10067.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10067.png",
-        "other": {
-            "dream_world": {
-                "front_default": null,
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10067.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10067.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10067.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10067.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10067.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10067.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10067.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10067.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
-            "omegaruby_alphasapphire": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/334-mega.png",
+            "omegaruby-alphasapphire": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/10067.png",
                 "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/334-mega.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/10067.png",
                 "front_shiny_female": null
             },
-            "x_y": {
+            "x-y": {
                 "front_default": null,
                 "front_female": null,
                 "front_shiny": null,
@@ -81,66 +48,7 @@
             }
         }
     },
-    "base_experience": 172,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": true,
-    "order": 362,
-    "growth_rate": "slow-then-very-fast",
-    "habitat": "forest",
-    "evolves_from_species": "swablu",
-    "pokedex_numbers": {
-        "national": 334
-    },
-    "color": "blue",
-    "shape": "wings",
-    "egg_groups": [
-        "flying",
-        "dragon"
-    ],
-    "flavor_text": {
-        "x": "It flies gracefully through the sky. Its melodic humming makes you feel like you’re in a dream.",
-        "y": "On sunny days, it flies freely through the sky and blends into the clouds. It sings in a beautiful soprano.",
-        "omega_ruby": "Altaria dances and wheels through the sky among billowing, cotton-like clouds. By singing melodies in its crystal-clear voice, this Pokémon makes its listeners experience dreamy wonderment.",
-        "alpha_sapphire": "Altaria sings in a gorgeous soprano. Its wings are like cotton clouds. This Pokémon catches updrafts with its buoyant wings and soars way up into the wild blue yonder."
-    },
-    "genus": "Humming Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "swablu",
-        "evolves_to": [
-            {
-                "species_name": "altaria",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 35,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -148,224 +56,196 @@
                 "name": "fly",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "roar",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "flamethrower",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "ice-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "hyper-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "solar-beam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "earthquake",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "toxic",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "double-team",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "fire-blast",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "dream-eater",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rest",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "substitute",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "thief",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "protect",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "swagger",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "steel-wing",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "attract",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sleep-talk",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "return",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "frustration",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "safeguard",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "hidden-power",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rain-dance",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sunny-day",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "psych-up",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "rock-smash",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "facade",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -379,111 +259,86 @@
                 "name": "aerial-ace",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "dragon-claw",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "roost",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "giga-impact",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "hone-claws",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "round",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "echoed-voice",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "incinerate",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "bulldoze",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "confide",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "dazzling-gleam",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             }
         ],
-        "level_up": [
-            {
-                "name": "fury-attack",
-                "level_learned_at": 10,
-                "version_groups": [
-                    "x-y"
-                ]
-            },
+        "level-up": [
             {
                 "name": "fury-attack",
                 "level_learned_at": 7,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "take-down",
-                "level_learned_at": 25,
-                "version_groups": [
-                    "x-y"
                 ]
             },
             {
@@ -497,23 +352,14 @@
                 "name": "growl",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sing",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "sing",
-                "level_learned_at": 8,
-                "version_groups": [
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -521,13 +367,6 @@
                 "level_learned_at": 5,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "mist",
-                "level_learned_at": 15,
-                "version_groups": [
-                    "x-y"
                 ]
             },
             {
@@ -541,23 +380,14 @@
                 "name": "peck",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
                 "name": "sky-attack",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "sky-attack",
-                "level_learned_at": 64,
-                "version_groups": [
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -569,23 +399,9 @@
             },
             {
                 "name": "perish-song",
-                "level_learned_at": 57,
-                "version_groups": [
-                    "x-y"
-                ]
-            },
-            {
-                "name": "perish-song",
                 "level_learned_at": 46,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "safeguard",
-                "level_learned_at": 13,
-                "version_groups": [
-                    "x-y"
                 ]
             },
             {
@@ -599,15 +415,7 @@
                 "name": "dragon-breath",
                 "level_learned_at": 35,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "refresh",
-                "level_learned_at": 29,
-                "version_groups": [
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -621,15 +429,7 @@
                 "name": "astonish",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "astonish",
-                "level_learned_at": 4,
-                "version_groups": [
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -641,23 +441,9 @@
             },
             {
                 "name": "dragon-dance",
-                "level_learned_at": 34,
-                "version_groups": [
-                    "x-y"
-                ]
-            },
-            {
-                "name": "dragon-dance",
                 "level_learned_at": 30,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "natural-gift",
-                "level_learned_at": 21,
-                "version_groups": [
-                    "x-y"
                 ]
             },
             {
@@ -671,15 +457,7 @@
                 "name": "pluck",
                 "level_learned_at": 1,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
-                ]
-            },
-            {
-                "name": "dragon-pulse",
-                "level_learned_at": 48,
-                "version_groups": [
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -691,23 +469,9 @@
             },
             {
                 "name": "round",
-                "level_learned_at": 18,
-                "version_groups": [
-                    "x-y"
-                ]
-            },
-            {
-                "name": "round",
                 "level_learned_at": 17,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "cotton-guard",
-                "level_learned_at": 42,
-                "version_groups": [
-                    "x-y"
                 ]
             },
             {
@@ -722,13 +486,6 @@
                 "level_learned_at": 11,
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
-                ]
-            },
-            {
-                "name": "moonblast",
-                "level_learned_at": 60,
-                "version_groups": [
-                    "x-y"
                 ]
             },
             {
@@ -814,8 +571,7 @@
                 "name": "draco-meteor",
                 "level_learned_at": 0,
                 "version_groups": [
-                    "omega-ruby-alpha-sapphire",
-                    "x-y"
+                    "omega-ruby-alpha-sapphire"
                 ]
             },
             {
@@ -824,6 +580,79 @@
                 "version_groups": [
                     "omega-ruby-alpha-sapphire"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 362,
+    "growth_rate": null,
+    "habitat": "forest",
+    "evolves_from_species": "swablu",
+    "pokedex_numbers": {
+        "national": 334
+    },
+    "color": "blue",
+    "shape": "wings",
+    "egg_groups": null,
+    "flavor_text": {
+        "x": "It flies gracefully through the sky. Its melodic humming makes you feel like you’re in a dream.",
+        "y": "On sunny days, it flies freely through the sky and blends into the clouds. It sings in a beautiful soprano.",
+        "omega-ruby": "Altaria dances and wheels through the sky among billowing, cotton-like clouds. By singing melodies in its crystal-clear voice, this Pokémon makes its listeners experience dreamy wonderment.",
+        "alpha-sapphire": "Altaria sings in a gorgeous soprano. Its wings are like cotton clouds. This Pokémon catches updrafts with its buoyant wings and soars way up into the wild blue yonder."
+    },
+    "genus": "Humming Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "swablu",
+        "evolves_to": [
+            {
+                "species_name": "altaria",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "ruby-sapphire",
+                        "version_groups": [
+                            "x-y",
+                            "omega-ruby-alpha-sapphire"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 35,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

@@ -3,82 +3,64 @@
     "name": "bubble",
     "source_url": "https://pokeapi.co/api/v2/move/145/",
     "accuracy": {
-        "ruby_sapphire": 100,
+        "ruby-sapphire": 100,
         "emerald": 100,
-        "firered_leafgreen": 100,
+        "firered-leafgreen": 100,
         "colosseum": 100,
         "xd": 100
     },
     "power": {
-        "ruby_sapphire": 20,
+        "ruby-sapphire": 20,
         "emerald": 20,
-        "firered_leafgreen": 20,
+        "firered-leafgreen": 20,
         "colosseum": 20,
         "xd": 20
     },
     "pp": {
-        "ruby_sapphire": 30,
+        "ruby-sapphire": 30,
         "emerald": 30,
-        "firered_leafgreen": 30,
+        "firered-leafgreen": 30,
         "colosseum": 30,
         "xd": 30
     },
-    "priority": 0,
+    "priority": null,
     "damage_class": "special",
     "type": {
-        "ruby_sapphire": "water",
+        "ruby-sapphire": "water",
         "emerald": "water",
-        "firered_leafgreen": "water",
+        "firered-leafgreen": "water",
         "colosseum": "water",
         "xd": "water"
     },
-    "target": "all-opponents",
+    "target": null,
     "generation": "generation-i",
     "effect_chance": {
-        "ruby_sapphire": 10,
+        "ruby-sapphire": 10,
         "emerald": 10,
-        "firered_leafgreen": 10,
+        "firered-leafgreen": 10,
         "colosseum": 10,
         "xd": 10
     },
     "effect": {
-        "ruby_sapphire": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
-        "emerald": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
-        "firered_leafgreen": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
-        "colosseum": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage.",
-        "xd": "Inflicts regular damage. Has a 10% chance to lower the target’s Speed by one stage."
+        "ruby-sapphire": "Inflicts regular damage. Has a chance to lower the target’s Speed by one stage.",
+        "emerald": "Inflicts regular damage. Has a chance to lower the target’s Speed by one stage.",
+        "firered-leafgreen": "Inflicts regular damage. Has a chance to lower the target’s Speed by one stage.",
+        "colosseum": "Inflicts regular damage. Has a chance to lower the target’s Speed by one stage.",
+        "xd": "Inflicts regular damage. Has a chance to lower the target’s Speed by one stage."
     },
     "short_effect": {
-        "ruby_sapphire": "Has a 10% chance to lower the target’s Speed by one stage.",
-        "emerald": "Has a 10% chance to lower the target’s Speed by one stage.",
-        "firered_leafgreen": "Has a 10% chance to lower the target’s Speed by one stage.",
-        "colosseum": "Has a 10% chance to lower the target’s Speed by one stage.",
-        "xd": "Has a 10% chance to lower the target’s Speed by one stage."
+        "ruby-sapphire": "Has a chance to lower the target’s Speed by one stage.",
+        "emerald": "Has a chance to lower the target’s Speed by one stage.",
+        "firered-leafgreen": "Has a chance to lower the target’s Speed by one stage.",
+        "colosseum": "Has a chance to lower the target’s Speed by one stage.",
+        "xd": "Has a chance to lower the target’s Speed by one stage."
     },
     "flavor_text": {
-        "ruby_sapphire": "An attack using bubbles. May lower the foe’s SPEED.",
+        "ruby-sapphire": "An attack using bubbles. May lower the foe’s SPEED.",
         "emerald": "An attack using bubbles. May lower the foe’s SPEED.",
-        "firered_leafgreen": "A spray of bubbles hits the foe. It may lower the foe’s SPEED stat."
+        "firered-leafgreen": "A spray of bubbles hits the foe. It may lower the foe’s SPEED stat."
     },
-    "stat_changes": [
-        {
-            "change": -1,
-            "stat": "speed"
-        }
-    ],
+    "stat_changes": null,
     "machine": null,
-    "metadata": {
-        "ailment": "none",
-        "category": "damage+lower",
-        "min_hits": null,
-        "max_hits": null,
-        "min_turns": null,
-        "max_turns": null,
-        "drain": 0,
-        "healing": 0,
-        "crit_rate": 0,
-        "ailment_chance": 0,
-        "flinch_chance": 0,
-        "stat_chance": 10
-    }
+    "metadata": null
 }

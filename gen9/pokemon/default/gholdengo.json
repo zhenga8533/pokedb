@@ -19,8 +19,8 @@
         "hp": 87,
         "attack": 60,
         "defense": 95,
-        "special_attack": 133,
-        "special_defense": 91,
+        "special-attack": 133,
+        "special-defense": 91,
         "speed": 84
     },
     "ev_yield": [
@@ -51,7 +51,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/1000.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1000.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1000.png"
             },
@@ -67,70 +67,13 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/1000.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 275,
-    "base_happiness": 50,
-    "capture_rate": 45,
-    "hatch_counter": 50,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 977,
-    "growth_rate": "slow",
-    "habitat": null,
-    "evolves_from_species": "gimmighoul",
-    "pokedex_numbers": {
-        "national": 1000,
-        "paldea": 392
-    },
-    "color": "yellow",
-    "shape": "humanoid",
-    "egg_groups": [
-        "no-eggs"
-    ],
-    "flavor_text": {
-        "scarlet": "Its body seems to be made up of 1,000 coins. This Pokémon gets along well with others and is quick to make friends with anybody.",
-        "violet": "It has a sturdy body made up of stacked coins. Gholdengo overwhelms its enemies by firing coin after coin at them in quick succession."
-    },
-    "genus": "Coin Entity Pokémon",
-    "generation": "generation-ix",
-    "evolution_chain": {
-        "species_name": "gimmighoul",
-        "evolves_to": [
-            {
-                "species_name": "gholdengo",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "gimmighoul-coins",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
         "machine": [
@@ -415,7 +358,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -499,6 +442,84 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 50,
+    "capture_rate": 45,
+    "hatch_counter": 50,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 977,
+    "growth_rate": "slow",
+    "habitat": null,
+    "evolves_from_species": "gimmighoul",
+    "pokedex_numbers": {
+        "national": 1000,
+        "paldea": 392
+    },
+    "color": "yellow",
+    "shape": "humanoid",
+    "egg_groups": [
+        "no-eggs"
+    ],
+    "flavor_text": {
+        "scarlet": "Its body seems to be made up of 1,000 coins. This Pokémon gets along well with others and is quick to make friends with anybody.",
+        "violet": "It has a sturdy body made up of stacked coins. Gholdengo overwhelms its enemies by firing coin after coin at them in quick succession."
+    },
+    "genus": "Coin Entity Pokémon",
+    "generation": "generation-ix",
+    "evolution_chain": {
+        "species_name": "gimmighoul",
+        "evolves_to": [
+            {
+                "species_name": "gholdengo",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "scarlet-violet",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "gimmighoul-coins",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

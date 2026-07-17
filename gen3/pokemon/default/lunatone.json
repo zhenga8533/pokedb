@@ -19,8 +19,8 @@
         "hp": 70,
         "attack": 55,
         "defense": 65,
-        "special_attack": 95,
-        "special_defense": 85,
+        "special-attack": 95,
+        "special-defense": 85,
         "speed": 70
     },
     "ev_yield": [
@@ -31,53 +31,20 @@
     ],
     "height": 10,
     "weight": 1680,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/337.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/337.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/337.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/337.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/337.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/337.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/337.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/337.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/337.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/337.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/337.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/337.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/337.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/337.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/337.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/337.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/337.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": null,
                 "back_shiny": null,
                 "front_default": null,
                 "front_shiny": null
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/337.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/337.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/337.png",
@@ -85,53 +52,21 @@
             }
         }
     },
-    "base_experience": 150,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 25,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 365,
-    "growth_rate": "fast",
-    "habitat": "cave",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 337,
-        "hoenn": 125
-    },
-    "color": "yellow",
-    "shape": "ball",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {
-        "ruby": "LUNATONE was discovered at a location where a meteorite fell. As a result, some people theorize that this POKéMON came from space. However, no one has been able to prove this theory so far.",
-        "sapphire": "LUNATONE becomes active around the time of the full moon. Instead of walking, it moves by floating in midair. The POKéMON’s intimidating red eyes cause all those who see it to become transfixed with fear.",
-        "emerald": "It becomes very active on the night of a full moon. This POKéMON was first discovered 40 years ago at the site of a meteor strike.",
-        "firered": "Its health ebbs and flows with the lunar cycle. It brims with power when exposed to the light of the full moon.",
-        "leafgreen": "Its health ebbs and flows with the lunar cycle. It brims with power when exposed to the light of the full moon."
-    },
-    "genus": "Meteorite Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "lunatone",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {
-        "moon_stone": {
+        "moon-stone": {
             "ruby": 5,
             "sapphire": 5,
             "emerald": 5,
             "firered": 5,
             "leafgreen": 5
+        },
+        "hard-stone": {
+            "xd": 100
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -624,7 +559,70 @@
                     "xd"
                 ]
             }
+        ],
+        "xd-purification": [
+            {
+                "name": "psychic",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "baton-pass",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 365,
+    "growth_rate": null,
+    "habitat": "cave",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 337,
+        "hoenn": 125
+    },
+    "color": "yellow",
+    "shape": "ball",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "LUNATONE was discovered at a location where a meteorite fell. As a result, some people theorize that this POKéMON came from space. However, no one has been able to prove this theory so far.",
+        "sapphire": "LUNATONE becomes active around the time of the full moon. Instead of walking, it moves by floating in midair. The POKéMON’s intimidating red eyes cause all those who see it to become transfixed with fear.",
+        "emerald": "It becomes very active on the night of a full moon. This POKéMON was first discovered 40 years ago at the site of a meteor strike.",
+        "firered": "Its health ebbs and flows with the lunar cycle. It brims with power when exposed to the light of the full moon.",
+        "leafgreen": "Its health ebbs and flows with the lunar cycle. It brims with power when exposed to the light of the full moon."
+    },
+    "genus": "Meteorite Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "lunatone",
+        "evolves_to": []
     },
     "forms": [
         {

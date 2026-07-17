@@ -29,8 +29,8 @@
         "hp": 95,
         "attack": 127,
         "defense": 184,
-        "special_attack": 34,
-        "special_defense": 36,
+        "special-attack": 34,
+        "special-defense": 36,
         "speed": 38
     },
     "ev_yield": [
@@ -61,7 +61,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10243.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10243.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10243.png"
             },
@@ -77,81 +77,19 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/10243.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 180,
-    "base_happiness": 70,
-    "capture_rate": 55,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 713,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "bergmite",
-    "pokedex_numbers": {
-        "national": 713,
-        "paldea": 364
-    },
-    "color": "blue",
-    "shape": "quadruped",
-    "egg_groups": [
-        "monster",
-        "mineral"
-    ],
-    "flavor_text": {},
-    "genus": "Iceberg Pokémon",
-    "generation": "generation-vi",
-    "evolution_chain": {
-        "species_name": "bergmite",
-        "evolves_to": [
-            {
-                "species_name": "avalugg",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 37,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "body-slam",
-                "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -194,6 +132,13 @@
             {
                 "name": "harden",
                 "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -262,6 +207,13 @@
                 ]
             },
             {
+                "name": "stone-edge",
+                "level_learned_at": 51,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "wide-guard",
                 "level_learned_at": 1,
                 "version_groups": [
@@ -269,8 +221,8 @@
                 ]
             },
             {
-                "name": "icicle-crash",
-                "level_learned_at": 51,
+                "name": "mountain-gale",
+                "level_learned_at": 61,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -299,20 +251,6 @@
                 ]
             },
             {
-                "name": "hydro-pump",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "surf",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "ice-beam",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -335,6 +273,13 @@
             },
             {
                 "name": "earthquake",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "dig",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -384,6 +329,13 @@
             },
             {
                 "name": "icy-wind",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "sandstorm",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -446,6 +398,13 @@
                 ]
             },
             {
+                "name": "rock-blast",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "gyro-ball",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -474,13 +433,6 @@
                 ]
             },
             {
-                "name": "flash-cannon",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "iron-head",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -489,6 +441,13 @@
             },
             {
                 "name": "stone-edge",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "stealth-rock",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -530,6 +489,13 @@
                 ]
             },
             {
+                "name": "meteor-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "tera-blast",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -556,6 +522,13 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            },
+            {
+                "name": "hard-press",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
             }
         ],
         "train": [
@@ -575,20 +548,6 @@
             },
             {
                 "name": "bite",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "hydro-pump",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "surf",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -623,6 +582,13 @@
                 ]
             },
             {
+                "name": "dig",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "recover",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -651,13 +617,6 @@
                 ]
             },
             {
-                "name": "snore",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "curse",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -680,6 +639,13 @@
             },
             {
                 "name": "icy-wind",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "sandstorm",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -728,14 +694,14 @@
                 ]
             },
             {
-                "name": "facade",
+                "name": "ancient-power",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
                 ]
             },
             {
-                "name": "superpower",
+                "name": "facade",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -757,6 +723,13 @@
             },
             {
                 "name": "iron-defense",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "rock-blast",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -791,13 +764,6 @@
                 ]
             },
             {
-                "name": "flash-cannon",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "iron-head",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -806,6 +772,13 @@
             },
             {
                 "name": "stone-edge",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "stealth-rock",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -826,28 +799,7 @@
                 ]
             },
             {
-                "name": "round",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
                 "name": "bulldoze",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "frost-breath",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            },
-            {
-                "name": "icicle-crash",
                 "level_learned_at": 0,
                 "version_groups": [
                     "champions"
@@ -882,6 +834,20 @@
                 ]
             },
             {
+                "name": "meteor-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
+                "name": "mountain-gale",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            },
+            {
                 "name": "ice-spinner",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -901,6 +867,89 @@
                 "version_groups": [
                     "champions"
                 ]
+            },
+            {
+                "name": "hard-press",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            }
+        ]
+    },
+    "base_happiness": 70,
+    "capture_rate": 55,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 713,
+    "growth_rate": "medium",
+    "habitat": null,
+    "evolves_from_species": "bergmite",
+    "pokedex_numbers": {
+        "national": 713,
+        "paldea": 364
+    },
+    "color": "blue",
+    "shape": "quadruped",
+    "egg_groups": [
+        "monster",
+        "mineral"
+    ],
+    "flavor_text": {},
+    "genus": "Iceberg Pokémon",
+    "generation": "generation-vi",
+    "evolution_chain": {
+        "species_name": "bergmite",
+        "evolves_to": [
+            {
+                "species_name": "avalugg",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "legends-arceus",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": "avalugg-hisui",
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 37,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": "hisui",
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

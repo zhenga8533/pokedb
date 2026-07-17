@@ -29,8 +29,8 @@
         "hp": 60,
         "attack": 50,
         "defense": 70,
-        "special_attack": 80,
-        "special_defense": 80,
+        "special-attack": 80,
+        "special-defense": 80,
         "speed": 150
     },
     "ev_yield": [
@@ -61,7 +61,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10232.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10232.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10232.png"
             },
@@ -77,70 +77,16 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/10232.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 172,
-    "base_happiness": 70,
-    "capture_rate": 60,
-    "hatch_counter": 20,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 110,
-    "growth_rate": "medium",
-    "habitat": "urban",
-    "evolves_from_species": "voltorb",
-    "pokedex_numbers": {
-        "national": 101,
-        "paldea": 208
-    },
-    "color": "red",
-    "shape": "ball",
-    "egg_groups": [
-        "mineral"
-    ],
-    "flavor_text": {},
-    "genus": "Ball Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "voltorb",
-        "evolves_to": [
-            {
-                "species_name": "electrode",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 30,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -149,8 +95,15 @@
                 ]
             },
             {
+                "name": "stun-spore",
+                "level_learned_at": 6,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "thunder-shock",
-                "level_learned_at": 1,
+                "level_learned_at": 4,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -158,13 +111,6 @@
             {
                 "name": "screech",
                 "level_learned_at": 13,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "light-screen",
-                "level_learned_at": 29,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -185,7 +131,7 @@
             },
             {
                 "name": "explosion",
-                "level_learned_at": 47,
+                "level_learned_at": 41,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -198,20 +144,6 @@
                 ]
             },
             {
-                "name": "spark",
-                "level_learned_at": 9,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "mirror-coat",
-                "level_learned_at": 58,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
                 "name": "charge",
                 "level_learned_at": 1,
                 "version_groups": [
@@ -219,22 +151,36 @@
                 ]
             },
             {
-                "name": "gyro-ball",
-                "level_learned_at": 54,
+                "name": "bullet-seed",
+                "level_learned_at": 9,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "magnet-rise",
-                "level_learned_at": 36,
+                "name": "gyro-ball",
+                "level_learned_at": 46,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "seed-bomb",
+                "level_learned_at": 34,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 29,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
                 "name": "discharge",
-                "level_learned_at": 41,
+                "level_learned_at": 34,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -254,15 +200,15 @@
                 ]
             },
             {
-                "name": "eerie-impulse",
-                "level_learned_at": 1,
+                "name": "grassy-terrain",
+                "level_learned_at": 50,
                 "version_groups": [
                     "scarlet-violet"
                 ]
             },
             {
-                "name": "magnetic-flux",
-                "level_learned_at": 1,
+                "name": "chloroblast",
+                "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
                 ]
@@ -285,6 +231,13 @@
             },
             {
                 "name": "hyper-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "solar-beam",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -319,7 +272,7 @@
                 ]
             },
             {
-                "name": "light-screen",
+                "name": "reflect",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -375,6 +328,13 @@
                 ]
             },
             {
+                "name": "giga-drain",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "endure",
                 "level_learned_at": 0,
                 "version_groups": [
@@ -417,14 +377,7 @@
                 ]
             },
             {
-                "name": "helping-hand",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            },
-            {
-                "name": "metal-sound",
+                "name": "bullet-seed",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -438,7 +391,35 @@
                 ]
             },
             {
+                "name": "seed-bomb",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "energy-ball",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
                 "name": "giga-impact",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "leaf-storm",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "grass-knot",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -487,7 +468,7 @@
                 ]
             },
             {
-                "name": "eerie-impulse",
+                "name": "grassy-terrain",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -495,6 +476,13 @@
             },
             {
                 "name": "electric-terrain",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            },
+            {
+                "name": "grassy-glide",
                 "level_learned_at": 0,
                 "version_groups": [
                     "scarlet-violet"
@@ -513,6 +501,81 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": -1,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 110,
+    "growth_rate": "medium",
+    "habitat": "urban",
+    "evolves_from_species": "voltorb",
+    "pokedex_numbers": {
+        "national": 101,
+        "paldea": 208
+    },
+    "color": "red",
+    "shape": "ball",
+    "egg_groups": [
+        "mineral"
+    ],
+    "flavor_text": {},
+    "genus": "Ball Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "voltorb",
+        "evolves_to": [
+            {
+                "species_name": "electrode",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "legends-arceus",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": "voltorb-hisui",
+                        "evolved_form": "electrode-hisui",
+                        "item": "leaf-stone",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

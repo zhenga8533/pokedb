@@ -18,8 +18,8 @@
         "hp": 30,
         "attack": 65,
         "defense": 100,
-        "special_attack": 45,
-        "special_defense": 25,
+        "special-attack": 45,
+        "special-defense": 25,
         "speed": 40
     },
     "ev_yield": [
@@ -30,53 +30,20 @@
     ],
     "height": 3,
     "weight": 40,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/90.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/90.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/90.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/90.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/90.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/90.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/90.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/90.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/90.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/90.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/90.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/90.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/90.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/90.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/90.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/90.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/90.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/shiny/90.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/90.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/shiny/90.png"
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/90.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/90.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/90.png",
@@ -84,66 +51,7 @@
             }
         }
     },
-    "base_experience": 97,
-    "base_happiness": 70,
-    "capture_rate": 190,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 98,
-    "growth_rate": "slow",
-    "habitat": "sea",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 90
-    },
-    "color": "purple",
-    "shape": "ball",
-    "egg_groups": [
-        "water3"
-    ],
-    "flavor_text": {
-        "ruby": "At night, this POKéMON uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, SHELLDER closes its shell, but leaves its tongue hanging out.",
-        "sapphire": "At night, this POKéMON uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, SHELLDER closes its shell, but leaves its tongue hanging out.",
-        "emerald": "At night, it burrows a hole in the seafloor with its broad tongue to make a place to sleep. While asleep, it closes its shell, but leaves its tongue hanging out.",
-        "firered": "It is encased in a shell that is harder than diamond. Inside, however, it is surprisingly tender.",
-        "leafgreen": "Its hard shell repels any kind of attack. It is vulnerable only when its shell is open."
-    },
-    "genus": "Bivalve Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "shellder",
-        "evolves_to": [
-            {
-                "species_name": "cloyster",
-                "evolution_details": {
-                    "item": "water-stone",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
         "pearl": {
             "ruby": 50,
@@ -152,7 +60,7 @@
             "firered": 50,
             "leafgreen": 50
         },
-        "big_pearl": {
+        "big-pearl": {
             "ruby": 5,
             "sapphire": 5,
             "emerald": 5,
@@ -161,7 +69,7 @@
         }
     },
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -347,6 +255,36 @@
                     "emerald",
                     "firered-leafgreen",
                     "ruby-sapphire"
+                ]
+            }
+        ],
+        "xd-purification": [
+            {
+                "name": "take-down",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "surf",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "aurora-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "refresh",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
                 ]
             }
         ],
@@ -625,6 +563,83 @@
                     "ruby-sapphire",
                     "xd"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 98,
+    "growth_rate": null,
+    "habitat": "sea",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 90
+    },
+    "color": "purple",
+    "shape": "ball",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "At night, this POKéMON uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, SHELLDER closes its shell, but leaves its tongue hanging out.",
+        "sapphire": "At night, this POKéMON uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, SHELLDER closes its shell, but leaves its tongue hanging out.",
+        "emerald": "At night, it burrows a hole in the seafloor with its broad tongue to make a place to sleep. While asleep, it closes its shell, but leaves its tongue hanging out.",
+        "firered": "It is encased in a shell that is harder than diamond. Inside, however, it is surprisingly tender.",
+        "leafgreen": "Its hard shell repels any kind of attack. It is vulnerable only when its shell is open."
+    },
+    "genus": "Bivalve Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "shellder",
+        "evolves_to": [
+            {
+                "species_name": "cloyster",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "ruby-sapphire",
+                            "emerald",
+                            "firered-leafgreen",
+                            "colosseum",
+                            "xd"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "water-stone",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

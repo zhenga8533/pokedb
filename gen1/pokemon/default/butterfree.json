@@ -8,74 +8,21 @@
         "bug",
         "flying"
     ],
-    "abilities": [
-        {
-            "name": "compound-eyes",
-            "is_hidden": false,
-            "slot": 1
-        }
-    ],
+    "abilities": [],
     "stats": {
         "hp": 60,
         "attack": 45,
         "defense": 50,
-        "special_attack": 80,
-        "special_defense": 80,
-        "speed": 70
+        "speed": 70,
+        "special": 80
     },
-    "ev_yield": [
-        {
-            "stat": "special-attack",
-            "effort": 2
-        },
-        {
-            "stat": "special-defense",
-            "effort": 1
-        }
-    ],
+    "ev_yield": null,
     "height": 11,
     "weight": 320,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/12.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/12.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png",
-        "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/12.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/12.png",
-        "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/12.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
-        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/12.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/12.png",
-        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/12.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/12.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/12.png",
-                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/12.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/12.png",
-                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/female/12.png"
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/12.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/12.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/12.gif",
-                "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/female/12.gif",
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/12.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/12.gif",
-                "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/female/12.gif",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/12.gif",
-                "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/female/12.gif"
-            }
-        },
         "versions": {
-            "red_blue": {
+            "red-blue": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/12.png",
                 "back_gray": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/gray/12.png",
                 "back_transparent": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/transparent/back/12.png",
@@ -93,90 +40,7 @@
             }
         }
     },
-    "base_experience": 160,
-    "base_happiness": 70,
-    "capture_rate": 45,
-    "hatch_counter": 15,
-    "gender_rate": 4,
-    "has_gender_differences": true,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 12,
-    "growth_rate": "medium",
-    "habitat": "forest",
-    "evolves_from_species": "metapod",
-    "pokedex_numbers": {
-        "national": 12,
-        "kanto": 12
-    },
-    "color": "white",
-    "shape": "bug-wings",
-    "egg_groups": [
-        "bug"
-    ],
-    "flavor_text": {
-        "red": "In battle, it flaps its wings at high speed to release highly toxic dust into the air.",
-        "blue": "In battle, it flaps its wings at high speed to release highly toxic dust into the air.",
-        "yellow": "Its wings, covered with poisonous powders, repel water. This allows it to fly in the rain."
-    },
-    "genus": "Butterfly Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "caterpie",
-        "evolves_to": [
-            {
-                "species_name": "metapod",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 7,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": [
-                    {
-                        "species_name": "butterfree",
-                        "evolution_details": {
-                            "item": null,
-                            "trigger": "level-up",
-                            "gender": null,
-                            "held_item": null,
-                            "known_move": null,
-                            "known_move_type": null,
-                            "location": null,
-                            "min_level": 10,
-                            "min_happiness": null,
-                            "min_beauty": null,
-                            "min_affection": null,
-                            "needs_overworld_rain": false,
-                            "party_species": null,
-                            "party_type": null,
-                            "relative_physical_stats": null,
-                            "time_of_day": "",
-                            "trade_species": null,
-                            "turn_upside_down": false
-                        },
-                        "evolves_to": []
-                    }
-                ]
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -184,7 +48,9 @@
                 "name": "razor-wind",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -192,7 +58,9 @@
                 "name": "whirlwind",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -200,7 +68,9 @@
                 "name": "take-down",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -208,7 +78,9 @@
                 "name": "double-edge",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -216,7 +88,9 @@
                 "name": "hyper-beam",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -224,7 +98,9 @@
                 "name": "mega-drain",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -232,7 +108,9 @@
                 "name": "solar-beam",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -240,7 +118,9 @@
                 "name": "toxic",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -248,7 +128,9 @@
                 "name": "psychic",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -256,7 +138,9 @@
                 "name": "rage",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -264,7 +148,9 @@
                 "name": "teleport",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -272,7 +158,9 @@
                 "name": "mimic",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -280,7 +168,9 @@
                 "name": "double-team",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -288,7 +178,9 @@
                 "name": "reflect",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -296,7 +188,9 @@
                 "name": "bide",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -304,7 +198,9 @@
                 "name": "swift",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -319,7 +215,9 @@
                 "name": "psywave",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -327,7 +225,9 @@
                 "name": "rest",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -335,12 +235,14 @@
                 "name": "substitute",
                 "level_learned_at": 0,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "gust",
                 "level_learned_at": 28,
@@ -352,7 +254,9 @@
                 "name": "whirlwind",
                 "level_learned_at": 26,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -366,7 +270,9 @@
                 "name": "supersonic",
                 "level_learned_at": 21,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -380,7 +286,9 @@
                 "name": "psybeam",
                 "level_learned_at": 32,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -394,7 +302,9 @@
                 "name": "poison-powder",
                 "level_learned_at": 15,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -408,7 +318,9 @@
                 "name": "stun-spore",
                 "level_learned_at": 16,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -422,7 +334,9 @@
                 "name": "sleep-powder",
                 "level_learned_at": 17,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -436,7 +350,9 @@
                 "name": "confusion",
                 "level_learned_at": 1,
                 "version_groups": [
+                    "blue-japan",
                     "red-blue",
+                    "red-green-japan",
                     "yellow"
                 ]
             },
@@ -444,7 +360,9 @@
                 "name": "confusion",
                 "level_learned_at": 12,
                 "version_groups": [
-                    "red-blue"
+                    "blue-japan",
+                    "red-blue",
+                    "red-green-japan"
                 ]
             },
             {
@@ -452,6 +370,125 @@
                 "level_learned_at": 10,
                 "version_groups": [
                     "yellow"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": true,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 12,
+    "growth_rate": null,
+    "habitat": "forest",
+    "evolves_from_species": "metapod",
+    "pokedex_numbers": {
+        "national": 12,
+        "kanto": 12
+    },
+    "color": "white",
+    "shape": "bug-wings",
+    "egg_groups": null,
+    "flavor_text": {
+        "red": "In battle, it flaps its wings at high speed to release highly toxic dust into the air.",
+        "blue": "In battle, it flaps its wings at high speed to release highly toxic dust into the air.",
+        "yellow": "Its wings, covered with poisonous powders, repel water. This allows it to fly in the rain."
+    },
+    "genus": "Butterfly Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "caterpie",
+        "evolves_to": [
+            {
+                "species_name": "metapod",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "red-blue",
+                            "yellow",
+                            "red-green-japan",
+                            "blue-japan"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 7,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "species_name": "butterfree",
+                        "availability": "available",
+                        "evolution_details": [
+                            {
+                                "introduced_in_version_group": "red-blue",
+                                "version_groups": [
+                                    "red-blue",
+                                    "yellow",
+                                    "red-green-japan",
+                                    "blue-japan"
+                                ],
+                                "base_form": null,
+                                "evolved_form": null,
+                                "item": null,
+                                "trigger": "level-up",
+                                "gender": null,
+                                "held_item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_level": 10,
+                                "min_happiness": null,
+                                "min_beauty": null,
+                                "min_affection": null,
+                                "min_damage_taken": null,
+                                "min_move_count": null,
+                                "min_steps": null,
+                                "near_special_rock": false,
+                                "needs_multiplayer": false,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "region": null,
+                                "time_of_day": null,
+                                "trade_species": null,
+                                "turn_upside_down": false,
+                                "used_move": null
+                            }
+                        ],
+                        "evolves_to": []
+                    }
                 ]
             }
         ]

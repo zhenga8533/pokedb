@@ -18,8 +18,8 @@
         "hp": 50,
         "attack": 70,
         "defense": 160,
-        "special_attack": 70,
-        "special_defense": 160,
+        "special-attack": 70,
+        "special-defense": 160,
         "speed": 90
     },
     "ev_yield": [
@@ -34,53 +34,20 @@
     ],
     "height": 17,
     "weight": 608,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10002.ogg",
-        "legacy": null
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/386-defense.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/386-defense.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10002.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/386-defense.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10002.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10002.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10002.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10002.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10002.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10002.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/10002.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10002.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/10002.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": null,
                 "front_shiny": null
             },
-            "firered_leafgreen": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/386-defense.png",
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/shiny/386-defense.png",
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/386-defense.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/shiny/386-defense.png"
+            "firered-leafgreen": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/10002.png",
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/shiny/10002.png",
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/10002.png",
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/shiny/10002.png"
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": null,
                 "back_shiny": null,
                 "front_default": null,
@@ -88,18 +55,454 @@
             }
         }
     },
-    "base_experience": 215,
-    "base_happiness": 0,
-    "capture_rate": 3,
-    "hatch_counter": 120,
-    "gender_rate": -1,
+    "base_experience": null,
+    "held_items": {},
+    "moves": {
+        "tutor": [
+            {
+                "name": "mega-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "mega-kick",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "body-slam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "double-edge",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "counter",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "seismic-toss",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "thunder-wave",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "mimic",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "dream-eater",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "rock-slide",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "substitute",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            }
+        ],
+        "machine": [
+            {
+                "name": "cut",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "ice-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "hyper-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "strength",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "solar-beam",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "thunder",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "toxic",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "double-team",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "light-screen",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "reflect",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "flash",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "rest",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "protect",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "return",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "frustration",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "safeguard",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "hidden-power",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "rain-dance",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "sunny-day",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "shadow-ball",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "rock-smash",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "torment",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "facade",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "focus-punch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "taunt",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "brick-break",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "skill-swap",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "snatch",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "secret-power",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "rock-tomb",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "aerial-ace",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "calm-mind",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "shock-wave",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "water-pulse",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            }
+        ],
+        "level-up": [
+            {
+                "name": "wrap",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "leer",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "counter",
+                "level_learned_at": 50,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "psychic",
+                "level_learned_at": 25,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "teleport",
+                "level_learned_at": 10,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "night-shade",
+                "level_learned_at": 5,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "recover",
+                "level_learned_at": 40,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "amnesia",
+                "level_learned_at": 35,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "spikes",
+                "level_learned_at": 20,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "mirror-coat",
+                "level_learned_at": 50,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "knock-off",
+                "level_learned_at": 15,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "snatch",
+                "level_learned_at": 30,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "iron-defense",
+                "level_learned_at": 35,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            },
+            {
+                "name": "psycho-boost",
+                "level_learned_at": 45,
+                "version_groups": [
+                    "firered-leafgreen"
+                ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": true,
-    "forms_switchable": true,
+    "forms_switchable": null,
     "order": 416,
-    "growth_rate": "slow",
+    "growth_rate": null,
     "habitat": "rare",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -108,9 +511,7 @@
     },
     "color": "red",
     "shape": "humanoid",
-    "egg_groups": [
-        "no-eggs"
-    ],
+    "egg_groups": null,
     "flavor_text": {
         "ruby": "The DNA of a space virus underwent a sudden mutation upon exposure to a laser beam and resulted in DEOXYS. The crystalline organ on this POKéMON’s chest appears to be its brain.",
         "sapphire": "DEOXYS emerged from a virus that came from space. It is highly intelligent and wields psychokinetic powers. This POKéMON shoots lasers from the crystalline organ on its chest.",
@@ -123,517 +524,6 @@
     "evolution_chain": {
         "species_name": "deoxys",
         "evolves_to": []
-    },
-    "held_items": {},
-    "moves": {
-        "machine": [
-            {
-                "name": "cut",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "ice-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "hyper-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "strength",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "solar-beam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "thunderbolt",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "thunder",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "toxic",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "psychic",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "double-team",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "light-screen",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "reflect",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "flash",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "rest",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "protect",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "return",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "frustration",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "safeguard",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "hidden-power",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "rain-dance",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "sunny-day",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "shadow-ball",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "rock-smash",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "torment",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "facade",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "focus-punch",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "taunt",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "brick-break",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "skill-swap",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "snatch",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "secret-power",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "rock-tomb",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "aerial-ace",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "calm-mind",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "shock-wave",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "water-pulse",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            }
-        ],
-        "tutor": [
-            {
-                "name": "body-slam",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "xd"
-                ]
-            },
-            {
-                "name": "double-edge",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "xd"
-                ]
-            },
-            {
-                "name": "seismic-toss",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "xd"
-                ]
-            },
-            {
-                "name": "thunder-wave",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "xd"
-                ]
-            },
-            {
-                "name": "mimic",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "xd"
-                ]
-            },
-            {
-                "name": "dream-eater",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "xd"
-                ]
-            },
-            {
-                "name": "substitute",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "xd"
-                ]
-            },
-            {
-                "name": "nightmare",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "xd"
-                ]
-            },
-            {
-                "name": "icy-wind",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "xd"
-                ]
-            },
-            {
-                "name": "swagger",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "xd"
-                ]
-            }
-        ],
-        "level_up": [
-            {
-                "name": "wrap",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "leer",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "hyper-beam",
-                "level_learned_at": 50,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "psychic",
-                "level_learned_at": 25,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "teleport",
-                "level_learned_at": 10,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "night-shade",
-                "level_learned_at": 5,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "recover",
-                "level_learned_at": 40,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "pursuit",
-                "level_learned_at": 20,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "knock-off",
-                "level_learned_at": 15,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "snatch",
-                "level_learned_at": 30,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "cosmic-power",
-                "level_learned_at": 35,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            },
-            {
-                "name": "psycho-boost",
-                "level_learned_at": 45,
-                "version_groups": [
-                    "colosseum",
-                    "ruby-sapphire",
-                    "xd"
-                ]
-            }
-        ]
     },
     "forms": [
         {

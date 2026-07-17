@@ -3,98 +3,64 @@
     "name": "ancient-power",
     "source_url": "https://pokeapi.co/api/v2/move/246/",
     "accuracy": {
-        "ruby_sapphire": 100,
+        "ruby-sapphire": 100,
         "emerald": 100,
-        "firered_leafgreen": 100,
+        "firered-leafgreen": 100,
         "colosseum": 100,
         "xd": 100
     },
     "power": {
-        "ruby_sapphire": 60,
+        "ruby-sapphire": 60,
         "emerald": 60,
-        "firered_leafgreen": 60,
+        "firered-leafgreen": 60,
         "colosseum": 60,
         "xd": 60
     },
     "pp": {
-        "ruby_sapphire": 5,
+        "ruby-sapphire": 5,
         "emerald": 5,
-        "firered_leafgreen": 5,
+        "firered-leafgreen": 5,
         "colosseum": 5,
         "xd": 5
     },
-    "priority": 0,
-    "damage_class": "special",
+    "priority": null,
+    "damage_class": "physical",
     "type": {
-        "ruby_sapphire": "rock",
+        "ruby-sapphire": "rock",
         "emerald": "rock",
-        "firered_leafgreen": "rock",
+        "firered-leafgreen": "rock",
         "colosseum": "rock",
         "xd": "rock"
     },
-    "target": "selected-pokemon",
+    "target": null,
     "generation": "generation-ii",
     "effect_chance": {
-        "ruby_sapphire": 10,
+        "ruby-sapphire": 10,
         "emerald": 10,
-        "firered_leafgreen": 10,
+        "firered-leafgreen": 10,
         "colosseum": 10,
         "xd": 10
     },
     "effect": {
-        "ruby_sapphire": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
-        "emerald": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
-        "firered_leafgreen": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
-        "colosseum": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage.",
-        "xd": "Inflicts regular damage. Has a 10% chance to raise all of the user’s stats one stage."
+        "ruby-sapphire": "Inflicts regular damage. Has a chance to raise all of the user’s stats one stage.",
+        "emerald": "Inflicts regular damage. Has a chance to raise all of the user’s stats one stage.",
+        "firered-leafgreen": "Inflicts regular damage. Has a chance to raise all of the user’s stats one stage.",
+        "colosseum": "Inflicts regular damage. Has a chance to raise all of the user’s stats one stage.",
+        "xd": "Inflicts regular damage. Has a chance to raise all of the user’s stats one stage."
     },
     "short_effect": {
-        "ruby_sapphire": "Has a 10% chance to raise all of the user’s stats by one stage.",
-        "emerald": "Has a 10% chance to raise all of the user’s stats by one stage.",
-        "firered_leafgreen": "Has a 10% chance to raise all of the user’s stats by one stage.",
-        "colosseum": "Has a 10% chance to raise all of the user’s stats by one stage.",
-        "xd": "Has a 10% chance to raise all of the user’s stats by one stage."
+        "ruby-sapphire": "Has a chance to raise all of the user’s stats by one stage.",
+        "emerald": "Has a chance to raise all of the user’s stats by one stage.",
+        "firered-leafgreen": "Has a chance to raise all of the user’s stats by one stage.",
+        "colosseum": "Has a chance to raise all of the user’s stats by one stage.",
+        "xd": "Has a chance to raise all of the user’s stats by one stage."
     },
     "flavor_text": {
-        "ruby_sapphire": "An attack that may raise all stats.",
+        "ruby-sapphire": "An attack that may raise all stats.",
         "emerald": "An attack that may raise all stats.",
-        "firered_leafgreen": "An ancient power is used to attack. It may also raise all the user’s stats."
+        "firered-leafgreen": "An ancient power is used to attack. It may also raise all the user’s stats."
     },
-    "stat_changes": [
-        {
-            "change": 1,
-            "stat": "attack"
-        },
-        {
-            "change": 1,
-            "stat": "defense"
-        },
-        {
-            "change": 1,
-            "stat": "special-attack"
-        },
-        {
-            "change": 1,
-            "stat": "special-defense"
-        },
-        {
-            "change": 1,
-            "stat": "speed"
-        }
-    ],
+    "stat_changes": null,
     "machine": null,
-    "metadata": {
-        "ailment": "none",
-        "category": "damage+raise",
-        "min_hits": null,
-        "max_hits": null,
-        "min_turns": null,
-        "max_turns": null,
-        "drain": 0,
-        "healing": 0,
-        "crit_rate": 0,
-        "ailment_chance": 0,
-        "flinch_chance": 0,
-        "stat_chance": 10
-    }
+    "metadata": null
 }

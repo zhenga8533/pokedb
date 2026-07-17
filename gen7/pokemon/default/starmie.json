@@ -29,8 +29,8 @@
         "hp": 60,
         "attack": 75,
         "defense": 85,
-        "special_attack": 100,
-        "special_defense": 85,
+        "special-attack": 100,
+        "special-defense": 85,
         "speed": 115
     },
     "ev_yield": [
@@ -41,47 +41,14 @@
     ],
     "height": 11,
     "weight": 800,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/121.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/121.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/121.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/121.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/121.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/121.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/121.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/121.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/121.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/121.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/121.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/121.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/121.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/121.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "icons": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/121.png",
                 "front_female": null
             },
-            "ultra_sun_ultra_moon": {
+            "ultra-sun-ultra-moon": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/121.png",
                 "front_female": null,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/121.png",
@@ -89,80 +56,19 @@
             }
         }
     },
-    "base_experience": 182,
-    "base_happiness": 70,
-    "capture_rate": 60,
-    "hatch_counter": 20,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 138,
-    "growth_rate": "slow",
-    "habitat": "sea",
-    "evolves_from_species": "staryu",
-    "pokedex_numbers": {
-        "national": 121,
-        "original_alola": 185
-    },
-    "color": "purple",
-    "shape": "blob",
-    "egg_groups": [
-        "water3"
-    ],
-    "flavor_text": {
-        "sun": "Its shining core is thought to receive and transmit enigmatic signals. It has been known to cause headaches in those who approach it.",
-        "moon": "Its unusual body shape, reminiscent of abstract art, led local people to spread rumors that this Pokémon may be an invader from outer space.",
-        "ultra_sun": "Its sparkling core is called “the gem of the sea.” This core can be made into high-priced accessories that are traded in secret.",
-        "ultra_moon": "It rotates its geometrically shaped body to swim through the water. It always seems to be sending out mysterious radio waves.",
-        "lets_go_pikachu": "The center section is named the core. People think it is communicating when it glows in seven colors.",
-        "lets_go_eevee": "The center section is named the core. People think it is communicating when it glows in seven colors."
-    },
-    "genus": "Mysterious Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "staryu",
-        "evolves_to": [
-            {
-                "species_name": "starmie",
-                "evolution_details": {
-                    "item": "water-stone",
-                    "trigger": "use-item",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": null,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": null,
     "held_items": {
         "stardust": {
             "sun": 50,
             "moon": 50,
-            "ultra_sun": 50,
-            "ultra_moon": 50
+            "ultra-sun": 50,
+            "ultra-moon": 50
         },
-        "star_piece": {
+        "star-piece": {
             "sun": 5,
             "moon": 5,
-            "ultra_sun": 5,
-            "ultra_moon": 5
+            "ultra-sun": 5,
+            "ultra-moon": 5
         }
     },
     "moves": {
@@ -497,7 +403,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "tackle",
                 "level_learned_at": 1,
@@ -668,6 +574,83 @@
                 "version_groups": [
                     "ultra-sun-ultra-moon"
                 ]
+            }
+        ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 138,
+    "growth_rate": null,
+    "habitat": "sea",
+    "evolves_from_species": "staryu",
+    "pokedex_numbers": {
+        "national": 121,
+        "original-alola": 185
+    },
+    "color": "purple",
+    "shape": "blob",
+    "egg_groups": null,
+    "flavor_text": {
+        "sun": "Its shining core is thought to receive and transmit enigmatic signals. It has been known to cause headaches in those who approach it.",
+        "moon": "Its unusual body shape, reminiscent of abstract art, led local people to spread rumors that this Pokémon may be an invader from outer space.",
+        "ultra-sun": "Its sparkling core is called “the gem of the sea.” This core can be made into high-priced accessories that are traded in secret.",
+        "ultra-moon": "It rotates its geometrically shaped body to swim through the water. It always seems to be sending out mysterious radio waves.",
+        "lets-go-pikachu": "The center section is named the core. People think it is communicating when it glows in seven colors.",
+        "lets-go-eevee": "The center section is named the core. People think it is communicating when it glows in seven colors."
+    },
+    "genus": "Mysterious Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "staryu",
+        "evolves_to": [
+            {
+                "species_name": "starmie",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "red-blue",
+                        "version_groups": [
+                            "sun-moon",
+                            "ultra-sun-ultra-moon",
+                            "lets-go-pikachu-lets-go-eevee"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": "water-stone",
+                        "trigger": "use-item",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": null,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

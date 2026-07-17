@@ -23,8 +23,8 @@
         "hp": 48,
         "attack": 48,
         "defense": 48,
-        "special_attack": 48,
-        "special_defense": 48,
+        "special-attack": 48,
+        "special-defense": 48,
         "speed": 48
     },
     "ev_yield": [
@@ -55,7 +55,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/132.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/132.png"
             },
@@ -71,13 +71,34 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/132.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 101,
+    "held_items": {},
+    "moves": {
+        "level-up": [
+            {
+                "name": "transform",
+                "level_learned_at": 1,
+                "version_groups": [
+                    "scarlet-violet"
+                ]
+            }
+        ],
+        "train": [
+            {
+                "name": "transform",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "champions"
+                ]
+            }
+        ]
+    },
     "base_happiness": 70,
     "capture_rate": 35,
     "hatch_counter": 20,
@@ -106,27 +127,6 @@
     "evolution_chain": {
         "species_name": "ditto",
         "evolves_to": []
-    },
-    "held_items": {},
-    "moves": {
-        "level_up": [
-            {
-                "name": "transform",
-                "level_learned_at": 1,
-                "version_groups": [
-                    "scarlet-violet"
-                ]
-            }
-        ],
-        "train": [
-            {
-                "name": "transform",
-                "level_learned_at": 0,
-                "version_groups": [
-                    "champions"
-                ]
-            }
-        ]
     },
     "forms": [
         {

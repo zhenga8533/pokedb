@@ -13,14 +13,19 @@
             "name": "pressure",
             "is_hidden": false,
             "slot": 1
+        },
+        {
+            "name": "lightning-rod",
+            "is_hidden": true,
+            "slot": 3
         }
     ],
     "stats": {
         "hp": 90,
         "attack": 90,
         "defense": 85,
-        "special_attack": 125,
-        "special_defense": 90,
+        "special-attack": 125,
+        "special-defense": 90,
         "speed": 100
     },
     "ev_yield": [
@@ -31,53 +36,20 @@
     ],
     "height": 16,
     "weight": 526,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/145.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/145.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/145.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/145.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/145.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/145.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/145.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/145.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/145.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/145.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/145.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/145.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/145.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/145.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/145.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/145.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/145.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/shiny/145.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/145.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/shiny/145.png"
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/145.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/145.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/145.png",
@@ -85,41 +57,7 @@
             }
         }
     },
-    "base_experience": 216,
-    "base_happiness": 35,
-    "capture_rate": 3,
-    "hatch_counter": 80,
-    "gender_rate": -1,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": true,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 177,
-    "growth_rate": "slow",
-    "habitat": "rare",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 145
-    },
-    "color": "yellow",
-    "shape": "wings",
-    "egg_groups": [
-        "no-eggs"
-    ],
-    "flavor_text": {
-        "ruby": "ZAPDOS is a legendary bird POKéMON that has the ability to control electricity. It usually lives in thunderclouds. The POKéMON gains power if it is stricken by lightning bolts.",
-        "sapphire": "ZAPDOS is a legendary bird POKéMON that has the ability to control electricity. It usually lives in thunderclouds. The POKéMON gains power if it is stricken by lightning bolts.",
-        "emerald": "ZAPDOS is a legendary bird POKéMON that has the ability to control electricity. It usually lives in thunderclouds. It gains power if it is stricken by lightning bolts.",
-        "firered": "One of the legendary bird POKéMON. While it is flying, it makes crackling and snapping sounds.",
-        "leafgreen": "A legendary bird POKéMON that is said to appear from clouds while dropping enormous lightning bolts."
-    },
-    "genus": "Electric Pokémon",
-    "generation": "generation-i",
-    "evolution_chain": {
-        "species_name": "zapdos",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {},
     "moves": {
         "machine": [
@@ -465,7 +403,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "peck",
                 "level_learned_at": 1,
@@ -565,7 +503,69 @@
                     "xd"
                 ]
             }
+        ],
+        "xd-purification": [
+            {
+                "name": "thunderbolt",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "baton-pass",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "metal-sound",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            },
+            {
+                "name": "extrasensory",
+                "level_learned_at": 0,
+                "version_groups": [
+                    "xd"
+                ]
+            }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": true,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 177,
+    "growth_rate": null,
+    "habitat": "rare",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 145
+    },
+    "color": "yellow",
+    "shape": "wings",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "ZAPDOS is a legendary bird POKéMON that has the ability to control electricity. It usually lives in thunderclouds. The POKéMON gains power if it is stricken by lightning bolts.",
+        "sapphire": "ZAPDOS is a legendary bird POKéMON that has the ability to control electricity. It usually lives in thunderclouds. The POKéMON gains power if it is stricken by lightning bolts.",
+        "emerald": "ZAPDOS is a legendary bird POKéMON that has the ability to control electricity. It usually lives in thunderclouds. It gains power if it is stricken by lightning bolts.",
+        "firered": "One of the legendary bird POKéMON. While it is flying, it makes crackling and snapping sounds.",
+        "leafgreen": "A legendary bird POKéMON that is said to appear from clouds while dropping enormous lightning bolts."
+    },
+    "genus": "Electric Pokémon",
+    "generation": "generation-i",
+    "evolution_chain": {
+        "species_name": "zapdos",
+        "evolves_to": []
     },
     "forms": [
         {

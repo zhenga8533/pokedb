@@ -28,8 +28,8 @@
         "hp": 35,
         "attack": 100,
         "defense": 50,
-        "special_attack": 50,
-        "special_defense": 70,
+        "special-attack": 50,
+        "special-defense": 70,
         "speed": 120
     },
     "ev_yield": [
@@ -60,7 +60,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/961.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/961.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/961.png"
             },
@@ -76,73 +76,16 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/961.png",
                 "front_female": null
             }
         }
     },
     "base_experience": 149,
-    "base_happiness": 50,
-    "capture_rate": 50,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 930,
-    "growth_rate": "medium",
-    "habitat": null,
-    "evolves_from_species": "wiglett",
-    "pokedex_numbers": {
-        "national": 961,
-        "paldea": 289
-    },
-    "color": "red",
-    "shape": "blob",
-    "egg_groups": [
-        "water3"
-    ],
-    "flavor_text": {
-        "scarlet": "It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den.",
-        "violet": "A variety of fish Pokémon, Wugtrio was once considered to be a regional form of Dugtrio."
-    },
-    "genus": "Garden Eel Pokémon",
-    "generation": "generation-ix",
-    "evolution_chain": {
-        "species_name": "wiglett",
-        "evolves_to": [
-            {
-                "species_name": "wugtrio",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 26,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
     "held_items": {},
     "moves": {
-        "level_up": [
+        "level-up": [
             {
                 "name": "slam",
                 "level_learned_at": 16,
@@ -466,6 +409,84 @@
                 "version_groups": [
                     "scarlet-violet"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 50,
+    "capture_rate": 50,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": false,
+    "order": 930,
+    "growth_rate": "medium",
+    "habitat": null,
+    "evolves_from_species": "wiglett",
+    "pokedex_numbers": {
+        "national": 961,
+        "paldea": 289
+    },
+    "color": "red",
+    "shape": "blob",
+    "egg_groups": [
+        "water3"
+    ],
+    "flavor_text": {
+        "scarlet": "It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den.",
+        "violet": "A variety of fish Pokémon, Wugtrio was once considered to be a regional form of Dugtrio."
+    },
+    "genus": "Garden Eel Pokémon",
+    "generation": "generation-ix",
+    "evolution_chain": {
+        "species_name": "wiglett",
+        "evolves_to": [
+            {
+                "species_name": "wugtrio",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "scarlet-violet",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 26,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },

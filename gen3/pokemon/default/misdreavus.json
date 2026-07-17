@@ -18,65 +18,36 @@
         "hp": 60,
         "attack": 60,
         "defense": 60,
-        "special_attack": 85,
-        "special_defense": 85,
+        "special-attack": 85,
+        "special-defense": 85,
         "speed": 85
     },
     "ev_yield": [
         {
             "stat": "special-defense",
             "effort": 1
+        },
+        {
+            "stat": "special-attack",
+            "effort": 1
         }
     ],
     "height": 7,
     "weight": 10,
-    "cries": {
-        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/200.ogg",
-        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/200.ogg"
-    },
+    "cries": null,
     "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/200.png",
-        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/200.png",
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/200.png",
-        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/200.png",
-        "other": {
-            "dream_world": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/200.svg",
-                "front_female": null
-            },
-            "home": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/200.png",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/200.png",
-                "front_shiny_female": null
-            },
-            "official_artwork": {
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/200.png",
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/200.png"
-            },
-            "showdown": {
-                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/200.gif",
-                "back_female": null,
-                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/200.gif",
-                "back_shiny_female": null,
-                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/200.gif",
-                "front_female": null,
-                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/200.gif",
-                "front_shiny_female": null
-            }
-        },
         "versions": {
             "emerald": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/200.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/200.png"
             },
-            "firered_leafgreen": {
+            "firered-leafgreen": {
                 "back_default": null,
                 "back_shiny": null,
                 "front_default": null,
                 "front_shiny": null
             },
-            "ruby_sapphire": {
+            "ruby-sapphire": {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/200.png",
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/200.png",
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/200.png",
@@ -84,48 +55,15 @@
             }
         }
     },
-    "base_experience": 147,
-    "base_happiness": 35,
-    "capture_rate": 45,
-    "hatch_counter": 25,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": false,
-    "order": 229,
-    "growth_rate": "fast",
-    "habitat": "cave",
-    "evolves_from_species": null,
-    "pokedex_numbers": {
-        "national": 200
-    },
-    "color": "gray",
-    "shape": "ball",
-    "egg_groups": [
-        "indeterminate"
-    ],
-    "flavor_text": {
-        "ruby": "MISDREAVUS frightens people with a creepy, sobbing cry. The POKéMON apparently uses its red spheres to absorb the fearful feelings of foes and turn them into nutrition.",
-        "sapphire": "MISDREAVUS frightens people with a creepy, sobbing cry. The POKéMON apparently uses its red spheres to absorb the fearful feelings of foes and turn them into nutrition.",
-        "emerald": "A MISDREAVUS frightens people with a creepy, sobbing cry. It apparently uses its red spheres to absorb the fear of foes as its nutrition.",
-        "firered": "It loves to bite and yank people’s hair from behind without warning, just to see their shocked reactions.",
-        "leafgreen": "It likes playing mischievous tricks such as screaming and wailing to startle people at night."
-    },
-    "genus": "Screech Pokémon",
-    "generation": "generation-ii",
-    "evolution_chain": {
-        "species_name": "misdreavus",
-        "evolves_to": []
-    },
+    "base_experience": null,
     "held_items": {
-        "spell_tag": {
+        "spell-tag": {
             "ruby": 5,
             "sapphire": 5,
             "emerald": 5,
             "firered": 5,
-            "leafgreen": 5
+            "leafgreen": 5,
+            "colosseum": 100
         }
     },
     "moves": {
@@ -233,7 +171,7 @@
                 ]
             }
         ],
-        "level_up": [
+        "level-up": [
             {
                 "name": "growl",
                 "level_learned_at": 1,
@@ -660,6 +598,38 @@
                 ]
             }
         ]
+    },
+    "base_happiness": null,
+    "capture_rate": null,
+    "hatch_counter": null,
+    "gender_rate": null,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": null,
+    "order": 229,
+    "growth_rate": null,
+    "habitat": "cave",
+    "evolves_from_species": null,
+    "pokedex_numbers": {
+        "national": 200
+    },
+    "color": "gray",
+    "shape": "ball",
+    "egg_groups": null,
+    "flavor_text": {
+        "ruby": "MISDREAVUS frightens people with a creepy, sobbing cry. The POKéMON apparently uses its red spheres to absorb the fearful feelings of foes and turn them into nutrition.",
+        "sapphire": "MISDREAVUS frightens people with a creepy, sobbing cry. The POKéMON apparently uses its red spheres to absorb the fearful feelings of foes and turn them into nutrition.",
+        "emerald": "A MISDREAVUS frightens people with a creepy, sobbing cry. It apparently uses its red spheres to absorb the fear of foes as its nutrition.",
+        "firered": "It loves to bite and yank people’s hair from behind without warning, just to see their shocked reactions.",
+        "leafgreen": "It likes playing mischievous tricks such as screaming and wailing to startle people at night."
+    },
+    "genus": "Screech Pokémon",
+    "generation": "generation-ii",
+    "evolution_chain": {
+        "species_name": "misdreavus",
+        "evolves_to": []
     },
     "forms": [
         {

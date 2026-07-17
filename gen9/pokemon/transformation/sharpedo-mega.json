@@ -19,8 +19,8 @@
         "hp": 70,
         "attack": 140,
         "defense": 70,
-        "special_attack": 110,
-        "special_defense": 65,
+        "special-attack": 110,
+        "special-defense": 65,
         "speed": 105
     },
     "ev_yield": [
@@ -51,7 +51,7 @@
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/10070.png",
                 "front_shiny_female": null
             },
-            "official_artwork": {
+            "official-artwork": {
                 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10070.png",
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10070.png"
             },
@@ -67,66 +67,13 @@
             }
         },
         "versions": {
-            "scarlet_violet": {
+            "scarlet-violet": {
                 "front_default": null,
                 "front_female": null
             }
         }
     },
-    "base_experience": 161,
-    "base_happiness": 35,
-    "capture_rate": 60,
-    "hatch_counter": 20,
-    "gender_rate": 4,
-    "has_gender_differences": false,
-    "is_baby": false,
-    "is_legendary": false,
-    "is_mythical": false,
-    "forms_switchable": true,
-    "order": 347,
-    "growth_rate": "slow",
-    "habitat": "sea",
-    "evolves_from_species": "carvanha",
-    "pokedex_numbers": {
-        "national": 319
-    },
-    "color": "blue",
-    "shape": "fish",
-    "egg_groups": [
-        "water2"
-    ],
-    "flavor_text": {},
-    "genus": "Brutal Pokémon",
-    "generation": "generation-iii",
-    "evolution_chain": {
-        "species_name": "carvanha",
-        "evolves_to": [
-            {
-                "species_name": "sharpedo",
-                "evolution_details": {
-                    "item": null,
-                    "trigger": "level-up",
-                    "gender": null,
-                    "held_item": null,
-                    "known_move": null,
-                    "known_move_type": null,
-                    "location": null,
-                    "min_level": 30,
-                    "min_happiness": null,
-                    "min_beauty": null,
-                    "min_affection": null,
-                    "needs_overworld_rain": false,
-                    "party_species": null,
-                    "party_type": null,
-                    "relative_physical_stats": null,
-                    "time_of_day": "",
-                    "trade_species": null,
-                    "turn_upside_down": false
-                },
-                "evolves_to": []
-            }
-        ]
-    },
+    "base_experience": 196,
     "held_items": {},
     "moves": {
         "train": [
@@ -528,6 +475,80 @@
                 "version_groups": [
                     "champions"
                 ]
+            }
+        ]
+    },
+    "base_happiness": 35,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
+    "has_gender_differences": false,
+    "is_baby": false,
+    "is_legendary": false,
+    "is_mythical": false,
+    "forms_switchable": true,
+    "order": 347,
+    "growth_rate": "slow",
+    "habitat": "sea",
+    "evolves_from_species": "carvanha",
+    "pokedex_numbers": {
+        "national": 319
+    },
+    "color": "blue",
+    "shape": "fish",
+    "egg_groups": [
+        "water2"
+    ],
+    "flavor_text": {},
+    "genus": "Brutal Pokémon",
+    "generation": "generation-iii",
+    "evolution_chain": {
+        "species_name": "carvanha",
+        "evolves_to": [
+            {
+                "species_name": "sharpedo",
+                "availability": "available",
+                "evolution_details": [
+                    {
+                        "introduced_in_version_group": "ruby-sapphire",
+                        "version_groups": [
+                            "scarlet-violet",
+                            "the-teal-mask",
+                            "the-indigo-disk",
+                            "legends-za",
+                            "mega-dimension",
+                            "champions"
+                        ],
+                        "base_form": null,
+                        "evolved_form": null,
+                        "item": null,
+                        "trigger": "level-up",
+                        "gender": null,
+                        "held_item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_level": 30,
+                        "min_happiness": null,
+                        "min_beauty": null,
+                        "min_affection": null,
+                        "min_damage_taken": null,
+                        "min_move_count": null,
+                        "min_steps": null,
+                        "near_special_rock": false,
+                        "needs_multiplayer": false,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "region": null,
+                        "time_of_day": null,
+                        "trade_species": null,
+                        "turn_upside_down": false,
+                        "used_move": null
+                    }
+                ],
+                "evolves_to": []
             }
         ]
     },
