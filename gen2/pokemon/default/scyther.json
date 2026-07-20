@@ -20,7 +20,9 @@
     "ev_yield": null,
     "height": 15,
     "weight": 560,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/123.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 100,
     "held_items": {},
     "moves": {
         "egg": [
@@ -371,17 +373,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 141,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -390,7 +392,9 @@
     },
     "color": "green",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "gold": "It slashes through grass with its sharp scythes, moving too fast for the human eye to track.",
         "silver": "When it moves, it leaves only a blur. If it hides in grass, its pro­ tective colors make it invisible.",
@@ -444,6 +448,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "scyther",

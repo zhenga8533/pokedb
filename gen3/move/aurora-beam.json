@@ -23,7 +23,7 @@
         "colosseum": 20,
         "xd": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "special",
     "type": {
         "ruby-sapphire": "ice",
@@ -32,7 +32,7 @@
         "colosseum": "ice",
         "xd": "ice"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "ruby-sapphire": 10,
@@ -60,7 +60,31 @@
         "emerald": "Fires a rainbow-colored beam that may lower ATTACK.",
         "firered-leafgreen": "A rainbow-colored attack beam. It may lower the foe’s ATTACK stat."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "attack"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 10
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

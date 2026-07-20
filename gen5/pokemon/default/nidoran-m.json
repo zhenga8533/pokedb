@@ -40,7 +40,9 @@
     ],
     "height": 5,
     "weight": 90,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/32.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 55,
     "held_items": {},
     "moves": {
         "machine": [
@@ -559,17 +561,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 235,
+    "hatch_counter": 20,
+    "gender_rate": 0,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 33,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -577,7 +579,10 @@
     },
     "color": "purple",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "ground"
+    ],
     "flavor_text": {
         "black": "It scans its surroundings by raising its ears out of the grass. Its toxic horn is for protection.",
         "white": "It scans its surroundings by raising its ears out of the grass. Its toxic horn is for protection.",
@@ -674,6 +679,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "nidoran-m",

@@ -40,7 +40,9 @@
     ],
     "height": 3,
     "weight": 63,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/422.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -57,7 +59,7 @@
         "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/422-east.png",
         "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/422-east.png"
     },
-    "base_experience": null,
+    "base_experience": 65,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -533,17 +535,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 450,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -552,7 +554,10 @@
     },
     "color": "purple",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "indeterminate"
+    ],
     "flavor_text": {
         "sword": "This Pokémon’s habitat shapes its physique. According to some theories, life in warm ocean waters causes this variation to develop.",
         "shield": "Subjecting this Pokémon to a strong force causes it to secrete a strange purple fluid. Though harmless, the fluid is awfully sticky.",
@@ -609,6 +614,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "shellos",

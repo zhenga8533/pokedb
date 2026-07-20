@@ -35,7 +35,9 @@
     ],
     "height": 9,
     "weight": 265,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/196.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -50,7 +52,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 184,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -548,17 +550,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 35,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 161,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "urban",
     "evolves_from_species": "eevee",
     "pokedex_numbers": {
@@ -567,7 +569,9 @@
     },
     "color": "purple",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "sun": "It can instantaneously sense its opponent’s movements by feeling air currents with its fine fur.",
         "moon": "It unleashes psychic power from the orb on its forehead. When its power is exhausted, the orb grows dull and dark.",
@@ -915,6 +919,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "espeon",

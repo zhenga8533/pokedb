@@ -31,7 +31,9 @@
     ],
     "height": 20,
     "weight": 1000,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/357.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 161,
     "held_items": {},
     "moves": {
         "egg": [
@@ -592,17 +594,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 200,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 386,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -611,7 +613,10 @@
     },
     "color": "green",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "plant"
+    ],
     "flavor_text": {
         "leafgreen": "It lives in tropical jungles. The bunch of fruit around its neck is delicious. The fruit grows twice a year.",
         "ruby": "The bunches of fruit around TROPIUS’s neck are very popular with children. This POKéMON loves fruit, and eats it continuously. Apparently, its love for fruit resulted in its own outgrowth of fruit.",
@@ -625,6 +630,16 @@
         "species_name": "tropius",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "tropius",

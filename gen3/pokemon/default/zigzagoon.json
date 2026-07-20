@@ -30,7 +30,9 @@
     ],
     "height": 4,
     "weight": 175,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/263.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 56,
     "held_items": {
         "oran-berry": {
             "ruby": 5,
@@ -640,17 +642,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 288,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -659,7 +661,9 @@
     },
     "color": "brown",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "ruby": "ZIGZAGOON restlessly wanders everywhere at all times. This POKéMON does so because it is very curious. It becomes interested in anything that it happens to see.",
         "sapphire": "The hair on ZIGZAGOON’s back is bristly. It rubs the hard back hair against trees to leave its territorial markings. This POKéMON may play dead to fool foes in battle.",
@@ -718,6 +722,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "zigzagoon",

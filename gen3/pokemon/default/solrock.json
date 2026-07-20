@@ -31,7 +31,9 @@
     ],
     "height": 12,
     "weight": 1540,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/338.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 161,
     "held_items": {
         "sun-stone": {
             "ruby": 5,
@@ -621,17 +623,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 366,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "cave",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -640,7 +642,9 @@
     },
     "color": "red",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "ruby": "SOLROCK is a new species of POKéMON that is said to have fallen from space. It floats in air and moves silently. In battle, this POKéMON releases intensely bright light.",
         "sapphire": "Sunlight is the source of SOLROCK’s power. It is said to possess the ability to read the emotions of others. This POKéMON gives off intense heat while rotating its body.",
@@ -654,6 +658,16 @@
         "species_name": "solrock",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "solrock",

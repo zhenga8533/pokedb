@@ -35,7 +35,9 @@
     ],
     "height": 3,
     "weight": 5,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/869.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -52,7 +54,7 @@
         "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/869-vanilla-cream-love-sweet.png",
         "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/869-vanilla-cream-love-sweet.png"
     },
-    "base_experience": null,
+    "base_experience": 173,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -426,17 +428,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 50,
+    "capture_rate": 100,
+    "hatch_counter": 20,
+    "gender_rate": 8,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 869,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "milcery",
     "pokedex_numbers": {
@@ -445,7 +447,10 @@
     },
     "color": "white",
     "shape": "blob",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy",
+        "indeterminate"
+    ],
     "flavor_text": {
         "sword": "When it trusts a Trainer, it will treat them to berries it’s decorated with cream.",
         "shield": "When Alcremie is content, the cream it secretes from its hands becomes sweeter and richer."
@@ -501,6 +506,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "alcremie",

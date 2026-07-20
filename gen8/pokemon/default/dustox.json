@@ -36,7 +36,9 @@
     ],
     "height": 12,
     "weight": 316,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/269.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 173,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -436,17 +438,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 294,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "cascoon",
     "pokedex_numbers": {
@@ -454,7 +456,9 @@
     },
     "color": "green",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "legends-arceus": "Tends to be drawn to bonfires on dark nights. Difficult to chase away from settlements because of the way it scatters highly toxic scales."
     },
@@ -643,6 +647,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "dustox",

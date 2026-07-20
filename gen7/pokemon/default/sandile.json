@@ -41,7 +41,9 @@
     ],
     "height": 7,
     "weight": 152,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/551.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 58,
     "held_items": {
         "black-glasses": {
             "sun": 5,
@@ -602,17 +604,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 180,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 552,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -621,7 +623,9 @@
     },
     "color": "brown",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "sun": "It submerges itself in sand and moves as if swimming. This wise behavior keeps its enemies from finding it and maintains its temperature.",
         "moon": "It conceals itself in the sand and chomps down on the legs of any prey that unwarily walk over it. Its favorite food is Trapinch.",
@@ -720,6 +724,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "sandile",

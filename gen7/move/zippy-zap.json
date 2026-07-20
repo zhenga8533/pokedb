@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 15,
         "lets-go-pikachu-lets-go-eevee": 15
     },
-    "priority": null,
+    "priority": 2,
     "damage_class": null,
     "type": {
         "sun-moon": "electric",
         "ultra-sun-ultra-moon": "electric",
         "lets-go-pikachu-lets-go-eevee": "electric"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-vii",
     "effect_chance": {
         "sun-moon": 100,
@@ -44,7 +44,31 @@
     "flavor_text": {
         "lets-go-pikachu-lets-go-eevee": "The user attacks the target with bursts of electricity at high speed. This move always goes first and results in a critical hit."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": 1,
+            "stat": "evasion"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-raise",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

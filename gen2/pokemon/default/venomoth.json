@@ -20,7 +20,9 @@
     "ev_yield": null,
     "height": 15,
     "weight": 125,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/49.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 158,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -345,17 +347,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 54,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "venonat",
     "pokedex_numbers": {
@@ -364,7 +366,9 @@
     },
     "color": "purple",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "gold": "When it attacks, it flaps its large wings violently to scatter its poi­ sonous powder all around.",
         "silver": "The powder on its wings is poisonous if it is dark in color. If it is light, it causes paralysis.",
@@ -418,6 +422,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "venomoth",

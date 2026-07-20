@@ -40,7 +40,9 @@
     ],
     "height": 6,
     "weight": 23,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/353.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 59,
     "held_items": {
         "spell-tag": {
             "sun": 5,
@@ -674,17 +676,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 225,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 381,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "urban",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -692,7 +694,9 @@
     },
     "color": "black",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "indeterminate"
+    ],
     "flavor_text": {
         "ultra-sun": "It eats up emotions like malice, jealousy, and resentment, so some people are grateful for its presence.",
         "ultra-moon": "There’s a proverb that says, “Shun the house where Shuppet gather in the growing dusk.”"
@@ -746,6 +750,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "shuppet",

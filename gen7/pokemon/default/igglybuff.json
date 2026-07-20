@@ -41,7 +41,9 @@
     ],
     "height": 3,
     "weight": 10,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/174.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 42,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -595,17 +597,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 170,
+    "hatch_counter": 10,
+    "gender_rate": 6,
     "has_gender_differences": false,
     "is_baby": true,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 41,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -614,7 +616,9 @@
     },
     "color": "pink",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "sun": "It likes to sing but is not yet good at it. With praise and encouragement, it will get better little by little.",
         "moon": "It moves by bouncing along. As it moves a lot, it sweats, and its body gives off a sweet aroma.",
@@ -713,6 +717,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "igglybuff",

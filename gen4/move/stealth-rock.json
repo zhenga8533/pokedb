@@ -17,14 +17,14 @@
         "platinum": 20,
         "heartgold-soulsilver": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "diamond-pearl": "rock",
         "platinum": "rock",
         "heartgold-soulsilver": "rock"
     },
-    "target": null,
+    "target": "opponents-field",
     "generation": "generation-iv",
     "effect_chance": {
         "diamond-pearl": null,
@@ -46,7 +46,26 @@
         "platinum": "The user lays a trap of levitating stones around the foe. The trap hurts foes that switch into battle.",
         "heartgold-soulsilver": "The user lays a trap of levitating stones around the foe. The trap hurts foes that switch into battle."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm76",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "field-effect",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

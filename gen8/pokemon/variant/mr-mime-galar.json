@@ -41,7 +41,9 @@
     ],
     "height": 14,
     "weight": 568,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10168.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -54,7 +56,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 161,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -766,17 +768,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 140,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "urban",
     "evolves_from_species": "mime-jr",
     "pokedex_numbers": {
@@ -785,7 +787,9 @@
     },
     "color": "pink",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": {
         "sword": "The broadness of its hands may be no coincidence—many scientists believe its palms became enlarged specifically for pantomiming.",
         "shield": "It’s known for its top-notch pantomime skills. It protects itself from all sorts of attacks by emitting auras from its fingers to create walls.",
@@ -887,6 +891,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "mr-mime",

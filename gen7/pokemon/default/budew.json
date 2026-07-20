@@ -41,7 +41,9 @@
     ],
     "height": 2,
     "weight": 12,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/406.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 56,
     "held_items": {
         "poison-barb": {
             "sun": 5,
@@ -484,17 +486,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": true,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 341,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -502,7 +504,9 @@
     },
     "color": "green",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {},
     "genus": "Bud Pokémon",
     "generation": "generation-iv",
@@ -596,6 +600,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "budew",

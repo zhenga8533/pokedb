@@ -2,15 +2,27 @@
     "id": 134,
     "name": "lum-berry",
     "source_url": "https://pokeapi.co/api/v2/item/134/",
-    "cost": null,
-    "fling_power": null,
-    "fling_effect": null,
-    "attributes": null,
-    "category": null,
-    "effect": null,
-    "short_effect": null,
+    "cost": 80,
+    "fling_power": 10,
+    "fling_effect": "berry-effect",
+    "attributes": [
+        "holdable-active"
+    ],
+    "category": "medicine",
+    "effect": "Held in battle : When the holder is afflicted with a major status ailment, it consumes this item to cure the ailment. Used on a party Pokémon : Cures any major status ailment.",
+    "short_effect": "Held: Consumed to cure any status condition or confusion.",
     "flavor_text": {
         "sword-shield": "A Berry to be consumed by Pokémon. If a Pokémon holds one, it can recover from any status condition during battle."
     },
-    "sprite": null
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png",
+    "unverified_historical_fields": [
+        "cost",
+        "fling_power",
+        "fling_effect",
+        "attributes",
+        "category",
+        "effect",
+        "short_effect",
+        "sprite"
+    ]
 }

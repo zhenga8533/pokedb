@@ -41,7 +41,9 @@
     ],
     "height": 4,
     "weight": 600,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/304.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -54,7 +56,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 66,
     "held_items": {},
     "moves": {
         "machine": [
@@ -597,17 +599,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 180,
+    "hatch_counter": 35,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 330,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "mountain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -615,7 +617,9 @@
     },
     "color": "gray",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster"
+    ],
     "flavor_text": {
         "sword": "It eats iron ore—and sometimes railroad tracks— to build up the steel armor that protects its body.",
         "shield": "When Aron evolves, its steel armor peels off. In ancient times, people would collect Aron’s shed armor and make good use of it in their daily lives."
@@ -716,6 +720,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "aron",

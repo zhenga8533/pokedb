@@ -35,7 +35,9 @@
     ],
     "height": 23,
     "weight": 2538,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/297.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -70,7 +72,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 166,
     "held_items": {
         "kings-rock": {
             "diamond": 5,
@@ -700,17 +702,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 200,
+    "hatch_counter": 20,
+    "gender_rate": 2,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 323,
-    "growth_rate": null,
+    "growth_rate": "fast-then-very-slow",
     "habitat": "mountain",
     "evolves_from_species": "makuhita",
     "pokedex_numbers": {
@@ -718,7 +720,9 @@
     },
     "color": "brown",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": {
         "diamond": "It loves to match power with big-bodied Pokémon. It can knock a truck flying with its arm thrusts.",
         "pearl": "It loves to match power with big-bodied Pokémon. It can knock a truck flying with its arm thrusts.",
@@ -775,6 +779,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "hariyama",

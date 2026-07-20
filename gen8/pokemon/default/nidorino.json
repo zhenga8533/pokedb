@@ -40,7 +40,9 @@
     ],
     "height": 9,
     "weight": 195,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/33.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -53,7 +55,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 128,
     "held_items": {},
     "moves": {
         "machine": [
@@ -471,17 +473,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 20,
+    "gender_rate": 0,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 34,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "grassland",
     "evolves_from_species": "nidoran-m",
     "pokedex_numbers": {
@@ -489,7 +491,10 @@
     },
     "color": "purple",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "ground"
+    ],
     "flavor_text": {
         "sword": "With a horn that’s harder than diamond, this Pokémon goes around shattering boulders as it searches for a moon stone.",
         "shield": "It’s nervous and quick to act aggressively. The potency of its poison increases along with the level of adrenaline present in its body."
@@ -590,6 +595,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "nidorino",

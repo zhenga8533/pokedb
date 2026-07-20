@@ -35,7 +35,9 @@
     ],
     "height": 8,
     "weight": 50,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/685.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 168,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -508,17 +510,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 140,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 686,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "swirlix",
     "pokedex_numbers": {
@@ -527,7 +529,9 @@
     },
     "color": "white",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy"
+    ],
     "flavor_text": {
         "x": "It can distinguish the faintest of scents. It puts its sensitive sense of smell to use by helping pastry chefs in their work.",
         "y": "Its sense of smell is 100 million times better than a human’s, so even the faintest scent tells it about everything in the area. It’s like it can see with its nose!",
@@ -582,6 +586,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "slurpuff",

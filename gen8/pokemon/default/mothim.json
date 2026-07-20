@@ -40,7 +40,9 @@
     ],
     "height": 9,
     "weight": 233,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/414.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -53,7 +55,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 148,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -439,17 +441,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": 0,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 442,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "burmy",
     "pokedex_numbers": {
@@ -457,7 +459,9 @@
     },
     "color": "yellow",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "legends-arceus": "Scatters steel-colored scales as it flaps its wings. Despite being observed feeding primarily on the nectar of flowers, Mothim is not often seen around flower gardens."
     },
@@ -556,6 +560,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "mothim",

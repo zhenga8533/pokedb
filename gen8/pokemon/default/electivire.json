@@ -35,7 +35,9 @@
     ],
     "height": 18,
     "weight": 1386,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/466.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 243,
     "held_items": {},
     "moves": {
         "machine": [
@@ -677,17 +679,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 30,
+    "hatch_counter": 25,
+    "gender_rate": 2,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 147,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "electabuzz",
     "pokedex_numbers": {
@@ -695,7 +697,9 @@
     },
     "color": "yellow",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": {
         "sword": "The amount of electrical energy this Pokémon produces is proportional to the rate of its pulse. The voltage jumps while Electivire is battling.",
         "shield": "In terms of electrical-energy output, Electivire is one of the best among all Electric Pokémon. It discharges high-voltage currents from its tails.",
@@ -797,6 +801,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "electivire",

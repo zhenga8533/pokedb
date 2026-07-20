@@ -34,7 +34,9 @@
     ],
     "height": 15,
     "weight": 505,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/491.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -59,7 +61,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 270,
     "held_items": {},
     "moves": {
         "machine": [
@@ -649,17 +651,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": true,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 492,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -667,7 +669,9 @@
     },
     "color": "black",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "black": "To protect itself, it afflicts those around it with nightmares. However, it means no harm.",
         "white": "To protect itself, it afflicts those around it with nightmares. However, it means no harm.",
@@ -680,6 +684,16 @@
         "species_name": "darkrai",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "darkrai",

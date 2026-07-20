@@ -30,7 +30,9 @@
     ],
     "height": 2,
     "weight": 1,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/789.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -43,7 +45,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 40,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -63,17 +65,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 45,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 789,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -81,7 +83,9 @@
     },
     "color": "blue",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "sword": "This Pokémon came from another universe. Its gaseous body is so light that even a gentle breeze can blow it away.",
         "shield": "Cosmog is very curious but not very cautious, often placing itself in danger. If things start to look dicey, it teleports away."
@@ -226,6 +230,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "cosmog",

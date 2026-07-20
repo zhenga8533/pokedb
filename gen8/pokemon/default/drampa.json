@@ -41,7 +41,9 @@
     ],
     "height": 30,
     "weight": 1850,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/780.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -54,7 +56,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 170,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -584,17 +586,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 70,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 780,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -603,7 +605,10 @@
     },
     "color": "white",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "dragon"
+    ],
     "flavor_text": {
         "sword": "The mountains it calls home are nearly two miles in height. On rare occasions, it descends to play with the children living in the towns below.",
         "shield": "Drampa is a kind and friendly Pokémon—up until it’s angered. When that happens, it stirs up a gale and flattens everything around."
@@ -614,6 +619,16 @@
         "species_name": "drampa",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "drampa",

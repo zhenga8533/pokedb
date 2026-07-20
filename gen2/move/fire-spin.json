@@ -14,13 +14,13 @@
         "gold-silver": 15,
         "crystal": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "special",
     "type": {
         "gold-silver": "fire",
         "crystal": "fire"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "gold-silver": 100,
@@ -38,7 +38,26 @@
         "gold-silver": "Traps foe in fire for 2-5 turns.",
         "crystal": "Traps foe in fire for 2-5 turns."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "trap",
+        "category": "damage-ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": 5,
+        "max_turns": 6,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 100,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

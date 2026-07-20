@@ -41,7 +41,9 @@
     ],
     "height": 15,
     "weight": 815,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/668.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -60,7 +62,7 @@
         "back_default": null,
         "back_shiny": null
     },
-    "base_experience": null,
+    "base_experience": 177,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -542,17 +544,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 65,
+    "hatch_counter": 20,
+    "gender_rate": 7,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 669,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": "litleo",
     "pokedex_numbers": {
@@ -560,7 +562,9 @@
     },
     "color": "brown",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "ultra-sun": "The males are usually lazy, but when attacked by a strong foe, a male will protect its friends with no regard for its own safety.",
         "ultra-moon": "The temperature of its breath is over 10,000 degrees Fahrenheit, but Pyroar doesn’t use it on its prey. This Pokémon prefers to eat raw meat."
@@ -614,6 +618,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "pyroar-female",

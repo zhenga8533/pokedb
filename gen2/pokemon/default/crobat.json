@@ -20,7 +20,9 @@
     "ev_yield": null,
     "height": 18,
     "weight": 750,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/169.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 241,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -297,17 +299,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 46,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "cave",
     "evolves_from_species": "golbat",
     "pokedex_numbers": {
@@ -316,7 +318,9 @@
     },
     "color": "purple",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying"
+    ],
     "flavor_text": {
         "gold": "It flies so si­ lently through the dark on its four wings that it may not be noticed even when nearby.",
         "silver": "The development of wings on its legs enables it to fly fast but also makes it tough to stop and rest.",
@@ -412,6 +416,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "crobat",

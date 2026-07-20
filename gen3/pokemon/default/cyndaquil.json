@@ -30,7 +30,9 @@
     ],
     "height": 5,
     "weight": 79,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/155.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 62,
     "held_items": {},
     "moves": {
         "machine": [
@@ -503,17 +505,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 187,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -521,7 +523,9 @@
     },
     "color": "yellow",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "ruby": "CYNDAQUIL protects itself by flaring up the flames on its back. The flames are vigorous if the POKéMON is angry. However, if it is tired, the flames splutter fitfully with incomplete combustion.",
         "sapphire": "CYNDAQUIL protects itself by flaring up the flames on its back. The flames are vigorous if the POKéMON is angry. However, if it is tired, the flames splutter fitfully with incomplete combustion.",
@@ -625,6 +629,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "cyndaquil",

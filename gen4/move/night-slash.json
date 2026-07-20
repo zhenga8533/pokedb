@@ -17,14 +17,14 @@
         "platinum": 15,
         "heartgold-soulsilver": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "diamond-pearl": "dark",
         "platinum": "dark",
         "heartgold-soulsilver": "dark"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "diamond-pearl": null,
@@ -46,7 +46,26 @@
         "platinum": "The user slashes the foe the instant an opportunity arises. It has a high critical-hit ratio.",
         "heartgold-soulsilver": "The user slashes the foe the instant an opportunity arises. It has a high critical-hit ratio."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 1,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

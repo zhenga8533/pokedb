@@ -30,7 +30,9 @@
     ],
     "height": 21,
     "weight": 2000,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/895.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -43,7 +45,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 290,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -340,17 +342,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 895,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -358,7 +360,9 @@
     },
     "color": "green",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "sword": "An academic theory proposes that Regidrago’s arms were once the head of an ancient dragon Pokémon. The theory remains unproven.",
         "shield": "Its body is composed of crystallized dragon energy. Regidrago is said to have the powers of every dragon Pokémon."
@@ -369,6 +373,16 @@
         "species_name": "regidrago",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "regidrago",

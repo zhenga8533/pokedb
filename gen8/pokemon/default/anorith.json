@@ -36,7 +36,9 @@
     ],
     "height": 7,
     "weight": 125,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/347.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 71,
     "held_items": {},
     "moves": {
         "machine": [
@@ -496,17 +498,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 30,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 375,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "waters-edge",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -514,7 +516,9 @@
     },
     "color": "gray",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "water3"
+    ],
     "flavor_text": {
         "sword": "This Pokémon was restored from a fossil. Anorith lived in the ocean about 100,000,000 years ago, hunting with its pair of claws.",
         "shield": "Anorith can swim swiftly by pulling its eight wings through the water like oars on a boat. This Pokémon is an ancestor of modern bug Pokémon."
@@ -570,6 +574,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "anorith",

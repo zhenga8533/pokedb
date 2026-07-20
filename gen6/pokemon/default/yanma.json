@@ -41,7 +41,9 @@
     ],
     "height": 12,
     "weight": 380,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/193.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -58,7 +60,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 78,
     "held_items": {
         "wide-lens": {
             "x": 5,
@@ -534,17 +536,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 223,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -552,7 +554,9 @@
     },
     "color": "red",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "x": "Its eyes can see 360 degrees without moving its head. It won’t miss prey--even those behind it.",
         "y": "If it flaps its wings really fast, it can generate shock waves that will shatter windows in the area.",
@@ -607,6 +611,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "yanma",

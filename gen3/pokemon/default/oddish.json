@@ -31,7 +31,9 @@
     ],
     "height": 5,
     "weight": 54,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/43.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 64,
     "held_items": {},
     "moves": {
         "egg": [
@@ -457,17 +459,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 47,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -476,7 +478,9 @@
     },
     "color": "blue",
     "shape": "legs",
-    "egg_groups": null,
+    "egg_groups": [
+        "plant"
+    ],
     "flavor_text": {
         "ruby": "During the daytime, ODDISH buries itself in soil to absorb nutrients from the ground using its entire body. The more fertile the soil, the glossier its leaves become.",
         "sapphire": "ODDISH searches for fertile, nutrient- rich soil, then plants itself. During the daytime, while it is planted, this POKéMON’s feet are thought to change shape and become similar to the roots of trees.",
@@ -624,6 +628,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "oddish",

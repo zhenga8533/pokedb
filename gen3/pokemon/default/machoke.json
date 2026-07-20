@@ -30,7 +30,9 @@
     ],
     "height": 15,
     "weight": 705,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/67.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 142,
     "held_items": {
         "focus-band": {
             "firered": 5,
@@ -611,17 +613,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 20,
+    "gender_rate": 2,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 73,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "mountain",
     "evolves_from_species": "machop",
     "pokedex_numbers": {
@@ -630,7 +632,9 @@
     },
     "color": "gray",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": {
         "ruby": "MACHOKE’s thoroughly toned muscles possess the hardness of steel. This POKéMON has so much strength, it can easily hold aloft a sumo wrestler on just one finger.",
         "sapphire": "MACHOKE undertakes bodybuilding every day even as it helps people with tough, physically demanding labor. On its days off, this POKéMON heads to the fields and mountains to exercise and train.",
@@ -734,6 +738,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "machoke",

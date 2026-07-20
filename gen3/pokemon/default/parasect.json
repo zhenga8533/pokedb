@@ -35,7 +35,9 @@
     ],
     "height": 10,
     "weight": 295,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/47.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 142,
     "held_items": {
         "tiny-mushroom": {
             "ruby": 50,
@@ -532,17 +534,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 52,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "paras",
     "pokedex_numbers": {
@@ -550,7 +552,10 @@
     },
     "color": "red",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug",
+        "plant"
+    ],
     "flavor_text": {
         "ruby": "PARASECT is known to infest large trees en masse and drain nutrients from the lower trunk and roots. When an infested tree dies, they move onto another tree all at once.",
         "sapphire": "PARASECT is known to infest large trees en masse and drain nutrients from the lower trunk and roots. When an infested tree dies, they move onto another tree all at once.",
@@ -609,6 +614,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "parasect",

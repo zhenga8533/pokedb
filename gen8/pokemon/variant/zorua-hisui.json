@@ -31,7 +31,9 @@
     ],
     "height": 7,
     "weight": 125,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10238.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -44,7 +46,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 66,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -164,17 +166,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 25,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 571,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -182,7 +184,9 @@
     },
     "color": "gray",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "sword": "Zorua is a timid Pokémon. This disposition seems to be what led to the development of Zorua’s ability to take on the forms of other creatures.",
         "shield": "Zorua sometimes transforms into a person and goes into cities to search for food. When Zorua does this, it usually takes on the form of a child.",
@@ -271,6 +275,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "zorua",

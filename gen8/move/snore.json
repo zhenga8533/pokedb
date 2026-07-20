@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 15,
         "legends-arceus": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "normal",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "normal",
         "legends-arceus": "normal"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-ii",
     "effect_chance": {
         "sword-shield": 30,
@@ -59,7 +59,26 @@
         "sword-shield": "This attack can be used only if the user is asleep. The harsh noise may also make the target flinch.",
         "legends-arceus": "This attack can be used only if the user is asleep. The harsh noise may also make the target flinch."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm24",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 30,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

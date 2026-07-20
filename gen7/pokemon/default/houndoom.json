@@ -41,7 +41,9 @@
     ],
     "height": 14,
     "weight": 350,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/229.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 175,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -590,17 +592,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 262,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "rough-terrain",
     "evolves_from_species": "houndour",
     "pokedex_numbers": {
@@ -608,7 +610,9 @@
     },
     "color": "black",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "ultra-sun": "They spew flames mixed with poison to finish off their opponents. They divvy up their prey evenly among the members of their pack.",
         "ultra-moon": "Identifiable by its eerie howls, people a long time ago thought it was the grim reaper and feared it."
@@ -662,6 +666,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "houndoom",

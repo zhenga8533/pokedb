@@ -41,7 +41,9 @@
     ],
     "height": 16,
     "weight": 408,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/164.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 158,
     "held_items": {},
     "moves": {
         "machine": [
@@ -551,17 +553,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 196,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "hoothoot",
     "pokedex_numbers": {
@@ -569,7 +571,9 @@
     },
     "color": "brown",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying"
+    ],
     "flavor_text": {
         "ultra-sun": "With eyes that can see in pitch-darkness, it never lets its prey escape. Some even call it “the emperor of dark nights.”",
         "ultra-moon": "When it turns its head entirely upside down, you know it’s troubled by something. If you don’t leave it be, it will peck you."
@@ -623,6 +627,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "noctowl",

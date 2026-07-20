@@ -40,7 +40,9 @@
     ],
     "height": 12,
     "weight": 214,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/763.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -53,7 +55,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 230,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -469,17 +471,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 8,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 763,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": "steenee",
     "pokedex_numbers": {
@@ -488,7 +490,9 @@
     },
     "color": "purple",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "plant"
+    ],
     "flavor_text": {
         "sword": "This feared Pokémon has long, slender legs and a cruel heart. It shows no mercy as it stomps on its opponents.",
         "shield": "A kick from the hardened tips of this Pokémon’s legs leaves a wound in the opponent’s body and soul that will never heal."
@@ -589,6 +593,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "tsareena",

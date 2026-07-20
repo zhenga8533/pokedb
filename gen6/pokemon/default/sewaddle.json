@@ -41,7 +41,9 @@
     ],
     "height": 3,
     "weight": 25,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/540.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -58,7 +60,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 62,
     "held_items": {
         "mental-herb": {
             "x": 5,
@@ -514,17 +516,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 541,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -532,7 +534,9 @@
     },
     "color": "yellow",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "x": "This Pokémon makes clothes for itself. It chews up leaves and sews them with sticky thread extruded from its mouth.",
         "y": "Since this Pokémon makes its own clothes out of leaves, it is a popular mascot for fashion designers.",
@@ -629,6 +633,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "sewaddle",

@@ -40,7 +40,9 @@
     ],
     "height": 7,
     "weight": 177,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/313.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 151,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -561,17 +563,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 150,
+    "hatch_counter": 15,
+    "gender_rate": 0,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 339,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -579,7 +581,10 @@
     },
     "color": "gray",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug",
+        "humanshape"
+    ],
     "flavor_text": {
         "black": "It communicates with others by lighting up its rear at night. It loves Illumise’s sweet aroma.",
         "white": "It communicates with others by lighting up its rear at night. It loves Illumise’s sweet aroma.",
@@ -592,6 +597,16 @@
         "species_name": "volbeat",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "volbeat",

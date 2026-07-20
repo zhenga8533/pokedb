@@ -35,7 +35,9 @@
     ],
     "height": 6,
     "weight": 163,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/293.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 48,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -508,17 +510,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 319,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "cave",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -526,7 +528,10 @@
     },
     "color": "pink",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "ground"
+    ],
     "flavor_text": {
         "sword": "The cry of a Whismur is over 100 decibels. If you’re close to a Whismur when it lets out a cry, you’ll be stuck with an all-day headache.",
         "shield": "When Whismur cries, the sound of its own voice startles it, making the Pokémon cry even louder. It cries until it’s exhausted, then it falls asleep."
@@ -627,6 +632,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "whismur",

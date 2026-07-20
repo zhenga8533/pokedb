@@ -19,7 +19,9 @@
     "ev_yield": null,
     "height": 10,
     "weight": 120,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/40.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 196,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -407,17 +409,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 50,
+    "hatch_counter": 10,
+    "gender_rate": 6,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 43,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "grassland",
     "evolves_from_species": "jigglypuff",
     "pokedex_numbers": {
@@ -426,7 +428,9 @@
     },
     "color": "pink",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy"
+    ],
     "flavor_text": {
         "gold": "Their fur feels so good that if two of them snuggle together, they won't want to be separated.",
         "silver": "It has a very fine fur. Take care not to make it angry, or it may inflate steadily and hit with a BODY SLAM.",
@@ -522,6 +526,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "wigglytuff",

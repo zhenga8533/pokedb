@@ -14,13 +14,13 @@
         "x-y": 5,
         "omega-ruby-alpha-sapphire": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "x-y": "fighting",
         "omega-ruby-alpha-sapphire": "fighting"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "x-y": 100,
@@ -38,7 +38,35 @@
         "x-y": "The user fights the target up close without guarding itself. This also lowers the user’s Defense and Sp. Def stats.",
         "omega-ruby-alpha-sapphire": "The user fights the target up close without guarding itself. This also lowers the user’s Defense and Sp. Def stats."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "defense"
+        },
+        {
+            "change": -1,
+            "stat": "special-defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-raise",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

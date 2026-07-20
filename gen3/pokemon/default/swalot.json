@@ -35,7 +35,9 @@
     ],
     "height": 17,
     "weight": 800,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/317.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 163,
     "held_items": {
         "big-pearl": {
             "ruby": 5,
@@ -656,17 +658,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 345,
-    "growth_rate": null,
+    "growth_rate": "fast-then-very-slow",
     "habitat": "grassland",
     "evolves_from_species": "gulpin",
     "pokedex_numbers": {
@@ -675,7 +677,9 @@
     },
     "color": "purple",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "indeterminate"
+    ],
     "flavor_text": {
         "ruby": "When SWALOT spots prey, it spurts out a hideously toxic fluid from its pores and sprays the target. Once the prey has weakened, this POKéMON gulps it down whole with its cavernous mouth.",
         "sapphire": "SWALOT has no teeth, so what it eats, it swallows whole, no matter what. Its cavernous mouth yawns widely. An automobile tire could easily fit inside this POKéMON’s mouth.",
@@ -734,6 +738,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "swalot",

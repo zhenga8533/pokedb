@@ -23,7 +23,7 @@
         "colosseum": 5,
         "xd": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "physical",
     "type": {
         "ruby-sapphire": "steel",
@@ -32,7 +32,7 @@
         "colosseum": "steel",
         "xd": "steel"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iii",
     "effect_chance": {
         "ruby-sapphire": null,
@@ -60,7 +60,26 @@
         "emerald": "Summons strong sunlight to attack 2 turns later.",
         "firered-leafgreen": "A move that attacks the foe with a blast of light two turns after use."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "unique",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

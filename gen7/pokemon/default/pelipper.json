@@ -41,7 +41,9 @@
     ],
     "height": 12,
     "weight": 280,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/279.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 154,
     "held_items": {
         "pretty-wing": {
             "sun": 50,
@@ -605,17 +607,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 304,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "sea",
     "evolves_from_species": "wingull",
     "pokedex_numbers": {
@@ -624,7 +626,10 @@
     },
     "color": "yellow",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "flying"
+    ],
     "flavor_text": {
         "sun": "Its spacious beak is large enough for a small child to fit right inside.",
         "moon": "Gathering food is the work of young males. They store food in their capacious beaks and carry it back to others waiting in the nest.",
@@ -680,6 +685,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "pelipper",

@@ -19,7 +19,9 @@
     "ev_yield": null,
     "height": 8,
     "weight": 300,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/26.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 218,
     "held_items": {},
     "moves": {
         "machine": [
@@ -329,17 +331,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 10,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 27,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "pikachu",
     "pokedex_numbers": {
@@ -348,7 +350,10 @@
     },
     "color": "yellow",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "fairy"
+    ],
     "flavor_text": {
         "gold": "When its electric­ ity builds, its muscles are stimu­ lated, and it be­ comes more aggres­ sive than usual.",
         "silver": "If the electric pouches in its cheeks become fully charged, both ears will stand straight up.",
@@ -444,6 +449,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "raichu",

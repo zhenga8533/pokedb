@@ -40,7 +40,9 @@
     ],
     "height": 10,
     "weight": 200,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/61.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 135,
     "held_items": {
         "kings-rock": {
             "sun": 5,
@@ -565,17 +567,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 66,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "waters-edge",
     "evolves_from_species": "poliwag",
     "pokedex_numbers": {
@@ -584,7 +586,9 @@
     },
     "color": "blue",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1"
+    ],
     "flavor_text": {
         "sun": "Although it can live on land, it prefers to stay in the water, where it has fewer natural enemies.",
         "moon": "It marches over the land in search of bug Pokémon to eat. Then it takes them underwater so it can dine on them where it’s safe.",
@@ -727,6 +731,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "poliwhirl",

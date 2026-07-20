@@ -41,7 +41,9 @@
     ],
     "height": 7,
     "weight": 165,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/564.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 71,
     "held_items": {},
     "moves": {
         "egg": [
@@ -608,17 +610,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 30,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 565,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -627,7 +629,10 @@
     },
     "color": "blue",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "water3"
+    ],
     "flavor_text": {
         "sun": "Based on studies of its skeletal structure, it can apparently dive to ocean depths of over half a mile.",
         "moon": "Reputed to be the ancestor of most turtle Pokémon, it lived in warm seas approximately a hundred million years ago.",
@@ -683,6 +688,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "tirtouga",

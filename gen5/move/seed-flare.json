@@ -14,13 +14,13 @@
         "black-white": 5,
         "black-2-white-2": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "black-white": "grass",
         "black-2-white-2": "grass"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "black-white": 40,
@@ -38,7 +38,31 @@
         "black-white": "The user emits a shock wave from its body to attack its target. It may harshly lower the target’s Sp. Def.",
         "black-2-white-2": "The user emits a shock wave from its body to attack its target. It may harshly lower the target’s Sp. Def."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -2,
+            "stat": "special-defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 40
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

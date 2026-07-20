@@ -31,7 +31,9 @@
     ],
     "height": 14,
     "weight": 320,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/567.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -44,7 +46,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 177,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -502,17 +504,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 30,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 568,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "archen",
     "pokedex_numbers": {
@@ -520,7 +522,10 @@
     },
     "color": "yellow",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying",
+        "water3"
+    ],
     "flavor_text": {
         "sword": "It needs a running start to take off. If Archeops wants to fly, it first needs to run nearly 25 mph, building speed over a course of about 2.5 miles.",
         "shield": "Though capable of flight, Archeops was apparently better at hunting on the ground."
@@ -576,6 +581,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "archeops",

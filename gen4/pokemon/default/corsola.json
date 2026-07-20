@@ -40,7 +40,9 @@
     ],
     "height": 6,
     "weight": 50,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/222.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -75,7 +77,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 144,
     "held_items": {
         "hard-stone": {
             "diamond": 5,
@@ -772,17 +774,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 6,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 254,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -790,7 +792,10 @@
     },
     "color": "pink",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "water3"
+    ],
     "flavor_text": {
         "diamond": "Many live in the clean seas of the south. They apparently can’t live in polluted waters.",
         "pearl": "Many live in the clean seas of the south. They apparently can’t live in polluted waters.",
@@ -804,6 +809,16 @@
         "species_name": "corsola",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "corsola",

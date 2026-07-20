@@ -20,7 +20,7 @@
         "red-green-japan": 10,
         "blue-japan": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "status",
     "type": {
         "red-blue": "normal",
@@ -28,7 +28,7 @@
         "red-green-japan": "normal",
         "blue-japan": "normal"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "red-blue": null,
@@ -49,7 +49,26 @@
         "blue-japan": "Puts the target to sleep."
     },
     "flavor_text": {},
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "sleep",
+        "category": "ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": 2,
+        "max_turns": 4,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

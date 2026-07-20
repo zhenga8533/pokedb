@@ -30,7 +30,9 @@
     ],
     "height": 6,
     "weight": 85,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/4.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 62,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -666,17 +668,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 4,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "mountain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -684,7 +686,10 @@
     },
     "color": "red",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "dragon"
+    ],
     "flavor_text": {
         "ruby": "The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when CHARMANDER is enjoying itself. If the POKéMON becomes enraged, the flame burns fiercely.",
         "sapphire": "The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when CHARMANDER is enjoying itself. If the POKéMON becomes enraged, the flame burns fiercely.",
@@ -788,6 +793,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "charmander",

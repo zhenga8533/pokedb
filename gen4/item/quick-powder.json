@@ -2,17 +2,29 @@
     "id": 251,
     "name": "quick-powder",
     "source_url": "https://pokeapi.co/api/v2/item/251/",
-    "cost": null,
-    "fling_power": null,
+    "cost": 1000,
+    "fling_power": 10,
     "fling_effect": null,
-    "attributes": null,
-    "category": null,
-    "effect": null,
-    "short_effect": null,
+    "attributes": [
+        "holdable"
+    ],
+    "category": "species-specific",
+    "effect": "Held by Ditto: Doubles the holder’s initial Speed.",
+    "short_effect": "Doubles Ditto’s Speed when held. The boost is lost after transforming.",
     "flavor_text": {
         "diamond-pearl": "An item to be held by DITTO. Extremely fine yet hard, this odd powder boosts the Speed stat.",
         "platinum": "An item to be held by DITTO. Extremely fine yet hard, this odd powder boosts the Speed stat.",
         "heartgold-soulsilver": "An item to be held by DITTO. Extremely fine yet hard, this odd powder boosts the Speed stat."
     },
-    "sprite": null
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-powder.png",
+    "unverified_historical_fields": [
+        "cost",
+        "fling_power",
+        "fling_effect",
+        "attributes",
+        "category",
+        "effect",
+        "short_effect",
+        "sprite"
+    ]
 }

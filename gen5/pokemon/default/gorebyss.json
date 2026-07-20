@@ -35,7 +35,9 @@
     ],
     "height": 18,
     "weight": 226,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/368.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -60,7 +62,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 170,
     "held_items": {
         "deep-sea-scale": {
             "black": 5,
@@ -430,17 +432,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 398,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "sea",
     "evolves_from_species": "clamperl",
     "pokedex_numbers": {
@@ -448,7 +450,9 @@
     },
     "color": "pink",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1"
+    ],
     "flavor_text": {
         "black": "It lives at the bottom of the sea. In the springtime, its pink body turns more vivid for some reason.",
         "white": "It lives at the bottom of the sea. In the springtime, its pink body turns more vivid for some reason.",
@@ -544,6 +548,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "gorebyss",

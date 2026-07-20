@@ -40,7 +40,9 @@
     ],
     "height": 11,
     "weight": 310,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/531.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 390,
     "held_items": {
         "oran-berry": {
             "black": 50,
@@ -817,17 +819,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 532,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -836,7 +838,9 @@
     },
     "color": "pink",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy"
+    ],
     "flavor_text": {
         "black": "It touches others with the feelers on its ears, using the sound of their heartbeats to tell how they are feeling.",
         "white": "Its auditory sense is astounding. It has a radarlike ability to understand its surroundings through slight sounds.",
@@ -849,6 +853,16 @@
         "species_name": "audino",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "audino",

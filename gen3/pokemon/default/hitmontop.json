@@ -30,7 +30,9 @@
     ],
     "height": 14,
     "weight": 480,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/237.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 159,
     "held_items": {
         "black-belt": {
             "colosseum": 100
@@ -518,17 +520,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": 0,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 118,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "urban",
     "evolves_from_species": "tyrogue",
     "pokedex_numbers": {
@@ -536,7 +538,9 @@
     },
     "color": "brown",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": {
         "ruby": "HITMONTOP spins on its head at high speed, all the while delivering kicks. This technique is a remarkable mix of both offense and defense at the same time. The POKéMON travels faster spinning than it does walking.",
         "sapphire": "HITMONTOP spins on its head at high speed, all the while delivering kicks. This technique is a remarkable mix of both offense and defense at the same time. The POKéMON travels faster spinning than it does walking.",
@@ -683,6 +687,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "hitmontop",

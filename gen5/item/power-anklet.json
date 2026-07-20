@@ -2,16 +2,29 @@
     "id": 270,
     "name": "power-anklet",
     "source_url": "https://pokeapi.co/api/v2/item/270/",
-    "cost": null,
-    "fling_power": null,
+    "cost": 3000,
+    "fling_power": 70,
     "fling_effect": null,
-    "attributes": null,
-    "category": null,
-    "effect": null,
-    "short_effect": null,
+    "attributes": [
+        "holdable",
+        "holdable-active"
+    ],
+    "category": "effort-training",
+    "effect": "Held: Decreases the holder’s Speed by 50%. Whenever the holder gains Speed effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect.",
+    "short_effect": "Held: Holder gains 4 Speed effort values, but has halved Speed in battle.",
     "flavor_text": {
         "black-white": "A Pokémon held item that promotes Speed gain on leveling, but reduces the Speed stat.",
         "black-2-white-2": "A Pokémon held item that promotes Speed gain on leveling, but reduces the Speed stat."
     },
-    "sprite": null
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-anklet.png",
+    "unverified_historical_fields": [
+        "cost",
+        "fling_power",
+        "fling_effect",
+        "attributes",
+        "category",
+        "effect",
+        "short_effect",
+        "sprite"
+    ]
 }

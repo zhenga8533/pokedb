@@ -31,7 +31,9 @@
     ],
     "height": 32,
     "weight": 3300,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/643.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 306,
     "held_items": {},
     "moves": {
         "machine": [
@@ -600,17 +602,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 644,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -619,7 +621,9 @@
     },
     "color": "white",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "black": "This Pokémon appears in legends. It sends flames into the air from its tail, burning up everything around it.",
         "white": "When Reshiram’s tail flares, the heat energy moves the atmosphere and changes the world’s weather.",
@@ -632,6 +636,16 @@
         "species_name": "reshiram",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "reshiram",

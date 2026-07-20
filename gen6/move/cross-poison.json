@@ -14,13 +14,13 @@
         "x-y": 20,
         "omega-ruby-alpha-sapphire": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "x-y": "poison",
         "omega-ruby-alpha-sapphire": "poison"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "x-y": 10,
@@ -38,7 +38,26 @@
         "x-y": "A slashing attack with a poisonous blade that may also poison the target. Critical hits land more easily.",
         "omega-ruby-alpha-sapphire": "A slashing attack with a poisonous blade that may also poison the target. Critical hits land more easily."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "poison",
+        "category": "damage-ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 1,
+        "ailment_chance": 10,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

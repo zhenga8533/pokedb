@@ -35,7 +35,9 @@
     ],
     "height": 19,
     "weight": 1550,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/59.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 194,
     "held_items": {
         "rawst-berry": {
             "ruby": 100,
@@ -443,17 +445,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 2,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 64,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "grassland",
     "evolves_from_species": "growlithe",
     "pokedex_numbers": {
@@ -461,7 +463,9 @@
     },
     "color": "brown",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "ruby": "ARCANINE is known for its high speed. It is said to be capable of running over 6,200 miles in a single day and night. The fire that blazes wildly within this POKéMON’s body is its source of power.",
         "sapphire": "ARCANINE is known for its high speed. It is said to be capable of running over 6,200 miles in a single day and night. The fire that blazes wildly within this POKéMON’s body is its source of power.",
@@ -520,6 +524,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "arcanine",

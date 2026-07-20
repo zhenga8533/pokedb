@@ -14,13 +14,13 @@
         "black-white": 5,
         "black-2-white-2": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "black-white": "normal",
         "black-2-white-2": "normal"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "black-white": null,
@@ -38,7 +38,26 @@
         "black-white": "The target is crushed with great force. The attack is more powerful the more HP the target has left.",
         "black-2-white-2": "The target is crushed with great force. The attack is more powerful the more HP the target has left."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

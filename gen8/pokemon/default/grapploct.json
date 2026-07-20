@@ -35,7 +35,9 @@
     ],
     "height": 16,
     "weight": 390,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/853.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 168,
     "held_items": {},
     "moves": {
         "machine": [
@@ -450,17 +452,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 50,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 853,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": "clobbopus",
     "pokedex_numbers": {
@@ -469,7 +471,10 @@
     },
     "color": "blue",
     "shape": "tentacles",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "humanshape"
+    ],
     "flavor_text": {
         "sword": "A body made up of nothing but muscle makes the grappling moves this Pokémon performs with its tentacles tremendously powerful.",
         "shield": "Searching for an opponent to test its skills against, it emerges onto land. Once the battle is over, it returns to the sea."
@@ -525,6 +530,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "grapploct",

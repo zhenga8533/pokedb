@@ -31,7 +31,9 @@
     ],
     "height": 18,
     "weight": 888,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/319.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 161,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -598,17 +600,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 347,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "sea",
     "evolves_from_species": "carvanha",
     "pokedex_numbers": {
@@ -617,7 +619,9 @@
     },
     "color": "blue",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "water2"
+    ],
     "flavor_text": {
         "ruby": "Nicknamed “the bully of the sea,” SHARPEDO is widely feared. Its cruel fangs grow back immediately if they snap off. Just one of these POKéMON can thoroughly tear apart a supertanker.",
         "sapphire": "SHARPEDO can swim at speeds of up to 75 mph by jetting seawater out of its backside. This POKéMON’s drawback is its inability to swim long distances.",
@@ -676,6 +680,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "sharpedo",

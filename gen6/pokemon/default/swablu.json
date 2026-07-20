@@ -36,7 +36,9 @@
     ],
     "height": 4,
     "weight": 12,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/333.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -53,7 +55,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 62,
     "held_items": {},
     "moves": {
         "machine": [
@@ -658,17 +660,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 361,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -676,7 +678,10 @@
     },
     "color": "blue",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying",
+        "dragon"
+    ],
     "flavor_text": {
         "x": "For some reason, it likes to land on people’s heads softly and act like it’s a hat.",
         "y": "It constantly grooms its cotton-like wings. It takes a shower to clean itself if it becomes dirty.",
@@ -731,6 +736,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "swablu",

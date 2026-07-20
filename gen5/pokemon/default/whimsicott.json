@@ -40,7 +40,9 @@
     ],
     "height": 7,
     "weight": 66,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/547.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 168,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -433,17 +435,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 548,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "cottonee",
     "pokedex_numbers": {
@@ -452,7 +454,10 @@
     },
     "color": "green",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "plant",
+        "fairy"
+    ],
     "flavor_text": {
         "black": "Like the wind, it can slip through any gap, no matter how small. It leaves balls of white fluff behind.",
         "white": "Riding whirlwinds, they appear. These Pokémon sneak through gaps into houses and cause all sorts of mischief.",
@@ -507,6 +512,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "whimsicott",

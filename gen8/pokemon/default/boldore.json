@@ -44,7 +44,9 @@
     ],
     "height": 9,
     "weight": 1020,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/525.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 137,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -354,17 +356,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 526,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": "roggenrola",
     "pokedex_numbers": {
@@ -373,7 +375,9 @@
     },
     "color": "blue",
     "shape": "tentacles",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "sword": "If you see its orange crystals start to glow, be wary. It’s about to fire off bursts of energy.",
         "shield": "It relies on sound in order to monitor what’s in its vicinity. When angered, it will attack without ever changing the direction it’s facing."
@@ -474,6 +478,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "boldore",

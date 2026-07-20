@@ -45,7 +45,9 @@
     ],
     "height": 11,
     "weight": 300,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/560.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -62,7 +64,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 171,
     "held_items": {
         "shed-shell": {
             "x": 5,
@@ -723,17 +725,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 561,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "scraggy",
     "pokedex_numbers": {
@@ -742,7 +744,10 @@
     },
     "color": "red",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "dragon"
+    ],
     "flavor_text": {
         "x": "It pulls up its shed skin to protect itself while it kicks. The bigger the crest, the more respected it is.",
         "y": "It can smash concrete blocks with its kicking attacks. The one with the biggest crest is the group leader.",
@@ -797,6 +802,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "scrafty",

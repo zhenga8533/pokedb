@@ -41,7 +41,9 @@
     ],
     "height": 2,
     "weight": 5,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/743.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 162,
     "held_items": {
         "honey": {
             "sun": 5,
@@ -570,17 +572,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 743,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "cutiefly",
     "pokedex_numbers": {
@@ -589,7 +591,10 @@
     },
     "color": "yellow",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug",
+        "fairy"
+    ],
     "flavor_text": {
         "sun": "It rolls up pollen into puffs. It makes many different varieties, some used as food and others used in battle.",
         "moon": "Some of Ribombee’s pollen puffs are highly nutritious. They are sometimes sold as supplements.",
@@ -645,6 +650,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "ribombee",

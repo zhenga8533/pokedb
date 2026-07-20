@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 10,
         "lets-go-pikachu-lets-go-eevee": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sun-moon": "electric",
         "ultra-sun-ultra-moon": "electric",
         "lets-go-pikachu-lets-go-eevee": "electric"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "sun-moon": 70,
@@ -46,7 +46,31 @@
         "ultra-sun-ultra-moon": "The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat.",
         "lets-go-pikachu-lets-go-eevee": "The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": 1,
+            "stat": "special-attack"
+        }
+    ],
     "machine": "tm57",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-raise",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 70
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

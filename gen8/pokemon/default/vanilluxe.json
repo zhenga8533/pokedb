@@ -40,7 +40,9 @@
     ],
     "height": 13,
     "weight": 575,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/584.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -53,7 +55,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 241,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -383,17 +385,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 585,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": "vanillish",
     "pokedex_numbers": {
@@ -402,7 +404,9 @@
     },
     "color": "white",
     "shape": "heads",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "sword": "When its anger reaches a breaking point, this Pokémon unleashes a fierce blizzard that freezes every creature around it, be they friend or foe.",
         "shield": "People believe this Pokémon formed when two Vanillish stuck together. Its body temperature is roughly 21 degrees Fahrenheit."
@@ -503,6 +507,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "vanilluxe",

@@ -36,7 +36,9 @@
     ],
     "height": 9,
     "weight": 455,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/72.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 67,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -536,17 +538,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 78,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -555,7 +557,9 @@
     },
     "color": "blue",
     "shape": "tentacles",
-    "egg_groups": null,
+    "egg_groups": [
+        "water3"
+    ],
     "flavor_text": {
         "ruby": "TENTACOOL’s body is largely composed of water. If it is removed from the sea, it dries up like parchment. If this POKéMON happens to become dehydrated, put it back into the sea.",
         "sapphire": "TENTACOOL absorbs sunlight and refracts it using water inside its body to convert it into beam energy. This POKéMON shoots beams from its crystal-like eyes.",
@@ -614,6 +618,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "tentacool",

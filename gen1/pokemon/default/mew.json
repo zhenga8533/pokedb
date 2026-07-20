@@ -18,7 +18,9 @@
     "ev_yield": null,
     "height": 4,
     "weight": 40,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/151.ogg"
+    },
     "sprites": {
         "versions": {
             "red-blue": {
@@ -39,7 +41,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 270,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -648,16 +650,16 @@
         ]
     },
     "base_happiness": null,
-    "capture_rate": null,
+    "capture_rate": 45,
     "hatch_counter": null,
     "gender_rate": null,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": true,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 183,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "rare",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -678,6 +680,16 @@
         "species_name": "mew",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "mew",

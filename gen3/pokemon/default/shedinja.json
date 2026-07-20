@@ -31,7 +31,9 @@
     ],
     "height": 8,
     "weight": 12,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/292.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 83,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -478,17 +480,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 318,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "forest",
     "evolves_from_species": "nincada",
     "pokedex_numbers": {
@@ -497,7 +499,9 @@
     },
     "color": "brown",
     "shape": "blob",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "ruby": "SHEDINJA’s hard body doesn’t move - not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this POKéMON will steal the spirit of anyone peering into its hollow body from its back.",
         "sapphire": "SHEDINJA is a peculiar POKéMON. It seems to appear unsought in a POKé BALL after a NINCADA evolves. This bizarre POKéMON is entirely immobile - it doesn’t even breathe.",
@@ -600,6 +604,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "shedinja",

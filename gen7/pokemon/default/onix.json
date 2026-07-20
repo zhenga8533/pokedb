@@ -41,7 +41,9 @@
     ],
     "height": 88,
     "weight": 2100,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/95.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 77,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -777,17 +779,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 103,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "cave",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -795,7 +797,9 @@
     },
     "color": "gray",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "lets-go-pikachu": "Burrows at high speed in search of food. The tunnels it leaves are used as homes by Diglett.",
         "lets-go-eevee": "Burrows at high speed in search of food. The tunnels it leaves are used as homes by Diglett."
@@ -849,6 +853,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "onix",

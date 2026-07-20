@@ -41,7 +41,9 @@
     ],
     "height": 2,
     "weight": 15,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/755.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 57,
     "held_items": {
         "tiny-mushroom": {
             "sun": 50,
@@ -502,17 +504,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 755,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -521,7 +523,9 @@
     },
     "color": "purple",
     "shape": "blob",
-    "egg_groups": null,
+    "egg_groups": [
+        "plant"
+    ],
     "flavor_text": {
         "sun": "It scatters spores that flicker and glow. Anyone seeing these lights falls into a deep slumber.",
         "moon": "As it drowses the day away, it nourishes itself by sucking from tree roots. It wakens at the fall of night, wandering off in search of a new tree.",
@@ -577,6 +581,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "morelull",

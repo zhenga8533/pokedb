@@ -45,7 +45,9 @@
     ],
     "height": 10,
     "weight": 234,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/369.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -58,7 +60,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 170,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -622,17 +624,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 25,
+    "hatch_counter": 40,
+    "gender_rate": 1,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 399,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -640,7 +642,10 @@
     },
     "color": "gray",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "water2"
+    ],
     "flavor_text": {
         "sword": "Rock-hard scales and oil-filled swim bladders allow this Pokémon to survive the intense water pressure of the deep sea.",
         "shield": "This Pokémon was discovered during deep-sea exploration. Its appearance hasn’t changed in 100,000,000 years, so it’s called a living fossil."
@@ -651,6 +656,16 @@
         "species_name": "relicanth",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "relicanth",

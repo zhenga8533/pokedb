@@ -41,7 +41,9 @@
     ],
     "height": 13,
     "weight": 596,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/275.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -54,7 +56,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 216,
     "held_items": {},
     "moves": {
         "machine": [
@@ -784,17 +786,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 300,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "forest",
     "evolves_from_species": "nuzleaf",
     "pokedex_numbers": {
@@ -803,7 +805,10 @@
     },
     "color": "brown",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "plant"
+    ],
     "flavor_text": {
         "sword": "A Pokémon that was feared as a forest guardian. It can read the foe’s mind and take preemptive action.",
         "shield": "It lives quietly in the deep forest. It is said to create chilly winter winds with the fans it holds."
@@ -904,6 +909,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "shiftry",

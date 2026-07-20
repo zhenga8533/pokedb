@@ -31,7 +31,9 @@
     ],
     "height": 5,
     "weight": 215,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/343.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 60,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -568,17 +570,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 20,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 371,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "rough-terrain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -587,7 +589,9 @@
     },
     "color": "brown",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "ruby": "BALTOY moves while spinning around on its one foot. Primitive wall paintings depicting this POKéMON living among people were discovered in some ancient ruins.",
         "sapphire": "As soon as it spots others of its kind, BALTOY congregates with them and then begins crying noisily in unison. This POKéMON sleeps while cleverly balancing itself on its one foot.",
@@ -646,6 +650,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "baltoy",

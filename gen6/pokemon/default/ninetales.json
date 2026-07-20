@@ -39,7 +39,9 @@
     ],
     "height": 11,
     "weight": 199,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/38.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 177,
     "held_items": {
         "charcoal": {
             "omega-ruby": 5,
@@ -461,17 +463,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 6,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 40,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "grassland",
     "evolves_from_species": "vulpix",
     "pokedex_numbers": {
@@ -479,7 +481,9 @@
     },
     "color": "yellow",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "x": "It has nine long tails and fur that gleams gold. It is said to live for 1,000 years.",
         "y": "Very smart and very vengeful. Grabbing one of its many tails could result in a 1,000-year curse.",
@@ -534,6 +538,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "ninetales",

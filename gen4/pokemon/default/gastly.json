@@ -31,7 +31,9 @@
     ],
     "height": 13,
     "weight": 1,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/92.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -66,7 +68,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 62,
     "held_items": {},
     "moves": {
         "egg": [
@@ -729,17 +731,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 100,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "cave",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -748,7 +750,9 @@
     },
     "color": "purple",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "indeterminate"
+    ],
     "flavor_text": {
         "diamond": "This Pokémon’s body is 95% made up of gases, which are blown away by strong gusts of wind.",
         "pearl": "A Pokémon born from poison gases. It defeats even the largest foes by enveloping them in gas.",
@@ -848,6 +852,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "gastly",

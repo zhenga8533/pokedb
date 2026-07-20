@@ -19,7 +19,9 @@
     "ev_yield": null,
     "height": 14,
     "weight": 480,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/237.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 159,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -304,17 +306,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": 0,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 118,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "urban",
     "evolves_from_species": "tyrogue",
     "pokedex_numbers": {
@@ -323,7 +325,9 @@
     },
     "color": "brown",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": {
         "gold": "If you become enchanted by its smooth, elegant, dance-like kicks, you may get drilled hard.",
         "silver": "It launches kicks while spinning. If it spins at high speed, it may bore its way into the ground.",
@@ -459,6 +463,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "hitmontop",

@@ -14,13 +14,13 @@
         "black-white": 15,
         "black-2-white-2": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "black-white": "steel",
         "black-2-white-2": "steel"
     },
-    "target": null,
+    "target": "user",
     "generation": "generation-v",
     "effect_chance": {
         "black-white": null,
@@ -38,7 +38,31 @@
         "black-white": "The user sheds part of its body to make itself lighter and sharply raise its Speed stat.",
         "black-2-white-2": "The user sheds part of its body to make itself lighter and sharply raise its Speed stat."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": 2,
+            "stat": "speed"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "net-good-stats",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

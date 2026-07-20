@@ -23,7 +23,7 @@
         "colosseum": 20,
         "xd": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "special",
     "type": {
         "ruby-sapphire": "dragon",
@@ -32,7 +32,7 @@
         "colosseum": "dragon",
         "xd": "dragon"
     },
-    "target": null,
+    "target": "all-opponents",
     "generation": "generation-ii",
     "effect_chance": {
         "ruby-sapphire": 20,
@@ -60,7 +60,26 @@
         "emerald": "Whips up a vicious twister to tear at the foe.",
         "firered-leafgreen": "A vicious twister attacks the foe. It may make the foe flinch."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 20,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

@@ -40,7 +40,9 @@
     ],
     "height": 19,
     "weight": 1073,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/569.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 166,
     "held_items": {
         "nugget": {
             "x": 5,
@@ -559,17 +561,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 570,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "trubbish",
     "pokedex_numbers": {
@@ -577,7 +579,9 @@
     },
     "color": "green",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "x": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
         "y": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
@@ -632,6 +636,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "garbodor",

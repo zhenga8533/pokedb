@@ -35,7 +35,9 @@
     ],
     "height": 13,
     "weight": 300,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/847.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 172,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -380,17 +382,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 50,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 847,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": "arrokuda",
     "pokedex_numbers": {
@@ -399,7 +401,9 @@
     },
     "color": "brown",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "water2"
+    ],
     "flavor_text": {
         "sword": "This Pokémon has a jaw that’s as sharp as a spear and as strong as steel. Apparently Barraskewda’s flesh is surprisingly tasty, too.",
         "shield": "It spins its tail fins to propel itself, surging forward at speeds of over 100 knots before ramming prey and spearing into them."
@@ -455,6 +459,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "barraskewda",

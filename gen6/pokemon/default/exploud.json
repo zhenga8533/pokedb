@@ -35,7 +35,9 @@
     ],
     "height": 15,
     "weight": 840,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/295.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 221,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -779,17 +781,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 321,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "cave",
     "evolves_from_species": "loudred",
     "pokedex_numbers": {
@@ -798,7 +800,10 @@
     },
     "color": "blue",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "ground"
+    ],
     "flavor_text": {
         "x": "Its howls can be heard over six miles away. It emits all sorts of noises from the ports on its body.",
         "y": "Its roar in battle shakes the ground like a tremor--or like an earthquake has struck.",
@@ -895,6 +900,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "exploud",

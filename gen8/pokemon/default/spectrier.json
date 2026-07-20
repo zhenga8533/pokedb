@@ -30,7 +30,9 @@
     ],
     "height": 20,
     "weight": 445,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/897.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -43,7 +45,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 290,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -382,17 +384,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 897,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -400,7 +402,9 @@
     },
     "color": "black",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "sword": "It probes its surroundings with all its senses save one—it doesn’t use its sense of sight. Spectrier’s kicks are said to separate soul from body.",
         "shield": "As it dashes through the night, Spectrier absorbs the life-force of sleeping creatures. It craves silence and solitude."
@@ -411,6 +415,16 @@
         "species_name": "spectrier",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "spectrier",

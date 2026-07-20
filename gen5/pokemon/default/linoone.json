@@ -40,7 +40,9 @@
     ],
     "height": 5,
     "weight": 325,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/264.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 147,
     "held_items": {
         "oran-berry": {
             "black": 50,
@@ -604,17 +606,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 289,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "grassland",
     "evolves_from_species": "zigzagoon",
     "pokedex_numbers": {
@@ -622,7 +624,9 @@
     },
     "color": "white",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "black": "It charges prey at speeds over 60 mph. However, because it can only run straight, it often fails.",
         "white": "It charges prey at speeds over 60 mph. However, because it can only run straight, it often fails.",
@@ -677,6 +681,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "linoone",

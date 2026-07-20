@@ -35,7 +35,9 @@
     ],
     "height": 10,
     "weight": 270,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/197.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -50,7 +52,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 184,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -511,17 +513,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 35,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 162,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "urban",
     "evolves_from_species": "eevee",
     "pokedex_numbers": {
@@ -530,7 +532,9 @@
     },
     "color": "black",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "sun": "When this Pokémon becomes angry, its pores secrete a poisonous sweat, which it sprays at its opponent’s eyes.",
         "moon": "With its black fur, it blends into the darkness. It bides its time, and when prey appears, this Pokémon goes for its throat, and then eats it.",
@@ -878,6 +882,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "umbreon",

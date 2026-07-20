@@ -14,13 +14,13 @@
         "x-y": 15,
         "omega-ruby-alpha-sapphire": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "x-y": "ground",
         "omega-ruby-alpha-sapphire": "ground"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iii",
     "effect_chance": {
         "x-y": 100,
@@ -38,7 +38,31 @@
         "x-y": "The user attacks by hurling a blob of mud at the target. This also lowers the target’s Speed stat.",
         "omega-ruby-alpha-sapphire": "The user attacks by hurling a blob of mud at the target. This also lowers the target’s Speed stat."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "speed"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

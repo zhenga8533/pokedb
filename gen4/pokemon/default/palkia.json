@@ -31,7 +31,9 @@
     ],
     "height": 42,
     "weight": 3360,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/484.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -66,7 +68,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 306,
     "held_items": {},
     "moves": {
         "machine": [
@@ -814,17 +816,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 485,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -833,7 +835,9 @@
     },
     "color": "purple",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "diamond": "It has the ability to distort space. It is described as a deity in Sinnoh-region mythology.",
         "pearl": "It is said to live in a gap in the spatial dimension parallel to ours. It appears in mythology.",
@@ -847,6 +851,16 @@
         "species_name": "palkia",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "palkia",

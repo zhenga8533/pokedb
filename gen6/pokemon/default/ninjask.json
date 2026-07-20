@@ -36,7 +36,9 @@
     ],
     "height": 8,
     "weight": 120,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/291.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -53,7 +55,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 160,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -539,17 +541,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 317,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "forest",
     "evolves_from_species": "nincada",
     "pokedex_numbers": {
@@ -558,7 +560,9 @@
     },
     "color": "yellow",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "x": "Its cry leaves a lasting headache if heard for too long. It moves so quickly that it is almost invisible.",
         "y": "Because it moves so quickly, it sometimes becomes unseeable. It congregates around tree sap.",
@@ -654,6 +658,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "ninjask",

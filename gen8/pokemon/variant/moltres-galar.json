@@ -31,7 +31,9 @@
     ],
     "height": 20,
     "weight": 660,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10171.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -44,7 +46,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 290,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -397,17 +399,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 3,
+    "hatch_counter": 80,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 178,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "rare",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -415,7 +417,9 @@
     },
     "color": "yellow",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "sword": "It’s one of the legendary bird Pokémon. When Moltres flaps its flaming wings, they glimmer with a dazzling red glow.",
         "shield": "There are stories of this Pokémon using its radiant, flame-cloaked wings to light up paths for those lost in the mountains."
@@ -426,6 +430,16 @@
         "species_name": "moltres",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "moltres",

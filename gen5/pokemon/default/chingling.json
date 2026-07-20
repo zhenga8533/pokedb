@@ -30,7 +30,9 @@
     ],
     "height": 2,
     "weight": 6,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/433.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 57,
     "held_items": {
         "colbur-berry": {
             "black": 5,
@@ -576,17 +578,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": true,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 387,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -594,7 +596,9 @@
     },
     "color": "yellow",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "black": "There is an orb inside its mouth. When it hops, the orb bounces all over and makes a ringing sound.",
         "white": "There is an orb inside its mouth. When it hops, the orb bounces all over and makes a ringing sound.",
@@ -649,6 +653,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "chingling",

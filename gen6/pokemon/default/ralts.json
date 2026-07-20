@@ -41,7 +41,9 @@
     ],
     "height": 4,
     "weight": 66,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/280.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -58,7 +60,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 40,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -821,17 +823,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 235,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 305,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "urban",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -840,7 +842,10 @@
     },
     "color": "white",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape",
+        "indeterminate"
+    ],
     "flavor_text": {
         "x": "If its horns capture the warm feelings of people or Pokémon, its body warms up slightly.",
         "y": "It is highly attuned to the emotions of people and Pokémon. It hides if it senses hostility.",
@@ -978,6 +983,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "ralts",

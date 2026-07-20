@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 15,
         "legends-arceus": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "steel",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "steel",
         "legends-arceus": "steel"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "sword-shield": 30,
@@ -59,7 +59,26 @@
         "sword-shield": "The user slams the target with its steel-hard head. This may also make the target flinch.",
         "legends-arceus": "The user slams the target with its steel-hard head."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tr74",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 30,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

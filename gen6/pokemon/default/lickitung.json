@@ -40,7 +40,9 @@
     ],
     "height": 12,
     "weight": 655,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/108.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 77,
     "held_items": {
         "lagging-tail": {
             "x": 5,
@@ -758,17 +760,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 119,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -776,7 +778,9 @@
     },
     "color": "pink",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster"
+    ],
     "flavor_text": {
         "x": "Its long tongue, slathered with a gooey saliva, sticks to anything, so it is very useful.",
         "y": "Its tongue is twice the length of its body. It can be moved like an arm for grabbing food and attacking.",
@@ -831,6 +835,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "lickitung",

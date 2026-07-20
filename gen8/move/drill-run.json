@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 10,
         "legends-arceus": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "ground",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "ground",
         "legends-arceus": "ground"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-v",
     "effect_chance": {
         "sword-shield": null,
@@ -59,7 +59,26 @@
         "sword-shield": "The user crashes into its target while rotating its body like a drill. Critical hits land more easily.",
         "legends-arceus": "The user crashes into its target while rotating its body like a drill. Critical hits land more easily."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tr87",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 1,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

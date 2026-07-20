@@ -41,7 +41,9 @@
     ],
     "height": 4,
     "weight": 53,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/543.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -66,7 +68,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 52,
     "held_items": {
         "pecha-berry": {
             "black": 50,
@@ -452,17 +454,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 544,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -471,7 +473,9 @@
     },
     "color": "red",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "black": "Its bite injects a potent poison, enough to paralyze large bird Pokémon that try to prey on it.",
         "white": "It discovers what is going on around it by using the feelers on its head and tail. It is brutally aggressive.",
@@ -568,6 +572,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "venipede",

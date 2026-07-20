@@ -19,7 +19,9 @@
     "ev_yield": null,
     "height": 4,
     "weight": 65,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/98.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 65,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -363,17 +365,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 225,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 107,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "waters-edge",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -382,7 +384,9 @@
     },
     "color": "red",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "water3"
+    ],
     "flavor_text": {
         "gold": "If it senses dan­ ger approaching, it cloaks itself with bubbles from its mouth so it will look bigger.",
         "silver": "The pincers break off easily. If it loses a pincer, it somehow becomes incapable of walk­ ing sideways.",
@@ -436,6 +440,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "krabby",

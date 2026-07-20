@@ -2,16 +2,32 @@
     "id": 37,
     "name": "revival-herb",
     "source_url": "https://pokeapi.co/api/v2/item/37/",
-    "cost": null,
-    "fling_power": null,
+    "cost": 2800,
+    "fling_power": 30,
     "fling_effect": null,
-    "attributes": null,
-    "category": null,
-    "effect": null,
-    "short_effect": null,
+    "attributes": [
+        "countable",
+        "consumable",
+        "usable-overworld",
+        "usable-in-battle",
+        "holdable"
+    ],
+    "category": "revival",
+    "effect": "Used on a party Pokémon : Revives a fainted Pokémon and restores its HP to full. Decreases happiness by 10/10/15.",
+    "short_effect": "Revives with full HP, but lowers happiness.",
     "flavor_text": {
         "black-white": "A very bitter medicinal herb. It revives a fainted Pokémon, fully restoring its HP.",
         "black-2-white-2": "A very bitter medicinal herb. It revives a fainted Pokémon, fully restoring its HP."
     },
-    "sprite": null
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revival-herb.png",
+    "unverified_historical_fields": [
+        "cost",
+        "fling_power",
+        "fling_effect",
+        "attributes",
+        "category",
+        "effect",
+        "short_effect",
+        "sprite"
+    ]
 }

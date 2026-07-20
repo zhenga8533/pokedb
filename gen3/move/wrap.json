@@ -23,7 +23,7 @@
         "colosseum": 20,
         "xd": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "physical",
     "type": {
         "ruby-sapphire": "normal",
@@ -32,7 +32,7 @@
         "colosseum": "normal",
         "xd": "normal"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "ruby-sapphire": 100,
@@ -60,7 +60,26 @@
         "emerald": "Wraps and squeezes the foe 2 to 5 times with vines, etc.",
         "firered-leafgreen": "A long body or vines are used to wrap the foe for two to five turns."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "trap",
+        "category": "damage-ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": 2,
+        "max_turns": 4,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 100,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

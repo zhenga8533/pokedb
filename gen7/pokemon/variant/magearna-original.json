@@ -31,7 +31,9 @@
     ],
     "height": 10,
     "weight": 805,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10147.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -46,7 +48,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 300,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -564,17 +566,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": true,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 801,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -583,7 +585,9 @@
     },
     "color": "gray",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "sun": "This artificial Pokémon, constructed more than 500 years ago, can understand human speech but cannot itself speak.",
         "moon": "Its mechanized body is merely a vessel. Its true self is its Soul-Heart, an artificial soul.",
@@ -596,6 +600,16 @@
         "species_name": "magearna",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "magearna",

@@ -31,7 +31,9 @@
     ],
     "height": 3,
     "weight": 23,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/276.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 54,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -478,17 +480,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 200,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 301,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -497,7 +499,9 @@
     },
     "color": "blue",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying"
+    ],
     "flavor_text": {
         "ruby": "TAILLOW courageously stands its ground against foes, however strong they may be. This gutsy POKéMON will remain defiant even after a loss. On the other hand, it cries loudly if it becomes hungry.",
         "sapphire": "TAILLOW is young - it has only just left its nest. As a result, it sometimes becomes lonesome and cries at night. This POKéMON feeds on WURMPLE that live in forests.",
@@ -556,6 +560,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "taillow",

@@ -31,7 +31,9 @@
     ],
     "height": 52,
     "weight": 2160,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/249.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 306,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -750,17 +752,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 274,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "rare",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -768,7 +770,9 @@
     },
     "color": "white",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "ruby": "LUGIA’s wings pack devastating power - a light fluttering of its wings can blow apart regular houses. As a result, this POKéMON chooses to live out of sight deep under the sea.",
         "sapphire": "LUGIA’s wings pack devastating power - a light fluttering of its wings can blow apart regular houses. As a result, this POKéMON chooses to live out of sight deep under the sea.",
@@ -782,6 +786,16 @@
         "species_name": "lugia",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "lugia",

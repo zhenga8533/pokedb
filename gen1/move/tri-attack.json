@@ -20,7 +20,7 @@
         "red-green-japan": 10,
         "blue-japan": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "physical",
     "type": {
         "red-blue": "normal",
@@ -28,7 +28,7 @@
         "red-green-japan": "normal",
         "blue-japan": "normal"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "red-blue": 20,
@@ -49,7 +49,26 @@
         "blue-japan": "Has a chance to burn, freeze, or paralyze the target."
     },
     "flavor_text": {},
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm49",
-    "metadata": null
+    "metadata": {
+        "ailment": "unknown",
+        "category": "damage-ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 20,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

@@ -49,7 +49,9 @@
     ],
     "height": 12,
     "weight": 170,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/666.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -70,7 +72,7 @@
         "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/666-modern.png",
         "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/666-modern.png"
     },
-    "base_experience": null,
+    "base_experience": 185,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -536,17 +538,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 667,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "spewpa",
     "pokedex_numbers": {
@@ -555,7 +557,9 @@
     },
     "color": "white",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "x": "Vivillon with many different patterns are found all over the world. These patterns are affected by the climate of their habitat.",
         "y": "The patterns on this Pokémon’s wings depend on the climate and topography of its habitat. It scatters colorful scales.",
@@ -652,6 +656,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "vivillon",

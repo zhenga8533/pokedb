@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 15,
         "lets-go-pikachu-lets-go-eevee": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sun-moon": "rock",
         "ultra-sun-ultra-moon": "rock",
         "lets-go-pikachu-lets-go-eevee": "rock"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iii",
     "effect_chance": {
         "sun-moon": 100,
@@ -46,7 +46,31 @@
         "ultra-sun-ultra-moon": "Boulders are hurled at the target. This also lowers the target’s Speed stat by preventing its movement.",
         "lets-go-pikachu-lets-go-eevee": "Boulders are hurled at the target. This also lowers the target’s Speed stat by preventing its movement."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "speed"
+        }
+    ],
     "machine": "tm39",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

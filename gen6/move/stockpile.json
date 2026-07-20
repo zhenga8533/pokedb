@@ -14,13 +14,13 @@
         "x-y": 20,
         "omega-ruby-alpha-sapphire": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "x-y": "normal",
         "omega-ruby-alpha-sapphire": "normal"
     },
-    "target": null,
+    "target": "user",
     "generation": "generation-iii",
     "effect_chance": {
         "x-y": null,
@@ -38,7 +38,35 @@
         "x-y": "The user charges up power and raises both its Defense and Sp. Def stats. The move can be used three times.",
         "omega-ruby-alpha-sapphire": "The user charges up power and raises both its Defense and Sp. Def stats. The move can be used three times."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": 1,
+            "stat": "defense"
+        },
+        {
+            "change": 1,
+            "stat": "special-defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "unique",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

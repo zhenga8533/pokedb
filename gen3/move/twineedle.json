@@ -23,7 +23,7 @@
         "colosseum": 20,
         "xd": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "physical",
     "type": {
         "ruby-sapphire": "bug",
@@ -32,7 +32,7 @@
         "colosseum": "bug",
         "xd": "bug"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "ruby-sapphire": 20,
@@ -60,7 +60,26 @@
         "emerald": "Stingers on the forelegs jab the foe twice.",
         "firered-leafgreen": "The foe is stabbed twice with foreleg stingers. It may poison the foe."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "poison",
+        "category": "damage-ailment",
+        "min_hits": 2,
+        "max_hits": 2,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 20,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

@@ -30,7 +30,9 @@
     ],
     "height": 20,
     "weight": 1305,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/289.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 252,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -712,17 +714,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 315,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "forest",
     "evolves_from_species": "vigoroth",
     "pokedex_numbers": {
@@ -731,7 +733,9 @@
     },
     "color": "brown",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "ruby": "SLAKING spends all day lying down and lolling about. It eats grass growing within its reach. If it eats all the grass it can reach, this POKéMON reluctantly moves to another spot.",
         "sapphire": "Wherever SLAKING live, rings of over a yard in diameter appear in grassy fields. They are made by the POKéMON as it eats all the grass within reach while lying prone on the ground.",
@@ -835,6 +839,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "slaking",

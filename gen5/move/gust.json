@@ -14,13 +14,13 @@
         "black-white": 35,
         "black-2-white-2": 35
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "black-white": "flying",
         "black-2-white-2": "flying"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "black-white": null,
@@ -38,7 +38,26 @@
         "black-white": "A gust of wind is whipped up by wings and launched at the target to inflict damage.",
         "black-2-white-2": "A gust of wind is whipped up by wings and launched at the target to inflict damage."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

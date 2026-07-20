@@ -36,7 +36,9 @@
     ],
     "height": 8,
     "weight": 208,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/318.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 61,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -560,17 +562,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 225,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 346,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -578,7 +580,9 @@
     },
     "color": "red",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "water2"
+    ],
     "flavor_text": {
         "sword": "It won’t attack while it’s alone—not even if it spots prey. Instead, it waits for other Carvanha to join it, and then the Pokémon attack as a group.",
         "shield": "These Pokémon have sharp fangs and powerful jaws. Sailors avoid Carvanha dens at all costs."
@@ -634,6 +638,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "carvanha",

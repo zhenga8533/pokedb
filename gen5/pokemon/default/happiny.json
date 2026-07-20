@@ -40,7 +40,9 @@
     ],
     "height": 6,
     "weight": 244,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/440.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 110,
     "held_items": {
         "oval-stone": {
             "black": 50,
@@ -564,17 +566,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 140,
+    "capture_rate": 130,
+    "hatch_counter": 40,
+    "gender_rate": 8,
     "has_gender_differences": false,
     "is_baby": true,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 126,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -582,7 +584,9 @@
     },
     "color": "pink",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "black": "It likes to carry around a small rock. It may wander around others’ feet and cause them to stumble.",
         "white": "It likes to carry around a small rock. It may wander around others’ feet and cause them to stumble.",
@@ -679,6 +683,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "happiny",

@@ -40,7 +40,9 @@
     ],
     "height": 350,
     "weight": 10000,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10206.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -53,20 +55,20 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 189,
     "held_items": {},
     "moves": {},
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 25,
+    "hatch_counter": 40,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 175,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "mountain",
     "evolves_from_species": "munchlax",
     "pokedex_numbers": {
@@ -75,7 +77,9 @@
     },
     "color": "black",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster"
+    ],
     "flavor_text": {
         "sword": "It is not satisfied unless it eats over 880 pounds of food every day. When it is done eating, it goes promptly to sleep.",
         "shield": "This Pokémon’s stomach is so strong, even eating moldy or rotten food will not affect it.",
@@ -132,6 +136,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "snorlax",

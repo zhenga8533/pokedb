@@ -35,7 +35,9 @@
     ],
     "height": 17,
     "weight": 2600,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/526.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -60,7 +62,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 232,
     "held_items": {
         "everstone": {
             "black": 50,
@@ -498,17 +500,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 527,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": "boldore",
     "pokedex_numbers": {
@@ -517,7 +519,9 @@
     },
     "color": "blue",
     "shape": "tentacles",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "black": "Compressing the energy from its internal core lets it fire off an attack capable of blowing away a mountain.",
         "white": "The solar energy absorbed by its body’s orange crystals is magnified internally and fired from its mouth.",
@@ -614,6 +618,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "gigalith",

@@ -23,7 +23,7 @@
         "colosseum": 10,
         "xd": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "status",
     "type": {
         "ruby-sapphire": "rock",
@@ -32,7 +32,7 @@
         "colosseum": "rock",
         "xd": "rock"
     },
-    "target": null,
+    "target": "entire-field",
     "generation": "generation-ii",
     "effect_chance": {
         "ruby-sapphire": null,
@@ -60,7 +60,26 @@
         "emerald": "Causes a sandstorm that rages for several turns.",
         "firered-leafgreen": "A 5-turn sandstorm that damages all types except ROCK, GROUND, and STEEL."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm37",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "whole-field-effect",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

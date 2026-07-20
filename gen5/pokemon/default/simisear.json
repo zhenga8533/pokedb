@@ -35,7 +35,9 @@
     ],
     "height": 10,
     "weight": 280,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/514.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -60,7 +62,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 174,
     "held_items": {
         "oran-berry": {
             "black": 50,
@@ -540,17 +542,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 515,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "pansear",
     "pokedex_numbers": {
@@ -559,7 +561,9 @@
     },
     "color": "red",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "black": "It loves sweets because they become energy for the fire burning inside its body.",
         "white": "A flame burns inside its body. It scatters embers from its head and tail to sear its opponents.",
@@ -614,6 +618,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "simisear",

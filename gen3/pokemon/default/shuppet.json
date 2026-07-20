@@ -30,7 +30,9 @@
     ],
     "height": 6,
     "weight": 23,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/353.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 59,
     "held_items": {
         "spell-tag": {
             "ruby": 5,
@@ -595,17 +597,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 225,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 381,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "urban",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -614,7 +616,9 @@
     },
     "color": "black",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "indeterminate"
+    ],
     "flavor_text": {
         "ruby": "SHUPPET is attracted by feelings of jealousy and vindictiveness. If someone develops strong feelings of vengeance, this POKéMON will appear in a swarm and line up beneath the eaves of that person’s home.",
         "sapphire": "SHUPPET grows by feeding on dark emotions, such as vengefulness and envy, in the hearts of people. It roams through cities in search of grudges that taint people.",
@@ -673,6 +677,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "shuppet",

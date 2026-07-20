@@ -31,7 +31,9 @@
     ],
     "height": 15,
     "weight": 819,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/260.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 241,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -684,17 +686,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 285,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "waters-edge",
     "evolves_from_species": "marshtomp",
     "pokedex_numbers": {
@@ -703,7 +705,10 @@
     },
     "color": "blue",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "water1"
+    ],
     "flavor_text": {
         "ruby": "SWAMPERT is very strong. It has enough power to easily drag a boulder weighing more than a ton. This POKéMON also has powerful vision that lets it see even in murky water.",
         "sapphire": "SWAMPERT predicts storms by sensing subtle differences in the sounds of waves and tidal winds with its fins. If a storm is approaching, it piles up boulders to protect itself.",
@@ -807,6 +812,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "swampert",

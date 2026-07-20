@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 5,
         "legends-arceus": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "dragon",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "dragon",
         "legends-arceus": "dragon"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "sword-shield": null,
@@ -59,7 +59,26 @@
         "sword-shield": "The user tears the target along with the space around it. Critical hits land more easily.",
         "legends-arceus": "The user tears the target along with the space around it. This move has a heightened chance of landing a critical hit."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 1,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

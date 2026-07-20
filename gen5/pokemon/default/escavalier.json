@@ -41,7 +41,9 @@
     ],
     "height": 10,
     "weight": 330,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/589.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -66,7 +68,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 173,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -469,17 +471,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 590,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "karrablast",
     "pokedex_numbers": {
@@ -488,7 +490,9 @@
     },
     "color": "gray",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "black": "They fly around at high speed, striking with their pointed spears. Even when in trouble, they face opponents bravely.",
         "white": "These Pokémon evolve by wearing the shell covering of a Shelmet. The steel armor protects their whole body.",
@@ -543,6 +547,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "escavalier",

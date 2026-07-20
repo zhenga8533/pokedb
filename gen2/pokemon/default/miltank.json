@@ -19,7 +19,9 @@
     "ev_yield": null,
     "height": 12,
     "weight": 755,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/241.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 172,
     "held_items": {},
     "moves": {
         "machine": [
@@ -466,17 +468,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 8,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 267,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -485,7 +487,9 @@
     },
     "color": "pink",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "gold": "Its milk is packed with nutrition, making it the ultimate beverage for the sick or weary.",
         "silver": "If it has just had a baby, the milk it produces con­ tains much more nutrition than usual.",
@@ -497,6 +501,16 @@
         "species_name": "miltank",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "miltank",

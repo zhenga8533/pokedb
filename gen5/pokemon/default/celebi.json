@@ -31,7 +31,9 @@
     ],
     "height": 6,
     "weight": 50,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/251.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 270,
     "held_items": {
         "lum-berry": {
             "black": 100,
@@ -614,17 +616,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 100,
+    "capture_rate": 45,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": true,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 276,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -632,7 +634,9 @@
     },
     "color": "green",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "black": "It has the power to travel across time, but it is said to appear only in peaceful times.",
         "white": "It has the power to travel across time, but it is said to appear only in peaceful times.",
@@ -645,6 +649,16 @@
         "species_name": "celebi",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "celebi",

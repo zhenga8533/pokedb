@@ -31,7 +31,9 @@
     ],
     "height": 38,
     "weight": 4600,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10155.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -44,7 +46,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 340,
     "held_items": {},
     "moves": {
         "machine": [
@@ -565,17 +567,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 255,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 800,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -583,7 +585,9 @@
     },
     "color": "black",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "sword": "It survives by absorbing light. After a long time spent slumbering underground, impurities accumulated within it, causing its body to darken.",
         "shield": "It needs light to survive, and it goes on a rampage seeking it out. Its laser beams will cut anything to pieces."
@@ -594,6 +598,16 @@
         "species_name": "necrozma",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "necrozma",

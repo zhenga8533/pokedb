@@ -40,7 +40,9 @@
     ],
     "height": 20,
     "weight": 1300,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/320.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 80,
     "held_items": {},
     "moves": {
         "egg": [
@@ -653,17 +655,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 125,
+    "hatch_counter": 40,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 348,
-    "growth_rate": null,
+    "growth_rate": "fast-then-very-slow",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -671,7 +673,10 @@
     },
     "color": "blue",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "water2"
+    ],
     "flavor_text": {
         "x": "It bounces playfully like a ball. The more seawater it swallows, the higher it bounces.",
         "y": "It eats one ton of food every day. It plays by shooting stored seawater out its blowholes with great force.",
@@ -726,6 +731,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "wailmer",

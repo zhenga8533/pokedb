@@ -40,7 +40,9 @@
     ],
     "height": 11,
     "weight": 320,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/12.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 178,
     "held_items": {
         "silver-powder": {
             "sun": 5,
@@ -610,17 +612,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 12,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "metapod",
     "pokedex_numbers": {
@@ -629,7 +631,9 @@
     },
     "color": "white",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "sun": "Close examination of its large eyes reveals that each eye is composed of a myriad of tiny eyes.",
         "moon": "When attacked by other Pokémon, it defends itself by scattering its poisonous scales and fluttering its wings.",
@@ -730,6 +734,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "butterfree",

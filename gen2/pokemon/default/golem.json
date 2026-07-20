@@ -20,7 +20,9 @@
     "ev_yield": null,
     "height": 14,
     "weight": 3000,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/76.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 223,
     "held_items": {},
     "moves": {
         "machine": [
@@ -394,17 +396,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 82,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "mountain",
     "evolves_from_species": "graveler",
     "pokedex_numbers": {
@@ -413,7 +415,9 @@
     },
     "color": "brown",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "gold": "It sheds its skin once a year. The discarded shell immediately hard­ ens and crumbles away.",
         "silver": "It is capable of blowing itself up. It uses this explosive force to jump from mountain to mountain.",
@@ -509,6 +513,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "golem",

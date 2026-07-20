@@ -20,7 +20,9 @@
     "ev_yield": null,
     "height": 9,
     "weight": 160,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/225.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 116,
     "held_items": {},
     "moves": {
         "machine": [
@@ -292,17 +294,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 257,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "mountain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -311,7 +313,10 @@
     },
     "color": "red",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "ground"
+    ],
     "flavor_text": {
         "gold": "It carries food all day long. There are tales about lost people who were saved by the food it had.",
         "silver": "It nests at the edge of sharp cliffs. It spends all day carrying food to its await­ ing chicks.",
@@ -323,6 +328,16 @@
         "species_name": "delibird",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "delibird",

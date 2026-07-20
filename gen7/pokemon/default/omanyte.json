@@ -41,7 +41,9 @@
     ],
     "height": 4,
     "weight": 75,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/138.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 71,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -668,17 +670,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 30,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 169,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -686,7 +688,10 @@
     },
     "color": "blue",
     "shape": "tentacles",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "water3"
+    ],
     "flavor_text": {
         "ultra-sun": "Omanyte lived in the seas of antiquity. Its fossils have been found bearing bite marks from Archeops, so apparently Archeops preyed on it.",
         "ultra-moon": "It was restored from an ancient fossil. Those Helix Fossils are excavated from areas that were once oceans long, long ago.",
@@ -742,6 +747,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "omanyte",

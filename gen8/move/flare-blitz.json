@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 15,
         "legends-arceus": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "fire",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "fire",
         "legends-arceus": "fire"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "sword-shield": 10,
@@ -59,7 +59,26 @@
         "sword-shield": "The user cloaks itself in fire and charges the target. This also damages the user quite a lot. This attack may leave the target with a burn.",
         "legends-arceus": "The user cloaks itself in fire and charges the target to inflict damage. This also damages the user and may leave the target with a burn."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tr55",
-    "metadata": null
+    "metadata": {
+        "ailment": "burn",
+        "category": "damage-ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": -33,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 10,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

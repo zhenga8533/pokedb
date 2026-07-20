@@ -35,7 +35,9 @@
     ],
     "height": 2,
     "weight": 9,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/670.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -54,7 +56,7 @@
         "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/670-orange.png",
         "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/670-orange.png"
     },
-    "base_experience": null,
+    "base_experience": 130,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -468,17 +470,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 20,
+    "gender_rate": 8,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 671,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "flabebe",
     "pokedex_numbers": {
@@ -486,7 +488,9 @@
     },
     "color": "white",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy"
+    ],
     "flavor_text": {
         "ultra-sun": "It raises flowers and uses them as weapons. The more gorgeous the blossom, the more power it contains.",
         "ultra-moon": "It gives its own power to flowers, pouring its heart into caring for them. Floette never forgives anyone who messes up a flower bed."
@@ -583,6 +587,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "floette",

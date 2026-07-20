@@ -36,7 +36,9 @@
     ],
     "height": 2,
     "weight": 30,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/707.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 165,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -411,17 +413,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 707,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -429,7 +431,9 @@
     },
     "color": "gray",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "sword": "This Pokémon is constantly collecting keys. Entrust a Klefki with important keys, and the Pokémon will protect them no matter what.",
         "shield": "Klefki sucks in metal ions with the horn topping its head. It seems this Pokémon loves keys so much that its head needed to look like one, too."
@@ -440,6 +444,16 @@
         "species_name": "klefki",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "klefki",

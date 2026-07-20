@@ -30,7 +30,9 @@
     ],
     "height": 37,
     "weight": 4200,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/486.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 302,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -539,17 +541,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 487,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -557,7 +559,9 @@
     },
     "color": "white",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "black": "It is said to have made Pokémon that look like itself from a special ice mountain, rocks, and magma.",
         "white": "It is said to have made Pokémon that look like itself from a special ice mountain, rocks, and magma.",
@@ -570,6 +574,16 @@
         "species_name": "regigigas",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "regigigas",

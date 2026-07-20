@@ -30,7 +30,9 @@
     ],
     "height": 3,
     "weight": 14,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/490.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -43,7 +45,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 270,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -422,17 +424,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 3,
+    "hatch_counter": 10,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": true,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 491,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -440,7 +442,10 @@
     },
     "color": "blue",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "fairy"
+    ],
     "flavor_text": {
         "legends-arceus": "Rumored to migrate across the oceans and visit Hisui's coastal waters only rarely. Although Manaphy resembles Phione, it is also quite different. The relation between the two is unclear."
     },
@@ -450,6 +455,16 @@
         "species_name": "phione",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "manaphy",

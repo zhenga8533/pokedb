@@ -40,7 +40,9 @@
     ],
     "height": 6,
     "weight": 152,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/309.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 59,
     "held_items": {},
     "moves": {
         "egg": [
@@ -541,17 +543,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 335,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -559,7 +561,9 @@
     },
     "color": "green",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "ultra-sun": "Friction between the air and its fur produces static electricity. When Electrike runs, it makes a crackling sound.",
         "ultra-moon": "Static electricity builds up all over its body as strands of its long fur rub together. This Pokémon boasts incredible speed."
@@ -613,6 +617,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "electrike",

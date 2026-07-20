@@ -36,7 +36,9 @@
     ],
     "height": 27,
     "weight": 2250,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/699.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 104,
     "held_items": {},
     "moves": {
         "machine": [
@@ -507,17 +509,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 30,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 700,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "amaura",
     "pokedex_numbers": {
@@ -525,7 +527,9 @@
     },
     "color": "blue",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster"
+    ],
     "flavor_text": {
         "sword": "Aurorus was restored from a fossil. It’s said that when this Pokémon howls, auroras appear in the night sky.",
         "shield": "When gripped by rage, Aurorus will emanate freezing air, covering everything around it in ice."
@@ -581,6 +585,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "aurorus",

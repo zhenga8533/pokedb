@@ -31,7 +31,9 @@
     ],
     "height": 16,
     "weight": 5500,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/376.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 270,
     "held_items": {
         "metal-coat": {
             "ruby": 5,
@@ -659,17 +661,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 3,
+    "hatch_counter": 40,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 406,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "rough-terrain",
     "evolves_from_species": "metang",
     "pokedex_numbers": {
@@ -678,7 +680,9 @@
     },
     "color": "blue",
     "shape": "heads",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "ruby": "METAGROSS has four brains in total. Combined, the four brains can breeze through difficult calculations faster than a supercomputer. This POKéMON can float in the air by tucking in its four legs.",
         "sapphire": "METAGROSS is the result of two METANG achieving fusion. When hunting, this POKéMON pins the prey to the ground under its massive body. It then eats the helpless victim using the large mouth on its stomach.",
@@ -782,6 +786,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "metagross",

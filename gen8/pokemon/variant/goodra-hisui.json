@@ -41,7 +41,9 @@
     ],
     "height": 17,
     "weight": 3341,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10242.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -54,7 +56,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 270,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -244,17 +246,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 40,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 706,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": "sliggoo",
     "pokedex_numbers": {
@@ -263,7 +265,9 @@
     },
     "color": "purple",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "dragon"
+    ],
     "flavor_text": {
         "sword": "Sometimes it misunderstands instructions and appears dazed or bewildered. Many Trainers don’t mind, finding this behavior to be adorable.",
         "shield": "Its form of offense is forcefully stretching out its horns. The strikes land 100 times harder than any blow from a heavyweight boxer.",
@@ -429,6 +433,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "goodra",

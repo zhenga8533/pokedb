@@ -23,7 +23,7 @@
         "colosseum": 15,
         "xd": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "special",
     "type": {
         "ruby-sapphire": "dark",
@@ -32,7 +32,7 @@
         "colosseum": "dark",
         "xd": "dark"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-ii",
     "effect_chance": {
         "ruby-sapphire": 20,
@@ -60,7 +60,31 @@
         "emerald": "Crunches with sharp fangs. May lower SP. DEF.",
         "firered-leafgreen": "The foe is crunched with sharp fangs. It may lower the foe’s SP. DEF."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 20
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

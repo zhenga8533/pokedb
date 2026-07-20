@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 20,
         "legends-arceus": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "psychic",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "psychic",
         "legends-arceus": "psychic"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iii",
     "effect_chance": {
         "sword-shield": 10,
@@ -59,7 +59,26 @@
         "sword-shield": "The user attacks with an odd, unseeable power. This may also make the target flinch.",
         "legends-arceus": "The user attacks with an odd, unseeable power."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 10,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

@@ -35,7 +35,9 @@
     ],
     "height": 18,
     "weight": 33,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/147.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -50,7 +52,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 60,
     "held_items": {
         "dragon-scale": {
             "sun": 5,
@@ -691,17 +693,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 40,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 179,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "waters-edge",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -710,7 +712,10 @@
     },
     "color": "blue",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "dragon"
+    ],
     "flavor_text": {
         "sun": "It grows by molting repeatedly. Boots made from the tanned cast-off skin are a super luxury item.",
         "moon": "After a 10-hour struggle, a fisherman was able to pull one up and confirm its existence.",
@@ -811,6 +816,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "dratini",

@@ -41,7 +41,9 @@
     ],
     "height": 17,
     "weight": 980,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10149.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 149,
     "held_items": {
         "thick-club": {
             "ultra-sun": 5,
@@ -673,17 +675,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 114,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "mountain",
     "evolves_from_species": "cubone",
     "pokedex_numbers": {
@@ -692,7 +694,9 @@
     },
     "color": "brown",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster"
+    ],
     "flavor_text": {
         "sun": "Originally, it was weak and timid. After evolution, its temperament becomes violent, and it begins to wield bones as weapons.",
         "moon": "This Pokémon is out for vengeance on its natural enemy, Mandibuzz. It throws bones like boomerangs to try to take it down.",
@@ -750,6 +754,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "marowak",

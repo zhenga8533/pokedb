@@ -31,7 +31,9 @@
     ],
     "height": 14,
     "weight": 485,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/647.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 261,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -536,17 +538,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 3,
+    "hatch_counter": 80,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": true,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 648,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -555,7 +557,9 @@
     },
     "color": "yellow",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "black": "By blasting water from its hooves, it can glide across water. It excels at using leg moves while battling.",
         "white": "It crosses the world, running over the surfaces of oceans and rivers. It appears at scenic waterfronts.",
@@ -568,6 +572,16 @@
         "species_name": "keldeo",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "keldeo-ordinary",

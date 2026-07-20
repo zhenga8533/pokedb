@@ -35,7 +35,9 @@
     ],
     "height": 10,
     "weight": 295,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/28.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 158,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -624,17 +626,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 29,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "rough-terrain",
     "evolves_from_species": "sandshrew",
     "pokedex_numbers": {
@@ -642,7 +644,9 @@
     },
     "color": "yellow",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "sword": "The drier the area Sandslash lives in, the harder and smoother the Pokémon’s spikes will feel when touched.",
         "shield": "It climbs trees by hooking on with its sharp claws. Sandslash shares the berries it gathers, dropping them down to Sandshrew waiting below the tree."
@@ -730,6 +734,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "sandslash",

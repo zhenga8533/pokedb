@@ -41,7 +41,9 @@
     ],
     "height": 240,
     "weight": 10000,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10204.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -54,20 +56,20 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 187,
     "held_items": {},
     "moves": {},
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 40,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 155,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -76,7 +78,10 @@
     },
     "color": "blue",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "water1"
+    ],
     "flavor_text": {
         "sword": "A smart and kindhearted Pokémon, it glides across the surface of the sea while its beautiful song echoes around it.",
         "shield": "Crossing icy seas is no issue for this cold-resistant Pokémon. Its smooth skin is a little cool to the touch."
@@ -87,6 +92,16 @@
         "species_name": "lapras",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "lapras",

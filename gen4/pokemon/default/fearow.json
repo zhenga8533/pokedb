@@ -31,7 +31,9 @@
     ],
     "height": 12,
     "weight": 380,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/22.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -66,7 +68,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 155,
     "held_items": {
         "sharp-beak": {
             "diamond": 5,
@@ -531,17 +533,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 22,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "rough-terrain",
     "evolves_from_species": "spearow",
     "pokedex_numbers": {
@@ -549,7 +551,9 @@
     },
     "color": "brown",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying"
+    ],
     "flavor_text": {
         "diamond": "It has the stamina to fly all day on its broad wings. It fights by using its sharp beak.",
         "pearl": "It has the stamina to keep flying all day on its broad wings. It fights by using its sharp beak.",
@@ -606,6 +610,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "fearow",

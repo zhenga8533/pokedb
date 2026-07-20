@@ -35,7 +35,9 @@
     ],
     "height": 18,
     "weight": 33,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/147.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 60,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -574,17 +576,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 40,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 179,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "waters-edge",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -592,7 +594,10 @@
     },
     "color": "blue",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "dragon"
+    ],
     "flavor_text": {
         "sword": "Dratini dwells near bodies of rapidly flowing water, such as the plunge pools of waterfalls. As it grows, Dratini will shed its skin many times.",
         "shield": "This Pokémon was long considered to be no more than a myth. The small lump on a Dratini’s forehead is actually a horn that’s still coming in."
@@ -693,6 +698,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "dratini",

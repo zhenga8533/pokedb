@@ -45,7 +45,9 @@
     ],
     "height": 13,
     "weight": 1870,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/437.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -62,7 +64,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 175,
     "held_items": {
         "metal-coat": {
             "x": 5,
@@ -682,17 +684,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 20,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 461,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "bronzor",
     "pokedex_numbers": {
@@ -700,7 +702,9 @@
     },
     "color": "green",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "x": "In ages past, this Pokémon was revered as a bringer of rain. It was found buried in the ground.",
         "y": "Ancient people believed that petitioning Bronzong for rain was the way to make crops grow.",
@@ -755,6 +759,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "bronzong",

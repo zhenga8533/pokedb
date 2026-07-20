@@ -30,7 +30,9 @@
     ],
     "height": 45,
     "weight": 3520,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/382.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 302,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -505,17 +507,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 412,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -523,7 +525,9 @@
     },
     "color": "blue",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "black": "It is said to have widened the seas by causing downpours. It had been asleep in a marine trench.",
         "white": "It is said to have widened the seas by causing downpours. It had been asleep in a marine trench.",
@@ -536,6 +540,16 @@
         "species_name": "kyogre",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "kyogre",

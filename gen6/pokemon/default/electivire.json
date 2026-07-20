@@ -35,7 +35,9 @@
     ],
     "height": 18,
     "weight": 1386,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/466.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 243,
     "held_items": {
         "electirizer": {
             "x": 5,
@@ -678,17 +680,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 30,
+    "hatch_counter": 25,
+    "gender_rate": 2,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 147,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "electabuzz",
     "pokedex_numbers": {
@@ -696,7 +698,9 @@
     },
     "color": "yellow",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": {
         "x": "As its electric charge amplifies, blue sparks begin to crackle between its horns.",
         "y": "It pushes the tips of its two tails against the foe, then lets loose with over 20,000 volts of power.",
@@ -793,6 +797,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "electivire",

@@ -2,17 +2,33 @@
     "id": 31,
     "name": "soda-pop",
     "source_url": "https://pokeapi.co/api/v2/item/31/",
-    "cost": null,
-    "fling_power": null,
+    "cost": 300,
+    "fling_power": 30,
     "fling_effect": null,
-    "attributes": null,
-    "category": null,
-    "effect": null,
-    "short_effect": null,
+    "attributes": [
+        "countable",
+        "consumable",
+        "usable-overworld",
+        "usable-in-battle",
+        "holdable"
+    ],
+    "category": "healing",
+    "effect": "Used on a party Pokémon : Restores 60 HP.",
+    "short_effect": "Restores 60 HP.",
     "flavor_text": {
         "ruby-sapphire": "A fizzy soda drink that restores HP by 60 points.",
         "emerald": "A fizzy soda drink that restores HP by 60 points.",
         "firered-leafgreen": "A fizzy soda drink. It restores the HP of one POKéMON by 60 points."
     },
-    "sprite": null
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soda-pop.png",
+    "unverified_historical_fields": [
+        "cost",
+        "fling_power",
+        "fling_effect",
+        "attributes",
+        "category",
+        "effect",
+        "short_effect",
+        "sprite"
+    ]
 }

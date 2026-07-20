@@ -39,7 +39,9 @@
     ],
     "height": 17,
     "weight": 270,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/367.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 170,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -333,17 +335,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 397,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "sea",
     "evolves_from_species": "clamperl",
     "pokedex_numbers": {
@@ -351,7 +353,9 @@
     },
     "color": "blue",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1"
+    ],
     "flavor_text": {},
     "genus": "Deep Sea Pokémon",
     "generation": "generation-iii",
@@ -448,6 +452,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "huntail",

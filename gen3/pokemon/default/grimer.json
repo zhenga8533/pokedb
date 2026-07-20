@@ -35,7 +35,9 @@
     ],
     "height": 9,
     "weight": 300,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/88.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 65,
     "held_items": {
         "nugget": {
             "ruby": 5,
@@ -647,17 +649,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 96,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "urban",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -666,7 +668,9 @@
     },
     "color": "purple",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "indeterminate"
+    ],
     "flavor_text": {
         "ruby": "GRIMER’s sludgy and rubbery body can be forced through any opening, however small it may be. This POKéMON enters sewer pipes to drink filthy wastewater.",
         "sapphire": "GRIMER emerged from the sludge that settled on a polluted seabed. This POKéMON loves anything filthy. It constantly leaks a horribly germ- infested fluid from all over its body.",
@@ -725,6 +729,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "grimer",

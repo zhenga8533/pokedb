@@ -30,7 +30,9 @@
     ],
     "height": 2,
     "weight": 80,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/808.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -45,7 +47,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 135,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -158,17 +160,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": true,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 808,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -176,7 +178,9 @@
     },
     "color": "gray",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "lets-go-pikachu": "It melts particles of iron and other metals found in the subsoil, so it can absorb them into its body of molten steel.",
         "lets-go-eevee": "It melts particles of iron and other metals found in the subsoil, so it can absorb them into its body of molten steel."
@@ -187,6 +191,16 @@
         "species_name": "meltan",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "meltan",

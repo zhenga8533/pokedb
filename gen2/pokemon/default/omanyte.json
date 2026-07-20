@@ -20,7 +20,9 @@
     "ev_yield": null,
     "height": 4,
     "weight": 75,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/138.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 71,
     "held_items": {},
     "moves": {
         "egg": [
@@ -356,17 +358,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 30,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 169,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -375,7 +377,10 @@
     },
     "color": "blue",
     "shape": "tentacles",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "water3"
+    ],
     "flavor_text": {
         "gold": "Revived from an ancient fossil, this POKéMON uses air stored in its shell to sink and rise in water.",
         "silver": "This POKéMON from ancient times is said to have navi­ gated the sea by adeptly twisting its 10 tentacles.",
@@ -429,6 +434,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "omanyte",

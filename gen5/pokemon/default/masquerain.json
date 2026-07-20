@@ -40,7 +40,9 @@
     ],
     "height": 8,
     "weight": 36,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/284.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 159,
     "held_items": {
         "silver-powder": {
             "black": 5,
@@ -490,17 +492,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 310,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "waters-edge",
     "evolves_from_species": "surskit",
     "pokedex_numbers": {
@@ -508,7 +510,10 @@
     },
     "color": "blue",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "bug"
+    ],
     "flavor_text": {
         "black": "Its antennae have eye patterns on them. Its four wings enable it to hover and fly in any direction.",
         "white": "Its antennae have eye patterns on them. Its four wings enable it to hover and fly in any direction.",
@@ -563,6 +568,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "masquerain",

@@ -30,7 +30,9 @@
     ],
     "height": 12,
     "weight": 490,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10057.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -47,7 +49,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 198,
     "held_items": {
         "life-orb": {
             "omega-ruby": 5,
@@ -1020,17 +1022,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 30,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 389,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "mountain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -1038,7 +1040,9 @@
     },
     "color": "white",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "x": "It senses coming disasters and appears before people only to warn them of impending danger.",
         "y": "It appears when it senses an impending natural disaster. As a result, it was mistaken as a doom bringer.",
@@ -1051,6 +1055,16 @@
         "species_name": "absol",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "absol",

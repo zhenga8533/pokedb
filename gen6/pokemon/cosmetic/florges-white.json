@@ -35,7 +35,9 @@
     ],
     "height": 11,
     "weight": 100,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/671.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -56,7 +58,7 @@
         "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/671-white.png",
         "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/671-white.png"
     },
-    "base_experience": null,
+    "base_experience": 248,
     "held_items": {},
     "moves": {
         "machine": [
@@ -478,17 +480,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 8,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 672,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "floette",
     "pokedex_numbers": {
@@ -497,7 +499,9 @@
     },
     "color": "white",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy"
+    ],
     "flavor_text": {
         "x": "It claims exquisite flower gardens as its territory, and it obtains power from basking in the energy emitted by flowering plants.",
         "y": "In times long past, governors of castles would invite Florges to create flower gardens to embellish the castle domains.",
@@ -594,6 +598,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "florges",

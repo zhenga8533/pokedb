@@ -30,7 +30,9 @@
     ],
     "height": 6,
     "weight": 163,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/293.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 48,
     "held_items": {
         "chesto-berry": {
             "ruby": 5,
@@ -630,17 +632,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 319,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "cave",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -649,7 +651,10 @@
     },
     "color": "pink",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "ground"
+    ],
     "flavor_text": {
         "ruby": "Normally, WHISMUR’s voice is very quiet - it is barely audible even if one is paying close attention. However, if this POKéMON senses danger, it starts crying at an earsplitting volume.",
         "sapphire": "WHISMUR is very timid. If it starts to cry loudly, it becomes startled by its own crying and cries even harder. When it finally stops crying, the POKéMON goes to sleep, all tired out.",
@@ -753,6 +758,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "whismur",

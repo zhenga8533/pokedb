@@ -39,7 +39,9 @@
     ],
     "height": 22,
     "weight": 1066,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/477.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 236,
     "held_items": {
         "spell-tag": {
             "omega-ruby": 5,
@@ -799,17 +801,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 385,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": null,
     "evolves_from_species": "dusclops",
     "pokedex_numbers": {
@@ -817,7 +819,9 @@
     },
     "color": "black",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "indeterminate"
+    ],
     "flavor_text": {
         "x": "It is said to take lost spirits into its pliant body and guide them home.",
         "y": "The antenna on its head captures radio waves from the world of spirits that command it to take people there.",
@@ -914,6 +918,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "dusknoir",

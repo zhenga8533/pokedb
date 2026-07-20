@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 30,
         "legends-arceus": 30
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "normal",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "normal",
         "legends-arceus": "normal"
     },
-    "target": null,
+    "target": "all-opponents",
     "generation": "generation-i",
     "effect_chance": {
         "sword-shield": null,
@@ -59,7 +59,31 @@
         "sword-shield": "The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stats.",
         "legends-arceus": "The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stats."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "net-good-stats",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

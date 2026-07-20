@@ -36,7 +36,9 @@
     ],
     "height": 3,
     "weight": 20,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/315.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 140,
     "held_items": {
         "poison-barb": {
             "ruby": 5,
@@ -614,17 +616,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 150,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 342,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "grassland",
     "evolves_from_species": "budew",
     "pokedex_numbers": {
@@ -633,7 +635,10 @@
     },
     "color": "green",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy",
+        "plant"
+    ],
     "flavor_text": {
         "ruby": "ROSELIA shoots sharp thorns as projectiles at any opponent that tries to steal the flowers on its arms. The aroma of this POKéMON brings serenity to living things.",
         "sapphire": "On extremely rare occasions, a ROSELIA is said to appear with its flowers in unusual colors. The thorns on this POKéMON’s head contain a vicious poison.",
@@ -647,6 +652,16 @@
         "species_name": "roselia",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "roselia",

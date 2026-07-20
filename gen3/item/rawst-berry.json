@@ -2,17 +2,29 @@
     "id": 129,
     "name": "rawst-berry",
     "source_url": "https://pokeapi.co/api/v2/item/129/",
-    "cost": null,
-    "fling_power": null,
-    "fling_effect": null,
-    "attributes": null,
-    "category": null,
-    "effect": null,
-    "short_effect": null,
+    "cost": 80,
+    "fling_power": 10,
+    "fling_effect": "berry-effect",
+    "attributes": [
+        "holdable-active"
+    ],
+    "category": "medicine",
+    "effect": "Held in battle : When the holder is burned, it consumes this item to cure the burn. Used on a party Pokémon : Cures a burn.",
+    "short_effect": "Held: Consumed when burned to cure a burn.",
     "flavor_text": {
         "ruby-sapphire": "A hold item that heals a burn in battle.",
         "emerald": "A hold item that heals a burn in battle.",
         "firered-leafgreen": "When held by a POKéMON, it will be used in battle to heal a burn."
     },
-    "sprite": null
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rawst-berry.png",
+    "unverified_historical_fields": [
+        "cost",
+        "fling_power",
+        "fling_effect",
+        "attributes",
+        "category",
+        "effect",
+        "short_effect",
+        "sprite"
+    ]
 }

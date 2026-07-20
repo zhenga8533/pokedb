@@ -14,13 +14,13 @@
         "x-y": 30,
         "omega-ruby-alpha-sapphire": 30
     },
-    "priority": null,
+    "priority": 1,
     "damage_class": null,
     "type": {
         "x-y": "ghost",
         "omega-ruby-alpha-sapphire": "ghost"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "x-y": null,
@@ -38,7 +38,26 @@
         "x-y": "The user extends its shadow and attacks the target from behind. This move always goes first.",
         "omega-ruby-alpha-sapphire": "The user extends its shadow and attacks the target from behind. This move always goes first."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

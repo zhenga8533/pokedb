@@ -30,7 +30,9 @@
     ],
     "height": 22,
     "weight": 1000,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10039.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -45,7 +47,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 207,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -883,17 +885,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 8,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 131,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -902,7 +904,9 @@
     },
     "color": "brown",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster"
+    ],
     "flavor_text": {
         "sun": "Kangaskhan’s maternal love is so deep that it will brave death to protect its offspring.",
         "moon": "The child in its pouch leaves home after roughly three years. That is the only time the mother is heard to cry wildly.",
@@ -917,6 +921,16 @@
         "species_name": "kangaskhan",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "kangaskhan",

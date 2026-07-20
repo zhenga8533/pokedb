@@ -41,7 +41,9 @@
     ],
     "height": 15,
     "weight": 1325,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/91.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 184,
     "held_items": {
         "pearl": {
             "sun": 50,
@@ -512,17 +514,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 99,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "sea",
     "evolves_from_species": "shellder",
     "pokedex_numbers": {
@@ -531,7 +533,9 @@
     },
     "color": "purple",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "water3"
+    ],
     "flavor_text": {
         "sun": "Its hard shell cannot be shattered—not even by a bomb. The contents of the shell remain unknown.",
         "moon": "Excavation of the tombs of ancient hunting tribes has turned up many spears tipped with spikes that had fallen off this Pokémon’s shell.",
@@ -589,6 +593,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "cloyster",

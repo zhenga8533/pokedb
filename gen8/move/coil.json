@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 20,
         "legends-arceus": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "poison",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "poison",
         "legends-arceus": "poison"
     },
-    "target": null,
+    "target": "user",
     "generation": "generation-v",
     "effect_chance": {
         "sword-shield": null,
@@ -59,7 +59,39 @@
         "sword-shield": "The user coils up and concentrates. This raises its Attack and Defense stats as well as its accuracy.",
         "legends-arceus": "The user coils up and concentrates. This raises its Attack and Defense stats as well as its accuracy."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": 1,
+            "stat": "attack"
+        },
+        {
+            "change": 1,
+            "stat": "defense"
+        },
+        {
+            "change": 1,
+            "stat": "accuracy"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "net-good-stats",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

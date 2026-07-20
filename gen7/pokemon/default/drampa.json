@@ -41,7 +41,9 @@
     ],
     "height": 30,
     "weight": 1850,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/780.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 170,
     "held_items": {
         "persim-berry": {
             "sun": 5,
@@ -754,17 +756,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 70,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 780,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -773,7 +775,10 @@
     },
     "color": "white",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "dragon"
+    ],
     "flavor_text": {
         "sun": "It has a compassionate personality, but if it is angered, it completely destroys its surroundings with its intense breath.",
         "moon": "This Pokémon is friendly to people and loves children most of all. It comes from deep in the mountains to play with children it likes in town.",
@@ -786,6 +791,16 @@
         "species_name": "drampa",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "drampa",

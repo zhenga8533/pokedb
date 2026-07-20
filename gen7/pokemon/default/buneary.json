@@ -40,7 +40,9 @@
     ],
     "height": 4,
     "weight": 55,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/427.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 70,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -694,17 +696,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 454,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -712,7 +714,10 @@
     },
     "color": "brown",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "humanshape"
+    ],
     "flavor_text": {
         "ultra-sun": "Its arms and legs are weak, but when it rolls its ears up tight and then unleashes them with its full force, it can smash boulders to dust.",
         "ultra-moon": "The reason it keeps one ear rolled up is so it can launch a swift counterattack if it’s attacked by an enemy."
@@ -766,6 +771,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "buneary",

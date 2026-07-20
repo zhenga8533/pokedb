@@ -35,7 +35,9 @@
     ],
     "height": 13,
     "weight": 575,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10059.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -50,7 +52,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 219,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -652,17 +654,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 468,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": "riolu",
     "pokedex_numbers": {
@@ -671,7 +673,10 @@
     },
     "color": "blue",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "humanshape"
+    ],
     "flavor_text": {
         "sun": "Not only does it perceive auras, but it has also gained the power to control them. It employs them in battle.",
         "moon": "They can detect the species of a living being— and its emotions—from over half a mile away. They control auras and hunt their prey in packs.",
@@ -727,6 +732,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "lucario",

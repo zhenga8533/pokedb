@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 15,
         "lets-go-pikachu-lets-go-eevee": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sun-moon": "ground",
         "ultra-sun-ultra-moon": "ground",
         "lets-go-pikachu-lets-go-eevee": "ground"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "sun-moon": null,
@@ -46,7 +46,31 @@
         "ultra-sun-ultra-moon": "Sand is hurled in the target’s face, reducing the target’s accuracy.",
         "lets-go-pikachu-lets-go-eevee": "Sand is hurled in the target’s face, reducing the target’s accuracy."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "accuracy"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "net-good-stats",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

@@ -36,7 +36,9 @@
     ],
     "height": 12,
     "weight": 360,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/79.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 63,
     "held_items": {
         "kings-rock": {
             "ruby": 5,
@@ -740,17 +742,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 85,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "waters-edge",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -758,7 +760,10 @@
     },
     "color": "pink",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "water1"
+    ],
     "flavor_text": {
         "ruby": "SLOWPOKE uses its tail to catch prey by dipping it in water at the side of a river. However, this POKéMON often forgets what it’s doing and often spends entire days just loafing at water’s edge.",
         "sapphire": "SLOWPOKE uses its tail to catch prey by dipping it in water at the side of a river. However, this POKéMON often forgets what it’s doing and often spends entire days just loafing at water’s edge.",
@@ -861,6 +866,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "slowpoke",

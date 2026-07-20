@@ -36,7 +36,9 @@
     ],
     "height": 16,
     "weight": 526,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/145.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 261,
     "held_items": {},
     "moves": {
         "machine": [
@@ -535,17 +537,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 3,
+    "hatch_counter": 80,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 177,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "rare",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -553,7 +555,9 @@
     },
     "color": "yellow",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "ruby": "ZAPDOS is a legendary bird POKéMON that has the ability to control electricity. It usually lives in thunderclouds. The POKéMON gains power if it is stricken by lightning bolts.",
         "sapphire": "ZAPDOS is a legendary bird POKéMON that has the ability to control electricity. It usually lives in thunderclouds. The POKéMON gains power if it is stricken by lightning bolts.",
@@ -567,6 +571,16 @@
         "species_name": "zapdos",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "zapdos",

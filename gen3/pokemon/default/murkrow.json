@@ -31,7 +31,9 @@
     ],
     "height": 5,
     "weight": 21,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/198.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 81,
     "held_items": {},
     "moves": {
         "egg": [
@@ -572,17 +574,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 30,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 227,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -590,7 +592,9 @@
     },
     "color": "black",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying"
+    ],
     "flavor_text": {
         "ruby": "MURKROW was feared and loathed as the alleged bearer of ill fortune. This POKéMON shows strong interest in anything that sparkles or glitters. It will even try to steal rings from women.",
         "sapphire": "MURKROW was feared and loathed as the alleged bearer of ill fortune. This POKéMON shows strong interest in anything that sparkles or glitters. It will even try to steal rings from women.",
@@ -604,6 +608,16 @@
         "species_name": "murkrow",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "murkrow",

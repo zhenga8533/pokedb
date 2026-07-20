@@ -31,7 +31,9 @@
     ],
     "height": 3,
     "weight": 30,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/877.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -44,7 +46,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 153,
     "held_items": {},
     "moves": {
         "machine": [
@@ -525,17 +527,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 50,
+    "capture_rate": 180,
+    "hatch_counter": 10,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 877,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -544,7 +546,10 @@
     },
     "color": "yellow",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "fairy"
+    ],
     "flavor_text": {
         "sword": "As it eats the seeds stored up in its pocket-like pouches, this Pokémon is not just satisfying its constant hunger. It’s also generating electricity.",
         "shield": "It carries electrically roasted seeds with it as if they’re precious treasures. No matter how much it eats, it always gets hungry again in short order."
@@ -555,6 +560,16 @@
         "species_name": "morpeko",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "morpeko-full-belly",

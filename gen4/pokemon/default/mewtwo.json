@@ -30,7 +30,9 @@
     ],
     "height": 20,
     "weight": 1220,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/150.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 306,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -954,17 +956,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 0,
+    "capture_rate": 3,
+    "hatch_counter": 120,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 182,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "rare",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -972,7 +974,9 @@
     },
     "color": "purple",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "diamond": "A Pokémon created by recombining MEW’s genes. It’s said to have the most savage heart among Pokémon.",
         "pearl": "A Pokémon created by recombining MEW’s genes. It’s said to have the most savage heart among Pokémon.",
@@ -986,6 +990,16 @@
         "species_name": "mewtwo",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "mewtwo",

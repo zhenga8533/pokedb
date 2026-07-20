@@ -41,7 +41,9 @@
     ],
     "height": 10,
     "weight": 1150,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/111.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 69,
     "held_items": {},
     "moves": {
         "machine": [
@@ -844,17 +846,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 123,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "rough-terrain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -862,7 +864,10 @@
     },
     "color": "gray",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "ground"
+    ],
     "flavor_text": {
         "lets-go-pikachu": "A Pokémon with a one-track mind. Once it charges, it won’t stop running until it falls asleep.",
         "lets-go-eevee": "A Pokémon with a one-track mind. Once it charges, it won’t stop running until it falls asleep."
@@ -959,6 +964,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "rhyhorn",

@@ -40,7 +40,9 @@
     ],
     "height": 35,
     "weight": 650,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/24.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 157,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -727,17 +729,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 24,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "grassland",
     "evolves_from_species": "ekans",
     "pokedex_numbers": {
@@ -745,7 +747,10 @@
     },
     "color": "purple",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "dragon"
+    ],
     "flavor_text": {
         "ultra-sun": "The latest research has determined that there are over 20 possible arrangements of the patterns on its stomach.",
         "ultra-moon": "After stunning its opponents with the pattern on its stomach, it quickly wraps them up in its body and waits for them to stop moving.",
@@ -801,6 +806,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "arbok",

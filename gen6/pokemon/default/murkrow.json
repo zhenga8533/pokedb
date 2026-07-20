@@ -41,7 +41,9 @@
     ],
     "height": 5,
     "weight": 21,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/198.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -58,7 +60,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 81,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -660,17 +662,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 30,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 227,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -678,7 +680,9 @@
     },
     "color": "black",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying"
+    ],
     "flavor_text": {
         "x": "It hides any shiny object it finds in a secret location. Murkrow and Meowth loot one another’s stashes.",
         "y": "Feared and loathed by many, it is believed to bring misfortune to all those who see it at night.",
@@ -733,6 +737,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "murkrow",

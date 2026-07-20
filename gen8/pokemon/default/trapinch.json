@@ -40,7 +40,9 @@
     ],
     "height": 7,
     "weight": 150,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/328.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -53,7 +55,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 58,
     "held_items": {},
     "moves": {
         "egg": [
@@ -487,17 +489,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 356,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "rough-terrain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -506,7 +508,10 @@
     },
     "color": "brown",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug",
+        "dragon"
+    ],
     "flavor_text": {
         "sword": "Its nest is a sloped, bowl-like pit in the desert. Once something has fallen in, there is no escape.",
         "shield": "It makes an inescapable conical pit and lies in wait at the bottom for prey to come tumbling down."
@@ -607,6 +612,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "trapinch",

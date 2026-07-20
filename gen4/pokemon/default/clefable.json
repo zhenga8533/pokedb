@@ -35,7 +35,9 @@
     ],
     "height": 13,
     "weight": 400,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/36.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -70,7 +72,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 217,
     "held_items": {
         "moon-stone": {
             "diamond": 5,
@@ -763,17 +765,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 140,
+    "capture_rate": 25,
+    "hatch_counter": 10,
+    "gender_rate": 6,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 38,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "mountain",
     "evolves_from_species": "clefairy",
     "pokedex_numbers": {
@@ -782,7 +784,9 @@
     },
     "color": "pink",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy"
+    ],
     "flavor_text": {
         "diamond": "Rarely seen by people, it is said to be drawn by the full moon to play at deserted lakes.",
         "pearl": "Its hearing is so acute it can hear a pin drop over half a mile away. It lives on quiet mountains.",
@@ -882,6 +886,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "clefable",

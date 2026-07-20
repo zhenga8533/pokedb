@@ -30,7 +30,9 @@
     ],
     "height": 4,
     "weight": 513,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/331.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 67,
     "held_items": {
         "poison-barb": {
             "ruby": 5,
@@ -590,17 +592,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 359,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "rough-terrain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -609,7 +611,10 @@
     },
     "color": "green",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "plant",
+        "humanshape"
+    ],
     "flavor_text": {
         "ruby": "CACNEA lives in arid locations such as deserts. It releases a strong aroma from its flower to attract prey. When prey comes near, this POKéMON shoots sharp thorns from its body to bring the victim down.",
         "sapphire": "The more arid and harsh the environment, the more pretty and fragrant a flower CACNEA grows. This POKéMON battles by wildly swinging its thorny arms.",
@@ -668,6 +673,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "cacnea",

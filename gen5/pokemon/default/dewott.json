@@ -35,7 +35,9 @@
     ],
     "height": 8,
     "weight": 245,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/502.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -60,7 +62,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 145,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -519,17 +521,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 503,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": "oshawott",
     "pokedex_numbers": {
@@ -538,7 +540,9 @@
     },
     "color": "blue",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "black": "Strict training is how it learns its flowing double-scalchop technique.",
         "white": "Scalchop techniques differ from one Dewott to another. It never neglects maintaining its scalchops.",
@@ -635,6 +639,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "dewott",

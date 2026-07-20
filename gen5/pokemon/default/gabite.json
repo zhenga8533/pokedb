@@ -36,7 +36,9 @@
     ],
     "height": 14,
     "weight": 560,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/444.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -61,7 +63,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 144,
     "held_items": {
         "haban-berry": {
             "black": 5,
@@ -501,17 +503,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 40,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 465,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": "gible",
     "pokedex_numbers": {
@@ -519,7 +521,10 @@
     },
     "color": "blue",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "dragon"
+    ],
     "flavor_text": {
         "black": "It loves sparkly things. It seeks treasures in caves and hoards the loot in its nest.",
         "white": "It loves sparkly things. It seeks treasures in caves and hoards the loot in its nest.",
@@ -616,6 +621,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "gabite",

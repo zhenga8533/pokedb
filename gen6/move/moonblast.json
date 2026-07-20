@@ -14,13 +14,13 @@
         "x-y": 15,
         "omega-ruby-alpha-sapphire": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "x-y": "fairy",
         "omega-ruby-alpha-sapphire": "fairy"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-vi",
     "effect_chance": {
         "x-y": 30,
@@ -38,7 +38,31 @@
         "x-y": "Borrowing the power of the moon, the user attacks the target. This may also lower the target’s Sp. Atk stat.",
         "omega-ruby-alpha-sapphire": "Borrowing the power of the moon, the user attacks the target. This may also lower the target’s Sp. Atk stat."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "special-attack"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 30
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

@@ -35,7 +35,9 @@
     ],
     "height": 9,
     "weight": 195,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/63.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 62,
     "held_items": {
         "twisted-spoon": {
             "ruby": 5,
@@ -604,17 +606,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 200,
+    "hatch_counter": 20,
+    "gender_rate": 2,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 69,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "urban",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -623,7 +625,9 @@
     },
     "color": "brown",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": {
         "ruby": "ABRA sleeps for eighteen hours a day. However, it can sense the presence of foes even while it is sleeping. In such a situation, this POKéMON immediately teleports to safety.",
         "sapphire": "ABRA needs to sleep for eighteen hours a day. If it doesn’t, this POKéMON loses its ability to use telekinetic powers. If it is attacked, ABRA escapes using TELEPORT while it is still sleeping.",
@@ -727,6 +731,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "abra",

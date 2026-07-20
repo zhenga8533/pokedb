@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 30,
         "legends-arceus": 30
     },
-    "priority": null,
+    "priority": 1,
     "damage_class": null,
     "type": {
         "sword-shield": "ice",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "ice",
         "legends-arceus": "ice"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "sword-shield": null,
@@ -59,7 +59,26 @@
         "sword-shield": "The user flash-freezes chunks of ice and hurls them at the target. This move always goes first.",
         "legends-arceus": "The user flash-freezes chunks of ice and hurls them at the target. This also raises the user's action speed."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

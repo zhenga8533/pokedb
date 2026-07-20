@@ -39,7 +39,9 @@
     ],
     "height": 15,
     "weight": 480,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/65.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -60,7 +62,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 225,
     "held_items": {
         "twisted-spoon": {
             "ruby": 5,
@@ -684,17 +686,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 50,
+    "hatch_counter": 20,
+    "gender_rate": 2,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 71,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "urban",
     "evolves_from_species": "kadabra",
     "pokedex_numbers": {
@@ -703,7 +705,9 @@
     },
     "color": "brown",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": {
         "ruby": "ALAKAZAM’s brain continually grows, making its head far too heavy to support with its neck. This POKéMON holds its head up using its psychokinetic power instead.",
         "sapphire": "ALAKAZAM’s brain continually grows, infinitely multiplying brain cells. This amazing brain gives this POKéMON an astoundingly high IQ of 5,000. It has a thorough memory of everything that has occurred in the world.",
@@ -807,6 +811,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "alakazam",

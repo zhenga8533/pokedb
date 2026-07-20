@@ -31,7 +31,9 @@
     ],
     "height": 5,
     "weight": 55,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/290.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 53,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -478,17 +480,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 316,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -497,7 +499,9 @@
     },
     "color": "gray",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "ruby": "NINCADA lives underground for many years in complete darkness. This POKéMON absorbs nutrients from the roots of trees. It stays motionless as it waits for evolution.",
         "sapphire": "NINCADA lives underground. It uses its sharp claws to carve the roots of trees and absorb moisture and nutrients. This POKéMON can’t withstand bright sunlight so avoids it.",
@@ -600,6 +604,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "nincada",

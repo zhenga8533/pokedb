@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 15,
         "lets-go-pikachu-lets-go-eevee": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sun-moon": "ghost",
         "ultra-sun-ultra-moon": "ghost",
         "lets-go-pikachu-lets-go-eevee": "ghost"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-ii",
     "effect_chance": {
         "sun-moon": 20,
@@ -46,7 +46,31 @@
         "ultra-sun-ultra-moon": "The user hurls a shadowy blob at the target. This may also lower the target’s Sp. Def stat.",
         "lets-go-pikachu-lets-go-eevee": "The user hurls a shadowy blob at the target. This may also lower the target’s Sp. Def stat."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "special-defense"
+        }
+    ],
     "machine": "tm30",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 20
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

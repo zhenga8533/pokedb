@@ -44,7 +44,9 @@
     ],
     "height": 9,
     "weight": 285,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/224.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -61,7 +63,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 168,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -581,17 +583,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 256,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "sea",
     "evolves_from_species": "remoraid",
     "pokedex_numbers": {
@@ -599,7 +601,10 @@
     },
     "color": "red",
     "shape": "tentacles",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "water2"
+    ],
     "flavor_text": {
         "x": "It has a tendency to want to be in holes. It prefers rock crags or pots and sprays ink from them before attacking.",
         "y": "It traps foes with the suction cups on its tentacles, then smashes them with its rock-hard head.",
@@ -654,6 +659,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "octillery",

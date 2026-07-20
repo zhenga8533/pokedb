@@ -36,7 +36,9 @@
     ],
     "height": 9,
     "weight": 280,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/215.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -71,7 +73,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 86,
     "held_items": {
         "quick-claw": {
             "diamond": 5,
@@ -847,17 +849,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 245,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -866,7 +868,9 @@
     },
     "color": "black",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "diamond": "It feeds on eggs stolen from nests. Its sharply hooked claws rip vulnerable spots on prey.",
         "pearl": "It is extremely vicious and will not stop attacking until its foe is incapable of moving.",
@@ -923,6 +927,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "sneasel",

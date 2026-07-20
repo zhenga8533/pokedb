@@ -35,7 +35,9 @@
     ],
     "height": 4,
     "weight": 65,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/98.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 65,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -591,17 +593,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 225,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 107,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "waters-edge",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -609,7 +611,9 @@
     },
     "color": "red",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "water3"
+    ],
     "flavor_text": {
         "ruby": "KRABBY live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these POKéMON can be seen squabbling with each other over territory.",
         "sapphire": "KRABBY live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these POKéMON can be seen squabbling with each other over territory.",
@@ -668,6 +672,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "krabby",

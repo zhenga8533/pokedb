@@ -23,7 +23,7 @@
         "colosseum": 5,
         "xd": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "physical",
     "type": {
         "ruby-sapphire": "fighting",
@@ -32,7 +32,7 @@
         "colosseum": "fighting",
         "xd": "fighting"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-ii",
     "effect_chance": {
         "ruby-sapphire": null,
@@ -60,7 +60,26 @@
         "emerald": "A double-chopping attack. High critical-hit ratio.",
         "firered-leafgreen": "The foe is hit with double chops. It has a high critical-hit ratio."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 1,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

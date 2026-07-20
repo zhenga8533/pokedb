@@ -20,7 +20,9 @@
     "ev_yield": null,
     "height": 3,
     "weight": 60,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/81.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 65,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -282,17 +284,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 88,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "rough-terrain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -301,7 +303,9 @@
     },
     "color": "gray",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "gold": "It is attracted by electromagnetic waves. It may approach trainers if they are using their POKéGEAR.",
         "silver": "The units at the sides of its body generate anti­ gravity energy to keep it aloft in the air.",
@@ -355,6 +359,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "magnemite",

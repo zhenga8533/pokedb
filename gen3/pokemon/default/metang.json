@@ -31,7 +31,9 @@
     ],
     "height": 12,
     "weight": 2025,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/375.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 147,
     "held_items": {
         "metal-coat": {
             "ruby": 5,
@@ -625,17 +627,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 3,
+    "hatch_counter": 40,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 405,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "rough-terrain",
     "evolves_from_species": "beldum",
     "pokedex_numbers": {
@@ -644,7 +646,9 @@
     },
     "color": "blue",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "ruby": "When two BELDUM fuse together, METANG is formed. The brains of the BELDUM are joined by a magnetic nervous system. By linking its brains magnetically, this POKéMON generates strong psychokinetic power.",
         "sapphire": "When two BELDUM fuse together, METANG is formed. The brains of the BELDUM are joined by a magnetic nervous system. This POKéMON turns its arms to the rear for traveling at high speed.",
@@ -748,6 +752,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "metang",

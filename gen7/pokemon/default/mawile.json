@@ -45,7 +45,9 @@
     ],
     "height": 6,
     "weight": 115,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/303.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -60,7 +62,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 133,
     "held_items": {
         "iron-ball": {
             "sun": 5,
@@ -806,17 +808,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 329,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "cave",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -824,7 +826,10 @@
     },
     "color": "black",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "fairy"
+    ],
     "flavor_text": {
         "ultra-sun": "A cunning and terrifying Pokémon, its cuteness makes opponents let down their guard—and then it swallows them whole with its huge jaws.",
         "ultra-moon": "It has two mouths. The big jaws on the back of its head can’t taste anything, so that’s the mouth it uses to eat foods it doesn’t like."
@@ -835,6 +840,16 @@
         "species_name": "mawile",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "mawile",

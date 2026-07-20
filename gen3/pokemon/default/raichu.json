@@ -25,7 +25,9 @@
     "ev_yield": [],
     "height": 8,
     "weight": 300,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/26.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -46,7 +48,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 218,
     "held_items": {
         "oran-berry": {
             "ruby": 5,
@@ -519,17 +521,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 10,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 27,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "pikachu",
     "pokedex_numbers": {
@@ -538,7 +540,10 @@
     },
     "color": "yellow",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "fairy"
+    ],
     "flavor_text": {
         "ruby": "If the electrical sacks become excessively charged, RAICHU plants its tail in the ground and discharges. Scorched patches of ground will be found near this POKéMON’s nest.",
         "sapphire": "This POKéMON exudes a weak electrical charge from all over its body that makes it take on a slight glow in darkness. RAICHU searches for electricity by planting its tail in the ground.",
@@ -642,6 +647,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "raichu",

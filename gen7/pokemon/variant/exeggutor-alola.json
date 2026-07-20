@@ -36,7 +36,9 @@
     ],
     "height": 109,
     "weight": 4156,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10114.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 186,
     "held_items": {},
     "moves": {
         "machine": [
@@ -697,17 +699,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 112,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "forest",
     "evolves_from_species": "exeggcute",
     "pokedex_numbers": {
@@ -716,7 +718,9 @@
     },
     "color": "yellow",
     "shape": "legs",
-    "egg_groups": null,
+    "egg_groups": [
+        "plant"
+    ],
     "flavor_text": {
         "ultra-sun": "It engages its enemies using psychic powers. Each of its three heads fires off psychokinetic energy, tripling its power.",
         "sun": "Each of its heads has its own will. They use telepathy to discuss their plans before coming to a joint decision.",
@@ -774,6 +778,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "exeggutor",

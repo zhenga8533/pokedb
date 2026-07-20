@@ -36,7 +36,9 @@
     ],
     "height": 12,
     "weight": 1258,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/205.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 163,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -631,17 +633,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 236,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "pineco",
     "pokedex_numbers": {
@@ -649,7 +651,9 @@
     },
     "color": "purple",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "ultra-sun": "When something approaches it, it fires off fragments of its steel shell in attack. This is not a conscious action but a conditioned reflex.",
         "ultra-moon": "In the moment that it gulps down its prey, the inside of its shell is exposed, but to this day, no one has ever seen that sight."
@@ -703,6 +707,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "forretress",

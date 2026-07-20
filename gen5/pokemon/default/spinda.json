@@ -40,7 +40,9 @@
     ],
     "height": 11,
     "weight": 50,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/327.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 126,
     "held_items": {
         "chesto-berry": {
             "black": 5,
@@ -697,17 +699,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 355,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "mountain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -715,7 +717,10 @@
     },
     "color": "brown",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "humanshape"
+    ],
     "flavor_text": {
         "black": "No two Spinda have the same pattern of spots. Its tottering step fouls the aim of foes.",
         "white": "No two Spinda have the same pattern of spots. Its tottering step fouls the aim of foes.",
@@ -728,6 +733,16 @@
         "species_name": "spinda",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "spinda",

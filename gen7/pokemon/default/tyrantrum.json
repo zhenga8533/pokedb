@@ -36,7 +36,9 @@
     ],
     "height": 25,
     "weight": 2700,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/697.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 182,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -584,17 +586,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 30,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 698,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "tyrunt",
     "pokedex_numbers": {
@@ -602,7 +604,10 @@
     },
     "color": "red",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "dragon"
+    ],
     "flavor_text": {
         "ultra-sun": "Complete restoration is impossible, allowing room for theories that its entire body was once covered in a feather-like coat.",
         "ultra-moon": "The king of the ancient world, it can easily crunch a car with the devastating strength of its enormous jaws."
@@ -656,6 +661,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "tyrantrum",

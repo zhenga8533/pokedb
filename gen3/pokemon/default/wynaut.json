@@ -30,7 +30,9 @@
     ],
     "height": 6,
     "weight": 140,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/360.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 52,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -134,17 +136,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 125,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": true,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 232,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "cave",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -153,7 +155,9 @@
     },
     "color": "blue",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "ruby": "WYNAUT can always be seen with a big, happy smile on its face. Look at its tail to determine if it is angry. When angered, this POKéMON will be slapping the ground with its tail.",
         "sapphire": "WYNAUT gather on moonlit nights to play by squeezing up against each other. By being squeezed, this POKéMON gains endurance and is trained to dole out powerful counterattacks.",
@@ -212,6 +216,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "wynaut",

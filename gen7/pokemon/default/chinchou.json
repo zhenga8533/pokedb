@@ -41,7 +41,9 @@
     ],
     "height": 5,
     "weight": 120,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/170.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 66,
     "held_items": {
         "deep-sea-scale": {
             "sun": 5,
@@ -564,17 +566,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 201,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -583,7 +585,9 @@
     },
     "color": "blue",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "water2"
+    ],
     "flavor_text": {
         "sun": "Its two antennae were originally fins. It discharges electricity to stun its prey before attacking.",
         "moon": "It lives in the depths beyond the reach of sunlight. It flashes lights on its antennae to communicate with others of its kind.",
@@ -639,6 +643,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "chinchou",

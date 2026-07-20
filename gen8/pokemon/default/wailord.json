@@ -40,7 +40,9 @@
     ],
     "height": 145,
     "weight": 3980,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/321.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -53,7 +55,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 175,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -543,17 +545,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 40,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 349,
-    "growth_rate": null,
+    "growth_rate": "fast-then-very-slow",
     "habitat": "sea",
     "evolves_from_species": "wailmer",
     "pokedex_numbers": {
@@ -562,7 +564,10 @@
     },
     "color": "blue",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "water2"
+    ],
     "flavor_text": {
         "sword": "It can sometimes knock out opponents with the shock created by breaching and crashing its big body onto the water.",
         "shield": "Its immense size is the reason for its popularity. Wailord watching is a favorite sightseeing activity in various parts of the world."
@@ -618,6 +623,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "wailord",

@@ -40,7 +40,9 @@
     ],
     "height": 4,
     "weight": 65,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/104.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 64,
     "held_items": {
         "thick-club": {
             "sun": 5,
@@ -776,17 +778,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 113,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "mountain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -795,7 +797,9 @@
     },
     "color": "brown",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster"
+    ],
     "flavor_text": {
         "sun": "When it thinks of its deceased mother, it weeps loudly. Mandibuzz that hear its cries will attack it from the air.",
         "moon": "The skull it wears on its head is that of its dead mother. According to some, it will evolve when it comes to terms with the pain of her death.",
@@ -853,6 +857,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "cubone",

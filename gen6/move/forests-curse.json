@@ -14,13 +14,13 @@
         "x-y": 20,
         "omega-ruby-alpha-sapphire": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "x-y": "grass",
         "omega-ruby-alpha-sapphire": "grass"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-vi",
     "effect_chance": {
         "x-y": null,
@@ -38,7 +38,26 @@
         "x-y": "The user puts a forest curse on the target. Afflicted targets are now Grass type as well.",
         "omega-ruby-alpha-sapphire": "The user puts a forest curse on the target. Afflicted targets are now Grass type as well."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "unique",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

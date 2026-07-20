@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 15,
         "lets-go-pikachu-lets-go-eevee": 15
     },
-    "priority": null,
+    "priority": 3,
     "damage_class": null,
     "type": {
         "sun-moon": "fighting",
         "ultra-sun-ultra-moon": "fighting",
         "lets-go-pikachu-lets-go-eevee": "fighting"
     },
-    "target": null,
+    "target": "users-field",
     "generation": "generation-v",
     "effect_chance": {
         "sun-moon": null,
@@ -46,7 +46,26 @@
         "ultra-sun-ultra-moon": "The user protects itself and its allies from priority moves.",
         "lets-go-pikachu-lets-go-eevee": "The user protects itself and its allies from priority moves."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "field-effect",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

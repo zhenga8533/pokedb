@@ -36,7 +36,9 @@
     ],
     "height": 11,
     "weight": 800,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/121.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 182,
     "held_items": {
         "stardust": {
             "ruby": 50,
@@ -545,17 +547,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 138,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "sea",
     "evolves_from_species": "staryu",
     "pokedex_numbers": {
@@ -564,7 +566,9 @@
     },
     "color": "purple",
     "shape": "blob",
-    "egg_groups": null,
+    "egg_groups": [
+        "water3"
+    ],
     "flavor_text": {
         "ruby": "STARMIE’s center section - the core - glows brightly in seven colors. Because of its luminous nature, this POKéMON has been given the nickname “the gem of the sea.”",
         "sapphire": "STARMIE swims through water by spinning its star-shaped body as if it were a propeller on a ship. The core at the center of this POKéMON’s body glows in seven colors.",
@@ -623,6 +627,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "starmie",

@@ -41,7 +41,9 @@
     ],
     "height": 4,
     "weight": 19,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/339.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -58,7 +60,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 58,
     "held_items": {},
     "moves": {
         "egg": [
@@ -591,17 +593,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 367,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "waters-edge",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -609,7 +611,9 @@
     },
     "color": "gray",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "water2"
+    ],
     "flavor_text": {
         "x": "It coats its entire body with a slimy fluid so it can squirm and slip away if grabbed.",
         "y": "Its whiskers make a superb radar. They are used to locate prey, even in the murkiest of water.",
@@ -664,6 +668,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "barboach",

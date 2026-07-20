@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 15,
         "legends-arceus": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "grass",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "grass",
         "legends-arceus": "grass"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "sword-shield": null,
@@ -59,7 +59,26 @@
         "sword-shield": "The user slams a barrage of hard-shelled seeds down on the target from above.",
         "legends-arceus": "The user slams a barrage of hard-shelled seeds down on the target from above."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tr59",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

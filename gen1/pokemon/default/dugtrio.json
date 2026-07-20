@@ -18,7 +18,9 @@
     "ev_yield": null,
     "height": 7,
     "weight": 333,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/51.ogg"
+    },
     "sprites": {
         "versions": {
             "red-blue": {
@@ -39,7 +41,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 149,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -285,16 +287,16 @@
         ]
     },
     "base_happiness": null,
-    "capture_rate": null,
+    "capture_rate": 50,
     "hatch_counter": null,
     "gender_rate": null,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 56,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "cave",
     "evolves_from_species": "diglett",
     "pokedex_numbers": {
@@ -359,6 +361,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "dugtrio",

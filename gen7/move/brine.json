@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 10,
         "lets-go-pikachu-lets-go-eevee": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sun-moon": "water",
         "ultra-sun-ultra-moon": "water",
         "lets-go-pikachu-lets-go-eevee": "water"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "sun-moon": null,
@@ -46,7 +46,26 @@
         "ultra-sun-ultra-moon": "If the target’s HP is half or less, this attack will hit with double the power.",
         "lets-go-pikachu-lets-go-eevee": "If the target’s HP is half or less, this attack will hit with double the power."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

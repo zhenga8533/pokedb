@@ -44,7 +44,9 @@
     ],
     "height": 9,
     "weight": 1020,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/525.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -59,7 +61,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 137,
     "held_items": {
         "everstone": {
             "sun": 50,
@@ -475,17 +477,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 526,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": "roggenrola",
     "pokedex_numbers": {
@@ -494,7 +496,9 @@
     },
     "color": "blue",
     "shape": "tentacles",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "sun": "Its orange crystal is a mass of energy. Just one crystal fragment would provide enough fuel for a hundred dump trucks.",
         "moon": "It explores caves in search of underground water. It’s not comfortable around water, so this Pokémon takes great care in lapping it up.",
@@ -593,6 +597,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "boldore",

@@ -41,7 +41,9 @@
     ],
     "height": 5,
     "weight": 73,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/541.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -66,7 +68,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 133,
     "held_items": {
         "mental-herb": {
             "black": 5,
@@ -400,17 +402,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 542,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": "sewaddle",
     "pokedex_numbers": {
@@ -419,7 +421,9 @@
     },
     "color": "green",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "black": "Forests where Swadloon live have superb foliage because the nutrients they make from fallen leaves nourish the plant life.",
         "white": "It protects itself from the cold by wrapping up in leaves. It stays on the move, eating leaves in forests.",
@@ -516,6 +520,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "swadloon",

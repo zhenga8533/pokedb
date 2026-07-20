@@ -23,7 +23,7 @@
         "colosseum": 5,
         "xd": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "status",
     "type": {
         "ruby-sapphire": "water",
@@ -32,7 +32,7 @@
         "colosseum": "water",
         "xd": "water"
     },
-    "target": null,
+    "target": "entire-field",
     "generation": "generation-ii",
     "effect_chance": {
         "ruby-sapphire": null,
@@ -60,7 +60,26 @@
         "emerald": "Boosts the power of WATER- type moves for 5 turns.",
         "firered-leafgreen": "A heavy rain falls for five turns, powering up WATER- type moves."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm18",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "whole-field-effect",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

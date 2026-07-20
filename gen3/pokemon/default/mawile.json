@@ -39,7 +39,9 @@
     ],
     "height": 6,
     "weight": 115,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/303.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -60,7 +62,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 133,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -731,17 +733,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 329,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "cave",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -750,7 +752,10 @@
     },
     "color": "black",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "fairy"
+    ],
     "flavor_text": {
         "ruby": "MAWHILE’s huge jaws are actually steel horns that have been transformed. Its docile-looking face serves to lull its foe into letting down its guard. When the foe least expects it, MAWHILE chomps it with its gaping jaws.",
         "sapphire": "Don’t be taken in by this POKéMON’s cute face - it’s very dangerous. MAWILE fools the foe into letting down its guard, then chomps down with its massive jaws. The steel jaws are really horns that have been transformed.",
@@ -764,6 +769,16 @@
         "species_name": "mawile",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "mawile",

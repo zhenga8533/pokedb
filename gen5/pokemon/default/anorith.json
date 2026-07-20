@@ -36,7 +36,9 @@
     ],
     "height": 7,
     "weight": 125,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/347.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -61,7 +63,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 71,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -506,17 +508,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 30,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 375,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "waters-edge",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -524,7 +526,9 @@
     },
     "color": "gray",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "water3"
+    ],
     "flavor_text": {
         "black": "A Pokémon ancestor that was reanimated from a fossil. It lived in the sea and hunted with claws.",
         "white": "A Pokémon ancestor that was reanimated from a fossil. It lived in the sea and hunted with claws.",
@@ -579,6 +583,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "anorith",

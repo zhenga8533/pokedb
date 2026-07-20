@@ -2,15 +2,32 @@
     "id": 28,
     "name": "revive",
     "source_url": "https://pokeapi.co/api/v2/item/28/",
-    "cost": null,
-    "fling_power": null,
+    "cost": 2000,
+    "fling_power": 30,
     "fling_effect": null,
-    "attributes": null,
-    "category": null,
-    "effect": null,
-    "short_effect": null,
+    "attributes": [
+        "countable",
+        "consumable",
+        "usable-overworld",
+        "usable-in-battle",
+        "holdable",
+        "underground"
+    ],
+    "category": "revival",
+    "effect": "Used on a party Pokémon : Revives the Pokémon and restores half its HP.",
+    "short_effect": "Revives with half HP.",
     "flavor_text": {
         "sword-shield": "A medicine that can be used to revive a single Pokémon that has fainted. It also restores half of the Pokémon’s max HP."
     },
-    "sprite": null
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revive.png",
+    "unverified_historical_fields": [
+        "cost",
+        "fling_power",
+        "fling_effect",
+        "attributes",
+        "category",
+        "effect",
+        "short_effect",
+        "sprite"
+    ]
 }

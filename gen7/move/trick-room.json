@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 5,
         "lets-go-pikachu-lets-go-eevee": 5
     },
-    "priority": null,
+    "priority": -7,
     "damage_class": null,
     "type": {
         "sun-moon": "psychic",
         "ultra-sun-ultra-moon": "psychic",
         "lets-go-pikachu-lets-go-eevee": "psychic"
     },
-    "target": null,
+    "target": "entire-field",
     "generation": "generation-iv",
     "effect_chance": {
         "sun-moon": null,
@@ -46,7 +46,26 @@
         "ultra-sun-ultra-moon": "The user creates a bizarre area in which slower Pokémon get to move first for five turns.",
         "lets-go-pikachu-lets-go-eevee": "The user creates a bizarre area in which slower Pokémon get to move first for five turns."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm92",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "whole-field-effect",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

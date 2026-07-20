@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 10,
         "lets-go-pikachu-lets-go-eevee": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sun-moon": "electric",
         "ultra-sun-ultra-moon": "electric",
         "lets-go-pikachu-lets-go-eevee": "electric"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "sun-moon": 30,
@@ -46,7 +46,26 @@
         "ultra-sun-ultra-moon": "A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis.",
         "lets-go-pikachu-lets-go-eevee": "A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm25",
-    "metadata": null
+    "metadata": {
+        "ailment": "paralysis",
+        "category": "damage-ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 30,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

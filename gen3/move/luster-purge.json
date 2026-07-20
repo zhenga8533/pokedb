@@ -23,7 +23,7 @@
         "colosseum": 5,
         "xd": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "special",
     "type": {
         "ruby-sapphire": "psychic",
@@ -32,7 +32,7 @@
         "colosseum": "psychic",
         "xd": "psychic"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iii",
     "effect_chance": {
         "ruby-sapphire": 50,
@@ -60,7 +60,31 @@
         "emerald": "Attacks with a burst of light. May lower SP. DEF.",
         "firered-leafgreen": "A burst of light injures the foe. It may also lower the foe’s SP. DEF."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "special-defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 50
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

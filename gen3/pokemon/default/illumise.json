@@ -30,7 +30,9 @@
     ],
     "height": 6,
     "weight": 177,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/314.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 151,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -632,17 +634,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 150,
+    "hatch_counter": 15,
+    "gender_rate": 8,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 340,
-    "growth_rate": null,
+    "growth_rate": "fast-then-very-slow",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -651,7 +653,10 @@
     },
     "color": "purple",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug",
+        "humanshape"
+    ],
     "flavor_text": {
         "ruby": "ILLUMISE attracts a swarm of VOLBEAT using a sweet fragrance. Once the VOLBEAT have gathered, this POKéMON leads the lit-up swarm in drawing geometric designs on the canvas of the night sky.",
         "sapphire": "ILLUMISE leads a flight of illuminated VOLBEAT to draw signs in the night sky. This POKéMON is said to earn greater respect from its peers by composing more complex designs in the sky.",
@@ -665,6 +670,16 @@
         "species_name": "illumise",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "illumise",

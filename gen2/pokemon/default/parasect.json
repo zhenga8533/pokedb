@@ -20,7 +20,9 @@
     "ev_yield": null,
     "height": 10,
     "weight": 295,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/47.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 142,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -337,17 +339,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 52,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "paras",
     "pokedex_numbers": {
@@ -356,7 +358,10 @@
     },
     "color": "red",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug",
+        "plant"
+    ],
     "flavor_text": {
         "gold": "It stays mostly in dark, damp places, the preference not of the bug, but of the big mush­ rooms on its back.",
         "silver": "The larger the mushroom on its back grows, the stronger the mush­ room spores it scatters.",
@@ -410,6 +415,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "parasect",

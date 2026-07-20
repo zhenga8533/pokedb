@@ -20,7 +20,9 @@
     "ev_yield": null,
     "height": 10,
     "weight": 1050,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/75.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 137,
     "held_items": {},
     "moves": {
         "machine": [
@@ -362,17 +364,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 81,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "mountain",
     "evolves_from_species": "geodude",
     "pokedex_numbers": {
@@ -381,7 +383,9 @@
     },
     "color": "brown",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "gold": "With a free and uncaring nature, it doesn't mind if pieces break off while it rolls down mountains.",
         "silver": "A slow walker, it rolls to move. It pays no attention to any object that happens to be in its path.",
@@ -477,6 +481,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "graveler",

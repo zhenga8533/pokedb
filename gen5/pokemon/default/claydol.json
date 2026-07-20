@@ -31,7 +31,9 @@
     ],
     "height": 15,
     "weight": 1080,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/344.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 175,
     "held_items": {},
     "moves": {
         "machine": [
@@ -774,17 +776,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 20,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 372,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "rough-terrain",
     "evolves_from_species": "baltoy",
     "pokedex_numbers": {
@@ -792,7 +794,9 @@
     },
     "color": "black",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "black": "An ancient clay figurine that came to life as a Pokémon from exposure to a mysterious ray of light.",
         "white": "An ancient clay figurine that came to life as a Pokémon from exposure to a mysterious ray of light.",
@@ -847,6 +851,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "claydol",

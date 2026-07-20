@@ -14,13 +14,13 @@
         "x-y": 30,
         "omega-ruby-alpha-sapphire": 30
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "x-y": "psychic",
         "omega-ruby-alpha-sapphire": "psychic"
     },
-    "target": null,
+    "target": "users-field",
     "generation": "generation-i",
     "effect_chance": {
         "x-y": null,
@@ -38,7 +38,26 @@
         "x-y": "A wondrous wall of light is put up to reduce damage from special attacks for five turns.",
         "omega-ruby-alpha-sapphire": "A wondrous wall of light is put up to reduce damage from special attacks for five turns."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm16",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "field-effect",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

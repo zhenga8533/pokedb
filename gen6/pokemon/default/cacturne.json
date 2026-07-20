@@ -40,7 +40,9 @@
     ],
     "height": 13,
     "weight": 774,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/332.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 166,
     "held_items": {
         "sticky-barb": {
             "x": 5,
@@ -725,17 +727,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 360,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "rough-terrain",
     "evolves_from_species": "cacnea",
     "pokedex_numbers": {
@@ -743,7 +745,10 @@
     },
     "color": "green",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "plant",
+        "humanshape"
+    ],
     "flavor_text": {
         "x": "It becomes active at night, seeking prey that is exhausted from the day’s desert heat.",
         "y": "Packs of them follow travelers through the desert until the travelers can no longer move.",
@@ -798,6 +803,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "cacturne",

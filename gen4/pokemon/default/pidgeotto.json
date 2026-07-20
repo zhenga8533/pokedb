@@ -36,7 +36,9 @@
     ],
     "height": 11,
     "weight": 300,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/17.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -71,7 +73,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 122,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -520,17 +522,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 17,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "forest",
     "evolves_from_species": "pidgey",
     "pokedex_numbers": {
@@ -538,7 +540,9 @@
     },
     "color": "brown",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying"
+    ],
     "flavor_text": {
         "diamond": "It flies over its wide territory in search of prey, downing it with its highly developed claws.",
         "pearl": "It flies over its wide territory in search of prey, downing it with its highly developed claws.",
@@ -638,6 +642,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "pidgeotto",

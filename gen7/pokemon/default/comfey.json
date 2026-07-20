@@ -40,7 +40,9 @@
     ],
     "height": 1,
     "weight": 3,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/764.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 170,
     "held_items": {
         "misty-seed": {
             "sun": 5,
@@ -640,17 +642,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 6,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 764,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -659,7 +661,9 @@
     },
     "color": "green",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "plant"
+    ],
     "flavor_text": {
         "sun": "It attaches flowers to its highly nutritious vine. This revitalizes the flowers, and they give off an aromatic scent.",
         "moon": "Baths prepared with the flowers from its vine have a relaxing effect, so this Pokémon is a hit with many people.",
@@ -672,6 +676,16 @@
         "species_name": "comfey",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "comfey",

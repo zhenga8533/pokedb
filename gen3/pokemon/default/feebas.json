@@ -30,7 +30,9 @@
     ],
     "height": 6,
     "weight": 74,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/349.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 40,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -419,17 +421,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 377,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "waters-edge",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -438,7 +440,10 @@
     },
     "color": "brown",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "dragon"
+    ],
     "flavor_text": {
         "ruby": "FEEBAS’s fins are ragged and tattered from the start of its life. Because of its shoddy appearance, this POKéMON is largely ignored. It is capable of living in both the sea and in rivers.",
         "sapphire": "While FEEBAS’s body is in tatters, it has a hardy and tenacious life force that enables it to live anywhere. However, this POKéMON is also slow and dimwitted, making it an easy catch.",
@@ -497,6 +502,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "feebas",

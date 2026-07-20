@@ -19,7 +19,9 @@
     "ev_yield": null,
     "height": 15,
     "weight": 140,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/206.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 145,
     "held_items": {},
     "moves": {
         "machine": [
@@ -410,17 +412,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 237,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "cave",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -429,7 +431,9 @@
     },
     "color": "yellow",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "gold": "When spotted, this POKéMON escapes backward by furi­ ously boring into the ground with its tail.",
         "silver": "If spotted, it es­ capes by burrowing with its tail. It can float just slightly using its wings.",
@@ -441,6 +445,16 @@
         "species_name": "dunsparce",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "dunsparce",

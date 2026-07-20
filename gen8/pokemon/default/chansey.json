@@ -40,7 +40,9 @@
     ],
     "height": 11,
     "weight": 346,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/113.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -53,7 +55,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 395,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -890,17 +892,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 140,
+    "capture_rate": 30,
+    "hatch_counter": 40,
+    "gender_rate": 8,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 127,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "urban",
     "evolves_from_species": "happiny",
     "pokedex_numbers": {
@@ -908,7 +910,9 @@
     },
     "color": "pink",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy"
+    ],
     "flavor_text": {
         "sword": "The egg Chansey carries is not only delicious but also packed with nutrition. It’s used as a high-class cooking ingredient.",
         "shield": "This species was once very slow. To protect their eggs from other creatures, these Pokémon became able to flee quickly.",
@@ -1010,6 +1014,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "chansey",

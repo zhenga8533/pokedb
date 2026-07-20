@@ -35,7 +35,9 @@
     ],
     "height": 17,
     "weight": 950,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/78.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 175,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -526,17 +528,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 84,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "grassland",
     "evolves_from_species": "ponyta",
     "pokedex_numbers": {
@@ -544,7 +546,9 @@
     },
     "color": "yellow",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "ruby": "RAPIDASH usually can be seen casually cantering in the fields and plains. However, when this POKéMON turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph.",
         "sapphire": "RAPIDASH usually can be seen casually cantering in the fields and plains. However, when this POKéMON turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph.",
@@ -603,6 +607,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "rapidash",

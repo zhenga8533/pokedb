@@ -31,7 +31,9 @@
     ],
     "height": 14,
     "weight": 1506,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/365.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 239,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -588,17 +590,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 395,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "sea",
     "evolves_from_species": "sealeo",
     "pokedex_numbers": {
@@ -607,7 +609,10 @@
     },
     "color": "blue",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "ground"
+    ],
     "flavor_text": {
         "ruby": "WALREIN’s two massively developed tusks can totally shatter blocks of ice weighing ten tons with one blow. This POKéMON’s thick coat of blubber insulates it from subzero temperatures.",
         "sapphire": "WALREIN swims all over in frigid seawater while crushing icebergs with its grand, imposing tusks. Its thick layer of blubber makes enemy attacks bounce off harmlessly.",
@@ -711,6 +716,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "walrein",

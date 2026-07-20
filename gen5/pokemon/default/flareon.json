@@ -35,7 +35,9 @@
     ],
     "height": 9,
     "weight": 250,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/136.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -60,7 +62,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 184,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -558,17 +560,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 35,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 160,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "urban",
     "evolves_from_species": "eevee",
     "pokedex_numbers": {
@@ -576,7 +578,9 @@
     },
     "color": "red",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "black": "Inhaled air is heated in the flame sac in its body to an intense fire over 3,000 degrees Fahrenheit.",
         "white": "Inhaled air is heated in the flame sac in its body to an intense fire over 3,000 degrees Fahrenheit.",
@@ -877,6 +881,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "flareon",

@@ -30,7 +30,9 @@
     ],
     "height": 7,
     "weight": 115,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/268.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 72,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -113,17 +115,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 293,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "wurmple",
     "pokedex_numbers": {
@@ -132,7 +134,9 @@
     },
     "color": "purple",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "diamond": "It is hot inside its cocoon. All the cells in its body create the energy for it to evolve.",
         "pearl": "Encased within its tough cocoon, it endures attacks. It never forgets the appearance of its foes.",
@@ -317,6 +321,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "cascoon",

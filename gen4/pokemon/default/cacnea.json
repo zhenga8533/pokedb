@@ -30,7 +30,9 @@
     ],
     "height": 4,
     "weight": 513,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/331.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 67,
     "held_items": {
         "sticky-barb": {
             "diamond": 5,
@@ -706,17 +708,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 190,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 359,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "rough-terrain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -724,7 +726,10 @@
     },
     "color": "green",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "plant",
+        "humanshape"
+    ],
     "flavor_text": {
         "diamond": "By storing water in its body, this desert dweller can survive for 30 days without water.",
         "pearl": "By storing water in its body, this desert dweller can survive for 30 days without water.",
@@ -781,6 +786,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "cacnea",

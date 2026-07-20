@@ -14,13 +14,13 @@
         "x-y": 20,
         "omega-ruby-alpha-sapphire": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "x-y": "normal",
         "omega-ruby-alpha-sapphire": "normal"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-ii",
     "effect_chance": {
         "x-y": null,
@@ -38,7 +38,26 @@
         "x-y": "A full-power attack that grows more powerful the less the user likes its Trainer.",
         "omega-ruby-alpha-sapphire": "A full-power attack that grows more powerful the less the user likes its Trainer."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm21",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

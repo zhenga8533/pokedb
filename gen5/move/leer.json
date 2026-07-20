@@ -14,13 +14,13 @@
         "black-white": 30,
         "black-2-white-2": 30
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "black-white": "normal",
         "black-2-white-2": "normal"
     },
-    "target": null,
+    "target": "all-opponents",
     "generation": "generation-i",
     "effect_chance": {
         "black-white": 100,
@@ -38,7 +38,31 @@
         "black-white": "The opposing team gains an intimidating leer with sharp eyes. The opposing team’s Defense stats are reduced.",
         "black-2-white-2": "The user gains an intimidating leer with sharp eyes. The opposing team’s Defense stats are reduced."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "net-good-stats",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

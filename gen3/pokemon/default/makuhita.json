@@ -35,7 +35,9 @@
     ],
     "height": 10,
     "weight": 864,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/296.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 47,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -693,17 +695,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 180,
+    "hatch_counter": 20,
+    "gender_rate": 2,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 322,
-    "growth_rate": null,
+    "growth_rate": "fast-then-very-slow",
     "habitat": "mountain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -712,7 +714,9 @@
     },
     "color": "yellow",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": {
         "ruby": "MAKUHITA is tenacious - it will keep getting up and attacking its foe however many times it is knocked down. Every time it gets back up, this POKéMON stores more energy in its body for evolving.",
         "sapphire": "MAKUHITA has a tireless spirit - it will never give up hope. It eats a lot of food, gets plenty of sleep, and it trains very rigorously. By living that way, this POKéMON packs its body with energy.",
@@ -771,6 +775,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "makuhita",

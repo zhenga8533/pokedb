@@ -34,7 +34,9 @@
     ],
     "height": 14,
     "weight": 884,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/128.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 172,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -623,17 +625,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 0,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 152,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -641,7 +643,9 @@
     },
     "color": "brown",
     "shape": "quadruped",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "ruby": "This POKéMON is not satisfied unless it is rampaging at all times. If there is no opponent for TAUROS to battle, it will charge at thick trees and knock them down to calm itself.",
         "sapphire": "This POKéMON is not satisfied unless it is rampaging at all times. If there is no opponent for TAUROS to battle, it will charge at thick trees and knock them down to calm itself.",
@@ -655,6 +659,16 @@
         "species_name": "tauros",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "tauros",

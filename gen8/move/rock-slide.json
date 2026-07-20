@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 10,
         "legends-arceus": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "rock",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "rock",
         "legends-arceus": "rock"
     },
-    "target": null,
+    "target": "all-opponents",
     "generation": "generation-i",
     "effect_chance": {
         "sword-shield": 30,
@@ -59,7 +59,26 @@
         "sword-shield": "Large boulders are hurled at opposing Pokémon to inflict damage. This may also make the opposing Pokémon flinch.",
         "legends-arceus": "Large boulders are hurled at the target to inflict damage."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm22",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 30,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

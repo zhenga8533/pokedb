@@ -36,7 +36,9 @@
     ],
     "height": 18,
     "weight": 852,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/85.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 165,
     "held_items": {
         "sharp-beak": {
             "ruby": 5,
@@ -510,17 +512,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 93,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "grassland",
     "evolves_from_species": "doduo",
     "pokedex_numbers": {
@@ -529,7 +531,9 @@
     },
     "color": "brown",
     "shape": "legs",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying"
+    ],
     "flavor_text": {
         "ruby": "Watch out if DODRIO’s three heads are looking in three separate directions. It’s a sure sign that it is on its guard. Don’t go near this POKéMON if it’s being wary - it may decide to peck you.",
         "sapphire": "Apparently, the heads aren’t the only parts of the body that DODRIO has three of. It has three sets of hearts and lungs as well, so it is capable of running long distances without rest.",
@@ -588,6 +592,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "dodrio",

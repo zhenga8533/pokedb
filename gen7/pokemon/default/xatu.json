@@ -45,7 +45,9 @@
     ],
     "height": 15,
     "weight": 150,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/178.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -60,7 +62,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 165,
     "held_items": {},
     "moves": {
         "machine": [
@@ -653,17 +655,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 207,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "natu",
     "pokedex_numbers": {
@@ -671,7 +673,9 @@
     },
     "color": "green",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying"
+    ],
     "flavor_text": {
         "ultra-sun": "It’s said that while this Pokémon has the power to predict the future, it’s not powerful enough to change the future it sees.",
         "ultra-moon": "While it can see the future, it has no desire to change it, which is probably why it remains motionless at all times."
@@ -725,6 +729,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "xatu",

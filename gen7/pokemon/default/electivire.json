@@ -35,7 +35,9 @@
     ],
     "height": 18,
     "weight": 1386,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/466.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -50,7 +52,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 243,
     "held_items": {
         "electirizer": {
             "sun": 5,
@@ -636,17 +638,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 30,
+    "hatch_counter": 25,
+    "gender_rate": 2,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 147,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "electabuzz",
     "pokedex_numbers": {
@@ -655,7 +657,9 @@
     },
     "color": "yellow",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "humanshape"
+    ],
     "flavor_text": {
         "sun": "It pushes the tips of its tails against its foes and then lets loose a high-voltage current. Its foes are burned to a crisp in an instant.",
         "moon": "When it gets excited, it thumps its chest. With every thud, thunder roars and electric sparks shower all around.",
@@ -754,6 +758,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "electivire",

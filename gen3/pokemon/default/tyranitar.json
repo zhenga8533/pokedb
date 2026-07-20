@@ -31,7 +31,9 @@
     ],
     "height": 20,
     "weight": 2020,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/248.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 270,
     "held_items": {
         "nugget": {
             "colosseum": 100
@@ -755,17 +757,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 40,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 273,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "mountain",
     "evolves_from_species": "pupitar",
     "pokedex_numbers": {
@@ -773,7 +775,9 @@
     },
     "color": "green",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster"
+    ],
     "flavor_text": {
         "ruby": "TYRANITAR is so overwhelmingly powerful, it can bring down a whole mountain to make its nest. This POKéMON wanders about in mountains seeking new opponents to fight.",
         "sapphire": "TYRANITAR is so overwhelmingly powerful, it can bring down a whole mountain to make its nest. This POKéMON wanders about in mountains seeking new opponents to fight.",
@@ -877,6 +881,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "tyranitar",

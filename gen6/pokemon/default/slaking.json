@@ -30,7 +30,9 @@
     ],
     "height": 20,
     "weight": 1305,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/289.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -47,7 +49,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 252,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -757,17 +759,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 315,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "forest",
     "evolves_from_species": "vigoroth",
     "pokedex_numbers": {
@@ -775,7 +777,9 @@
     },
     "color": "brown",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground"
+    ],
     "flavor_text": {
         "x": "The world’s laziest Pokémon. It moves to another spot when there’s no food left within its reach.",
         "y": "It is the world’s most slothful Pokémon. However, it can exert horrifying power by releasing pent-up energy all at once.",
@@ -872,6 +876,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "slaking",

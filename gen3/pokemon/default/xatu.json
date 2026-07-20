@@ -40,7 +40,9 @@
     ],
     "height": 15,
     "weight": 150,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/178.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -61,7 +63,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 165,
     "held_items": {},
     "moves": {
         "machine": [
@@ -547,17 +549,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 207,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "natu",
     "pokedex_numbers": {
@@ -566,7 +568,9 @@
     },
     "color": "green",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying"
+    ],
     "flavor_text": {
         "ruby": "XATU stands rooted and still in one spot all day long. People believe that this POKéMON does so out of fear of the terrible things it has foreseen in the future.",
         "sapphire": "XATU is known to stand motionless while staring at the sun all day long. Some people revere it as a mystical POKéMON out of their belief that XATU is in possession of the power to see into the future.",
@@ -625,6 +629,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "xatu",

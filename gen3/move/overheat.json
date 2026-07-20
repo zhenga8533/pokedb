@@ -23,7 +23,7 @@
         "colosseum": 5,
         "xd": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "special",
     "type": {
         "ruby-sapphire": "fire",
@@ -32,7 +32,7 @@
         "colosseum": "fire",
         "xd": "fire"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iii",
     "effect_chance": {
         "ruby-sapphire": 100,
@@ -60,7 +60,31 @@
         "emerald": "Allows a full-power attack, but sharply lowers SP. ATK.",
         "firered-leafgreen": "An intense attack that also sharply reduces the user’s SP. ATK stat."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -2,
+            "stat": "special-attack"
+        }
+    ],
     "machine": "tm50",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-raise",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

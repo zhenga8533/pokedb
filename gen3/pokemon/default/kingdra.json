@@ -39,7 +39,9 @@
     ],
     "height": 18,
     "weight": 1520,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/230.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -60,7 +62,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 243,
     "held_items": {
         "dragon-scale": {
             "ruby": 5,
@@ -488,17 +490,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 134,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "sea",
     "evolves_from_species": "seadra",
     "pokedex_numbers": {
@@ -507,7 +509,10 @@
     },
     "color": "blue",
     "shape": "blob",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "dragon"
+    ],
     "flavor_text": {
         "ruby": "KINGDRA lives at extreme ocean depths that are otherwise uninhabited. It has long been believed that the yawning of this POKéMON creates spiraling ocean currents.",
         "sapphire": "KINGDRA sleeps on the seafloor where it is otherwise devoid of life. When a storm arrives, the POKéMON is said to awaken and wander about in search of prey.",
@@ -611,6 +616,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "kingdra",

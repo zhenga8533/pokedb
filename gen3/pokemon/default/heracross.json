@@ -36,7 +36,9 @@
     ],
     "height": 15,
     "weight": 540,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/214.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 175,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -573,17 +575,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 244,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -592,7 +594,9 @@
     },
     "color": "blue",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "ruby": "HERACROSS charges in a straight line at its foe, slips beneath the foe’s grasp, and then scoops up and hurls the opponent with its mighty horn. This POKéMON even has enough power to topple a massive tree.",
         "sapphire": "HERACROSS has sharp claws on its feet. These are planted firmly into the ground or the bark of a tree, giving the POKéMON a secure and solid footing to forcefully fling away foes with its proud horn.",
@@ -606,6 +610,16 @@
         "species_name": "heracross",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "heracross",

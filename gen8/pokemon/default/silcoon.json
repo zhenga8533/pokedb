@@ -30,7 +30,9 @@
     ],
     "height": 6,
     "weight": 100,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/266.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -43,7 +45,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 72,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -84,17 +86,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 291,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "wurmple",
     "pokedex_numbers": {
@@ -102,7 +104,9 @@
     },
     "color": "white",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "legends-arceus": "Wraps itself in thin strings of silk while it stores energy for evolution. It can't extend its limbs and its movement is slow, but its eyes keep a sharp lookout—Silcoon is always on guard."
     },
@@ -291,6 +295,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "silcoon",

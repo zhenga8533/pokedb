@@ -36,7 +36,9 @@
     ],
     "height": 19,
     "weight": 1200,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/112.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 170,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -756,17 +758,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 124,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "rough-terrain",
     "evolves_from_species": "rhyhorn",
     "pokedex_numbers": {
@@ -775,7 +777,10 @@
     },
     "color": "gray",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster",
+        "ground"
+    ],
     "flavor_text": {
         "ruby": "RHYDON’s horn can crush even uncut diamonds. One sweeping blow of its tail can topple a building. This POKéMON’s hide is extremely tough. Even direct cannon hits don’t leave a scratch.",
         "sapphire": "RHYDON has a horn that serves as a drill. It is used for destroying rocks and boulders. This POKéMON occasionally rams into streams of magma, but the armor-like hide prevents it from feeling the heat.",
@@ -834,6 +839,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "rhydon",

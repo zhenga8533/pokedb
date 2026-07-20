@@ -2,17 +2,32 @@
     "id": 55,
     "name": "guard-spec",
     "source_url": "https://pokeapi.co/api/v2/item/55/",
-    "cost": null,
-    "fling_power": null,
+    "cost": 1500,
+    "fling_power": 30,
     "fling_effect": null,
-    "attributes": null,
-    "category": null,
-    "effect": null,
-    "short_effect": null,
+    "attributes": [
+        "countable",
+        "consumable",
+        "usable-in-battle",
+        "holdable"
+    ],
+    "category": "stat-boosts",
+    "effect": "Used on a party Pokémon in battle : Protects the target’s stats from being lowered for the next five turns. Increases happiness by 1/1/0.",
+    "short_effect": "Prevents stat changes in battle for five turns in battle. Raises happiness.",
     "flavor_text": {
         "ruby-sapphire": "Prevents stat reduction when used in battle.",
         "emerald": "Prevents stat reduction when used in battle.",
         "firered-leafgreen": "An item that prevents stat reduction among party POKéMON for five turns after use."
     },
-    "sprite": null
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/guard-spec.png",
+    "unverified_historical_fields": [
+        "cost",
+        "fling_power",
+        "fling_effect",
+        "attributes",
+        "category",
+        "effect",
+        "short_effect",
+        "sprite"
+    ]
 }

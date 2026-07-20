@@ -35,7 +35,9 @@
     ],
     "height": 6,
     "weight": 175,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/729.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -48,7 +50,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 147,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -415,17 +417,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 729,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": null,
     "evolves_from_species": "popplio",
     "pokedex_numbers": {
@@ -433,7 +435,10 @@
     },
     "color": "blue",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "ground"
+    ],
     "flavor_text": {
         "sword": "As if dancing, it artfully dodges the attacks of its enemies. All the while, it’s busy forming a bunch of balloons to overwhelm its foes.",
         "shield": "On nights when the sea is calm, Brionne dance with one another to the singing of the Primarina that’s leading them."
@@ -534,6 +539,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "brionne",

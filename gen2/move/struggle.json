@@ -14,13 +14,13 @@
         "gold-silver": 1,
         "crystal": 1
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "physical",
     "type": {
         "gold-silver": "normal",
         "crystal": "normal"
     },
-    "target": null,
+    "target": "random-opponent",
     "generation": "generation-i",
     "effect_chance": {
         "gold-silver": 10,
@@ -38,7 +38,26 @@
         "gold-silver": "Used only if all PP are exhausted.",
         "crystal": "Used only if all PP are exhausted."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": -25,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

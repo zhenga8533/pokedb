@@ -41,7 +41,9 @@
     ],
     "height": 11,
     "weight": 328,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/342.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 164,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -593,17 +595,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 155,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 370,
-    "growth_rate": null,
+    "growth_rate": "fast-then-very-slow",
     "habitat": "waters-edge",
     "evolves_from_species": "corphish",
     "pokedex_numbers": {
@@ -611,7 +613,10 @@
     },
     "color": "red",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "water3"
+    ],
     "flavor_text": {
         "ultra-sun": "Its temperament is rough and it loves to fight, but as soon as its pincers break off, it turns cowardly. It stays timid until they grow back.",
         "ultra-moon": "Its pincers often fall off. Unlike with Crabrawler or Clauncher, the meat in its claws is utterly nasty and stinking."
@@ -665,6 +670,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "crawdaunt",

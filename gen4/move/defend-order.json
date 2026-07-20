@@ -17,14 +17,14 @@
         "platinum": 10,
         "heartgold-soulsilver": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "diamond-pearl": "bug",
         "platinum": "bug",
         "heartgold-soulsilver": "bug"
     },
-    "target": null,
+    "target": "user",
     "generation": "generation-iv",
     "effect_chance": {
         "diamond-pearl": null,
@@ -46,7 +46,35 @@
         "platinum": "The user calls out its underlings to shield its body, raising its Defense and Sp. Def stats.",
         "heartgold-soulsilver": "The user calls out its underlings to shield its body, raising its Defense and Sp. Def stats."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": 1,
+            "stat": "defense"
+        },
+        {
+            "change": 1,
+            "stat": "special-defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "net-good-stats",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

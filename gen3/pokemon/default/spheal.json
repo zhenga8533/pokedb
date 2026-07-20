@@ -31,7 +31,9 @@
     ],
     "height": 8,
     "weight": 395,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/363.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -52,7 +54,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 58,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -660,17 +662,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 393,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -679,7 +681,10 @@
     },
     "color": "blue",
     "shape": "fish",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1",
+        "ground"
+    ],
     "flavor_text": {
         "ruby": "SPHEAL is much faster rolling than walking to get around. When groups of this POKéMON eat, they all clap at once to show their pleasure. Because of this, their mealtimes are noisy.",
         "sapphire": "SPHEAL always travels by rolling around on its ball-like body. When the season for ice floes arrives, this POKéMON can be seen rolling about on ice and crossing the sea.",
@@ -783,6 +788,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "spheal",

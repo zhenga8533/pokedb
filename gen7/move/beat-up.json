@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 10,
         "lets-go-pikachu-lets-go-eevee": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sun-moon": "dark",
         "ultra-sun-ultra-moon": "dark",
         "lets-go-pikachu-lets-go-eevee": "dark"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-ii",
     "effect_chance": {
         "sun-moon": null,
@@ -46,7 +46,26 @@
         "ultra-sun-ultra-moon": "The user gets all party Pokémon to attack the target. The more party Pokémon, the greater the number of attacks.",
         "lets-go-pikachu-lets-go-eevee": "The user gets all party Pokémon to attack the target. The more party Pokémon, the greater the number of attacks."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": 6,
+        "max_hits": 6,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

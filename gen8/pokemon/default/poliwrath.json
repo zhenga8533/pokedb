@@ -41,7 +41,9 @@
     ],
     "height": 13,
     "weight": 540,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/62.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -54,7 +56,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 230,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -665,17 +667,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 67,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "waters-edge",
     "evolves_from_species": "poliwhirl",
     "pokedex_numbers": {
@@ -683,7 +685,9 @@
     },
     "color": "blue",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1"
+    ],
     "flavor_text": {
         "sword": "Its body is solid muscle. When swimming through cold seas, Poliwrath uses its impressive arms to smash through drift ice and plow forward.",
         "shield": "Poliwrath is skilled at both swimming and martial arts. It uses its well-trained arms to dish out powerful punches."
@@ -828,6 +832,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "poliwrath",

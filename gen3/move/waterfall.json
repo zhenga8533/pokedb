@@ -23,7 +23,7 @@
         "colosseum": 15,
         "xd": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "special",
     "type": {
         "ruby-sapphire": "water",
@@ -32,7 +32,7 @@
         "colosseum": "water",
         "xd": "water"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "ruby-sapphire": 20,
@@ -60,7 +60,26 @@
         "emerald": "Charges the foe with speed to climb waterfalls.",
         "firered-leafgreen": "A powerful charge attack. It can also be used to climb a waterfall."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "hm07",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 20,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 20,
         "lets-go-pikachu-lets-go-eevee": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sun-moon": "normal",
         "ultra-sun-ultra-moon": "normal",
         "lets-go-pikachu-lets-go-eevee": "normal"
     },
-    "target": null,
+    "target": "user",
     "generation": "generation-i",
     "effect_chance": {
         "sun-moon": null,
@@ -46,7 +46,35 @@
         "ultra-sun-ultra-moon": "The user’s body grows all at once, raising the Attack and Sp. Atk stats.",
         "lets-go-pikachu-lets-go-eevee": "The user’s body grows all at once, raising the Attack and Sp. Atk stats."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": 1,
+            "stat": "attack"
+        },
+        {
+            "change": 1,
+            "stat": "special-attack"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "net-good-stats",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

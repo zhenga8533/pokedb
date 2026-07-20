@@ -41,7 +41,9 @@
     ],
     "height": 8,
     "weight": 120,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/451.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -58,7 +60,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 66,
     "held_items": {
         "poison-barb": {
             "x": 5,
@@ -671,17 +673,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 471,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -689,7 +691,10 @@
     },
     "color": "purple",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug",
+        "water3"
+    ],
     "flavor_text": {
         "x": "It grips prey with its tail claws and injects poison. It tenaciously hangs on until the poison takes.",
         "y": "It burrows under the sand to lie in wait for prey. Its tail claws can inject its prey with a savage poison.",
@@ -744,6 +749,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "skorupi",

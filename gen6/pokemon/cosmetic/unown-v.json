@@ -34,7 +34,9 @@
     ],
     "height": 5,
     "weight": 50,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/201.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -55,7 +57,7 @@
         "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/201-v.png",
         "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/201-v.png"
     },
-    "base_experience": null,
+    "base_experience": 118,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -79,17 +81,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 225,
+    "hatch_counter": 40,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 231,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "rare",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -97,7 +99,9 @@
     },
     "color": "black",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "x": "Its flat, thin body is always stuck on walls. Its shape appears to have some meaning.",
         "y": "Shaped like ancient writing, it is a huge mystery whether language or Unown came first.",
@@ -110,6 +114,16 @@
         "species_name": "unown",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "unown",

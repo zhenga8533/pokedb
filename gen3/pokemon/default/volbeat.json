@@ -35,7 +35,9 @@
     ],
     "height": 7,
     "weight": 177,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/313.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 151,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -637,17 +639,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 150,
+    "hatch_counter": 15,
+    "gender_rate": 0,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 339,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "forest",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -656,7 +658,10 @@
     },
     "color": "gray",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug",
+        "humanshape"
+    ],
     "flavor_text": {
         "ruby": "With the arrival of night, VOLBEAT emits light from its tail. It communicates with others by adjusting the intensity and flashing of its light. This POKéMON is attracted by the sweet aroma of ILLUMISE.",
         "sapphire": "VOLBEAT’s tail glows like a lightbulb. With other VOLBEAT, it uses its tail to draw geometric shapes in the night sky. This POKéMON loves the sweet aroma given off by ILLUMISE.",
@@ -670,6 +675,16 @@
         "species_name": "volbeat",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "volbeat",

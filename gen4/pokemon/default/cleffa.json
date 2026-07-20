@@ -35,7 +35,9 @@
     ],
     "height": 3,
     "weight": 30,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/173.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -70,7 +72,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 44,
     "held_items": {
         "moon-stone": {
             "diamond": 5,
@@ -706,17 +708,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 140,
+    "capture_rate": 150,
+    "hatch_counter": 10,
+    "gender_rate": 6,
     "has_gender_differences": false,
     "is_baby": true,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 36,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "mountain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -725,7 +727,9 @@
     },
     "color": "pink",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "diamond": "Its silhouette is like a star. It is believed to arrive riding on shooting stars.",
         "pearl": "Many appear when the night skies are filled with shooting stars. They disappear with sunrise.",
@@ -825,6 +829,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "cleffa",

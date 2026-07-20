@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 5,
         "lets-go-pikachu-lets-go-eevee": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sun-moon": "dark",
         "ultra-sun-ultra-moon": "dark",
         "lets-go-pikachu-lets-go-eevee": "dark"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-vi",
     "effect_chance": {
         "sun-moon": 100,
@@ -46,7 +46,31 @@
         "ultra-sun-ultra-moon": "Using its many arms, the user unleashes a barrage of attacks that ignore the effects of moves like Protect and Detect. But the user’s Defense stat falls.",
         "lets-go-pikachu-lets-go-eevee": "Using its many arms, the user unleashes a barrage of attacks that ignore the effects of moves like Protect and Detect. But the user’s Defense stat falls."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-raise",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

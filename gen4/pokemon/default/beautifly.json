@@ -31,7 +31,9 @@
     ],
     "height": 10,
     "weight": 284,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/267.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -66,7 +68,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 178,
     "held_items": {
         "shed-shell": {
             "diamond": 5,
@@ -539,17 +541,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 15,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 292,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "forest",
     "evolves_from_species": "silcoon",
     "pokedex_numbers": {
@@ -558,7 +560,9 @@
     },
     "color": "yellow",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug"
+    ],
     "flavor_text": {
         "diamond": "It has an aggressive nature. It stabs prey with its long, narrow mouth to drain the prey’s fluids.",
         "pearl": "When flower fields bloom, it flits around, collecting pollen. Despite its appearance, it is savage.",
@@ -743,6 +747,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "beautifly",

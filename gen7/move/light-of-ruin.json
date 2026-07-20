@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 5,
         "lets-go-pikachu-lets-go-eevee": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sun-moon": "fairy",
         "ultra-sun-ultra-moon": "fairy",
         "lets-go-pikachu-lets-go-eevee": "fairy"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-vi",
     "effect_chance": {
         "sun-moon": null,
@@ -46,7 +46,26 @@
         "ultra-sun-ultra-moon": "Drawing power from the Eternal Flower, the user fires a powerful beam of light. This also damages the user quite a lot.",
         "lets-go-pikachu-lets-go-eevee": "Drawing power from the Eternal Flower, the user fires a powerful beam of light. This also damages the user quite a lot."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": -50,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

@@ -40,7 +40,9 @@
     ],
     "height": 20,
     "weight": 1505,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/706.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -55,7 +57,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 270,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -588,17 +590,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 40,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 706,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": null,
     "evolves_from_species": "sliggoo",
     "pokedex_numbers": {
@@ -607,7 +609,9 @@
     },
     "color": "purple",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "dragon"
+    ],
     "flavor_text": {
         "sun": "An amazingly friendly Pokémon, but if left to itself, loneliness overcomes it, and it oozes gooey tears.",
         "moon": "It gets picked on because it’s meek. But then, whoever teased it gets to feel the full force of its horns and a good swatting from its thick tail.",
@@ -706,6 +710,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "goodra",

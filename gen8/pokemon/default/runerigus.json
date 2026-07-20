@@ -31,7 +31,9 @@
     ],
     "height": 16,
     "weight": 666,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/867.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -44,7 +46,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 169,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -579,17 +581,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 50,
+    "capture_rate": 90,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 867,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": "yamask",
     "pokedex_numbers": {
@@ -598,7 +600,10 @@
     },
     "color": "gray",
     "shape": "blob",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral",
+        "indeterminate"
+    ],
     "flavor_text": {
         "sword": "A powerful curse was woven into an ancient painting. After absorbing the spirit of a Yamask, the painting began to move.",
         "shield": "Never touch its shadowlike body, or you’ll be shown the horrific memories behind the picture carved into it."
@@ -698,6 +703,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "runerigus",

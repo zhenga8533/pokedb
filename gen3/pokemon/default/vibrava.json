@@ -35,7 +35,9 @@
     ],
     "height": 11,
     "weight": 153,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/329.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 119,
     "held_items": {
         "dragon-fang": {
             "colosseum": 100
@@ -531,17 +533,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 120,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 357,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "rough-terrain",
     "evolves_from_species": "trapinch",
     "pokedex_numbers": {
@@ -550,7 +552,10 @@
     },
     "color": "green",
     "shape": "bug-wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug",
+        "dragon"
+    ],
     "flavor_text": {
         "ruby": "To make prey faint, VIBRAVA generates ultrasonic waves by vigorously making its two wings vibrate. This POKéMON’s ultrasonic waves are so powerful, they can bring on headaches in people.",
         "sapphire": "VIBRAVA’s wings have not yet completed the process of growing. Rather than flying long distances, they are more useful for generating ultrasonic waves by vibrating.",
@@ -654,6 +659,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "vibrava",

@@ -14,13 +14,13 @@
         "x-y": 10,
         "omega-ruby-alpha-sapphire": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "x-y": "rock",
         "omega-ruby-alpha-sapphire": "rock"
     },
-    "target": null,
+    "target": "all-opponents",
     "generation": "generation-i",
     "effect_chance": {
         "x-y": 30,
@@ -38,7 +38,26 @@
         "x-y": "Large boulders are hurled at the opposing Pokémon to inflict damage. This may also make the opposing Pokémon flinch.",
         "omega-ruby-alpha-sapphire": "Large boulders are hurled at the opposing Pokémon to inflict damage. This may also make the opposing Pokémon flinch."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm80",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 30,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

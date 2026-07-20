@@ -40,7 +40,9 @@
     ],
     "height": 21,
     "weight": 4600,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/143.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -65,7 +67,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 189,
     "held_items": {
         "leftovers": {
             "black": 100,
@@ -746,17 +748,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 25,
+    "hatch_counter": 40,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 175,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "mountain",
     "evolves_from_species": "munchlax",
     "pokedex_numbers": {
@@ -764,7 +766,9 @@
     },
     "color": "black",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster"
+    ],
     "flavor_text": {
         "black": "When its belly is full, it becomes too lethargic to even lift a finger, so it is safe to bounce on its belly.",
         "white": "When its belly is full, it becomes too lethargic to even lift a finger, so it is safe to bounce on its belly.",
@@ -819,6 +823,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "snorlax",

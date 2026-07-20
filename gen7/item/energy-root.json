@@ -2,17 +2,33 @@
     "id": 35,
     "name": "energy-root",
     "source_url": "https://pokeapi.co/api/v2/item/35/",
-    "cost": null,
-    "fling_power": null,
+    "cost": 1200,
+    "fling_power": 30,
     "fling_effect": null,
-    "attributes": null,
-    "category": null,
-    "effect": null,
-    "short_effect": null,
+    "attributes": [
+        "countable",
+        "consumable",
+        "usable-overworld",
+        "usable-in-battle",
+        "holdable"
+    ],
+    "category": "healing",
+    "effect": "Used on a party Pokémon : Restores 200 HP. Decreases happiness by 10/10/15.",
+    "short_effect": "Restores 200 HP, but lowers happiness.",
     "flavor_text": {
         "sun-moon": "An extremely bitter medicinal root. When consumed, it restores up to 120 HP to an injured Pokémon.",
         "ultra-sun-ultra-moon": "An extremely bitter medicinal root. When consumed, it restores up to 120 HP to an injured Pokémon.",
         "lets-go-pikachu-lets-go-eevee": "An extremely bitter medicinal root. When consumed, it restores up to 120 HP to an injured Pokémon."
     },
-    "sprite": null
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-root.png",
+    "unverified_historical_fields": [
+        "cost",
+        "fling_power",
+        "fling_effect",
+        "attributes",
+        "category",
+        "effect",
+        "short_effect",
+        "sprite"
+    ]
 }

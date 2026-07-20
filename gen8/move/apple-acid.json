@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 10,
         "legends-arceus": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "grass",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "grass",
         "legends-arceus": "grass"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-viii",
     "effect_chance": {
         "sword-shield": 100,
@@ -59,7 +59,31 @@
         "sword-shield": "The user attacks the target with an acidic liquid created from tart apples. This also lowers the target’s Sp. Def stat.",
         "legends-arceus": "The user attacks the target with an acidic liquid created from tart apples. This also lowers the target's Sp. Def stat."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "special-defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

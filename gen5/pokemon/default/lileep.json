@@ -36,7 +36,9 @@
     ],
     "height": 10,
     "weight": 238,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/345.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -61,7 +63,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 71,
     "held_items": {
         "big-root": {
             "black": 5,
@@ -525,17 +527,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 45,
+    "hatch_counter": 30,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 373,
-    "growth_rate": null,
+    "growth_rate": "slow-then-very-fast",
     "habitat": "sea",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -543,7 +545,9 @@
     },
     "color": "purple",
     "shape": "blob",
-    "egg_groups": null,
+    "egg_groups": [
+        "water3"
+    ],
     "flavor_text": {
         "black-2": "It lived on the seafloor 100 million years ago and was reanimated scientifically.",
         "white-2": "It lived on the seafloor 100 million years ago and was reanimated scientifically.",
@@ -598,6 +602,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "lileep",

@@ -31,7 +31,9 @@
     ],
     "height": 5,
     "weight": 120,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/767.ogg"
+    },
     "sprites": {
         "versions": {
             "icons": {
@@ -46,7 +48,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 46,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -289,17 +291,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 767,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": null,
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -308,7 +310,10 @@
     },
     "color": "gray",
     "shape": "tentacles",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug",
+        "water3"
+    ],
     "flavor_text": {
         "sun": "This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake.",
         "moon": "Its habitat varies from beaches to seabeds. A natural scavenger, it will gleefully chow down on anything edible, no matter how rotten.",
@@ -364,6 +369,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "wimpod",

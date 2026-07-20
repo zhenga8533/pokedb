@@ -14,13 +14,13 @@
         "black-white": 15,
         "black-2-white-2": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "black-white": "water",
         "black-2-white-2": "water"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "black-white": 20,
@@ -38,7 +38,26 @@
         "black-white": "The user charges at the target and may make it flinch. It can also be used to climb a waterfall.",
         "black-2-white-2": "The user charges at the target and may make it flinch. It can also be used to climb a waterfall."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "hm05",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 20,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

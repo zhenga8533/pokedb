@@ -23,7 +23,7 @@
         "brilliant-diamond-shining-pearl": 10,
         "legends-arceus": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sword-shield": "fighting",
@@ -32,7 +32,7 @@
         "brilliant-diamond-shining-pearl": "fighting",
         "legends-arceus": "fighting"
     },
-    "target": null,
+    "target": "user-and-allies",
     "generation": "generation-viii",
     "effect_chance": {
         "sword-shield": 100,
@@ -59,7 +59,35 @@
         "sword-shield": "The user properly coaches its ally Pokémon, boosting their Attack and Defense stats.",
         "legends-arceus": "The user properly coaches its ally Pokémon, boosting their Attack and Defense stats."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": 1,
+            "stat": "attack"
+        },
+        {
+            "change": 1,
+            "stat": "defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "net-good-stats",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 100
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

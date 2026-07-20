@@ -30,7 +30,9 @@
     ],
     "height": 10,
     "weight": 120,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/40.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 196,
     "held_items": {
         "oran-berry": {
             "firered": 50,
@@ -652,17 +654,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 50,
+    "hatch_counter": 10,
+    "gender_rate": 6,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 43,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "grassland",
     "evolves_from_species": "jigglypuff",
     "pokedex_numbers": {
@@ -671,7 +673,9 @@
     },
     "color": "pink",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy"
+    ],
     "flavor_text": {
         "ruby": "WIGGLYTUFF has large, saucerlike eyes. The surfaces of its eyes are always covered with a thin layer of tears. If any dust gets in this POKéMON’s eyes, it is quickly washed away.",
         "sapphire": "WIGGLYTUFF’s body is very flexible. By inhaling deeply, this POKéMON can inflate itself seemingly without end. Once inflated, WIGGLYTUFF bounces along lightly like a balloon.",
@@ -775,6 +779,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "wigglytuff",

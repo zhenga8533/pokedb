@@ -35,7 +35,9 @@
     ],
     "height": 7,
     "weight": 150,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/328.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 58,
     "held_items": {
         "soft-sand": {
             "ruby": 5,
@@ -491,17 +493,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 255,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 356,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "rough-terrain",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -510,7 +512,10 @@
     },
     "color": "brown",
     "shape": "armor",
-    "egg_groups": null,
+    "egg_groups": [
+        "bug",
+        "dragon"
+    ],
     "flavor_text": {
         "ruby": "TRAPINCH’s nest is a sloped, bowl-like pit dug in sand. This POKéMON patiently waits for prey to tumble down the pit. Its giant jaws have enough strength to crush even boulders.",
         "sapphire": "TRAPINCH is a patient hunter. It digs an inescapable pit in a desert and waits for its prey to come tumbling down. This POKéMON can go a whole week without access to any water.",
@@ -614,6 +619,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "trapinch",

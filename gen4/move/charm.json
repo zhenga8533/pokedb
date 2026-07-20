@@ -17,14 +17,14 @@
         "platinum": 20,
         "heartgold-soulsilver": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "diamond-pearl": "normal",
         "platinum": "normal",
         "heartgold-soulsilver": "normal"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-ii",
     "effect_chance": {
         "diamond-pearl": null,
@@ -46,7 +46,31 @@
         "platinum": "The user charmingly stares at the foe, making it less wary. The target’s Attack is sharply lowered.",
         "heartgold-soulsilver": "The user charmingly stares at the foe, making it less wary. The target’s Attack is sharply lowered."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -2,
+            "stat": "attack"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "net-good-stats",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

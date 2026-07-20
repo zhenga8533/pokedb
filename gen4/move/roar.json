@@ -17,14 +17,14 @@
         "platinum": 20,
         "heartgold-soulsilver": 20
     },
-    "priority": null,
+    "priority": -6,
     "damage_class": null,
     "type": {
         "diamond-pearl": "normal",
         "platinum": "normal",
         "heartgold-soulsilver": "normal"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "diamond-pearl": null,
@@ -46,7 +46,26 @@
         "platinum": "The foe is scared off, to be replaced by another Pokémon in its party. In the wild, the battle ends.",
         "heartgold-soulsilver": "The foe is scared off, to be replaced by another Pokémon in its party. In the wild, the battle ends."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm05",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "force-switch",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

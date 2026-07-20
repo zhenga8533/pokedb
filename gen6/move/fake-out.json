@@ -14,13 +14,13 @@
         "x-y": 10,
         "omega-ruby-alpha-sapphire": 10
     },
-    "priority": null,
+    "priority": 3,
     "damage_class": null,
     "type": {
         "x-y": "normal",
         "omega-ruby-alpha-sapphire": "normal"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iii",
     "effect_chance": {
         "x-y": 100,
@@ -38,7 +38,26 @@
         "x-y": "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
         "omega-ruby-alpha-sapphire": "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 100,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

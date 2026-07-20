@@ -41,7 +41,9 @@
     ],
     "height": 21,
     "weight": 3600,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/306.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -58,7 +60,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 239,
     "held_items": {
         "hard-stone": {
             "x": 5,
@@ -905,17 +907,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 45,
+    "hatch_counter": 35,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 332,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "mountain",
     "evolves_from_species": "lairon",
     "pokedex_numbers": {
@@ -923,7 +925,9 @@
     },
     "color": "gray",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "monster"
+    ],
     "flavor_text": {
         "x": "It claims an entire mountain as its own. The more wounds it has, the more it has battled, so don’t take it lightly.",
         "y": "While seeking iron for food, it digs tunnels by breaking through bedrock with its steel horns.",
@@ -1020,6 +1024,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "aggron",

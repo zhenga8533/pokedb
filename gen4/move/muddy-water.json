@@ -17,14 +17,14 @@
         "platinum": 10,
         "heartgold-soulsilver": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "diamond-pearl": "water",
         "platinum": "water",
         "heartgold-soulsilver": "water"
     },
-    "target": null,
+    "target": "all-opponents",
     "generation": "generation-iii",
     "effect_chance": {
         "diamond-pearl": 30,
@@ -46,7 +46,31 @@
         "platinum": "The user attacks by shooting out muddy water. It may also lower the foe’s accuracy.",
         "heartgold-soulsilver": "The user attacks by shooting out muddy water. It may also lower the foe’s accuracy."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "accuracy"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 30
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

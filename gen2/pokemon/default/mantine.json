@@ -20,7 +20,9 @@
     "ev_yield": null,
     "height": 21,
     "weight": 2200,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/226.ogg"
+    },
     "sprites": {
         "versions": {
             "crystal": {
@@ -49,7 +51,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 170,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -340,17 +342,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 25,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 259,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "sea",
     "evolves_from_species": "mantyke",
     "pokedex_numbers": {
@@ -359,7 +361,9 @@
     },
     "color": "purple",
     "shape": "wings",
-    "egg_groups": null,
+    "egg_groups": [
+        "water1"
+    ],
     "flavor_text": {
         "gold": "As it majestically swims, it doesn't care if REMORAID attach to it for scavenging its leftovers.",
         "silver": "Swimming freely in open seas, it may fly out of the water and over the waves if it builds up enough speed.",
@@ -371,6 +375,16 @@
         "species_name": "mantine",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "mantine",

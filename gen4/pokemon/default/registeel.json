@@ -34,7 +34,9 @@
     ],
     "height": 19,
     "weight": 2050,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/379.ogg"
+    },
     "sprites": {
         "versions": {
             "diamond-pearl": {
@@ -69,7 +71,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 261,
     "held_items": {},
     "moves": {
         "tutor": [
@@ -692,17 +694,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 35,
+    "capture_rate": 3,
+    "hatch_counter": 80,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": true,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 409,
-    "growth_rate": null,
+    "growth_rate": "slow",
     "habitat": "cave",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -710,7 +712,9 @@
     },
     "color": "gray",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "diamond": "Tempered by pressure underground over tens of thousands of years, its body cannot be scratched.",
         "pearl": "Tempered by pressure underground over tens of thousands of years, its body cannot be scratched.",
@@ -724,6 +728,16 @@
         "species_name": "registeel",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "registeel",

@@ -30,7 +30,9 @@
     ],
     "height": 21,
     "weight": 3502,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10074.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -47,7 +49,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 203,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -477,17 +479,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 391,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "cave",
     "evolves_from_species": "snorunt",
     "pokedex_numbers": {
@@ -495,7 +497,10 @@
     },
     "color": "gray",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy",
+        "mineral"
+    ],
     "flavor_text": {
         "x": "To protect itself, it clad its body in an armor of ice, made by freezing moisture in the air.",
         "y": "It can instantly freeze moisture in the atmosphere. It uses this power to freeze its foes.",
@@ -591,6 +596,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "glalie",

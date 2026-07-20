@@ -19,7 +19,9 @@
     "ev_yield": null,
     "height": 16,
     "weight": 1,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/93.ogg"
+    },
     "sprites": {
         "versions": {
             "red-blue": {
@@ -40,7 +42,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 142,
     "held_items": {},
     "moves": {
         "machine": [
@@ -249,16 +251,16 @@
         ]
     },
     "base_happiness": null,
-    "capture_rate": null,
+    "capture_rate": 90,
     "hatch_counter": null,
     "gender_rate": null,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 101,
-    "growth_rate": null,
+    "growth_rate": "medium-slow",
     "habitat": "cave",
     "evolves_from_species": "gastly",
     "pokedex_numbers": {
@@ -367,6 +369,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "haunter",

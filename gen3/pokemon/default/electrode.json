@@ -30,7 +30,9 @@
     "ev_yield": [],
     "height": 12,
     "weight": 666,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/101.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 172,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -498,17 +500,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 20,
+    "gender_rate": -1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 110,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "urban",
     "evolves_from_species": "voltorb",
     "pokedex_numbers": {
@@ -517,7 +519,9 @@
     },
     "color": "red",
     "shape": "ball",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "ruby": "ELECTRODE eats electricity in the atmosphere. On days when lightning strikes, you can see this POKéMON exploding all over the place from eating too much electricity.",
         "sapphire": "One of ELECTRODE’s characteristics is its attraction to electricity. It is a problematical POKéMON that congregates mostly at electrical power plants to feed on electricity that has just been generated.",
@@ -576,6 +580,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "electrode",

@@ -23,7 +23,7 @@
         "colosseum": 10,
         "xd": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "status",
     "type": {
         "ruby-sapphire": "psychic",
@@ -32,7 +32,7 @@
         "colosseum": "psychic",
         "xd": "psychic"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iii",
     "effect_chance": {
         "ruby-sapphire": null,
@@ -60,7 +60,26 @@
         "emerald": "Mimics the target and copies its special ability.",
         "firered-leafgreen": "The user mimics the foe completely and copies the foe’s ability."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "unique",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

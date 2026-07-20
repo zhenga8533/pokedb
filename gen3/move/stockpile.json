@@ -23,7 +23,7 @@
         "colosseum": 10,
         "xd": 10
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "status",
     "type": {
         "ruby-sapphire": "normal",
@@ -32,7 +32,7 @@
         "colosseum": "normal",
         "xd": "normal"
     },
-    "target": null,
+    "target": "user",
     "generation": "generation-iii",
     "effect_chance": {
         "ruby-sapphire": null,
@@ -60,7 +60,35 @@
         "emerald": "Charges up power for up to 3 turns.",
         "firered-leafgreen": "The user charges up power for use later. It can be used three times."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": 1,
+            "stat": "defense"
+        },
+        {
+            "change": 1,
+            "stat": "special-defense"
+        }
+    ],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "unique",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

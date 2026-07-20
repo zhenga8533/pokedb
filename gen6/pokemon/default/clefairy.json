@@ -40,7 +40,9 @@
     ],
     "height": 6,
     "weight": 75,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/35.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -57,7 +59,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 113,
     "held_items": {
         "moon-stone": {
             "x": 5,
@@ -844,17 +846,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 140,
+    "capture_rate": 150,
+    "hatch_counter": 10,
+    "gender_rate": 6,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 37,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "mountain",
     "evolves_from_species": "cleffa",
     "pokedex_numbers": {
@@ -862,7 +864,9 @@
     },
     "color": "pink",
     "shape": "upright",
-    "egg_groups": null,
+    "egg_groups": [
+        "fairy"
+    ],
     "flavor_text": {
         "x": "It is said that happiness will come to those who see a gathering of Clefairy dancing under a full moon.",
         "y": "The moonlight that it stores in the wings on its back apparently gives it the ability to float in midair.",
@@ -959,6 +963,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "clefairy",

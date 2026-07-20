@@ -41,7 +41,9 @@
     ],
     "height": 6,
     "weight": 32,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/176.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -54,7 +56,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 142,
     "held_items": {},
     "moves": {
         "level-up": [
@@ -775,17 +777,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 75,
+    "hatch_counter": 10,
+    "gender_rate": 1,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 204,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "forest",
     "evolves_from_species": "togepi",
     "pokedex_numbers": {
@@ -794,7 +796,10 @@
     },
     "color": "white",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "flying",
+        "fairy"
+    ],
     "flavor_text": {
         "sword": "They say that it will appear before kindhearted, caring people and shower them with happiness.",
         "shield": "It grows dispirited if it is not with kind people. It can float in midair without moving its wings.",
@@ -896,6 +901,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "togetic",

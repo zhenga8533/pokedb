@@ -17,14 +17,14 @@
         "ultra-sun-ultra-moon": 20,
         "lets-go-pikachu-lets-go-eevee": 20
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "sun-moon": "grass",
         "ultra-sun-ultra-moon": "grass",
         "lets-go-pikachu-lets-go-eevee": "grass"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-iv",
     "effect_chance": {
         "sun-moon": null,
@@ -46,7 +46,26 @@
         "ultra-sun-ultra-moon": "The user snares the target with grass and trips it. The heavier the target, the greater the move’s power.",
         "lets-go-pikachu-lets-go-eevee": "The user snares the target with grass and trips it. The heavier the target, the greater the move’s power."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": "tm86",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

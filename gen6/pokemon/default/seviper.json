@@ -39,7 +39,9 @@
     ],
     "height": 27,
     "weight": 525,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/336.ogg"
+    },
     "sprites": {
         "versions": {
             "omegaruby-alphasapphire": {
@@ -56,7 +58,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 160,
     "held_items": {
         "persim-berry": {
             "x": 100,
@@ -748,17 +750,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 90,
+    "hatch_counter": 20,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 364,
-    "growth_rate": null,
+    "growth_rate": "fast-then-very-slow",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -766,7 +768,10 @@
     },
     "color": "black",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "ground",
+        "dragon"
+    ],
     "flavor_text": {
         "x": "In battle, it uses its bladed tail to counter any Zangoose. It secretes a deadly venom in its tail.",
         "y": "Constant polishing makes the edge of the blade on its tail extremely sharp. It’s Zangoose’s archrival.",
@@ -779,6 +784,16 @@
         "species_name": "seviper",
         "evolves_to": []
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "seviper",

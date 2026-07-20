@@ -23,7 +23,7 @@
         "colosseum": 15,
         "xd": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "special",
     "type": {
         "ruby-sapphire": "fire",
@@ -32,7 +32,7 @@
         "colosseum": "fire",
         "xd": "fire"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-i",
     "effect_chance": {
         "ruby-sapphire": 100,
@@ -60,7 +60,26 @@
         "emerald": "Traps the foe in a ring of fire for 2 to 5 turns.",
         "firered-leafgreen": "The foe is trapped in an intense spiral of fire that rages two to five turns."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "trap",
+        "category": "damage-ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": 5,
+        "max_turns": 6,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 100,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

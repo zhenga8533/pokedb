@@ -30,7 +30,9 @@
     ],
     "height": 3,
     "weight": 10,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/174.ogg"
+    },
     "sprites": {
         "versions": {
             "emerald": {
@@ -51,7 +53,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 42,
     "held_items": {
         "oran-berry": {
             "firered": 50,
@@ -591,17 +593,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 170,
+    "hatch_counter": 10,
+    "gender_rate": 6,
     "has_gender_differences": false,
     "is_baby": true,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 41,
-    "growth_rate": null,
+    "growth_rate": "fast",
     "habitat": "grassland",
     "evolves_from_species": null,
     "pokedex_numbers": {
@@ -610,7 +612,9 @@
     },
     "color": "pink",
     "shape": "humanoid",
-    "egg_groups": null,
+    "egg_groups": [
+        "no-eggs"
+    ],
     "flavor_text": {
         "ruby": "IGGLYBUFF’s vocal chords are not sufficiently developed. It would hurt its throat if it were to sing too much. This POKéMON gargles with freshwater from a clean stream.",
         "sapphire": "IGGLYBUFF has a soft and plushy body that feels very much like a marshmallow. From this body wafts a gently sweet fragrance that soothes and calms the emotions of its foes.",
@@ -714,6 +718,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "igglybuff",

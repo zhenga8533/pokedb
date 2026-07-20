@@ -31,7 +31,9 @@
     ],
     "height": 105,
     "weight": 7400,
-    "cries": null,
+    "cries": {
+        "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/10072.ogg"
+    },
     "sprites": {
         "versions": {
             "brilliant-diamond-shining-pearl": {
@@ -44,20 +46,20 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 214,
     "held_items": {},
     "moves": {},
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 25,
+    "hatch_counter": 25,
+    "gender_rate": 4,
     "has_gender_differences": true,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": true,
     "order": 104,
-    "growth_rate": null,
+    "growth_rate": "medium",
     "habitat": "cave",
     "evolves_from_species": "onix",
     "pokedex_numbers": {
@@ -66,7 +68,9 @@
     },
     "color": "gray",
     "shape": "squiggle",
-    "egg_groups": null,
+    "egg_groups": [
+        "mineral"
+    ],
     "flavor_text": {
         "sword": "It is said that if an Onix lives for over 100 years, its composition changes to become diamond-like.",
         "shield": "It is thought its body transformed as a result of iron accumulating internally from swallowing soil.",
@@ -123,6 +127,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "steelix",

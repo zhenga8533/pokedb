@@ -23,7 +23,7 @@
         "colosseum": 15,
         "xd": 15
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": "physical",
     "type": {
         "ruby-sapphire": "ghost",
@@ -32,7 +32,7 @@
         "colosseum": "ghost",
         "xd": "ghost"
     },
-    "target": null,
+    "target": "selected-pokemon",
     "generation": "generation-ii",
     "effect_chance": {
         "ruby-sapphire": 20,
@@ -60,7 +60,31 @@
         "emerald": "Hurls a black blob that may lower the foe’s SP. DEF.",
         "firered-leafgreen": "A shadowy blob is hurled at the foe. May also lower the foe’s SP. DEF."
     },
-    "stat_changes": null,
+    "stat_changes": [
+        {
+            "change": -1,
+            "stat": "special-defense"
+        }
+    ],
     "machine": "tm30",
-    "metadata": null
+    "metadata": {
+        "ailment": "none",
+        "category": "damage-lower",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 20
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

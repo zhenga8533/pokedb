@@ -14,13 +14,13 @@
         "x-y": 5,
         "omega-ruby-alpha-sapphire": 5
     },
-    "priority": null,
+    "priority": 0,
     "damage_class": null,
     "type": {
         "x-y": "fire",
         "omega-ruby-alpha-sapphire": "fire"
     },
-    "target": null,
+    "target": "all-other-pokemon",
     "generation": "generation-v",
     "effect_chance": {
         "x-y": 30,
@@ -38,7 +38,26 @@
         "x-y": "The user torches everything around it with an inferno of scarlet flames. This may also leave those hit with a burn.",
         "omega-ruby-alpha-sapphire": "The user torches everything around it with an inferno of scarlet flames. This may also leave those hit with a burn."
     },
-    "stat_changes": null,
+    "stat_changes": [],
     "machine": null,
-    "metadata": null
+    "metadata": {
+        "ailment": "burn",
+        "category": "damage-ailment",
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 30,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "unverified_historical_fields": [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes"
+    ]
 }

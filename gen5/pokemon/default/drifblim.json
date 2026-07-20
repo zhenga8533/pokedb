@@ -41,7 +41,9 @@
     ],
     "height": 12,
     "weight": 150,
-    "cries": null,
+    "cries": {
+        "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/426.ogg"
+    },
     "sprites": {
         "versions": {
             "black-white": {
@@ -66,7 +68,7 @@
             }
         }
     },
-    "base_experience": null,
+    "base_experience": 174,
     "held_items": {
         "air-balloon": {
             "black-2": 1,
@@ -660,17 +662,17 @@
             }
         ]
     },
-    "base_happiness": null,
-    "capture_rate": null,
-    "hatch_counter": null,
-    "gender_rate": null,
+    "base_happiness": 70,
+    "capture_rate": 60,
+    "hatch_counter": 30,
+    "gender_rate": 4,
     "has_gender_differences": false,
     "is_baby": false,
     "is_legendary": false,
     "is_mythical": false,
-    "forms_switchable": null,
+    "forms_switchable": false,
     "order": 453,
-    "growth_rate": null,
+    "growth_rate": "fast-then-very-slow",
     "habitat": null,
     "evolves_from_species": "drifloon",
     "pokedex_numbers": {
@@ -678,7 +680,9 @@
     },
     "color": "purple",
     "shape": "arms",
-    "egg_groups": null,
+    "egg_groups": [
+        "indeterminate"
+    ],
     "flavor_text": {
         "black": "At dusk, swarms of them are carried aloft on winds. When noticed, they suddenly vanish.",
         "white": "At dusk, swarms of them are carried aloft on winds. When noticed, they suddenly vanish.",
@@ -733,6 +737,16 @@
             }
         ]
     },
+    "unverified_historical_fields": [
+        "base_happiness",
+        "capture_rate",
+        "hatch_counter",
+        "gender_rate",
+        "egg_groups",
+        "growth_rate",
+        "forms_switchable",
+        "base_experience"
+    ],
     "forms": [
         {
             "name": "drifblim",
