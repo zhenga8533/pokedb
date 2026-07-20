@@ -54,7 +54,8 @@ class BaseParser(ABC):
             generation_version_groups: Optional mapping of generation numbers to version groups
             target_gen: Optional target generation number to filter data
             generation_dex_map: Optional mapping of generation to regional Pokédex name
-            is_historical: Whether unversioned current values must be suppressed
+            is_historical: Whether unversioned current values must be flagged as
+                unverified rather than treated as accurate for the target generation
         """
         self.config = config
         self.api_client = api_client

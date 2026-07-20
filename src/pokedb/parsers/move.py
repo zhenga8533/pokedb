@@ -255,12 +255,12 @@ class MoveParser(GenerationParser):
 
     def _apply_generation_policy(self, cleaned_data: Dict[str, Any]) -> None:
         """Flags unversioned fields as unverified and derives pre-split move classes."""
-        if not self.is_historical:
-            return
-
         self._flag_unverified_historical_fields(
             cleaned_data, ["priority", "target", "metadata", "stat_changes"]
         )
+
+        if not self.is_historical:
+            return
 
         if self.target_gen is None or self.target_gen >= 4:
             cleaned_data["damage_class"] = None

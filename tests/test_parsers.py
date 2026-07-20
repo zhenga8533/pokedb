@@ -64,6 +64,28 @@ def test_move_history_uses_nearest_future_change_per_field():
     assert cleaned_data["pp"]["black-white"] == 10
 
 
+def test_non_historical_move_has_empty_unverified_historical_fields():
+    parser = MoveParser(
+        config=load_config(),
+        api_client=None,
+        generation_version_groups={9: ["scarlet-violet"]},
+        target_gen=9,
+        is_historical=False,
+    )
+    cleaned_data = {
+        "priority": 0,
+        "damage_class": "physical",
+        "target": "selected-pokemon",
+        "metadata": {},
+        "stat_changes": [],
+        "type": {"scarlet-violet": "normal"},
+    }
+
+    parser._apply_generation_policy(cleaned_data)
+
+    assert cleaned_data["unverified_historical_fields"] == []
+
+
 def test_pre_generation_four_damage_class_is_derived_from_type():
     parser = MoveParser(
         config=load_config(),
