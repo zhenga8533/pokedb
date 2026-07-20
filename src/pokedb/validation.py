@@ -98,6 +98,34 @@ def _validate_common(
         )
 
 
+def _validate_unverified_historical_fields(
+    data: dict[str, Any],
+    is_historical: bool,
+    expected_fields: set[str],
+    path: Path,
+) -> None:
+    unverified = data.get("unverified_historical_fields")
+    if not isinstance(unverified, list) or not all(
+        isinstance(field, str) for field in unverified
+    ):
+        raise DataValidationError(
+            f"{path}: unverified_historical_fields must be a list of strings"
+        )
+    if set(unverified) - expected_fields:
+        raise DataValidationError(
+            f"{path}: unverified_historical_fields contains unexpected fields"
+        )
+    if is_historical:
+        if set(unverified) != expected_fields:
+            raise DataValidationError(
+                f"{path}: historical record must flag all unverified fields"
+            )
+    elif unverified:
+        raise DataValidationError(
+            f"{path}: unverified_historical_fields must be empty when not historical"
+        )
+
+
 def _validate_ability(
     data: dict[str, Any],
     version_groups: set[str],
@@ -147,6 +175,7 @@ def _validate_move(
             "stat_changes",
             "machine",
             "metadata",
+            "unverified_historical_fields",
         },
         path,
     )
@@ -164,23 +193,17 @@ def _validate_move(
             for value in data[field].values()
         ):
             raise DataValidationError(f"{path}: invalid textual {field} values")
+    _validate_unverified_historical_fields(
+        data, is_historical, {"priority", "target", "metadata", "stat_changes"}, path
+    )
     if is_historical:
-        if data.get("priority") is not None:
-            raise DataValidationError(f"{path}: historical priority must be null")
-        if any(
-            data.get(field) is not None
-            for field in ("target", "metadata", "stat_changes")
-        ):
-            raise DataValidationError(
-                f"{path}: unversioned historical move fields must be null"
-            )
         damage_class = data.get("damage_class")
         if generation < 4:
             if damage_class not in {None, "physical", "special", "status"}:
                 raise DataValidationError(f"{path}: invalid derived damage class")
         elif damage_class is not None:
             raise DataValidationError(f"{path}: historical damage_class must be null")
-    elif not _is_int(data.get("priority")):
+    if not _is_int(data.get("priority")):
         raise DataValidationError(f"{path}: priority must be an integer")
     if not all(
         _is_optional(data[field], str)
@@ -192,9 +215,8 @@ def _validate_move(
         for key, value in data["flavor_text"].items()
     ):
         raise DataValidationError(f"{path}: invalid move flavor_text")
-    if not is_historical and (
-        not isinstance(data.get("metadata"), dict)
-        or not isinstance(data.get("stat_changes"), list)
+    if not isinstance(data.get("metadata"), dict) or not isinstance(
+        data.get("stat_changes"), list
     ):
         raise DataValidationError(f"{path}: invalid move metadata or stat_changes")
 
@@ -218,11 +240,14 @@ def _validate_item(
             "short_effect",
             "flavor_text",
             "sprite",
+            "unverified_historical_fields",
         },
         path,
     )
-    if is_historical:
-        current_only_fields = {
+    _validate_unverified_historical_fields(
+        data,
+        is_historical,
+        {
             "cost",
             "fling_power",
             "fling_effect",
@@ -231,14 +256,9 @@ def _validate_item(
             "effect",
             "short_effect",
             "sprite",
-        }
-        if any(data.get(field) is not None for field in current_only_fields):
-            raise DataValidationError(
-                f"{path}: current-only historical item fields must be null"
-            )
-        if not isinstance(data.get("flavor_text"), dict):
-            raise DataValidationError(f"{path}: invalid item flavor_text")
-        return
+        },
+        path,
+    )
     if not _is_int(data.get("cost")) or data["cost"] < 0:
         raise DataValidationError(f"{path}: cost must be a non-negative integer")
     if data["fling_power"] is not None and not _is_int(data["fling_power"]):
@@ -279,6 +299,7 @@ def _validate_pokemon(
             "base_experience",
             "held_items",
             "moves",
+            "unverified_historical_fields",
         },
         path,
     )
@@ -293,9 +314,13 @@ def _validate_pokemon(
         )
     if data["base_experience"] is not None and not _is_int(data["base_experience"]):
         raise DataValidationError(f"{path}: base_experience must be an integer or null")
-    if (is_historical and data["cries"] is not None) or (
-        not is_historical and not isinstance(data["cries"], dict)
-    ) or not isinstance(data["sprites"], dict):
+    if data["cries"] is not None and (
+        not isinstance(data["cries"], dict)
+        or not set(data["cries"]) <= {"legacy", "latest"}
+        or not all(isinstance(value, str) for value in data["cries"].values())
+    ):
+        raise DataValidationError(f"{path}: invalid cries")
+    if not isinstance(data["sprites"], dict):
         raise DataValidationError(f"{path}: invalid generation-specific media")
     types = data.get("types")
     if not isinstance(types, list) or not 1 <= len(types) <= 2 or not all(
@@ -339,8 +364,10 @@ def _validate_pokemon(
         for entry in ev_yield
     ):
         raise DataValidationError(f"{path}: invalid EV yield")
-    if is_historical:
-        for field in (
+    _validate_unverified_historical_fields(
+        data,
+        is_historical,
+        {
             "base_experience",
             "base_happiness",
             "capture_rate",
@@ -349,11 +376,9 @@ def _validate_pokemon(
             "egg_groups",
             "growth_rate",
             "forms_switchable",
-        ):
-            if field in data and data[field] is not None:
-                raise DataValidationError(
-                    f"{path}: current-only historical field {field} must be null"
-                )
+        },
+        path,
+    )
     moves = data.get("moves")
     held_items = data.get("held_items")
     if not isinstance(moves, dict) or not isinstance(held_items, dict):

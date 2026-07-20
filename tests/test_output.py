@@ -33,7 +33,7 @@ def test_partial_index_update_preserves_unrequested_resources(tmp_path):
         key: (1 if key in {"ability", "move"} else 0)
         for key in RESOURCE_INDEX_KEYS
     }
-    assert index["metadata"]["schema_version"] == 3
+    assert index["metadata"]["schema_version"] == 4
     assert index["metadata"]["source"] == "pokeapi"
     assert set(index) == {"metadata", *RESOURCE_INDEX_KEYS}
 

@@ -111,20 +111,20 @@ class ItemParser(BaseParser):
         return self.api_client.get(endpoint_url).get("results", [])
 
     def _apply_generation_policy(self, cleaned_data: Dict[str, Any]) -> None:
-        """Clears item fields for which PokéAPI provides only current values."""
-        if not self.is_historical:
-            return
-        for field in (
-            "cost",
-            "fling_power",
-            "fling_effect",
-            "attributes",
-            "category",
-            "effect",
-            "short_effect",
-            "sprite",
-        ):
-            cleaned_data[field] = None
+        """Flags item fields for which PokéAPI provides only current values."""
+        self._flag_unverified_historical_fields(
+            cleaned_data,
+            [
+                "cost",
+                "fling_power",
+                "fling_effect",
+                "attributes",
+                "category",
+                "effect",
+                "short_effect",
+                "sprite",
+            ],
+        )
 
     def process(
         self, resource_ref: Dict[str, str]

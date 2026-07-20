@@ -6,7 +6,7 @@ is regenerated weekly from structured [PokéAPI](https://pokeapi.co/) data.
 
 ## Data contract
 
-- The current format is schema version 3.
+- The current format is schema version 4.
 - Every `genN` directory is a cumulative catalog of resources introduced by or
   before that generation.
 - Generation output is not a claim that every resource is obtainable in every
@@ -14,8 +14,13 @@ is regenerated weekly from structured [PokéAPI](https://pokeapi.co/) data.
   them.
 - Structural field names use `snake_case`. PokéAPI identifiers retain their
   canonical kebab-case spelling.
-- `null` means unavailable, inapplicable, or not versioned by PokéAPI. Empty
+- `null` means unavailable or inapplicable for that generation. Empty
   collections mean the modeled mechanic applies but has no entries.
+- Move, item, and Pokémon records carry an `unverified_historical_fields`
+  array (empty for the latest generation) naming fields whose value is
+  backfilled from current PokéAPI data because PokéAPI keeps no
+  per-generation history for them, rather than a value verified for that
+  generation.
 
 PokéAPI does not provide complete item-introduction history. Item catalogs use
 structured game-index evidence plus item references from generated machines,
@@ -59,7 +64,7 @@ full contract.
 
 ## Compatibility
 
-Schema versions 1 and 2 are incompatible with schema version 3. Consumers
+Schema versions 1 through 3 are incompatible with schema version 4. Consumers
 should read `metadata.schema_version` from the generation index before loading
 resource files.
 

@@ -18,7 +18,7 @@ def _write_ability_dataset(tmp_path, version_group_key):
         tmp_path / "index.json",
         {
             "metadata": {
-                "schema_version": 3,
+                "schema_version": 4,
                 "source": "pokeapi",
                 "api_base_url": "https://example.test/",
                 "is_historical": False,

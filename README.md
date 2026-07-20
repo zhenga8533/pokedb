@@ -103,7 +103,7 @@ catalog: it includes resources introduced by or before that generation, but does
 imply that every resource is available in every game. Version-specific maps are used
 where PokéAPI supplies that detail.
 
-The generation `index.json` contains schema version `3`, PokéAPI source metadata,
+The generation `index.json` contains schema version `4`, PokéAPI source metadata,
 version groups, resource summaries, and counts. All resource keys are always present,
 including empty lists for mechanics or categories with no entries. Individual files
 live in the corresponding `ability`, `item`, `move`, or `pokemon` subdirectory.
@@ -140,16 +140,28 @@ stat. Abilities are empty before Generation 3, while `ev_yield` is `null` becaus
 Generations 1–2 used Stat Experience rather than modern EV yields.
 
 The schema distinguishes an empty collection (the mechanic applies but has no
-entries) from `null` (the mechanic is unavailable, inapplicable, or not versioned by
-PokéAPI). For historical output, current-only Pokémon values such as base experience,
-friendship, capture rate, breeding fields, growth rate, and form switching are
-`null`. Current-only move and item mechanics are also `null`; pre-Generation 4 move
-damage class is derived from the reconstructed move type. Historical sprites contain
-only the target generation's version assets, and historical cries are `null`.
+entries) from `null` (the mechanic is unavailable or inapplicable for that
+generation).
 
-PokéAPI does not expose exact history for every scalar or every same-generation game
-difference. PokéDB records these cases as unknown instead of copying a modern value
-or inferring unsupported data.
+PokéAPI does not track per-generation history for every scalar field. For
+historical output, current-only Pokémon values such as base experience,
+friendship, capture rate, breeding fields, growth rate, and form switching are
+backfilled with their current PokéAPI value rather than discarded, as are
+current-only move fields (`priority`, `target`, `metadata`, `stat_changes`) and
+item fields (`cost`, `fling_power`, `fling_effect`, `attributes`, `category`,
+`effect`, `short_effect`, `sprite`). Every move, item, and Pokémon record
+carries an `unverified_historical_fields` array (empty for the latest
+generation) naming exactly which of its fields are this best-effort backfill
+rather than a value verified for that generation. Pre-Generation 4 move damage
+class is derived from the reconstructed move type instead of being backfilled.
+Historical sprites contain only the target generation's version assets, and
+cries resolve to the `legacy` (Generations 1-5) or `latest` (Generation 6+)
+recording PokéAPI provides for that generation, since PokéAPI versions cries
+directly rather than only exposing a current value.
+
+PokéAPI does not expose exact history for every scalar or every same-generation
+game difference. Where a field cannot be resolved at all for a generation,
+PokéDB records it as `null` instead of inferring unsupported data.
 
 PokéAPI `game_indices` are also not a complete item-introduction history: many
 Generation 1–2 items only have later indices, and some current items have none.

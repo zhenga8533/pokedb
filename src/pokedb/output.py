@@ -11,7 +11,7 @@ from .utils import write_json_atomic
 
 logger = logging.getLogger(__name__)
 
-DATA_SCHEMA_VERSION = 3
+DATA_SCHEMA_VERSION = 4
 
 PARSER_OUTPUT_KEYS = {
     "ability": ("output_dir_ability",),

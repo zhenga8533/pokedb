@@ -358,6 +358,22 @@ class PokemonParser(GenerationParser):
 
         return gen_data
 
+    def _process_cries(self, cries: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """
+        Resolves the cries object to the recording used in the target generation.
+
+        PokéAPI splits cries into "legacy" (Gen 1-5 style) and "latest"
+        (redesigned in Gen 6) recordings, so this is real per-generation data
+        rather than an unversioned current value.
+        """
+        if not cries:
+            return None
+        if self.target_gen is None:
+            return cries
+        if self.target_gen < 6:
+            return {"legacy": cries.get("legacy")} if cries.get("legacy") else None
+        return {"latest": cries.get("latest")} if cries.get("latest") else None
+
     def _process_sprites(self, sprites: Dict[str, Any]) -> Dict[str, Any]:
         """
         Refines the sprites object to only include the target generation's version data.
@@ -515,7 +531,7 @@ class PokemonParser(GenerationParser):
             ],
             "height": pokemon_data["height"],
             "weight": pokemon_data["weight"],
-            "cries": None if self.is_historical else pokemon_data.get("cries", {}),
+            "cries": self._process_cries(pokemon_data.get("cries", {})),
             "sprites": self._process_sprites(pokemon_data.get("sprites", {})),
         }
         if self.target_gen is not None and self.target_gen < 3:
@@ -681,8 +697,9 @@ class PokemonParser(GenerationParser):
                 "evolution_chain": evolution_chain,
             }
         )
-        if self.is_historical:
-            for field in (
+        self._flag_unverified_historical_fields(
+            cleaned_data,
+            [
                 "base_happiness",
                 "capture_rate",
                 "hatch_counter",
@@ -690,8 +707,9 @@ class PokemonParser(GenerationParser):
                 "egg_groups",
                 "growth_rate",
                 "forms_switchable",
-            ):
-                cleaned_data[field] = None
+                "base_experience",
+            ],
+        )
         if self.target_gen is not None and self.target_gen < 2:
             cleaned_data.update(
                 {
@@ -707,9 +725,7 @@ class PokemonParser(GenerationParser):
     ) -> Dict[str, Any]:
         """Returns fields that belong to a Pokémon variety rather than its species."""
         return {
-            "base_experience": (
-                None if self.is_historical else pokemon_data.get("base_experience")
-            ),
+            "base_experience": pokemon_data.get("base_experience"),
             "held_items": self._get_generation_data(
                 pokemon_data, "held_items", "item", "version_details", "version"
             ),

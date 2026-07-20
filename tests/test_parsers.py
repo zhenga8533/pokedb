@@ -84,13 +84,19 @@ def test_pre_generation_four_damage_class_is_derived_from_type():
     parser._apply_generation_policy(cleaned_data)
 
     assert cleaned_data["damage_class"] == "special"
-    assert cleaned_data["priority"] is None
-    assert cleaned_data["target"] is None
-    assert cleaned_data["metadata"] is None
-    assert cleaned_data["stat_changes"] is None
+    assert cleaned_data["priority"] == 0
+    assert cleaned_data["target"] == "selected-pokemon"
+    assert cleaned_data["metadata"] == {}
+    assert cleaned_data["stat_changes"] == []
+    assert cleaned_data["unverified_historical_fields"] == [
+        "priority",
+        "target",
+        "metadata",
+        "stat_changes",
+    ]
 
 
-def test_historical_item_current_only_fields_are_null():
+def test_historical_item_current_only_fields_are_flagged_unverified():
     parser = ItemParser(
         config=load_config(),
         api_client=None,
@@ -108,10 +114,13 @@ def test_historical_item_current_only_fields_are_null():
         "short_effect": "Current effect",
         "sprite": "https://example.test/item.png",
     }
+    original_values = dict(cleaned_data)
 
     parser._apply_generation_policy(cleaned_data)
 
-    assert all(value is None for value in cleaned_data.values())
+    for field, value in original_values.items():
+        assert cleaned_data[field] == value
+    assert set(cleaned_data["unverified_historical_fields"]) == set(original_values)
 
 
 def test_referenced_item_without_game_indices_is_included(tmp_path):
@@ -247,7 +256,7 @@ def test_pokemon_specific_data_comes_from_each_variety():
     assert result["moves"]["level-up"][0]["name"] == "hydro-pump"
 
 
-def test_historical_pokemon_does_not_publish_current_base_experience():
+def test_historical_pokemon_backfills_current_base_experience():
     parser = PokemonParser(
         config=load_config(),
         api_client=None,
@@ -261,7 +270,7 @@ def test_historical_pokemon_does_not_publish_current_base_experience():
         {"base_experience": 182, "held_items": [], "moves": []}
     )
 
-    assert result["base_experience"] is None
+    assert result["base_experience"] == 182
 
 
 def test_structured_pokeapi_history_is_applied():

@@ -68,6 +68,27 @@ class BaseParser(ABC):
         self.api_endpoint: str = ""  # API endpoint name (e.g., "ability", "move")
         self.output_dir_key: str = ""  # Config key for output directory
 
+    def _flag_unverified_historical_fields(
+        self, cleaned_data: Dict[str, Any], fields: List[str]
+    ) -> None:
+        """
+        Marks fields whose values are the current PokéAPI value, not a verified
+        value for the target generation, because PokéAPI keeps no per-generation
+        history for them.
+
+        Leaves the current value in place (rather than nulling it out) and records
+        the field names in `cleaned_data["unverified_historical_fields"]` so
+        consumers can tell which fields are a best-effort backfill. The key is
+        always present (empty when not historical) so the field is stable
+        across every record.
+        """
+        unverified = cleaned_data.setdefault("unverified_historical_fields", [])
+        if not self.is_historical or not fields:
+            return
+        for field in fields:
+            if field not in unverified:
+                unverified.append(field)
+
     @abstractmethod
     def _get_all_item_refs(self) -> List[Dict[str, str]]:
         """
