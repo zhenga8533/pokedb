@@ -377,12 +377,16 @@ class PokemonParser(GenerationParser):
     def _process_sprites(self, sprites: Dict[str, Any]) -> Dict[str, Any]:
         """
         Refines the sprites object to only include the target generation's version data.
+
+        The `other` block (official-artwork, home, dream_world, showdown) is
+        generation-agnostic artwork rather than a per-generation asset, so it is
+        kept even on historical records.
         """
         if not sprites:
             return {}
 
         processed_sprites = (
-            {}
+            {k: v for k, v in sprites.items() if k == "other"}
             if self.is_historical
             else {k: v for k, v in sprites.items() if k != "versions"}
         )

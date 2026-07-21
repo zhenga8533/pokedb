@@ -154,7 +154,9 @@ carries an `unverified_historical_fields` array (empty for the latest
 generation) naming exactly which of its fields are this best-effort backfill
 rather than a value verified for that generation. Pre-Generation 4 move damage
 class is derived from the reconstructed move type instead of being backfilled.
-Historical sprites contain only the target generation's version assets, and
+Historical sprites contain only the target generation's version assets plus the
+generation-agnostic `other` artwork (official-artwork, home, dream_world,
+showdown), and
 cries resolve to the `legacy` (Generations 1-5) or `latest` (Generation 6+)
 recording PokéAPI provides for that generation, since PokéAPI versions cries
 directly rather than only exposing a current value.
